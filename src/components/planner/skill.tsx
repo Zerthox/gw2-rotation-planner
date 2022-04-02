@@ -1,54 +1,55 @@
 import React from "react";
-import {Box, Card, CardProps} from "@mui/material";
-import {Draggable} from "react-beautiful-dnd";
-import {Id} from "../../store/planner";
+import {useSortable} from "@dnd-kit/sortable";
+import {Skill} from "@discretize/gw2-ui-new";
+import {DropType, SkillData} from ".";
+import {Id, useDragging} from "../../store/planner";
 
-export interface SkillDisplayProps extends CardProps {
+export interface SkillItemProps {
     skill: number;
     isPlaceholder?: boolean;
 }
 
-export const SkillDisplay = ({skill, isPlaceholder = false, ...props}: SkillDisplayProps): JSX.Element => (
-    <Card
-        elevation={3}
-        sx={{
-            opacity: isPlaceholder ? 0.5 : 1,
-            transform: isPlaceholder ? "none !important" : null
+export const SkillItem = ({skill, isPlaceholder = false}: SkillItemProps): JSX.Element => (
+    <Skill
+        id={skill}
+        disableLink
+        disableText
+        disableTooltip
+        style={{
+            fontSize: "3em",
+            opacity: isPlaceholder ? 0.5 : 1
         }}
-        {...props}
-    >
-        <Box padding={1}>
-            Skill #{skill}
-        </Box>
-    </Card>
+    />
 );
 
-export interface SkillProps {
+export interface DraggableSkillProps {
     id: Id;
+    parentId: Id;
     index: number;
     skill: number;
-    placeholder?: boolean;
+    fromSkillbar?: boolean;
 }
 
-export const Skill = ({id, index, skill, placeholder = false}: SkillProps): JSX.Element => (
-    <Draggable draggableId={id} index={index}>
-        {({innerRef, draggableProps, dragHandleProps}, {isDragging}) => (
-            <span>
-                <span
-                    ref={innerRef}
-                    {...draggableProps}
-                    {...dragHandleProps}
-                    style={{
-                        ...draggableProps.style,
-                        transform: isDragging ? draggableProps.style?.transform : "translate(0, 0)"
-                    }}
-                >
-                    <SkillDisplay skill={skill}/>
-                </span>
-                {placeholder && isDragging ? (
-                    <SkillDisplay skill={skill} isPlaceholder/>
-                ) : null}
-            </span>
-        )}
-    </Draggable>
-);
+export const DraggableSkill = ({parentId, id, index, skill, fromSkillbar = false}: DraggableSkillProps): JSX.Element => {
+    const {attributes, listeners, setNodeRef} = useSortable({
+        id,
+        data: {
+            type: DropType.Skill,
+            parentId,
+            index,
+            skill,
+            fromSkillbar
+        } as SkillData
+    });
+    const dragging = useDragging();
+
+    return (
+        <span
+            ref={setNodeRef}
+            {...attributes}
+            {...listeners}
+        >
+            <SkillItem skill={skill} isPlaceholder={id === dragging.id}/>
+        </span>
+    );
+};

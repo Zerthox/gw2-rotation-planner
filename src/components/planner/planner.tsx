@@ -1,47 +1,116 @@
-import React from "react";
+import React, {useRef} from "react";
 import {Stack} from "@mui/material";
-import {DragDropContext} from "react-beautiful-dnd";
-import {useDispatch} from "react-redux";
-import {SkillBar, SKILLBAR_ID, TRASH_ID} from "./skillbar";
+import {Active, DndContext, DragOverlay} from "@dnd-kit/core";
+import {useDispatch, batch} from "react-redux";
+import {Sidebar, SKILLBAR_ID} from "./sidebar";
 import {Timeline} from "./timeline";
-import {deleteSkill, insertSkill, moveSkill} from "../../store/timeline";
-import {useSkills} from "../../store/skillbar";
+import {SkillItem} from "./skill";
+import {DropType, OverData, SkillData} from ".";
+import {Id, useDragging, setDragging} from "../../store/planner";
+import {deleteRowSkill, insertRowSkill, moveRowSkill} from "../../store/timeline";
+import {useSkills, takeSkillbarItem, findSkill} from "../../store/skillbar";
 
 export const Planner = (): JSX.Element => {
     const dispatch = useDispatch();
     const skills = useSkills();
+    const dragging = useDragging();
+    const parent = useRef<Id>(null);
+
+    const cancelDrag = (active: Active) => {
+        const activeData = (active.data.current ?? {}) as SkillData;
+        if (parent.current?.startsWith("row") && activeData.fromSkillbar) {
+            dispatch(deleteRowSkill({
+                rowId: parent.current,
+                skillId: active.id
+            }));
+        }
+    };
 
     return (
-        <DragDropContext onDragEnd={({source, destination: dest}) => {
-            console.log(source, dest);
+        <DndContext
+            onDragStart={({active}) => {
+                const activeData = (active.data.current ?? {}) as SkillData;
 
-            if (!dest) return;
+                parent.current = null;
+                dispatch(setDragging({id: active.id, skill: activeData.skill}));
+            }}
+            onDragOver={({active, over}) => {
+                if (over) {
+                    const activeData = (active.data.current ?? {}) as SkillData;
+                    const overData = (over.data.current ?? {}) as OverData;
 
-            if (dest.droppableId === TRASH_ID) {
-                if (source.droppableId === SKILLBAR_ID) return;
+                    if (overData.type === DropType.Row || overData.type === DropType.Skill) {
+                        if (parent.current !== overData.parentId) {
+                            if (parent.current) {
+                                if (parent.current === SKILLBAR_ID) {
+                                    // move skill from skillbar to row
+                                    batch(() => {
+                                        const skill = findSkill(skills, active.id);
+                                        dispatch(takeSkillbarItem(active.id));
+                                        dispatch(insertRowSkill({rowId: overData.parentId, index: 0, skill}));
+                                    });
+                                } else {
+                                    // move skill between rows
+                                    dispatch(moveRowSkill({
+                                        rowId: parent.current,
+                                        skillId: active.id,
+                                        to: {row: overData.parentId, index: overData.index}
+                                    }));
+                                }
+                            }
 
-                dispatch(deleteSkill({
-                    rowId: source.droppableId,
-                    index: source.index
-                }));
-            } else if (source.droppableId === SKILLBAR_ID) {
-                const {skillId} = skills[source.index];
-                dispatch(insertSkill({
-                    rowId: dest.droppableId,
-                    index: dest.index,
-                    skillId
-                }));
-            } else {
-                dispatch(moveSkill({
-                    from: {row: source.droppableId, index: source.index},
-                    to: {row: dest.droppableId, index: dest.index}
-                }));
-            }
-        }}>
+                            parent.current = overData.parentId;
+                        } else if (parent.current?.startsWith("row") && activeData.index !== overData.index) {
+                            // move skill in the row
+                            dispatch(moveRowSkill({
+                                rowId: parent.current,
+                                skillId: active.id,
+                                to: {row: parent.current, index: overData.index}
+                            }));
+                        }
+                    }
+                }
+            }}
+            onDragEnd={({active, over}) => {
+                dispatch(setDragging(null));
+
+                if (over) {
+                    const overData = (over.data.current ?? {}) as OverData;
+
+                    if (overData.type === DropType.Trash) {
+                        if (parent.current !== SKILLBAR_ID) {
+                            dispatch(deleteRowSkill({
+                                rowId: parent.current,
+                                skillId: active.id
+                            }));
+                        }
+                    } else if (overData.type === DropType.Row || overData.type === DropType.Skill) {
+                        dispatch(moveRowSkill({
+                            rowId: parent.current,
+                            skillId: active.id,
+                            to: {row: overData.parentId, index: overData.index}
+                        }));
+                    } else {
+                        cancelDrag(active);
+                    }
+                } else {
+                    cancelDrag(active);
+                }
+            }}
+            onDragCancel={({active}) => {
+                dispatch(setDragging(null));
+                cancelDrag(active);
+            }}
+        >
             <Stack direction="row" spacing={2} flexGrow={1}>
-                <SkillBar sx={{justifySelf: "stretch", flexShrink: 0}}/>
+                <Sidebar sx={{justifySelf: "stretch", flexShrink: 0}}/>
                 <Timeline flexGrow={1}/>
             </Stack>
-        </DragDropContext>
+            <DragOverlay>
+                {typeof dragging.skill === "number" ? (
+                    <SkillItem skill={dragging.skill}/>
+                ) : null}
+            </DragOverlay>
+        </DndContext>
     );
 };

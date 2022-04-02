@@ -2,7 +2,7 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {useSelector} from "react-redux";
 import {StoreState} from ".";
 import {createId, Id} from "./planner";
-import {createSkill, SkillState} from "./skillbar";
+import {findSkillIndex, SkillState} from "./skillbar";
 
 export interface Row {
     name?: string;
@@ -18,11 +18,11 @@ export interface Location {
     index: number;
 }
 
+export const createRow = (row: Row): RowState => ({...row, id: createId("row")});
+
 export const findRow = (rows: RowState[], id: Id): RowState => rows.find((row) => row.id === id);
 
 export const findRowIndex = (rows: RowState[], id: Id): number => rows.findIndex((row) => row.id === id);
-
-export const createRow = (row: Row): RowState => ({...row, id: createId("row")});
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 export type RowAction<Data = {}> = PayloadAction<{rowId: Id} & Data>;
@@ -41,7 +41,7 @@ export const timelineSlice = createSlice({
         },
 
         deleteRow: (state, {payload}: RowAction) => {
-            const {rowId} = payload;
+            const {rowId: rowId} = payload;
             const index = findRowIndex(state.rows, rowId);
             state.rows.splice(index, 1);
         },
@@ -53,29 +53,31 @@ export const timelineSlice = createSlice({
         },
 
         updateRowName: (state, {payload}: RowAction<{name: string}>) => {
-            const {rowId, name} = payload;
+            const {rowId: rowId, name} = payload;
             const row = findRow(state.rows, rowId);
             row.name = name;
         },
 
-        insertSkill: (state, {payload}: RowAction<{index: number, skillId: number}>) => {
-            const {rowId, index, skillId} = payload;
+        insertRowSkill: (state, {payload}: RowAction<{index: number, skill: SkillState}>) => {
+            const {rowId: rowId, index, skill} = payload;
             const row = findRow(state.rows, rowId);
-            row.skills.splice(index, 0, createSkill(skillId));
+            row.skills.splice(index, 0, skill);
         },
 
-        deleteSkill: (state, {payload}: RowAction<{index: number}>) => {
-            const {rowId, index} = payload;
+        deleteRowSkill: (state, {payload}: RowAction<{skillId: Id}>) => {
+            const {rowId, skillId} = payload;
             const row = findRow(state.rows, rowId);
+            const index = findSkillIndex(row.skills, skillId);
             row.skills.splice(index, 1);
         },
 
-        moveSkill: (state, {payload}: PayloadAction<{from: Location, to: Location}>) => {
-            const {from, to} = payload;
-            const source = findRow(state.rows, from.row);
+        moveRowSkill: (state, {payload}: RowAction<{skillId: Id, to: Location}>) => {
+            const {rowId, skillId, to} = payload;
+            const source = findRow(state.rows, rowId);
             const dest = findRow(state.rows, to.row);
 
-            const [skill] = source.skills.splice(from.index, 1);
+            const index = findSkillIndex(source.skills, skillId);
+            const [skill] = source.skills.splice(index, 1);
             dest.skills.splice(to.index, 0, skill);
         }
     }
@@ -83,7 +85,7 @@ export const timelineSlice = createSlice({
 
 export const timelineReducer = timelineSlice.reducer;
 
-export const {appendRow, deleteRow, moveRow, updateRowName, insertSkill, deleteSkill, moveSkill} = timelineSlice.actions;
+export const {appendRow, deleteRow, moveRow, updateRowName, insertRowSkill, deleteRowSkill, moveRowSkill} = timelineSlice.actions;
 
 export const useRows = (): RowState[] => useSelector((state: StoreState) => state.timelineReducer.rows);
 
