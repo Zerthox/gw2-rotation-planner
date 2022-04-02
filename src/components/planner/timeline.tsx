@@ -3,10 +3,10 @@ import {Box, Stack, StackProps, Button, IconButton, TextField, Card} from "@mui/
 import {AddCircle, Delete, DragIndicator} from "@mui/icons-material";
 import {DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";
 import {useDispatch} from "react-redux";
-import {useRows, useRow, appendRow, removeRow, moveRow, updateRowName} from "../../store/timeline";
+import {useRows, useRow, appendRow, removeRow, moveRow, updateRowName, RowId} from "../../store/timeline";
 
 export interface RowProps {
-    id: number;
+    id: RowId;
     index: number;
 }
 

@@ -2,6 +2,8 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {useSelector} from "react-redux";
 import {StoreState} from ".";
 
+export type RowId = string;
+
 export type Skill = number;
 
 export interface Row {
@@ -10,20 +12,25 @@ export interface Row {
 }
 
 export interface RowState extends Row {
-    id: number;
+    id: RowId;
 }
 
-export type RowAction<Data> = PayloadAction<{id: number} & Data>;
+// eslint-disable-next-line @typescript-eslint/ban-types
+export type RowAction<Data = {}> = PayloadAction<{id: RowId} & Data>;
 
-const findRowIndex = (rows: RowState[], id: number) => rows.findIndex((row) => row.id === id);
+export const findRowIndex = (rows: RowState[], id: RowId): number => rows.findIndex((row) => row.id === id);
 
-const getNextRowId = (rows: RowState[]) => rows.reduce((max, row) => Math.max(max, row.id), -1) + 1;
+export const getNextRowId = (rows: RowState[]): RowId => {
+    const max = rows.reduce((max, row) => Math.max(max, parseInt(row.id)), -1);
+    const next = max + 1;
+    return next.toString();
+};
 
 export const timelineSlice = createSlice({
     name: "timeline",
     initialState: {
         rows: [
-            {id: 0, name: "", skills: []}
+            {id: "0", name: "", skills: []}
         ] as RowState[]
     },
     reducers: {
@@ -31,7 +38,7 @@ export const timelineSlice = createSlice({
             const id = getNextRowId(state.rows);
             state.rows.push({...row, id});
         },
-        removeRow: (state, {payload}: PayloadAction<{id: number}>) => {
+        removeRow: (state, {payload}: RowAction) => {
             const {id} = payload;
             const index = findRowIndex(state.rows, id);
             state.rows.splice(index, 1);
@@ -60,4 +67,4 @@ export const {appendRow, removeRow, moveRow, updateRowName, updateRowSkills} = t
 
 export const useRows = (): RowState[] => useSelector((state: StoreState) => state.timelineReducer.rows);
 
-export const useRow = (id: number): RowState => useRows().find((row) => row.id === id);
+export const useRow = (id: RowId): RowState => useRows().find((row) => row.id === id);
