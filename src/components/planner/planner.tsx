@@ -39,7 +39,7 @@ export const Planner = (): JSX.Element => {
             }
         }}>
             <Stack direction="row" spacing={2} flexGrow={1}>
-                <SkillBar sx={{justifySelf: "stretch"}}/>
+                <SkillBar sx={{justifySelf: "stretch", flexShrink: 0}}/>
                 <Timeline flexGrow={1}/>
             </Stack>
         </DragDropContext>

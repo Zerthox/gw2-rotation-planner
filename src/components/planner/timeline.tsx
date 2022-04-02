@@ -25,6 +25,7 @@ export const Row = ({id, index}: RowProps): JSX.Element => {
                     variant="standard"
                     value={row.name}
                     onChange={({target}) => dispatch(updateRowName({rowId: id, name: target.value}))}
+                    sx={{flexShrink: 0}}
                 />
                 <Box flexGrow={1}>
                     <Droppable droppableId={id} direction="horizontal">
