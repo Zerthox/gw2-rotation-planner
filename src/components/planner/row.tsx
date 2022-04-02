@@ -21,7 +21,7 @@ export const Row = ({id, index}: RowProps): JSX.Element => {
     const items = row.skills.map(({id}) => id);
     const {setNodeRef} = useDroppable({
         id,
-        data: {type: DropType.Row, parentId: id, index: 0} as RowData
+        data: {type: DropType.Row, parentId: id, index: items.length} as RowData
     });
 
     return (
