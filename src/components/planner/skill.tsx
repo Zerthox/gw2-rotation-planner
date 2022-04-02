@@ -17,6 +17,7 @@ export const SkillItem = ({skill, isPlaceholder = false}: SkillItemProps): JSX.E
         disableTooltip
         style={{
             fontSize: "3em",
+            lineHeight: 1,
             opacity: isPlaceholder ? 0.5 : 1
         }}
     />

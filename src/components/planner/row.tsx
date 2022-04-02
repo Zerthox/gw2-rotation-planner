@@ -44,6 +44,7 @@ export const Row = ({id, index}: RowProps): JSX.Element => {
                                 <Box sx={{
                                     display: "grid",
                                     gridTemplateColumns: "repeat(auto-fill, 3em)",
+                                    gridTemplateRows: "repeat(auto-fill, 3em)",
                                     gap: 0.5
                                 }}>
                                     {row.skills.map(({id, skillId}, i) => (

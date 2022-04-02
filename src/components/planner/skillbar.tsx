@@ -19,7 +19,7 @@ export const Skillbar = ({id}: SkillbarProps): JSX.Element => {
 
     return (
         <span ref={setNodeRef}>
-            <Stack direction="column" alignItems="center">
+            <Stack direction="column" alignItems="center" spacing={0.5}>
                 {skills.map((skill, i) => (
                     <DraggableSkill
                         key={skill.id}
