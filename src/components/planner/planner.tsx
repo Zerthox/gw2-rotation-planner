@@ -17,8 +17,7 @@ export const Planner = (): JSX.Element => {
     const parent = useRef<Id>(null);
 
     const cancelDrag = (active: Active) => {
-        const activeData = (active.data.current ?? {}) as SkillData;
-        if (parent.current?.startsWith("row") && activeData.fromSkillbar) {
+        if (dragging.fromSkillbar && parent.current?.startsWith("row")) {
             dispatch(deleteRowSkill({
                 rowId: parent.current,
                 skillId: active.id
@@ -32,7 +31,7 @@ export const Planner = (): JSX.Element => {
                 const activeData = (active.data.current ?? {}) as SkillData;
 
                 parent.current = null;
-                dispatch(setDragging({id: active.id, skill: activeData.skill}));
+                dispatch(setDragging({id: active.id, skill: activeData.skill, fromSkillbar: activeData.fromSkillbar}));
             }}
             onDragOver={({active, over}) => {
                 if (over) {
@@ -47,7 +46,7 @@ export const Planner = (): JSX.Element => {
                                     batch(() => {
                                         const skill = findSkill(skills, active.id);
                                         dispatch(takeSkillbarItem(active.id));
-                                        dispatch(insertRowSkill({rowId: overData.parentId, index: 0, skill}));
+                                        dispatch(insertRowSkill({rowId: overData.parentId, index: overData.index, skill}));
                                     });
                                 } else {
                                     // move skill between rows

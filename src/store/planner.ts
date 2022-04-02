@@ -10,6 +10,7 @@ export const createId = (type: string): Id => `${type}-${nanoid()}`;
 export interface Dragging {
     id: Id;
     skill: number;
+    fromSkillbar: boolean;
 }
 
 export const plannerSlice = createSlice({
@@ -17,12 +18,13 @@ export const plannerSlice = createSlice({
     initialState: {
         dragging: {
             id: null,
-            skill: null
+            skill: null,
+            fromSkillbar: false
         }
     },
     reducers: {
         setDragging(state, {payload}: PayloadAction<Dragging>) {
-            state.dragging = payload ?? {id: null, skill: null};
+            state.dragging = payload ?? {id: null, skill: null, fromSkillbar: false};
         }
     }
 });
