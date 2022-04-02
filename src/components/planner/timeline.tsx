@@ -1,12 +1,15 @@
 import React from "react";
-import {Box, Stack, StackProps, Button, IconButton, TextField, Card} from "@mui/material";
-import {AddCircle, Delete, DragIndicator} from "@mui/icons-material";
-import {DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";
+import {Box, Stack, StackProps, Grid, Button, TextField, Card, Typography} from "@mui/material";
+import {ArrowUpward, ArrowDownward, AddCircle, Delete} from "@mui/icons-material";
+import {Droppable} from "react-beautiful-dnd";
 import {useDispatch} from "react-redux";
-import {useRows, useRow, appendRow, removeRow, moveRow, updateRowName, RowId} from "../../store/timeline";
+import {IconButton} from "../general";
+import {Skill} from "./skill";
+import {Id} from "../../store/planner";
+import {useRows, useRow, appendRow, deleteRow, moveRow, updateRowName} from "../../store/timeline";
 
 export interface RowProps {
-    id: RowId;
+    id: Id;
     index: number;
 }
 
@@ -15,34 +18,68 @@ export const Row = ({id, index}: RowProps): JSX.Element => {
     const row = useRow(id);
 
     return (
-        <Draggable draggableId={id.toString()} index={index}>
-            {({innerRef, draggableProps, dragHandleProps}) => (
-                <span ref={innerRef} {...draggableProps}>
-                    <Card>
-                        <Stack direction="row" alignItems="center" spacing={1}>
-                            <span {...dragHandleProps}>
-                                <DragIndicator/>
+        <Card>
+            <Stack direction="row" alignItems="center" spacing={1} padding={2}>
+                <TextField
+                    placeholder={`Section #${index + 1}`}
+                    variant="standard"
+                    value={row.name}
+                    onChange={({target}) => dispatch(updateRowName({rowId: id, name: target.value}))}
+                />
+                <Box flexGrow={1}>
+                    <Droppable droppableId={id} direction="horizontal">
+                        {({innerRef, droppableProps, placeholder}) => (
+                            <span ref={innerRef} {...droppableProps}>
+                                {row.skills.length > 0 ? (
+                                    <Grid
+                                        container
+                                        direction="row"
+                                        alignItems="center"
+                                        flexWrap="wrap"
+                                        spacing={1}
+                                    >
+                                        {row.skills.map(({id, skillId: skill}, i) => (
+                                            <Grid item key={id} xs={1}>
+                                                <Skill
+                                                    id={id}
+                                                    skill={skill}
+                                                    index={i}
+                                                />
+                                            </Grid>
+                                        ))}
+                                        {placeholder}
+                                    </Grid>
+                                ) : (
+                                    <Typography sx={{opacity: 0.5}}>
+                                        Drop skills here
+                                    </Typography>
+                                )}
                             </span>
-                            <TextField
-                                placeholder={`Section #${id + 1}`}
-                                variant="standard"
-                                value={row.name}
-                                onChange={({target}) => dispatch(updateRowName({id, name: target.value}))}
-                            />
-                            <Box flexGrow={1}>
-                                This rows skills will appear here...
-                            </Box>
-                            <IconButton
-                                aria-label="delete"
-                                onClick={() => dispatch(removeRow({id}))}
-                            >
-                                <Delete/>
-                            </IconButton>
-                        </Stack>
-                    </Card>
-                </span>
-            )}
-        </Draggable>
+                        )}
+                    </Droppable>
+                </Box>
+                <Stack direction="column" alignItems="center">
+                    <IconButton
+                        title="Move Up"
+                        onClick={() => dispatch(moveRow({from: index, to: index - 1}))}
+                    >
+                        <ArrowUpward/>
+                    </IconButton>
+                    <IconButton
+                        title="Move Down"
+                        onClick={() => dispatch(moveRow({from: index, to: index + 1}))}
+                    >
+                        <ArrowDownward/>
+                    </IconButton>
+                </Stack>
+                <IconButton
+                    title="Delete"
+                    onClick={() => dispatch(deleteRow({rowId: id}))}
+                >
+                    <Delete/>
+                </IconButton>
+            </Stack>
+        </Card>
     );
 };
 
@@ -54,24 +91,11 @@ export const Timeline = (props: TimelineProps): JSX.Element => {
 
     return (
         <Stack direction="column" spacing={1} {...props}>
-            <DragDropContext onDragEnd={({source, destination: dest}) => {
-                if (dest && dest.index !== source.index) {
-                    dispatch(moveRow({from: source.index, to: dest.index}));
-                }
-            }}>
-                <Droppable droppableId="timeline-rows">
-                    {({innerRef: ref, droppableProps, placeholder}) => (
-                        <span ref={ref} {...droppableProps}>
-                            <Stack direction="column" spacing={1}>
-                                {rows.map(({id}, i) => (
-                                    <Row key={id} id={id} index={i}/>
-                                ))}
-                                {placeholder}
-                            </Stack>
-                        </span>
-                    )}
-                </Droppable>
-            </DragDropContext>
+            <Stack direction="column" spacing={1}>
+                {rows.map(({id}, i) => (
+                    <Row key={id} id={id} index={i}/>
+                ))}
+            </Stack>
             <Button
                 variant="contained"
                 startIcon={<AddCircle/>}

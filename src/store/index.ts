@@ -1,10 +1,12 @@
 import {configureStore} from "@reduxjs/toolkit";
 import {themeReducer} from "./theme";
+import {skillbarReducer} from "./skillbar";
 import {timelineReducer} from "./timeline";
 
 export const Store = configureStore({
     reducer: {
         themeReducer,
+        skillbarReducer,
         timelineReducer
     }
 });
