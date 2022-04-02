@@ -2,9 +2,10 @@ import {Id} from "../../store/planner";
 
 export * from "./planner";
 export * from "./sidebar";
-export * from "./timeline";
 export * from "./skill";
 export * from "./skillbar";
+export * from "./timeline";
+export * from "./row";
 
 export enum DropType {
     Trash = "trash",
