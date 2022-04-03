@@ -1,14 +1,14 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {useSelector} from "react-redux";
 import {StoreState} from ".";
-import {createId, Id} from "./planner";
+import {createId, Id, IdType} from "./planner";
 
 export interface SkillState {
     id: Id;
     skillId: number;
 }
 
-export const createSkill = (skill: number): SkillState => ({skillId: skill, id: createId("skill")});
+export const createSkill = (skill: number): SkillState => ({skillId: skill, id: createId(IdType.Skill)});
 
 export const findSkill = (skills: SkillState[], id: Id): SkillState => skills.find((skill) => skill.id === id);
 

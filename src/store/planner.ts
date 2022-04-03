@@ -5,12 +5,20 @@ import {StoreState} from ".";
 
 export type Id = string;
 
-export const createId = (type: string): Id => `${type}-${nanoid()}`;
+export enum IdType {
+    Row = "row",
+    Skill = "skill",
+    Skillbar = "skillbar",
+    Trash = "trash"
+}
+
+export const createId = (type: IdType): Id => `${type}-${nanoid()}`;
+
+export const isa = (type: IdType, id: Id): boolean => id?.startsWith(type);
 
 export interface Dragging {
     id: Id;
     skill: number;
-    fromSkillbar: boolean;
 }
 
 export const plannerSlice = createSlice({
@@ -18,13 +26,12 @@ export const plannerSlice = createSlice({
     initialState: {
         dragging: {
             id: null,
-            skill: null,
-            fromSkillbar: false
+            skill: null
         }
     },
     reducers: {
         setDragging(state, {payload}: PayloadAction<Dragging>) {
-            state.dragging = payload ?? {id: null, skill: null, fromSkillbar: false};
+            state.dragging = payload ?? {id: null, skill: null};
         }
     }
 });

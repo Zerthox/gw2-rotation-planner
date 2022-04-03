@@ -1,7 +1,7 @@
 import React from "react";
 import {useSortable} from "@dnd-kit/sortable";
 import {Skill} from "@discretize/gw2-ui-new";
-import {DropType, SkillData} from ".";
+import {SkillData} from ".";
 import {Id, useDragging} from "../../store/planner";
 
 export interface SkillItemProps {
@@ -35,7 +35,6 @@ export const DraggableSkill = ({parentId, id, index, skill, fromSkillbar = false
     const {attributes, listeners, setNodeRef} = useSortable({
         id,
         data: {
-            type: DropType.Skill,
             parentId,
             index,
             skill,

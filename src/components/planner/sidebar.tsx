@@ -3,12 +3,12 @@ import {Stack, Card, CardProps, Chip, Divider} from "@mui/material";
 import {Delete} from "@mui/icons-material";
 import {useDroppable} from "@dnd-kit/core";
 import {Skillbar} from "./skillbar";
-import {DropType, TrashData} from ".";
-import {createId} from "../../store/planner";
+import {OverData} from ".";
+import {IdType, createId} from "../../store/planner";
 
-export const SKILLBAR_ID = createId("skillbar");
+export const SKILLBAR_ID = createId(IdType.Skillbar);
 
-export const TRASH_ID = createId("trash");
+export const TRASH_ID = createId(IdType.Trash);
 
 export interface TrashProps {
     id: string;
@@ -17,7 +17,7 @@ export interface TrashProps {
 export const Trash = ({id}: TrashProps): JSX.Element => {
     const {setNodeRef, isOver} = useDroppable({
         id,
-        data: {type: DropType.Trash} as TrashData
+        data: {} as OverData
     });
 
     return (

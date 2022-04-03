@@ -1,7 +1,7 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {useSelector} from "react-redux";
 import {StoreState} from ".";
-import {createId, Id} from "./planner";
+import {createId, Id, IdType} from "./planner";
 import {findSkillIndex, SkillState} from "./skillbar";
 
 export interface Row {
@@ -18,7 +18,7 @@ export interface Location {
     index: number;
 }
 
-export const createRow = (row: Row): RowState => ({...row, id: createId("row")});
+export const createRow = (row: Row): RowState => ({...row, id: createId(IdType.Row)});
 
 export const findRow = (rows: RowState[], id: Id): RowState => rows.find((row) => row.id === id);
 

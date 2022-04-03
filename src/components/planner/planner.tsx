@@ -1,12 +1,12 @@
-import React, {useRef} from "react";
+import React, {useRef, useCallback} from "react";
 import {Stack} from "@mui/material";
 import {Active, DndContext, DragOverlay} from "@dnd-kit/core";
 import {useDispatch, batch} from "react-redux";
-import {Sidebar, SKILLBAR_ID} from "./sidebar";
+import {Sidebar} from "./sidebar";
 import {Timeline} from "./timeline";
 import {SkillItem} from "./skill";
-import {DropType, OverData, SkillData} from ".";
-import {Id, useDragging, setDragging} from "../../store/planner";
+import {OverData, SkillData} from ".";
+import {Id, IdType, isa, useDragging, setDragging} from "../../store/planner";
 import {deleteRowSkill, insertRowSkill, moveRowSkill} from "../../store/timeline";
 import {useSkills, takeSkillbarItem, findSkill} from "../../store/skillbar";
 
@@ -15,15 +15,16 @@ export const Planner = (): JSX.Element => {
     const skills = useSkills();
     const dragging = useDragging();
     const parent = useRef<Id>(null);
+    const fromSkillbar = useRef(false);
 
-    const cancelDrag = (active: Active) => {
-        if (dragging.fromSkillbar && parent.current?.startsWith("row")) {
+    const cancelDrag = useCallback((active: Active) => {
+        if (fromSkillbar.current && isa(IdType.Row, parent.current)) {
             dispatch(deleteRowSkill({
                 rowId: parent.current,
                 skillId: active.id
             }));
         }
-    };
+    }, [dispatch, fromSkillbar]);
 
     return (
         <DndContext
@@ -31,36 +32,35 @@ export const Planner = (): JSX.Element => {
                 const activeData = (active.data.current ?? {}) as SkillData;
 
                 parent.current = null;
-                dispatch(setDragging({id: active.id, skill: activeData.skill, fromSkillbar: activeData.fromSkillbar}));
+                fromSkillbar.current = activeData.fromSkillbar;
+                dispatch(setDragging({id: active.id, skill: activeData.skill}));
             }}
             onDragOver={({active, over}) => {
                 if (over) {
                     const activeData = (active.data.current ?? {}) as SkillData;
                     const overData = (over.data.current ?? {}) as OverData;
 
-                    if (overData.type === DropType.Row || overData.type === DropType.Skill) {
+                    if (isa(IdType.Row, overData.parentId)) {
                         if (parent.current !== overData.parentId) {
-                            if (parent.current) {
-                                if (parent.current === SKILLBAR_ID) {
-                                    // move skill from skillbar to row
-                                    batch(() => {
-                                        const skill = findSkill(skills, active.id);
-                                        dispatch(takeSkillbarItem(active.id));
-                                        dispatch(insertRowSkill({rowId: overData.parentId, index: overData.index, skill}));
-                                    });
-                                } else {
-                                    // move skill between rows
-                                    dispatch(moveRowSkill({
-                                        rowId: parent.current,
-                                        skillId: active.id,
-                                        to: {row: overData.parentId, index: overData.index}
-                                    }));
-                                }
+                            if (!parent.current && fromSkillbar.current) {
+                                // move skill from skillbar to row
+                                batch(() => {
+                                    const skill = findSkill(skills, active.id);
+                                    dispatch(takeSkillbarItem(active.id));
+                                    dispatch(insertRowSkill({rowId: overData.parentId, index: overData.index, skill}));
+                                });
+                            } else if (isa(IdType.Row, parent.current)) {
+                                // move skill between rows
+                                dispatch(moveRowSkill({
+                                    rowId: parent.current,
+                                    skillId: active.id,
+                                    to: {row: overData.parentId, index: overData.index}
+                                }));
                             }
 
                             parent.current = overData.parentId;
-                        } else if (parent.current?.startsWith("row") && activeData.index !== overData.index) {
-                            // move skill in the row
+                        } else if (activeData.index !== overData.index) {
+                            // move skill within the row
                             dispatch(moveRowSkill({
                                 rowId: parent.current,
                                 skillId: active.id,
@@ -76,29 +76,29 @@ export const Planner = (): JSX.Element => {
                 if (over) {
                     const overData = (over.data.current ?? {}) as OverData;
 
-                    if (overData.type === DropType.Trash) {
-                        if (parent.current !== SKILLBAR_ID) {
+                    if (isa(IdType.Trash, over.id)) {
+                        // delete row entry if necessary
+                        if (isa(IdType.Row, parent.current)) {
                             dispatch(deleteRowSkill({
                                 rowId: parent.current,
                                 skillId: active.id
                             }));
+                            return;
                         }
-                    } else if (overData.type === DropType.Row || overData.type === DropType.Skill) {
-                        dispatch(moveRowSkill({
-                            rowId: parent.current,
-                            skillId: active.id,
-                            to: {row: overData.parentId, index: overData.index}
-                        }));
-                    } else {
-                        cancelDrag(active);
+                    } else if (isa(IdType.Row, overData.parentId)) {
+                        // everything is done already
+                        return;
                     }
-                } else {
-                    cancelDrag(active);
                 }
+
+                // fallback to cancelling
+                cancelDrag(active);
             }}
             onDragCancel={({active}) => {
-                dispatch(setDragging(null));
-                cancelDrag(active);
+                batch(() => {
+                    dispatch(setDragging(null));
+                    cancelDrag(active);
+                });
             }}
         >
             <Stack direction="row" spacing={2} flexGrow={1}>

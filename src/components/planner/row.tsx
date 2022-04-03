@@ -6,7 +6,7 @@ import {rectSortingStrategy, SortableContext} from "@dnd-kit/sortable";
 import {useDispatch} from "react-redux";
 import {IconButton} from "../general";
 import {DraggableSkill} from "./skill";
-import {DropType, RowData} from ".";
+import {OverData} from ".";
 import {Id} from "../../store/planner";
 import {useRow, deleteRow, moveRow, updateRowName} from "../../store/timeline";
 
@@ -21,7 +21,7 @@ export const Row = ({id, index}: RowProps): JSX.Element => {
     const items = row.skills.map(({id}) => id);
     const {setNodeRef} = useDroppable({
         id,
-        data: {type: DropType.Row, parentId: id, index: items.length} as RowData
+        data: {parentId: id, index: items.length} as OverData
     });
 
     return (
