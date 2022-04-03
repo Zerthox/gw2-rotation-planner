@@ -1,0 +1,5 @@
+/* reset line height changed by dt ui defaults */
+:root {
+    --gw2-line-height-body: 1;
+    --gw2-line-height-heading: 1;
+}

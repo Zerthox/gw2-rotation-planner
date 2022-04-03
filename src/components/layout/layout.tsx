@@ -10,6 +10,8 @@ import {DarkTheme, LightTheme} from "./theme";
 import {useDarkMode} from "../../store/theme";
 
 import "@discretize/gw2-ui-new/dist/index.css";
+import "@discretize/gw2-ui-new/dist/default_style.css";
+import "./global.css";
 
 const LANG = "en";
 

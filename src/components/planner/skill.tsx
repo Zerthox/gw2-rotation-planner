@@ -1,24 +1,29 @@
 import React from "react";
 import {useSortable} from "@dnd-kit/sortable";
 import {Skill} from "@discretize/gw2-ui-new";
+import {css} from "@emotion/css";
 import {SkillData} from ".";
 import {Id, useDragging} from "../../store/planner";
 
 export interface SkillItemProps {
     skill: number;
+    tooltip?: boolean;
     isPlaceholder?: boolean;
 }
 
-export const SkillItem = ({skill, isPlaceholder = false}: SkillItemProps): JSX.Element => (
+const iconStyles = (isPlaceholder: boolean) => css`
+    font-size: 3em;
+    opacity: ${isPlaceholder ? 0.3 : 1}
+`;
+
+export const SkillItem = ({skill, tooltip = false, isPlaceholder = false}: SkillItemProps): JSX.Element => (
     <Skill
         id={skill}
         disableLink
         disableText
-        disableTooltip
-        style={{
-            fontSize: "3em",
-            lineHeight: 1,
-            opacity: isPlaceholder ? 0.3 : 1
+        disableTooltip={!tooltip}
+        iconProps={{
+            className: iconStyles(isPlaceholder)
         }}
     />
 );
@@ -47,7 +52,7 @@ export const DraggableSkill = ({parentId, id, index, skill}: DraggableSkillProps
             {...attributes}
             {...listeners}
         >
-            <SkillItem skill={skill} isPlaceholder={id === dragging.id}/>
+            <SkillItem skill={skill} tooltip={!dragging.id} isPlaceholder={id === dragging.id}/>
         </span>
     );
 };
