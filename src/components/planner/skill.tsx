@@ -18,7 +18,7 @@ export const SkillItem = ({skill, isPlaceholder = false}: SkillItemProps): JSX.E
         style={{
             fontSize: "3em",
             lineHeight: 1,
-            opacity: isPlaceholder ? 0.5 : 1
+            opacity: isPlaceholder ? 0.3 : 1
         }}
     />
 );
@@ -28,17 +28,15 @@ export interface DraggableSkillProps {
     parentId: Id;
     index: number;
     skill: number;
-    fromSkillbar?: boolean;
 }
 
-export const DraggableSkill = ({parentId, id, index, skill, fromSkillbar = false}: DraggableSkillProps): JSX.Element => {
+export const DraggableSkill = ({parentId, id, index, skill}: DraggableSkillProps): JSX.Element => {
     const {attributes, listeners, setNodeRef} = useSortable({
         id,
         data: {
             parentId,
             index,
-            skill,
-            fromSkillbar
+            skill
         } as SkillData
     });
     const dragging = useDragging();

@@ -20,7 +20,6 @@ export const Skillbar = ({id}: SkillbarProps): JSX.Element => {
                     parentId={id}
                     index={i}
                     skill={skill.skillId}
-                    fromSkillbar
                 />
             ))}
         </Stack>

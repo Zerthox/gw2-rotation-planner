@@ -11,7 +11,6 @@ export interface SkillData {
     parentId: Id;
     index: number;
     skill: number;
-    fromSkillbar: boolean;
 }
 
 export interface OverData {

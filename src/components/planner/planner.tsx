@@ -32,7 +32,7 @@ export const Planner = (): JSX.Element => {
                 const activeData = (active.data.current ?? {}) as SkillData;
 
                 parent.current = null;
-                fromSkillbar.current = activeData.fromSkillbar;
+                fromSkillbar.current = isa(IdType.Skillbar, activeData.parentId);
                 dispatch(setDragging({id: active.id, skill: activeData.skill}));
             }}
             onDragOver={({active, over}) => {
