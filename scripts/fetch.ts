@@ -2,6 +2,7 @@ import path from "path";
 import {promises as fs, existsSync} from "fs";
 import {stdout} from "process";
 import {professions, fetchProfession, fetchSkills, Skill} from "../api";
+import {SkillData} from "../src/hooks/data";
 
 const outPath = path.join(__dirname, "../src/data");
 
@@ -47,12 +48,12 @@ function toSkillData({
     transform_skills: transformSkills,
     bundle_skills: bundleSkills,
     toolbelt_skill: toolbeltSkill
-}: Skill) {
+}: Skill): SkillData {
     return {
         id,
         name,
         type,
-        weaponType,
+        weaponType: weaponType === "None" ? undefined : weaponType,
         slot,
         attunement,
         dualWield,
