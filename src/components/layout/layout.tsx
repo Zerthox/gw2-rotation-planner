@@ -5,7 +5,7 @@ import {SEO} from "./seo";
 import {Loading} from "./loading";
 import {Content} from "./content";
 import {Store, Persistor} from "../../store";
-import {useSiteMeta} from "../../hooks";
+import {useSiteMeta} from "../../hooks/site";
 
 import "@discretize/gw2-ui-new/dist/index.css";
 import "@discretize/gw2-ui-new/dist/default_style.css";
