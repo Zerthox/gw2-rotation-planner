@@ -4,6 +4,7 @@ export interface SiteMeta {
     title: string;
     description: string;
     author: string;
+    source: string;
 }
 
 interface SiteData {
@@ -19,6 +20,7 @@ const useSiteData = () => useStaticQuery<SiteData>(graphql`
                 title
                 description
                 author
+                source
             }
         }
     }

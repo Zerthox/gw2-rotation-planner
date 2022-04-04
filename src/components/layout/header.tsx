@@ -1,8 +1,10 @@
 import React from "react";
 import {useDispatch} from "react-redux";
-import {AppBar, Box, Switch, Typography, Stack} from "@mui/material";
-import {DarkMode} from "@mui/icons-material";
+import {AppBar, Box, Stack, Switch, FormControlLabel, Typography, Tooltip} from "@mui/material";
+import {DarkMode, GitHub} from "@mui/icons-material";
+import {IconButton} from "../general";
 import {setDarkMode, useDarkMode} from "../../store/theme";
+import {useSiteMeta} from "../../hooks";
 
 export interface HeaderProps {
     title?: string;
@@ -11,6 +13,7 @@ export interface HeaderProps {
 export const Header = ({title}: HeaderProps): JSX.Element => {
     const dispatch = useDispatch();
     const darkMode = useDarkMode();
+    const siteMeta = useSiteMeta();
 
     return (
         <AppBar position="static">
@@ -28,12 +31,25 @@ export const Header = ({title}: HeaderProps): JSX.Element => {
                 <Stack
                     direction="row"
                     alignItems="center"
+                    spacing={2}
                 >
-                    <DarkMode/>
-                    <Switch
-                        checked={darkMode}
-                        onChange={({target}) => dispatch(setDarkMode(target.checked))}
-                    />
+                    <Tooltip placement="bottom" disableInteractive title="Toggle Theme">
+                        <FormControlLabel
+                            checked={darkMode}
+                            label={
+                                <Box display="flex" alignItems="center" justifyContent="center">
+                                    <DarkMode/>
+                                </Box>
+                            }
+                            labelPlacement="start"
+                            control={
+                                <Switch onChange={({target}) => dispatch(setDarkMode(target.checked))}/>
+                            }
+                        />
+                    </Tooltip>
+                    <IconButton title="View Source" href={siteMeta.source}>
+                        <GitHub/>
+                    </IconButton>
                 </Stack>
             </Stack>
         </AppBar>

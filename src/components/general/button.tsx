@@ -3,6 +3,7 @@ import {Tooltip, IconButton as MuiIconButton, TooltipProps, IconButtonProps as M
 
 export interface IconButtonProps extends MuiIconButtonProps {
     title: string;
+    href?: string;
     tooltip?: boolean;
     tooltipProps?: TooltipProps;
 }

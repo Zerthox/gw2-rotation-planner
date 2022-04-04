@@ -2,7 +2,8 @@ module.exports = {
     siteMetadata: {
         title: "GW2 Rotation Planner",
         description: "Plan out rotations for Guild Wars 2",
-        author: "Zerthox"
+        author: "Zerthox",
+        source: "https://github.com/zerthox/gw2-rotation-planner"
     },
     pathPrefix: "/gw2-rotation-planner",
     plugins: [

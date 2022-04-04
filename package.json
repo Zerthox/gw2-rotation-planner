@@ -14,10 +14,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Zerthox/gw2-rotation-planner"
+    "url": "https://github.com/zerthox/gw2-rotation-planner"
   },
   "bugs": {
-    "url": "https://github.com/Zerthox/gw2-rotation-planner/issues"
+    "url": "https://github.com/zerthox/gw2-rotation-planner/issues"
   },
   "dependencies": {
     "@discretize/gw2-ui-new": "^0.0.11",
