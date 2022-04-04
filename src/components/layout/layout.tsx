@@ -1,35 +1,15 @@
 import React from "react";
 import {Provider as ReduxProvider} from "react-redux";
-import {ThemeProvider, CssBaseline} from "@mui/material";
-import {APILanguageProvider} from "@discretize/gw2-ui-new";
+import {PersistGate} from "redux-persist/integration/react";
 import {SEO} from "./seo";
+import {Loading} from "./loading";
 import {Content} from "./content";
-import {Store} from "../../store";
+import {Store, Persistor} from "../../store";
 import {useSiteMeta} from "../../hooks";
-import {DarkTheme, LightTheme} from "./theme";
-import {useDarkMode} from "../../store/theme";
 
 import "@discretize/gw2-ui-new/dist/index.css";
 import "@discretize/gw2-ui-new/dist/default_style.css";
 import "./global.css";
-
-const LANG = "en";
-
-export interface ProvidersProps {
-    children: React.ReactNode;
-}
-
-export const Providers = ({children}: ProvidersProps): JSX.Element => {
-    const darkMode = useDarkMode();
-
-    return (
-        <APILanguageProvider value={LANG}>
-            <ThemeProvider theme={darkMode ? DarkTheme : LightTheme}>
-                {children}
-            </ThemeProvider>
-        </APILanguageProvider>
-    );
-};
 
 export interface LayoutProps {
     title?: string;
@@ -47,10 +27,9 @@ export const Layout = ({title, children}: LayoutProps): JSX.Element => {
                 description={siteMeta.description}
                 author={siteMeta.author}
             />
-            <Providers>
-                <CssBaseline/>
+            <PersistGate persistor={Persistor} loading={<Loading/>}>
                 <Content title={pageTitle}>{children}</Content>
-            </Providers>
+            </PersistGate>
         </ReduxProvider>
     );
 };
