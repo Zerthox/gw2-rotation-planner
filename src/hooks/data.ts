@@ -4,15 +4,22 @@ export {ProfessionKind as Profession, WeaponType, SkillType, SkillSlot} from "..
 
 export interface ProfessionData {
     name: string;
-    elites: string[];
+    elites: EliteData[];
     weapons: WeaponType[];
     skills: SkillData[];
+}
+
+export interface EliteData {
+    id: number;
+    name: string;
 }
 
 export interface SkillData {
     id: number;
     name: string;
     type?: SkillType;
+    professions: Profession[];
+    specialization?: number;
     weaponType?: WeaponType;
     slot?: SkillSlot;
     attunement?: string;
@@ -25,4 +32,6 @@ export interface SkillData {
     toolbeltSkill?: number;
 }
 
-export const useProfessionData = (prof: Profession): ProfessionData => null;
+export const useProfessionData = (_prof: Profession): ProfessionData => null;
+
+export const useSkillData = (prof: Profession, id: number): SkillData => useProfessionData(prof).skills.find((skill) => skill.id === id);

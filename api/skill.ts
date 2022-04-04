@@ -43,6 +43,7 @@ export interface Skill {
     type?: SkillType;
     weapon_type?: WeaponType | "None";
     professions: ProfessionKind[];
+    specialization?: number;
     slot?: SkillSlot;
     facts?: unknown[];
     traited_facts?: unknown[];

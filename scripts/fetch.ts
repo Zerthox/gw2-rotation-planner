@@ -1,8 +1,8 @@
 import path from "path";
 import {promises as fs, existsSync} from "fs";
 import {stdout} from "process";
-import {professions, fetchProfession, fetchSkills, Skill} from "../api";
-import {SkillData} from "../src/hooks/data";
+import {professions, fetchProfession, fetchSpecializations, fetchSkills, Skill, WeaponType} from "../api";
+import {ProfessionData, SkillData} from "../src/hooks/data";
 
 const outPath = path.join(__dirname, "../src/data");
 
@@ -15,7 +15,8 @@ const outPath = path.join(__dirname, "../src/data");
         stdout.write(`Fetching ${prof} data... `);
         const profData = await fetchProfession(prof);
 
-        const weapons = Object.keys(profData.weapons);
+        const specs = await fetchSpecializations(profData.specializations);
+        const weapons = Object.keys(profData.weapons) as WeaponType[];
         const weaponSkills = Object.values(profData.weapons)
             .map((weapon) => weapon.skills.map((skill) => skill.id))
             .flat();
@@ -25,6 +26,7 @@ const outPath = path.join(__dirname, "../src/data");
 
         await saveJson(path.join(outPath, `${prof.toLowerCase()}.json`), {
             name: profData.name,
+            elites: specs.filter((spec) => spec.elite).map(({id, name}) => ({id, name})),
             weapons,
             skills: skills.map((skill) => toSkillData(skill))
         });
@@ -38,6 +40,8 @@ function toSkillData({
     id,
     name,
     type,
+    professions,
+    specialization,
     weapon_type: weaponType,
     slot,
     attunement,
@@ -52,6 +56,8 @@ function toSkillData({
     return {
         id,
         name,
+        professions,
+        specialization,
         type,
         weaponType: weaponType === "None" ? undefined : weaponType,
         slot,
@@ -66,6 +72,6 @@ function toSkillData({
     };
 }
 
-async function saveJson(path: string, data: Record<string, unknown>) {
+async function saveJson(path: string, data: ProfessionData) {
     await fs.writeFile(path, JSON.stringify(data, null, 4));
 }
