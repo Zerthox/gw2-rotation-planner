@@ -4,7 +4,7 @@ import {AppBar, Box, Stack, Switch, FormControlLabel, Typography, Tooltip} from 
 import {DarkMode, GitHub} from "@mui/icons-material";
 import {IconButton} from "../general";
 import {setDarkMode, useDarkMode} from "../../store/theme";
-import {useSiteMeta} from "../../hooks";
+import {useSiteMeta} from "../../hooks/site";
 
 export interface HeaderProps {
     title?: string;
