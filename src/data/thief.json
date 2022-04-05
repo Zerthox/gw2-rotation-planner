@@ -1,0 +1,1125 @@
+{
+    "name": "Thief",
+    "elites": [
+        {
+            "id": 7,
+            "name": "Daredevil"
+        },
+        {
+            "id": 58,
+            "name": "Deadeye"
+        },
+        {
+            "id": 71,
+            "name": "Specter"
+        }
+    ],
+    "weapons": [
+        "Dagger",
+        "Spear",
+        "Pistol",
+        "Rifle",
+        "Scepter",
+        "Shortbow",
+        "Speargun",
+        "Staff",
+        "Sword"
+    ],
+    "skills": [
+        {
+            "id": 13004,
+            "name": "Double Strike",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_1",
+            "flipSkill": 13087,
+            "nextChain": 13087
+        },
+        {
+            "id": 13097,
+            "name": "Heartseeker",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 13006,
+            "name": "Death Blossom",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_3",
+            "dualWield": "Dagger"
+        },
+        {
+            "id": 13040,
+            "name": "Shadow Shot",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_3",
+            "dualWield": "Pistol"
+        },
+        {
+            "id": 13110,
+            "name": "Twisting Fangs",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_3",
+            "dualWield": "Nothing"
+        },
+        {
+            "id": 13019,
+            "name": "Dancing Dagger",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 16432,
+            "name": "Cloak and Dagger",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 13119,
+            "name": "Stab",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Spear",
+            "slot": "Weapon_1",
+            "flipSkill": 13120,
+            "nextChain": 13120
+        },
+        {
+            "id": 13069,
+            "name": "Flanking Dive",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Spear",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 13122,
+            "name": "Nine-Tailed Strike",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Spear",
+            "slot": "Weapon_3",
+            "dualWield": "None",
+            "flipSkill": 13130
+        },
+        {
+            "id": 13070,
+            "name": "Tow Line",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Spear",
+            "slot": "Weapon_4",
+            "flipSkill": 50379
+        },
+        {
+            "id": 13068,
+            "name": "Shadow Assault",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Spear",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 13084,
+            "name": "Vital Shot",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Pistol",
+            "slot": "Weapon_1",
+            "flipSkill": 13115
+        },
+        {
+            "id": 13008,
+            "name": "Bola Shot",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Pistol",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 13011,
+            "name": "Unload",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Pistol",
+            "slot": "Weapon_3",
+            "dualWield": "Pistol"
+        },
+        {
+            "id": 13010,
+            "name": "Shadow Strike",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Pistol",
+            "slot": "Weapon_3",
+            "dualWield": "Dagger",
+            "flipSkill": 13111
+        },
+        {
+            "id": 13111,
+            "name": "Repeater",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Pistol",
+            "slot": "Weapon_3",
+            "dualWield": "Nothing",
+            "flipSkill": 59526
+        },
+        {
+            "id": 13012,
+            "name": "Head Shot",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Pistol",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 13113,
+            "name": "Black Powder",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Pistol",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 41422,
+            "name": "Brutal Aim",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 58,
+            "type": "Weapon",
+            "weaponType": "Rifle",
+            "slot": "Weapon_1",
+            "flipSkill": 44087
+        },
+        {
+            "id": 41494,
+            "name": "Skirmisher's Shot",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 58,
+            "type": "Weapon",
+            "weaponType": "Rifle",
+            "slot": "Weapon_2",
+            "flipSkill": 44591
+        },
+        {
+            "id": 43916,
+            "name": "Double Tap",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 58,
+            "type": "Weapon",
+            "weaponType": "Rifle",
+            "slot": "Weapon_3",
+            "dualWield": "None",
+            "flipSkill": 44695
+        },
+        {
+            "id": 41937,
+            "name": "Death's Retreat",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 58,
+            "type": "Weapon",
+            "weaponType": "Rifle",
+            "slot": "Weapon_4",
+            "flipSkill": 40436
+        },
+        {
+            "id": 40600,
+            "name": "Kneel",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 58,
+            "type": "Weapon",
+            "weaponType": "Rifle",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 63066,
+            "name": "Shadow Bolt",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 71,
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_1",
+            "flipSkill": 63314
+        },
+        {
+            "id": 63351,
+            "name": "Shadow Sap",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 71,
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 63254,
+            "name": "Twilight Combo",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 71,
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_3",
+            "dualWield": "Dagger"
+        },
+        {
+            "id": 63267,
+            "name": "Measured Shot",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 71,
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_3",
+            "dualWield": "Pistol",
+            "flipSkill": 63128
+        },
+        {
+            "id": 63154,
+            "name": "Triple Threat",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 71,
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_3",
+            "dualWield": "None",
+            "flipSkill": 63267
+        },
+        {
+            "id": 13022,
+            "name": "Trick Shot",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Shortbow",
+            "slot": "Weapon_1",
+            "flipSkill": 13129
+        },
+        {
+            "id": 13041,
+            "name": "Cluster Bomb",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Shortbow",
+            "slot": "Weapon_2",
+            "flipSkill": 13043
+        },
+        {
+            "id": 13083,
+            "name": "Disabling Shot",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Shortbow",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 13024,
+            "name": "Choking Gas",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Shortbow",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 13025,
+            "name": "Infiltrator's Arrow",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Shortbow",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 13072,
+            "name": "Piercing Shot",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Speargun",
+            "slot": "Weapon_1",
+            "flipSkill": 13126
+        },
+        {
+            "id": 13073,
+            "name": "Deluge",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Speargun",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 13074,
+            "name": "Escape",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Speargun",
+            "slot": "Weapon_3",
+            "dualWield": "None"
+        },
+        {
+            "id": 13075,
+            "name": "Crippling Shot",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Speargun",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 13076,
+            "name": "Ink Shot",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Speargun",
+            "slot": "Weapon_5",
+            "flipSkill": 13078
+        },
+        {
+            "id": 30614,
+            "name": "Staff Strike",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 7,
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_1",
+            "flipSkill": 30135,
+            "nextChain": 30135
+        },
+        {
+            "id": 29911,
+            "name": "Weakening Charge",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 7,
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 30520,
+            "name": "Debilitating Arc",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 7,
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_3",
+            "dualWield": "None"
+        },
+        {
+            "id": 30775,
+            "name": "Dust Strike",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 7,
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 30597,
+            "name": "Vault",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 7,
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 13009,
+            "name": "Slice",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_1",
+            "flipSkill": 13088,
+            "nextChain": 13088
+        },
+        {
+            "id": 13015,
+            "name": "Infiltrator's Strike",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 13016,
+            "name": "Flanking Strike",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_3",
+            "dualWield": "Dagger",
+            "flipSkill": 13007
+        },
+        {
+            "id": 13031,
+            "name": "Pistol Whip",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_3",
+            "dualWield": "Pistol"
+        },
+        {
+            "id": 13112,
+            "name": "Stab",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_3",
+            "dualWield": "Nothing"
+        },
+        {
+            "id": 13014,
+            "name": "Steal",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Profession",
+            "slot": "Profession_1",
+            "flipSkill": 43390
+        },
+        {
+            "id": 13027,
+            "name": "Hide in Shadows",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 13021,
+            "name": "Withdraw",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 21778,
+            "name": "Skelk Venom",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 13050,
+            "name": "Signet of Malice",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 13037,
+            "name": "Spider Venom",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 13055,
+            "name": "Skale Venom",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 13096,
+            "name": "Ice Drake Venom",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 13093,
+            "name": "Devourer Venom",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 13057,
+            "name": "Prepare Pitfall",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Utility",
+            "slot": "Utility",
+            "flipSkill": 56880
+        },
+        {
+            "id": 13026,
+            "name": "Prepare Thousand Needles",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Utility",
+            "slot": "Utility",
+            "flipSkill": 56898
+        },
+        {
+            "id": 13038,
+            "name": "Prepare Shadow Portal",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Utility",
+            "slot": "Utility",
+            "flipSkill": 16435
+        },
+        {
+            "id": 13056,
+            "name": "Prepare Seal Area",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Utility",
+            "slot": "Utility",
+            "flipSkill": 13099
+        },
+        {
+            "id": 13046,
+            "name": "Assassin's Signet",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 13064,
+            "name": "Infiltrator's Signet",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 13062,
+            "name": "Signet of Agility",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 13060,
+            "name": "Signet of Shadows",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 13020,
+            "name": "Scorpion Wire",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 13035,
+            "name": "Roll for Initiative",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 13066,
+            "name": "Haste",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 13028,
+            "name": "Caltrops",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 13002,
+            "name": "Shadowstep",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 13044,
+            "name": "Blinding Powder",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 13065,
+            "name": "Smoke Screen",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 13117,
+            "name": "Shadow Refuge",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 13082,
+            "name": "Thieves Guild",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Elite",
+            "slot": "Elite"
+        },
+        {
+            "id": 13132,
+            "name": "Basilisk Venom",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Elite",
+            "slot": "Elite"
+        },
+        {
+            "id": 13085,
+            "name": "Dagger Storm",
+            "professions": [
+                "Thief"
+            ],
+            "type": "Elite",
+            "slot": "Elite"
+        },
+        {
+            "id": 30400,
+            "name": "Channeled Vigor",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 7,
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 30868,
+            "name": "Fist Flurry",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 7,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 30568,
+            "name": "Distracting Daggers",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 7,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 30661,
+            "name": "Bandit's Defense",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 7,
+            "type": "Utility",
+            "slot": "Utility",
+            "flipSkill": 30519
+        },
+        {
+            "id": 30369,
+            "name": "Impairing Daggers",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 7,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 29516,
+            "name": "Impact Strike",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 7,
+            "type": "Elite",
+            "slot": "Elite",
+            "flipSkill": 30077,
+            "nextChain": 30077
+        },
+        {
+            "id": 45088,
+            "name": "Malicious Restoration",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 58,
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 45508,
+            "name": "Shadow Meld",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 58,
+            "type": "Elite",
+            "slot": "Elite"
+        },
+        {
+            "id": 46335,
+            "name": "Shadow Gust",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 58,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 41205,
+            "name": "Binding Shadow",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 58,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 41372,
+            "name": "Mercy",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 58,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 41158,
+            "name": "Shadow Flare",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 58,
+            "type": "Utility",
+            "slot": "Utility",
+            "flipSkill": 45672
+        },
+        {
+            "id": 43390,
+            "name": "Deadeye's Mark",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 58,
+            "type": "Profession",
+            "slot": "Profession_1"
+        },
+        {
+            "id": 63292,
+            "name": "Well of Gloom",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 71,
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 63275,
+            "name": "Shadowfall",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 71,
+            "type": "Elite",
+            "slot": "Elite"
+        },
+        {
+            "id": 63323,
+            "name": "Well of Bounty",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 71,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 63294,
+            "name": "Well of Tears",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 71,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 63230,
+            "name": "Well of Silence",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 71,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 63276,
+            "name": "Well of Sorrow",
+            "professions": [
+                "Thief"
+            ],
+            "specialization": 71,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 1131,
+            "name": "Mace Head Crack",
+            "professions": [],
+            "type": "Profession",
+            "slot": "Profession_2"
+        },
+        {
+            "id": 1118,
+            "name": "Throw Chain",
+            "professions": [],
+            "type": "Profession",
+            "slot": "Profession_2"
+        },
+        {
+            "id": 1162,
+            "name": "Whirling Axe",
+            "professions": [],
+            "type": "Profession",
+            "slot": "Profession_2"
+        },
+        {
+            "id": 1167,
+            "name": "Whirling Strike",
+            "professions": [],
+            "type": "Profession",
+            "slot": "Profession_2"
+        },
+        {
+            "id": 1115,
+            "name": "Branch Leap",
+            "professions": [],
+            "type": "Profession",
+            "slot": "Profession_2"
+        },
+        {
+            "id": 45094,
+            "name": "Throw Gunk",
+            "professions": [],
+            "type": "Profession",
+            "slot": "Profession_2"
+        },
+        {
+            "id": 1110,
+            "name": "Throw Gunk",
+            "professions": [],
+            "type": "Profession",
+            "slot": "Profession_2"
+        },
+        {
+            "id": 1139,
+            "name": "Healing Seed",
+            "professions": [],
+            "type": "Profession",
+            "slot": "Profession_2"
+        },
+        {
+            "id": 1125,
+            "name": "Eat Egg",
+            "professions": [],
+            "type": "Profession",
+            "slot": "Profession_2"
+        },
+        {
+            "id": 1148,
+            "name": "Blinding Tuft",
+            "professions": [],
+            "type": "Profession",
+            "slot": "Profession_2"
+        },
+        {
+            "id": 1129,
+            "name": "Ice Shard Stab",
+            "professions": [],
+            "type": "Profession",
+            "slot": "Profession_2"
+        },
+        {
+            "id": 1123,
+            "name": "Consume Plasma",
+            "professions": [],
+            "type": "Profession",
+            "slot": "Profession_2"
+        },
+        {
+            "id": 1141,
+            "name": "Skull Fear",
+            "professions": [],
+            "type": "Profession",
+            "slot": "Profession_2"
+        },
+        {
+            "id": 31438,
+            "name": "Essence Sap",
+            "professions": [],
+            "type": "Profession",
+            "slot": "Profession_2"
+        }
+    ]
+}

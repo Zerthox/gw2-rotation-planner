@@ -7,6 +7,13 @@ module.exports = {
     },
     pathPrefix: "/gw2-rotation-planner",
     plugins: [
+        "gatsby-transformer-json",
+        {
+            resolve: "gatsby-source-filesystem",
+            options: {
+                path: `${__dirname}/src/data`
+            }
+        },
         "gatsby-plugin-react-helmet",
         "gatsby-plugin-offline",
         {

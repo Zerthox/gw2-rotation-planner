@@ -1,0 +1,2403 @@
+{
+    "name": "Elementalist",
+    "elites": [
+        {
+            "id": 48,
+            "name": "Tempest"
+        },
+        {
+            "id": 56,
+            "name": "Weaver"
+        },
+        {
+            "id": 67,
+            "name": "Catalyst"
+        }
+    ],
+    "weapons": [
+        "Dagger",
+        "Focus",
+        "Hammer",
+        "Scepter",
+        "Staff",
+        "Sword",
+        "Trident",
+        "Warhorn"
+    ],
+    "skills": [
+        {
+            "id": 15718,
+            "name": "Dragon's Claw",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_1",
+            "attunement": "Fire"
+        },
+        {
+            "id": 15716,
+            "name": "Vapor Blade",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_1",
+            "attunement": "Water"
+        },
+        {
+            "id": 5489,
+            "name": "Lightning Whip",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_1",
+            "attunement": "Air"
+        },
+        {
+            "id": 15717,
+            "name": "Impale",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_1",
+            "attunement": "Earth"
+        },
+        {
+            "id": 5496,
+            "name": "Drake's Breath",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_2",
+            "attunement": "Fire"
+        },
+        {
+            "id": 5537,
+            "name": "Cone of Cold",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_2",
+            "attunement": "Water"
+        },
+        {
+            "id": 5646,
+            "name": "Convergence",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_2",
+            "attunement": "Air"
+        },
+        {
+            "id": 5525,
+            "name": "Ring of Earth",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_2",
+            "attunement": "Earth"
+        },
+        {
+            "id": 40963,
+            "name": "Grinding Stones",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_3",
+            "attunement": "Air"
+        },
+        {
+            "id": 46018,
+            "name": "Mud Slide",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_3",
+            "attunement": "Water"
+        },
+        {
+            "id": 46140,
+            "name": "Katabatic Wind",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_3",
+            "attunement": "Water"
+        },
+        {
+            "id": 42379,
+            "name": "Ashen Blast",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_3",
+            "attunement": "Fire"
+        },
+        {
+            "id": 44652,
+            "name": "Plasma Burst",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_3",
+            "attunement": "Fire"
+        },
+        {
+            "id": 42330,
+            "name": "Steam Surge",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_3",
+            "attunement": "Fire"
+        },
+        {
+            "id": 5644,
+            "name": "Burning Speed",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_3",
+            "attunement": "Fire"
+        },
+        {
+            "id": 5487,
+            "name": "Frozen Burst",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_3",
+            "attunement": "Water"
+        },
+        {
+            "id": 5527,
+            "name": "Shocking Aura",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_3",
+            "attunement": "Air",
+            "flipSkill": 51662
+        },
+        {
+            "id": 5559,
+            "name": "Earthen Rush",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_3",
+            "attunement": "Earth"
+        },
+        {
+            "id": 5520,
+            "name": "Frost Aura",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_4",
+            "flipSkill": 51646
+        },
+        {
+            "id": 5691,
+            "name": "Ring of Fire",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 5529,
+            "name": "Ride the Lightning",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 5690,
+            "name": "Earthquake",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 5557,
+            "name": "Fire Grab",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 5558,
+            "name": "Cleansing Wave",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 5687,
+            "name": "Updraft",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 5522,
+            "name": "Churning Earth",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 5497,
+            "name": "Flamewall",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Focus",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 5556,
+            "name": "Freezing Gust",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Focus",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 5530,
+            "name": "Swirling Winds",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Focus",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 5555,
+            "name": "Magnetic Wave",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Focus",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 5678,
+            "name": "Fire Shield",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Focus",
+            "slot": "Weapon_5",
+            "flipSkill": 51711
+        },
+        {
+            "id": 5490,
+            "name": "Comet",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Focus",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 5562,
+            "name": "Gale",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Focus",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 5521,
+            "name": "Obsidian Flesh",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Focus",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 62925,
+            "name": "Singeing Strike",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_1",
+            "attunement": "Fire"
+        },
+        {
+            "id": 62865,
+            "name": "Stream Strike",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_1",
+            "attunement": "Water",
+            "flipSkill": 62694,
+            "nextChain": 62694
+        },
+        {
+            "id": 62747,
+            "name": "Wind Slam",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_1",
+            "attunement": "Air"
+        },
+        {
+            "id": 62683,
+            "name": "Stonestrike",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_1",
+            "attunement": "Earth"
+        },
+        {
+            "id": 62884,
+            "name": "Surging Flames",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_2",
+            "attunement": "Fire"
+        },
+        {
+            "id": 62958,
+            "name": "Rain of Blows",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_2",
+            "attunement": "Water"
+        },
+        {
+            "id": 62812,
+            "name": "Hurricane of Pain",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_2",
+            "attunement": "Air"
+        },
+        {
+            "id": 62976,
+            "name": "Whirling Stones",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_2",
+            "attunement": "Earth"
+        },
+        {
+            "id": 62758,
+            "name": "Flame Wheel",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_3",
+            "attunement": "Fire"
+        },
+        {
+            "id": 62834,
+            "name": "Icy Coil",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_3",
+            "attunement": "Water"
+        },
+        {
+            "id": 62887,
+            "name": "Crescent Wind",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_3",
+            "attunement": "Air"
+        },
+        {
+            "id": 62975,
+            "name": "Rocky Loop",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_3",
+            "attunement": "Earth"
+        },
+        {
+            "id": 62807,
+            "name": "Triple Sear",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_4",
+            "attunement": "Fire"
+        },
+        {
+            "id": 62948,
+            "name": "Crashing Font",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_4",
+            "attunement": "Water"
+        },
+        {
+            "id": 62947,
+            "name": "Wind Storm",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_4",
+            "attunement": "Air"
+        },
+        {
+            "id": 62992,
+            "name": "Immutable Stone",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_4",
+            "attunement": "Earth"
+        },
+        {
+            "id": 62910,
+            "name": "Molten End",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_5",
+            "attunement": "Fire"
+        },
+        {
+            "id": 62843,
+            "name": "Cleansing Typhoon",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_5",
+            "attunement": "Water"
+        },
+        {
+            "id": 62716,
+            "name": "Shock Blast",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_5",
+            "attunement": "Air"
+        },
+        {
+            "id": 62778,
+            "name": "Ground Pound",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_5",
+            "attunement": "Earth"
+        },
+        {
+            "id": 5508,
+            "name": "Flamestrike",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_1",
+            "attunement": "Fire"
+        },
+        {
+            "id": 5693,
+            "name": "Ice Shards",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_1",
+            "attunement": "Water"
+        },
+        {
+            "id": 5526,
+            "name": "Arc Lightning",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_1",
+            "attunement": "Air"
+        },
+        {
+            "id": 5500,
+            "name": "Stone Shards",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_1",
+            "attunement": "Earth"
+        },
+        {
+            "id": 5692,
+            "name": "Dragon's Tooth",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_2",
+            "attunement": "Fire"
+        },
+        {
+            "id": 5538,
+            "name": "Shatterstone",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_2",
+            "attunement": "Water"
+        },
+        {
+            "id": 5561,
+            "name": "Lightning Strike",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_2",
+            "attunement": "Air"
+        },
+        {
+            "id": 5695,
+            "name": "Rock Barrier",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_2",
+            "attunement": "Earth",
+            "flipSkill": 5780
+        },
+        {
+            "id": 40794,
+            "name": "Earthen Synergy",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_3",
+            "attunement": "Air"
+        },
+        {
+            "id": 46014,
+            "name": "Stone Tide",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_3",
+            "attunement": "Water"
+        },
+        {
+            "id": 45742,
+            "name": "Glacial Drift",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_3",
+            "attunement": "Water"
+        },
+        {
+            "id": 42954,
+            "name": "Fracturing Strike",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_3",
+            "attunement": "Fire"
+        },
+        {
+            "id": 43576,
+            "name": "Plasma Beam",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_3",
+            "attunement": "Fire"
+        },
+        {
+            "id": 42181,
+            "name": "Fiery Frost",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_3",
+            "attunement": "Fire"
+        },
+        {
+            "id": 5675,
+            "name": "Phoenix",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_3",
+            "attunement": "Fire"
+        },
+        {
+            "id": 5510,
+            "name": "Water Trident",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_3",
+            "attunement": "Water"
+        },
+        {
+            "id": 5694,
+            "name": "Blinding Flash",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_3",
+            "attunement": "Air"
+        },
+        {
+            "id": 5696,
+            "name": "Dust Devil",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_3",
+            "attunement": "Earth"
+        },
+        {
+            "id": 5491,
+            "name": "Fireball",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_1",
+            "attunement": "Fire"
+        },
+        {
+            "id": 5549,
+            "name": "Water Blast",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_1",
+            "attunement": "Water"
+        },
+        {
+            "id": 5518,
+            "name": "Chain Lightning",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_1",
+            "attunement": "Air"
+        },
+        {
+            "id": 5519,
+            "name": "Stoning",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_1",
+            "attunement": "Earth"
+        },
+        {
+            "id": 5548,
+            "name": "Lava Font",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_2",
+            "attunement": "Fire"
+        },
+        {
+            "id": 5550,
+            "name": "Ice Spike",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_2",
+            "attunement": "Water"
+        },
+        {
+            "id": 5552,
+            "name": "Lightning Surge",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_2",
+            "attunement": "Air"
+        },
+        {
+            "id": 5528,
+            "name": "Eruption",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_2",
+            "attunement": "Earth"
+        },
+        {
+            "id": 42321,
+            "name": "Pile Driver",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_3",
+            "attunement": "Air"
+        },
+        {
+            "id": 44550,
+            "name": "Lahar",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_3",
+            "attunement": "Water"
+        },
+        {
+            "id": 41184,
+            "name": "Monsoon",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_3",
+            "attunement": "Water"
+        },
+        {
+            "id": 43762,
+            "name": "Pyroclastic Blast",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_3",
+            "attunement": "Fire"
+        },
+        {
+            "id": 41125,
+            "name": "Plasma Blast",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_3",
+            "attunement": "Fire"
+        },
+        {
+            "id": 40332,
+            "name": "Pressure Blast",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_3",
+            "attunement": "Fire"
+        },
+        {
+            "id": 5679,
+            "name": "Flame Burst",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_3",
+            "attunement": "Fire"
+        },
+        {
+            "id": 5681,
+            "name": "Geyser",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_3",
+            "attunement": "Water"
+        },
+        {
+            "id": 5553,
+            "name": "Gust",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_3",
+            "attunement": "Air"
+        },
+        {
+            "id": 5685,
+            "name": "Magnetic Aura",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_3",
+            "attunement": "Earth",
+            "flipSkill": 51684
+        },
+        {
+            "id": 5680,
+            "name": "Burning Retreat",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 5515,
+            "name": "Frozen Ground",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 5682,
+            "name": "Windborne Speed",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 5683,
+            "name": "Unsteady Ground",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 5501,
+            "name": "Meteor Shower",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 5551,
+            "name": "Healing Rain",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 5671,
+            "name": "Static Field",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 5686,
+            "name": "Shock Wave",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 39964,
+            "name": "Fire Strike",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_1",
+            "attunement": "Fire",
+            "flipSkill": 40326,
+            "nextChain": 40326
+        },
+        {
+            "id": 41052,
+            "name": "Seiche",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_1",
+            "attunement": "Water",
+            "flipSkill": 45983,
+            "nextChain": 45983
+        },
+        {
+            "id": 44681,
+            "name": "Charged Strike",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_1",
+            "attunement": "Air",
+            "flipSkill": 45259,
+            "nextChain": 45259
+        },
+        {
+            "id": 43616,
+            "name": "Crystal Slash",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_1",
+            "attunement": "Earth",
+            "flipSkill": 43080,
+            "nextChain": 43080
+        },
+        {
+            "id": 45313,
+            "name": "Flame Uprising",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_2",
+            "attunement": "Fire"
+        },
+        {
+            "id": 44405,
+            "name": "Riptide",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_2",
+            "attunement": "Water"
+        },
+        {
+            "id": 44998,
+            "name": "Polaric Leap",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_2",
+            "attunement": "Air"
+        },
+        {
+            "id": 40709,
+            "name": "Earthen Vortex",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_2",
+            "attunement": "Earth"
+        },
+        {
+            "id": 42271,
+            "name": "Twin Strike",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_3",
+            "attunement": "Fire"
+        },
+        {
+            "id": 43074,
+            "name": "Pyro Vortex",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_3",
+            "attunement": "Fire"
+        },
+        {
+            "id": 46447,
+            "name": "Lava Skin",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_3",
+            "attunement": "Fire"
+        },
+        {
+            "id": 42867,
+            "name": "Shearing Edge",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_3",
+            "attunement": "Water"
+        },
+        {
+            "id": 40170,
+            "name": "Natural Frenzy",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_3",
+            "attunement": "Water"
+        },
+        {
+            "id": 46295,
+            "name": "Gale Strike",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_3",
+            "attunement": "Air"
+        },
+        {
+            "id": 44451,
+            "name": "Cauterizing Strike",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_3",
+            "attunement": "Fire"
+        },
+        {
+            "id": 41167,
+            "name": "Aqua Siphon",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_3",
+            "attunement": "Water"
+        },
+        {
+            "id": 43803,
+            "name": "Quantum Strike",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_3",
+            "attunement": "Air"
+        },
+        {
+            "id": 40139,
+            "name": "Rust Frenzy",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_3",
+            "attunement": "Earth"
+        },
+        {
+            "id": 5598,
+            "name": "Magma Orb",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_1",
+            "attunement": "Fire"
+        },
+        {
+            "id": 5604,
+            "name": "Water Missile",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_1",
+            "attunement": "Water"
+        },
+        {
+            "id": 5656,
+            "name": "Forked Lightning",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_1",
+            "attunement": "Air"
+        },
+        {
+            "id": 5657,
+            "name": "Rock Blade",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_1",
+            "attunement": "Earth"
+        },
+        {
+            "id": 5597,
+            "name": "Boil",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_2",
+            "attunement": "Fire"
+        },
+        {
+            "id": 5605,
+            "name": "Ice Globe",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_2",
+            "attunement": "Water"
+        },
+        {
+            "id": 5655,
+            "name": "Electrocute",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_2",
+            "attunement": "Air"
+        },
+        {
+            "id": 5658,
+            "name": "Rock Spray",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_2",
+            "attunement": "Earth"
+        },
+        {
+            "id": 40378,
+            "name": "Hydrothermal Vent",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_3",
+            "attunement": "Fire"
+        },
+        {
+            "id": 41712,
+            "name": "Plasmic Strike",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_3",
+            "attunement": "Fire"
+        },
+        {
+            "id": 46185,
+            "name": "Molten Burst",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_3",
+            "attunement": "Fire"
+        },
+        {
+            "id": 46360,
+            "name": "Absolute Zero",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_3",
+            "attunement": "Water"
+        },
+        {
+            "id": 41001,
+            "name": "Elemental Compression",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_3",
+            "attunement": "Water"
+        },
+        {
+            "id": 39981,
+            "name": "Sodden Swath",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_3",
+            "attunement": "Air"
+        },
+        {
+            "id": 5566,
+            "name": "Steam",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_3",
+            "attunement": "Fire"
+        },
+        {
+            "id": 5606,
+            "name": "Ice Wall",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_3",
+            "attunement": "Water"
+        },
+        {
+            "id": 5652,
+            "name": "Air Pocket",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_3",
+            "attunement": "Air",
+            "flipSkill": 5653
+        },
+        {
+            "id": 5662,
+            "name": "Magnetic Current",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_3",
+            "attunement": "Earth"
+        },
+        {
+            "id": 5599,
+            "name": "Lava Chains",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 5748,
+            "name": "Undercurrent",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 5648,
+            "name": "Air Bubble",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 5659,
+            "name": "Rock Anchor",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 5600,
+            "name": "Heat Wave",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 5607,
+            "name": "Tidal Wave",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 5650,
+            "name": "Lightning Cage",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 5661,
+            "name": "Murky Water",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 29548,
+            "name": "Heat Sync",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 48,
+            "type": "Weapon",
+            "weaponType": "Warhorn",
+            "slot": "Weapon_4",
+            "attunement": "Fire"
+        },
+        {
+            "id": 30864,
+            "name": "Tidal Surge",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 48,
+            "type": "Weapon",
+            "weaponType": "Warhorn",
+            "slot": "Weapon_4",
+            "attunement": "Water"
+        },
+        {
+            "id": 30008,
+            "name": "Cyclone",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 48,
+            "type": "Weapon",
+            "weaponType": "Warhorn",
+            "slot": "Weapon_4",
+            "attunement": "Air"
+        },
+        {
+            "id": 29453,
+            "name": "Sand Squall",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 48,
+            "type": "Weapon",
+            "weaponType": "Warhorn",
+            "slot": "Weapon_4",
+            "attunement": "Earth"
+        },
+        {
+            "id": 29533,
+            "name": "Wildfire",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 48,
+            "type": "Weapon",
+            "weaponType": "Warhorn",
+            "slot": "Weapon_5",
+            "attunement": "Fire"
+        },
+        {
+            "id": 30446,
+            "name": "Water Globe",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 48,
+            "type": "Weapon",
+            "weaponType": "Warhorn",
+            "slot": "Weapon_5",
+            "attunement": "Water"
+        },
+        {
+            "id": 30795,
+            "name": "Lightning Orb",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 48,
+            "type": "Weapon",
+            "weaponType": "Warhorn",
+            "slot": "Weapon_5",
+            "attunement": "Air"
+        },
+        {
+            "id": 30336,
+            "name": "Dust Storm",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 48,
+            "type": "Weapon",
+            "weaponType": "Warhorn",
+            "slot": "Weapon_5",
+            "attunement": "Earth"
+        },
+        {
+            "id": 5494,
+            "name": "Air Attunement",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Profession",
+            "slot": "Profession_3",
+            "flipSkill": 29719
+        },
+        {
+            "id": 5495,
+            "name": "Earth Attunement",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Profession",
+            "slot": "Profession_4",
+            "flipSkill": 29618
+        },
+        {
+            "id": 5492,
+            "name": "Fire Attunement",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Profession",
+            "slot": "Profession_1",
+            "flipSkill": 29706
+        },
+        {
+            "id": 5493,
+            "name": "Water Attunement",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Profession",
+            "slot": "Profession_2",
+            "flipSkill": 29415
+        },
+        {
+            "id": 5569,
+            "name": "Glyph of Elemental Harmony",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 5507,
+            "name": "Ether Renewal",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 5503,
+            "name": "Signet of Restoration",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 21656,
+            "name": "Arcane Brilliance",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 5638,
+            "name": "Arcane Wave",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 5641,
+            "name": "Arcane Shield",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 5635,
+            "name": "Arcane Power",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 5539,
+            "name": "Arcane Blast",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 5506,
+            "name": "Glyph of Elemental Power",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 5734,
+            "name": "Glyph of Storms",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 5502,
+            "name": "Glyph of Lesser Elementals",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 5573,
+            "name": "Glyph of Renewal",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 5542,
+            "name": "Signet of Fire",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 5570,
+            "name": "Signet of Water",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 5572,
+            "name": "Signet of Air",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 5571,
+            "name": "Signet of Earth",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 5535,
+            "name": "Cleansing Fire",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 5554,
+            "name": "Mist Form",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 5536,
+            "name": "Lightning Flash",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 5639,
+            "name": "Armor of Earth",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 5540,
+            "name": "Conjure Flame Axe",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Utility",
+            "slot": "Utility",
+            "bundleSkills": [
+                5541,
+                5593,
+                5717,
+                5718,
+                5719
+            ]
+        },
+        {
+            "id": 5567,
+            "name": "Conjure Frost Bow",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Utility",
+            "slot": "Utility",
+            "bundleSkills": [
+                5595,
+                5720,
+                5568,
+                5723,
+                5721
+            ]
+        },
+        {
+            "id": 5624,
+            "name": "Conjure Lightning Hammer",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Utility",
+            "slot": "Utility",
+            "bundleSkills": [
+                5726,
+                5625,
+                5733,
+                5725,
+                5732
+            ]
+        },
+        {
+            "id": 5546,
+            "name": "Conjure Earth Shield",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Utility",
+            "slot": "Utility",
+            "bundleSkills": [
+                5621,
+                21647,
+                5547,
+                5747,
+                5623
+            ]
+        },
+        {
+            "id": 5666,
+            "name": "Glyph of Elementals",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Elite",
+            "slot": "Elite"
+        },
+        {
+            "id": 5516,
+            "name": "Conjure Fiery Greatsword",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Elite",
+            "slot": "Elite",
+            "bundleSkills": [
+                5532,
+                5533,
+                5697,
+                5517,
+                5531
+            ]
+        },
+        {
+            "id": 5534,
+            "name": "Tornado",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Elite",
+            "slot": "Elite",
+            "transformSkills": [
+                5752,
+                5753,
+                5754,
+                35224,
+                35304
+            ]
+        },
+        {
+            "id": 29535,
+            "name": "\"Wash the Pain Away!\"",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 48,
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 30662,
+            "name": "\"Feel the Burn!\"",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 48,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 29948,
+            "name": "\"Flash-Freeze!\"",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 48,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 30047,
+            "name": "\"Eye of the Storm!\"",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 48,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 30432,
+            "name": "\"Aftershock!\"",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 48,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 29968,
+            "name": "\"Rebound!\"",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 48,
+            "type": "Elite",
+            "slot": "Elite"
+        },
+        {
+            "id": 44239,
+            "name": "Aquatic Stance",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 43638,
+            "name": "Weave Self",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Elite",
+            "slot": "Elite",
+            "flipSkill": 44637
+        },
+        {
+            "id": 44926,
+            "name": "Stone Resonance",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 44612,
+            "name": "Unravel",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 45746,
+            "name": "Twist of Fate",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 40183,
+            "name": "Primordial Stance",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 62827,
+            "name": "Soothing Water",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 62725,
+            "name": "Elemental Celerity",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Elite",
+            "slot": "Elite"
+        },
+        {
+            "id": 62965,
+            "name": "Relentless Fire",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 62698,
+            "name": "Shattering Ice",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 62982,
+            "name": "Invigorating Air",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 62826,
+            "name": "Fortified Earth",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 62940,
+            "name": "Deploy Jade Sphere",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Profession",
+            "slot": "Profession_5",
+            "attunement": "Air"
+        },
+        {
+            "id": 63439,
+            "name": "Deploy Jade Sphere",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Profession",
+            "slot": "Profession_5",
+            "attunement": "Air"
+        },
+        {
+            "id": 63459,
+            "name": "Deploy Jade Sphere",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Profession",
+            "slot": "Profession_5",
+            "attunement": "Air"
+        },
+        {
+            "id": 62813,
+            "name": "Deploy Jade Sphere",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Profession",
+            "slot": "Profession_5",
+            "attunement": "Fire"
+        },
+        {
+            "id": 63458,
+            "name": "Deploy Jade Sphere",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Profession",
+            "slot": "Profession_5",
+            "attunement": "Fire"
+        },
+        {
+            "id": 63396,
+            "name": "Deploy Jade Sphere",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Profession",
+            "slot": "Profession_5",
+            "attunement": "Fire"
+        },
+        {
+            "id": 62723,
+            "name": "Deploy Jade Sphere",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Profession",
+            "slot": "Profession_5",
+            "attunement": "Water"
+        },
+        {
+            "id": 63416,
+            "name": "Deploy Jade Sphere",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Profession",
+            "slot": "Profession_5",
+            "attunement": "Water"
+        },
+        {
+            "id": 63461,
+            "name": "Deploy Jade Sphere",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Profession",
+            "slot": "Profession_5",
+            "attunement": "Water"
+        },
+        {
+            "id": 62837,
+            "name": "Deploy Jade Sphere",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Profession",
+            "slot": "Profession_5",
+            "attunement": "Earth"
+        },
+        {
+            "id": 63454,
+            "name": "Deploy Jade Sphere",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Profession",
+            "slot": "Profession_5",
+            "attunement": "Earth"
+        },
+        {
+            "id": 63472,
+            "name": "Deploy Jade Sphere",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Profession",
+            "slot": "Profession_5",
+            "attunement": "Earth"
+        }
+    ]
+}

@@ -1,0 +1,1113 @@
+{
+    "name": "Guardian",
+    "elites": [
+        {
+            "id": 27,
+            "name": "Dragonhunter"
+        },
+        {
+            "id": 62,
+            "name": "Firebrand"
+        },
+        {
+            "id": 65,
+            "name": "Willbender"
+        }
+    ],
+    "weapons": [
+        "Axe",
+        "Focus",
+        "Greatsword",
+        "Hammer",
+        "Spear",
+        "Longbow",
+        "Mace",
+        "Scepter",
+        "Shield",
+        "Staff",
+        "Sword",
+        "Torch",
+        "Trident"
+    ],
+    "skills": [
+        {
+            "id": 45047,
+            "name": "Core Cleave",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 62,
+            "type": "Weapon",
+            "weaponType": "Axe",
+            "slot": "Weapon_1",
+            "flipSkill": 44602,
+            "nextChain": 44602
+        },
+        {
+            "id": 40624,
+            "name": "Symbol of Vengeance",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 62,
+            "type": "Weapon",
+            "weaponType": "Axe",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 45402,
+            "name": "Blazing Edge",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 62,
+            "type": "Weapon",
+            "weaponType": "Axe",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 9112,
+            "name": "Ray of Judgment",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Focus",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 9082,
+            "name": "Shield of Wrath",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Focus",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 9137,
+            "name": "Strike",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Greatsword",
+            "slot": "Weapon_1",
+            "flipSkill": 9138,
+            "nextChain": 9138
+        },
+        {
+            "id": 9081,
+            "name": "Whirling Wrath",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Greatsword",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 9080,
+            "name": "Leap of Faith",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Greatsword",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 9146,
+            "name": "Symbol of Resolution",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Greatsword",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 9147,
+            "name": "Binding Blade",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Greatsword",
+            "slot": "Weapon_5",
+            "flipSkill": 9226
+        },
+        {
+            "id": 9159,
+            "name": "Hammer Swing",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_1",
+            "flipSkill": 9160,
+            "nextChain": 9160
+        },
+        {
+            "id": 9194,
+            "name": "Mighty Blow",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_2",
+            "flipSkill": 53482
+        },
+        {
+            "id": 9260,
+            "name": "Zealot's Embrace",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 9124,
+            "name": "Banish",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 9195,
+            "name": "Ring of Warding",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 9189,
+            "name": "Spear of Light",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Spear",
+            "slot": "Weapon_1"
+        },
+        {
+            "id": 9190,
+            "name": "Zealot's Flurry",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Spear",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 9191,
+            "name": "Brilliance",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Spear",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 9192,
+            "name": "Symbol of Spears",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Spear",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 9193,
+            "name": "Wrathful Grasp",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Spear",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 30471,
+            "name": "Puncture Shot",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 27,
+            "type": "Weapon",
+            "weaponType": "Longbow",
+            "slot": "Weapon_1"
+        },
+        {
+            "id": 30229,
+            "name": "True Shot",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 27,
+            "type": "Weapon",
+            "weaponType": "Longbow",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 29630,
+            "name": "Deflecting Shot",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 27,
+            "type": "Weapon",
+            "weaponType": "Longbow",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 29789,
+            "name": "Symbol of Energy",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 27,
+            "type": "Weapon",
+            "weaponType": "Longbow",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 30628,
+            "name": "Hunter's Ward",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 27,
+            "type": "Weapon",
+            "weaponType": "Longbow",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 9109,
+            "name": "True Strike",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Mace",
+            "slot": "Weapon_1",
+            "flipSkill": 9110,
+            "nextChain": 9110
+        },
+        {
+            "id": 9111,
+            "name": "Symbol of Faith",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Mace",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 9086,
+            "name": "Protector's Strike",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Mace",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 9098,
+            "name": "Orb of Wrath",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_1"
+        },
+        {
+            "id": 9090,
+            "name": "Symbol of Punishment",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 9099,
+            "name": "Chains of Light",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 15834,
+            "name": "Shield of Judgment",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Shield",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 9087,
+            "name": "Shield of Judgment",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Shield",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 9091,
+            "name": "Shield of Absorption",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Shield",
+            "slot": "Weapon_5",
+            "flipSkill": 9224
+        },
+        {
+            "id": 9122,
+            "name": "Bolt of Wrath",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_1",
+            "flipSkill": 51660
+        },
+        {
+            "id": 9140,
+            "name": "Holy Strike",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 9143,
+            "name": "Symbol of Swiftness",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 9265,
+            "name": "Empower",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 9144,
+            "name": "Line of Warding",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 9105,
+            "name": "Sword of Wrath",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_1",
+            "flipSkill": 9106,
+            "nextChain": 9106
+        },
+        {
+            "id": 9097,
+            "name": "Symbol of Blades",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 9107,
+            "name": "Zealot's Defense",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 62525,
+            "name": "Executioner's Calling",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 65,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 62650,
+            "name": "Advancing Strike",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 65,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 9104,
+            "name": "Zealot's Flame",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Torch",
+            "slot": "Weapon_4",
+            "flipSkill": 9089
+        },
+        {
+            "id": 9088,
+            "name": "Cleansing Flame",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Torch",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 9205,
+            "name": "Light Ball",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_1",
+            "flipSkill": 50399
+        },
+        {
+            "id": 9207,
+            "name": "Purify",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_2",
+            "flipSkill": 9234
+        },
+        {
+            "id": 9208,
+            "name": "Symbol of Light",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 9209,
+            "name": "Refraction",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 9206,
+            "name": "Weight of Justice",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 9115,
+            "name": "Virtue of Justice",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Profession",
+            "slot": "Profession_1",
+            "flipSkill": 29887
+        },
+        {
+            "id": 9118,
+            "name": "Virtue of Courage",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Profession",
+            "slot": "Profession_3",
+            "flipSkill": 9268
+        },
+        {
+            "id": 9120,
+            "name": "Virtue of Resolve",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Profession",
+            "slot": "Profession_2",
+            "flipSkill": 9250
+        },
+        {
+            "id": 9102,
+            "name": "Shelter",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 9158,
+            "name": "Signet of Resolve",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 9083,
+            "name": "\"Receive the Light!\"",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 21664,
+            "name": "Litany of Wrath",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 9125,
+            "name": "Hammer of Wisdom",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Utility",
+            "slot": "Utility",
+            "flipSkill": 46170
+        },
+        {
+            "id": 9168,
+            "name": "Sword of Justice",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Utility",
+            "slot": "Utility",
+            "flipSkill": 44846
+        },
+        {
+            "id": 9175,
+            "name": "Bow of Truth",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Utility",
+            "slot": "Utility",
+            "flipSkill": 43565
+        },
+        {
+            "id": 9182,
+            "name": "Shield of the Avenger",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Utility",
+            "slot": "Utility",
+            "flipSkill": 41571
+        },
+        {
+            "id": 9093,
+            "name": "Bane Signet",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 9150,
+            "name": "Signet of Judgment",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 9151,
+            "name": "Signet of Wrath",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 9163,
+            "name": "Signet of Mercy",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 9084,
+            "name": "\"Advance!\"",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 9085,
+            "name": "\"Save Yourselves!\"",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 9153,
+            "name": "\"Stand Your Ground!\"",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 9152,
+            "name": "\"Hold the Line!\"",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 9251,
+            "name": "Wall of Reflection",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 9187,
+            "name": "Purging Flames",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 9253,
+            "name": "Hallowed Ground",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 9128,
+            "name": "Sanctuary",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 9245,
+            "name": "Smite Condition",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 9248,
+            "name": "Contemplation of Purity",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 9247,
+            "name": "Judge's Intervention",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 9246,
+            "name": "Merciful Intervention",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 29965,
+            "name": "\"Feel My Wrath!\"",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Elite",
+            "slot": "Elite"
+        },
+        {
+            "id": 9154,
+            "name": "Renewed Focus",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Elite",
+            "slot": "Elite"
+        },
+        {
+            "id": 30461,
+            "name": "Signet of Courage",
+            "professions": [
+                "Guardian"
+            ],
+            "type": "Elite",
+            "slot": "Elite"
+        },
+        {
+            "id": 30025,
+            "name": "Purification",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 27,
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 29786,
+            "name": "Test of Faith",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 27,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 30553,
+            "name": "Fragments of Faith",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 27,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 30364,
+            "name": "Procession of Blades",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 27,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 30871,
+            "name": "Light's Judgment",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 27,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 30273,
+            "name": "Dragon's Maw",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 27,
+            "type": "Elite",
+            "slot": "Elite"
+        },
+        {
+            "id": 41714,
+            "name": "Mantra of Solace",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 62,
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 40915,
+            "name": "Mantra of Potence",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 62,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 46148,
+            "name": "Mantra of Flame",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 62,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 44080,
+            "name": "Mantra of Truth",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 62,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 45460,
+            "name": "Mantra of Lore",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 62,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 43357,
+            "name": "Mantra of Liberation",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 62,
+            "type": "Elite",
+            "slot": "Elite"
+        },
+        {
+            "id": 44364,
+            "name": "Tome of Justice",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 62,
+            "type": "Profession",
+            "slot": "Profession_1"
+        },
+        {
+            "id": 41780,
+            "name": "Tome of Resolve",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 62,
+            "type": "Profession",
+            "slot": "Profession_2"
+        },
+        {
+            "id": 42259,
+            "name": "Tome of Courage",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 62,
+            "type": "Profession",
+            "slot": "Profession_3"
+        },
+        {
+            "id": 42371,
+            "name": "Tome of Courage",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 62,
+            "type": "Profession",
+            "slot": "Profession_3"
+        },
+        {
+            "id": 41380,
+            "name": "Stow Tome",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 62,
+            "type": "Profession",
+            "slot": "Profession_1"
+        },
+        {
+            "id": 62622,
+            "name": "Reversal of Fortune",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 65,
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 62561,
+            "name": "Heaven's Palm",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 65,
+            "type": "Elite",
+            "slot": "Elite"
+        },
+        {
+            "id": 62608,
+            "name": "Flash Combo",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 65,
+            "type": "Utility",
+            "slot": "Utility",
+            "flipSkill": 62669
+        },
+        {
+            "id": 62521,
+            "name": "Roiling Light",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 65,
+            "type": "Utility",
+            "slot": "Utility",
+            "flipSkill": 62676
+        },
+        {
+            "id": 62565,
+            "name": "Whirling Light",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 65,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 62549,
+            "name": "Heel Crack",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 65,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 62668,
+            "name": "Rushing Justice",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 65,
+            "type": "Profession",
+            "slot": "Profession_1",
+            "flipSkill": 62618
+        },
+        {
+            "id": 62603,
+            "name": "Flowing Resolve",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 65,
+            "type": "Profession",
+            "slot": "Profession_2",
+            "flipSkill": 62528
+        },
+        {
+            "id": 62648,
+            "name": "Crashing Courage",
+            "professions": [
+                "Guardian"
+            ],
+            "specialization": 65,
+            "type": "Profession",
+            "slot": "Profession_3",
+            "flipSkill": 62532
+        }
+    ]
+}

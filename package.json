@@ -40,6 +40,8 @@
     "gatsby-plugin-react-helmet": "^5.11.0",
     "gatsby-plugin-typescript": "^4.11.1",
     "gatsby-plugin-typescript-checker": "^1.1.1",
+    "gatsby-source-filesystem": "^4.11.1",
+    "gatsby-transformer-json": "^4.11.0",
     "nanoid": "^3.3.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

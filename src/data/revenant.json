@@ -1,0 +1,1019 @@
+{
+    "name": "Revenant",
+    "elites": [
+        {
+            "id": 52,
+            "name": "Herald"
+        },
+        {
+            "id": 63,
+            "name": "Renegade"
+        },
+        {
+            "id": 69,
+            "name": "Vindicator"
+        }
+    ],
+    "weapons": [
+        "Axe",
+        "Greatsword",
+        "Hammer",
+        "Spear",
+        "Mace",
+        "Shield",
+        "Shortbow",
+        "Staff",
+        "Sword",
+        "Trident"
+    ],
+    "skills": [
+        {
+            "id": 28029,
+            "name": "Frigid Blitz",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Axe",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 28409,
+            "name": "Temporal Rift",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Axe",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 62913,
+            "name": "Mist Swing",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 69,
+            "type": "Weapon",
+            "weaponType": "Greatsword",
+            "slot": "Weapon_1",
+            "flipSkill": 62688,
+            "nextChain": 62688
+        },
+        {
+            "id": 62692,
+            "name": "Mist Unleashed",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 69,
+            "type": "Weapon",
+            "weaponType": "Greatsword",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 62895,
+            "name": "Phantom's Onslaught",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 69,
+            "type": "Weapon",
+            "weaponType": "Greatsword",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 62921,
+            "name": "Imperial Guard",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 69,
+            "type": "Weapon",
+            "weaponType": "Greatsword",
+            "slot": "Weapon_4",
+            "flipSkill": 62828
+        },
+        {
+            "id": 62929,
+            "name": "Eternity's Requiem",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 69,
+            "type": "Weapon",
+            "weaponType": "Greatsword",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 28549,
+            "name": "Hammer Bolt",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_1"
+        },
+        {
+            "id": 28253,
+            "name": "Coalescence of Ruin",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 27976,
+            "name": "Phase Smash",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 27665,
+            "name": "Field of the Mists",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 28110,
+            "name": "Drop the Hammer",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 28714,
+            "name": "Spear of Anguish",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Spear",
+            "slot": "Weapon_1"
+        },
+        {
+            "id": 28915,
+            "name": "Rapid Assault",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Spear",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 28827,
+            "name": "Venomous Sphere",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Spear",
+            "slot": "Weapon_3",
+            "flipSkill": 28797
+        },
+        {
+            "id": 28692,
+            "name": "Igniting Brand",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Spear",
+            "slot": "Weapon_4",
+            "flipSkill": 28815
+        },
+        {
+            "id": 28930,
+            "name": "Rift Containment",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Spear",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 27066,
+            "name": "Misery Swipe",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Mace",
+            "slot": "Weapon_1",
+            "flipSkill": 26730,
+            "nextChain": 26730
+        },
+        {
+            "id": 28357,
+            "name": "Searing Fissure",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Mace",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 27964,
+            "name": "Echoing Eruption",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Mace",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 29386,
+            "name": "Envoy of Exuberance",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 52,
+            "type": "Weapon",
+            "weaponType": "Shield",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 28262,
+            "name": "Crystal Hibernation",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 52,
+            "type": "Weapon",
+            "weaponType": "Shield",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 40497,
+            "name": "Shattershot",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 63,
+            "type": "Weapon",
+            "weaponType": "Shortbow",
+            "slot": "Weapon_1"
+        },
+        {
+            "id": 40175,
+            "name": "Bloodbane Path",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 63,
+            "type": "Weapon",
+            "weaponType": "Shortbow",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 41829,
+            "name": "Sevenshot",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 63,
+            "type": "Weapon",
+            "weaponType": "Shortbow",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 43993,
+            "name": "Spiritcrush",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 63,
+            "type": "Weapon",
+            "weaponType": "Shortbow",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 41820,
+            "name": "Scorchrazor",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 63,
+            "type": "Weapon",
+            "weaponType": "Shortbow",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 29180,
+            "name": "Rapid Swipe",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_1",
+            "flipSkill": 29331,
+            "nextChain": 29331
+        },
+        {
+            "id": 29145,
+            "name": "Mender's Rebuke",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 29288,
+            "name": "Warding Rift",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 29321,
+            "name": "Renewing Wave",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 28978,
+            "name": "Surge of the Mists",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 29057,
+            "name": "Preparation Thrust",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_1",
+            "flipSkill": 29256,
+            "nextChain": 29256
+        },
+        {
+            "id": 29233,
+            "name": "Chilling Isolation",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 26699,
+            "name": "Unrelenting Assault",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 28472,
+            "name": "Shackling Wave",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 28571,
+            "name": "Duelist's Preparation",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 61,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_4",
+            "flipSkill": 28472
+        },
+        {
+            "id": 27074,
+            "name": "Deathstrike",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_5",
+            "flipSkill": 28625
+        },
+        {
+            "id": 50395,
+            "name": "Mistsfire",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_1"
+        },
+        {
+            "id": 50456,
+            "name": "Portal Fire",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 50390,
+            "name": "Rift of Pain",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 50410,
+            "name": "Reckoning Blast",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 50483,
+            "name": "Torrential Mists",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 28419,
+            "name": "Legendary Dwarf Stance",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Profession",
+            "slot": "Profession_1"
+        },
+        {
+            "id": 27372,
+            "name": "Soothing Stone",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 28516,
+            "name": "Inspiring Reinforcement",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 26679,
+            "name": "Forced Engagement",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 26557,
+            "name": "Vengeful Hammers",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Utility",
+            "slot": "Utility",
+            "flipSkill": 26956
+        },
+        {
+            "id": 27975,
+            "name": "Rite of the Great Dwarf",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Elite",
+            "slot": "Elite"
+        },
+        {
+            "id": 28494,
+            "name": "Legendary Demon Stance",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Profession",
+            "slot": "Profession_1"
+        },
+        {
+            "id": 55029,
+            "name": "Ancient Echo",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Profession",
+            "slot": "Profession_2"
+        },
+        {
+            "id": 28219,
+            "name": "Empowering Misery",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 27322,
+            "name": "Pain Absorption",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 27505,
+            "name": "Banish Enchantment",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 27917,
+            "name": "Call to Anguish",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 28287,
+            "name": "Embrace the Darkness",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Elite",
+            "slot": "Elite",
+            "flipSkill": 26693
+        },
+        {
+            "id": 28427,
+            "name": "Ventari's Will",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 28195,
+            "name": "Legendary Centaur Stance",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Profession",
+            "slot": "Profession_1"
+        },
+        {
+            "id": 29148,
+            "name": "Project Tranquility",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Heal",
+            "slot": "Heal",
+            "flipSkill": 28427
+        },
+        {
+            "id": 26821,
+            "name": "Protective Solace",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Utility",
+            "slot": "Utility",
+            "flipSkill": 27628
+        },
+        {
+            "id": 27025,
+            "name": "Natural Harmony",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Utility",
+            "slot": "Utility",
+            "flipSkill": 29082
+        },
+        {
+            "id": 27715,
+            "name": "Purifying Essence",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Utility",
+            "slot": "Utility",
+            "flipSkill": 29197
+        },
+        {
+            "id": 27356,
+            "name": "Energy Expulsion",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Elite",
+            "slot": "Elite",
+            "flipSkill": 29114
+        },
+        {
+            "id": 28134,
+            "name": "Legendary Assassin Stance",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Profession",
+            "slot": "Profession_1"
+        },
+        {
+            "id": 26937,
+            "name": "Enchanted Daggers",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 29209,
+            "name": "Riposting Shadows",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 28231,
+            "name": "Phase Traversal",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 27107,
+            "name": "Impossible Odds",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Utility",
+            "slot": "Utility",
+            "flipSkill": 28382
+        },
+        {
+            "id": 28406,
+            "name": "Jade Winds",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Elite",
+            "slot": "Elite"
+        },
+        {
+            "id": 28085,
+            "name": "Legendary Dragon Stance",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 52,
+            "type": "Profession",
+            "slot": "Profession_1"
+        },
+        {
+            "id": 27220,
+            "name": "Facet of Light",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 52,
+            "type": "Heal",
+            "slot": "Heal",
+            "flipSkill": 27228
+        },
+        {
+            "id": 28379,
+            "name": "Facet of Darkness",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 52,
+            "type": "Utility",
+            "slot": "Utility",
+            "flipSkill": 27080
+        },
+        {
+            "id": 27014,
+            "name": "Facet of Elements",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 52,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 26644,
+            "name": "Facet of Strength",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 52,
+            "type": "Utility",
+            "slot": "Utility",
+            "flipSkill": 28113
+        },
+        {
+            "id": 27760,
+            "name": "Facet of Chaos",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 52,
+            "type": "Elite",
+            "slot": "Elite",
+            "flipSkill": 28075
+        },
+        {
+            "id": 29371,
+            "name": "Facet of Nature",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 52,
+            "type": "Profession",
+            "slot": "Profession_2"
+        },
+        {
+            "id": 46409,
+            "name": "Legendary Renegade Stance",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 63,
+            "type": "Profession",
+            "slot": "Profession_1",
+            "flipSkill": 41858
+        },
+        {
+            "id": 62891,
+            "name": "Legendary Alliance Stance",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 69,
+            "type": "Profession",
+            "slot": "Profession_1"
+        },
+        {
+            "id": 45686,
+            "name": "Breakrazor's Bastion",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 63,
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 42949,
+            "name": "Razorclaw's Rage",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 63,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 40485,
+            "name": "Icerazor's Ire",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 63,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 41220,
+            "name": "Darkrazor's Daring",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 63,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 45773,
+            "name": "Soulcleave's Summit",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 63,
+            "type": "Elite",
+            "slot": "Elite"
+        },
+        {
+            "id": 44076,
+            "name": "Heroic Command",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 63,
+            "type": "Profession",
+            "slot": "Profession_2"
+        },
+        {
+            "id": 42836,
+            "name": "Citadel Bombardment",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 63,
+            "type": "Profession",
+            "slot": "Profession_3"
+        },
+        {
+            "id": 45537,
+            "name": "Orders from Above",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 63,
+            "type": "Profession",
+            "slot": "Profession_4"
+        },
+        {
+            "id": 51675,
+            "name": "True Nature",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 52,
+            "type": "Profession",
+            "slot": "Profession_2"
+        },
+        {
+            "id": 51714,
+            "name": "True Nature",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 52,
+            "type": "Profession",
+            "slot": "Profession_2"
+        },
+        {
+            "id": 51713,
+            "name": "True Nature",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 52,
+            "type": "Profession",
+            "slot": "Profession_2"
+        },
+        {
+            "id": 51696,
+            "name": "True Nature",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 52,
+            "type": "Profession",
+            "slot": "Profession_2"
+        },
+        {
+            "id": 51667,
+            "name": "True Nature",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 52,
+            "type": "Profession",
+            "slot": "Profession_2"
+        },
+        {
+            "id": 62719,
+            "name": "Selfish Spirit",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 69,
+            "type": "Heal",
+            "slot": "Heal",
+            "flipSkill": 62680
+        },
+        {
+            "id": 62942,
+            "name": "Spear of Archemorus",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 69,
+            "type": "Elite",
+            "slot": "Elite",
+            "flipSkill": 62687
+        },
+        {
+            "id": 62832,
+            "name": "Nomad's Advance",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 69,
+            "type": "Utility",
+            "slot": "Utility",
+            "flipSkill": 62702
+        },
+        {
+            "id": 62962,
+            "name": "Scavenger Burst",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 69,
+            "type": "Utility",
+            "slot": "Utility",
+            "flipSkill": 62941
+        },
+        {
+            "id": 62878,
+            "name": "Reaver's Rage",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 69,
+            "type": "Utility",
+            "slot": "Utility",
+            "flipSkill": 62796
+        },
+        {
+            "id": 62757,
+            "name": "Energy Meld",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 69,
+            "type": "Profession",
+            "slot": "Profession_2"
+        }
+    ]
+}
