@@ -1,8 +1,7 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {useSelector} from "react-redux";
 import {StoreState} from ".";
-import {createId, Id, IdType} from "./planner";
-import {findSkillIndex, SkillState} from "./skillbar";
+import {createId, Id, IdType, findSkillIndex, SkillState} from "./planner";
 
 export interface Row {
     name?: string;
@@ -89,4 +88,4 @@ export const {appendRow, deleteRow, moveRow, updateRowName, insertRowSkill, dele
 
 export const useRows = (): RowState[] => useSelector((state: StoreState) => state.timelineReducer.rows);
 
-export const useRow = (id: Id): RowState => useRows().find((row) => row.id === id);
+export const useRow = (id: Id): RowState => useSelector((state: StoreState) => state.timelineReducer.rows.find((row) => row.id === id));

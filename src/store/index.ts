@@ -3,7 +3,7 @@ import {persistStore, persistReducer} from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import {themeReducer} from "./theme";
 import {plannerReducer} from "./planner";
-import {skillbarReducer} from "./skillbar";
+import {skillbarReducer} from "./build";
 import {timelineReducer} from "./timeline";
 
 export const Store = configureStore({

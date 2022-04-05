@@ -16,6 +16,17 @@ export const createId = (type: IdType): Id => `${type}-${nanoid()}`;
 
 export const isa = (type: IdType, id: Id): boolean => id?.startsWith(type);
 
+export interface SkillState {
+    id: Id;
+    skillId: number;
+}
+
+export const createSkill = (skill: number): SkillState => ({skillId: skill, id: createId(IdType.Skill)});
+
+export const findSkill = (skills: SkillState[], id: Id): SkillState => skills.find((skill) => skill.id === id);
+
+export const findSkillIndex = (skills: SkillState[], id: Id): number => skills.findIndex((skill) => skill.id === id);
+
 export interface Dragging {
     id: Id;
     skill: number;

@@ -1,21 +1,37 @@
-import React, {useRef, useCallback} from "react";
-import {Stack} from "@mui/material";
+import React, {useRef, useCallback, useMemo, useState} from "react";
+import {Card, Divider, Stack} from "@mui/material";
 import {Active, DndContext, DragOverEvent, DragOverlay, DragStartEvent} from "@dnd-kit/core";
 import {useDispatch, batch} from "react-redux";
-import {Sidebar} from "./sidebar";
+import {Skillbar} from "./skillbar";
+import {Trash} from "./trash";
 import {Timeline} from "./timeline";
 import {SkillItem} from "./skill";
 import {OverData, SkillData} from ".";
-import {Id, IdType, isa, useDragging, setDragging} from "../../store/planner";
+import {Id, IdType, createId, isa, useDragging, setDragging, createSkill, findSkill} from "../../store/planner";
 import {deleteRowSkill, insertRowSkill, moveRowSkill} from "../../store/timeline";
-import {useSkills, takeSkillbarItem, findSkill} from "../../store/skillbar";
+import {useSlotSkills, useWeaponSkills} from "../../store/build";
+
+const SKILLBAR_ID = createId(IdType.Skillbar);
+
+const TRASH_ID = createId(IdType.Trash);
 
 export const Planner = (): JSX.Element => {
     const dispatch = useDispatch();
-    const skills = useSkills();
+    const weaponSkillData = useWeaponSkills();
+    const slotSkillData = useSlotSkills();
     const dragging = useDragging();
     const parent = useRef<Id>(null);
     const fromSkillbar = useRef(false);
+
+    // flag used to force an update on skillbar ids
+    // TODO: is there a cleaner way of doing this? redux store may need access to gatsby data
+    const [refresh, setRefresh] = useState(false);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const weaponSkills = useMemo(() => weaponSkillData.map(({id}) => createSkill(id)), [weaponSkillData, refresh]);
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const slotSkills = useMemo(() => slotSkillData.map(({id}) => createSkill(id)), [slotSkillData, refresh]);
 
     const cancelDrag = useCallback((active: Active) => {
         if (fromSkillbar.current && isa(IdType.Row, parent.current)) {
@@ -42,14 +58,20 @@ export const Planner = (): JSX.Element => {
             if (isa(IdType.Row, overData.parentId)) {
                 if (parent.current !== overData.parentId) {
                     if (!parent.current && fromSkillbar.current) {
-                        // move skill from skillbar to row
-                        batch(() => {
-                            const skill = findSkill(skills, active.id);
-                            dispatch(takeSkillbarItem(active.id));
-                            dispatch(insertRowSkill({rowId: overData.parentId, index: overData.index, skill}));
-                        });
+                        // moved from skillbar to row
+                        const skill = findSkill([...weaponSkills, ...slotSkills], active.id);
+
+                        // refresh skillbar ids
+                        setRefresh(!refresh);
+
+                        // insert old skill into row
+                        dispatch(insertRowSkill({
+                            rowId: overData.parentId,
+                            index: overData.index,
+                            skill
+                        }));
                     } else if (isa(IdType.Row, parent.current)) {
-                        // move skill between rows
+                        // moved between rows
                         dispatch(moveRowSkill({
                             rowId: parent.current,
                             skillId: active.id,
@@ -59,7 +81,7 @@ export const Planner = (): JSX.Element => {
 
                     parent.current = overData.parentId;
                 } else if (activeData.index !== overData.index) {
-                    // move skill within the row
+                    // moved within the row
                     dispatch(moveRowSkill({
                         rowId: parent.current,
                         skillId: active.id,
@@ -68,7 +90,7 @@ export const Planner = (): JSX.Element => {
                 }
             }
         }
-    }, [dispatch, skills]);
+    }, [dispatch, weaponSkills, slotSkills, refresh]);
 
     const onDragEnd = useCallback(({active, over}) => {
         dispatch(setDragging(null));
@@ -77,7 +99,7 @@ export const Planner = (): JSX.Element => {
             const overData = (over.data.current ?? {}) as OverData;
 
             if (isa(IdType.Trash, over.id)) {
-                // delete row entry if necessary
+                // moved to trash, delete row entry if necessary
                 if (isa(IdType.Row, parent.current)) {
                     dispatch(deleteRowSkill({
                         rowId: parent.current,
@@ -86,7 +108,7 @@ export const Planner = (): JSX.Element => {
                     return;
                 }
             } else if (isa(IdType.Row, overData.parentId)) {
-                // everything is done already
+                // moved to row, everything is done already
                 return;
             }
         }
@@ -110,7 +132,17 @@ export const Planner = (): JSX.Element => {
             onDragCancel={onDragCancel}
         >
             <Stack direction="row" spacing={2} flexGrow={1}>
-                <Sidebar sx={{justifySelf: "stretch", flexShrink: 0}}/>
+                <Card sx={{justifySelf: "stretch", flexShrink: 0}}>
+                    <Stack direction="column" spacing={1} padding={2}>
+                        <Trash id={TRASH_ID}/>
+                        <Divider/>
+                        <Skillbar
+                            id={SKILLBAR_ID}
+                            weaponSkills={weaponSkills}
+                            slotSkills={slotSkills}
+                        />
+                    </Stack>
+                </Card>
                 <Timeline flexGrow={1}/>
             </Stack>
             <DragOverlay>
