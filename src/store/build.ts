@@ -12,7 +12,7 @@ export interface WeaponState {
 }
 
 export const buildSlice = createSlice({
-    name: "skillbar",
+    name: "build",
     initialState: {
         profession: Profession.Guardian,
         eliteSpec: 62,
