@@ -17,8 +17,8 @@ export const buildSlice = createSlice({
         profession: Profession.Guardian,
         eliteSpec: 62,
         weapons: {
-            weapon1Main: "Axe",
-            weapon1Off: "Torch",
+            weapon1Main: WeaponType.Axe,
+            weapon1Off: WeaponType.Torch,
             weapon2Main: null,
             weapon2Off: null
         } as WeaponState
