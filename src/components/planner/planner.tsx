@@ -27,6 +27,7 @@ export const Planner = (): JSX.Element => {
     // TODO: is there a cleaner way of doing this? redux store may need access to gatsby data
     const [refresh, setRefresh] = useState(false);
 
+    // FIXME: react does not make a guarantee to always return the memoized value as long as deps have not changed
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const weaponSkills = useMemo(() => weaponSkillData.map(({id}) => createSkill(id)), [weaponSkillData, refresh]);
 
@@ -135,7 +136,7 @@ export const Planner = (): JSX.Element => {
                 <Card sx={{justifySelf: "stretch", flexShrink: 0}}>
                     <Stack direction="column" spacing={1} padding={2}>
                         <Trash id={TRASH_ID}/>
-                        <Divider/>
+                        <Divider orientation="vertical"/>
                         <Skillbar
                             id={SKILLBAR_ID}
                             weaponSkills={weaponSkills}

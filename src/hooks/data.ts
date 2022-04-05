@@ -77,10 +77,6 @@ export const useProfessionData = (prof: Profession): ProfessionData => useProfes
 
 export const useSkillData = (prof: Profession, id: number): SkillData => useProfessionData(prof).skills.find((skill) => skill.id === id);
 
-export const matchSkills = (skills: SkillData[], slot: SkillSlot, weapon: WeaponType = null): SkillData[] => {
-    return skills.filter(
-        weapon
-            ? (skill) => skill.slot === slot && skill.weaponType === weapon
-            : (skill) => skill.slot === slot
-    );
-};
+export const isWeaponSlot = (slot: SkillSlot): boolean => slot.startsWith("Weapon");
+
+export const isProfessionSlot = (slot: SkillSlot): boolean => slot.startsWith("Profession");
