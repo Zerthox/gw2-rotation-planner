@@ -39,6 +39,7 @@ interface QueryData {
     };
 }
 
+// TODO: do we want to fetch data from api at runtime instead?
 const useData = () => useStaticQuery<QueryData>(graphql`
     query ProfessionData {
         allDataJson {
@@ -73,9 +74,7 @@ const useData = () => useStaticQuery<QueryData>(graphql`
 
 export const useProfessionsData = (): ProfessionData[] => useData().allDataJson.nodes;
 
-export const useProfessionData = (prof: Profession): ProfessionData => useProfessionsData().find(({name}) => name === prof);
-
-export const useSkillData = (prof: Profession, id: number): SkillData => useProfessionData(prof).skills.find((skill) => skill.id === id);
+export const useAllSkillsData = (): SkillData[] => useProfessionsData().reduce((acc, entry) => [...acc, ...entry.skills], []);
 
 export const isWeaponSlot = (slot: SkillSlot): boolean => slot.startsWith("Weapon");
 
