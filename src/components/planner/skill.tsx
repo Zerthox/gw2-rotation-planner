@@ -1,5 +1,5 @@
 import React, {useMemo} from "react";
-import {Stack, Chip} from "@mui/material";
+import {Box, Stack} from "@mui/material";
 import {Skill} from "@discretize/gw2-ui-new";
 import {useSortable} from "@dnd-kit/sortable";
 import {css} from "@emotion/css";
@@ -7,11 +7,6 @@ import {SkillData} from ".";
 import {Id, useDragging} from "../../store/planner";
 import {useAllSkillsData, SkillSlot} from "../../hooks/data";
 
-export interface SkillItemProps {
-    skill: number;
-    tooltip?: boolean;
-    isPlaceholder?: boolean;
-}
 const keybinds = {
     [SkillSlot.Profession1]: "F1",
     [SkillSlot.Profession2]: "F2",
@@ -33,6 +28,33 @@ const keybinds = {
     [SkillSlot.Utility]: "7-9",
     [SkillSlot.Elite]: "0"
 };
+
+interface KeybindProps {
+    children: React.ReactNode;
+}
+
+const Keybind = ({children}: KeybindProps) => (
+    <Box sx={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "stretch",
+        marginTop: "-1em",
+        height: "2em",
+        padding: [1, 1],
+        background: "rgba(0, 0, 0, .7)",
+        borderRadius: "50%",
+        color: "#fff",
+        fontSize: "0.7em",
+        fontWeight: "bold",
+        zIndex: 1
+    }}>{children}</Box>
+);
+
+export interface SkillItemProps {
+    skill: number;
+    tooltip?: boolean;
+    isPlaceholder?: boolean;
+}
 
 export const SkillItem = ({skill, tooltip = false, isPlaceholder = false}: SkillItemProps): JSX.Element => {
     const allSkills = useAllSkillsData();
@@ -56,16 +78,7 @@ export const SkillItem = ({skill, tooltip = false, isPlaceholder = false}: Skill
                 }}
             />
             {keybind ? (
-                <Chip
-                    label={keybind}
-                    size="small"
-                    sx={{
-                        marginTop: -1.5,
-                        background: "rgba(0, 0, 0, .7)",
-                        fontSize: "0.7em",
-                        zIndex: 1
-                    }}
-                />
+                <Keybind>{keybind}</Keybind>
             ) : null}
         </Stack>
     );
