@@ -1,15 +1,16 @@
-import React, {useRef, useCallback, useMemo, useState} from "react";
-import {Card, Divider, Stack} from "@mui/material";
+import React, {useRef, useCallback} from "react";
+import {Card, Stack} from "@mui/material";
 import {Active, DndContext, DragOverEvent, DragOverlay, DragStartEvent} from "@dnd-kit/core";
 import {useDispatch, batch} from "react-redux";
-import {Skillbar} from "./skillbar";
 import {Trash} from "./trash";
+import {ProfessionSelect} from "./profselect";
+import {Skillbar} from "./skillbar";
 import {Timeline} from "./timeline";
 import {SkillItem} from "./skill";
 import {OverData, SkillData} from ".";
-import {Id, IdType, createId, isa, useDragging, setDragging, createSkill, findSkill} from "../../store/planner";
+import {Id, IdType, createId, isa, useDragging, setDragging} from "../../store/planner";
 import {deleteRowSkill, insertRowSkill, moveRowSkill} from "../../store/timeline";
-import {useSlotSkills, useWeaponSkills} from "../../store/build";
+import {useSkillStates, findSkill, takeSkillItem} from "../../store/build";
 
 const SKILLBAR_ID = createId(IdType.Skillbar);
 
@@ -17,22 +18,11 @@ const TRASH_ID = createId(IdType.Trash);
 
 export const Planner = (): JSX.Element => {
     const dispatch = useDispatch();
-    const weaponSkillData = useWeaponSkills();
-    const slotSkillData = useSlotSkills();
+    const skills = useSkillStates();
     const dragging = useDragging();
+
     const parent = useRef<Id>(null);
     const fromSkillbar = useRef(false);
-
-    // flag used to force an update on skillbar ids
-    // TODO: is there a cleaner way of doing this? redux store may need access to gatsby data
-    const [refresh, setRefresh] = useState(false);
-
-    // FIXME: react does not make a guarantee to always return the memoized value as long as deps have not changed
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const weaponSkills = useMemo(() => weaponSkillData.map(({id}) => createSkill(id)), [weaponSkillData, refresh]);
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    const slotSkills = useMemo(() => slotSkillData.map(({id}) => createSkill(id)), [slotSkillData, refresh]);
 
     const cancelDrag = useCallback((active: Active) => {
         if (fromSkillbar.current && isa(IdType.Row, parent.current)) {
@@ -60,10 +50,10 @@ export const Planner = (): JSX.Element => {
                 if (parent.current !== overData.parentId) {
                     if (!parent.current && fromSkillbar.current) {
                         // moved from skillbar to row
-                        const skill = findSkill([...weaponSkills, ...slotSkills], active.id);
+                        const skill = findSkill(skills, active.id);
 
-                        // refresh skillbar ids
-                        setRefresh(!refresh);
+                        // refresh skillbar items
+                        dispatch(takeSkillItem(active.id));
 
                         // insert old skill into row
                         dispatch(insertRowSkill({
@@ -91,7 +81,7 @@ export const Planner = (): JSX.Element => {
                 }
             }
         }
-    }, [dispatch, weaponSkills, slotSkills, refresh]);
+    }, [dispatch, skills]);
 
     const onDragEnd = useCallback(({active, over}) => {
         dispatch(setDragging(null));
@@ -134,14 +124,10 @@ export const Planner = (): JSX.Element => {
         >
             <Stack direction="row" spacing={2} flexGrow={1}>
                 <Card sx={{justifySelf: "stretch", flexShrink: 0}}>
-                    <Stack direction="column" spacing={1} padding={2}>
+                    <Stack direction="column" alignItems="stretch" spacing={2} padding={2}>
+                        <ProfessionSelect/>
                         <Trash id={TRASH_ID}/>
-                        <Divider orientation="vertical"/>
-                        <Skillbar
-                            id={SKILLBAR_ID}
-                            weaponSkills={weaponSkills}
-                            slotSkills={slotSkills}
-                        />
+                        <Skillbar id={SKILLBAR_ID}/>
                     </Stack>
                 </Card>
                 <Timeline flexGrow={1}/>

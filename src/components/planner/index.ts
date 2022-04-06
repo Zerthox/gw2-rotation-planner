@@ -1,6 +1,7 @@
 import {Id} from "../../store/planner";
 
 export * from "./planner";
+export * from "./profselect";
 export * from "./trash";
 export * from "./skill";
 export * from "./skillbar";

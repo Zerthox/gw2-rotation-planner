@@ -4,7 +4,7 @@ import {ProfessionKind as Profession, WeaponType, SkillType, SkillSlot} from "..
 export {ProfessionKind as Profession, WeaponType, SkillType, SkillSlot} from "../../api";
 
 export interface ProfessionData {
-    name: string;
+    name: Profession;
     elites: EliteData[];
     weapons: WeaponType[];
     skills: SkillData[];

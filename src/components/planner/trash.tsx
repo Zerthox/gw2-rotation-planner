@@ -15,13 +15,12 @@ export const Trash = ({id}: TrashProps): JSX.Element => {
     });
 
     return (
-        <span ref={setNodeRef}>
-            <Chip
-                variant="outlined"
-                label="Delete"
-                icon={<Delete/>}
-                sx={{opacity: isOver ? 1 : 0.5}}
-            />
-        </span>
+        <Chip
+            ref={setNodeRef}
+            variant="outlined"
+            label="Delete"
+            icon={<Delete/>}
+            sx={{opacity: isOver ? 1 : 0.5}}
+        />
     );
 };

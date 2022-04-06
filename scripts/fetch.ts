@@ -1,7 +1,7 @@
 import path from "path";
 import {promises as fs, existsSync} from "fs";
 import {stdout} from "process";
-import {professions, fetchProfession, fetchSpecializations, fetchSkills, Skill, WeaponType} from "../api";
+import {professions, fetchProfession, fetchSpecializations, fetchSkills, ProfessionKind, Skill, WeaponType} from "../api";
 import {ProfessionData, SkillData} from "../src/hooks/data";
 
 const outPath = path.join(__dirname, "../src/data");
@@ -25,7 +25,7 @@ const outPath = path.join(__dirname, "../src/data");
         const skills = await fetchSkills([...weaponSkills, ...otherSkills]);
 
         await saveJson(path.join(outPath, `${prof.toLowerCase()}.json`), {
-            name: profData.name,
+            name: profData.name as ProfessionKind,
             elites: specs.filter((spec) => spec.elite).map(({id, name}) => ({id, name})),
             weapons,
             skills: skills.map((skill) => toSkillData(skill))

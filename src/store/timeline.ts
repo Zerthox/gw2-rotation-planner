@@ -1,7 +1,8 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {useSelector} from "react-redux";
 import {StoreState} from ".";
-import {createId, Id, IdType, findSkillIndex, SkillState} from "./planner";
+import {createId, Id, IdType} from "./planner";
+import {findSkillIndex, SkillState} from "./build";
 
 export interface Row {
     name?: string;
