@@ -5,6 +5,7 @@ export {ProfessionKind as Profession, WeaponType, SkillType, SkillSlot} from "..
 
 export interface ProfessionData {
     name: Profession;
+    icon: string;
     elites: EliteData[];
     weapons: WeaponType[];
     skills: SkillData[];
@@ -45,6 +46,7 @@ const useData = () => useStaticQuery<QueryData>(graphql`
         allDataJson {
             nodes {
                 name
+                icon
                 elites {
                     id
                     name

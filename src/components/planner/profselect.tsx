@@ -1,8 +1,10 @@
 import React, {useCallback, useEffect} from "react";
-import {Select, MenuItem} from "@mui/material";
+import {Box, Stack, Select, MenuItem, Typography} from "@mui/material";
 import {useDispatch} from "react-redux";
 import {useProfession, changeProfession} from "../../store/build";
 import {useProfessionsData, Profession} from "../../hooks/data";
+
+// TODO: colorize icon (and maybe name)
 
 export const ProfessionSelect = (): JSX.Element => {
     const dispatch = useDispatch();
@@ -25,9 +27,21 @@ export const ProfessionSelect = (): JSX.Element => {
             value={prof}
             onChange={({target}) => onChange(target.value as Profession)}
         >
-            {data.map(({name}) => (
+            {data.map(({name, icon}) => (
                 <MenuItem key={name} value={name}>
-                    {name}
+                    <Stack direction="row" alignItems="center" spacing={0.5}>
+                        <Box
+                            component="img"
+                            src={icon}
+                            sx={{
+                                height: 24,
+                                width: 24
+                            }}
+                        />
+                        <Typography>
+                            {name}
+                        </Typography>
+                    </Stack>
                 </MenuItem>
             ))}
         </Select>

@@ -1,5 +1,6 @@
 {
     "name": "Warrior",
+    "icon": "https://render.guildwars2.com/file/0A97E13F29B3597A447EEC04A09BE5BD699A2250/156643.png",
     "elites": [
         {
             "id": 18,
@@ -979,13 +980,13 @@
             "type": "Elite",
             "slot": "Elite",
             "transformSkills": [
-                14486,
-                14489,
+                14485,
                 14556,
                 14490,
                 14487,
                 14488,
-                14485
+                14489,
+                14486
             ]
         },
         {

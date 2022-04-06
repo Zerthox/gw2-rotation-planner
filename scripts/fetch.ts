@@ -26,6 +26,7 @@ const outPath = path.join(__dirname, "../src/data");
 
         await saveJson(path.join(outPath, `${prof.toLowerCase()}.json`), {
             name: profData.name as ProfessionKind,
+            icon: profData.icon,
             elites: specs.filter((spec) => spec.elite).map(({id, name}) => ({id, name})),
             weapons,
             skills: skills.map((skill) => toSkillData(skill))

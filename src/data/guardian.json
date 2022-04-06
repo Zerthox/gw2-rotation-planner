@@ -1,5 +1,6 @@
 {
     "name": "Guardian",
+    "icon": "https://render.guildwars2.com/file/C32BE61FC55C962524624F643897ECF1A9C80462/156634.png",
     "elites": [
         {
             "id": 27,

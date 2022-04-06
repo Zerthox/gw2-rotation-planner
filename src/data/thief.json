@@ -1,5 +1,6 @@
 {
     "name": "Thief",
+    "icon": "https://render.guildwars2.com/file/F9EC00E23F630D6DB20CDA985592EC010E2A5705/156641.png",
     "elites": [
         {
             "id": 7,

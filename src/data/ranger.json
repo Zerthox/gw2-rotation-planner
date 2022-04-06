@@ -1,5 +1,6 @@
 {
     "name": "Ranger",
+    "icon": "https://render.guildwars2.com/file/49B10316B424F4E20139EB5E51ADCF24A8724E9B/156640.png",
     "elites": [
         {
             "id": 5,
@@ -896,15 +897,15 @@
             "slot": "Profession_5",
             "flipSkill": 31411,
             "transformSkills": [
-                32242,
                 32364,
+                32242,
+                31318,
+                32253,
+                33387,
+                31796,
+                31406,
                 31894,
                 31503,
-                31406,
-                31796,
-                31318,
-                33387,
-                32253,
                 34070
             ]
         },
@@ -1334,6 +1335,7 @@
             "professions": [
                 "Ranger"
             ],
+            "specialization": 55,
             "type": "Profession",
             "slot": "Profession_3"
         },
@@ -1343,6 +1345,7 @@
             "professions": [
                 "Ranger"
             ],
+            "specialization": 55,
             "type": "Profession",
             "slot": "Profession_3"
         },
@@ -1372,6 +1375,7 @@
             "professions": [
                 "Ranger"
             ],
+            "specialization": 55,
             "type": "Profession",
             "slot": "Profession_3"
         },
@@ -1381,6 +1385,7 @@
             "professions": [
                 "Ranger"
             ],
+            "specialization": 55,
             "type": "Profession",
             "slot": "Profession_3"
         },
