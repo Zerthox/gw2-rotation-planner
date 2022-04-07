@@ -6,13 +6,21 @@ import {plannerReducer} from "./planner";
 import {buildReducer} from "./build";
 import {timelineReducer} from "./timeline";
 
+const reducer = {
+    themeReducer: persistReducer({key: "theme", storage}, themeReducer),
+    plannerReducer,
+    buildReducer,
+    timelineReducer
+};
+
 export const Store = configureStore({
-    reducer: {
-        themeReducer: persistReducer({key: "theme", storage}, themeReducer),
-        plannerReducer,
-        buildReducer,
-        timelineReducer
-    }
+    reducer,
+    middleware: (getDefaultMiddleWare) => getDefaultMiddleWare({
+        serializableCheck: {
+            // redux persist uses non-serializable payloads
+            ignoredActions: ["persist/PERSIST"]
+        }
+    })
 });
 
 export const Persistor = persistStore(Store);
