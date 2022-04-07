@@ -24,7 +24,7 @@ export const ProfessionSelect = (): JSX.Element => {
 
     return (
         <Select
-            value={prof}
+            value={prof ?? ""}
             onChange={({target}) => onChange(target.value as Profession)}
         >
             {data.map(({name, icon}) => (
