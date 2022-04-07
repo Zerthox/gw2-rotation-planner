@@ -61,6 +61,7 @@ async function fetchDataForProfession(prof: ProfessionKind): Promise<ProfessionD
     const skills = await fetchSkills([...weaponSkills, ...otherSkills]);
 
     // fetch additional skills
+    // TODO: toolbelt skills
     await addAdditionalSkillsTo(skills);
 
     // sort skills
@@ -70,7 +71,7 @@ async function fetchDataForProfession(prof: ProfessionKind): Promise<ProfessionD
     );
 
     // remove duplicates
-    // TODO: traited variants of skills are still included
+    // TODO: some kind of variants of skills are still included
     const uniqueSkills = uniqBy(sortedSkills, (skill) => skill.id);
 
     return {

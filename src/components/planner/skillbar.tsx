@@ -11,7 +11,7 @@ interface SkillSectionProps {
     skills: SkillState[];
 }
 
-// TODO: display skills within section as grid with row direction
+// TODO: display auto attack in first column?
 const SkillSection = ({name, parentId, skills}: SkillSectionProps) => {
     const [visible, setVisible] = useState(false);
 
