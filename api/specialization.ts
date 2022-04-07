@@ -9,7 +9,7 @@ export async function fetchSpecializations(ids: number[]): Promise<Specializatio
     if (ids.length === 0) {
         return [];
     } else {
-        return await fetchApi({endpoint: "specializations", params: {ids}});
+        return await fetchApi({endpoint: "specializations", params: {ids: ids.join(",")}});
     }
 }
 

@@ -1015,6 +1015,328 @@
             "specialization": 69,
             "type": "Profession",
             "slot": "Profession_2"
+        },
+        {
+            "id": 62828,
+            "name": "True Strike",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 69,
+            "type": "Weapon",
+            "weaponType": "Greatsword",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 28797,
+            "name": "Frigid Discharge",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Spear",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 28815,
+            "name": "Devour Brand",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Spear",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 28472,
+            "name": "Shackling Wave",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 28625,
+            "name": "Deathstrike",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 26956,
+            "name": "Release Hammers",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 26693,
+            "name": "Resist the Darkness",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Elite",
+            "slot": "Elite"
+        },
+        {
+            "id": 28427,
+            "name": "Ventari's Will",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 27628,
+            "name": "Diminish Solace",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 29082,
+            "name": "Natural Harmony",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 29197,
+            "name": "Purifying Essence",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 29114,
+            "name": "Energy Expulsion",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Elite",
+            "slot": "Elite"
+        },
+        {
+            "id": 28382,
+            "name": "Relinquish Power",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 27228,
+            "name": "Infuse Light",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 52,
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 27080,
+            "name": "Gaze of Darkness",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 52,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 28113,
+            "name": "Burst of Strength",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 52,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 28075,
+            "name": "Chaotic Release",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 52,
+            "type": "Elite",
+            "slot": "Elite"
+        },
+        {
+            "id": 41858,
+            "name": "Legendary Renegade Stance",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 63,
+            "type": "Profession",
+            "slot": "Profession_1"
+        },
+        {
+            "id": 62680,
+            "name": "Selfless Spirit",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 69,
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 62687,
+            "name": "Urn of Saint Viktor",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 69,
+            "type": "Elite",
+            "slot": "Elite",
+            "flipSkill": 62738
+        },
+        {
+            "id": 62702,
+            "name": "Battle Dance",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 69,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 62941,
+            "name": "Tree Song",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 69,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 62796,
+            "name": "Awakening",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 69,
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 62688,
+            "name": "Mist Slash",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 69,
+            "type": "Weapon",
+            "weaponType": "Greatsword",
+            "slot": "Weapon_1",
+            "flipSkill": 62752,
+            "nextChain": 62752,
+            "prevChain": 62913
+        },
+        {
+            "id": 26730,
+            "name": "Anguish Swipe",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Mace",
+            "slot": "Weapon_1",
+            "flipSkill": 26666,
+            "nextChain": 26666,
+            "prevChain": 27066
+        },
+        {
+            "id": 29331,
+            "name": "Forceful Bash",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_1",
+            "flipSkill": 29002,
+            "nextChain": 29002,
+            "prevChain": 29180
+        },
+        {
+            "id": 29256,
+            "name": "Brutal Blade",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_1",
+            "flipSkill": 28964,
+            "nextChain": 28964,
+            "prevChain": 29057
+        },
+        {
+            "id": 62752,
+            "name": "Arcing Mists",
+            "professions": [
+                "Revenant"
+            ],
+            "specialization": 69,
+            "type": "Weapon",
+            "weaponType": "Greatsword",
+            "slot": "Weapon_1",
+            "prevChain": 62688
+        },
+        {
+            "id": 26666,
+            "name": "Manifest Toxin",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Mace",
+            "slot": "Weapon_1",
+            "prevChain": 26730
+        },
+        {
+            "id": 29002,
+            "name": "Rejuvenating Assault",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_1",
+            "prevChain": 29331
+        },
+        {
+            "id": 28964,
+            "name": "Rift Slash",
+            "professions": [
+                "Revenant"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_1",
+            "prevChain": 29256
         }
     ]
 }

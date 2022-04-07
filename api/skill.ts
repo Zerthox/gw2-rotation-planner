@@ -17,13 +17,13 @@ export async function fetchSkills(ids: number[]): Promise<Skill[]> {
         while (ids.length > SKILL_LIMIT) {
             result.push(...await fetchApi<Skill[]>({
                 endpoint: "skills",
-                params: {ids: ids.slice(0, 200)}
+                params: {ids: ids.slice(0, 200).join(",")}
             }));
             ids = ids.slice(200);
         }
         result.push(...await fetchApi<Skill[]>({
             endpoint: "skills",
-            params: {ids}
+            params: {ids: ids.join(",")}
         }));
 
         return result;

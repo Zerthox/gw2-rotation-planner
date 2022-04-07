@@ -897,16 +897,16 @@
             "slot": "Profession_5",
             "flipSkill": 31411,
             "transformSkills": [
-                32364,
-                32242,
+                31894,
+                31503,
                 31318,
                 32253,
                 33387,
-                31796,
+                32242,
+                34070,
+                32364,
                 31406,
-                31894,
-                31503,
-                34070
+                31796
             ]
         },
         {
@@ -1335,7 +1335,6 @@
             "professions": [
                 "Ranger"
             ],
-            "specialization": 55,
             "type": "Profession",
             "slot": "Profession_3"
         },
@@ -1385,7 +1384,6 @@
             "professions": [
                 "Ranger"
             ],
-            "specialization": 55,
             "type": "Profession",
             "slot": "Profession_3"
         },
@@ -1578,6 +1576,348 @@
             "specialization": 72,
             "type": "Profession",
             "slot": "Profession_3"
+        },
+        {
+            "id": 46629,
+            "name": "Maul",
+            "professions": [
+                "Ranger"
+            ],
+            "type": "Weapon",
+            "weaponType": "Greatsword",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 12523,
+            "name": "Counterattack Kick",
+            "professions": [
+                "Ranger"
+            ],
+            "type": "Weapon",
+            "weaponType": "Greatsword",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 12630,
+            "name": "Counter Throw",
+            "professions": [
+                "Ranger"
+            ],
+            "type": "Weapon",
+            "weaponType": "Spear",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 12622,
+            "name": "Serpent's Strike",
+            "professions": [
+                "Ranger"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 21775,
+            "name": "Aqua Surge",
+            "professions": [
+                "Ranger"
+            ],
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 12592,
+            "name": "Solar Flare",
+            "professions": [
+                "Ranger"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 12595,
+            "name": "Quicksand",
+            "professions": [
+                "Ranger"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 12593,
+            "name": "Cold Snap",
+            "professions": [
+                "Ranger"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 12594,
+            "name": "Call Lightning",
+            "professions": [
+                "Ranger"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
+            "id": 12596,
+            "name": "Nature's Renewal",
+            "professions": [
+                "Ranger"
+            ],
+            "type": "Elite",
+            "slot": "Elite"
+        },
+        {
+            "id": 31411,
+            "name": "Release Celestial Avatar",
+            "professions": [
+                "Ranger"
+            ],
+            "specialization": 5,
+            "type": "Profession",
+            "slot": "Profession_5"
+        },
+        {
+            "id": 31894,
+            "name": "Rejuvenating Tides",
+            "professions": [
+                "Ranger"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 31503,
+            "name": "Natural Convergence",
+            "professions": [
+                "Ranger"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 31318,
+            "name": "Lunar Impact",
+            "professions": [
+                "Ranger"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 32253,
+            "name": "Rejuvenating Tides",
+            "professions": [
+                "Ranger"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 33387,
+            "name": "Cosmic Ray",
+            "professions": [
+                "Ranger"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_1"
+        },
+        {
+            "id": 32242,
+            "name": "Seed of Life",
+            "professions": [
+                "Ranger"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 34070,
+            "name": "Natural Convergence",
+            "professions": [
+                "Ranger"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 32364,
+            "name": "Lunar Impact",
+            "professions": [
+                "Ranger"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 31406,
+            "name": "Seed of Life",
+            "professions": [
+                "Ranger"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 31796,
+            "name": "Cosmic Ray",
+            "professions": [
+                "Ranger"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_1"
+        },
+        {
+            "id": 40301,
+            "name": "Leading Swipe",
+            "professions": [
+                "Ranger"
+            ],
+            "specialization": 55,
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_1",
+            "flipSkill": 41800,
+            "nextChain": 41800,
+            "prevChain": 45426
+        },
+        {
+            "id": 12487,
+            "name": "Slice",
+            "professions": [
+                "Ranger"
+            ],
+            "type": "Weapon",
+            "weaponType": "Greatsword",
+            "slot": "Weapon_1",
+            "flipSkill": 12488,
+            "nextChain": 12488,
+            "prevChain": 12474
+        },
+        {
+            "id": 63222,
+            "name": "Hammer Slam",
+            "professions": [
+                "Ranger"
+            ],
+            "specialization": 72,
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_1",
+            "flipSkill": 63337,
+            "nextChain": 63337,
+            "prevChain": 63118
+        },
+        {
+            "id": 12555,
+            "name": "Jab",
+            "professions": [
+                "Ranger"
+            ],
+            "type": "Weapon",
+            "weaponType": "Spear",
+            "slot": "Weapon_1",
+            "flipSkill": 12556,
+            "nextChain": 12556,
+            "prevChain": 12553
+        },
+        {
+            "id": 12472,
+            "name": "Crippling Thrust",
+            "professions": [
+                "Ranger"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_1",
+            "flipSkill": 12473,
+            "nextChain": 12473,
+            "prevChain": 12471
+        },
+        {
+            "id": 41800,
+            "name": "Serpent Stab",
+            "professions": [
+                "Ranger"
+            ],
+            "specialization": 55,
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_1",
+            "flipSkill": 44278,
+            "nextChain": 44278,
+            "prevChain": 40301
+        },
+        {
+            "id": 12488,
+            "name": "Enduring Swing",
+            "professions": [
+                "Ranger"
+            ],
+            "type": "Weapon",
+            "weaponType": "Greatsword",
+            "slot": "Weapon_1",
+            "prevChain": 12487
+        },
+        {
+            "id": 63337,
+            "name": "Heavy Smash",
+            "professions": [
+                "Ranger"
+            ],
+            "specialization": 72,
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_1",
+            "prevChain": 63222
+        },
+        {
+            "id": 12556,
+            "name": "Toxic Strike",
+            "professions": [
+                "Ranger"
+            ],
+            "type": "Weapon",
+            "weaponType": "Spear",
+            "slot": "Weapon_1",
+            "prevChain": 12555
+        },
+        {
+            "id": 12473,
+            "name": "Precision Swipe",
+            "professions": [
+                "Ranger"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_1",
+            "prevChain": 12472
+        },
+        {
+            "id": 44278,
+            "name": "Deadly Delivery",
+            "professions": [
+                "Ranger"
+            ],
+            "specialization": 55,
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_1",
+            "prevChain": 41800
         }
     ]
 }

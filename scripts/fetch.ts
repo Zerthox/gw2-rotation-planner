@@ -7,35 +7,84 @@ import {ProfessionData, SkillData} from "../src/hooks/data";
 const outPath = path.join(__dirname, "../src/data");
 
 (async () => {
+    // create output dir
     if (!existsSync(outPath)) {
         await fs.mkdir(outPath);
     }
 
     for (const prof of professions) {
         stdout.write(`Fetching ${prof} data... `);
-        const profData = await fetchProfession(prof);
 
-        const specs = await fetchSpecializations(profData.specializations);
-        const weapons = Object.keys(profData.weapons) as WeaponType[];
-        const weaponSkills = Object.values(profData.weapons)
-            .map((weapon) => weapon.skills.map((skill) => skill.id))
-            .flat();
-        const otherSkills = profData.skills.map((skill) => skill.id);
-
-        const skills = await fetchSkills([...weaponSkills, ...otherSkills]);
-
-        await saveJson(path.join(outPath, `${prof.toLowerCase()}.json`), {
-            name: profData.name as ProfessionKind,
-            icon: profData.icon,
-            elites: specs.filter((spec) => spec.elite).map(({id, name}) => ({id, name})),
-            weapons,
-            skills: skills.map((skill) => toSkillData(skill))
-        });
+        const data = await fetchDataForProfession(prof);
+        await saveJson(path.join(outPath, `${prof.toLowerCase()}.json`), data),
 
         stdout.cursorTo(0);
         stdout.write(`Fetching ${prof} data... done!\n`);
     }
 })();
+
+async function fetchDataForProfession(prof: ProfessionKind): Promise<ProfessionData> {
+    const profData = await fetchProfession(prof);
+
+    const specs = await fetchSpecializations(profData.specializations);
+    const weapons = Object.keys(profData.weapons) as WeaponType[];
+    const weaponSkills = Object.values(profData.weapons)
+        .map((weapon) => weapon.skills.map((skill) => skill.id))
+        .flat();
+    const otherSkills = profData.skills.map((skill) => skill.id);
+
+    // fetch initial skills
+    const skills = await fetchSkills([...weaponSkills, ...otherSkills]);
+
+    // fetch flip, bundle & transform skills
+    const additionalSkills = skills.reduce((acc, skill) => {
+        if (skill.flip_skill && !skill.next_chain) { // ignore skills chains for now
+            acc.push(skill.flip_skill);
+        }
+        if (skill.bundle_skills) {
+            acc.push(...skill.bundle_skills);
+        }
+        if (skill.transform_skills) {
+            acc.push(...skill.transform_skills);
+        }
+
+        return acc;
+    }, []);
+    skills.push(...await fetchSkills(additionalSkills));
+
+    // fetch chain skills
+    skills.push(...await fetchSkillChains(skills));
+
+    return {
+        name: profData.name as ProfessionKind,
+        icon: profData.icon,
+        elites: specs.filter((spec) => spec.elite).map(({id, name}) => ({id, name})),
+        weapons,
+        skills: skills.map((skill) => toSkillData(skill))
+    };
+}
+
+/** Fetches all skills in the skill chains of the initial skills. */
+async function fetchSkillChains(initial: Skill[]): Promise<Skill[]> {
+    const result = [] as Skill[];
+
+    const genWorklist = (worklist: Skill[]) => {
+        // some skills (e.g. jade buster cannon) have themselves as chain!
+        return worklist
+            .filter((skill) => skill.next_chain && skill.id !== skill.next_chain)
+            .map((skill) => skill.next_chain);
+    };
+
+    let worklist = genWorklist(initial);
+
+    while (worklist.length > 0) {
+        const skills = await fetchSkills(worklist);
+        result.push(...skills);
+        worklist = genWorklist(skills);
+    }
+
+    return result;
+}
 
 function toSkillData({
     id,
@@ -73,6 +122,6 @@ function toSkillData({
     };
 }
 
-async function saveJson(path: string, data: ProfessionData) {
+async function saveJson(path: string, data: unknown) {
     await fs.writeFile(path, JSON.stringify(data, null, 4));
 }

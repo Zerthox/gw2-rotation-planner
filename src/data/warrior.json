@@ -980,13 +980,13 @@
             "type": "Elite",
             "slot": "Elite",
             "transformSkills": [
-                14485,
-                14556,
                 14490,
                 14487,
                 14488,
+                14485,
                 14489,
-                14486
+                14486,
+                14556
             ]
         },
         {
@@ -1491,6 +1491,428 @@
             "specialization": 68,
             "type": "Heal",
             "slot": "Heal"
+        },
+        {
+            "id": 14548,
+            "name": "Adrenaline Rush",
+            "professions": [
+                "Warrior"
+            ],
+            "type": "Weapon",
+            "weaponType": "Mace",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 14501,
+            "name": "Rip",
+            "professions": [
+                "Warrior"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 14557,
+            "name": "Adrenaline Rush",
+            "professions": [
+                "Warrior"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 14549,
+            "name": "Whirling Strike",
+            "professions": [
+                "Warrior"
+            ],
+            "type": "Profession",
+            "weaponType": "Spear",
+            "slot": "Profession_1"
+        },
+        {
+            "id": 14469,
+            "name": "Forceful Shot",
+            "professions": [
+                "Warrior"
+            ],
+            "type": "Profession",
+            "weaponType": "Speargun",
+            "slot": "Profession_1"
+        },
+        {
+            "id": 14545,
+            "name": "Arcing Slice",
+            "professions": [
+                "Warrior"
+            ],
+            "type": "Profession",
+            "weaponType": "Greatsword",
+            "slot": "Profession_1"
+        },
+        {
+            "id": 14428,
+            "name": "Flurry",
+            "professions": [
+                "Warrior"
+            ],
+            "type": "Profession",
+            "weaponType": "Sword",
+            "slot": "Profession_1"
+        },
+        {
+            "id": 14422,
+            "name": "Eviscerate",
+            "professions": [
+                "Warrior"
+            ],
+            "type": "Profession",
+            "weaponType": "Axe",
+            "slot": "Profession_1"
+        },
+        {
+            "id": 14425,
+            "name": "Skull Crack",
+            "professions": [
+                "Warrior"
+            ],
+            "type": "Profession",
+            "weaponType": "Mace",
+            "slot": "Profession_1"
+        },
+        {
+            "id": 14520,
+            "name": "Combustive Shot",
+            "professions": [
+                "Warrior"
+            ],
+            "type": "Profession",
+            "weaponType": "Longbow",
+            "slot": "Profession_1"
+        },
+        {
+            "id": 14473,
+            "name": "Kill Shot",
+            "professions": [
+                "Warrior"
+            ],
+            "type": "Profession",
+            "weaponType": "Rifle",
+            "slot": "Profession_1",
+            "flipSkill": 14474
+        },
+        {
+            "id": 14512,
+            "name": "Earthshaker",
+            "professions": [
+                "Warrior"
+            ],
+            "type": "Profession",
+            "weaponType": "Hammer",
+            "slot": "Profession_1"
+        },
+        {
+            "id": 14490,
+            "name": "Seismic Leap",
+            "professions": [],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 14487,
+            "name": "Uppercut",
+            "professions": [],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_1",
+            "prevChain": 14486
+        },
+        {
+            "id": 14488,
+            "name": "Kick",
+            "professions": [],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 14485,
+            "name": "Smash",
+            "professions": [],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_1",
+            "flipSkill": 14486,
+            "nextChain": 14486
+        },
+        {
+            "id": 14489,
+            "name": "Dash",
+            "professions": [],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 14486,
+            "name": "Bash",
+            "professions": [],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_1",
+            "flipSkill": 14487,
+            "nextChain": 14487,
+            "prevChain": 14485
+        },
+        {
+            "id": 14556,
+            "name": "Throw Boulder",
+            "professions": [],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 30185,
+            "name": "Berserk",
+            "professions": [
+                "Warrior"
+            ],
+            "specialization": 18,
+            "type": "Profession",
+            "slot": "Profession_1"
+        },
+        {
+            "id": 14474,
+            "name": "Kill Shot",
+            "professions": [
+                "Warrior"
+            ],
+            "type": "Profession",
+            "weaponType": "Rifle",
+            "slot": "Profession_1",
+            "flipSkill": 14475
+        },
+        {
+            "id": 62861,
+            "name": "Sheathe Gunsaber",
+            "professions": [
+                "Warrior"
+            ],
+            "specialization": 68,
+            "type": "Profession",
+            "slot": "Profession_1"
+        },
+        {
+            "id": 62857,
+            "name": "((996787))",
+            "professions": [
+                "Warrior"
+            ],
+            "specialization": 68,
+            "type": "Profession",
+            "slot": "Profession_2"
+        },
+        {
+            "id": 14370,
+            "name": "Double Chop",
+            "professions": [
+                "Warrior"
+            ],
+            "type": "Weapon",
+            "weaponType": "Axe",
+            "slot": "Weapon_1",
+            "flipSkill": 14371,
+            "nextChain": 14371,
+            "prevChain": 14369
+        },
+        {
+            "id": 40560,
+            "name": "Focused Slash",
+            "professions": [
+                "Warrior"
+            ],
+            "specialization": 61,
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_1",
+            "nextChain": 40275,
+            "prevChain": 42745
+        },
+        {
+            "id": 14373,
+            "name": "Greatsword Slice",
+            "professions": [
+                "Warrior"
+            ],
+            "type": "Weapon",
+            "weaponType": "Greatsword",
+            "slot": "Weapon_1",
+            "flipSkill": 14374,
+            "nextChain": 14374,
+            "prevChain": 14356
+        },
+        {
+            "id": 14384,
+            "name": "Hammer Bash",
+            "professions": [
+                "Warrior"
+            ],
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_1",
+            "flipSkill": 14385,
+            "nextChain": 14385,
+            "prevChain": 14358
+        },
+        {
+            "id": 14438,
+            "name": "Jab",
+            "professions": [
+                "Warrior"
+            ],
+            "type": "Weapon",
+            "weaponType": "Spear",
+            "slot": "Weapon_1",
+            "flipSkill": 14439,
+            "nextChain": 14439,
+            "prevChain": 14437
+        },
+        {
+            "id": 14377,
+            "name": "Mace Bash",
+            "professions": [
+                "Warrior"
+            ],
+            "type": "Weapon",
+            "weaponType": "Mace",
+            "slot": "Weapon_1",
+            "flipSkill": 14378,
+            "nextChain": 14378,
+            "prevChain": 14376
+        },
+        {
+            "id": 14365,
+            "name": "Gash",
+            "professions": [
+                "Warrior"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_1",
+            "flipSkill": 14363,
+            "nextChain": 14363,
+            "prevChain": 14364
+        },
+        {
+            "id": 14486,
+            "name": "Bash",
+            "professions": [],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_1",
+            "flipSkill": 14487,
+            "nextChain": 14487,
+            "prevChain": 14485
+        },
+        {
+            "id": 14487,
+            "name": "Uppercut",
+            "professions": [],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_1",
+            "prevChain": 14486
+        },
+        {
+            "id": 14371,
+            "name": "Triple Chop",
+            "professions": [
+                "Warrior"
+            ],
+            "type": "Weapon",
+            "weaponType": "Axe",
+            "slot": "Weapon_1",
+            "prevChain": 14370
+        },
+        {
+            "id": 40275,
+            "name": "Keen Strike",
+            "professions": [
+                "Warrior"
+            ],
+            "specialization": 61,
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_1",
+            "prevChain": 40560
+        },
+        {
+            "id": 14374,
+            "name": "Brutal Strike",
+            "professions": [
+                "Warrior"
+            ],
+            "type": "Weapon",
+            "weaponType": "Greatsword",
+            "slot": "Weapon_1",
+            "prevChain": 14373
+        },
+        {
+            "id": 14385,
+            "name": "Hammer Smash",
+            "professions": [
+                "Warrior"
+            ],
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_1",
+            "prevChain": 14384
+        },
+        {
+            "id": 14439,
+            "name": "Impale",
+            "professions": [
+                "Warrior"
+            ],
+            "type": "Weapon",
+            "weaponType": "Spear",
+            "slot": "Weapon_1",
+            "prevChain": 14438
+        },
+        {
+            "id": 14378,
+            "name": "Pulverize",
+            "professions": [
+                "Warrior"
+            ],
+            "type": "Weapon",
+            "weaponType": "Mace",
+            "slot": "Weapon_1",
+            "prevChain": 14377
+        },
+        {
+            "id": 14363,
+            "name": "Hamstring",
+            "professions": [
+                "Warrior"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_1",
+            "prevChain": 14365
+        },
+        {
+            "id": 14487,
+            "name": "Uppercut",
+            "professions": [],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_1",
+            "prevChain": 14486
         }
     ]
 }

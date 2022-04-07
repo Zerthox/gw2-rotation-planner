@@ -6,7 +6,7 @@ export interface FetchOptions {
     version?: string;
     endpoint: string;
     lang?: string;
-    params?: Record<string, unknown>;
+    params?: Record<string, string>;
 }
 
 export async function fetchApi<T>({version = "v2", endpoint, lang = "en", params = {}}: FetchOptions): Promise<T> {

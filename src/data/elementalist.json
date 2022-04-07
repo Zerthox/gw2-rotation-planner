@@ -2399,6 +2399,726 @@
             "type": "Profession",
             "slot": "Profession_5",
             "attunement": "Earth"
+        },
+        {
+            "id": 51662,
+            "name": "Transmute Lightning",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_3",
+            "attunement": "Air"
+        },
+        {
+            "id": 51646,
+            "name": "Transmute Frost",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 51711,
+            "name": "Transmute Fire",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Focus",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 5780,
+            "name": "Hurl",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_2",
+            "attunement": "Earth"
+        },
+        {
+            "id": 51684,
+            "name": "Transmute Earth",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_3",
+            "attunement": "Earth"
+        },
+        {
+            "id": 5653,
+            "name": "Vacuum",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_3",
+            "attunement": "Air"
+        },
+        {
+            "id": 29719,
+            "name": "Overload Air",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Profession",
+            "slot": "Profession_3",
+            "attunement": "Air"
+        },
+        {
+            "id": 29618,
+            "name": "Overload Earth",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Profession",
+            "slot": "Profession_4",
+            "attunement": "Earth"
+        },
+        {
+            "id": 29706,
+            "name": "Overload Fire",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Profession",
+            "slot": "Profession_1",
+            "attunement": "Fire"
+        },
+        {
+            "id": 29415,
+            "name": "Overload Water",
+            "professions": [
+                "Elementalist"
+            ],
+            "type": "Profession",
+            "slot": "Profession_2",
+            "attunement": "Water"
+        },
+        {
+            "id": 5541,
+            "name": "Lava Axe",
+            "professions": [
+                "Thief",
+                "Mesmer",
+                "Warrior",
+                "Elementalist",
+                "Necromancer",
+                "Guardian",
+                "Ranger",
+                "Engineer",
+                "Revenant"
+            ],
+            "type": "Bundle",
+            "slot": "Weapon_1",
+            "flipSkill": 40229
+        },
+        {
+            "id": 5593,
+            "name": "Explosive Lava Axe",
+            "professions": [
+                "Thief",
+                "Mesmer",
+                "Warrior",
+                "Elementalist",
+                "Necromancer",
+                "Guardian",
+                "Ranger",
+                "Engineer",
+                "Revenant"
+            ],
+            "type": "Bundle",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 5717,
+            "name": "Burning Retreat",
+            "professions": [
+                "Thief",
+                "Mesmer",
+                "Warrior",
+                "Elementalist",
+                "Necromancer",
+                "Guardian",
+                "Ranger",
+                "Engineer",
+                "Revenant"
+            ],
+            "type": "Bundle",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 5718,
+            "name": "Ring of Fire",
+            "professions": [
+                "Thief",
+                "Mesmer",
+                "Warrior",
+                "Elementalist",
+                "Necromancer",
+                "Guardian",
+                "Ranger",
+                "Engineer",
+                "Revenant"
+            ],
+            "type": "Bundle",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 5719,
+            "name": "Flame Leap",
+            "professions": [
+                "Thief",
+                "Mesmer",
+                "Warrior",
+                "Elementalist",
+                "Necromancer",
+                "Guardian",
+                "Ranger",
+                "Engineer",
+                "Revenant"
+            ],
+            "type": "Bundle",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 5595,
+            "name": "Water Arrow",
+            "professions": [
+                "Thief",
+                "Mesmer",
+                "Warrior",
+                "Elementalist",
+                "Necromancer",
+                "Guardian",
+                "Ranger",
+                "Engineer",
+                "Revenant"
+            ],
+            "type": "Bundle",
+            "slot": "Weapon_1"
+        },
+        {
+            "id": 5720,
+            "name": "Frost Volley",
+            "professions": [
+                "Thief",
+                "Mesmer",
+                "Warrior",
+                "Elementalist",
+                "Necromancer",
+                "Guardian",
+                "Ranger",
+                "Engineer",
+                "Revenant"
+            ],
+            "type": "Bundle",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 5568,
+            "name": "Frost Fan",
+            "professions": [
+                "Thief",
+                "Mesmer",
+                "Warrior",
+                "Elementalist",
+                "Necromancer",
+                "Guardian",
+                "Ranger",
+                "Engineer",
+                "Revenant"
+            ],
+            "type": "Bundle",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 5723,
+            "name": "Frost Storm",
+            "professions": [
+                "Thief",
+                "Mesmer",
+                "Warrior",
+                "Elementalist",
+                "Necromancer",
+                "Guardian",
+                "Ranger",
+                "Engineer",
+                "Revenant"
+            ],
+            "type": "Bundle",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 5721,
+            "name": "Deep Freeze",
+            "professions": [
+                "Thief",
+                "Mesmer",
+                "Warrior",
+                "Elementalist",
+                "Necromancer",
+                "Guardian",
+                "Ranger",
+                "Engineer",
+                "Revenant"
+            ],
+            "type": "Bundle",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 5726,
+            "name": "Lightning Swing",
+            "professions": [],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_1",
+            "flipSkill": 5727,
+            "nextChain": 5727
+        },
+        {
+            "id": 5625,
+            "name": "Lightning Leap",
+            "professions": [],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 5733,
+            "name": "Wind Blast",
+            "professions": [],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 5725,
+            "name": "Invoke Lightning",
+            "professions": [],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 5732,
+            "name": "Static Field",
+            "professions": [],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 5621,
+            "name": "Shield Smack",
+            "professions": [],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_1",
+            "flipSkill": 21646,
+            "nextChain": 21646
+        },
+        {
+            "id": 21647,
+            "name": "Stone Sheath",
+            "professions": [],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 5547,
+            "name": "Magnetic Surge",
+            "professions": [],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 5747,
+            "name": "Magnetic Shield",
+            "professions": [],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 5623,
+            "name": "Fortify",
+            "professions": [],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 5532,
+            "name": "Flame Wave",
+            "professions": [
+                "Thief",
+                "Mesmer",
+                "Warrior",
+                "Elementalist",
+                "Necromancer",
+                "Guardian",
+                "Ranger",
+                "Engineer",
+                "Revenant"
+            ],
+            "type": "Bundle",
+            "slot": "Weapon_1"
+        },
+        {
+            "id": 5533,
+            "name": "Fiery Eruption",
+            "professions": [
+                "Thief",
+                "Mesmer",
+                "Warrior",
+                "Elementalist",
+                "Necromancer",
+                "Guardian",
+                "Ranger",
+                "Engineer",
+                "Revenant"
+            ],
+            "type": "Bundle",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 5697,
+            "name": "Fiery Whirl",
+            "professions": [
+                "Thief",
+                "Mesmer",
+                "Warrior",
+                "Elementalist",
+                "Necromancer",
+                "Guardian",
+                "Ranger",
+                "Engineer",
+                "Revenant"
+            ],
+            "type": "Bundle",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 5517,
+            "name": "Fiery Rush",
+            "professions": [
+                "Thief",
+                "Mesmer",
+                "Warrior",
+                "Elementalist",
+                "Necromancer",
+                "Guardian",
+                "Ranger",
+                "Engineer",
+                "Revenant"
+            ],
+            "type": "Bundle",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 5531,
+            "name": "Firestorm",
+            "professions": [
+                "Thief",
+                "Mesmer",
+                "Warrior",
+                "Elementalist",
+                "Necromancer",
+                "Guardian",
+                "Ranger",
+                "Engineer",
+                "Revenant"
+            ],
+            "type": "Bundle",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 5752,
+            "name": "Electrified Tornado",
+            "professions": [
+                "Thief",
+                "Mesmer",
+                "Warrior",
+                "Elementalist",
+                "Necromancer",
+                "Guardian",
+                "Ranger",
+                "Engineer",
+                "Revenant"
+            ],
+            "type": "Bundle",
+            "slot": "Weapon_1"
+        },
+        {
+            "id": 5753,
+            "name": "Dust Tornado",
+            "professions": [
+                "Thief",
+                "Mesmer",
+                "Warrior",
+                "Elementalist",
+                "Necromancer",
+                "Guardian",
+                "Ranger",
+                "Engineer",
+                "Revenant"
+            ],
+            "type": "Bundle",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 5754,
+            "name": "Debris Tornado",
+            "professions": [
+                "Thief",
+                "Mesmer",
+                "Warrior",
+                "Elementalist",
+                "Necromancer",
+                "Guardian",
+                "Ranger",
+                "Engineer",
+                "Revenant"
+            ],
+            "type": "Bundle",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 35224,
+            "name": "Elemental Requiem",
+            "professions": [
+                "Thief",
+                "Mesmer",
+                "Warrior",
+                "Elementalist",
+                "Necromancer",
+                "Guardian",
+                "Ranger",
+                "Engineer",
+                "Revenant"
+            ],
+            "type": "Bundle",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 35304,
+            "name": "Dust Charge",
+            "professions": [
+                "Thief",
+                "Mesmer",
+                "Warrior",
+                "Elementalist",
+                "Necromancer",
+                "Guardian",
+                "Ranger",
+                "Engineer",
+                "Revenant"
+            ],
+            "type": "Bundle",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 44637,
+            "name": "Tailored Victory",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Elite",
+            "slot": "Elite"
+        },
+        {
+            "id": 62694,
+            "name": "Water Rush",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_1",
+            "attunement": "Water",
+            "flipSkill": 62862,
+            "nextChain": 62862,
+            "prevChain": 62865
+        },
+        {
+            "id": 40326,
+            "name": "Fire Swipe",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_1",
+            "attunement": "Fire",
+            "flipSkill": 43657,
+            "nextChain": 43657,
+            "prevChain": 39964
+        },
+        {
+            "id": 45983,
+            "name": "Clapotis",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_1",
+            "attunement": "Water",
+            "flipSkill": 43199,
+            "nextChain": 43199,
+            "prevChain": 41052
+        },
+        {
+            "id": 45259,
+            "name": "Polaric Slash",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_1",
+            "attunement": "Air",
+            "flipSkill": 45216,
+            "nextChain": 45216,
+            "prevChain": 44681
+        },
+        {
+            "id": 43080,
+            "name": "Crystalline Strike",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_1",
+            "attunement": "Earth",
+            "flipSkill": 46024,
+            "nextChain": 46024,
+            "prevChain": 43616
+        },
+        {
+            "id": 5727,
+            "name": "Static Swing",
+            "professions": [],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_1",
+            "flipSkill": 5728,
+            "nextChain": 5728,
+            "prevChain": 5726
+        },
+        {
+            "id": 21646,
+            "name": "Shield Smash",
+            "professions": [],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_1",
+            "flipSkill": 5746,
+            "nextChain": 5746,
+            "prevChain": 5621
+        },
+        {
+            "id": 62862,
+            "name": "Chilling Crack",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 67,
+            "type": "Weapon",
+            "weaponType": "Hammer",
+            "slot": "Weapon_1",
+            "attunement": "Water",
+            "prevChain": 62694
+        },
+        {
+            "id": 43657,
+            "name": "Searing Slash",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_1",
+            "attunement": "Fire",
+            "prevChain": 40326
+        },
+        {
+            "id": 43199,
+            "name": "Breaking Wave",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_1",
+            "attunement": "Water",
+            "prevChain": 45983
+        },
+        {
+            "id": 45216,
+            "name": "Call Lightning",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_1",
+            "attunement": "Air",
+            "prevChain": 45259
+        },
+        {
+            "id": 46024,
+            "name": "Crystalline Sunder",
+            "professions": [
+                "Elementalist"
+            ],
+            "specialization": 56,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_1",
+            "attunement": "Earth",
+            "prevChain": 43080
+        },
+        {
+            "id": 5728,
+            "name": "Thunderclap",
+            "professions": [],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_1",
+            "prevChain": 5727
+        },
+        {
+            "id": 5746,
+            "name": "Crippling Shield",
+            "professions": [],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_1",
+            "prevChain": 21646
         }
     ]
 }
