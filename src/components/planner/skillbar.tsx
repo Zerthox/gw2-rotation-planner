@@ -1,5 +1,5 @@
-import React from "react";
-import {Stack, Accordion, AccordionSummary, AccordionDetails} from "@mui/material";
+import React, {useState} from "react";
+import {Box, Stack, Accordion, AccordionSummary, AccordionDetails} from "@mui/material";
 import {ExpandMore} from "@mui/icons-material";
 import {DraggableSkill} from "./skill";
 import {Id} from "../../store/planner";
@@ -12,29 +12,44 @@ interface SkillSectionProps {
 }
 
 // TODO: display skills within section as grid with row direction
-const SkillSection = ({name, parentId, skills}: SkillSectionProps) => (
-    <Accordion disableGutters elevation={0} TransitionProps={{unmountOnExit: true}}>
-        <AccordionSummary
-            expandIcon={<ExpandMore/>}
-            aria-controls={`${name} Skills Panel`}
+const SkillSection = ({name, parentId, skills}: SkillSectionProps) => {
+    const [visible, setVisible] = useState(false);
+
+    return (
+        <Accordion
+            disableGutters
+            elevation={0}
+            TransitionProps={{
+                onEnter: () => setVisible(true),
+                onExited: () => setVisible(false)
+            }}
         >
-            {name} Skills
-        </AccordionSummary>
-        <AccordionDetails>
-            <Stack direction="column" alignItems="center" spacing={0.5}>
-                {skills.map(({id, skillId}, i) => (
-                    <DraggableSkill
-                        key={id}
-                        id={id}
-                        parentId={parentId}
-                        index={i}
-                        skill={skillId}
-                    />
-                ))}
-            </Stack>
-        </AccordionDetails>
-    </Accordion>
-);
+            <AccordionSummary
+                expandIcon={<ExpandMore/>}
+                aria-controls={`${name} Skills Panel`}
+            >
+                {name} Skills
+            </AccordionSummary>
+            <AccordionDetails>
+                <Box sx={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(5, 3em)",
+                    gap: 0.5
+                }}>
+                    {visible ? skills.map(({id, skillId}, i) => (
+                        <DraggableSkill
+                            key={id}
+                            id={id}
+                            parentId={parentId}
+                            index={i}
+                            skill={skillId}
+                        />
+                    )) : null}
+                </Box>
+            </AccordionDetails>
+        </Accordion>
+    );
+};
 
 export interface SkillbarProps {
     id: Id;
