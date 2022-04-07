@@ -31,93 +31,163 @@
     ],
     "skills": [
         {
-            "id": 44791,
-            "name": "Lacerating Chop",
+            "id": 10191,
+            "name": "Mind Wrack",
             "professions": [
                 "Mesmer"
             ],
-            "specialization": 59,
-            "type": "Weapon",
-            "weaponType": "Axe",
-            "slot": "Weapon_1",
-            "flipSkill": 44840,
-            "nextChain": 44840
+            "type": "Profession",
+            "slot": "Profession_1",
+            "flipSkill": 49068
         },
         {
-            "id": 45243,
-            "name": "Lingering Thoughts",
+            "id": 49068,
+            "name": "Mind Wrack",
             "professions": [
                 "Mesmer"
             ],
-            "specialization": 59,
-            "type": "Weapon",
-            "weaponType": "Axe",
-            "slot": "Weapon_2"
+            "type": "Profession",
+            "slot": "Profession_1"
         },
         {
-            "id": 43761,
-            "name": "Axes of Symmetry",
+            "id": 56930,
+            "name": "Split Second",
             "professions": [
                 "Mesmer"
             ],
-            "specialization": 59,
-            "type": "Weapon",
-            "weaponType": "Axe",
-            "slot": "Weapon_3"
+            "specialization": 40,
+            "type": "Profession",
+            "slot": "Profession_1",
+            "flipSkill": 56925
         },
         {
-            "id": 62510,
-            "name": "Flying Cutter",
+            "id": 56925,
+            "name": "Split Second",
+            "professions": [
+                "Mesmer"
+            ],
+            "specialization": 40,
+            "type": "Profession",
+            "slot": "Profession_1"
+        },
+        {
+            "id": 62617,
+            "name": "Bladesong Harmony",
             "professions": [
                 "Mesmer"
             ],
             "specialization": 66,
-            "type": "Weapon",
-            "weaponType": "Dagger",
-            "slot": "Weapon_1"
+            "type": "Profession",
+            "slot": "Profession_1",
+            "flipSkill": 62586
         },
         {
-            "id": 62560,
-            "name": "Bladecall",
+            "id": 62586,
+            "name": "Bladesong Harmony",
             "professions": [
                 "Mesmer"
             ],
             "specialization": 66,
-            "type": "Weapon",
-            "weaponType": "Dagger",
-            "slot": "Weapon_2"
+            "type": "Profession",
+            "slot": "Profession_1"
         },
         {
-            "id": 62607,
-            "name": "Unstable Bladestorm",
+            "id": 10190,
+            "name": "Cry of Frustration",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Profession",
+            "slot": "Profession_2"
+        },
+        {
+            "id": 56928,
+            "name": "Rewinder",
+            "professions": [
+                "Mesmer"
+            ],
+            "specialization": 40,
+            "type": "Profession",
+            "slot": "Profession_2"
+        },
+        {
+            "id": 62616,
+            "name": "Bladesong Sorrow",
             "professions": [
                 "Mesmer"
             ],
             "specialization": 66,
-            "type": "Weapon",
-            "weaponType": "Dagger",
-            "slot": "Weapon_3"
+            "type": "Profession",
+            "slot": "Profession_2"
         },
         {
-            "id": 10186,
-            "name": "Temporal Curtain",
+            "id": 10287,
+            "name": "Diversion",
             "professions": [
                 "Mesmer"
             ],
-            "type": "Weapon",
-            "weaponType": "Focus",
-            "slot": "Weapon_4",
-            "flipSkill": 10363
+            "type": "Profession",
+            "slot": "Profession_3"
         },
         {
-            "id": 10282,
-            "name": "Phantasmal Warden",
+            "id": 56873,
+            "name": "Time Sink",
             "professions": [
                 "Mesmer"
             ],
-            "type": "Weapon",
-            "weaponType": "Focus",
-            "slot": "Weapon_5"
+            "specialization": 40,
+            "type": "Profession",
+            "slot": "Profession_3"
+        },
+        {
+            "id": 62602,
+            "name": "Bladesong Dissonance",
+            "professions": [
+                "Mesmer"
+            ],
+            "specialization": 66,
+            "type": "Profession",
+            "slot": "Profession_3"
+        },
+        {
+            "id": 10192,
+            "name": "Distortion",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Profession",
+            "slot": "Profession_4"
+        },
+        {
+            "id": 29830,
+            "name": "Continuum Split",
+            "professions": [
+                "Mesmer"
+            ],
+            "specialization": 40,
+            "type": "Profession",
+            "slot": "Profession_4",
+            "flipSkill": 30747
+        },
+        {
+            "id": 30747,
+            "name": "Continuum Shift",
+            "professions": [
+                "Mesmer"
+            ],
+            "specialization": 40,
+            "type": "Profession",
+            "slot": "Profession_4"
+        },
+        {
+            "id": 62597,
+            "name": "Bladeturn Requiem",
+            "professions": [
+                "Mesmer"
+            ],
+            "specialization": 66,
+            "type": "Profession",
+            "slot": "Profession_4"
         },
         {
             "id": 10219,
@@ -129,46 +199,6 @@
             "weaponType": "Greatsword",
             "slot": "Weapon_1",
             "flipSkill": 44241
-        },
-        {
-            "id": 10333,
-            "name": "Mirror Blade",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Greatsword",
-            "slot": "Weapon_2"
-        },
-        {
-            "id": 10218,
-            "name": "Mind Stab",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Greatsword",
-            "slot": "Weapon_3"
-        },
-        {
-            "id": 10221,
-            "name": "Phantasmal Berserker",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Greatsword",
-            "slot": "Weapon_4"
-        },
-        {
-            "id": 10220,
-            "name": "Illusionary Wave",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Greatsword",
-            "slot": "Weapon_5"
         },
         {
             "id": 10315,
@@ -183,64 +213,28 @@
             "nextChain": 10316
         },
         {
-            "id": 10318,
-            "name": "Feigned Surge",
+            "id": 10316,
+            "name": "Jab",
             "professions": [
                 "Mesmer"
             ],
             "type": "Weapon",
             "weaponType": "Spear",
-            "slot": "Weapon_2"
+            "slot": "Weapon_1",
+            "flipSkill": 10317,
+            "nextChain": 10317,
+            "prevChain": 10315
         },
         {
-            "id": 10251,
-            "name": "Phantasmal Mariner",
+            "id": 10317,
+            "name": "Evasive Strike",
             "professions": [
                 "Mesmer"
             ],
             "type": "Weapon",
             "weaponType": "Spear",
-            "slot": "Weapon_3"
-        },
-        {
-            "id": 10325,
-            "name": "Slipstream",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Spear",
-            "slot": "Weapon_4"
-        },
-        {
-            "id": 10255,
-            "name": "Vortex",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Spear",
-            "slot": "Weapon_5"
-        },
-        {
-            "id": 10175,
-            "name": "Phantasmal Duelist",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Pistol",
-            "slot": "Weapon_4"
-        },
-        {
-            "id": 10229,
-            "name": "Magic Bullet",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Pistol",
-            "slot": "Weapon_5"
+            "slot": "Weapon_1",
+            "prevChain": 10316
         },
         {
             "id": 10289,
@@ -254,48 +248,15 @@
             "flipSkill": 10290
         },
         {
-            "id": 10276,
-            "name": "Illusionary Counter",
+            "id": 10290,
+            "name": "Ether Blast",
             "professions": [
                 "Mesmer"
             ],
             "type": "Weapon",
             "weaponType": "Scepter",
-            "slot": "Weapon_2",
-            "flipSkill": 10314
-        },
-        {
-            "id": 10168,
-            "name": "Confusing Images",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Scepter",
-            "slot": "Weapon_3"
-        },
-        {
-            "id": 30769,
-            "name": "Echo of Memory",
-            "professions": [
-                "Mesmer"
-            ],
-            "specialization": 40,
-            "type": "Weapon",
-            "weaponType": "Shield",
-            "slot": "Weapon_4",
-            "flipSkill": 29649
-        },
-        {
-            "id": 30643,
-            "name": "Tides of Time",
-            "professions": [
-                "Mesmer"
-            ],
-            "specialization": 40,
-            "type": "Weapon",
-            "weaponType": "Shield",
-            "slot": "Weapon_5"
+            "slot": "Weapon_1",
+            "flipSkill": 10291
         },
         {
             "id": 10273,
@@ -307,79 +268,6 @@
             "weaponType": "Staff",
             "slot": "Weapon_1",
             "flipSkill": 40184
-        },
-        {
-            "id": 10310,
-            "name": "Phase Retreat",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Staff",
-            "slot": "Weapon_2"
-        },
-        {
-            "id": 10216,
-            "name": "Phantasmal Warlock",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Staff",
-            "slot": "Weapon_3"
-        },
-        {
-            "id": 10331,
-            "name": "Chaos Armor",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Staff",
-            "slot": "Weapon_4"
-        },
-        {
-            "id": 10169,
-            "name": "Chaos Storm",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Staff",
-            "slot": "Weapon_5"
-        },
-        {
-            "id": 10334,
-            "name": "Blurred Frenzy",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Sword",
-            "slot": "Weapon_2"
-        },
-        {
-            "id": 62568,
-            "name": "Blade Leap",
-            "professions": [
-                "Mesmer"
-            ],
-            "specialization": 66,
-            "type": "Weapon",
-            "weaponType": "Sword",
-            "slot": "Weapon_3",
-            "flipSkill": 62675
-        },
-        {
-            "id": 10173,
-            "name": "Illusionary Leap",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Sword",
-            "slot": "Weapon_3",
-            "flipSkill": 10337
         },
         {
             "id": 10170,
@@ -394,45 +282,27 @@
             "nextChain": 10171
         },
         {
-            "id": 10280,
-            "name": "Illusionary Riposte",
+            "id": 10171,
+            "name": "Mind Gash",
             "professions": [
                 "Mesmer"
             ],
             "type": "Weapon",
             "weaponType": "Sword",
-            "slot": "Weapon_4",
-            "flipSkill": 10358
+            "slot": "Weapon_1",
+            "nextChain": 10172,
+            "prevChain": 10170
         },
         {
-            "id": 10174,
-            "name": "Phantasmal Swordsman",
+            "id": 10172,
+            "name": "Mind Spike",
             "professions": [
                 "Mesmer"
             ],
             "type": "Weapon",
             "weaponType": "Sword",
-            "slot": "Weapon_5"
-        },
-        {
-            "id": 10285,
-            "name": "The Prestige",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Torch",
-            "slot": "Weapon_4"
-        },
-        {
-            "id": 10189,
-            "name": "Phantasmal Mage",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Torch",
-            "slot": "Weapon_5"
+            "slot": "Weapon_1",
+            "prevChain": 10171
         },
         {
             "id": 10258,
@@ -446,6 +316,150 @@
             "flipSkill": 39959
         },
         {
+            "id": 44791,
+            "name": "Lacerating Chop",
+            "professions": [
+                "Mesmer"
+            ],
+            "specialization": 59,
+            "type": "Weapon",
+            "weaponType": "Axe",
+            "slot": "Weapon_1",
+            "flipSkill": 44840,
+            "nextChain": 44840
+        },
+        {
+            "id": 44840,
+            "name": "Ethereal Chop",
+            "professions": [
+                "Mesmer"
+            ],
+            "specialization": 59,
+            "type": "Weapon",
+            "weaponType": "Axe",
+            "slot": "Weapon_1",
+            "flipSkill": 41164,
+            "nextChain": 41164,
+            "prevChain": 44791
+        },
+        {
+            "id": 41164,
+            "name": "Mirror Strikes",
+            "professions": [
+                "Mesmer"
+            ],
+            "specialization": 59,
+            "type": "Weapon",
+            "weaponType": "Axe",
+            "slot": "Weapon_1",
+            "prevChain": 44840
+        },
+        {
+            "id": 44241,
+            "name": "Split Surge",
+            "professions": [
+                "Mesmer"
+            ],
+            "specialization": 59,
+            "type": "Weapon",
+            "weaponType": "Greatsword",
+            "slot": "Weapon_1"
+        },
+        {
+            "id": 40184,
+            "name": "Chaos Vortex",
+            "professions": [
+                "Mesmer"
+            ],
+            "specialization": 59,
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_1"
+        },
+        {
+            "id": 39959,
+            "name": "Wave of Panic",
+            "professions": [
+                "Mesmer"
+            ],
+            "specialization": 59,
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_1"
+        },
+        {
+            "id": 62510,
+            "name": "Flying Cutter",
+            "professions": [
+                "Mesmer"
+            ],
+            "specialization": 66,
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_1"
+        },
+        {
+            "id": 10333,
+            "name": "Mirror Blade",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Greatsword",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 10318,
+            "name": "Feigned Surge",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Spear",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 10276,
+            "name": "Illusionary Counter",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_2",
+            "flipSkill": 10314
+        },
+        {
+            "id": 10314,
+            "name": "Counterspell",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 10310,
+            "name": "Phase Retreat",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 10334,
+            "name": "Blurred Frenzy",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_2"
+        },
+        {
             "id": 10259,
             "name": "Blinding Tide",
             "professions": [
@@ -454,6 +468,89 @@
             "type": "Weapon",
             "weaponType": "Trident",
             "slot": "Weapon_2"
+        },
+        {
+            "id": 45243,
+            "name": "Lingering Thoughts",
+            "professions": [
+                "Mesmer"
+            ],
+            "specialization": 59,
+            "type": "Weapon",
+            "weaponType": "Axe",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 62560,
+            "name": "Bladecall",
+            "professions": [
+                "Mesmer"
+            ],
+            "specialization": 66,
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 10218,
+            "name": "Mind Stab",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Greatsword",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 10251,
+            "name": "Phantasmal Mariner",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Spear",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 10168,
+            "name": "Confusing Images",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 10216,
+            "name": "Phantasmal Warlock",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 10173,
+            "name": "Illusionary Leap",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_3",
+            "flipSkill": 10337
+        },
+        {
+            "id": 10337,
+            "name": "Swap",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_3"
         },
         {
             "id": 10327,
@@ -466,6 +563,143 @@
             "slot": "Weapon_3"
         },
         {
+            "id": 43761,
+            "name": "Axes of Symmetry",
+            "professions": [
+                "Mesmer"
+            ],
+            "specialization": 59,
+            "type": "Weapon",
+            "weaponType": "Axe",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 62607,
+            "name": "Unstable Bladestorm",
+            "professions": [
+                "Mesmer"
+            ],
+            "specialization": 66,
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 62568,
+            "name": "Blade Leap",
+            "professions": [
+                "Mesmer"
+            ],
+            "specialization": 66,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_3",
+            "flipSkill": 62675
+        },
+        {
+            "id": 62675,
+            "name": "Returning Edge",
+            "professions": [
+                "Mesmer"
+            ],
+            "specialization": 66,
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 10186,
+            "name": "Temporal Curtain",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Focus",
+            "slot": "Weapon_4",
+            "flipSkill": 10363
+        },
+        {
+            "id": 10363,
+            "name": "Into the Void",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Focus",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 10221,
+            "name": "Phantasmal Berserker",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Greatsword",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 10325,
+            "name": "Slipstream",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Spear",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 10175,
+            "name": "Phantasmal Duelist",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Pistol",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 10331,
+            "name": "Chaos Armor",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 10280,
+            "name": "Illusionary Riposte",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_4",
+            "flipSkill": 10358
+        },
+        {
+            "id": 10358,
+            "name": "Counter Blade",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 10285,
+            "name": "The Prestige",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Torch",
+            "slot": "Weapon_4"
+        },
+        {
             "id": 10328,
             "name": "Phantasmal Whaler",
             "professions": [
@@ -474,6 +708,99 @@
             "type": "Weapon",
             "weaponType": "Trident",
             "slot": "Weapon_4"
+        },
+        {
+            "id": 30769,
+            "name": "Echo of Memory",
+            "professions": [
+                "Mesmer"
+            ],
+            "specialization": 40,
+            "type": "Weapon",
+            "weaponType": "Shield",
+            "slot": "Weapon_4",
+            "flipSkill": 29649
+        },
+        {
+            "id": 29649,
+            "name": "Deja Vu",
+            "professions": [
+                "Mesmer"
+            ],
+            "specialization": 40,
+            "type": "Weapon",
+            "weaponType": "Shield",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 10282,
+            "name": "Phantasmal Warden",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Focus",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 10220,
+            "name": "Illusionary Wave",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Greatsword",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 10255,
+            "name": "Vortex",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Spear",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 10229,
+            "name": "Magic Bullet",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Pistol",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 10169,
+            "name": "Chaos Storm",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 10174,
+            "name": "Phantasmal Swordsman",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Sword",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 10189,
+            "name": "Phantasmal Mage",
+            "professions": [
+                "Mesmer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Torch",
+            "slot": "Weapon_5"
         },
         {
             "id": 10260,
@@ -486,41 +813,29 @@
             "slot": "Weapon_5"
         },
         {
-            "id": 10192,
-            "name": "Distortion",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Profession",
-            "slot": "Profession_4"
+            "id": 15863,
+            "name": "Flee",
+            "professions": [],
+            "type": "Monster",
+            "slot": "Weapon_5"
         },
         {
-            "id": 10287,
-            "name": "Diversion",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Profession",
-            "slot": "Profession_3"
+            "id": 10375,
+            "name": "Flee",
+            "professions": [],
+            "type": "Monster",
+            "slot": "Weapon_5"
         },
         {
-            "id": 10190,
-            "name": "Cry of Frustration",
+            "id": 30643,
+            "name": "Tides of Time",
             "professions": [
                 "Mesmer"
             ],
-            "type": "Profession",
-            "slot": "Profession_2"
-        },
-        {
-            "id": 10191,
-            "name": "Mind Wrack",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Profession",
-            "slot": "Profession_1",
-            "flipSkill": 49068
+            "specialization": 40,
+            "type": "Weapon",
+            "weaponType": "Shield",
+            "slot": "Weapon_5"
         },
         {
             "id": 10176,
@@ -555,6 +870,36 @@
             "professions": [
                 "Mesmer"
             ],
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 30305,
+            "name": "Well of Eternity",
+            "professions": [
+                "Mesmer"
+            ],
+            "specialization": 40,
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 40200,
+            "name": "False Oasis",
+            "professions": [
+                "Mesmer"
+            ],
+            "specialization": 59,
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 62522,
+            "name": "Twin Blade Restoration",
+            "professions": [
+                "Mesmer"
+            ],
+            "specialization": 66,
             "type": "Heal",
             "slot": "Heal"
         },
@@ -731,8 +1076,8 @@
             "flipSkill": 10199
         },
         {
-            "id": 10187,
-            "name": "Veil",
+            "id": 10199,
+            "name": "Portal Exeunt",
             "professions": [
                 "Mesmer"
             ],
@@ -740,107 +1085,13 @@
             "slot": "Utility"
         },
         {
-            "id": 29519,
-            "name": "Signet of Humility",
+            "id": 10187,
+            "name": "Veil",
             "professions": [
                 "Mesmer"
             ],
-            "type": "Elite",
-            "slot": "Elite",
-            "transformSkills": [
-                10180,
-                10376,
-                10375,
-                10183,
-                15861,
-                10181,
-                10374,
-                10182,
-                15863,
-                10372,
-                15862,
-                10373
-            ]
-        },
-        {
-            "id": 10311,
-            "name": "Time Warp",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Elite",
-            "slot": "Elite"
-        },
-        {
-            "id": 10245,
-            "name": "Mass Invisibility",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Elite",
-            "slot": "Elite"
-        },
-        {
-            "id": 56930,
-            "name": "Split Second",
-            "professions": [
-                "Mesmer"
-            ],
-            "specialization": 40,
-            "type": "Profession",
-            "slot": "Profession_1",
-            "flipSkill": 56925
-        },
-        {
-            "id": 56928,
-            "name": "Rewinder",
-            "professions": [
-                "Mesmer"
-            ],
-            "specialization": 40,
-            "type": "Profession",
-            "slot": "Profession_2"
-        },
-        {
-            "id": 56873,
-            "name": "Time Sink",
-            "professions": [
-                "Mesmer"
-            ],
-            "specialization": 40,
-            "type": "Profession",
-            "slot": "Profession_3"
-        },
-        {
-            "id": 29830,
-            "name": "Continuum Split",
-            "professions": [
-                "Mesmer"
-            ],
-            "specialization": 40,
-            "type": "Profession",
-            "slot": "Profession_4",
-            "flipSkill": 30747
-        },
-        {
-            "id": 30359,
-            "name": "Gravity Well",
-            "professions": [
-                "Mesmer"
-            ],
-            "specialization": 40,
-            "type": "Elite",
-            "slot": "Elite"
-        },
-        {
-            "id": 30305,
-            "name": "Well of Eternity",
-            "professions": [
-                "Mesmer"
-            ],
-            "specialization": 40,
-            "type": "Heal",
-            "slot": "Heal"
+            "type": "Utility",
+            "slot": "Utility"
         },
         {
             "id": 29526,
@@ -883,26 +1134,6 @@
             "slot": "Utility"
         },
         {
-            "id": 40200,
-            "name": "False Oasis",
-            "professions": [
-                "Mesmer"
-            ],
-            "specialization": 59,
-            "type": "Heal",
-            "slot": "Heal"
-        },
-        {
-            "id": 45449,
-            "name": "Jaunt",
-            "professions": [
-                "Mesmer"
-            ],
-            "specialization": 59,
-            "type": "Elite",
-            "slot": "Elite"
-        },
-        {
             "id": 45046,
             "name": "Illusionary Ambush",
             "professions": [
@@ -922,6 +1153,16 @@
             "type": "Utility",
             "slot": "Utility",
             "flipSkill": 45666
+        },
+        {
+            "id": 45666,
+            "name": "Mirage Retreat",
+            "professions": [
+                "Mesmer"
+            ],
+            "specialization": 59,
+            "type": "Utility",
+            "slot": "Utility"
         },
         {
             "id": 43064,
@@ -944,16 +1185,6 @@
             "slot": "Utility"
         },
         {
-            "id": 62522,
-            "name": "Twin Blade Restoration",
-            "professions": [
-                "Mesmer"
-            ],
-            "specialization": 66,
-            "type": "Heal",
-            "slot": "Heal"
-        },
-        {
             "id": 62573,
             "name": "Psychic Force",
             "professions": [
@@ -962,47 +1193,6 @@
             "specialization": 66,
             "type": "Utility",
             "slot": "Utility"
-        },
-        {
-            "id": 62617,
-            "name": "Bladesong Harmony",
-            "professions": [
-                "Mesmer"
-            ],
-            "specialization": 66,
-            "type": "Profession",
-            "slot": "Profession_1",
-            "flipSkill": 62586
-        },
-        {
-            "id": 62616,
-            "name": "Bladesong Sorrow",
-            "professions": [
-                "Mesmer"
-            ],
-            "specialization": 66,
-            "type": "Profession",
-            "slot": "Profession_2"
-        },
-        {
-            "id": 62602,
-            "name": "Bladesong Dissonance",
-            "professions": [
-                "Mesmer"
-            ],
-            "specialization": 66,
-            "type": "Profession",
-            "slot": "Profession_3"
-        },
-        {
-            "id": 62597,
-            "name": "Bladeturn Requiem",
-            "professions": [
-                "Mesmer"
-            ],
-            "specialization": 66,
-            "type": "Profession",
-            "slot": "Profession_4"
         },
         {
             "id": 45425,
@@ -1025,16 +1215,6 @@
             "slot": "Utility"
         },
         {
-            "id": 24755,
-            "name": "Thousand Cuts",
-            "professions": [
-                "Mesmer"
-            ],
-            "specialization": 66,
-            "type": "Elite",
-            "slot": "Elite"
-        },
-        {
             "id": 35637,
             "name": "Sword of Decimation",
             "professions": [
@@ -1045,153 +1225,79 @@
             "slot": "Utility"
         },
         {
-            "id": 10363,
-            "name": "Into the Void",
+            "id": 29519,
+            "name": "Signet of Humility",
             "professions": [
                 "Mesmer"
             ],
-            "type": "Weapon",
-            "weaponType": "Focus",
-            "slot": "Weapon_4"
+            "type": "Elite",
+            "slot": "Elite",
+            "transformSkills": [
+                10183,
+                10372,
+                10375,
+                10182,
+                10180,
+                10376,
+                15861,
+                10374,
+                15863,
+                15862,
+                10373,
+                10181
+            ]
         },
         {
-            "id": 44241,
-            "name": "Split Surge",
+            "id": 10311,
+            "name": "Time Warp",
             "professions": [
                 "Mesmer"
             ],
-            "specialization": 59,
-            "type": "Weapon",
-            "weaponType": "Greatsword",
-            "slot": "Weapon_1"
+            "type": "Elite",
+            "slot": "Elite"
         },
         {
-            "id": 10290,
-            "name": "Ether Blast",
+            "id": 10245,
+            "name": "Mass Invisibility",
             "professions": [
                 "Mesmer"
             ],
-            "type": "Weapon",
-            "weaponType": "Scepter",
-            "slot": "Weapon_1",
-            "flipSkill": 10291
+            "type": "Elite",
+            "slot": "Elite"
         },
         {
-            "id": 10314,
-            "name": "Counterspell",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Scepter",
-            "slot": "Weapon_2"
-        },
-        {
-            "id": 29649,
-            "name": "Deja Vu",
+            "id": 30359,
+            "name": "Gravity Well",
             "professions": [
                 "Mesmer"
             ],
             "specialization": 40,
-            "type": "Weapon",
-            "weaponType": "Shield",
-            "slot": "Weapon_4"
+            "type": "Elite",
+            "slot": "Elite"
         },
         {
-            "id": 40184,
-            "name": "Chaos Vortex",
+            "id": 45449,
+            "name": "Jaunt",
             "professions": [
                 "Mesmer"
             ],
             "specialization": 59,
-            "type": "Weapon",
-            "weaponType": "Staff",
-            "slot": "Weapon_1"
+            "type": "Elite",
+            "slot": "Elite"
         },
         {
-            "id": 62675,
-            "name": "Returning Edge",
+            "id": 24755,
+            "name": "Thousand Cuts",
             "professions": [
                 "Mesmer"
             ],
             "specialization": 66,
-            "type": "Weapon",
-            "weaponType": "Sword",
-            "slot": "Weapon_3"
+            "type": "Elite",
+            "slot": "Elite"
         },
         {
-            "id": 10337,
-            "name": "Swap",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Sword",
-            "slot": "Weapon_3"
-        },
-        {
-            "id": 10358,
-            "name": "Counter Blade",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Sword",
-            "slot": "Weapon_4"
-        },
-        {
-            "id": 39959,
-            "name": "Wave of Panic",
-            "professions": [
-                "Mesmer"
-            ],
-            "specialization": 59,
-            "type": "Weapon",
-            "weaponType": "Trident",
-            "slot": "Weapon_1"
-        },
-        {
-            "id": 49068,
-            "name": "Mind Wrack",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Profession",
-            "slot": "Profession_1"
-        },
-        {
-            "id": 10199,
-            "name": "Portal Exeunt",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Utility",
-            "slot": "Utility"
-        },
-        {
-            "id": 10180,
-            "name": "Kick",
-            "professions": [],
-            "type": "Monster",
-            "slot": "Downed_2"
-        },
-        {
-            "id": 10376,
-            "name": "Spit",
-            "professions": [],
-            "type": "Monster",
-            "slot": "Downed_4"
-        },
-        {
-            "id": 10375,
-            "name": "Flee",
-            "professions": [],
-            "type": "Monster",
-            "slot": "Weapon_5"
-        },
-        {
-            "id": 10183,
-            "name": "Claw",
+            "id": 15862,
+            "name": "Return",
             "professions": [],
             "type": "Monster",
             "slot": "Downed_1"
@@ -1202,6 +1308,34 @@
             "professions": [],
             "type": "Monster",
             "slot": "Downed_1"
+        },
+        {
+            "id": 10372,
+            "name": "Bite",
+            "professions": [],
+            "type": "Monster",
+            "slot": "Downed_1"
+        },
+        {
+            "id": 10183,
+            "name": "Claw",
+            "professions": [],
+            "type": "Monster",
+            "slot": "Downed_1"
+        },
+        {
+            "id": 10373,
+            "name": "Chomp",
+            "professions": [],
+            "type": "Monster",
+            "slot": "Downed_2"
+        },
+        {
+            "id": 10180,
+            "name": "Kick",
+            "professions": [],
+            "type": "Monster",
+            "slot": "Downed_2"
         },
         {
             "id": 10181,
@@ -1218,152 +1352,18 @@
             "slot": "Downed_3"
         },
         {
-            "id": 10182,
-            "name": "Screech",
+            "id": 10376,
+            "name": "Spit",
             "professions": [],
             "type": "Monster",
             "slot": "Downed_4"
         },
         {
-            "id": 15863,
-            "name": "Flee",
+            "id": 10182,
+            "name": "Screech",
             "professions": [],
             "type": "Monster",
-            "slot": "Weapon_5"
-        },
-        {
-            "id": 10372,
-            "name": "Bite",
-            "professions": [],
-            "type": "Monster",
-            "slot": "Downed_1"
-        },
-        {
-            "id": 15862,
-            "name": "Return",
-            "professions": [],
-            "type": "Monster",
-            "slot": "Downed_1"
-        },
-        {
-            "id": 10373,
-            "name": "Chomp",
-            "professions": [],
-            "type": "Monster",
-            "slot": "Downed_2"
-        },
-        {
-            "id": 56925,
-            "name": "Split Second",
-            "professions": [
-                "Mesmer"
-            ],
-            "specialization": 40,
-            "type": "Profession",
-            "slot": "Profession_1"
-        },
-        {
-            "id": 30747,
-            "name": "Continuum Shift",
-            "professions": [
-                "Mesmer"
-            ],
-            "specialization": 40,
-            "type": "Profession",
-            "slot": "Profession_4"
-        },
-        {
-            "id": 45666,
-            "name": "Mirage Retreat",
-            "professions": [
-                "Mesmer"
-            ],
-            "specialization": 59,
-            "type": "Utility",
-            "slot": "Utility"
-        },
-        {
-            "id": 62586,
-            "name": "Bladesong Harmony",
-            "professions": [
-                "Mesmer"
-            ],
-            "specialization": 66,
-            "type": "Profession",
-            "slot": "Profession_1"
-        },
-        {
-            "id": 44840,
-            "name": "Ethereal Chop",
-            "professions": [
-                "Mesmer"
-            ],
-            "specialization": 59,
-            "type": "Weapon",
-            "weaponType": "Axe",
-            "slot": "Weapon_1",
-            "flipSkill": 41164,
-            "nextChain": 41164,
-            "prevChain": 44791
-        },
-        {
-            "id": 10316,
-            "name": "Jab",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Spear",
-            "slot": "Weapon_1",
-            "flipSkill": 10317,
-            "nextChain": 10317,
-            "prevChain": 10315
-        },
-        {
-            "id": 10171,
-            "name": "Mind Gash",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Sword",
-            "slot": "Weapon_1",
-            "nextChain": 10172,
-            "prevChain": 10170
-        },
-        {
-            "id": 41164,
-            "name": "Mirror Strikes",
-            "professions": [
-                "Mesmer"
-            ],
-            "specialization": 59,
-            "type": "Weapon",
-            "weaponType": "Axe",
-            "slot": "Weapon_1",
-            "prevChain": 44840
-        },
-        {
-            "id": 10317,
-            "name": "Evasive Strike",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Spear",
-            "slot": "Weapon_1",
-            "prevChain": 10316
-        },
-        {
-            "id": 10172,
-            "name": "Mind Spike",
-            "professions": [
-                "Mesmer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Sword",
-            "slot": "Weapon_1",
-            "prevChain": 10171
+            "slot": "Downed_4"
         }
     ]
 }

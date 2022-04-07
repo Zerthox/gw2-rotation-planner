@@ -30,6 +30,208 @@
     ],
     "skills": [
         {
+            "id": 10586,
+            "name": "Locked",
+            "professions": [
+                "Engineer",
+                "Necromancer"
+            ],
+            "type": "Transform",
+            "slot": "Transform_1"
+        },
+        {
+            "id": 10574,
+            "name": "Death Shroud",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Profession",
+            "slot": "Profession_1",
+            "flipSkill": 10585,
+            "transformSkills": [
+                30557,
+                30961,
+                30504,
+                19504,
+                10604,
+                24287,
+                62621,
+                62611,
+                10574,
+                10586,
+                29458,
+                56916,
+                10645,
+                44428,
+                10643,
+                44946,
+                30278,
+                46474,
+                10594,
+                10690,
+                40813,
+                62563,
+                29709,
+                43448,
+                30825,
+                10585,
+                29442,
+                62567,
+                62672,
+                29958,
+                10588,
+                54870,
+                30792,
+                62539,
+                63448,
+                10554,
+                46473,
+                42297,
+                18504,
+                62540,
+                10644,
+                44663
+            ]
+        },
+        {
+            "id": 30792,
+            "name": "Reaper's Shroud",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Profession",
+            "slot": "Profession_1",
+            "flipSkill": 30961
+        },
+        {
+            "id": 62567,
+            "name": "Harbinger Shroud",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Profession",
+            "slot": "Profession_1",
+            "flipSkill": 62540
+        },
+        {
+            "id": 62540,
+            "name": "Exit Harbinger Shroud",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Profession",
+            "slot": "Profession_1"
+        },
+        {
+            "id": 10585,
+            "name": "End Death Shroud",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Profession",
+            "slot": "Profession_1"
+        },
+        {
+            "id": 30961,
+            "name": "Exit Reaper's Shroud",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Profession",
+            "slot": "Profession_1"
+        },
+        {
+            "id": 42297,
+            "name": "Manifest Sand Shade",
+            "professions": [
+                "Necromancer"
+            ],
+            "specialization": 60,
+            "type": "Profession",
+            "slot": "Profession_1"
+        },
+        {
+            "id": 46473,
+            "name": "Manifest Sand Shade",
+            "professions": [
+                "Necromancer"
+            ],
+            "specialization": 60,
+            "type": "Profession",
+            "slot": "Profession_1"
+        },
+        {
+            "id": 46474,
+            "name": "Manifest Sand Shade",
+            "professions": [
+                "Necromancer"
+            ],
+            "specialization": 60,
+            "type": "Profession",
+            "slot": "Profession_1"
+        },
+        {
+            "id": 44946,
+            "name": "Manifest Sand Shade",
+            "professions": [
+                "Necromancer"
+            ],
+            "specialization": 60,
+            "type": "Profession",
+            "slot": "Profession_1"
+        },
+        {
+            "id": 40813,
+            "name": "Nefarious Favor",
+            "professions": [
+                "Necromancer"
+            ],
+            "specialization": 60,
+            "type": "Profession",
+            "slot": "Profession_2"
+        },
+        {
+            "id": 43448,
+            "name": "Sand Cascade",
+            "professions": [
+                "Necromancer"
+            ],
+            "specialization": 60,
+            "type": "Profession",
+            "slot": "Profession_3"
+        },
+        {
+            "id": 44428,
+            "name": "Garish Pillar",
+            "professions": [
+                "Necromancer"
+            ],
+            "specialization": 60,
+            "type": "Profession",
+            "slot": "Profession_4"
+        },
+        {
+            "id": 44663,
+            "name": "Desert Shroud",
+            "professions": [
+                "Necromancer"
+            ],
+            "specialization": 60,
+            "type": "Profession",
+            "slot": "Profession_5",
+            "flipSkill": 54870
+        },
+        {
+            "id": 54870,
+            "name": "Sandstorm Shroud",
+            "professions": [
+                "Necromancer"
+            ],
+            "specialization": 60,
+            "type": "Profession",
+            "slot": "Profession_5"
+        },
+        {
             "id": 10561,
             "name": "Rending Claws",
             "professions": [
@@ -38,26 +240,6 @@
             "type": "Weapon",
             "weaponType": "Axe",
             "slot": "Weapon_1"
-        },
-        {
-            "id": 10528,
-            "name": "Ghastly Claws",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Axe",
-            "slot": "Weapon_2"
-        },
-        {
-            "id": 10701,
-            "name": "Unholy Feast",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Axe",
-            "slot": "Weapon_3"
         },
         {
             "id": 10702,
@@ -72,64 +254,156 @@
             "nextChain": 10703
         },
         {
-            "id": 10563,
-            "name": "Life Siphon",
+            "id": 10703,
+            "name": "Necrotic Stab",
             "professions": [
                 "Necromancer"
             ],
             "type": "Weapon",
             "weaponType": "Dagger",
-            "slot": "Weapon_2"
+            "slot": "Weapon_1",
+            "nextChain": 10704,
+            "prevChain": 10702
         },
         {
-            "id": 10529,
-            "name": "Dark Pact",
+            "id": 10704,
+            "name": "Necrotic Bite",
             "professions": [
                 "Necromancer"
             ],
             "type": "Weapon",
             "weaponType": "Dagger",
-            "slot": "Weapon_3"
+            "slot": "Weapon_1",
+            "prevChain": 10703
         },
         {
-            "id": 10705,
-            "name": "Deathly Swarm",
+            "id": 10692,
+            "name": "Cruel Strike",
             "professions": [
                 "Necromancer"
             ],
             "type": "Weapon",
-            "weaponType": "Dagger",
-            "slot": "Weapon_4"
+            "weaponType": "Spear",
+            "slot": "Weapon_1",
+            "flipSkill": 10693,
+            "nextChain": 10693
         },
         {
-            "id": 10706,
-            "name": "Enfeebling Blood",
+            "id": 10693,
+            "name": "Wicked Strike",
             "professions": [
                 "Necromancer"
             ],
             "type": "Weapon",
-            "weaponType": "Dagger",
-            "slot": "Weapon_5"
+            "weaponType": "Spear",
+            "slot": "Weapon_1",
+            "flipSkill": 10617,
+            "nextChain": 10617,
+            "prevChain": 10692
         },
         {
-            "id": 55050,
-            "name": "Soul Grasp",
+            "id": 10617,
+            "name": "Reaper's Scythe",
             "professions": [
                 "Necromancer"
             ],
             "type": "Weapon",
-            "weaponType": "Focus",
-            "slot": "Weapon_4"
+            "weaponType": "Spear",
+            "slot": "Weapon_1",
+            "prevChain": 10693
         },
         {
-            "id": 10555,
-            "name": "Spinal Shivers",
+            "id": 10698,
+            "name": "Blood Curse",
             "professions": [
                 "Necromancer"
             ],
             "type": "Weapon",
-            "weaponType": "Focus",
-            "slot": "Weapon_5"
+            "weaponType": "Scepter",
+            "slot": "Weapon_1",
+            "flipSkill": 10699,
+            "nextChain": 10699
+        },
+        {
+            "id": 10699,
+            "name": "Rending Curse",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_1",
+            "flipSkill": 10552,
+            "nextChain": 10552,
+            "prevChain": 10698
+        },
+        {
+            "id": 10552,
+            "name": "Putrid Curse",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_1",
+            "prevChain": 10699
+        },
+        {
+            "id": 10596,
+            "name": "Necrotic Grasp",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_1"
+        },
+        {
+            "id": 10623,
+            "name": "Crimson Tide",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_1"
+        },
+        {
+            "id": 10661,
+            "name": "Withering Plague",
+            "professions": [
+                "Thief",
+                "Mesmer",
+                "Warrior",
+                "Elementalist",
+                "Necromancer",
+                "Guardian",
+                "Ranger",
+                "Engineer",
+                "Revenant"
+            ],
+            "type": "Bundle",
+            "slot": "Weapon_1"
+        },
+        {
+            "id": 10634,
+            "name": "Deathly Claws",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_1"
+        },
+        {
+            "id": 14350,
+            "name": "Return",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_1"
         },
         {
             "id": 29705,
@@ -145,100 +419,30 @@
             "nextChain": 30799
         },
         {
-            "id": 30163,
-            "name": "Gravedigger",
+            "id": 30799,
+            "name": "Fading Twilight",
             "professions": [
                 "Necromancer"
             ],
             "specialization": 34,
             "type": "Weapon",
             "weaponType": "Greatsword",
-            "slot": "Weapon_2"
-        },
-        {
-            "id": 30860,
-            "name": "Death Spiral",
-            "professions": [
-                "Necromancer"
-            ],
-            "specialization": 34,
-            "type": "Weapon",
-            "weaponType": "Greatsword",
-            "slot": "Weapon_3"
-        },
-        {
-            "id": 29855,
-            "name": "Nightfall",
-            "professions": [
-                "Necromancer"
-            ],
-            "specialization": 34,
-            "type": "Weapon",
-            "weaponType": "Greatsword",
-            "slot": "Weapon_4"
-        },
-        {
-            "id": 29740,
-            "name": "Grasping Darkness",
-            "professions": [
-                "Necromancer"
-            ],
-            "specialization": 34,
-            "type": "Weapon",
-            "weaponType": "Greatsword",
-            "slot": "Weapon_5"
-        },
-        {
-            "id": 10692,
-            "name": "Cruel Strike",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Spear",
             "slot": "Weapon_1",
-            "flipSkill": 10693,
-            "nextChain": 10693
+            "flipSkill": 29867,
+            "nextChain": 29867,
+            "prevChain": 29705
         },
         {
-            "id": 10694,
-            "name": "Wicked Spiral",
+            "id": 29867,
+            "name": "Chilling Scythe",
             "professions": [
                 "Necromancer"
             ],
+            "specialization": 34,
             "type": "Weapon",
-            "weaponType": "Spear",
-            "slot": "Weapon_2"
-        },
-        {
-            "id": 10619,
-            "name": "Deadly Feast",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Spear",
-            "slot": "Weapon_3"
-        },
-        {
-            "id": 10695,
-            "name": "Deadly Catch",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Spear",
-            "slot": "Weapon_4"
-        },
-        {
-            "id": 10616,
-            "name": "Dark Spear",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Spear",
-            "slot": "Weapon_5"
+            "weaponType": "Greatsword",
+            "slot": "Weapon_1",
+            "prevChain": 30799
         },
         {
             "id": 62517,
@@ -252,38 +456,34 @@
             "slot": "Weapon_1"
         },
         {
-            "id": 62513,
-            "name": "Weeping Shots",
+            "id": 10528,
+            "name": "Ghastly Claws",
             "professions": [
                 "Necromancer"
             ],
-            "specialization": 64,
             "type": "Weapon",
-            "weaponType": "Pistol",
+            "weaponType": "Axe",
             "slot": "Weapon_2"
         },
         {
-            "id": 62511,
-            "name": "Vile Blast",
+            "id": 10563,
+            "name": "Life Siphon",
             "professions": [
                 "Necromancer"
             ],
-            "specialization": 64,
             "type": "Weapon",
-            "weaponType": "Pistol",
-            "slot": "Weapon_3"
+            "weaponType": "Dagger",
+            "slot": "Weapon_2"
         },
         {
-            "id": 10698,
-            "name": "Blood Curse",
+            "id": 10694,
+            "name": "Wicked Spiral",
             "professions": [
                 "Necromancer"
             ],
             "type": "Weapon",
-            "weaponType": "Scepter",
-            "slot": "Weapon_1",
-            "flipSkill": 10699,
-            "nextChain": 10699
+            "weaponType": "Spear",
+            "slot": "Weapon_2"
         },
         {
             "id": 10532,
@@ -296,27 +496,6 @@
             "slot": "Weapon_2"
         },
         {
-            "id": 10709,
-            "name": "Feast of Corruption",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Scepter",
-            "slot": "Weapon_3",
-            "flipSkill": 51647
-        },
-        {
-            "id": 10596,
-            "name": "Necrotic Grasp",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Staff",
-            "slot": "Weapon_1"
-        },
-        {
             "id": 19117,
             "name": "Mark of Blood",
             "professions": [
@@ -325,68 +504,6 @@
             "type": "Weapon",
             "weaponType": "Staff",
             "slot": "Weapon_2"
-        },
-        {
-            "id": 10605,
-            "name": "Chillblains",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Staff",
-            "slot": "Weapon_3"
-        },
-        {
-            "id": 19116,
-            "name": "Putrid Mark",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Staff",
-            "slot": "Weapon_4"
-        },
-        {
-            "id": 19115,
-            "name": "Reaper's Mark",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Staff",
-            "slot": "Weapon_5"
-        },
-        {
-            "id": 45846,
-            "name": "Harrowing Wave",
-            "professions": [
-                "Necromancer"
-            ],
-            "specialization": 60,
-            "type": "Weapon",
-            "weaponType": "Torch",
-            "slot": "Weapon_4"
-        },
-        {
-            "id": 44296,
-            "name": "Oppressive Collapse",
-            "professions": [
-                "Necromancer"
-            ],
-            "specialization": 60,
-            "type": "Weapon",
-            "weaponType": "Torch",
-            "slot": "Weapon_5"
-        },
-        {
-            "id": 10623,
-            "name": "Crimson Tide",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Trident",
-            "slot": "Weapon_1"
         },
         {
             "id": 10624,
@@ -400,6 +517,114 @@
             "flipSkill": 10623
         },
         {
+            "id": 10662,
+            "name": "Plague of Darkness",
+            "professions": [
+                "Thief",
+                "Mesmer",
+                "Warrior",
+                "Elementalist",
+                "Necromancer",
+                "Guardian",
+                "Ranger",
+                "Engineer",
+                "Revenant"
+            ],
+            "type": "Bundle",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 10635,
+            "name": "Lich's Gaze",
+            "professions": [],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 30163,
+            "name": "Gravedigger",
+            "professions": [
+                "Necromancer"
+            ],
+            "specialization": 34,
+            "type": "Weapon",
+            "weaponType": "Greatsword",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 62513,
+            "name": "Weeping Shots",
+            "professions": [
+                "Necromancer"
+            ],
+            "specialization": 64,
+            "type": "Weapon",
+            "weaponType": "Pistol",
+            "slot": "Weapon_2"
+        },
+        {
+            "id": 10701,
+            "name": "Unholy Feast",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Axe",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 10529,
+            "name": "Dark Pact",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 10619,
+            "name": "Deadly Feast",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Spear",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 10709,
+            "name": "Feast of Corruption",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_3",
+            "flipSkill": 51647
+        },
+        {
+            "id": 51647,
+            "name": "Devouring Darkness",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Scepter",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 10605,
+            "name": "Chillblains",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_3"
+        },
+        {
             "id": 10625,
             "name": "Foul Current",
             "professions": [
@@ -408,6 +633,94 @@
             "type": "Weapon",
             "weaponType": "Trident",
             "slot": "Weapon_3"
+        },
+        {
+            "id": 10663,
+            "name": "Plague of Pestilence",
+            "professions": [
+                "Thief",
+                "Mesmer",
+                "Warrior",
+                "Elementalist",
+                "Necromancer",
+                "Guardian",
+                "Ranger",
+                "Engineer",
+                "Revenant"
+            ],
+            "type": "Bundle",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 10633,
+            "name": "Ripple of Horror",
+            "professions": [],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_3",
+            "flipSkill": 45780
+        },
+        {
+            "id": 30860,
+            "name": "Death Spiral",
+            "professions": [
+                "Necromancer"
+            ],
+            "specialization": 34,
+            "type": "Weapon",
+            "weaponType": "Greatsword",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 62511,
+            "name": "Vile Blast",
+            "professions": [
+                "Necromancer"
+            ],
+            "specialization": 64,
+            "type": "Weapon",
+            "weaponType": "Pistol",
+            "slot": "Weapon_3"
+        },
+        {
+            "id": 10705,
+            "name": "Deathly Swarm",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 55050,
+            "name": "Soul Grasp",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Focus",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 10695,
+            "name": "Deadly Catch",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Spear",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 19116,
+            "name": "Putrid Mark",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_4"
         },
         {
             "id": 10628,
@@ -420,16 +733,6 @@
             "slot": "Weapon_4"
         },
         {
-            "id": 10629,
-            "name": "Frozen Abyss",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Trident",
-            "slot": "Weapon_5"
-        },
-        {
             "id": 10556,
             "name": "Wail of Doom",
             "professions": [
@@ -438,6 +741,86 @@
             "type": "Weapon",
             "weaponType": "Warhorn",
             "slot": "Weapon_4"
+        },
+        {
+            "id": 10636,
+            "name": "Summon Madness",
+            "professions": [],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 29855,
+            "name": "Nightfall",
+            "professions": [
+                "Necromancer"
+            ],
+            "specialization": 34,
+            "type": "Weapon",
+            "weaponType": "Greatsword",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 45846,
+            "name": "Harrowing Wave",
+            "professions": [
+                "Necromancer"
+            ],
+            "specialization": 60,
+            "type": "Weapon",
+            "weaponType": "Torch",
+            "slot": "Weapon_4"
+        },
+        {
+            "id": 10706,
+            "name": "Enfeebling Blood",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Dagger",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 10555,
+            "name": "Spinal Shivers",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Focus",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 10616,
+            "name": "Dark Spear",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Spear",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 19115,
+            "name": "Reaper's Mark",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 10629,
+            "name": "Frozen Abyss",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Weapon",
+            "weaponType": "Trident",
+            "slot": "Weapon_5"
         },
         {
             "id": 10557,
@@ -450,6 +833,63 @@
             "slot": "Weapon_5"
         },
         {
+            "id": 62563,
+            "name": "Vital Draw",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Profession",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 19504,
+            "name": "Tainted Shackles",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Profession",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 30557,
+            "name": "Executioner's Scythe",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Profession",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 10632,
+            "name": "Grim Specter",
+            "professions": [],
+            "type": "Weapon",
+            "weaponType": "Staff",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 29740,
+            "name": "Grasping Darkness",
+            "professions": [
+                "Necromancer"
+            ],
+            "specialization": 34,
+            "type": "Weapon",
+            "weaponType": "Greatsword",
+            "slot": "Weapon_5"
+        },
+        {
+            "id": 44296,
+            "name": "Oppressive Collapse",
+            "professions": [
+                "Necromancer"
+            ],
+            "specialization": 60,
+            "type": "Weapon",
+            "weaponType": "Torch",
+            "slot": "Weapon_5"
+        },
+        {
             "id": 10547,
             "name": "Summon Blood Fiend",
             "professions": [
@@ -458,6 +898,15 @@
             "type": "Heal",
             "slot": "Heal",
             "flipSkill": 10577
+        },
+        {
+            "id": 10577,
+            "name": "Taste of Death",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Heal",
+            "slot": "Heal"
         },
         {
             "id": 10548,
@@ -483,6 +932,36 @@
             "professions": [
                 "Necromancer"
             ],
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 30488,
+            "name": "\"Your Soul Is Mine!\"",
+            "professions": [
+                "Necromancer"
+            ],
+            "specialization": 34,
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 43148,
+            "name": "Sand Flare",
+            "professions": [
+                "Necromancer"
+            ],
+            "specialization": 60,
+            "type": "Heal",
+            "slot": "Heal"
+        },
+        {
+            "id": 62667,
+            "name": "Elixir of Promise",
+            "professions": [
+                "Necromancer"
+            ],
+            "specialization": 64,
             "type": "Heal",
             "slot": "Heal"
         },
@@ -533,6 +1012,15 @@
             "flipSkill": 10540
         },
         {
+            "id": 10540,
+            "name": "Putrid Explosion",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
             "id": 10533,
             "name": "Summon Bone Fiend",
             "professions": [
@@ -543,6 +1031,15 @@
             "flipSkill": 10570
         },
         {
+            "id": 10570,
+            "name": "Rigor Mortis",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
             "id": 10589,
             "name": "Summon Shadow Fiend",
             "professions": [
@@ -551,6 +1048,15 @@
             "type": "Utility",
             "slot": "Utility",
             "flipSkill": 10590
+        },
+        {
+            "id": 10590,
+            "name": "Haunt",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
         },
         {
             "id": 10543,
@@ -635,6 +1141,15 @@
             "flipSkill": 10687
         },
         {
+            "id": 10687,
+            "name": "Spectral Recall",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Utility",
+            "slot": "Utility"
+        },
+        {
             "id": 10689,
             "name": "Corrosive Poison Cloud",
             "professions": [
@@ -669,203 +1184,6 @@
             ],
             "type": "Utility",
             "slot": "Utility"
-        },
-        {
-            "id": 10574,
-            "name": "Death Shroud",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Profession_1",
-            "flipSkill": 10585,
-            "transformSkills": [
-                62540,
-                44946,
-                46474,
-                29458,
-                10644,
-                24287,
-                30961,
-                10690,
-                62672,
-                29709,
-                10588,
-                10645,
-                62539,
-                29442,
-                62621,
-                62611,
-                62563,
-                30557,
-                19504,
-                10643,
-                30278,
-                29958,
-                10594,
-                62567,
-                10585,
-                42297,
-                46473,
-                30825,
-                63448,
-                40813,
-                18504,
-                10554,
-                43448,
-                30792,
-                30504,
-                10604,
-                44663,
-                56916,
-                44428,
-                54870,
-                10586,
-                10574
-            ]
-        },
-        {
-            "id": 10554,
-            "name": "Life Blast",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Downed_1",
-            "flipSkill": 18504
-        },
-        {
-            "id": 10690,
-            "name": "Plague Blast",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Downed_1",
-            "flipSkill": 24287
-        },
-        {
-            "id": 10549,
-            "name": "Plaguelands",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Elite",
-            "slot": "Elite",
-            "transformSkills": [
-                10661,
-                10662,
-                10663,
-                10586,
-                10586
-            ]
-        },
-        {
-            "id": 10646,
-            "name": "Summon Flesh Golem",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Elite",
-            "slot": "Elite",
-            "flipSkill": 10647
-        },
-        {
-            "id": 10550,
-            "name": "Lich Form",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Elite",
-            "slot": "Elite",
-            "transformSkills": [
-                14350,
-                10634,
-                10635,
-                10633,
-                10636,
-                10632
-            ]
-        },
-        {
-            "id": 30792,
-            "name": "Reaper's Shroud",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Profession_1",
-            "flipSkill": 30961
-        },
-        {
-            "id": 29442,
-            "name": "Life Rend",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Downed_1",
-            "flipSkill": 29458,
-            "nextChain": 29458
-        },
-        {
-            "id": 29458,
-            "name": "Life Slash",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Downed_1",
-            "flipSkill": 30278,
-            "nextChain": 30278,
-            "prevChain": 29442
-        },
-        {
-            "id": 30278,
-            "name": "Life Reap",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Downed_1",
-            "prevChain": 29458
-        },
-        {
-            "id": 30825,
-            "name": "Death's Charge",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Downed_2"
-        },
-        {
-            "id": 29958,
-            "name": "Infusing Terror",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Downed_3",
-            "flipSkill": 29709
-        },
-        {
-            "id": 30504,
-            "name": "Soul Spiral",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Downed_4"
-        },
-        {
-            "id": 30557,
-            "name": "Executioner's Scythe",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Weapon_5"
         },
         {
             "id": 29414,
@@ -908,46 +1226,6 @@
             "slot": "Utility"
         },
         {
-            "id": 30488,
-            "name": "\"Your Soul Is Mine!\"",
-            "professions": [
-                "Necromancer"
-            ],
-            "specialization": 34,
-            "type": "Heal",
-            "slot": "Heal"
-        },
-        {
-            "id": 30105,
-            "name": "\"Chilled to the Bone!\"",
-            "professions": [
-                "Necromancer"
-            ],
-            "specialization": 34,
-            "type": "Elite",
-            "slot": "Elite"
-        },
-        {
-            "id": 43148,
-            "name": "Sand Flare",
-            "professions": [
-                "Necromancer"
-            ],
-            "specialization": 60,
-            "type": "Heal",
-            "slot": "Heal"
-        },
-        {
-            "id": 42355,
-            "name": "Ghastly Breach",
-            "professions": [
-                "Necromancer"
-            ],
-            "specialization": 60,
-            "type": "Elite",
-            "slot": "Elite"
-        },
-        {
             "id": 40274,
             "name": "Trail of Anguish",
             "professions": [
@@ -986,117 +1264,6 @@
             "specialization": 60,
             "type": "Utility",
             "slot": "Utility"
-        },
-        {
-            "id": 40813,
-            "name": "Nefarious Favor",
-            "professions": [
-                "Necromancer"
-            ],
-            "specialization": 60,
-            "type": "Profession",
-            "slot": "Profession_2"
-        },
-        {
-            "id": 43448,
-            "name": "Sand Cascade",
-            "professions": [
-                "Necromancer"
-            ],
-            "specialization": 60,
-            "type": "Profession",
-            "slot": "Profession_3"
-        },
-        {
-            "id": 44428,
-            "name": "Garish Pillar",
-            "professions": [
-                "Necromancer"
-            ],
-            "specialization": 60,
-            "type": "Profession",
-            "slot": "Profession_4"
-        },
-        {
-            "id": 44663,
-            "name": "Desert Shroud",
-            "professions": [
-                "Necromancer"
-            ],
-            "specialization": 60,
-            "type": "Profession",
-            "slot": "Profession_5",
-            "flipSkill": 54870
-        },
-        {
-            "id": 44946,
-            "name": "Manifest Sand Shade",
-            "professions": [
-                "Necromancer"
-            ],
-            "specialization": 60,
-            "type": "Profession",
-            "slot": "Profession_1"
-        },
-        {
-            "id": 42297,
-            "name": "Manifest Sand Shade",
-            "professions": [
-                "Necromancer"
-            ],
-            "specialization": 60,
-            "type": "Profession",
-            "slot": "Profession_1"
-        },
-        {
-            "id": 46474,
-            "name": "Manifest Sand Shade",
-            "professions": [
-                "Necromancer"
-            ],
-            "specialization": 60,
-            "type": "Profession",
-            "slot": "Profession_1"
-        },
-        {
-            "id": 46473,
-            "name": "Manifest Sand Shade",
-            "professions": [
-                "Necromancer"
-            ],
-            "specialization": 60,
-            "type": "Profession",
-            "slot": "Profession_1"
-        },
-        {
-            "id": 62567,
-            "name": "Harbinger Shroud",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Profession_1",
-            "flipSkill": 62540
-        },
-        {
-            "id": 62667,
-            "name": "Elixir of Promise",
-            "professions": [
-                "Necromancer"
-            ],
-            "specialization": 64,
-            "type": "Heal",
-            "slot": "Heal"
-        },
-        {
-            "id": 62655,
-            "name": "Elixir of Ambition",
-            "professions": [
-                "Necromancer"
-            ],
-            "specialization": 64,
-            "type": "Elite",
-            "slot": "Elite"
         },
         {
             "id": 62530,
@@ -1139,8 +1306,100 @@
             "slot": "Utility"
         },
         {
-            "id": 62611,
-            "name": "Tainted Bolts",
+            "id": 10549,
+            "name": "Plaguelands",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Elite",
+            "slot": "Elite",
+            "transformSkills": [
+                10661,
+                10662,
+                10663,
+                10586,
+                10586
+            ]
+        },
+        {
+            "id": 10646,
+            "name": "Summon Flesh Golem",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Elite",
+            "slot": "Elite",
+            "flipSkill": 10647
+        },
+        {
+            "id": 10647,
+            "name": "Charge",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Elite",
+            "slot": "Elite"
+        },
+        {
+            "id": 10550,
+            "name": "Lich Form",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Elite",
+            "slot": "Elite",
+            "transformSkills": [
+                14350,
+                10634,
+                10635,
+                10633,
+                10636,
+                10632
+            ]
+        },
+        {
+            "id": 30105,
+            "name": "\"Chilled to the Bone!\"",
+            "professions": [
+                "Necromancer"
+            ],
+            "specialization": 34,
+            "type": "Elite",
+            "slot": "Elite"
+        },
+        {
+            "id": 42355,
+            "name": "Ghastly Breach",
+            "professions": [
+                "Necromancer"
+            ],
+            "specialization": 60,
+            "type": "Elite",
+            "slot": "Elite"
+        },
+        {
+            "id": 62655,
+            "name": "Elixir of Ambition",
+            "professions": [
+                "Necromancer"
+            ],
+            "specialization": 64,
+            "type": "Elite",
+            "slot": "Elite"
+        },
+        {
+            "id": 10554,
+            "name": "Life Blast",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Profession",
+            "slot": "Downed_1",
+            "flipSkill": 18504
+        },
+        {
+            "id": 18504,
+            "name": "Dhuumfire",
             "professions": [
                 "Necromancer"
             ],
@@ -1148,143 +1407,15 @@
             "slot": "Downed_1"
         },
         {
-            "id": 62621,
-            "name": "Dark Barrage",
+            "id": 29442,
+            "name": "Life Rend",
             "professions": [
                 "Necromancer"
             ],
             "type": "Profession",
-            "slot": "Downed_2"
-        },
-        {
-            "id": 62672,
-            "name": "Devouring Cut",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Downed_3"
-        },
-        {
-            "id": 62539,
-            "name": "Voracious Arc",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Downed_4"
-        },
-        {
-            "id": 62563,
-            "name": "Vital Draw",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Weapon_5"
-        },
-        {
-            "id": 51647,
-            "name": "Devouring Darkness",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Scepter",
-            "slot": "Weapon_3"
-        },
-        {
-            "id": 10623,
-            "name": "Crimson Tide",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Trident",
-            "slot": "Weapon_1"
-        },
-        {
-            "id": 10577,
-            "name": "Taste of Death",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Heal",
-            "slot": "Heal"
-        },
-        {
-            "id": 10540,
-            "name": "Putrid Explosion",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Utility",
-            "slot": "Utility"
-        },
-        {
-            "id": 10570,
-            "name": "Rigor Mortis",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Utility",
-            "slot": "Utility"
-        },
-        {
-            "id": 10590,
-            "name": "Haunt",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Utility",
-            "slot": "Utility"
-        },
-        {
-            "id": 10687,
-            "name": "Spectral Recall",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Utility",
-            "slot": "Utility"
-        },
-        {
-            "id": 10585,
-            "name": "End Death Shroud",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Profession_1"
-        },
-        {
-            "id": 62540,
-            "name": "Exit Harbinger Shroud",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Profession_1"
-        },
-        {
-            "id": 44946,
-            "name": "Manifest Sand Shade",
-            "professions": [
-                "Necromancer"
-            ],
-            "specialization": 60,
-            "type": "Profession",
-            "slot": "Profession_1"
-        },
-        {
-            "id": 46474,
-            "name": "Manifest Sand Shade",
-            "professions": [
-                "Necromancer"
-            ],
-            "specialization": 60,
-            "type": "Profession",
-            "slot": "Profession_1"
+            "slot": "Downed_1",
+            "flipSkill": 29458,
+            "nextChain": 29458
         },
         {
             "id": 29458,
@@ -1299,31 +1430,14 @@
             "prevChain": 29442
         },
         {
-            "id": 10644,
-            "name": "Dark Water",
+            "id": 30278,
+            "name": "Life Reap",
             "professions": [
                 "Necromancer"
             ],
             "type": "Profession",
-            "slot": "Downed_2"
-        },
-        {
-            "id": 24287,
-            "name": "Dhuumfire",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Downed_1"
-        },
-        {
-            "id": 30961,
-            "name": "Exit Reaper's Shroud",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Profession_1"
+            "slot": "Downed_1",
+            "prevChain": 29458
         },
         {
             "id": 10690,
@@ -1336,26 +1450,91 @@
             "flipSkill": 24287
         },
         {
-            "id": 62672,
-            "name": "Devouring Cut",
+            "id": 62611,
+            "name": "Tainted Bolts",
             "professions": [
                 "Necromancer"
             ],
             "type": "Profession",
-            "slot": "Downed_3"
+            "slot": "Downed_1"
         },
         {
-            "id": 29709,
-            "name": "Terrify",
+            "id": 24287,
+            "name": "Dhuumfire",
             "professions": [
                 "Necromancer"
             ],
             "type": "Profession",
-            "slot": "Downed_3"
+            "slot": "Downed_1"
+        },
+        {
+            "id": 10644,
+            "name": "Dark Water",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Profession",
+            "slot": "Downed_2"
+        },
+        {
+            "id": 30825,
+            "name": "Death's Charge",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Profession",
+            "slot": "Downed_2"
+        },
+        {
+            "id": 56916,
+            "name": "Dark Pursuit",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Profession",
+            "slot": "Downed_2"
+        },
+        {
+            "id": 62621,
+            "name": "Dark Barrage",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Profession",
+            "slot": "Downed_2"
+        },
+        {
+            "id": 10604,
+            "name": "Dark Path",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Profession",
+            "slot": "Downed_2",
+            "flipSkill": 56916
         },
         {
             "id": 10588,
             "name": "Doom",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Profession",
+            "slot": "Downed_3"
+        },
+        {
+            "id": 29958,
+            "name": "Infusing Terror",
+            "professions": [
+                "Necromancer"
+            ],
+            "type": "Profession",
+            "slot": "Downed_3",
+            "flipSkill": 29709
+        },
+        {
+            "id": 62672,
+            "name": "Devouring Cut",
             "professions": [
                 "Necromancer"
             ],
@@ -1372,146 +1551,13 @@
             "slot": "Downed_3"
         },
         {
-            "id": 62539,
-            "name": "Voracious Arc",
+            "id": 29709,
+            "name": "Terrify",
             "professions": [
                 "Necromancer"
             ],
             "type": "Profession",
-            "slot": "Downed_4"
-        },
-        {
-            "id": 29442,
-            "name": "Life Rend",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Downed_1",
-            "flipSkill": 29458,
-            "nextChain": 29458
-        },
-        {
-            "id": 62621,
-            "name": "Dark Barrage",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Downed_2"
-        },
-        {
-            "id": 62611,
-            "name": "Tainted Bolts",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Downed_1"
-        },
-        {
-            "id": 62563,
-            "name": "Vital Draw",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Weapon_5"
-        },
-        {
-            "id": 30557,
-            "name": "Executioner's Scythe",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Weapon_5"
-        },
-        {
-            "id": 19504,
-            "name": "Tainted Shackles",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Weapon_5"
-        },
-        {
-            "id": 10643,
-            "name": "Gathering Plague",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Downed_4"
-        },
-        {
-            "id": 30278,
-            "name": "Life Reap",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Downed_1",
-            "prevChain": 29458
-        },
-        {
-            "id": 29958,
-            "name": "Infusing Terror",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Downed_3",
-            "flipSkill": 29709
-        },
-        {
-            "id": 10594,
-            "name": "Life Transfer",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Downed_4"
-        },
-        {
-            "id": 62567,
-            "name": "Harbinger Shroud",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Profession_1",
-            "flipSkill": 62540
-        },
-        {
-            "id": 42297,
-            "name": "Manifest Sand Shade",
-            "professions": [
-                "Necromancer"
-            ],
-            "specialization": 60,
-            "type": "Profession",
-            "slot": "Profession_1"
-        },
-        {
-            "id": 46473,
-            "name": "Manifest Sand Shade",
-            "professions": [
-                "Necromancer"
-            ],
-            "specialization": 60,
-            "type": "Profession",
-            "slot": "Profession_1"
-        },
-        {
-            "id": 30825,
-            "name": "Death's Charge",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Downed_2"
+            "slot": "Downed_3"
         },
         {
             "id": 63448,
@@ -1523,53 +1569,31 @@
             "slot": "Downed_4"
         },
         {
-            "id": 40813,
-            "name": "Nefarious Favor",
+            "id": 62539,
+            "name": "Voracious Arc",
             "professions": [
                 "Necromancer"
             ],
-            "specialization": 60,
             "type": "Profession",
-            "slot": "Profession_2"
+            "slot": "Downed_4"
         },
         {
-            "id": 18504,
-            "name": "Dhuumfire",
+            "id": 10594,
+            "name": "Life Transfer",
             "professions": [
                 "Necromancer"
             ],
             "type": "Profession",
-            "slot": "Downed_1"
+            "slot": "Downed_4"
         },
         {
-            "id": 10554,
-            "name": "Life Blast",
+            "id": 10643,
+            "name": "Gathering Plague",
             "professions": [
                 "Necromancer"
             ],
             "type": "Profession",
-            "slot": "Downed_1",
-            "flipSkill": 18504
-        },
-        {
-            "id": 43448,
-            "name": "Sand Cascade",
-            "professions": [
-                "Necromancer"
-            ],
-            "specialization": 60,
-            "type": "Profession",
-            "slot": "Profession_3"
-        },
-        {
-            "id": 30792,
-            "name": "Reaper's Shroud",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Profession_1",
-            "flipSkill": 30961
+            "slot": "Downed_4"
         },
         {
             "id": 30504,
@@ -1579,362 +1603,6 @@
             ],
             "type": "Profession",
             "slot": "Downed_4"
-        },
-        {
-            "id": 10604,
-            "name": "Dark Path",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Downed_2",
-            "flipSkill": 56916
-        },
-        {
-            "id": 44663,
-            "name": "Desert Shroud",
-            "professions": [
-                "Necromancer"
-            ],
-            "specialization": 60,
-            "type": "Profession",
-            "slot": "Profession_5",
-            "flipSkill": 54870
-        },
-        {
-            "id": 56916,
-            "name": "Dark Pursuit",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Downed_2"
-        },
-        {
-            "id": 44428,
-            "name": "Garish Pillar",
-            "professions": [
-                "Necromancer"
-            ],
-            "specialization": 60,
-            "type": "Profession",
-            "slot": "Profession_4"
-        },
-        {
-            "id": 54870,
-            "name": "Sandstorm Shroud",
-            "professions": [
-                "Necromancer"
-            ],
-            "specialization": 60,
-            "type": "Profession",
-            "slot": "Profession_5"
-        },
-        {
-            "id": 10586,
-            "name": "Locked",
-            "professions": [
-                "Engineer",
-                "Necromancer"
-            ],
-            "type": "Bundle",
-            "slot": "Weapon_4"
-        },
-        {
-            "id": 10574,
-            "name": "Death Shroud",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Profession_1",
-            "flipSkill": 10585,
-            "transformSkills": [
-                62540,
-                44946,
-                46474,
-                29458,
-                10644,
-                24287,
-                30961,
-                10690,
-                62672,
-                29709,
-                10588,
-                10645,
-                62539,
-                29442,
-                62621,
-                62611,
-                62563,
-                30557,
-                19504,
-                10643,
-                30278,
-                29958,
-                10594,
-                62567,
-                10585,
-                42297,
-                46473,
-                30825,
-                63448,
-                40813,
-                18504,
-                10554,
-                43448,
-                30792,
-                30504,
-                10604,
-                44663,
-                56916,
-                44428,
-                54870,
-                10586,
-                10574
-            ]
-        },
-        {
-            "id": 10661,
-            "name": "Withering Plague",
-            "professions": [
-                "Thief",
-                "Mesmer",
-                "Warrior",
-                "Elementalist",
-                "Necromancer",
-                "Guardian",
-                "Ranger",
-                "Engineer",
-                "Revenant"
-            ],
-            "type": "Bundle",
-            "slot": "Weapon_1"
-        },
-        {
-            "id": 10662,
-            "name": "Plague of Darkness",
-            "professions": [
-                "Thief",
-                "Mesmer",
-                "Warrior",
-                "Elementalist",
-                "Necromancer",
-                "Guardian",
-                "Ranger",
-                "Engineer",
-                "Revenant"
-            ],
-            "type": "Bundle",
-            "slot": "Weapon_2"
-        },
-        {
-            "id": 10663,
-            "name": "Plague of Pestilence",
-            "professions": [
-                "Thief",
-                "Mesmer",
-                "Warrior",
-                "Elementalist",
-                "Necromancer",
-                "Guardian",
-                "Ranger",
-                "Engineer",
-                "Revenant"
-            ],
-            "type": "Bundle",
-            "slot": "Weapon_3"
-        },
-        {
-            "id": 10647,
-            "name": "Charge",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Elite",
-            "slot": "Elite"
-        },
-        {
-            "id": 14350,
-            "name": "Return",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Staff",
-            "slot": "Weapon_1"
-        },
-        {
-            "id": 10634,
-            "name": "Deathly Claws",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Staff",
-            "slot": "Weapon_1"
-        },
-        {
-            "id": 10635,
-            "name": "Lich's Gaze",
-            "professions": [],
-            "type": "Weapon",
-            "weaponType": "Staff",
-            "slot": "Weapon_2"
-        },
-        {
-            "id": 10633,
-            "name": "Ripple of Horror",
-            "professions": [],
-            "type": "Weapon",
-            "weaponType": "Staff",
-            "slot": "Weapon_3",
-            "flipSkill": 45780
-        },
-        {
-            "id": 10636,
-            "name": "Summon Madness",
-            "professions": [],
-            "type": "Weapon",
-            "weaponType": "Staff",
-            "slot": "Weapon_4"
-        },
-        {
-            "id": 10632,
-            "name": "Grim Specter",
-            "professions": [],
-            "type": "Weapon",
-            "weaponType": "Staff",
-            "slot": "Weapon_5"
-        },
-        {
-            "id": 10703,
-            "name": "Necrotic Stab",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Dagger",
-            "slot": "Weapon_1",
-            "nextChain": 10704,
-            "prevChain": 10702
-        },
-        {
-            "id": 30799,
-            "name": "Fading Twilight",
-            "professions": [
-                "Necromancer"
-            ],
-            "specialization": 34,
-            "type": "Weapon",
-            "weaponType": "Greatsword",
-            "slot": "Weapon_1",
-            "flipSkill": 29867,
-            "nextChain": 29867,
-            "prevChain": 29705
-        },
-        {
-            "id": 10693,
-            "name": "Wicked Strike",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Spear",
-            "slot": "Weapon_1",
-            "flipSkill": 10617,
-            "nextChain": 10617,
-            "prevChain": 10692
-        },
-        {
-            "id": 10699,
-            "name": "Rending Curse",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Scepter",
-            "slot": "Weapon_1",
-            "flipSkill": 10552,
-            "nextChain": 10552,
-            "prevChain": 10698
-        },
-        {
-            "id": 29458,
-            "name": "Life Slash",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Downed_1",
-            "flipSkill": 30278,
-            "nextChain": 30278,
-            "prevChain": 29442
-        },
-        {
-            "id": 30278,
-            "name": "Life Reap",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Downed_1",
-            "prevChain": 29458
-        },
-        {
-            "id": 10704,
-            "name": "Necrotic Bite",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Dagger",
-            "slot": "Weapon_1",
-            "prevChain": 10703
-        },
-        {
-            "id": 29867,
-            "name": "Chilling Scythe",
-            "professions": [
-                "Necromancer"
-            ],
-            "specialization": 34,
-            "type": "Weapon",
-            "weaponType": "Greatsword",
-            "slot": "Weapon_1",
-            "prevChain": 30799
-        },
-        {
-            "id": 10617,
-            "name": "Reaper's Scythe",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Spear",
-            "slot": "Weapon_1",
-            "prevChain": 10693
-        },
-        {
-            "id": 10552,
-            "name": "Putrid Curse",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Weapon",
-            "weaponType": "Scepter",
-            "slot": "Weapon_1",
-            "prevChain": 10699
-        },
-        {
-            "id": 30278,
-            "name": "Life Reap",
-            "professions": [
-                "Necromancer"
-            ],
-            "type": "Profession",
-            "slot": "Downed_1",
-            "prevChain": 29458
         }
     ]
 }
