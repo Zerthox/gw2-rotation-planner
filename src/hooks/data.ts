@@ -1,7 +1,7 @@
 import {useStaticQuery, graphql} from "gatsby";
-import {ProfessionKind as Profession, WeaponType, SkillType, SkillSlot} from "../../api";
+import {ProfessionKind as Profession, WeaponType, SkillType, SkillSlot, Attunement} from "../../api";
 
-export {ProfessionKind as Profession, WeaponType, SkillType, SkillSlot} from "../../api";
+export {ProfessionKind as Profession, WeaponType, SkillType, SkillSlot, Attunement} from "../../api";
 
 export interface ProfessionData {
     name: Profession;
@@ -24,7 +24,7 @@ export interface SkillData {
     specialization?: number;
     weaponType?: WeaponType;
     slot?: SkillSlot;
-    attunement?: string;
+    attunement?: Attunement;
     dualWield?: WeaponType;
     flipSkill?: number;
     nextChain?: number;

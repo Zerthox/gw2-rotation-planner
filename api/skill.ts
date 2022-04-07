@@ -48,7 +48,7 @@ export interface Skill {
     facts?: unknown[];
     traited_facts?: unknown[];
     categories?: string[];
-    attunement?: string;
+    attunement?: Attunement;
     cost?: number;
     dual_wield?: WeaponType;
     flip_skill?: number;
@@ -91,4 +91,11 @@ export enum SkillSlot {
     Downed3 = "Downed_3",
     Downed4 = "Downed_4",
     Pet = "Pet"
+}
+
+export enum Attunement {
+    Fire = "Fire",
+    Water = "Water",
+    Air = "Air",
+    Earth = "Earth"
 }
