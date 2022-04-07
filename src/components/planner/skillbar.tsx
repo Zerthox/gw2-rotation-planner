@@ -11,8 +11,9 @@ interface SkillSectionProps {
     skills: SkillState[];
 }
 
+// TODO: display skills within section as grid with row direction
 const SkillSection = ({name, parentId, skills}: SkillSectionProps) => (
-    <Accordion disableGutters elevation={0}>
+    <Accordion disableGutters elevation={0} TransitionProps={{unmountOnExit: true}}>
         <AccordionSummary
             expandIcon={<ExpandMore/>}
             aria-controls={`${name} Skills Panel`}
