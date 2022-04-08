@@ -47,6 +47,8 @@ const slotOrder = [
     SkillSlot.Pet
 ];
 
+// TODO: api is difficult to use because of multiple versions of skills (catalyst f5) and missing skills (fb tome skills)
+// TODO: manual adjustment is required anyway, maybe just do skill data manually
 async function fetchDataForProfession(prof: ProfessionKind): Promise<ProfessionData> {
     const profData = await fetchProfession(prof);
 
@@ -61,7 +63,6 @@ async function fetchDataForProfession(prof: ProfessionKind): Promise<ProfessionD
     const skills = await fetchSkills([...weaponSkills, ...otherSkills]);
 
     // fetch additional skills
-    // TODO: toolbelt skills
     await addAdditionalSkillsTo(skills);
 
     // sort skills
@@ -71,7 +72,6 @@ async function fetchDataForProfession(prof: ProfessionKind): Promise<ProfessionD
     );
 
     // remove duplicates
-    // TODO: some kind of variants of skills are still included
     const uniqueSkills = uniqBy(sortedSkills, (skill) => skill.id);
 
     return {
