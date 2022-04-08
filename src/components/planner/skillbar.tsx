@@ -3,7 +3,7 @@ import {Box, Stack, Accordion, AccordionSummary, AccordionDetails} from "@mui/ma
 import {ExpandMore} from "@mui/icons-material";
 import {DraggableSkill} from "./skill";
 import {Id} from "../../store/planner";
-import {useWeaponSkills, SkillState, useHealSkills, useUtilitySkills, useEliteSkills, useProfessionSkills} from "../../store/build";
+import {SkillState, useProfessionSkills, useEliteSpecSkills, useWeaponSkills, useHealSkills, useUtilitySkills, useEliteSkills, useEliteSpecs} from "../../store/build";
 
 interface SkillSectionProps {
     name: string;
@@ -56,6 +56,9 @@ export interface SkillbarProps {
 }
 
 export const Skillbar = ({id}: SkillbarProps): JSX.Element => {
+    const eliteSpecs = useEliteSpecs();
+
+    const specSkills = useEliteSpecSkills();
     const profSkills = useProfessionSkills();
     const weaponSkills = useWeaponSkills();
     const healSkills = useHealSkills();
@@ -70,6 +73,17 @@ export const Skillbar = ({id}: SkillbarProps): JSX.Element => {
                 parentId={id}
                 skills={profSkills}
             />
+            {specSkills.map(([specId, skills]) => {
+                const {name} = eliteSpecs.find((spec) => spec.id === specId);
+                return skills.length > 0 ? (
+                    <SkillSection
+                        key={name}
+                        name={name}
+                        parentId={id}
+                        skills={skills}
+                    />
+                ) : null;
+            })}
             {weaponSkills.map(([weapon, skills]) => (
                 <SkillSection
                     key={weapon}

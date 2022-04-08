@@ -76,6 +76,8 @@ const useData = () => useStaticQuery<QueryData>(graphql`
 
 export const useProfessionsData = (): ProfessionData[] => useData().allDataJson.nodes;
 
+export const useProfessionData = (prof: Profession): ProfessionData => useProfessionsData().find((entry) => entry.name === prof);
+
 export const useAllSkillsData = (): SkillData[] => useProfessionsData().reduce((acc, entry) => [...acc, ...entry.skills], []);
 
 export const isWeaponSlot = (slot: SkillSlot): boolean => slot.startsWith("Weapon");

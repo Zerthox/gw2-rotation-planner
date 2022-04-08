@@ -1,7 +1,7 @@
 import React, {useCallback, useEffect} from "react";
 import {Box, Stack, Select, MenuItem, Typography} from "@mui/material";
 import {useDispatch} from "react-redux";
-import {useProfession, changeProfession} from "../../store/build";
+import {useCurrentProfession, changeProfession} from "../../store/build";
 import {useProfessionsData, Profession} from "../../hooks/data";
 
 // TODO: colorize icon (and maybe name)
@@ -9,7 +9,7 @@ import {useProfessionsData, Profession} from "../../hooks/data";
 export const ProfessionSelect = (): JSX.Element => {
     const dispatch = useDispatch();
     const data = useProfessionsData();
-    const prof = useProfession();
+    const prof = useCurrentProfession();
 
     const onChange = useCallback((prof: Profession) => {
         const profData = data.find(({name}) => name === prof);
