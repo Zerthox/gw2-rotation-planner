@@ -12,16 +12,6 @@ export interface SkillState {
 
 export const createSkillState = (skill: number): SkillState => ({dragId: createDragId(DragType.Skill), skillId: skill});
 
-export const findSkillState = (states: Record<string, SkillState[]>, dragId: DragId): SkillState => {
-    for (const skills of Object.values(states)) {
-        const found = skills.find((skill) => skill.dragId === dragId);
-        if (found) {
-            return found;
-        }
-    }
-    return null;
-};
-
 export interface ProfessionChangePayload {
     profession: Profession;
     sections: SkillSection[];
@@ -32,19 +22,15 @@ export const buildSlice = createSlice({
     initialState: {
         profession: null as Profession,
         sections: [] as SkillSection[],
-        skillStates: {} as Record<string, SkillState[]>
+        skillStates: {} as SkillState[][]
     },
     reducers: {
         changeProfession(state, {payload: {profession, sections}}: PayloadAction<ProfessionChangePayload>) {
             state.profession = profession;
             state.sections = sections;
-            state.skillStates = Object.fromEntries(sections
+            state.skillStates =sections
                 .filter((section) => section.profession === profession)
-                .map((section) => [
-                    section.name,
-                    section.skills.map((skill) => createSkillState(skill.id))
-                ])
-            );
+                .map((section) => section.skills.map((skill) => createSkillState(skill.id)));
         },
         takeSkillItem(state, {payload}: PayloadAction<DragId>) {
             for (const section of Object.values(state.skillStates)) {
@@ -64,4 +50,4 @@ export const useCurrentProfession = (): Profession => useSelector((state: StoreS
 
 export const useSkillSections = (): SkillSection[] => useSelector((state: StoreState) => state.buildReducer.sections);
 
-export const useSkillStates = (): Record<string, SkillState[]> => useSelector((state: StoreState) => state.buildReducer.skillStates);
+export const useSkillStates = (): SkillState[][] => useSelector((state: StoreState) => state.buildReducer.skillStates);

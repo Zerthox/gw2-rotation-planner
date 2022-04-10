@@ -10,7 +10,7 @@ import {SkillItem} from "./skill";
 import {OverData, SkillData} from ".";
 import {DragId, DragType, createDragId, isa, useDragging, setDragging} from "../../store/planner";
 import {deleteRowSkill, insertRowSkill, moveRowSkill} from "../../store/timeline";
-import {useSkillStates, findSkillState, takeSkillItem} from "../../store/build";
+import {useSkillStates, takeSkillItem} from "../../store/build";
 
 const SKILLBAR_ID = createDragId(DragType.Skillbar);
 
@@ -50,7 +50,7 @@ export const Planner = (): JSX.Element => {
                 if (parent.current !== overData.parentId) {
                     if (!parent.current && fromSkillbar.current) {
                         // moved from skillbar to row
-                        const skill = findSkillState(skills, active.id);
+                        const skill = skills.flat().find((skill) => skill.dragId === active.id);
 
                         // refresh skillbar items
                         dispatch(takeSkillItem(active.id));
@@ -127,7 +127,7 @@ export const Planner = (): JSX.Element => {
                     <Stack direction="column" alignItems="stretch" spacing={2} padding={2}>
                         <ProfessionSelect/>
                         <Trash dragId={TRASH_ID}/>
-                        <Skillbar id={SKILLBAR_ID}/>
+                        <Skillbar dragId={SKILLBAR_ID}/>
                     </Stack>
                 </Card>
                 <Timeline flexGrow={1}/>

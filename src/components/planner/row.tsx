@@ -15,13 +15,13 @@ export interface RowProps {
     index: number;
 }
 
-export const Row = ({dragId: id, index}: RowProps): JSX.Element => {
+export const Row = ({dragId, index}: RowProps): JSX.Element => {
     const dispatch = useDispatch();
-    const row = useRow(id);
+    const row = useRow(dragId);
     const items = row.skills.map(({dragId: id}) => id);
     const {setNodeRef} = useDroppable({
-        id,
-        data: {parentId: id, index: items.length} as OverData
+        id: dragId,
+        data: {parentId: dragId, index: items.length} as OverData
     });
 
     return (
@@ -31,7 +31,7 @@ export const Row = ({dragId: id, index}: RowProps): JSX.Element => {
                     placeholder={`Section #${index + 1}`}
                     variant="standard"
                     value={row.name}
-                    onChange={({target}) => dispatch(updateRowName({rowId: id, name: target.value}))}
+                    onChange={({target}) => dispatch(updateRowName({rowId: dragId, name: target.value}))}
                     sx={{flexShrink: 0}}
                 />
                 <Box flexGrow={1}>
@@ -75,7 +75,7 @@ export const Row = ({dragId: id, index}: RowProps): JSX.Element => {
                 </Stack>
                 <IconButton
                     title="Delete"
-                    onClick={() => dispatch(deleteRow({rowId: id}))}
+                    onClick={() => dispatch(deleteRow({rowId: dragId}))}
                 >
                     <Delete/>
                 </IconButton>

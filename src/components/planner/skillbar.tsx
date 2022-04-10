@@ -52,10 +52,10 @@ const SkillSection = ({name, parentId, skills}: SkillSectionProps) => {
 };
 
 export interface SkillbarProps {
-    id: DragId;
+    dragId: DragId;
 }
 
-export const Skillbar = ({id}: SkillbarProps): JSX.Element => {
+export const Skillbar = ({dragId}: SkillbarProps): JSX.Element => {
     const sections = useSkillSections();
     const states = useSkillStates();
 
@@ -66,7 +66,7 @@ export const Skillbar = ({id}: SkillbarProps): JSX.Element => {
                     <SkillSection
                         key={name}
                         name={name}
-                        parentId={id}
+                        parentId={dragId}
                         skills={states[name]}
                     />
                 ) : null;
