@@ -1,5 +1,12 @@
-/** @type {import("gatsby").GatsbyConfig} */
-module.exports = {
+import {GatsbyConfig, Node} from "gatsby";
+
+interface YamlTypeNameArgs {
+    node: Node;
+    object: unknown;
+    isArray: boolean;
+}
+
+const config: GatsbyConfig = {
     siteMetadata: {
         title: "GW2 Rotation Planner",
         description: "Plan out rotations for Guild Wars 2",
@@ -12,7 +19,7 @@ module.exports = {
         {
             resolve: "gatsby-transformer-yaml",
             options: {
-                typeName: ({node}) => node.relativeDirectory
+                typeName: ({node}: YamlTypeNameArgs) => node.relativeDirectory
             }
         },
         {
@@ -43,3 +50,5 @@ module.exports = {
         }
     ]
 };
+
+export default config;
