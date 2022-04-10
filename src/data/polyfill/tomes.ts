@@ -1,6 +1,6 @@
-import {SkillData, SkillSlot} from ".";
+import {SkillData, SkillSlot} from "..";
 
-export const tomePolyfill: SkillData[] = [
+export const tomeOfJustice: SkillData[] = [
     {
         id: 41258,
         name: "Chapter 1: Searing Spell",
@@ -25,7 +25,10 @@ export const tomePolyfill: SkillData[] = [
         id: 42898,
         name: "Epilogue: Ashes of the Just",
         slot: SkillSlot.Weapon5
-    },
+    }
+];
+
+export const tomeOfResolve: SkillData[] = [
     {
         id: 45022,
         name: "Chapter 1: Desert Bloom",
@@ -50,7 +53,10 @@ export const tomePolyfill: SkillData[] = [
         id: 42925,
         name: "Epilogue: Eternal Oasis",
         slot: SkillSlot.Weapon5
-    },
+    }
+];
+
+export const tomeOfCourage: SkillData[] = [
     {
         id: 42986,
         name: "Chapter 1: Unflinching Charge",
