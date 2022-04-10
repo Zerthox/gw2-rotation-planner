@@ -13,6 +13,11 @@ export async function fetchApi<T>({version = "v2", endpoint, lang = "en", params
     const paramString = Object.entries(params).map(([name, value]) => `${name}=${value}`).join("&");
     const url = `${API_URL}/${version}/${endpoint}?lang=${lang}&${paramString}`;
 
-    const result = await fetch(url);
-    return result.json();
+    const response = await fetch(url);
+    const json = await response.json();
+    if (Object.keys(json).length === 1 && json.text) {
+        throw new Error(json.text);
+    } else {
+        return json;
+    }
 }
