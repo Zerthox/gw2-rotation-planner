@@ -1,3 +1,4 @@
+import path from "path";
 import {GatsbyConfig, Node} from "gatsby";
 
 interface YamlTypeNameArgs {
@@ -25,7 +26,7 @@ const config: GatsbyConfig = {
         {
             resolve: "gatsby-source-filesystem",
             options: {
-                path: `${__dirname}/src/data`
+                path: path.resolve("./src/data")
             }
         },
         "gatsby-plugin-react-helmet",
