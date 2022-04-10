@@ -1,124 +1,69 @@
 - name: Heal
   skills:
-    - name: Elixir H
-      id: 5834
-    - name: Med Kit
-      id: 5802
-    - name: A.E.D.
-      id: 21659
-    - name: Healing Turret
-      id: 5857
-    - name: Cleansing Burst
-      id: 5980
+    - 5834 # Elixir H
+    - 5802 # Med Kit
+    - 21659 # A.E.D.
+    - 5857 # Healing Turret
+    - 5980 # Cleansing Burst
 
     # specs
-    - name: Medic Gyro
-      id: 30357
-    - name: Coolant Blast
-      id: 40507
-    - name: Rectifier Signet
-      id: 63049
+    - 30357 # Medic Gyro
+    - 40507 # Coolant Blast
+    - 63049 # Rectifier Signet
 
 - name: Utility
   skills:
-    - name: Rifle Turret
-      id: 5818
-    - name: Flame Turret
-      id: 5836
-    - name: Smoke Screen
-      id: 5900
-    - name: Net Turret
-      id: 5837
-    - name: Electrified Net
-      id: 5893
-    - name: Thumper Turret
-      id: 5838
-    - name: Detonate Thumper Turret
-      id: 5960
-    - name: Rocket Turret
-      id: 5912
-    - name: Explosive Rockets
-      id: 5913
-    - name: Elixir B
-      id: 5821
-    - name: Elixir U
-      id: 5862
-    - name: Elixir S
-      id: 5861
-    - name: Elixir C
-      id: 5860
-    - name: Elixir R
-      id: 5968
-    - name: Grenade Kit
-      id: 5805
-    - name: Bomb Kit
-      id: 5812
-    - name: Flamethrower
-      id: 5927
-    - name: Elixir Gun
-      id: 5933
-    - name: Tool Kit
-      id: 5904
-    - name: Throw Mine
-      id: 6161
-    - name: Detonate
-      id: 6162
-    - name: Utility Goggles
-      id: 5865
-    - name: Utility Goggles
-      id: 29591
-    - name: Rocket Boots
-      id: 5910
-    - name: Personal Battering Ram
-      id: 5811
-    - name: Personal Battering Ram
-      id: 29991
-    - name: Slick Shoes
-      id: 5825
+    - 5818 # Rifle Turret
+    - 5836 # Flame Turret
+    - 5900 # Smoke Screen
+    - 5837 # Net Turret
+    - 5893 # Electrified Net
+    - 5838 # Thumper Turret
+    - 5960 # Detonate Thumper Turret
+    - 5912 # Rocket Turret
+    - 5913 # Explosive Rockets
+    - 5821 # Elixir B
+    - 5862 # Elixir U
+    - 5861 # Elixir S
+    - 5860 # Elixir C
+    - 5968 # Elixir R
+    - 5805 # Grenade Kit
+    - 5812 # Bomb Kit
+    - 5927 # Flamethrower
+    - 5933 # Elixir Gun
+    - 5904 # Tool Kit
+    - 6161 # Throw Mine
+    - 6162 # Detonate
+    - 5865 # Utility Goggles
+    - 29591 # Utility Goggles
+    - 5910 # Rocket Boots
+    - 5811 # Personal Battering Ram
+    - 29991 # Personal Battering Ram
+    - 5825 # Slick Shoes
 
     # specs
-    - name: Bulwark Gyro
-      id: 30101
-    - name: Purge Gyro
-      id: 29739
-    - name: Blast Gyro
-      id: 31248
-    - name: Shredder Gyro
-      id: 29921
-    - name: Photon Wall
-      id: 43739
-    - name: Launch Wall
-      id: 40533
-    - name: Laser Disk
-      id: 42842
-    - name: Hard Light Arena
-      id: 44646
-    - name: Spectrum Shield
-      id: 41218
-    - name: Barrier Signet
-      id: 63262
-    - name: Shift Signet
-      id: 63111
-    - name: Force Signet
-      id: 63253
-    - name: Superconducting Signet
-      id: 63113
+    - 30101 # Bulwark Gyro
+    - 29739 # Purge Gyro
+    - 31248 # Blast Gyro
+    - 29921 # Shredder Gyro
+    - 43739 # Photon Wall
+    - 40533 # Launch Wall
+    - 42842 # Laser Disk
+    - 44646 # Hard Light Arena
+    - 41218 # Spectrum Shield
+    - 63262 # Barrier Signet
+    - 63111 # Shift Signet
+    - 63253 # Force Signet
+    - 63113 # Superconducting Signet
 
 - name: Elite
   skills:
-    - name: Supply Crate
-      id: 5868
-    - name: Elixir X
-      id: 5832
-    - name: Elite Mortar Kit
-      id: 30800
+    - 5868 # Supply Crate
+    - 5832 # Elixir X
+    - 30800 # Elite Mortar Kit
 
     # specs
-    - name: Sneak Gyro
-      id: 30815
-    - name: Prime Light Beam
-      id: 42009
-    - name: Overclock Signet
-      id: 63095
-    - name: Jade Buster Cannon
-      id: 63374
+    - 30815 # Sneak Gyro
+    - 42009 # Prime Light Beam
+    - 63095 # Overclock Signet
+    - 63374 # Jade Buster Cannon

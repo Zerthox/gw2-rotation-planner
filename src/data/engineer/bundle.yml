@@ -1,165 +1,98 @@
 # kits
 - name: Med Kit
   skills:
-    - name: Infusion Bomb
-      id: 50444
-    - name: Infusion Bomb
-      id: 58104
-    - name: Vital Burst
-      id: 49082
-    - name: Cleansing Field
-      id: 49045
-    - name: Bandage Blast
-      id: 29547
-    - name: Med Blaster
-      id: 30521
-    - name: Med Blaster
-      id: 58090
-    - name: Stow Med Kit
-      id: 6109
+    - 50444 # Infusion Bomb
+    - 58104 # Infusion Bomb
+    - 49082 # Vital Burst
+    - 49045 # Cleansing Field
+    - 29547 # Bandage Blast
+    - 30521 # Med Blaster
+    - 58090 # Med Blaster
+    - 6109 # Stow Med Kit
 
 - name: Grenade Kit
   skills:
-    - name: Poison Grenade
-      id: 5806
-    - name: Poison Grenade
-      id: 6167
-    - name: Freeze Grenade
-      id: 5809
-    - name: Freeze Grenade
-      id: 6168
-    - name: Flash Grenade
-      id: 5808
-    - name: Flash Grenade
-      id: 6169
-    - name: Shrapnel Grenade
-      id: 5807
-    - name: Shrapnel Grenade
-      id: 6170
-    - name: Grenade
-      id: 5882
-    - name: Grenade
-      id: 6171
-    - name: Stow Grenade Kit
-      id: 6110
+    - 5806 # Poison Grenade
+    - 6167 # Poison Grenade
+    - 5809 # Freeze Grenade
+    - 6168 # Freeze Grenade
+    - 5808 # Flash Grenade
+    - 6169 # Flash Grenade
+    - 5807 # Shrapnel Grenade
+    - 6170 # Shrapnel Grenade
+    - 5882 # Grenade
+    - 6171 # Grenade
+    - 6110 # Stow Grenade Kit
 
 - name: Bomb Kit
   skills:
-    - name: Glue Bomb
-      id: 5939
-    - name: Smoke Bomb
-      id: 5824
-    - name: Concussion Bomb
-      id: 5822
-    - name: Fire Bomb
-      id: 5823
-    - name: Bomb
-      id: 5842
-    - name: Stow Bomb Kit
-      id: 6111
+    - 5939 # Glue Bomb
+    - 5824 # Smoke Bomb
+    - 5822 # Concussion Bomb
+    - 5823 # Fire Bomb
+    - 5842 # Bomb
+    - 6111 # Stow Bomb Kit
 
 - name: Flamethrower
   skills:
-    - name: Smoke Vent
-      id: 6159
-    - name: Napalm
-      id: 5929
-    - name: Air Blast
-      id: 5930
-    - name: Flame Blast
-      id: 5931
-    - name: Flame Jet
-      id: 5928
+    - 6159 # Smoke Vent
+    - 5929 # Napalm
+    - 5930 # Air Blast
+    - 5931 # Flame Blast
+    - 5928 # Flame Jet
 
 - name: Elixir Gun
   skills:
-    - name: Super Elixir
-      id: 5937
-    - name: Super Elixir
-      id: 6102
-    - name: Acid Bomb
-      id: 5936
-    - name: Fumigate
-      id: 5965
-    - name: Glob Shot
-      id: 5935
-    - name: Tranquilizer Dart
-      id: 5934
-    - name: Stow Elixir Gun
-      id: 6115
+    - 5937 # Super Elixir
+    - 6102 # Super Elixir
+    - 5936 # Acid Bomb
+    - 5965 # Fumigate
+    - 5935 # Glob Shot
+    - 5934 # Tranquilizer Dart
+    - 6115 # Stow Elixir Gun
 
 - name: Tool Kit
   skills:
-    - name: Magnet
-      id: 5996
-    - name: Gear Shield
-      id: 5998
-    - name: Pry Bar
-      id: 5905
-    - name: Box of Nails
-      id: 5995
-    - name: Box of Piranhas
-      id: 6175
-    - name: Smack
-      id: 5992
-    - name: Whack
-      id: 5993
-    - name: Thwack
-      id: 5994
-    - name: Stow Tool Kit
-      id: 6113
+    - 5996 # Magnet
+    - 5998 # Gear Shield
+    - 5905 # Pry Bar
+    - 5995 # Box of Nails
+    - 6175 # Box of Piranhas
+    - 5992 # Smack
+    - 5993 # Whack
+    - 5994 # Thwack
+    - 6113 # Stow Tool Kit
 
 - name: Elite Mortar Kit
   skills:
-    - name: Elixir Shell
-      id: 30032
-    - name: Flash Shell
-      id: 30121
-    - name: Endothermic Shell
-      id: 30307
-    - name: Poison Gas Shell
-      id: 30885
-    - name: Mortar Shot
-      id: 30371
+    - 30032 # Elixir Shell
+    - 30121 # Flash Shell
+    - 30307 # Endothermic Shell
+    - 30885 # Poison Gas Shell
+    - 30371 # Mortar Shot
 
   # elixir x transforms
 - name: Rampage
   skills:
-    - name: Seismic Leap
-      id: 14490
-    - name: Throw Boulder
-      id: 14556
-    - name: Dash
-      id: 14489
-    - name: Kick
-      id: 14488
-    - name: Smash
-      id: 14485
-    - name: Bash
-      id: 14486
-    - name: Uppercut
-      id: 14487
+    - 14490 # Seismic Leap
+    - 14556 # Throw Boulder
+    - 14489 # Dash
+    - 14488 # Kick
+    - 14485 # Smash
+    - 14486 # Bash
+    - 14487 # Uppercut
 
 - name: Tornado
   skills:
-    - name: Dust Charge
-      id: 35304
-    - name: Elemental Requiem
-      id: 35224
-    - name: Debris Tornado
-      id: 5754
-    - name: Dust Tornado
-      id: 5753
-    - name: Electrified Tornado
-      id: 5752
+    - 35304 # Dust Charge
+    - 35224 # Elemental Requiem
+    - 5754 # Debris Tornado
+    - 5753 # Dust Tornado
+    - 5752 # Electrified Tornado
 
 - name: Plague
   skills:
-    - name: Withering Plague
-      id: 10661
-    - name: Plague of Darkness
-      id: 10662
-    - name: Plague of Pestilence
-      id: 10663
-    - name: Locked
-      id: 10586
+    - 10661 # Withering Plague
+    - 10662 # Plague of Darkness
+    - 10663 # Plague of Pestilence
+    - 10586 # Locked

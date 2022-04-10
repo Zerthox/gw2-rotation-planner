@@ -1,108 +1,61 @@
 - name: Heal
   skills:
-    - name: Ether Feast
-      id: 10176
-    - name: Mirror
-      id: 10177
-    - name: Mantra of Recovery
-      id: 10213
-    - name: Signet of the Ether
-      id: 21750
+    - 10176 # Ether Feast
+    - 10177 # Mirror
+    - 10213 # Mantra of Recovery
+    - 21750 # Signet of the Ether
 
     # specs
-    - name: Well of Eternity
-      id: 30305
-    - name: False Oasis
-      id: 40200
-    - name: Twin Blade Restoration
-      id: 62522
+    - 30305 # Well of Eternity
+    - 40200 # False Oasis
+    - 62522 # Twin Blade Restoration
 
 - name: Utility
   skills:
-    - name: Signet of Inspiration
-      id: 10236
-    - name: Signet of Domination
-      id: 10232
-    - name: Signet of Midnight
-      id: 10234
-    - name: Signet of Illusions
-      id: 10247
-    - name: Mantra of Pain
-      id: 10211
-    - name: Mantra of Distraction
-      id: 10204
-    - name: Mantra of Resolve
-      id: 10207
-    - name: Mantra of Concentration
-      id: 10237
-    - name: Blink
-      id: 10200
-    - name: Arcane Thievery
-      id: 10185
-    - name: Illusion of Life
-      id: 10244
-    - name: Mimic
-      id: 29578
-    - name: Decoy
-      id: 10201
-    - name: Mirror Images
-      id: 10202
-    - name: Phantasmal Defender
-      id: 10341
-    - name: Phantasmal Disenchanter
-      id: 10267
-    - name: Null Field
-      id: 10203
-    - name: Feedback
-      id: 10302
-    - name: Portal Entre
-      id: 10197
-    - name: Portal Exeunt
-      id: 10199
-    - name: Veil
-      id: 10187
+    - 10236 # Signet of Inspiration
+    - 10232 # Signet of Domination
+    - 10234 # Signet of Midnight
+    - 10247 # Signet of Illusions
+    - 10211 # Mantra of Pain
+    - 10204 # Mantra of Distraction
+    - 10207 # Mantra of Resolve
+    - 10237 # Mantra of Concentration
+    - 10200 # Blink
+    - 10185 # Arcane Thievery
+    - 10244 # Illusion of Life
+    - 29578 # Mimic
+    - 10201 # Decoy
+    - 10202 # Mirror Images
+    - 10341 # Phantasmal Defender
+    - 10267 # Phantasmal Disenchanter
+    - 10203 # Null Field
+    - 10302 # Feedback
+    - 10197 # Portal Entre
+    - 10199 # Portal Exeunt
+    - 10187 # Veil
 
     # specs
-    - name: Well of Precognition
-      id: 29526
-    - name: Well of Calamity
-      id: 30525
-    - name: Well of Recall
-      id: 29856
-    - name: Well of Action
-      id: 30814
-    - name: Illusionary Ambush
-      id: 45046
-    - name: Mirage Advance
-      id: 42851
-    - name: Mirage Retreat
-      id: 45666
-    - name: Sand through Glass
-      id: 43064
-    - name: Crystal Sands
-      id: 41065
-    - name: Psychic Force
-      id: 62573
-    - name: Rain of Swords
-      id: 45425
-    - name: Blade Renewal
-      id: 43343
-    - name: Sword of Decimation
-      id: 35637
+    - 29526 # Well of Precognition
+    - 30525 # Well of Calamity
+    - 29856 # Well of Recall
+    - 30814 # Well of Action
+    - 45046 # Illusionary Ambush
+    - 42851 # Mirage Advance
+    - 45666 # Mirage Retreat
+    - 43064 # Sand through Glass
+    - 41065 # Crystal Sands
+    - 62573 # Psychic Force
+    - 45425 # Rain of Swords
+    - 43343 # Blade Renewal
+    - 35637 # Sword of Decimation
 
 - name: Elite
   skills:
-    - name: Signet of Humility
-      id: 29519
-    - name: Time Warp
-      id: 10311
-    - name: Mass Invisibility
-      id: 10245
+    - 29519 # Signet of Humility
+    - 10311 # Time Warp
+    - 10245 # Mass Invisibility
 
     # specs
-    - name: Gravity Well
-      id: 30359
-    - name: Jaunt
-      id: 45449
-    - name: Thousand Cuts
-      id: 24755
+    - 30359 # Gravity Well
+    - 45449 # Jaunt
+    - 24755 # Thousand Cuts

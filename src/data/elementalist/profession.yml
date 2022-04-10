@@ -1,32 +1,20 @@
 - name: Attunement
   skills:
-    - name: Fire Attunement
-      id: 5492
-    - name: Water Attunement
-      id: 5493
-    - name: Air Attunement
-      id: 5494
-    - name: Earth Attunement
-      id: 5495
+    - 5492 # Fire Attunement
+    - 5493 # Water Attunement
+    - 5494 # Air Attunement
+    - 5495 # Earth Attunement
 
 - name: Tempest
   skills:
-    - name: Overload Fire
-      id: 29706
-    - name: Overload Water
-      id: 29415
-    - name: Overload Air
-      id: 29719
-    - name: Overload Earth
-      id: 29618
+    - 29706 # Overload Fire
+    - 29415 # Overload Water
+    - 29719 # Overload Air
+    - 29618 # Overload Earth
 
 - name: Catalyst
   skills:
-    - name: Deploy Jade Sphere (Fire)
-      id: 62813
-    - name: Deploy Jade Sphere (Air)
-      id: 62940
-    - name: Deploy Jade Sphere (Water)
-      id: 62723
-    - name: Deploy Jade Sphere (Earth)
-      id: 62837
+    - 62813 # Deploy Jade Sphere (Fire)
+    - 62940 # Deploy Jade Sphere (Air)
+    - 62723 # Deploy Jade Sphere (Water)
+    - 62837 # Deploy Jade Sphere (Earth)

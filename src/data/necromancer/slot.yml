@@ -1,114 +1,65 @@
 - name: Heal
   skills:
-    - name: Summon Blood Fiend
-      id: 10547
-    - name: Taste of Death
-      id: 10577
-    - name: Consume Conditions
-      id: 10548
-    - name: Well of Blood
-      id: 10527
-    - name: Signet of Vampirism
-      id: 21762
+    - 10547 # Summon Blood Fiend
+    - 10577 # Taste of Death
+    - 10548 # Consume Conditions
+    - 10527 # Well of Blood
+    - 21762 # Signet of Vampirism
 
     # specs
-    - name: '"You Are All Weaklings!"'
-      id: 29414
-    - name: Sand Flare
-      id: 43148
-    - name: Elixir of Promise
-      id: 62667
+    - 29414 # "You Are All Weaklings!"
+    - 43148 # Sand Flare
+    - 62667 # Elixir of Promise
 
 - name: Utility
-    - name: Well of Suffering
-      id: 10546
-    - name: Well of Corruption
-      id: 10545
-    - name: Well of Power
-      id: 10609
-    - name: Well of Darkness
-      id: 10607
-    - name: Summon Bone Minions
-      id: 10541
-    - name: Putrid Explosion
-      id: 10540
-    - name: Summon Bone Fiend
-      id: 10533
-    - name: Rigor Mortis
-      id: 10570
-    - name: Summon Shadow Fiend
-      id: 10589
-    - name: Haunt
-      id: 10590
-    - name: Summon Flesh Wurm
-      id: 10543
-    - name: Signet of Spite
-      id: 10622
-    - name: Signet of the Locust
-      id: 10612
-    - name: Plague Signet
-      id: 10562
-    - name: Signet of Undeath
-      id: 10611
-    - name: Spectral Armor
-      id: 10583
-    - name: Spectral Grasp
-      id: 10620
-    - name: Spectral Ring
-      id: 10608
-    - name: Spectral Walk
-      id: 10685
-    - name: Spectral Recall
-      id: 10687
-    - name: Corrosive Poison Cloud
-      id: 10689
-    - name: Epidemic
-      id: 10606
-    - name: Corrupt Boon
-      id: 10602
-    - name: Blood Is Power
-      id: 10544
+  skills:
+    - 10546 # Well of Suffering
+    - 10545 # Well of Corruption
+    - 10609 # Well of Power
+    - 10607 # Well of Darkness
+    - 10541 # Summon Bone Minions
+    - 10540 # Putrid Explosion
+    - 10533 # Summon Bone Fiend
+    - 10570 # Rigor Mortis
+    - 10589 # Summon Shadow Fiend
+    - 10590 # Haunt
+    - 10543 # Summon Flesh Wurm
+    - 10622 # Signet of Spite
+    - 10612 # Signet of the Locust
+    - 10562 # Plague Signet
+    - 10611 # Signet of Undeath
+    - 10583 # Spectral Armor
+    - 10620 # Spectral Grasp
+    - 10608 # Spectral Ring
+    - 10685 # Spectral Walk
+    - 10687 # Spectral Recall
+    - 10689 # Corrosive Poison Cloud
+    - 10606 # Epidemic
+    - 10602 # Corrupt Boon
+    - 10544 # Blood Is Power
 
     # specs
-    - name: '"Suffer!"'
-      id: 30670
-    - name: '"Nothing Can Save You!"'
-      id: 29666
-    - name: '"Rise!"'
-      id: 30772
-    - name: '"Your Soul Is Mine!"'
-      id: 30488
-    - name: Trail of Anguish
-      id: 40274
-    - name: Desiccate
-      id: 42935
-    - name: Sand Swell
-      id: 42917
-    - name: Serpent Siphon
-      id: 41615
-    - name: Elixir of Risk
-      id: 62530
-    - name: Elixir of Ignorance
-      id: 62646
-    - name: Elixir of Bliss
-      id: 62514
-    - name: Elixir of Anguish
-      id: 62662
+    - 30670 # "Suffer!"
+    - 29666 # "Nothing Can Save You!"
+    - 30772 # "Rise!"
+    - 30488 # "Your Soul Is Mine!"
+    - 40274 # Trail of Anguish
+    - 42935 # Desiccate
+    - 42917 # Sand Swell
+    - 41615 # Serpent Siphon
+    - 62530 # Elixir of Risk
+    - 62646 # Elixir of Ignorance
+    - 62514 # Elixir of Bliss
+    - 62662 # Elixir of Anguish
 
 - name: Elite
-    - name: Plaguelands
-      id: 10549
-    - name: Summon Flesh Golem
-      id: 10646
-    - name: Charge
-      id: 10647
-    - name: Lich Form
-      id: 10550
+  skills:
+    - 10549 # Plaguelands
+    - 10646 # Summon Flesh Golem
+    - 10647 # Charge
+    - 10550 # Lich Form
 
     # specs
-    - name: '"Chilled to the Bone!"'
-      id: 30105
-    - name: Ghastly Breach
-      id: 42355
-    - name: Elixir of Ambition
-      id: 62655
+    - 30105 # "Chilled to the Bone!"
+    - 42355 # Ghastly Breach
+    - 62655 # Elixir of Ambition

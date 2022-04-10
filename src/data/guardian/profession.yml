@@ -1,39 +1,25 @@
-- name: Virtues
+- name: Virtue
   skills:
-    - name: Virtue of Justice
-      id: 9115
-    - name: Virtue of Courage
-      id: 9118
-    - name: Virtue of Resolve
-      id: 9120
+    - 9115 # Virtue of Justice
+    - 9118 # Virtue of Courage
+    - 9120 # Virtue of Resolve
 
 - name: Dragonhunter
   skills:
-    - name: Spear of Justice
-      id: 29887
-    - name: Hunter's Verdict
-      id: 33134
-    - name: Wings of Resolve
-      id: 30225
-    - name: Shield of Courage
-      id: 30029
+    - 29887 # Spear of Justice
+    - 33134 # Hunter's Verdict
+    - 30225 # Wings of Resolve
+    - 30029 # Shield of Courage
 
 - name: Firebrand
   skills:
-    - name: Tome of Justice
-      id: 44364
-    - name: Tome of Resolve
-      id: 41780
-    - name: Tome of Courage
-      id: 42259
-    - name: Stow Tome
-      id: 41380
+    - 44364 # Tome of Justice
+    - 41780 # Tome of Resolve
+    - 42259 # Tome of Courage
+    - 41380 # Stow Tome
 
 - name: Willbender
   skills:
-    - name: Rushing Justice
-      id: 62668
-    - name: Flowing Resolve
-      id: 62603
-    - name: Crashing Courage
-      id: 62648
+    - 62668 # Rushing Justice
+    - 62603 # Flowing Resolve
+    - 62648 # Crashing Courage

@@ -1,120 +1,65 @@
 - name: Heal
   skills:
-    - name: Shelter
-      id: 9102
-    - name: Signet of Resolve
-      id: 9158
-    - name: '"Receive the Light!"'
-      id: 9083
-    - name: Litany of Wrath
-      id: 21664
+    - 9102 # Shelter
+    - 9158 # Signet of Resolve
+    - 9083 # "Receive the Light!"
+    - 21664 # Litany of Wrath
 
     # specs
-    - name: Purification
-      id: 30025
-    - name: Mantra of Solace
-      id: 41714
-    - name: Reversal of Fortune
-      id: 62622
+    - 30025 # Purification
+    - 41714 # Mantra of Solace
+    - 62622 # Reversal of Fortune
 
 - name: Utility
   skills:
-    - name: Hammer of Wisdom
-      id: 9125
-    - name: Hammer of Wisdom
-      id: 46170
-    - name: Sword of Justice
-      id: 9168
-    - name: Sword of Justice
-      id: 44846
-    - name: Bow of Truth
-      id: 9175
-    - name: Bow of Truth
-      id: 43565
-    - name: Shield of the Avenger
-      id: 9182
-    - name: Shield of the Avenger
-      id: 41571
-    - name: Bane Signet
-      id: 9093
-    - name: Signet of Judgment
-      id: 9150
-    - name: Signet of Wrath
-      id: 9151
-    - name: Signet of Mercy
-      id: 9163
-    - name: '"Advance!"'
-      id: 9084
-    - name: '"Save Yourselves!"'
-      id: 9085
-    - name: '"Stand Your Ground!"'
-      id: 9153
-    - name: '"Hold the Line!"'
-      id: 9152
-    - name: Wall of Reflection
-      id: 9251
-    - name: Purging Flames
-      id: 9187
-    - name: Hallowed Ground
-      id: 9253
-    - name: Sanctuary
-      id: 9128
-    - name: Smite Condition
-      id: 9245
-    - name: Contemplation of Purity
-      id: 9248
-    - name: Judge's Intervention
-      id: 9247
-    - name: Merciful Intervention
-      id: 9246
+    - 9125 # Hammer of Wisdom
+    - 46170 # Hammer of Wisdom
+    - 9168 # Sword of Justice
+    - 44846 # Sword of Justice
+    - 9175 # Bow of Truth
+    - 43565 # Bow of Truth
+    - 9182 # Shield of the Avenger
+    - 41571 # Shield of the Avenger
+    - 9093 # Bane Signet
+    - 9150 # Signet of Judgment
+    - 9151 # Signet of Wrath
+    - 9163 # Signet of Mercy
+    - 9084 # "Advance!"
+    - 9085 # "Save Yourselves!"
+    - 9153 # "Stand Your Ground!"
+    - 9152 # "Hold the Line!"
+    - 9251 # Wall of Reflection
+    - 9187 # Purging Flames
+    - 9253 # Hallowed Ground
+    - 9128 # Sanctuary
+    - 9245 # Smite Condition
+    - 9248 # Contemplation of Purity
+    - 9247 # Judge's Intervention
+    - 9246 # Merciful Intervention
 
-    # dragonhunter
-    - name: Test of Faith
-      id: 29786
-    - name: Fragments of Faith
-      id: 30553
-    - name: Procession of Blades
-      id: 30364
-    - name: Light's Judgment
-      id: 30871
-
-    # firebrand
-    - name: Mantra of Potence
-      id: 40915
-    - name: Mantra of Flame
-      id: 46148
-    - name: Mantra of Truth
-      id: 44080
-    - name: Mantra of Lore
-      id: 45460
-
-    # willbender
-    - name: Flash Combo
-      id: 62608
-    - name: Repose
-      id: 62669
-    - name: Roiling Light
-      id: 62521
-    - name: Quick Retribution
-      id: 62676
-    - name: Whirling Light
-      id: 62565
-    - name: Heel Crack
-      id: 62549
+    # specs
+    - 29786 # Test of Faith
+    - 30553 # Fragments of Faith
+    - 30364 # Procession of Blades
+    - 30871 # Light's Judgment
+    - 40915 # Mantra of Potence
+    - 46148 # Mantra of Flame
+    - 44080 # Mantra of Truth
+    - 45460 # Mantra of Lore
+    - 62608 # Flash Combo
+    - 62669 # Repose
+    - 62521 # Roiling Light
+    - 62676 # Quick Retribution
+    - 62565 # Whirling Light
+    - 62549 # Heel Crack
 
 - name: Elite
   skills:
-    - name: '"Feel My Wrath!"'
-      id: 29965
-    - name: Renewed Focus
-      id: 9154
-    - name: Signet of Courage
-      id: 30461
+    - 29965 # "Feel My Wrath!"
+    - 9154 # Renewed Focus
+    - 30461 # Signet of Courage
 
     # specs
-    - name: Dragon's Maw
-      id: 30273
-    - name: Mantra of Liberation
-      id: 43357
-    - name: Heaven's Palm
-      id: 62561
+    - 30273 # Dragon's Maw
+    - 43357 # Mantra of Liberation
+    - 62561 # Heaven's Palm

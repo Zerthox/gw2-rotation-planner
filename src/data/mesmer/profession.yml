@@ -1,40 +1,24 @@
 - name: Shatter
   skills:
-    - name: Distortion
-      id: 10192
-    - name: Diversion
-      id: 10287
-    - name: Cry of Frustration
-      id: 10190
-    - name: Mind Wrack
-      id: 10191
-    - name: Mind Wrack
-      id: 49068
+    - 10192 # Distortion
+    - 10287 # Diversion
+    - 10190 # Cry of Frustration
+    - 10191 # Mind Wrack
+    - 49068 # Mind Wrack
 
 - name: Chronomancer
   skills:
-    - name: Split Second
-      id: 56930
-    - name: Split Second
-      id: 56925
-    - name: Rewinder
-      id: 56928
-    - name: Time Sink
-      id: 56873
-    - name: Continuum Split
-      id: 29830
-    - name: Continuum Shift
-      id: 30747
+    - 56930 # Split Second
+    - 56925 # Split Second
+    - 56928 # Rewinder
+    - 56873 # Time Sink
+    - 29830 # Continuum Split
+    - 30747 # Continuum Shift
 
 - name: Virtuoso
   skills:
-    - name: Bladesong Harmony
-      id: 62617
-    - name: Bladesong Harmony
-      id: 62586
-    - name: Bladesong Sorrow
-      id: 62616
-    - name: Bladesong Dissonance
-      id: 62602
-    - name: Bladeturn Requiem
-      id: 62597
+    - 62617 # Bladesong Harmony
+    - 62586 # Bladesong Harmony
+    - 62616 # Bladesong Sorrow
+    - 62602 # Bladesong Dissonance
+    - 62597 # Bladeturn Requiem

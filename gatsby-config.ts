@@ -1,11 +1,5 @@
 import path from "path";
-import {GatsbyConfig, Node} from "gatsby";
-
-interface YamlTypeNameArgs {
-    node: Node;
-    object: unknown;
-    isArray: boolean;
-}
+import {GatsbyConfig} from "gatsby";
 
 const config: GatsbyConfig = {
     siteMetadata: {
@@ -20,7 +14,7 @@ const config: GatsbyConfig = {
         {
             resolve: "gatsby-transformer-yaml",
             options: {
-                typeName: ({node}: YamlTypeNameArgs) => node.relativeDirectory
+                typeName: "DataYaml"
             }
         },
         {

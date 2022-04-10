@@ -1,93 +1,57 @@
-  Pistol:
-  - name: - name: Fragmentation Sho
-    skills:
-      id: 5827
-    - name: Poison Dart Volley
-      id: 5828
-    - name: Static Shot
-      id: 5829
-    - name: Blowtorch
-      id: 5831
-    - name: Glue Shot
-      id: 5830
+- name: Pistol
+  skills:
+    - 5827 # Fragmentation Shot
+    - 5828 # Poison Dart Volley
+    - 5829 # Static Shot
+    - 5831 # Blowtorch
+    - 5830 # Glue Shot
 
 - name: Rifle
   skills:
-    - name: Hip Shot
-      id: 6003
-    - name: Net Shot
-      id: 6004
-    - name: Blunderbuss
-      id: 6153
-    - name: Overcharged Shot
-      id: 6154
-    - name: Jump Shot
-      id: 6005
+    - 6003 # Hip Shot
+    - 6004 # Net Shot
+    - 6153 # Blunderbuss
+    - 6154 # Overcharged Shot
+    - 6005 # Jump Shot
 
 - name: Shield
   skills:
-    - name: Magnetic Shield
-      id: 6053
-    - name: Magnetic Inversion
-      id: 6126
-    - name: Static Shield
-      id: 6054
-    - name: Throw Shield
-      id: 6057
+    - 6053 # Magnetic Shield
+    - 6126 # Magnetic Inversion
+    - 6054 # Static Shield
+    - 6057 # Throw Shield
 
 - name: Hammer
   skills:
-    - name: Positive Strike
-      id: 30501
-    - name: Negative Bash
-      id: 29785
-    - name: Equalizing Blow
-      id: 30489
-    - name: Electro-whirl
-      id: 30088
-    - name: Rocket Charge
-      id: 30665
-    - name: Shock Shield
-      id: 29840
-    - name: Thunderclap
-      id: 30713
+    - 30501 # Positive Strike
+    - 29785 # Negative Bash
+    - 30489 # Equalizing Blow
+    - 30088 # Electro-whirl
+    - 30665 # Rocket Charge
+    - 29840 # Shock Shield
+    - 30713 # Thunderclap
 
 - name: Sword
   skills:
-    - name: Sun Edge
-      id: 43476
-    - name: Sun Ripper
-      id: 45581
-    - name: Gleam Saber
-      id: 45979
-    - name: Refraction Cutter
-      id: 44110
-    - name: Radiant Arc
-      id: 40160
+    - 43476 # Sun Edge
+    - 45581 # Sun Ripper
+    - 45979 # Gleam Saber
+    - 44110 # Refraction Cutter
+    - 40160 # Radiant Arc
 
 - name: Mace
   skills:
-    - name: Mace Strike
-      id: 63186
-    - name: Mace Smash
-      id: 63077
-    - name: Barrier Blast
-      id: 63174
-    - name: Energizing Slam
-      id: 63169
-    - name: Rocket Fist Prototype
-      id: 63234
+    - 63186 # Mace Strike
+    - 63077 # Mace Smash
+    - 63174 # Barrier Blast
+    - 63169 # Energizing Slam
+    - 63234 # Rocket Fist Prototype
 
 # underwater
 - name: Harpoon Gun
   skills:
-    - name: Homing Torpedo
-      id: 6148
-    - name: Scatter Mines
-      id: 6147
-    - name: Capture Line
-      id: 50380
-    - name: Timed Charge
-      id: 6149
-    - name: Net Wall
-      id: 6145
+    - 6148 # Homing Torpedo
+    - 6147 # Scatter Mines
+    - 50380 # Capture Line
+    - 6149 # Timed Charge
+    - 6145 # Net Wall

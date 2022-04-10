@@ -1,35 +1,23 @@
 - name: Shroud
   skills:
-    - name: Death Shroud
-      id: 10574
-    - name: End Death Shroud
-      id: 10585
+    - 10574 # Death Shroud
+    - 10585 # End Death Shroud
 
 - name: Reaper
   skills:
-    - name: Reaper's Shroud
-      id: 30792
-    - name: Exit Reaper's Shroud
-      id: 30961
+    - 30792 # Reaper's Shroud
+    - 30961 # Exit Reaper's Shroud
 
 - name: Scourge
   skills:
-    - name: Manifest Sand Shade
-      id: 42297
-    - name: Nefarious Favor
-      id: 40813
-    - name: Sand Cascade
-      id: 43448
-    - name: Garish Pillar
-      id: 44428
-    - name: Desert Shroud
-      id: 44663
-    - name: Sandstorm Shroud
-      id: 54870
+    - 42297 # Manifest Sand Shade
+    - 40813 # Nefarious Favor
+    - 43448 # Sand Cascade
+    - 44428 # Garish Pillar
+    - 44663 # Desert Shroud
+    - 54870 # Sandstorm Shroud
 
 - name: Harbinger
   skills:
-    - name: Harbinger Shroud
-      id: 62567
-    - name: Exit Harbinger Shroud
-      id: 62540
+    - 62567 # Harbinger Shroud
+    - 62540 # Exit Harbinger Shroud

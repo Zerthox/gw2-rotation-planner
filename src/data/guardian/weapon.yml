@@ -1,175 +1,107 @@
-  Focus:
-  - name: - name: Ray of Judgmen
-    skills:
-      id: 9112
-    - name: Shield of Wrath
-      id: 9082
+- name: Focus
+  skills:
+    - 9112 # Ray of Judgement
+    - 9082 # Shield of Wrath
 
 - name: Greatsword
   skills:
-    - name: Strike
-      id: 9137
-    - name: Vengeful Strike
-      id: 9138
-    - name: Wrathful Strike
-      id: 9139
-    - name: Whirling Wrath
-      id: 9081
-    - name: Leap of Faith
-      id: 9080
-    - name: Symbol of Resolution
-      id: 9146
-    - name: Binding Blade
-      id: 9147
-    - name: Pull
-      id: 9226
+    - 9137 # Strike
+    - 9138 # Vengeful Strike
+    - 9139 # Wrathful Strike
+    - 9081 # Whirling Wrath
+    - 9080 # Leap of Faith
+    - 9146 # Symbol of Resolution
+    - 9147 # Binding Blade
+    - 9226 # Pull
 
 - name: Hammer
   skills:
-    - name: Hammer Swing
-      id: 9159
-    - name: Hammer Bash
-      id: 9160
-    - name: Symbol of Protection
-      id: 9161
-    - name: Mighty Blow
-      id: 9194
-    - name: Glacial Blow
-      id: 53482
-    - name: Zealot's Embrace
-      id: 9260
-    - name: Banish
-      id: 9124
-    - name: Ring of Warding
-      id: 9195
+    - 9159 # Hammer Swing
+    - 9160 # Hammer Bash
+    - 9161 # Symbol of Protection
+    - 9194 # Mighty Blow
+    - 53482 # Glacial Blow
+    - 9260 # Zealot's Embrace
+    - 9124 # Banish
+    - 9195 # Ring of Warding
 
 - name: Spear
   skills:
-    - name: Spear of Light
-      id: 9189
-    - name: Zealot's Flurry
-      id: 9190
-    - name: Brilliance
-      id: 9191
-    - name: Symbol of Spears
-      id: 9192
-    - name: Wrathful Grasp
-      id: 9193
+    - 9189 # Spear of Light
+    - 9190 # Zealot's Flurry
+    - 9191 # Brilliance
+    - 9192 # Symbol of Spears
+    - 9193 # Wrathful Grasp
 
 - name: Mace
   skills:
-    - name: True Strike
-      id: 9109
-    - name: Pure Strike
-      id: 9110
-    - name: Faithful Strike
-      id: 9108
-    - name: Symbol of Faith
-      id: 9111
-    - name: Protector's Strike
-      id: 9086
+    - 9109 # True Strike
+    - 9110 # Pure Strike
+    - 9108 # Faithful Strike
+    - 9111 # Symbol of Faith
+    - 9086 # Protector's Strike
 
 - name: Scepter
   skills:
-    - name: Orb of Wrath
-      id: 9098
-    - name: Symbol of Punishment
-      id: 9090
-    - name: Chains of Light
-      id: 9099
+    - 9098 # Orb of Wrath
+    - 9090 # Symbol of Punishment
+    - 9099 # Chains of Light
 
 - name: Shield
   skills:
-    - name: Shield of Judgment
-      id: 15834
-    - name: Shield of Judgment
-      id: 9087
-    - name: Shield of Absorption
-      id: 9091
-    - name: Shield of Absorption
-      id: 9224
+    - 15834 # Shield of Judgment
+    - 9087 # Shield of Judgment
+    - 9091 # Shield of Absorption
+    - 9224 # Shield of Absorption
 
 - name: Staff
   skills:
-    - name: Bolt of Wrath
-      id: 9122
-    - name: Searing Light
-      id: 51660
-    - name: Holy Strike
-      id: 9140
-    - name: Symbol of Swiftness
-      id: 9143
-    - name: Empower
-      id: 9265
-    - name: Line of Warding
-      id: 9144
+    - 9122 # Bolt of Wrath
+    - 51660 # Searing Light
+    - 9140 # Holy Strike
+    - 9143 # Symbol of Swiftness
+    - 9265 # Empower
+    - 9144 # Line of Warding
 
 - name: Sword
   skills:
-    - name: Sword of Wrath
-      id: 9105
-    - name: Sword Arc
-      id: 9106
-    - name: Sword Wave
-      id: 9227
-    - name: Symbol of Blades
-      id: 9097
-    - name: Zealot's Defense
-      id: 9107
-    - name: Executioner's Calling
-      id: 62525
-    - name: Advancing Strike
-      id: 62650
+    - 9105 # Sword of Wrath
+    - 9106 # Sword Arc
+    - 9227 # Sword Wave
+    - 9097 # Symbol of Blades
+    - 9107 # Zealot's Defense
+    - 62525 # Executioner's Calling
+    - 62650 # Advancing Strike
 
 - name: Torch
   skills:
-    - name: Zealot's Flame
-      id: 9104
-    - name: Zealot's Fire
-      id: 9089
-    - name: Cleansing Flame
-      id: 9088
+    - 9104 # Zealot's Flame
+    - 9089 # Zealot's Fire
+    - 9088 # Cleansing Flame
 
 - name: Longbow
   skills:
-    - name: Puncture Shot
-      id: 30471
-    - name: True Shot
-      id: 30229
-    - name: Deflecting Shot
-      id: 29630
-    - name: Symbol of Energy
-      id: 29789
-    - name: Hunter's Ward
-      id: 30628
+    - 30471 # Puncture Shot
+    - 30229 # True Shot
+    - 29630 # Deflecting Shot
+    - 29789 # Symbol of Energy
+    - 30628 # Hunter's Ward
 
 - name: Axe
   skills:
-    - name: Core Cleave
-      id: 45047
-    - name: Bleeding Edge
-      id: 44602
-    - name: Searing Slash
-      id: 43826
-    - name: Symbol of Vengeance
-      id: 40624
-    - name: Blazing Edge
-      id: 45402
+    - 45047 # Core Cleave
+    - 44602 # Bleeding Edge
+    - 43826 # Searing Slash
+    - 40624 # Symbol of Vengeance
+    - 45402 # Blazing Edge
 
 # underwater
 - name: Trident
   skills:
-    - name: Light Ball
-      id: 9205
-    - name: Detonate Light
-      id: 50399
-    - name: Purify
-      id: 9207
-    - name: Purifying Blast
-      id: 9234
-    - name: Symbol of Light
-      id: 9208
-    - name: Refraction
-      id: 9209
-    - name: Weight of Justice
-      id: 9206
+    - 9205 # Light Ball
+    - 50399 # Detonate Light
+    - 9207 # Purify
+    - 9234 # Purifying Blast
+    - 9208 # Symbol of Light
+    - 9209 # Refraction
+    - 9206 # Weight of Justice
