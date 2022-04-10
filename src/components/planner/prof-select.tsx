@@ -2,19 +2,18 @@ import React, {useCallback, useEffect} from "react";
 import {Box, Stack, Select, MenuItem, Typography} from "@mui/material";
 import {useDispatch} from "react-redux";
 import {useCurrentProfession, changeProfession} from "../../store/build";
-import {useProfessionsData, Profession} from "../../hooks/data";
-
-// TODO: colorize icon (and maybe name)
+import {Profession, professionIcons, professionIconSize} from "../../data";
+import {useAllSkillSections} from "../../hooks/data";
 
 export const ProfessionSelect = (): JSX.Element => {
     const dispatch = useDispatch();
-    const data = useProfessionsData();
+    const sections = useAllSkillSections();
     const prof = useCurrentProfession();
 
-    const onChange = useCallback((prof: Profession) => {
-        const profData = data.find(({name}) => name === prof);
-        dispatch(changeProfession(profData));
-    }, [dispatch, data]);
+    const onChange = useCallback((profession: Profession) => {
+        const profSections = sections.filter((section) => section.profession === profession);
+        dispatch(changeProfession({profession, sections: profSections}));
+    }, [dispatch, sections]);
 
     useEffect(() => {
         if (!prof) {
@@ -27,15 +26,15 @@ export const ProfessionSelect = (): JSX.Element => {
             value={prof ?? ""}
             onChange={({target}) => onChange(target.value as Profession)}
         >
-            {data.map(({name, icon}) => (
+            {Object.entries(professionIcons).map(([name, icon]) => (
                 <MenuItem key={name} value={name}>
                     <Stack direction="row" alignItems="center" spacing={0.5}>
                         <Box
                             component="img"
                             src={icon}
                             sx={{
-                                height: 24,
-                                width: 24
+                                height: professionIconSize,
+                                width: professionIconSize
                             }}
                         />
                         <Typography>

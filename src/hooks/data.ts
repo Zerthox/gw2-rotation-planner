@@ -1,129 +1,61 @@
+import {useMemo} from "react";
 import {useStaticQuery, graphql} from "gatsby";
+import {Profession, SkillData} from "../data";
 
-export enum Profession {
-    Guardian = "Guardian",
-    Warrior = "Warrior",
-    Engineer = "Engineer",
-    Ranger = "Ranger",
-    Thief = "Thief",
-    Elementalist = "Elementalist",
-    Mesmer = "Mesmer",
-    Necromancer = "Necromancer",
-    Revenant = "Revenant"
-}
-
-export interface ProfessionData {
+export interface SkillSection {
     name: string;
-    profession: SkillData[];
-    weapon: SkillData[];
-    slot: SkillData[];
-    bundle: SkillData[];
+    profession: Profession;
+    skills: SkillData[];
 }
 
-export enum SkillType {
-    Weapon = "Weapon",
-    Profession = "Profession",
-    Heal = "Heal",
-    Utility = "Utility",
-    Elite = "Elite",
-    Bundle = "Bundle"
-}
-
-export enum SkillSlot {
-    Weapon1 = "Weapon_1",
-    Weapon2 = "Weapon_2",
-    Weapon3 = "Weapon_3",
-    Weapon4 = "Weapon_4",
-    Weapon5 = "Weapon_5",
-    Profession1 = "Profession_1",
-    Profession2 = "Profession_2",
-    Profession3 = "Profession_3",
-    Profession4 = "Profession_4",
-    Profession5 = "Profession_5",
-    Profession6 = "Profession_6",
-    Profession7 = "Profession_7",
-    Heal = "Heal",
-    Utility = "Utility",
-    Elite = "Elite"
-}
-
-export const isWeaponSlot = (slot: SkillSlot): boolean => slot.startsWith("Weapon");
-
-export const isProfessionSlot = (slot: SkillSlot): boolean => slot.startsWith("Profession");
-
-export enum Attunement {
-    Fire = "Fire",
-    Water = "Water",
-    Air = "Air",
-    Earth = "Earth"
-}
-
-export enum WeaponType {
-    Axe = "Axe",
-    Dagger = "Dagger",
-    Mace = "Mace",
-    Pistol = "Pistol",
-    Sword = "Sword",
-    Scepter = "Scepter",
-    Focus = "Focus",
-    Shield = "Shield",
-    Torch = "Torch",
-    Warhorn = "Warhorn",
-    Greatsword = "Greatsword",
-    Hammer = "Hammer",
-    Longbow = "Longbow",
-    Rifle = "Rifle",
-    Shortbow = "Shortbow",
-    Staff = "Staff",
-    Speargun = "Speargun",
-    Spear = "Spear",
-    Trident = "Trident"
-}
-
-export interface SkillData {
-    id: number;
+interface DataNode {
     name: string;
+    fields: {
+        profession: Profession;
+        skills: SkillData[];
+    }
 }
 
-// interface QueryData {
-//     allDataJson: {
-//         nodes: ProfessionData[];
-//     };
-// }
-//
-// const useData = () => useStaticQuery<QueryData>(graphql`
-//     query ProfessionData {
-//         allDataJson {
-//             nodes {
-//                 name
-//                 icon
-//                 elites {
-//                     id
-//                     name
-//                 }
-//                 weapons
-//                 skills {
-//                     id
-//                     name
-//                     type
-//                     professions
-//                     specialization
-//                     weaponType
-//                     slot
-//                     attunement
-//                     dualWield
-//                     flipSkill
-//                     nextChain
-//                     prevChain
-//                     transformSkills
-//                     bundleSkills
-//                     toolbeltSkill
-//                 }
-//             }
-//         }
-//     }
-// `);
+interface QueryData {
+    allDataYaml: {
+        nodes: DataNode[];
+    }
+}
 
-export const useProfessionsData = (): ProfessionData[] => [];
+const useData = () => useStaticQuery<QueryData>(graphql`
+    query ProfessionData {
+        allDataYaml {
+            nodes {
+                name
+                fields {
+                    profession
+                    skills {
+                        id
+                        name
+                        slot
+                    }
+                }
+            }
+        }
+    }
+`);
 
-export const useProfessionData = (prof: Profession): ProfessionData => useProfessionsData().find((entry) => entry.name === prof);
+export const useAllSkillSections = (): SkillSection[] => {
+    const data = useData();
+    return useMemo(() => data.allDataYaml.nodes
+        .map((({name, fields: {profession, skills}}) => ({name, profession, skills}))),
+    [data]);
+};
+
+export const useSkillSectionsForProfession = (prof: Profession): SkillSection[] => {
+    const sections = useAllSkillSections();
+    return useMemo(() => sections.filter((entry) => entry.profession === prof), [sections, prof]);
+};
+
+export const useAllSkills = (): SkillData[] => {
+    const sections = useAllSkillSections();
+    return useMemo(() => sections.reduce((acc, section) => {
+        acc.push(...section.skills);
+        return acc;
+    }, []), [sections]);
+};

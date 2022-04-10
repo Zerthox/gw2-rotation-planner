@@ -2,15 +2,16 @@ import React from "react";
 import {Chip} from "@mui/material";
 import {Delete} from "@mui/icons-material";
 import {useDroppable} from "@dnd-kit/core";
+import {DragId} from "../../store/planner";
 import {OverData} from ".";
 
 export interface TrashProps {
-    id: string;
+    dragId: DragId;
 }
 
-export const Trash = ({id}: TrashProps): JSX.Element => {
+export const Trash = ({dragId}: TrashProps): JSX.Element => {
     const {setNodeRef, isOver} = useDroppable({
-        id,
+        id: dragId,
         data: {} as OverData
     });
 

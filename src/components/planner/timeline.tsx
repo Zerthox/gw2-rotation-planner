@@ -14,8 +14,8 @@ export const Timeline = (props: TimelineProps): JSX.Element => {
     return (
         <Stack direction="column" spacing={1} {...props}>
             <Stack direction="column" spacing={1}>
-                {rows.map(({id}, i) => (
-                    <Row key={id} id={id} index={i}/>
+                {rows.map(({dragId: id}, i) => (
+                    <Row key={id} dragId={id} index={i}/>
                 ))}
             </Stack>
             <Button

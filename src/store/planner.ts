@@ -3,21 +3,21 @@ import {useSelector} from "react-redux";
 import {nanoid} from "nanoid/non-secure";
 import {StoreState} from ".";
 
-export type Id = string;
+export type DragId = string;
 
-export enum IdType {
+export enum DragType {
     Row = "row",
     Skill = "skill",
     Skillbar = "skillbar",
     Trash = "trash"
 }
 
-export const createId = (type: IdType): Id => `${type}-${nanoid()}`;
+export const createDragId = (type: DragType): DragId => `${type}-${nanoid()}`;
 
-export const isa = (type: IdType, id: Id): boolean => id?.startsWith(type);
+export const isa = (type: DragType, id: DragId): boolean => id?.startsWith(type);
 
 export interface Dragging {
-    id: Id;
+    dragId: DragId;
     skill: number;
 }
 
@@ -25,13 +25,13 @@ export const plannerSlice = createSlice({
     name: "planner",
     initialState: {
         dragging: {
-            id: null as Id,
-            skill: null as number
-        }
+            dragId: null,
+            skill: null
+        } as Dragging
     },
     reducers: {
         setDragging(state, {payload}: PayloadAction<Dragging>) {
-            state.dragging = payload ?? {id: null, skill: null};
+            state.dragging = payload ?? {dragId: null, skill: null};
         }
     }
 });

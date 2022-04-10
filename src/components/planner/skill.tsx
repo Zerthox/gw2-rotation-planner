@@ -4,8 +4,9 @@ import {Skill} from "@discretize/gw2-ui-new";
 import {useSortable} from "@dnd-kit/sortable";
 import {css} from "@emotion/css";
 import {SkillData} from ".";
-import {Id, useDragging} from "../../store/planner";
-import {useAllSkillsData, SkillSlot} from "../../hooks/data";
+import {DragId, useDragging} from "../../store/planner";
+import {SkillSlot} from "../../data";
+import {useAllSkills} from "../../hooks/data";
 
 const keybinds = {
     [SkillSlot.Profession1]: "F1",
@@ -57,7 +58,7 @@ export interface SkillItemProps {
 }
 
 export const SkillItem = ({skill, tooltip = false, isPlaceholder = false}: SkillItemProps): JSX.Element => {
-    const allSkills = useAllSkillsData();
+    const allSkills = useAllSkills();
     const skillData = useMemo(() => allSkills.find((entry) => entry.id === skill), [skill, allSkills]);
 
     const keybind = keybinds[skillData.slot];
@@ -85,15 +86,15 @@ export const SkillItem = ({skill, tooltip = false, isPlaceholder = false}: Skill
 };
 
 export interface DraggableSkillProps {
-    id: Id;
-    parentId: Id;
+    dragId: DragId;
+    parentId: DragId;
     index: number;
     skill: number;
 }
 
-export const DraggableSkill = ({parentId, id, index, skill}: DraggableSkillProps): JSX.Element => {
+export const DraggableSkill = ({parentId, dragId, index, skill}: DraggableSkillProps): JSX.Element => {
     const {attributes, listeners, setNodeRef} = useSortable({
-        id,
+        id: dragId,
         data: {
             parentId,
             index,
@@ -108,7 +109,7 @@ export const DraggableSkill = ({parentId, id, index, skill}: DraggableSkillProps
             {...attributes}
             {...listeners}
         >
-            <SkillItem skill={skill} tooltip={!dragging.id} isPlaceholder={id === dragging.id}/>
+            <SkillItem skill={skill} tooltip={!dragging.dragId} isPlaceholder={dragId === dragging.dragId}/>
         </span>
     );
 };

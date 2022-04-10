@@ -3,29 +3,29 @@ import {Card, Stack} from "@mui/material";
 import {Active, DndContext, DragOverEvent, DragOverlay, DragStartEvent} from "@dnd-kit/core";
 import {useDispatch, batch} from "react-redux";
 import {Trash} from "./trash";
-import {ProfessionSelect} from "./profselect";
+import {ProfessionSelect} from "./prof-select";
 import {Skillbar} from "./skillbar";
 import {Timeline} from "./timeline";
 import {SkillItem} from "./skill";
 import {OverData, SkillData} from ".";
-import {Id, IdType, createId, isa, useDragging, setDragging} from "../../store/planner";
+import {DragId, DragType, createDragId, isa, useDragging, setDragging} from "../../store/planner";
 import {deleteRowSkill, insertRowSkill, moveRowSkill} from "../../store/timeline";
-import {useSkillStates, findSkill, takeSkillItem} from "../../store/build";
+import {useSkillStates, findSkillState, takeSkillItem} from "../../store/build";
 
-const SKILLBAR_ID = createId(IdType.Skillbar);
+const SKILLBAR_ID = createDragId(DragType.Skillbar);
 
-const TRASH_ID = createId(IdType.Trash);
+const TRASH_ID = createDragId(DragType.Trash);
 
 export const Planner = (): JSX.Element => {
     const dispatch = useDispatch();
     const skills = useSkillStates();
     const dragging = useDragging();
 
-    const parent = useRef<Id>(null);
+    const parent = useRef<DragId>(null);
     const fromSkillbar = useRef(false);
 
     const cancelDrag = useCallback((active: Active) => {
-        if (fromSkillbar.current && isa(IdType.Row, parent.current)) {
+        if (fromSkillbar.current && isa(DragType.Row, parent.current)) {
             dispatch(deleteRowSkill({
                 rowId: parent.current,
                 skillId: active.id
@@ -37,8 +37,8 @@ export const Planner = (): JSX.Element => {
         const activeData = (active.data.current ?? {}) as SkillData;
 
         parent.current = null;
-        fromSkillbar.current = isa(IdType.Skillbar, activeData.parentId);
-        dispatch(setDragging({id: active.id, skill: activeData.skill}));
+        fromSkillbar.current = isa(DragType.Skillbar, activeData.parentId);
+        dispatch(setDragging({dragId: active.id, skill: activeData.skill}));
     }, [dispatch]);
 
     const onDragOver = useCallback(({active, over}: DragOverEvent) => {
@@ -46,11 +46,11 @@ export const Planner = (): JSX.Element => {
             const activeData = (active.data.current ?? {}) as SkillData;
             const overData = (over.data.current ?? {}) as OverData;
 
-            if (isa(IdType.Row, overData.parentId)) {
+            if (isa(DragType.Row, overData.parentId)) {
                 if (parent.current !== overData.parentId) {
                     if (!parent.current && fromSkillbar.current) {
                         // moved from skillbar to row
-                        const skill = findSkill(skills, active.id);
+                        const skill = findSkillState(skills, active.id);
 
                         // refresh skillbar items
                         dispatch(takeSkillItem(active.id));
@@ -61,7 +61,7 @@ export const Planner = (): JSX.Element => {
                             index: overData.index,
                             skill
                         }));
-                    } else if (isa(IdType.Row, parent.current)) {
+                    } else if (isa(DragType.Row, parent.current)) {
                         // moved between rows
                         dispatch(moveRowSkill({
                             rowId: parent.current,
@@ -89,16 +89,16 @@ export const Planner = (): JSX.Element => {
         if (over) {
             const overData = (over.data.current ?? {}) as OverData;
 
-            if (isa(IdType.Trash, over.id)) {
+            if (isa(DragType.Trash, over.id)) {
                 // moved to trash, delete row entry if necessary
-                if (isa(IdType.Row, parent.current)) {
+                if (isa(DragType.Row, parent.current)) {
                     dispatch(deleteRowSkill({
                         rowId: parent.current,
                         skillId: active.id
                     }));
                     return;
                 }
-            } else if (isa(IdType.Row, overData.parentId)) {
+            } else if (isa(DragType.Row, overData.parentId)) {
                 // moved to row, everything is done already
                 return;
             }
@@ -126,7 +126,7 @@ export const Planner = (): JSX.Element => {
                 <Card sx={{justifySelf: "stretch", flexShrink: 0}}>
                     <Stack direction="column" alignItems="stretch" spacing={2} padding={2}>
                         <ProfessionSelect/>
-                        <Trash id={TRASH_ID}/>
+                        <Trash dragId={TRASH_ID}/>
                         <Skillbar id={SKILLBAR_ID}/>
                     </Stack>
                 </Card>

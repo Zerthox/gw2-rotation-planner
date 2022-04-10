@@ -7,18 +7,18 @@ import {useDispatch} from "react-redux";
 import {IconButton} from "../general";
 import {DraggableSkill} from "./skill";
 import {OverData} from ".";
-import {Id} from "../../store/planner";
+import {DragId} from "../../store/planner";
 import {useRow, deleteRow, moveRow, updateRowName} from "../../store/timeline";
 
 export interface RowProps {
-    id: Id;
+    dragId: DragId;
     index: number;
 }
 
-export const Row = ({id, index}: RowProps): JSX.Element => {
+export const Row = ({dragId: id, index}: RowProps): JSX.Element => {
     const dispatch = useDispatch();
     const row = useRow(id);
-    const items = row.skills.map(({id}) => id);
+    const items = row.skills.map(({dragId: id}) => id);
     const {setNodeRef} = useDroppable({
         id,
         data: {parentId: id, index: items.length} as OverData
@@ -47,8 +47,8 @@ export const Row = ({id, index}: RowProps): JSX.Element => {
                                     gridTemplateRows: "repeat(auto-fill, 3em)",
                                     gap: 0.5
                                 }}>
-                                    {row.skills.map(({id, skillId}, i) => (
-                                        <DraggableSkill key={id} id={id} parentId={row.id} index={i} skill={skillId}/>
+                                    {row.skills.map(({dragId: id, skillId}, i) => (
+                                        <DraggableSkill key={id} dragId={id} parentId={row.dragId} index={i} skill={skillId}/>
                                     ))}
                                 </Box>
                             ) : (
