@@ -1,0 +1,356 @@
+- name: Dagger
+  skills:
+    - name: Dragon's Claw
+      id: 15718
+    - name: Vapor Blade
+      id: 15716
+    - name: Lightning Whip
+      id: 5489
+    - name: Impale
+      id: 15717
+    - name: Drake's Breath
+      id: 5496
+    - name: Cone of Cold
+      id: 5537
+    - name: Convergence
+      id: 5646
+    - name: Ring of Earth
+      id: 5525
+    - name: Grinding Stones
+      id: 40963
+    - name: Mud Slide
+      id: 46018
+    - name: Katabatic Wind
+      id: 46140
+    - name: Ashen Blast
+      id: 42379
+    - name: Plasma Burst
+      id: 44652
+    - name: Steam Surge
+      id: 42330
+    - name: Burning Speed
+      id: 5644
+    - name: Frozen Burst
+      id: 5487
+    - name: Shocking Aura
+      id: 5527
+    - name: Transmute Lightning
+      id: 51662
+    - name: Earthen Rush
+      id: 5559
+    - name: Frost Aura
+      id: 5520
+    - name: Transmute Frost
+      id: 51646
+    - name: Ring of Fire
+      id: 5691
+    - name: Ride the Lightning
+      id: 5529
+    - name: Earthquake
+      id: 5690
+    - name: Fire Grab
+      id: 5557
+    - name: Cleansing Wave
+      id: 5558
+    - name: Updraft
+      id: 5687
+    - name: Churning Earth
+      id: 5522
+
+- name: Focus
+  skills:
+    - name: Flamewall
+      id: 5497
+    - name: Freezing Gust
+      id: 5556
+    - name: Swirling Winds
+      id: 5530
+    - name: Magnetic Wave
+      id: 5555
+    - name: Fire Shield
+      id: 5678
+    - name: Transmute Fire
+      id: 51711
+    - name: Comet
+      id: 5490
+    - name: Gale
+      id: 5562
+    - name: Obsidian Flesh
+      id: 5521
+
+- name: Scepter
+  skills:
+    - name: Flamestrike
+      id: 5508
+    - name: Ice Shards
+      id: 5693
+    - name: Arc Lightning
+      id: 5526
+    - name: Stone Shards
+      id: 5500
+    - name: Dragon's Tooth
+      id: 5692
+    - name: Shatterstone
+      id: 5538
+    - name: Lightning Strike
+      id: 5561
+    - name: Rock Barrier
+      id: 5695
+    - name: Hurl
+      id: 5780
+    - name: Earthen Synergy
+      id: 40794
+    - name: Stone Tide
+      id: 46014
+    - name: Glacial Drift
+      id: 45742
+    - name: Fracturing Strike
+      id: 42954
+    - name: Plasma Beam
+      id: 43576
+    - name: Fiery Frost
+      id: 42181
+    - name: Phoenix
+      id: 5675
+    - name: Water Trident
+      id: 5510
+    - name: Blinding Flash
+      id: 5694
+    - name: Dust Devil
+      id: 5696
+
+- name: Staff
+  skills:
+    - name: Fireball
+      id: 5491
+    - name: Water Blast
+      id: 5549
+    - name: Chain Lightning
+      id: 5518
+    - name: Stoning
+      id: 5519
+    - name: Lava Font
+      id: 5548
+    - name: Ice Spike
+      id: 5550
+    - name: Lightning Surge
+      id: 5552
+    - name: Eruption
+      id: 5528
+    - name: Pile Driver
+      id: 42321
+    - name: Lahar
+      id: 44550
+    - name: Monsoon
+      id: 41184
+    - name: Pyroclastic Blast
+      id: 43762
+    - name: Plasma Blast
+      id: 41125
+    - name: Pressure Blast
+      id: 40332
+    - name: Flame Burst
+      id: 5679
+    - name: Geyser
+      id: 5681
+    - name: Gust
+      id: 5553
+    - name: Magnetic Aura
+      id: 5685
+    - name: Transmute Earth
+      id: 51684
+    - name: Burning Retreat
+      id: 5680
+    - name: Frozen Ground
+      id: 5515
+    - name: Windborne Speed
+      id: 5682
+    - name: Unsteady Ground
+      id: 5683
+    - name: Meteor Shower
+      id: 5501
+    - name: Healing Rain
+      id: 5551
+    - name: Static Field
+      id: 5671
+    - name: Shock Wave
+      id: 5686
+
+- name: Warhorn
+  skills:
+    - name: Heat Sync
+      id: 29548
+    - name: Tidal Surge
+      id: 30864
+    - name: Cyclone
+      id: 30008
+    - name: Sand Squall
+      id: 29453
+    - name: Wildfire
+      id: 29533
+    - name: Water Globe
+      id: 30446
+    - name: Lightning Orb
+      id: 30795
+    - name: Dust Storm
+      id: 30336
+
+- name: Sword
+  skills:
+    - name: Fire Strike
+      id: 39964
+    - name: Fire Swipe
+      id: 40326
+    - name: Searing Slash
+      id: 43657
+    - name: Seiche
+      id: 41052
+    - name: Clapotis
+      id: 45983
+    - name: Breaking Wave
+      id: 43199
+    - name: Charged Strike
+      id: 44681
+    - name: Polaric Slash
+      id: 45259
+    - name: Call Lightning
+      id: 45216
+    - name: Crystal Slash
+      id: 43616
+    - name: Crystalline Strike
+      id: 43080
+    - name: Crystalline Sunder
+      id: 46024
+    - name: Flame Uprising
+      id: 45313
+    - name: Riptide
+      id: 44405
+    - name: Polaric Leap
+      id: 44998
+    - name: Earthen Vortex
+      id: 40709
+    - name: Twin Strike
+      id: 42271
+    - name: Pyro Vortex
+      id: 43074
+    - name: Lava Skin
+      id: 46447
+    - name: Shearing Edge
+      id: 42867
+    - name: Natural Frenzy
+      id: 40170
+    - name: Gale Strike
+      id: 46295
+    - name: Cauterizing Strike
+      id: 44451
+    - name: Aqua Siphon
+      id: 41167
+    - name: Quantum Strike
+      id: 43803
+    - name: Rust Frenzy
+      id: 40139
+
+- name: Hammer
+  skills:
+    - name: Singeing Strike
+      id: 62925
+    - name: Stream Strike
+      id: 62865
+    - name: Water Rush
+      id: 62694
+    - name: Chilling Crack
+      id: 62862
+    - name: Wind Slam
+      id: 62747
+    - name: Stonestrike
+      id: 62683
+    - name: Surging Flames
+      id: 62884
+    - name: Rain of Blows
+      id: 62958
+    - name: Hurricane of Pain
+      id: 62812
+    - name: Whirling Stones
+      id: 62976
+    - name: Flame Wheel
+      id: 62758
+    - name: Icy Coil
+      id: 62834
+    - name: Crescent Wind
+      id: 62887
+    - name: Rocky Loop
+      id: 62975
+    - name: Triple Sear
+      id: 62807
+    - name: Crashing Font
+      id: 62948
+    - name: Wind Storm
+      id: 62947
+    - name: Immutable Stone
+      id: 62992
+    - name: Molten End
+      id: 62910
+    - name: Cleansing Typhoon
+      id: 62843
+    - name: Shock Blast
+      id: 62716
+    - name: Ground Pound
+      id: 62778
+
+# underwater
+- name: Trident
+  skills:
+    - name: Magma Orb
+      id: 5598
+    - name: Water Missile
+      id: 5604
+    - name: Forked Lightning
+      id: 5656
+    - name: Rock Blade
+      id: 5657
+    - name: Boil
+      id: 5597
+    - name: Ice Globe
+      id: 5605
+    - name: Electrocute
+      id: 5655
+    - name: Rock Spray
+      id: 5658
+    - name: Hydrothermal Vent
+      id: 40378
+    - name: Plasmic Strike
+      id: 41712
+    - name: Molten Burst
+      id: 46185
+    - name: Absolute Zero
+      id: 46360
+    - name: Elemental Compression
+      id: 41001
+    - name: Sodden Swath
+      id: 39981
+    - name: Steam
+      id: 5566
+    - name: Ice Wall
+      id: 5606
+    - name: Air Pocket
+      id: 5652
+    - name: Vacuum
+      id: 5653
+    - name: Magnetic Current
+      id: 5662
+    - name: Lava Chains
+      id: 5599
+    - name: Undercurrent
+      id: 5748
+    - name: Air Bubble
+      id: 5648
+    - name: Rock Anchor
+      id: 5659
+    - name: Heat Wave
+      id: 5600
+    - name: Tidal Wave
+      id: 5607
+    - name: Lightning Cage
+      id: 5650
+    - name: Murky Water
+      id: 5661

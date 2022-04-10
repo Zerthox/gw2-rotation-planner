@@ -1,0 +1,154 @@
+- name: Focus
+  skills:
+    - name: Temporal Curtain
+      id: 10186
+    - name: Into the Void
+      id: 10363
+    - name: Phantasmal Warden
+      id: 10282
+
+- name: Greatsword
+  skills:
+    - name: Spatial Surge
+      id: 10219
+    - name: Split Surge
+      id: 44241
+    - name: Mirror Blade
+      id: 10333
+    - name: Mind Stab
+      id: 10218
+    - name: Phantasmal Berserker
+      id: 10221
+    - name: Illusionary Wave
+      id: 10220
+
+- name: Pistol
+  skills:
+    - name: Phantasmal Duelist
+      id: 10175
+    - name: Magic Bullet
+      id: 10229
+
+- name: Scepter
+  skills:
+    - name: Ether Bolt
+      id: 10289
+    - name: Ether Blast
+      id: 10290
+    - name: Illusionary Counter
+      id: 10276
+    - name: Counterspell
+      id: 10314
+    - name: Confusing Images
+      id: 10168
+
+- name: Staff
+  skills:
+    - name: Winds of Chaos
+      id: 10273
+    - name: Chaos Vortex
+      id: 40184
+    - name: Phase Retreat
+      id: 10310
+    - name: Phantasmal Warlock
+      id: 10216
+    - name: Chaos Armor
+      id: 10331
+    - name: Chaos Storm
+      id: 10169
+
+- name: Sword
+  skills:
+    - name: Blurred Frenzy
+      id: 10334
+    - name: Blade Leap
+      id: 62568
+    - name: Returning Edge
+      id: 62675
+    - name: Illusionary Leap
+      id: 10173
+    - name: Swap
+      id: 10337
+    - name: Mind Slash
+      id: 10170
+    - name: Mind Gash
+      id: 10171
+    - name: Mind Spike
+      id: 10172
+    - name: Illusionary Riposte
+      id: 10280
+    - name: Counter Blade
+      id: 10358
+    - name: Phantasmal Swordsman
+      id: 10174
+
+- name: Torch
+  skills:
+    - name: The Prestige
+      id: 10285
+    - name: Phantasmal Mage
+      id: 10189
+
+- name: Shield
+  skills:
+    - name: Echo of Memory
+      id: 30769
+    - name: Deja Vu
+      id: 29649
+    - name: Tides of Time
+      id: 30643
+
+- name: Axe
+  skills:
+    - name: Lacerating Chop
+      id: 44791
+    - name: Ethereal Chop
+      id: 44840
+    - name: Mirror Strikes
+      id: 41164
+    - name: Lingering Thoughts
+      id: 45243
+    - name: Axes of Symmetry
+      id: 43761
+
+- name: Dagger
+  skills:
+    - name: Flying Cutter
+      id: 62510
+    - name: Bladecall
+      id: 62560
+    - name: Unstable Bladestorm
+      id: 62607
+
+# underwater
+- name: Spear
+  skills:
+    - name: Stab
+      id: 10315
+    - name: Jab
+      id: 10316
+    - name: Evasive Strike
+      id: 10317
+    - name: Feigned Surge
+      id: 10318
+    - name: Phantasmal Mariner
+      id: 10251
+    - name: Slipstream
+      id: 10325
+    - name: Vortex
+      id: 10255
+
+- name: Trident
+  skills:
+    - name: Siren's Call
+      id: 10258
+    - name: Wave of Panic
+      id: 39959
+    - name: Blinding Tide
+      id: 10259
+    - name: Imminent Voyage
+      id: 10327
+    - name: Phantasmal Whaler
+      id: 10328
+    - name: Illusion of Drowning
+      id: 10260

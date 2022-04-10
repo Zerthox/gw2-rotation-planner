@@ -1,0 +1,106 @@
+- name: Heal
+  skills:
+    - name: Glyph of Elemental Harmony
+      id: 5569
+    - name: Ether Renewal
+      id: 5507
+    - name: Signet of Restoration
+      id: 5503
+    - name: Arcane Brilliance
+      id: 21656
+
+    # specs
+    - name: '"Wash the Pain Away!"'
+      id: 29535
+    - name: Aquatic Stance
+      id: 44239
+    - name: Soothing Water
+      id: 62827
+
+- name: Utility
+  skills:
+    - name: Arcane Wave
+      id: 5638
+    - name: Arcane Shield
+      id: 5641
+    - name: Arcane Power
+      id: 5635
+    - name: Arcane Blast
+      id: 5539
+    - name: Glyph of Elemental Power
+      id: 5506
+    - name: Glyph of Storms
+      id: 5734
+    - name: Glyph of Lesser Elementals
+      id: 5502
+    - name: Glyph of Renewal
+      id: 5573
+    - name: Signet of Fire
+      id: 5542
+    - name: Signet of Water
+      id: 5570
+    - name: Signet of Air
+      id: 5572
+    - name: Signet of Earth
+      id: 5571
+    - name: Cleansing Fire
+      id: 5535
+    - name: Mist Form
+      id: 5554
+    - name: Lightning Flash
+      id: 5536
+    - name: Armor of Earth
+      id: 5639
+    - name: Conjure Flame Axe
+      id: 5540
+    - name: Conjure Frost Bow
+      id: 5567
+    - name: Conjure Lightning Hammer
+      id: 5624
+    - name: Conjure Earth Shield
+      id: 5546
+
+    # specs
+    - name: '"Feel the Burn!"'
+      id: 30662
+    - name: '"Flash-Freeze!"'
+      id: 29948
+    - name: '"Eye of the Storm!"'
+      id: 30047
+    - name: '"Aftershock!"'
+      id: 30432
+    - name: Tailored Victory
+      id: 44637
+    - name: Stone Resonance
+      id: 44926
+    - name: Unravel
+      id: 44612
+    - name: Twist of Fate
+      id: 45746
+    - name: Primordial Stance
+      id: 40183
+    - name: Relentless Fire
+      id: 62965
+    - name: Shattering Ice
+      id: 62698
+    - name: Invigorating Air
+      id: 62982
+    - name: Fortified Earth
+      id: 62826
+
+- name: Elite
+  skills:
+    - name: Glyph of Elementals
+      id: 5666
+    - name: Conjure Fiery Greatsword
+      id: 5516
+    - name: Tornado
+      id: 5534
+
+    # specs
+    - name: '"Rebound!"'
+      id: 29968
+    - name: Weave Self
+      id: 43638
+    - name: Elemental Celerity
+      id: 62725

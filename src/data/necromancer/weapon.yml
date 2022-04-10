@@ -1,0 +1,131 @@
+- name: Axe
+  skills:
+    - name: Rending Claws
+      id: 10561
+    - name: Ghastly Claws
+      id: 10528
+    - name: Unholy Feast
+      id: 10701
+
+- name: Dagger
+  skills:
+    - name: Necrotic Slash
+      id: 10702
+    - name: Necrotic Stab
+      id: 10703
+    - name: Necrotic Bite
+      id: 10704
+    - name: Life Siphon
+      id: 10563
+    - name: Dark Pact
+      id: 10529
+    - name: Deathly Swarm
+      id: 10705
+    - name: Enfeebling Blood
+      id: 10706
+
+- name: Focus
+  skills:
+    - name: Soul Grasp
+      id: 55050
+    - name: Spinal Shivers
+      id: 10555
+
+- name: Scepter
+  skills:
+    - name: Blood Curse
+      id: 10698
+    - name: Rending Curse
+      id: 10699
+    - name: Putrid Curse
+      id: 10552
+    - name: Grasping Dead
+      id: 10532
+    - name: Feast of Corruption
+      id: 10709
+    - name: Devouring Darkness
+      id: 51647
+
+- name: Staff
+  skills:
+    - name: Necrotic Grasp
+      id: 10596
+    - name: Mark of Blood
+      id: 19117
+    - name: Chillblains
+      id: 10605
+    - name: Putrid Mark
+      id: 19116
+    - name: Reaper's Mark
+      id: 19115
+
+- name: Warhorn
+  skills:
+    - name: Wail of Doom
+      id: 10556
+    - name: Locust Swarm
+      id: 10557
+
+- name: Greatsword
+  skills:
+    - name: Dusk Strike
+      id: 29705
+    - name: Fading Twilight
+      id: 30799
+    - name: Chilling Scythe
+      id: 29867
+    - name: Gravedigger
+      id: 30163
+    - name: Death Spiral
+      id: 30860
+    - name: Nightfall
+      id: 29855
+    - name: Grasping Darkness
+      id: 29740
+
+- name: Torch
+  skills:
+    - name: Harrowing Wave
+      id: 45846
+    - name: Oppressive Collapse
+      id: 44296
+
+- name: Pistol
+  skills:
+    - name: Vicious Shot
+      id: 62517
+    - name: Weeping Shots
+      id: 62513
+    - name: Vile Blast
+      id: 62511
+
+# underwater
+- name: Spear
+  skills:
+    - name: Cruel Strike
+      id: 10692
+    - name: Wicked Strike
+      id: 10693
+    - name: Reaper's Scythe
+      id: 10617
+    - name: Wicked Spiral
+      id: 10694
+    - name: Deadly Feast
+      id: 10619
+    - name: Deadly Catch
+      id: 10695
+    - name: Dark Spear
+      id: 10616
+
+- name: Trident
+  skills:
+    - name: Crimson Tide
+      id: 10623
+    - name: Feast
+      id: 10624
+    - name: Foul Current
+      id: 10625
+    - name: Sinking Tomb
+      id: 10628
+    - name: Frozen Abyss
+      id: 10629

@@ -1,0 +1,64 @@
+  # shrouds
+- name: Death Shroud
+  skills:
+    - name: Life Blast
+      id: 10554
+    - name: Dark Path
+      id: 10604
+    - name: Dark Pursuit
+      id: 56916
+    - name: Doom
+      id: 10588
+    - name: Life Transfer
+      id: 10594
+    - name: Tainted Shackles
+      id: 19504
+
+- name: Reaper's Shroud
+  skills:
+    - name: Life Rend
+      id: 29442
+    - name: Life Slash
+      id: 29458
+    - name: Life Reap
+      id: 30278
+    - name: Death's Charge
+      id: 30825
+    - name: Infusing Terror
+      id: 29958
+    - name: Terrify
+      id: 29709
+    - name: Soul Spiral
+      id: 30504
+    - name: Executioner's Scythe
+      id: 30557
+
+- name: Harbinger Shroud
+  skills:
+    - name: Tainted Bolts
+      id: 62611
+    - name: Dark Barrage
+      id: 62621
+    - name: Voracious Dive
+      id: 63448
+    - name: Voracious Arc
+      id: 62539
+    - name: Devouring Cut
+      id: 62672
+    - name: Vital Draw
+      id: 62563
+
+- name: Lich Form
+  skills:
+    - name: Grim Specter
+      id: 10632
+    - name: Summon Madness
+      id: 10636
+    - name: Ripple of Horror
+      id: 10633
+    - name: Lich's Gaze
+      id: 10635
+    - name: Deathly Claws
+      id: 10634
+    - name: Return
+      id: 14350

@@ -9,7 +9,7 @@
     "dev": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "fetch": "ts-node scripts/fetch.ts",
+    "check": "tsc --noemit",
     "lint": "npx eslint src --ext .js,.jsx,.ts,.tsx -f node_modules/eslint-friendly-formatter",
     "lint-fix": "npx eslint src --fix --ext .js,.jsx,.ts,.tsx -f node_modules/eslint-friendly-formatter"
   },
@@ -41,6 +41,7 @@
     "gatsby-plugin-typescript-checker": "^1.1.1",
     "gatsby-source-filesystem": "^4.11.1",
     "gatsby-transformer-json": "^4.11.0",
+    "gatsby-transformer-yaml": "^4.11.0",
     "nanoid": "^3.3.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

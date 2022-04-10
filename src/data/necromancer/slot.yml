@@ -1,0 +1,114 @@
+- name: Heal
+  skills:
+    - name: Summon Blood Fiend
+      id: 10547
+    - name: Taste of Death
+      id: 10577
+    - name: Consume Conditions
+      id: 10548
+    - name: Well of Blood
+      id: 10527
+    - name: Signet of Vampirism
+      id: 21762
+
+    # specs
+    - name: '"You Are All Weaklings!"'
+      id: 29414
+    - name: Sand Flare
+      id: 43148
+    - name: Elixir of Promise
+      id: 62667
+
+- name: Utility
+    - name: Well of Suffering
+      id: 10546
+    - name: Well of Corruption
+      id: 10545
+    - name: Well of Power
+      id: 10609
+    - name: Well of Darkness
+      id: 10607
+    - name: Summon Bone Minions
+      id: 10541
+    - name: Putrid Explosion
+      id: 10540
+    - name: Summon Bone Fiend
+      id: 10533
+    - name: Rigor Mortis
+      id: 10570
+    - name: Summon Shadow Fiend
+      id: 10589
+    - name: Haunt
+      id: 10590
+    - name: Summon Flesh Wurm
+      id: 10543
+    - name: Signet of Spite
+      id: 10622
+    - name: Signet of the Locust
+      id: 10612
+    - name: Plague Signet
+      id: 10562
+    - name: Signet of Undeath
+      id: 10611
+    - name: Spectral Armor
+      id: 10583
+    - name: Spectral Grasp
+      id: 10620
+    - name: Spectral Ring
+      id: 10608
+    - name: Spectral Walk
+      id: 10685
+    - name: Spectral Recall
+      id: 10687
+    - name: Corrosive Poison Cloud
+      id: 10689
+    - name: Epidemic
+      id: 10606
+    - name: Corrupt Boon
+      id: 10602
+    - name: Blood Is Power
+      id: 10544
+
+    # specs
+    - name: '"Suffer!"'
+      id: 30670
+    - name: '"Nothing Can Save You!"'
+      id: 29666
+    - name: '"Rise!"'
+      id: 30772
+    - name: '"Your Soul Is Mine!"'
+      id: 30488
+    - name: Trail of Anguish
+      id: 40274
+    - name: Desiccate
+      id: 42935
+    - name: Sand Swell
+      id: 42917
+    - name: Serpent Siphon
+      id: 41615
+    - name: Elixir of Risk
+      id: 62530
+    - name: Elixir of Ignorance
+      id: 62646
+    - name: Elixir of Bliss
+      id: 62514
+    - name: Elixir of Anguish
+      id: 62662
+
+- name: Elite
+    - name: Plaguelands
+      id: 10549
+    - name: Summon Flesh Golem
+      id: 10646
+    - name: Charge
+      id: 10647
+    - name: Lich Form
+      id: 10550
+
+    # specs
+    - name: '"Chilled to the Bone!"'
+      id: 30105
+    - name: Ghastly Breach
+      id: 42355
+    - name: Elixir of Ambition
+      id: 62655

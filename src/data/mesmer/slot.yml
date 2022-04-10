@@ -1,0 +1,108 @@
+- name: Heal
+  skills:
+    - name: Ether Feast
+      id: 10176
+    - name: Mirror
+      id: 10177
+    - name: Mantra of Recovery
+      id: 10213
+    - name: Signet of the Ether
+      id: 21750
+
+    # specs
+    - name: Well of Eternity
+      id: 30305
+    - name: False Oasis
+      id: 40200
+    - name: Twin Blade Restoration
+      id: 62522
+
+- name: Utility
+  skills:
+    - name: Signet of Inspiration
+      id: 10236
+    - name: Signet of Domination
+      id: 10232
+    - name: Signet of Midnight
+      id: 10234
+    - name: Signet of Illusions
+      id: 10247
+    - name: Mantra of Pain
+      id: 10211
+    - name: Mantra of Distraction
+      id: 10204
+    - name: Mantra of Resolve
+      id: 10207
+    - name: Mantra of Concentration
+      id: 10237
+    - name: Blink
+      id: 10200
+    - name: Arcane Thievery
+      id: 10185
+    - name: Illusion of Life
+      id: 10244
+    - name: Mimic
+      id: 29578
+    - name: Decoy
+      id: 10201
+    - name: Mirror Images
+      id: 10202
+    - name: Phantasmal Defender
+      id: 10341
+    - name: Phantasmal Disenchanter
+      id: 10267
+    - name: Null Field
+      id: 10203
+    - name: Feedback
+      id: 10302
+    - name: Portal Entre
+      id: 10197
+    - name: Portal Exeunt
+      id: 10199
+    - name: Veil
+      id: 10187
+
+    # specs
+    - name: Well of Precognition
+      id: 29526
+    - name: Well of Calamity
+      id: 30525
+    - name: Well of Recall
+      id: 29856
+    - name: Well of Action
+      id: 30814
+    - name: Illusionary Ambush
+      id: 45046
+    - name: Mirage Advance
+      id: 42851
+    - name: Mirage Retreat
+      id: 45666
+    - name: Sand through Glass
+      id: 43064
+    - name: Crystal Sands
+      id: 41065
+    - name: Psychic Force
+      id: 62573
+    - name: Rain of Swords
+      id: 45425
+    - name: Blade Renewal
+      id: 43343
+    - name: Sword of Decimation
+      id: 35637
+
+- name: Elite
+  skills:
+    - name: Signet of Humility
+      id: 29519
+    - name: Time Warp
+      id: 10311
+    - name: Mass Invisibility
+      id: 10245
+
+    # specs
+    - name: Gravity Well
+      id: 30359
+    - name: Jaunt
+      id: 45449
+    - name: Thousand Cuts
+      id: 24755

@@ -1,0 +1,87 @@
+# conjures
+- name: Flame Axe
+  skills:
+    - name: Flame Leap
+      id: 5719
+    - name: Ring of Fire
+      id: 5718
+    - name: Burning Retreat
+      id: 5717
+    - name: Explosive Lava Axe
+      id: 5593
+    - name: Lava Axe
+      id: 5541
+
+- name: Frost Bow
+  skills:
+    - name: Deep Freeze
+      id: 5721
+    - name: Frost Storm
+      id: 5723
+    - name: Frost Fan
+      id: 5568
+    - name: Frost Volley
+      id: 5720
+    - name: Water Arrow
+      id: 5595
+
+- name: Lightning Hammer
+  skills:
+    - name: Static Field
+      id: 5732
+    - name: Invoke Lightning
+      id: 5725
+    - name: Wind Blast
+      id: 5733
+    - name: Lightning Leap
+      id: 5625
+    - name: Lightning Swing
+      id: 5726
+    - name: Static Swing
+      id: 5727
+    - name: Thunderclap
+      id: 5728
+
+- name: Earth Shield
+  skills:
+    - name: Fortify
+      id: 5623
+    - name: Magnetic Shield
+      id: 5747
+    - name: Magnetic Surge
+      id: 5547
+    - name: Stone Sheath
+      id: 21647
+    - name: Shield Smack
+      id: 5621
+    - name: Shield Smash
+      id: 21646
+    - name: Crippling Shield
+      id: 5746
+
+- name: Fiery Greatsword
+  skills:
+    - name: Firestorm
+      id: 5531
+    - name: Fiery Rush
+      id: 5517
+    - name: Fiery Whirl
+      id: 5697
+    - name: Fiery Eruption
+      id: 5533
+    - name: Flame Wave
+      id: 5532
+
+# tornado transform
+- name: Tornado
+  skills:
+    - name: Dust Charge
+      id: 35304
+    - name: Elemental Requiem
+      id: 35224
+    - name: Debris Tornado
+      id: 5754
+    - name: Dust Tornado
+      id: 5753
+    - name: Electrified Tornado
+      id: 5752

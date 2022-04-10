@@ -1,0 +1,39 @@
+# tomes
+- name: Tome of Justice
+  skills:
+    - name: "Chapter 1: Searing Spell"
+      id: 41258
+    - name: "Chapter 2: Igniting Burst"
+      id: 40635
+    - name: "Chapter 3: Heated Rebuke"
+      id: 42449
+    - name: "Chapter 4: Scorched Aftermath"
+      id: 40015
+    - name: "Epilogue: Ashes of the Just"
+      id: 42898
+
+- name: Tome of Resolve
+  skills:
+    - name: "Chapter 1: Desert Bloom"
+      id: 45022
+    - name: "Chapter 2: Radiant Recovery"
+      id: 40679
+    - name: "Chapter 3: Azure Sun"
+      id: 45128
+    - name: "Chapter 4: Shining River"
+      id: 42008
+    - name: "Epilogue: Eternal Oasis"
+      id: 42925
+
+- name: Tome of Courage
+  skills:
+    - name: "Chapter 1: Unflinching Charge"
+      id: 42986
+    - name: "Chapter 2: Daring Challenge"
+      id: 41968
+    - name: "Chapter 3: Valiant Bulwark"
+      id: 41836
+    - name: "Chapter 4: Stalwart Stand"
+      id: 40988
+    - name: "Epilogue: Unbroken Lines"
+      id: 44455

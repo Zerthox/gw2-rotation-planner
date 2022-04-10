@@ -1,3 +1,4 @@
+/** @type {import("gatsby").GatsbyConfig} */
 module.exports = {
     siteMetadata: {
         title: "GW2 Rotation Planner",
@@ -8,6 +9,12 @@ module.exports = {
     pathPrefix: "/gw2-rotation-planner",
     plugins: [
         "gatsby-transformer-json",
+        {
+            resolve: "gatsby-transformer-yaml",
+            options: {
+                typeName: ({node}) => node.relativeDirectory
+            }
+        },
         {
             resolve: "gatsby-source-filesystem",
             options: {
