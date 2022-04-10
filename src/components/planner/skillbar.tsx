@@ -61,16 +61,14 @@ export const Skillbar = ({dragId}: SkillbarProps): JSX.Element => {
 
     return (
         <Stack direction="column">
-            {sections.map(({name, skills}) => {
-                return skills.length > 0 ? (
-                    <SkillSection
-                        key={name}
-                        name={name}
-                        parentId={dragId}
-                        skills={states[name]}
-                    />
-                ) : null;
-            })}
+            {sections.map(({name, skills}, i) => skills.length > 0 ? (
+                <SkillSection
+                    key={name}
+                    name={name}
+                    parentId={dragId}
+                    skills={states[i]}
+                />
+            ) : null)}
         </Stack>
     );
 };
