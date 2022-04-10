@@ -61,7 +61,7 @@ export const SkillItem = ({skill, tooltip = false, isPlaceholder = false}: Skill
     const allSkills = useAllSkills();
     const skillData = useMemo(() => allSkills.find((entry) => entry.id === skill), [skill, allSkills]);
 
-    const keybind = keybinds[skillData.slot];
+    const keybind = keybinds[skillData?.slot];
 
     return (
         <Stack

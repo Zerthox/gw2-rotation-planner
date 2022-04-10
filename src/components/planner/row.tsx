@@ -18,7 +18,7 @@ export interface RowProps {
 export const Row = ({dragId, index}: RowProps): JSX.Element => {
     const dispatch = useDispatch();
     const row = useRow(dragId);
-    const items = row.skills.map(({dragId: id}) => id);
+    const items = row.skills.map(({dragId}) => dragId);
     const {setNodeRef} = useDroppable({
         id: dragId,
         data: {parentId: dragId, index: items.length} as OverData
@@ -47,8 +47,8 @@ export const Row = ({dragId, index}: RowProps): JSX.Element => {
                                     gridTemplateRows: "repeat(auto-fill, 3em)",
                                     gap: 0.5
                                 }}>
-                                    {row.skills.map(({dragId: id, skillId}, i) => (
-                                        <DraggableSkill key={id} dragId={id} parentId={row.dragId} index={i} skill={skillId}/>
+                                    {row.skills.map(({dragId, skillId}, i) => (
+                                        <DraggableSkill key={dragId} dragId={dragId} parentId={row.dragId} index={i} skill={skillId}/>
                                     ))}
                                 </Box>
                             ) : (
