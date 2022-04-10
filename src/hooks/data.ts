@@ -1,6 +1,7 @@
 import {useMemo} from "react";
 import {useStaticQuery, graphql} from "gatsby";
-import {Profession, SkillData} from "../data";
+import {sortBy} from "lodash";
+import {Profession, SkillData, SkillSlot} from "../data";
 
 export interface SkillSection {
     name: string;
@@ -40,10 +41,34 @@ const useData = () => useStaticQuery<QueryData>(graphql`
     }
 `);
 
+const slotOrder = [
+    SkillSlot.Profession1,
+    SkillSlot.Profession2,
+    SkillSlot.Profession3,
+    SkillSlot.Profession4,
+    SkillSlot.Profession5,
+    SkillSlot.Profession6,
+    SkillSlot.Profession7,
+    SkillSlot.Weapon1,
+    SkillSlot.Weapon2,
+    SkillSlot.Weapon3,
+    SkillSlot.Weapon4,
+    SkillSlot.Weapon5,
+    SkillSlot.Heal,
+    SkillSlot.Utility,
+    SkillSlot.Elite
+];
+
 export const useAllSkillSections = (): SkillSection[] => {
     const data = useData();
     return useMemo(() => data.allDataYaml.nodes
-        .map((({name, fields: {profession, skills}}) => ({name, profession, skills}))),
+        .map((({name, fields: {profession, skills}}) => {
+            return {
+                name,
+                profession,
+                skills: sortBy(skills, (skill) => slotOrder.indexOf(skill.slot))
+            };
+        })),
     [data]);
 };
 
