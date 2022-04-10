@@ -1,0 +1,22 @@
+- name: Revenant
+  skills:
+    - 55029 # Ancient Echo
+
+- name: Renegade
+  skills:
+    - 44076 # Heroic Command
+    - 42836 # Citadel Bombardment
+    - 45537 # Orders from Above
+
+- name: Herald
+  skills:
+    - 51675 # True Nature
+    - 51714 # True Nature
+    - 51713 # True Nature
+    - 51696 # True Nature
+    - 51667 # True Nature
+
+- name: Vindicator
+  skills:
+    - 62757 # Energy Meld
+    - 62729 # Alliance Tactics

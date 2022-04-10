@@ -1,0 +1,31 @@
+# FIXME: raid stolen skills are not exposed by api
+
+- name: Thief
+  skills:
+    - 13014 # Steal
+
+    # stolen
+    - 1131 # Mace Head Crack
+    - 1118 # Throw Chain
+    - 1162 # Whirling Axe
+    - 1167 # Whirling Strike
+    - 1115 # Branch Leap
+    - 45094 # Throw Gunk
+    - 1110 # Throw Gunk
+    - 1139 # Healing Seed
+    - 1125 # Eat Egg
+    - 1148 # Blinding Tuft
+    - 1129 # Ice Shard Stab
+    - 1123 # Consume Plasma
+    - 1141 # Skull Fear
+    - 31438 # Essence Sap
+
+- name: Deadeye
+  skills:
+    - 43390 # Deadeye's Mark
+
+- name: Specter
+  skills:
+    - 63067 # Siphon
+    - 63155 # Enter Shadow Shroud
+    - 63251 # Exit Shadow Shroud

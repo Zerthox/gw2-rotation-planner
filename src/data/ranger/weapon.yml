@@ -1,0 +1,106 @@
+# TODO: unleashed ambush skills
+
+- name: Axe
+  skills:
+    - 12466 # Ricochet
+    - 12480 # Splitblade
+    - 12490 # Winter's Bite
+    - 12638 # Path of Scars
+    - 12639 # Whirling Defense
+
+- name: Dagger
+  skills:
+    - 45426 # Groundwork Gouge
+    - 40301 # Leading Swipe
+    - 41800 # Serpent Stab
+    - 44278 # Deadly Delivery
+    - 43536 # Double Arc
+    - 46123 # Instinctive Engage
+    - 12478 # Stalker's Strike
+    - 12477 # Crippling Talon
+
+- name: Greatsword
+  skills:
+    - 12474 # Slash
+    - 12487 # Slice
+    - 12488 # Enduring Swing
+    - 12525 # Maul
+    - 46629 # Maul
+    - 12521 # Swoop
+    - 12522 # Counterattack
+    - 12523 # Counterattack Kick
+    - 12475 # Hilt Bash
+
+- name: Longbow
+  skills:
+    - 12510 # Long Range Shot
+    - 12509 # Rapid Fire
+    - 12573 # Hunter's Shot
+    - 12511 # Point-Blank Shot
+    - 12469 # Barrage
+
+- name: Shortbow
+  skills:
+    - 12470 # Crossfire
+    - 12468 # Poison Volley
+    - 12517 # Quick Shot
+    - 12507 # Crippling Shot
+    - 12508 # Concussion Shot
+
+
+- name: Sword
+  skills:
+    - 12471 # Slash
+    - 12472 # Crippling Thrust
+    - 12473 # Precision Swipe
+    - 12482 # Monarch's Leap
+    - 12622 # Serpent's Strike
+    - 12481 # Hornet Sting
+
+- name: Torch
+  skills:
+    - 12635 # Throw Torch
+    - 12504 # Bonfire
+
+- name: Warhorn
+  skills:
+    - 12620 # Hunter's Call
+    - 12621 # Call of the Wild
+
+- name: Staff
+  skills:
+    - 31710 # Solar Beam
+    - 31889 # Astral Wisp
+    - 31535 # Ancestral Grace
+    - 31700 # Vine Surge
+    - 31496 # Sublime Conversion
+
+- name: Hammer
+  skills:
+    - 63118 # Hammer Strike
+    - 63222 # Hammer Slam
+    - 63337 # Heavy Smash
+    - 63366 # Wild Swing
+    - 63075 # Overbearing Smash
+    - 63073 # Savage Shock Wave
+    - 63330 # Thump
+
+  # underwater
+- name: Spear
+  skills:
+    - 12553 # Stab
+    - 12555 # Jab
+    - 12556 # Toxic Strike
+    - 12559 # Swirling Strike
+    - 12557 # Surging Maw
+    - 12561 # Counterstrike
+    - 12630 # Counter Throw
+    - 12552 # Man O' War
+
+- name: Harpoon Gun
+  skills:
+    - 12526 # Splinter Shot
+    - 12529 # Coral Shot
+    - 12528 # Feeding Frenzy
+    - 12527 # Mercy Shot
+    - 12530 # Ink Blast

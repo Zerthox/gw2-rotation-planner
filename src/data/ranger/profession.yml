@@ -1,0 +1,72 @@
+# FIXME: regular pet skills are not exposed by the api
+
+- name: Druid
+  skills:
+    - 31869 # Celestial Avatar
+    - 31411 # Release Celestial Avatar
+
+- name: Soulbeast
+  skills:
+    - 42944 # Beastmode
+    - 43014 # Leave Beastmode
+
+    # merged pet
+    - 44991 # Swoop
+    - 42042 # Quickening Screech
+    - 43136 # Bite
+    - 43060 # Defy Pain
+    - 43726 # Crippling Leap
+    - 42894 # Brutal Charge
+    - 43068 # Tail Lash
+    - 41461 # Devourer Retreat
+    - 41537 # Chomp
+    - 41575 # Tail Swipe
+    - 41524 # Kick
+    - 45743 # Charge
+    - 40625 # Bite
+    - 44514 # Maul
+    - 44384 # Crippling Anguish
+    - 40111 # Narcotic Spores
+    - 44617 # Harmonic Cry
+    - 43548 # Frenzied Attack
+    - 41406 # Maul
+    - 46432 # Brutal Charge
+    - 43788 # Call Lightning
+    - 43701 # Photosynthesize
+    - 44097 # Entangling Web
+    - 43671 # Poison Gas
+    - 42717 # Protection
+    - 44885 # Chomp
+    - 43186 # Healing Cloud
+    - 41837 # Dark Water
+    - 42797 # Charging Bite
+    - 44360 # Fear
+    - 41206 # Rain of Spikes
+    - 45479 # Sharpen Spines
+    - 42907 # Takedown
+    - 40255 # Smoke Assault
+    - 46386 # Tail Lash
+    - 41908 # Wing Buffet
+    - 67382 # Phase Pounce
+    - 64038 # Wicked Bite
+    - 66780 # Vampiric Bite
+    - 64882 # Undead Plague
+    - 64699 # Jade Cannon
+    - 66258 # Snap
+
+    # pet archetype
+    - 44626 # Spiritual Reprieve
+    - 45797 # Unflinching Fortitude
+    - 40588 # Primal Cry
+    - 43375 # Prelude Lash
+    - 40729 # Worldly Impact
+
+- name: Untamed
+  skills:
+    - 63147 # Unleash Ranger
+    - 63344 # Unleash Pet
+
+    # unleashed pet
+    - 63209 # Venomous Outburst
+    - 63258 # Rending Vines
+    - 63094 # Enveloping Haze
