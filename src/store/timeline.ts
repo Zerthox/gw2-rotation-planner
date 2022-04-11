@@ -46,7 +46,7 @@ export const timelineSlice = createSlice({
             state.rows.splice(index, 1);
         },
 
-        moveRow(state, {payload}: PayloadAction<{from: number, to: number}>) {
+        moveRow(state, {payload}: PayloadAction<{from: number; to: number}>) {
             const {from, to} = payload;
             const [row] = state.rows.splice(from, 1);
             state.rows.splice(to, 0, row);
@@ -58,7 +58,7 @@ export const timelineSlice = createSlice({
             row.name = name;
         },
 
-        insertRowSkill(state, {payload}: RowAction<{index: number, skill: SkillState}>) {
+        insertRowSkill(state, {payload}: RowAction<{index: number; skill: SkillState}>) {
             const {rowId: rowId, index, skill} = payload;
             const row = findRow(state.rows, rowId);
             row.skills.splice(index, 0, skill);
@@ -71,7 +71,7 @@ export const timelineSlice = createSlice({
             row.skills.splice(index, 1);
         },
 
-        moveRowSkill(state, {payload}: RowAction<{skillId: DragId, to: Location}>) {
+        moveRowSkill(state, {payload}: RowAction<{skillId: DragId; to: Location}>) {
             const {rowId, skillId, to} = payload;
             const source = findRow(state.rows, rowId);
             const dest = findRow(state.rows, to.row);

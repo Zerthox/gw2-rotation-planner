@@ -12,6 +12,13 @@ export interface SkillData {
     slot: SkillSlot;
 }
 
+export interface SkillSection {
+    name: string;
+    profession: Profession;
+    type: string;
+    skills: SkillData[];
+}
+
 export const professionIcons: Record<Profession, string> = {
     [Profession.Elementalist]: "https://wiki.guildwars2.com/images/4/4e/Elementalist_icon_small.png",
     [Profession.Engineer]: "https://wiki.guildwars2.com/images/0/07/Engineer_icon_small.png",

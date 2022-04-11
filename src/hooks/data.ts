@@ -1,18 +1,11 @@
 import {useMemo} from "react";
 import {useStaticQuery, graphql} from "gatsby";
-import {Profession, SkillData} from "../data";
-
-export interface SkillSection {
-    name: string;
-    profession: Profession;
-    type: string;
-    skills: SkillData[];
-}
+import {Profession, SkillSection, SkillData} from "../data";
 
 interface QueryData {
     allSkillData: {
         nodes: SkillSection[];
-    }
+    };
 }
 
 const useData = () => useStaticQuery<QueryData>(graphql`

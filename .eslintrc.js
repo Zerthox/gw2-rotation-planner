@@ -44,6 +44,7 @@ module.exports = {
         "@typescript-eslint/indent": ["error", 4, {SwitchCase: 1}],
         "@typescript-eslint/semi": "error",
         "@typescript-eslint/comma-dangle": ["error", "never"],
+        "@typescript-eslint/member-delimiter-style": "error",
         "@typescript-eslint/no-unused-vars": ["error", {
             argsIgnorePattern: "^_",
             varsIgnorePattern: "^_",
