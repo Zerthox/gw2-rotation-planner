@@ -1,5 +1,5 @@
 import React from "react";
-import {Box} from "@mui/material";
+import {Box, Stack} from "@mui/material";
 import {Providers} from "./providers";
 import {Header} from "./header";
 import {DarkTheme, LightTheme} from "./theme";
@@ -15,21 +15,16 @@ export const Content = ({title, children}: ContentProps): JSX.Element => {
 
     return (
         <Providers theme={darkMode ? DarkTheme : LightTheme}>
-            <Box
-                height="100vh"
-                display="flex"
-                flexDirection="column"
-            >
+            <Stack direction="column" height="100vh">
                 <Header title={title}/>
                 <Box
                     margin={3}
-                    display="flex"
-                    flexDirection="column"
-                    flexGrow={1}
+                    flex="1"
+                    minHeight={0}
                 >
                     {children}
                 </Box>
-            </Box>
+            </Stack>
         </Providers>
     );
 };

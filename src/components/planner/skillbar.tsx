@@ -23,6 +23,7 @@ const SkillSection = ({name, parentId, skills}: SkillSectionProps) => {
                 onEnter: () => setVisible(true),
                 onExited: () => setVisible(false)
             }}
+            sx={{flex: "none"}}
         >
             <AccordionSummary
                 expandIcon={<ExpandMore/>}
@@ -60,7 +61,7 @@ export const Skillbar = ({dragId}: SkillbarProps): JSX.Element => {
     const states = useSkillStates();
 
     return (
-        <Stack direction="column">
+        <Stack direction="column" sx={{overflowY: "auto"}}>
             {sections.map(({name, skills}, i) => skills.length > 0 ? (
                 <SkillSection
                     key={name}

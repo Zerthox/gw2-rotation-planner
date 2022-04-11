@@ -25,6 +25,7 @@ export const ProfessionSelect = (): JSX.Element => {
         <Select
             value={prof ?? ""}
             onChange={({target}) => onChange(target.value as Profession)}
+            sx={{flex: "none"}}
         >
             {Object.entries(professionIcons).map(([name, icon]) => (
                 <MenuItem key={name} value={name}>
@@ -32,10 +33,8 @@ export const ProfessionSelect = (): JSX.Element => {
                         <Box
                             component="img"
                             src={icon}
-                            sx={{
-                                height: professionIconSize,
-                                width: professionIconSize
-                            }}
+                            height={professionIconSize}
+                            width={professionIconSize}
                         />
                         <Typography>
                             {name}

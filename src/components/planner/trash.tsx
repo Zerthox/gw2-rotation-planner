@@ -21,7 +21,10 @@ export const Trash = ({dragId}: TrashProps): JSX.Element => {
             variant="outlined"
             label="Delete"
             icon={<Delete/>}
-            sx={{opacity: isOver ? 1 : 0.5}}
+            sx={{
+                flex: "none",
+                opacity: isOver ? 1 : 0.5
+            }}
         />
     );
 };

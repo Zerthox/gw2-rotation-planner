@@ -32,7 +32,7 @@ export const Row = ({dragId, index}: RowProps): JSX.Element => {
                     variant="standard"
                     value={row.name}
                     onChange={({target}) => dispatch(updateRowName({rowId: dragId, name: target.value}))}
-                    sx={{flexShrink: 0}}
+                    sx={{flex: "none"}}
                 />
                 <Box flexGrow={1}>
                     <span ref={setNodeRef}>

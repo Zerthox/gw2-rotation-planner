@@ -1,5 +1,5 @@
 import React, {useRef, useCallback} from "react";
-import {Card, Stack} from "@mui/material";
+import {Stack, Card} from "@mui/material";
 import {Active, DndContext, DragOverEvent, DragOverlay, DragStartEvent} from "@dnd-kit/core";
 import {useDispatch, batch} from "react-redux";
 import {Trash} from "./trash";
@@ -122,9 +122,15 @@ export const Planner = (): JSX.Element => {
             onDragEnd={onDragEnd}
             onDragCancel={onDragCancel}
         >
-            <Stack direction="row" spacing={2} flexGrow={1}>
-                <Card sx={{justifySelf: "stretch", flexShrink: 0}}>
-                    <Stack direction="column" alignItems="stretch" spacing={2} padding={2}>
+            <Stack direction="row" spacing={2} maxHeight="100%">
+                <Card sx={{justifySelf: "stretch", flex: "none"}}>
+                    <Stack
+                        direction="column"
+                        alignItems="stretch"
+                        spacing={2}
+                        padding={2}
+                        height="100%"
+                    >
                         <ProfessionSelect/>
                         <Trash dragId={TRASH_ID}/>
                         <Skillbar dragId={SKILLBAR_ID}/>
