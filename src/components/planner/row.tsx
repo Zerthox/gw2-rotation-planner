@@ -26,7 +26,7 @@ export const Row = ({dragId, index}: RowProps): JSX.Element => {
 
     return (
         <Card>
-            <Stack direction="row" alignItems="center" spacing={1} padding={2}>
+            <Stack direction="row" alignItems="center" spacing={1} paddingX={2} paddingY={1}>
                 <TextField
                     placeholder={`Section #${index + 1}`}
                     variant="standard"

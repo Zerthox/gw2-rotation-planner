@@ -123,7 +123,12 @@ export const Planner = (): JSX.Element => {
             onDragCancel={onDragCancel}
         >
             <Stack direction="row" maxHeight="100%">
-                <Card sx={{justifySelf: "stretch", flex: "none", margin: 1.5}}>
+                <Card sx={{
+                    justifySelf: "stretch",
+                    flex: "none",
+                    margin: 1.5,
+                    marginRight: 0
+                }}>
                     <Stack
                         direction="column"
                         alignItems="stretch"
