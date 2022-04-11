@@ -15,8 +15,15 @@ export interface SkillData {
 export interface SkillSection {
     name: string;
     profession: Profession;
-    type: string;
+    type: SkillSectionType;
     skills: SkillData[];
+}
+
+export enum SkillSectionType {
+    Profession = "profession",
+    Weapon = "weapon",
+    Slot = "slot",
+    Bundle = "bundle"
 }
 
 export const professionIcons: Record<Profession, string> = {
