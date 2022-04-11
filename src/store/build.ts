@@ -21,21 +21,24 @@ export const buildSlice = createSlice({
     initialState: {
         profession: null as Profession,
         sections: [] as SkillSection[],
-        skillStates: {} as SkillState[][]
+        skillStates: [] as SkillState[][]
     },
     reducers: {
         changeProfession(state, {payload: {profession, sections}}: PayloadAction<ProfessionChangePayload>) {
             state.profession = profession;
             state.sections = sections;
-            state.skillStates =sections
+            state.skillStates = sections
                 .filter((section) => section.profession === profession)
                 .map((section) => section.skills.map((skill) => createSkillState(skill.id)));
         },
         takeSkillItem(state, {payload}: PayloadAction<DragId>) {
-            for (const section of Object.values(state.skillStates)) {
+            for (const section of state.skillStates) {
                 const index = section.findIndex((skill) => skill.dragId === payload);
-                const {skillId} = section[index];
-                section.splice(index, 1, createSkillState(skillId));
+                if (index > -1) {
+                    const {skillId} = section[index];
+                    section.splice(index, 1, createSkillState(skillId));
+                    break;
+                }
             }
         }
     }
