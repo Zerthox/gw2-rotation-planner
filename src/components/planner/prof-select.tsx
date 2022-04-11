@@ -1,11 +1,15 @@
 import React, {useCallback, useEffect} from "react";
-import {Box, Stack, Select, MenuItem, Typography} from "@mui/material";
+import {Box, Stack, Select, SxProps, MenuItem, Typography} from "@mui/material";
 import {useDispatch} from "react-redux";
 import {useCurrentProfession, changeProfession} from "../../store/build";
 import {Profession, professionIcons, professionIconSize} from "../../data";
 import {useAllSkillSections} from "../../hooks/data";
 
-export const ProfessionSelect = (): JSX.Element => {
+export interface ProfessionSelectProps {
+    sx?: SxProps;
+}
+
+export const ProfessionSelect = ({sx}: ProfessionSelectProps): JSX.Element => {
     const dispatch = useDispatch();
     const sections = useAllSkillSections();
     const prof = useCurrentProfession();
@@ -25,7 +29,7 @@ export const ProfessionSelect = (): JSX.Element => {
         <Select
             value={prof ?? ""}
             onChange={({target}) => onChange(target.value as Profession)}
-            sx={{flex: "none"}}
+            sx={sx}
         >
             {Object.entries(professionIcons).map(([name, icon]) => (
                 <MenuItem key={name} value={name}>

@@ -122,8 +122,8 @@ export const Planner = (): JSX.Element => {
             onDragEnd={onDragEnd}
             onDragCancel={onDragCancel}
         >
-            <Stack direction="row" spacing={2} maxHeight="100%">
-                <Card sx={{justifySelf: "stretch", flex: "none"}}>
+            <Stack direction="row" maxHeight="100%">
+                <Card sx={{justifySelf: "stretch", flex: "none", margin: 1.5}}>
                     <Stack
                         direction="column"
                         alignItems="stretch"
@@ -131,12 +131,12 @@ export const Planner = (): JSX.Element => {
                         padding={2}
                         height="100%"
                     >
-                        <ProfessionSelect/>
-                        <Trash dragId={TRASH_ID}/>
+                        <ProfessionSelect sx={{flex: "none"}}/>
+                        <Trash dragId={TRASH_ID} sx={{flex: "none"}}/>
                         <Skillbar dragId={SKILLBAR_ID}/>
                     </Stack>
                 </Card>
-                <Timeline flexGrow={1}/>
+                <Timeline flex="1" maxHeight="100%"/>
             </Stack>
             <DragOverlay>
                 {typeof dragging.skill === "number" ? (

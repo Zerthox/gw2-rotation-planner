@@ -17,11 +17,7 @@ export const Content = ({title, children}: ContentProps): JSX.Element => {
         <Providers theme={darkMode ? DarkTheme : LightTheme}>
             <Stack direction="column" height="100vh">
                 <Header title={title}/>
-                <Box
-                    margin={3}
-                    flex="1"
-                    minHeight={0}
-                >
+                <Box flex="1" minHeight={0}>
                     {children}
                 </Box>
             </Stack>

@@ -1,18 +1,19 @@
 import React, {useState} from "react";
-import {Box, Stack, Accordion, AccordionSummary, AccordionDetails} from "@mui/material";
+import {Box, Stack, SxProps, Accordion, AccordionSummary, AccordionDetails, StackProps} from "@mui/material";
 import {ExpandMore} from "@mui/icons-material";
 import {DraggableSkill} from "./skill";
 import {DragId} from "../../store/planner";
 import {SkillState, useSkillSections, useSkillStates} from "../../store/build";
 
-interface SkillSectionProps {
+export interface SkillSectionProps {
     name: string;
     parentId: DragId;
     skills: SkillState[];
+    sx?: SxProps;
 }
 
 // TODO: display auto attack in first column?
-const SkillSection = ({name, parentId, skills}: SkillSectionProps) => {
+export const SkillSection = ({name, parentId, skills, sx}: SkillSectionProps): JSX.Element => {
     const [visible, setVisible] = useState(false);
 
     return (
@@ -23,7 +24,7 @@ const SkillSection = ({name, parentId, skills}: SkillSectionProps) => {
                 onEnter: () => setVisible(true),
                 onExited: () => setVisible(false)
             }}
-            sx={{flex: "none"}}
+            sx={sx}
         >
             <AccordionSummary
                 expandIcon={<ExpandMore/>}
@@ -52,22 +53,23 @@ const SkillSection = ({name, parentId, skills}: SkillSectionProps) => {
     );
 };
 
-export interface SkillbarProps {
+export interface SkillbarProps extends StackProps {
     dragId: DragId;
 }
 
-export const Skillbar = ({dragId}: SkillbarProps): JSX.Element => {
+export const Skillbar = ({dragId, ...props}: SkillbarProps): JSX.Element => {
     const sections = useSkillSections();
     const states = useSkillStates();
 
     return (
-        <Stack direction="column" sx={{overflowY: "auto"}}>
+        <Stack direction="column" sx={{overflowY: "auto"}} {...props}>
             {sections.map(({name, skills}, i) => skills.length > 0 ? (
                 <SkillSection
                     key={name}
                     name={name}
                     parentId={dragId}
                     skills={states[i]}
+                    sx={{flex: "none"}}
                 />
             ) : null)}
         </Stack>

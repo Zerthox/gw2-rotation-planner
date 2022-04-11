@@ -1,5 +1,5 @@
 import React from "react";
-import {Chip} from "@mui/material";
+import {Chip, SxProps} from "@mui/material";
 import {Delete} from "@mui/icons-material";
 import {useDroppable} from "@dnd-kit/core";
 import {DragId} from "../../store/planner";
@@ -7,9 +7,10 @@ import {OverData} from ".";
 
 export interface TrashProps {
     dragId: DragId;
+    sx?: SxProps;
 }
 
-export const Trash = ({dragId}: TrashProps): JSX.Element => {
+export const Trash = ({dragId, sx}: TrashProps): JSX.Element => {
     const {setNodeRef, isOver} = useDroppable({
         id: dragId,
         data: {} as OverData
@@ -22,8 +23,8 @@ export const Trash = ({dragId}: TrashProps): JSX.Element => {
             label="Delete"
             icon={<Delete/>}
             sx={{
-                flex: "none",
-                opacity: isOver ? 1 : 0.5
+                opacity: isOver ? 1 : 0.5,
+                ...sx
             }}
         />
     );
