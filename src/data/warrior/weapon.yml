@@ -1,116 +1,102 @@
-- name: Axe
-  skills:
-    - 14369 # Chop
-    - 14370 # Double Chop
-    - 14371 # Triple Chop
-    - 14421 # Cyclone Axe
-    - 14398 # Throw Axe
-    - 14418 # Dual Strike
-    - 14399 # Whirling Axe
+Axe:
+  - 14369 # Chop
+  - 14370 # Double Chop
+  - 14371 # Triple Chop
+  - 14421 # Cyclone Axe
+  - 14398 # Throw Axe
+  - 14418 # Dual Strike
+  - 14399 # Whirling Axe
 
-- name: Dagger
-  skills:
-    - 42745 # Precise Cut
-    - 40560 # Focused Slash
-    - 40275 # Keen Strike
-    - 46233 # Aura Slicer
-    - 44937 # Disrupting Stab
-    - 44004 # Wastrel's Ruin
-    - 45160 # Bladestorm
+Dagger:
+  - 42745 # Precise Cut
+  - 40560 # Focused Slash
+  - 40275 # Keen Strike
+  - 46233 # Aura Slicer
+  - 44937 # Disrupting Stab
+  - 44004 # Wastrel's Ruin
+  - 45160 # Bladestorm
 
-- name: Greatsword
-  skills:
-    - 14356 # Greatsword Swing
-    - 14373 # Greatsword Slice
-    - 14374 # Brutal Strike
-    - 14554 # Hundred Blades
-    - 14447 # Whirlwind Attack
-    - 14510 # Bladetrail
-    - 14446 # Rush
+Greatsword:
+  - 14356 # Greatsword Swing
+  - 14373 # Greatsword Slice
+  - 14374 # Brutal Strike
+  - 14554 # Hundred Blades
+  - 14447 # Whirlwind Attack
+  - 14510 # Bladetrail
+  - 14446 # Rush
 
-- name: Hammer
-  skills:
-    - 14358 # Hammer Swing
-    - 14384 # Hammer Bash
-    - 14385 # Hammer Smash
-    - 14386 # Fierce Blow
-    - 14482 # Hammer Shock
-    - 14359 # Staggering Blow
-    - 14511 # Backbreaker
+Hammer:
+  - 14358 # Hammer Swing
+  - 14384 # Hammer Bash
+  - 14385 # Hammer Smash
+  - 14386 # Fierce Blow
+  - 14482 # Hammer Shock
+  - 14359 # Staggering Blow
+  - 14511 # Backbreaker
 
-- name: Spear
-  skills:
-    - 14437 # Stab
-    - 14438 # Jab
-    - 14439 # Impale
-    - 14440 # Mariner's Frenzy
-    - 14448 # Barbed Pull
-    - 14441 # Parry
-    - 14480 # Tsunami Slash
+Spear:
+  - 14437 # Stab
+  - 14438 # Jab
+  - 14439 # Impale
+  - 14440 # Mariner's Frenzy
+  - 14448 # Barbed Pull
+  - 14441 # Parry
+  - 14480 # Tsunami Slash
 
-- name: Longbow
-  skills:
-    - 14431 # Dual Shot
-    - 14519 # Fan of Fire
-    - 14381 # Arcing Arrow
-    - 14505 # Smoldering Arrow
-    - 14504 # Pin Down
+Longbow:
+  - 14431 # Dual Shot
+  - 14519 # Fan of Fire
+  - 14381 # Arcing Arrow
+  - 14505 # Smoldering Arrow
+  - 14504 # Pin Down
 
-- name: Mace
-  skills:
-    - 14376 # Mace Smash
-    - 14377 # Mace Bash
-    - 14378 # Pulverize
-    - 14507 # Counterblow
-    - 14548 # Adrenaline Rush
-    - 14503 # Pommel Bash
-    - 14518 # Crushing Blow
-    - 14415 # Tremor
+Mace:
+  - 14376 # Mace Smash
+  - 14377 # Mace Bash
+  - 14378 # Pulverize
+  - 14507 # Counterblow
+  - 14548 # Adrenaline Rush
+  - 14503 # Pommel Bash
+  - 14518 # Crushing Blow
+  - 14415 # Tremor
 
-- name: Pistol
-  skills:
-    - 62697 # Gunstinger
-    - 62800 # Dragon's Roar
+Pistol:
+  - 62697 # Gunstinger
+  - 62800 # Dragon's Roar
 
-- name: Rifle
-  skills:
-    - 14432 # Fierce Shot
-    - 14416 # Volley
-    - 14472 # Explosive Shell
-    - 14395 # Brutal Shot
-    - 14360 # Rifle Butt
+Rifle:
+  - 14432 # Fierce Shot
+  - 14416 # Volley
+  - 14472 # Explosive Shell
+  - 14395 # Brutal Shot
+  - 14360 # Rifle Butt
 
-- name: Shield
-  skills:
-    - 14361 # Shield Bash
-    - 14362 # Shield Stance
+Shield:
+  - 14361 # Shield Bash
+  - 14362 # Shield Stance
 
-- name: Harpoon Gun
-  skills:
-    - 14552 # Mariner's Shot
-    - 14466 # Puncture Shot
-    - 14481 # Split Shot
-    - 14467 # Knot Shot
-    - 14465 # Repeating Shot
+Harpoon Gun:
+  - 14552 # Mariner's Shot
+  - 14466 # Puncture Shot
+  - 14481 # Split Shot
+  - 14467 # Knot Shot
+  - 14465 # Repeating Shot
 
-- name: Sword
-  skills:
-    - 14364 # Sever Artery
-    - 14365 # Gash
-    - 14363 # Hamstring
-    - 14366 # Savage Leap
-    - 14497 # Final Thrust
-    - 14498 # Impale
-    - 14501 # Rip
-    - 14400 # Riposte
-    - 14557 # Adrenaline Rush
+Sword:
+  - 14364 # Sever Artery
+  - 14365 # Gash
+  - 14363 # Hamstring
+  - 14366 # Savage Leap
+  - 14497 # Final Thrust
+  - 14498 # Impale
+  - 14501 # Rip
+  - 14400 # Riposte
+  - 14557 # Adrenaline Rush
 
-- name: Torch
-  skills:
-    - 29845 # Blaze Breaker
-    - 29940 # Flames of War
+Torch:
+  - 29845 # Blaze Breaker
+  - 29940 # Flames of War
 
-- name: Warhorn
-  skills:
-    - 14393 # Charge
-    - 14394 # Call of Valor
+Warhorn:
+  - 14393 # Charge
+  - 14394 # Call of Valor

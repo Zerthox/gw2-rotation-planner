@@ -1,99 +1,90 @@
-- name: Dagger
-  skills:
-    - 13004 # Double Strike
-    - 13087 # Wild Strike
-    - 13108 # Lotus Strike
-    - 13097 # Heartseeker
-    - 13006 # Death Blossom
-    - 13040 # Shadow Shot
-    - 13110 # Twisting Fangs
-    - 13019 # Dancing Dagger
-    - 16432 # Cloak and Dagger
+Dagger:
+  - 13004 # Double Strike
+  - 13087 # Wild Strike
+  - 13108 # Lotus Strike
+  - 13097 # Heartseeker
+  - 13006 # Death Blossom
+  - 13040 # Shadow Shot
+  - 13110 # Twisting Fangs
+  - 13019 # Dancing Dagger
+  - 16432 # Cloak and Dagger
 
-- name: Pistol
-  skills:
-    - 13084 # Vital Shot
-    - 13115 # Sneak Attack
-    - 13008 # Bola Shot
-    - 13011 # Unload
-    - 13010 # Shadow Strike
-    - 13111 # Repeater
-    - 59526 # Repeater
-    - 13012 # Head Shot
-    - 13113 # Black Powder
+Pistol:
+  - 13084 # Vital Shot
+  - 13115 # Sneak Attack
+  - 13008 # Bola Shot
+  - 13011 # Unload
+  - 13010 # Shadow Strike
+  - 13111 # Repeater
+  - 59526 # Repeater
+  - 13012 # Head Shot
+  - 13113 # Black Powder
 
-- name: Shortbow
-  skills:
-    - 13022 # Trick Shot
-    - 13129 # Surprise Shot
-    - 13041 # Cluster Bomb
-    - 13043 # Detonate Cluster
-    - 13083 # Disabling Shot
-    - 13024 # Choking Gas
-    - 13025 # Infiltrator's Arrow
+Shortbow:
+  - 13022 # Trick Shot
+  - 13129 # Surprise Shot
+  - 13041 # Cluster Bomb
+  - 13043 # Detonate Cluster
+  - 13083 # Disabling Shot
+  - 13024 # Choking Gas
+  - 13025 # Infiltrator's Arrow
 
-- name: Sword
-  skills:
-    - 13009 # Slice
-    - 13088 # Slash
-    - 13116 # Crippling Strike
-    - 13015 # Infiltrator's Strike
-    - 13016 # Flanking Strike
-    - 13007 # Larcenous Strike
-    - 13031 # Pistol Whip
-    - 13112 # Stab
+Sword:
+  - 13009 # Slice
+  - 13088 # Slash
+  - 13116 # Crippling Strike
+  - 13015 # Infiltrator's Strike
+  - 13016 # Flanking Strike
+  - 13007 # Larcenous Strike
+  - 13031 # Pistol Whip
+  - 13112 # Stab
 
-- name: Staff
-  skills:
-    - 30614 # Staff Strike
-    - 30135 # Staff Bash
-    - 30434 # Punishing Strikes
-    - 29911 # Weakening Charge
-    - 30520 # Debilitating Arc
-    - 30775 # Dust Strike
-    - 30597 # Vault
+Staff:
+  - 30614 # Staff Strike
+  - 30135 # Staff Bash
+  - 30434 # Punishing Strikes
+  - 29911 # Weakening Charge
+  - 30520 # Debilitating Arc
+  - 30775 # Dust Strike
+  - 30597 # Vault
 
-- name: Rifle
-  skills:
-    - 41422 # Brutal Aim
-    - 44087 # Death's Judgment
-    - 41494 # Skirmisher's Shot
-    - 44591 # Spotter's Shot
-    - 43916 # Double Tap
-    - 44695 # Three Round Burst
-    - 41937 # Death's Retreat
-    - 40436 # Sniper's Cover
-    - 40600 # Kneel
+Rifle:
+  - 41422 # Brutal Aim
+  - 44087 # Death's Judgment
+  - 41494 # Skirmisher's Shot
+  - 44591 # Spotter's Shot
+  - 43916 # Double Tap
+  - 44695 # Three Round Burst
+  - 41937 # Death's Retreat
+  - 40436 # Sniper's Cover
+  - 40600 # Kneel
 
-- name: Scepter
-  skills:
-    - 63066 # Shadow Bolt
-    - 63314 # Shadowsquall
-    - 63351 # Shadow Sap
-    - 63254 # Twilight Combo
-    - 63267 # Measured Shot
-    - 63128 # Endless Night
-    - 63154 # Triple Threat
+Scepter:
+  - 63066 # Shadow Bolt
+  - 63314 # Shadowsquall
+  - 63351 # Shadow Sap
+  - 63254 # Twilight Combo
+  - 63267 # Measured Shot
+  - 63128 # Endless Night
+  - 63154 # Triple Threat
 
-  # underwater
-- name: Spear
-  skills:
-    - 13119 # Stab
-    - 13120 # Jab
-    - 13121 # Poison Tip Strike
-    - 13069 # Flanking Dive
-    - 13122 # Nine-Tailed Strike
-    - 13130 # Break Stance
-    - 13070 # Tow Line
-    - 50379 # Hooked Spear
-    - 13068 # Shadow Assault
+# underwater
+Spear:
+  - 13119 # Stab
+  - 13120 # Jab
+  - 13121 # Poison Tip Strike
+  - 13069 # Flanking Dive
+  - 13122 # Nine-Tailed Strike
+  - 13130 # Break Stance
+  - 13070 # Tow Line
+  - 50379 # Hooked Spear
+  - 13068 # Shadow Assault
 
-- name: Harpoon Gun
-  skills:
-    - 13072 # Piercing Shot
-    - 13126 # The Ripper
-    - 13073 # Deluge
-    - 13074 # Escape
-    - 13075 # Crippling Shot
-    - 13076 # Ink Shot
-    - 13078 # Smoke Trail
+Harpoon Gun:
+  - 13072 # Piercing Shot
+  - 13126 # The Ripper
+  - 13073 # Deluge
+  - 13074 # Escape
+  - 13075 # Crippling Shot
+  - 13076 # Ink Shot
+  - 13078 # Smoke Trail

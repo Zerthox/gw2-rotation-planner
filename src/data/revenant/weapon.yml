@@ -1,84 +1,74 @@
-- name: Axe
-  skills:
-    - 28029 # Frigid Blitz
-    - 28409 # Temporal Rift
+Axe:
+  - 28029 # Frigid Blitz
+  - 28409 # Temporal Rift
 
-- name: Greatsword
-  skills:
-    - 62913 # Mist Swing
-    - 62688 # Mist Slash
-    - 62752 # Arcing Mists
-    - 62692 # Mist Unleashed
-    - 62895 # Phantom's Onslaught
-    - 62921 # Imperial Guard
-    - 62828 # True Strike
-    - 62929 # Eternity's Requiem
+Greatsword:
+  - 62913 # Mist Swing
+  - 62688 # Mist Slash
+  - 62752 # Arcing Mists
+  - 62692 # Mist Unleashed
+  - 62895 # Phantom's Onslaught
+  - 62921 # Imperial Guard
+  - 62828 # True Strike
+  - 62929 # Eternity's Requiem
 
-- name: Hammer
-  skills:
-    - 28549 # Hammer Bolt
-    - 28253 # Coalescence of Ruin
-    - 27976 # Phase Smash
-    - 27665 # Field of the Mists
-    - 28110 # Drop the Hammer
+Hammer:
+  - 28549 # Hammer Bolt
+  - 28253 # Coalescence of Ruin
+  - 27976 # Phase Smash
+  - 27665 # Field of the Mists
+  - 28110 # Drop the Hammer
 
-- name: Mace
-  skills:
-    - 27066 # Misery Swipe
-    - 26730 # Anguish Swipe
-    - 26666 # Manifest Toxin
-    - 28357 # Searing Fissure
-    - 27964 # Echoing Eruption
+Mace:
+  - 27066 # Misery Swipe
+  - 26730 # Anguish Swipe
+  - 26666 # Manifest Toxin
+  - 28357 # Searing Fissure
+  - 27964 # Echoing Eruption
 
-- name: Staff
-  skills:
-    - 29180 # Rapid Swipe
-    - 29331 # Forceful Bash
-    - 29002 # Rejuvenating Assault
-    - 29145 # Mender's Rebuke
-    - 29288 # Warding Rift
-    - 29321 # Renewing Wave
-    - 28978 # Surge of the Mists
+Staff:
+  - 29180 # Rapid Swipe
+  - 29331 # Forceful Bash
+  - 29002 # Rejuvenating Assault
+  - 29145 # Mender's Rebuke
+  - 29288 # Warding Rift
+  - 29321 # Renewing Wave
+  - 28978 # Surge of the Mists
 
-- name: Shield
-  skills:
-    - 29386 # Envoy of Exuberance
-    - 28262 # Crystal Hibernation
+Shield:
+  - 29386 # Envoy of Exuberance
+  - 28262 # Crystal Hibernation
 
-- name: Shortbow
-  skills:
-    - 40497 # Shattershot
-    - 40175 # Bloodbane Path
-    - 41829 # Sevenshot
-    - 43993 # Spiritcrush
-    - 41820 # Scorchrazor
+Shortbow:
+  - 40497 # Shattershot
+  - 40175 # Bloodbane Path
+  - 41829 # Sevenshot
+  - 43993 # Spiritcrush
+  - 41820 # Scorchrazor
 
-- name: Sword
-  skills:
-    - 29057 # Preparation Thrust
-    - 29256 # Brutal Blade
-    - 28964 # Rift Slash
-    - 29233 # Chilling Isolation
-    - 26699 # Unrelenting Assault
-    - 28472 # Shackling Wave
-    - 28571 # Duelist's Preparation
-    - 27074 # Deathstrike
-    - 28625 # Deathstrike
+Sword:
+  - 29057 # Preparation Thrust
+  - 29256 # Brutal Blade
+  - 28964 # Rift Slash
+  - 29233 # Chilling Isolation
+  - 26699 # Unrelenting Assault
+  - 28472 # Shackling Wave
+  - 28571 # Duelist's Preparation
+  - 27074 # Deathstrike
+  - 28625 # Deathstrike
 
-- name: Spear
-  skills:
-    - 28714 # Spear of Anguish
-    - 28915 # Rapid Assault
-    - 28827 # Venomous Sphere
-    - 28797 # Frigid Discharge
-    - 28692 # Igniting Brand
-    - 28815 # Devour Brand
-    - 28930 # Rift Containment
+Spear:
+  - 28714 # Spear of Anguish
+  - 28915 # Rapid Assault
+  - 28827 # Venomous Sphere
+  - 28797 # Frigid Discharge
+  - 28692 # Igniting Brand
+  - 28815 # Devour Brand
+  - 28930 # Rift Containment
 
-- name: Trident
-  skills:
-    - 50395 # Mistsfire
-    - 50456 # Portal Fire
-    - 50390 # Rift of Pain
-    - 50410 # Reckoning Blast
-    - 50483 # Torrential Mists
+Trident:
+  - 50395 # Mistsfire
+  - 50456 # Portal Fire
+  - 50390 # Rift of Pain
+  - 50410 # Reckoning Blast
+  - 50483 # Torrential Mists

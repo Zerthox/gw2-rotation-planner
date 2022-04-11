@@ -1,76 +1,38 @@
 import {useMemo} from "react";
 import {useStaticQuery, graphql} from "gatsby";
-import {sortBy} from "lodash";
-import {Profession, SkillData, SkillSlot} from "../data";
+import {Profession, SkillData} from "../data";
 
 export interface SkillSection {
     name: string;
     profession: Profession;
+    type: string;
     skills: SkillData[];
 }
 
-interface DataNode {
-    name: string;
-    fields: {
-        profession: Profession;
-        skills: SkillData[];
-    }
-}
-
 interface QueryData {
-    allDataYaml: {
-        nodes: DataNode[];
+    allSkillData: {
+        nodes: SkillSection[];
     }
 }
 
 const useData = () => useStaticQuery<QueryData>(graphql`
-    query ProfessionData {
-        allDataYaml {
+    query SkillData {
+        allSkillData {
             nodes {
                 name
-                fields {
-                    profession
-                    skills {
-                        id
-                        name
-                        slot
-                    }
+                profession
+                type
+                skills {
+                    id
+                    name
+                    slot
                 }
             }
         }
     }
 `);
 
-const slotOrder = [
-    SkillSlot.Profession1,
-    SkillSlot.Profession2,
-    SkillSlot.Profession3,
-    SkillSlot.Profession4,
-    SkillSlot.Profession5,
-    SkillSlot.Profession6,
-    SkillSlot.Profession7,
-    SkillSlot.Weapon1,
-    SkillSlot.Weapon2,
-    SkillSlot.Weapon3,
-    SkillSlot.Weapon4,
-    SkillSlot.Weapon5,
-    SkillSlot.Heal,
-    SkillSlot.Utility,
-    SkillSlot.Elite
-];
-
-export const useAllSkillSections = (): SkillSection[] => {
-    const data = useData();
-    return useMemo(() => data.allDataYaml.nodes
-        .map((({name, fields: {profession, skills}}) => {
-            return {
-                name,
-                profession,
-                skills: sortBy(skills, (skill) => slotOrder.indexOf(skill.slot))
-            };
-        })),
-    [data]);
-};
+export const useAllSkillSections = (): SkillSection[] => useData().allSkillData.nodes;
 
 export const useSkillSectionsForProfession = (prof: Profession): SkillSection[] => {
     const sections = useAllSkillSections();

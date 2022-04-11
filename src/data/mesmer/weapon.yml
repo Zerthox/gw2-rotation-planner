@@ -1,95 +1,83 @@
-- name: Focus
-  skills:
-    - 10186 # Temporal Curtain
-    - 10363 # Into the Void
-    - 10282 # Phantasmal Warden
+Focus:
+  - 10186 # Temporal Curtain
+  - 10363 # Into the Void
+  - 10282 # Phantasmal Warden
 
-- name: Greatsword
-  skills:
-    - 10219 # Spatial Surge
-    - 44241 # Split Surge
-    - 10333 # Mirror Blade
-    - 10218 # Mind Stab
-    - 10221 # Phantasmal Berserker
-    - 10220 # Illusionary Wave
+Greatsword:
+  - 10219 # Spatial Surge
+  - 44241 # Split Surge
+  - 10333 # Mirror Blade
+  - 10218 # Mind Stab
+  - 10221 # Phantasmal Berserker
+  - 10220 # Illusionary Wave
 
-- name: Pistol
-  skills:
-    - 10175 # Phantasmal Duelist
-    - 10229 # Magic Bullet
+Pistol:
+  - 10175 # Phantasmal Duelist
+  - 10229 # Magic Bullet
 
-- name: Scepter
-  skills:
-    - 10289 # Ether Bolt
-    - 10290 # Ether Blast
-    - 10276 # Illusionary Counter
-    - 10314 # Counterspell
-    - 10168 # Confusing Images
+Scepter:
+  - 10289 # Ether Bolt
+  - 10290 # Ether Blast
+  - 10276 # Illusionary Counter
+  - 10314 # Counterspell
+  - 10168 # Confusing Images
 
-- name: Staff
-  skills:
-    - 10273 # Winds of Chaos
-    - 40184 # Chaos Vortex
-    - 10310 # Phase Retreat
-    - 10216 # Phantasmal Warlock
-    - 10331 # Chaos Armor
-    - 10169 # Chaos Storm
+Staff:
+  - 10273 # Winds of Chaos
+  - 40184 # Chaos Vortex
+  - 10310 # Phase Retreat
+  - 10216 # Phantasmal Warlock
+  - 10331 # Chaos Armor
+  - 10169 # Chaos Storm
 
-- name: Sword
-  skills:
-    - 10334 # Blurred Frenzy
-    - 62568 # Blade Leap
-    - 62675 # Returning Edge
-    - 10173 # Illusionary Leap
-    - 10337 # Swap
-    - 10170 # Mind Slash
-    - 10171 # Mind Gash
-    - 10172 # Mind Spike
-    - 10280 # Illusionary Riposte
-    - 10358 # Counter Blade
-    - 10174 # Phantasmal Swordsman
+Sword:
+  - 10334 # Blurred Frenzy
+  - 62568 # Blade Leap
+  - 62675 # Returning Edge
+  - 10173 # Illusionary Leap
+  - 10337 # Swap
+  - 10170 # Mind Slash
+  - 10171 # Mind Gash
+  - 10172 # Mind Spike
+  - 10280 # Illusionary Riposte
+  - 10358 # Counter Blade
+  - 10174 # Phantasmal Swordsman
 
-- name: Torch
-  skills:
-    - 10285 # The Prestige
-    - 10189 # Phantasmal Mage
+Torch:
+  - 10285 # The Prestige
+  - 10189 # Phantasmal Mage
 
-- name: Shield
-  skills:
-    - 30769 # Echo of Memory
-    - 29649 # Deja Vu
-    - 30643 # Tides of Time
+Shield:
+  - 30769 # Echo of Memory
+  - 29649 # Deja Vu
+  - 30643 # Tides of Time
 
-- name: Axe
-  skills:
-    - 44791 # Lacerating Chop
-    - 44840 # Ethereal Chop
-    - 41164 # Mirror Strikes
-    - 45243 # Lingering Thoughts
-    - 43761 # Axes of Symmetry
+Axe:
+  - 44791 # Lacerating Chop
+  - 44840 # Ethereal Chop
+  - 41164 # Mirror Strikes
+  - 45243 # Lingering Thoughts
+  - 43761 # Axes of Symmetry
 
-- name: Dagger
-  skills:
-    - 62510 # Flying Cutter
-    - 62560 # Bladecall
-    - 62607 # Unstable Bladestorm
+Dagger:
+  - 62510 # Flying Cutter
+  - 62560 # Bladecall
+  - 62607 # Unstable Bladestorm
 
 # underwater
-- name: Spear
-  skills:
-    - 10315 # Stab
-    - 10316 # Jab
-    - 10317 # Evasive Strike
-    - 10318 # Feigned Surge
-    - 10251 # Phantasmal Mariner
-    - 10325 # Slipstream
-    - 10255 # Vortex
+Spear:
+  - 10315 # Stab
+  - 10316 # Jab
+  - 10317 # Evasive Strike
+  - 10318 # Feigned Surge
+  - 10251 # Phantasmal Mariner
+  - 10325 # Slipstream
+  - 10255 # Vortex
 
-- name: Trident
-  skills:
-    - 10258 # Siren's Call
-    - 39959 # Wave of Panic
-    - 10259 # Blinding Tide
-    - 10327 # Imminent Voyage
-    - 10328 # Phantasmal Whaler
-    - 10260 # Illusion of Drowning
+Trident:
+  - 10258 # Siren's Call
+  - 39959 # Wave of Panic
+  - 10259 # Blinding Tide
+  - 10327 # Imminent Voyage
+  - 10328 # Phantasmal Whaler
+  - 10260 # Illusion of Drowning

@@ -1,26 +1,23 @@
 # TODO: toolbelt skills
 
-- name: Scrapper
-  skills:
-    - 56920 # Function Gyro
+Scrapper:
+  - 56920 # Function Gyro
 
-- name: Holosmith
-  skills:
-    - 42938 # Engage Photon Forge
-    - 41123 # Deactivate Photon Forge
+Holosmith:
+  - 42938 # Engage Photon Forge
+  - 41123 # Deactivate Photon Forge
 
-- name: Mechanist
-  skills:
-    - 63050 # Crash Down
-    - 63089 # Recall Mech
+Mechanist:
+  - 63050 # Crash Down
+  - 63089 # Recall Mech
 
-    # mech skills
-    - 63334 # Roiling Smash
-    - 63365 # Explosive Knuckle
-    - 63188 # Spark Revolver
-    - 63367 # Discharge Array
-    - 63293 # Crisis Zone
-    - 63345 # Core Reactor Shot
-    - 63121 # Jade Mortar
-    - 63141 # Barrier Burst
-    - 63236 # Sky Circus
+  # mech skills
+  - 63334 # Roiling Smash
+  - 63365 # Explosive Knuckle
+  - 63188 # Spark Revolver
+  - 63367 # Discharge Array
+  - 63293 # Crisis Zone
+  - 63345 # Core Reactor Shot
+  - 63121 # Jade Mortar
+  - 63141 # Barrier Burst
+  - 63236 # Sky Circus

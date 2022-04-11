@@ -1,53 +1,47 @@
 # conjures
-- name: Flame Axe
-  skills:
-    - 5719 # Flame Leap
-    - 5718 # Ring of Fire
-    - 5717 # Burning Retreat
-    - 5593 # Explosive Lava Axe
-    - 5541 # Lava Axe
+Flame Axe:
+  - 5719 # Flame Leap
+  - 5718 # Ring of Fire
+  - 5717 # Burning Retreat
+  - 5593 # Explosive Lava Axe
+  - 5541 # Lava Axe
 
-- name: Frost Bow
-  skills:
-    - 5721 # Deep Freeze
-    - 5723 # Frost Storm
-    - 5568 # Frost Fan
-    - 5720 # Frost Volley
-    - 5595 # Water Arrow
+Frost Bow:
+  - 5721 # Deep Freeze
+  - 5723 # Frost Storm
+  - 5568 # Frost Fan
+  - 5720 # Frost Volley
+  - 5595 # Water Arrow
 
-- name: Lightning Hammer
-  skills:
-    - 5732 # Static Field
-    - 5725 # Invoke Lightning
-    - 5733 # Wind Blast
-    - 5625 # Lightning Leap
-    - 5726 # Lightning Swing
-    - 5727 # Static Swing
-    - 5728 # Thunderclap
+Lightning Hammer:
+  - 5732 # Static Field
+  - 5725 # Invoke Lightning
+  - 5733 # Wind Blast
+  - 5625 # Lightning Leap
+  - 5726 # Lightning Swing
+  - 5727 # Static Swing
+  - 5728 # Thunderclap
 
-- name: Earth Shield
-  skills:
-    - 5623 # Fortify
-    - 5747 # Magnetic Shield
-    - 5547 # Magnetic Surge
-    - 1647 # Stone Sheath
-    - 5621 # Shield Smack
-    - 1646 # Shield Smash
-    - 5746 # Crippling Shield
+Earth Shield:
+  - 5623 # Fortify
+  - 5747 # Magnetic Shield
+  - 5547 # Magnetic Surge
+  - 1647 # Stone Sheath
+  - 5621 # Shield Smack
+  - 1646 # Shield Smash
+  - 5746 # Crippling Shield
 
-- name: Fiery Greatsword
-  skills:
-    - 5531 # Firestorm
-    - 5517 # Fiery Rush
-    - 5697 # Fiery Whirl
-    - 5533 # Fiery Eruption
-    - 5532 # Flame Wave
+Fiery Greatsword:
+  - 5531 # Firestorm
+  - 5517 # Fiery Rush
+  - 5697 # Fiery Whirl
+  - 5533 # Fiery Eruption
+  - 5532 # Flame Wave
 
 # tornado transform
-- name: Tornado
-  skills:
-    - 5304 # Dust Charge
-    - 5224 # Elemental Requiem
-    - 5754 # Debris Tornado
-    - 5753 # Dust Tornado
-    - 5752 # Electrified Tornado
+Tornado:
+  - 5304 # Dust Charge
+  - 5224 # Elemental Requiem
+  - 5754 # Debris Tornado
+  - 5753 # Dust Tornado
+  - 5752 # Electrified Tornado

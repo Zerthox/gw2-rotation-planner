@@ -10,13 +10,6 @@ const config: GatsbyConfig = {
     },
     pathPrefix: "/gw2-rotation-planner",
     plugins: [
-        "gatsby-transformer-json",
-        {
-            resolve: "gatsby-transformer-yaml",
-            options: {
-                typeName: "DataYaml"
-            }
-        },
         {
             resolve: "gatsby-source-filesystem",
             options: {

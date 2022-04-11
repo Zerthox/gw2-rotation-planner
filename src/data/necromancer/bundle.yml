@@ -1,38 +1,34 @@
-  # shrouds
-- name: Death Shroud
-  skills:
-    - 10554 # Life Blast
-    - 10604 # Dark Path
-    - 56916 # Dark Pursuit
-    - 10588 # Doom
-    - 10594 # Life Transfer
-    - 19504 # Tainted Shackles
+# shrouds
+Death Shroud:
+  - 10554 # Life Blast
+  - 10604 # Dark Path
+  - 56916 # Dark Pursuit
+  - 10588 # Doom
+  - 10594 # Life Transfer
+  - 19504 # Tainted Shackles
 
-- name: Reaper's Shroud
-  skills:
-    - 29442 # Life Rend
-    - 29458 # Life Slash
-    - 30278 # Life Reap
-    - 30825 # Death's Charge
-    - 29958 # Infusing Terror
-    - 29709 # Terrify
-    - 30504 # Soul Spiral
-    - 30557 # Executioner's Scythe
+Reaper's Shroud:
+  - 29442 # Life Rend
+  - 29458 # Life Slash
+  - 30278 # Life Reap
+  - 30825 # Death's Charge
+  - 29958 # Infusing Terror
+  - 29709 # Terrify
+  - 30504 # Soul Spiral
+  - 30557 # Executioner's Scythe
 
-- name: Harbinger Shroud
-  skills:
-    - 62611 # Tainted Bolts
-    - 62621 # Dark Barrage
-    - 63448 # Voracious Dive
-    - 62539 # Voracious Arc
-    - 62672 # Devouring Cut
-    - 62563 # Vital Draw
+Harbinger Shroud:
+  - 62611 # Tainted Bolts
+  - 62621 # Dark Barrage
+  - 63448 # Voracious Dive
+  - 62539 # Voracious Arc
+  - 62672 # Devouring Cut
+  - 62563 # Vital Draw
 
-- name: Lich Form
-  skills:
-    - 10632 # Grim Specter
-    - 10636 # Summon Madness
-    - 10633 # Ripple of Horror
-    - 10635 # Lich's Gaze
-    - 10634 # Deathly Claws
-    - 14350 # Return
+Lich Form:
+  - 10632 # Grim Specter
+  - 10636 # Summon Madness
+  - 10633 # Ripple of Horror
+  - 10635 # Lich's Gaze
+  - 10634 # Deathly Claws
+  - 14350 # Return

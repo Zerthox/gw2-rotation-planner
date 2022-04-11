@@ -1,9 +1,8 @@
 # FIXME: shadow shroud skills are not exposed by api
 
-- name: Shadow Shroud
-  skills:
-    - 63362 # Haunt Shot
-    - 63167 # Grasping Shadows
-    - 63220 # Dawn's Response
-    - 63160 # Eternal Night
-    - 63249 # Mind Shock
+Shadow Shroud:
+  - 63362 # Haunt Shot
+  - 63167 # Grasping Shadows
+  - 63220 # Dawn's Response
+  - 63160 # Eternal Night
+  - 63249 # Mind Shock

@@ -1,67 +1,64 @@
-- name: Heal
-  skills:
-    - 13027 # Hide in Shadows
-    - 13021 # Withdraw
-    - 21778 # Skelk Venom
-    - 13050 # Signet of Malice
+Heal:
+  - 13027 # Hide in Shadows
+  - 13021 # Withdraw
+  - 21778 # Skelk Venom
+  - 13050 # Signet of Malice
 
-    # specs
-    - 30400 # Channeled Vigor
-    - 45088 # Malicious Restoration
-    - 63292 # Well of Gloom
+  # specs
+  - 30400 # Channeled Vigor
+  - 45088 # Malicious Restoration
+  - 63292 # Well of Gloom
 
-- name: Utility
-  skills:
-    - 13037 # Spider Venom
-    - 13055 # Skale Venom
-    - 13096 # Ice Drake Venom
-    - 13093 # Devourer Venom
-    - 13057 # Prepare Pitfall
-    - 56880 # Pitfall
-    - 13026 # Prepare Thousand Needles
-    - 56898 # Thousand Needles
-    - 13038 # Prepare Shadow Portal
-    - 16435 # Shadow Portal
-    - 13056 # Prepare Seal Area
-    - 13099 # Seal Area
-    - 13046 # Assassin's Signet
-    - 13064 # Infiltrator's Signet
-    - 13062 # Signet of Agility
-    - 13060 # Signet of Shadows
-    - 13020 # Scorpion Wire
-    - 13035 # Roll for Initiative
-    - 13066 # Haste
-    - 13028 # Caltrops
-    - 13002 # Shadowstep
-    - 13044 # Blinding Powder
-    - 13065 # Smoke Screen
-    - 13117 # Shadow Refuge
+Utility:
+  - 13037 # Spider Venom
+  - 13055 # Skale Venom
+  - 13096 # Ice Drake Venom
+  - 13093 # Devourer Venom
+  - 13057 # Prepare Pitfall
+  - 56880 # Pitfall
+  - 13026 # Prepare Thousand Needles
+  - 56898 # Thousand Needles
+  - 13038 # Prepare Shadow Portal
+  - 16435 # Shadow Portal
+  - 13056 # Prepare Seal Area
+  - 13099 # Seal Area
+  - 13046 # Assassin's Signet
+  - 13064 # Infiltrator's Signet
+  - 13062 # Signet of Agility
+  - 13060 # Signet of Shadows
+  - 13020 # Scorpion Wire
+  - 13035 # Roll for Initiative
+  - 13066 # Haste
+  - 13028 # Caltrops
+  - 13002 # Shadowstep
+  - 13044 # Blinding Powder
+  - 13065 # Smoke Screen
+  - 13117 # Shadow Refuge
 
-  	# specs
-    - 30868 # Fist Flurry
-    - 30568 # Distracting Daggers
-    - 30661 # Bandit's Defense
-    - 30519 # Reflexive Strike
-    - 30369 # Impairing Daggers
-    - 46335 # Shadow Gust
-    - 41205 # Binding Shadow
-    - 41372 # Mercy
-    - 41158 # Shadow Flare
-    - 45672 # Shadow Swap
-    - 63323 # Well of Bounty
-    - 63294 # Well of Tears
-    - 63230 # Well of Silence
-    - 63276 # Well of Sorrow
+  # specs
+  - 30868 # Fist Flurry
+  - 30568 # Distracting Daggers
+  - 30661 # Bandit's Defense
+  - 30519 # Reflexive Strike
+  - 30369 # Impairing Daggers
+  - 46335 # Shadow Gust
+  - 41205 # Binding Shadow
+  - 41372 # Mercy
+  - 41158 # Shadow Flare
+  - 45672 # Shadow Swap
+  - 63323 # Well of Bounty
+  - 63294 # Well of Tears
+  - 63230 # Well of Silence
+  - 63276 # Well of Sorrow
 
-- name: Elite
-  skills:
-    - 13082 # Thieves Guild
-    - 13132 # Basilisk Venom
-    - 13085 # Dagger Storm
+Elite:
+  - 13082 # Thieves Guild
+  - 13132 # Basilisk Venom
+  - 13085 # Dagger Storm
 
-    # specs
-    - 29516 # Impact Strike
-    - 30077 # Uppercut
-    - 29639 # Finishing Blow
-    - 45508 # Shadow Meld
-    - 63275 # Shadowfall
+  # specs
+  - 29516 # Impact Strike
+  - 30077 # Uppercut
+  - 29639 # Finishing Blow
+  - 45508 # Shadow Meld
+  - 63275 # Shadowfall

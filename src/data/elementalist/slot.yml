@@ -1,60 +1,57 @@
-- name: Heal
-  skills:
-    - 5569 # Glyph of Elemental Harmony
-    - 5507 # Ether Renewal
-    - 5503 # Signet of Restoration
-    - 21656 # Arcane Brilliance
+Heal:
+  - 5569 # Glyph of Elemental Harmony
+  - 5507 # Ether Renewal
+  - 5503 # Signet of Restoration
+  - 21656 # Arcane Brilliance
 
-    # specs
-    - 29535 # "Wash the Pain Away!"
-    - 44239 # Aquatic Stance
-    - 62827 # Soothing Water
+  # specs
+  - 29535 # "Wash the Pain Away!"
+  - 44239 # Aquatic Stance
+  - 62827 # Soothing Water
 
-- name: Utility
-  skills:
-    - 5638 # Arcane Wave
-    - 5641 # Arcane Shield
-    - 5635 # Arcane Power
-    - 5539 # Arcane Blast
-    - 5506 # Glyph of Elemental Power
-    - 5734 # Glyph of Storms
-    - 5502 # Glyph of Lesser Elementals
-    - 5573 # Glyph of Renewal
-    - 5542 # Signet of Fire
-    - 5570 # Signet of Water
-    - 5572 # Signet of Air
-    - 5571 # Signet of Earth
-    - 5535 # Cleansing Fire
-    - 5554 # Mist Form
-    - 5536 # Lightning Flash
-    - 5639 # Armor of Earth
-    - 5540 # Conjure Flame Axe
-    - 5567 # Conjure Frost Bow
-    - 5624 # Conjure Lightning Hammer
-    - 5546 # Conjure Earth Shield
+Utility:
+  - 5638 # Arcane Wave
+  - 5641 # Arcane Shield
+  - 5635 # Arcane Power
+  - 5539 # Arcane Blast
+  - 5506 # Glyph of Elemental Power
+  - 5734 # Glyph of Storms
+  - 5502 # Glyph of Lesser Elementals
+  - 5573 # Glyph of Renewal
+  - 5542 # Signet of Fire
+  - 5570 # Signet of Water
+  - 5572 # Signet of Air
+  - 5571 # Signet of Earth
+  - 5535 # Cleansing Fire
+  - 5554 # Mist Form
+  - 5536 # Lightning Flash
+  - 5639 # Armor of Earth
+  - 5540 # Conjure Flame Axe
+  - 5567 # Conjure Frost Bow
+  - 5624 # Conjure Lightning Hammer
+  - 5546 # Conjure Earth Shield
 
-    # specs
-    - 30662 # "Feel the Burn!"
-    - 29948 # "Flash-Freeze!"
-    - 30047 # "Eye of the Storm!"
-    - 30432 # "Aftershock!"
-    - 44637 # Tailored Victory
-    - 44926 # Stone Resonance
-    - 44612 # Unravel
-    - 45746 # Twist of Fate
-    - 40183 # Primordial Stance
-    - 62965 # Relentless Fire
-    - 62698 # Shattering Ice
-    - 62982 # Invigorating Air
-    - 62826 # Fortified Earth
+  # specs
+  - 30662 # "Feel the Burn!"
+  - 29948 # "Flash-Freeze!"
+  - 30047 # "Eye of the Storm!"
+  - 30432 # "Aftershock!"
+  - 44637 # Tailored Victory
+  - 44926 # Stone Resonance
+  - 44612 # Unravel
+  - 45746 # Twist of Fate
+  - 40183 # Primordial Stance
+  - 62965 # Relentless Fire
+  - 62698 # Shattering Ice
+  - 62982 # Invigorating Air
+  - 62826 # Fortified Earth
 
-- name: Elite
-  skills:
-    - 5666 # Glyph of Elementals
-    - 5516 # Conjure Fiery Greatsword
-    - 5534 # Tornado
+Elite:
+  - 5666 # Glyph of Elementals
+  - 5516 # Conjure Fiery Greatsword
+  - 5534 # Tornado
 
-    # specs
-    - 29968 # "Rebound!"
-    - 43638 # Weave Self
-    - 62725 # Elemental Celerity
+  # specs
+  - 29968 # "Rebound!"
+  - 43638 # Weave Self
+  - 62725 # Elemental Celerity

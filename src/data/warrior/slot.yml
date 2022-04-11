@@ -1,59 +1,56 @@
-- name: Heal
-  skills:
-    - 14402 # "To the Limit!"
-    - 14401 # Mending
-    - 14389 # Healing Signet
-    - 21815 # Defiant Stance
+Heal:
+  - 14402 # "To the Limit!"
+  - 14401 # Mending
+  - 14389 # Healing Signet
+  - 21815 # Defiant Stance
 
-    # specs
-    - 30189 # Blood Reckoning
-    - 41100 # Natural Healing
-    - 62978 # Combat Stimulant
+  # specs
+  - 30189 # Blood Reckoning
+  - 41100 # Natural Healing
+  - 62978 # Combat Stimulant
 
-- name: Utility
-  skills:
-    - 14502 # Kick
-    - 14354 # Throw Bolas
-    - 14516 # Bull's Charge
-    - 14388 # Stomp
-    - 14404 # Signet of Might
-    - 14410 # Signet of Fury
-    - 14479 # Signet of Stamina
-    - 14413 # Dolyak Signet
-    - 14403 # "For Great Justice!"
-    - 14372 # "Shake It Off!"
-    - 14575 # "On My Mark!"
-    - 14409 # "Fear Me!"
-    - 14528 # Banner of Defense
-    - 14405 # Banner of Strength
-    - 14407 # Banner of Discipline
-    - 14408 # Banner of Tactics
-    - 14406 # Berserker Stance
-    - 14392 # Endure Pain
-    - 14412 # Balanced Stance
-    - 14368 # Frenzy
+Utility:
+  - 14502 # Kick
+  - 14354 # Throw Bolas
+  - 14516 # Bull's Charge
+  - 14388 # Stomp
+  - 14404 # Signet of Might
+  - 14410 # Signet of Fury
+  - 14479 # Signet of Stamina
+  - 14413 # Dolyak Signet
+  - 14403 # "For Great Justice!"
+  - 14372 # "Shake It Off!"
+  - 14575 # "On My Mark!"
+  - 14409 # "Fear Me!"
+  - 14528 # Banner of Defense
+  - 14405 # Banner of Strength
+  - 14407 # Banner of Discipline
+  - 14408 # Banner of Tactics
+  - 14406 # Berserker Stance
+  - 14392 # Endure Pain
+  - 14412 # Balanced Stance
+  - 14368 # Frenzy
 
-    # specs
-    - 29941 # Wild Blow
-    - 30074 # Shattering Blow
-    - 29613 # Sundering Leap
-    - 30258 # Outrage
-    - 45380 # Featherfoot Grace
-    - 43745 # Sight beyond Sight
-    - 41919 # Imminent Threat
-    - 43123 # Break Enchantments
-    - 62943 # Bulletproof Barrier
-    - 62967 # Flow Stabilizer
-    - 62804 # Electric Fence
-    - 62960 # Dragonspike Mine
+  # specs
+  - 29941 # Wild Blow
+  - 30074 # Shattering Blow
+  - 29613 # Sundering Leap
+  - 30258 # Outrage
+  - 45380 # Featherfoot Grace
+  - 43745 # Sight beyond Sight
+  - 41919 # Imminent Threat
+  - 43123 # Break Enchantments
+  - 62943 # Bulletproof Barrier
+  - 62967 # Flow Stabilizer
+  - 62804 # Electric Fence
+  - 62960 # Dragonspike Mine
 
-- name: Elite
-  skills:
-    - 14419 # Battle Standard
-    - 14355 # Signet of Rage
-    - 14483 # Rampage
+Elite:
+  - 14419 # Battle Standard
+  - 14355 # Signet of Rage
+  - 14483 # Rampage
 
-    # specs
-    - 30343 # Head Butt
-    - 45333 # Winds of Disenchantment
-    - 62901 # Tactical Reload
+  # specs
+  - 30343 # Head Butt
+  - 45333 # Winds of Disenchantment
+  - 62901 # Tactical Reload

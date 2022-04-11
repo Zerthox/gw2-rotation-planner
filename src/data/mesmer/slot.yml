@@ -1,61 +1,58 @@
-- name: Heal
-  skills:
-    - 10176 # Ether Feast
-    - 10177 # Mirror
-    - 10213 # Mantra of Recovery
-    - 21750 # Signet of the Ether
+Heal:
+  - 10176 # Ether Feast
+  - 10177 # Mirror
+  - 10213 # Mantra of Recovery
+  - 21750 # Signet of the Ether
 
-    # specs
-    - 30305 # Well of Eternity
-    - 40200 # False Oasis
-    - 62522 # Twin Blade Restoration
+  # specs
+  - 30305 # Well of Eternity
+  - 40200 # False Oasis
+  - 62522 # Twin Blade Restoration
 
-- name: Utility
-  skills:
-    - 10236 # Signet of Inspiration
-    - 10232 # Signet of Domination
-    - 10234 # Signet of Midnight
-    - 10247 # Signet of Illusions
-    - 10211 # Mantra of Pain
-    - 10204 # Mantra of Distraction
-    - 10207 # Mantra of Resolve
-    - 10237 # Mantra of Concentration
-    - 10200 # Blink
-    - 10185 # Arcane Thievery
-    - 10244 # Illusion of Life
-    - 29578 # Mimic
-    - 10201 # Decoy
-    - 10202 # Mirror Images
-    - 10341 # Phantasmal Defender
-    - 10267 # Phantasmal Disenchanter
-    - 10203 # Null Field
-    - 10302 # Feedback
-    - 10197 # Portal Entre
-    - 10199 # Portal Exeunt
-    - 10187 # Veil
+Utility:
+  - 10236 # Signet of Inspiration
+  - 10232 # Signet of Domination
+  - 10234 # Signet of Midnight
+  - 10247 # Signet of Illusions
+  - 10211 # Mantra of Pain
+  - 10204 # Mantra of Distraction
+  - 10207 # Mantra of Resolve
+  - 10237 # Mantra of Concentration
+  - 10200 # Blink
+  - 10185 # Arcane Thievery
+  - 10244 # Illusion of Life
+  - 29578 # Mimic
+  - 10201 # Decoy
+  - 10202 # Mirror Images
+  - 10341 # Phantasmal Defender
+  - 10267 # Phantasmal Disenchanter
+  - 10203 # Null Field
+  - 10302 # Feedback
+  - 10197 # Portal Entre
+  - 10199 # Portal Exeunt
+  - 10187 # Veil
 
-    # specs
-    - 29526 # Well of Precognition
-    - 30525 # Well of Calamity
-    - 29856 # Well of Recall
-    - 30814 # Well of Action
-    - 45046 # Illusionary Ambush
-    - 42851 # Mirage Advance
-    - 45666 # Mirage Retreat
-    - 43064 # Sand through Glass
-    - 41065 # Crystal Sands
-    - 62573 # Psychic Force
-    - 45425 # Rain of Swords
-    - 43343 # Blade Renewal
-    - 35637 # Sword of Decimation
+  # specs
+  - 29526 # Well of Precognition
+  - 30525 # Well of Calamity
+  - 29856 # Well of Recall
+  - 30814 # Well of Action
+  - 45046 # Illusionary Ambush
+  - 42851 # Mirage Advance
+  - 45666 # Mirage Retreat
+  - 43064 # Sand through Glass
+  - 41065 # Crystal Sands
+  - 62573 # Psychic Force
+  - 45425 # Rain of Swords
+  - 43343 # Blade Renewal
+  - 35637 # Sword of Decimation
 
-- name: Elite
-  skills:
-    - 29519 # Signet of Humility
-    - 10311 # Time Warp
-    - 10245 # Mass Invisibility
+Elite:
+  - 29519 # Signet of Humility
+  - 10311 # Time Warp
+  - 10245 # Mass Invisibility
 
-    # specs
-    - 30359 # Gravity Well
-    - 45449 # Jaunt
-    - 24755 # Thousand Cuts
+  # specs
+  - 30359 # Gravity Well
+  - 45449 # Jaunt
+  - 24755 # Thousand Cuts

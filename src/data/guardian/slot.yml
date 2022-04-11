@@ -1,65 +1,62 @@
-- name: Heal
-  skills:
-    - 9102 # Shelter
-    - 9158 # Signet of Resolve
-    - 9083 # "Receive the Light!"
-    - 21664 # Litany of Wrath
+Heal:
+  - 9102 # Shelter
+  - 9158 # Signet of Resolve
+  - 9083 # "Receive the Light!"
+  - 21664 # Litany of Wrath
 
-    # specs
-    - 30025 # Purification
-    - 41714 # Mantra of Solace
-    - 62622 # Reversal of Fortune
+  # specs
+  - 30025 # Purification
+  - 41714 # Mantra of Solace
+  - 62622 # Reversal of Fortune
 
-- name: Utility
-  skills:
-    - 9125 # Hammer of Wisdom
-    - 46170 # Hammer of Wisdom
-    - 9168 # Sword of Justice
-    - 44846 # Sword of Justice
-    - 9175 # Bow of Truth
-    - 43565 # Bow of Truth
-    - 9182 # Shield of the Avenger
-    - 41571 # Shield of the Avenger
-    - 9093 # Bane Signet
-    - 9150 # Signet of Judgment
-    - 9151 # Signet of Wrath
-    - 9163 # Signet of Mercy
-    - 9084 # "Advance!"
-    - 9085 # "Save Yourselves!"
-    - 9153 # "Stand Your Ground!"
-    - 9152 # "Hold the Line!"
-    - 9251 # Wall of Reflection
-    - 9187 # Purging Flames
-    - 9253 # Hallowed Ground
-    - 9128 # Sanctuary
-    - 9245 # Smite Condition
-    - 9248 # Contemplation of Purity
-    - 9247 # Judge's Intervention
-    - 9246 # Merciful Intervention
+Utility:
+  - 9125 # Hammer of Wisdom
+  - 46170 # Hammer of Wisdom
+  - 9168 # Sword of Justice
+  - 44846 # Sword of Justice
+  - 9175 # Bow of Truth
+  - 43565 # Bow of Truth
+  - 9182 # Shield of the Avenger
+  - 41571 # Shield of the Avenger
+  - 9093 # Bane Signet
+  - 9150 # Signet of Judgment
+  - 9151 # Signet of Wrath
+  - 9163 # Signet of Mercy
+  - 9084 # "Advance!"
+  - 9085 # "Save Yourselves!"
+  - 9153 # "Stand Your Ground!"
+  - 9152 # "Hold the Line!"
+  - 9251 # Wall of Reflection
+  - 9187 # Purging Flames
+  - 9253 # Hallowed Ground
+  - 9128 # Sanctuary
+  - 9245 # Smite Condition
+  - 9248 # Contemplation of Purity
+  - 9247 # Judge's Intervention
+  - 9246 # Merciful Intervention
 
-    # specs
-    - 29786 # Test of Faith
-    - 30553 # Fragments of Faith
-    - 30364 # Procession of Blades
-    - 30871 # Light's Judgment
-    - 40915 # Mantra of Potence
-    - 46148 # Mantra of Flame
-    - 44080 # Mantra of Truth
-    - 45460 # Mantra of Lore
-    - 62608 # Flash Combo
-    - 62669 # Repose
-    - 62521 # Roiling Light
-    - 62676 # Quick Retribution
-    - 62565 # Whirling Light
-    - 62549 # Heel Crack
+  # specs
+  - 29786 # Test of Faith
+  - 30553 # Fragments of Faith
+  - 30364 # Procession of Blades
+  - 30871 # Light's Judgment
+  - 40915 # Mantra of Potence
+  - 46148 # Mantra of Flame
+  - 44080 # Mantra of Truth
+  - 45460 # Mantra of Lore
+  - 62608 # Flash Combo
+  - 62669 # Repose
+  - 62521 # Roiling Light
+  - 62676 # Quick Retribution
+  - 62565 # Whirling Light
+  - 62549 # Heel Crack
 
-- name: Elite
-  skills:
-    - 29965 # "Feel My Wrath!"
-    - 9154 # Renewed Focus
-    - 30461 # Signet of Courage
+Elite:
+  - 29965 # "Feel My Wrath!"
+  - 9154 # Renewed Focus
+  - 30461 # Signet of Courage
 
-    # specs
-    - 30273 # Dragon's Maw
-    - 43357 # Mantra of Liberation
-    - 62561 # Heaven's Palm
+  # specs
+  - 30273 # Dragon's Maw
+  - 43357 # Mantra of Liberation
+  - 62561 # Heaven's Palm
