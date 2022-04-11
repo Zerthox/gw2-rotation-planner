@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {Box, Stack, SxProps, Accordion, AccordionSummary, AccordionDetails, StackProps} from "@mui/material";
 import {ExpandMore} from "@mui/icons-material";
 import {DraggableSkill} from "./skill";
-import {DragId} from "../../store/planner";
+import {DragId} from "../../store/drag";
 import {SkillState, useSkillSections, useSkillStates} from "../../store/build";
 
 export interface SkillSectionProps {

@@ -1,4 +1,4 @@
-import {DragId} from "../../store/planner";
+import {DragId} from "../../store/drag";
 
 export * from "./planner";
 export * from "./prof-select";

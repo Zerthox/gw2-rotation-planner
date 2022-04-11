@@ -2,7 +2,7 @@ import React from "react";
 import {Chip, SxProps} from "@mui/material";
 import {Delete} from "@mui/icons-material";
 import {useDroppable} from "@dnd-kit/core";
-import {DragId} from "../../store/planner";
+import {DragId} from "../../store/drag";
 import {OverData} from ".";
 
 export interface TrashProps {

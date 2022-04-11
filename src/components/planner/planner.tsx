@@ -8,7 +8,7 @@ import {Skillbar} from "./skillbar";
 import {Timeline} from "./timeline";
 import {SkillItem} from "./skill";
 import {OverData, SkillData} from ".";
-import {DragId, DragType, createDragId, isa, useDragging, setDragging} from "../../store/planner";
+import {DragId, DragType, createDragId, isa, useDragging, setDragging} from "../../store/drag";
 import {deleteRowSkill, insertRowSkill, moveRowSkill} from "../../store/timeline";
 import {useSkillStates, takeSkillItem} from "../../store/build";
 

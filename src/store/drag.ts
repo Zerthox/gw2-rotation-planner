@@ -21,7 +21,7 @@ export interface Dragging {
     skill: number;
 }
 
-export const plannerSlice = createSlice({
+export const dragSlice = createSlice({
     name: "planner",
     initialState: {
         dragging: {
@@ -36,8 +36,8 @@ export const plannerSlice = createSlice({
     }
 });
 
-export const plannerReducer = plannerSlice.reducer;
+export const dragReducer = dragSlice.reducer;
 
-export const {setDragging} = plannerSlice.actions;
+export const {setDragging} = dragSlice.actions;
 
-export const useDragging = (): Dragging => useSelector((state: StoreState) => state.plannerReducer.dragging);
+export const useDragging = (): Dragging => useSelector((state: StoreState) => state.dragReducer.dragging);

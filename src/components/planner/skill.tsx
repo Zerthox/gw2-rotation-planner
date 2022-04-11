@@ -4,7 +4,7 @@ import {Skill} from "@discretize/gw2-ui-new";
 import {useSortable} from "@dnd-kit/sortable";
 import {css} from "@emotion/css";
 import {SkillData} from ".";
-import {DragId, useDragging} from "../../store/planner";
+import {DragId, useDragging} from "../../store/drag";
 import {SkillSlot} from "../../data";
 import {useAllSkills} from "../../hooks/data";
 

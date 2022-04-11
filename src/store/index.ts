@@ -2,13 +2,13 @@ import {configureStore} from "@reduxjs/toolkit";
 import {persistStore, persistReducer} from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import {themeReducer} from "./theme";
-import {plannerReducer} from "./planner";
+import {dragReducer} from "./drag";
 import {buildReducer} from "./build";
 import {timelineReducer} from "./timeline";
 
 const reducer = {
     themeReducer: persistReducer({key: "theme", storage}, themeReducer),
-    plannerReducer,
+    dragReducer,
     buildReducer,
     timelineReducer
 };

@@ -7,7 +7,7 @@ import {useDispatch} from "react-redux";
 import {IconButton} from "../general";
 import {DraggableSkill} from "./skill";
 import {OverData} from ".";
-import {DragId} from "../../store/planner";
+import {DragId} from "../../store/drag";
 import {useRow, deleteRow, moveRow, updateRowName} from "../../store/timeline";
 
 export interface RowProps {
