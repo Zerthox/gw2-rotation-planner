@@ -2,7 +2,8 @@ import React, {useCallback, useEffect} from "react";
 import {Box, Stack, Select, SxProps, MenuItem, Typography} from "@mui/material";
 import {useDispatch} from "react-redux";
 import {useCurrentProfession, changeProfession} from "../../store/build";
-import {Profession, professionIcons, professionIconSize} from "../../data";
+import {Profession} from "../../data";
+import {professionIcons, professionIconSize} from "../../assets/prof-icons";
 import {useAllSkillSections} from "../../hooks/data";
 
 export interface ProfessionSelectProps {
