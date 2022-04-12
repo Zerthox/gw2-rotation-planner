@@ -1,12 +1,14 @@
-import React, {forwardRef, useMemo} from "react";
+import React, {useMemo} from "react";
+import clsx from "clsx";
 import {encode} from "gw2e-chat-codes";
+import {css} from "@emotion/css";
 import {Stack, ListItemIcon, ListItemText} from "@mui/material";
 import {ContentCopy, OpenInNew, DataObject, PlusOne} from "@mui/icons-material";
-import {Icon, Tooltip, DetailsHeader, Skill} from "@discretize/gw2-ui-new";
-import {ContextMenu} from "../general";
-import {Keybind} from "./keybind";
+import {DetailsHeader, Skill} from "@discretize/gw2-ui-new";
 import {useSortable} from "@dnd-kit/sortable";
-import {css} from "@emotion/css";
+import {ContextMenu} from "../general";
+import {IconWithTooltip} from "./icon";
+import {Keybind} from "./keybind";
 import {SkillData} from "../planner";
 import {DragId, useDragging} from "../../store/drag";
 import {useAllSkills} from "../../hooks/data";
@@ -15,17 +17,7 @@ import {CommonSkill, commonSkills} from "../../data";
 const wikiUrl = "https://wiki.guildwars2.com";
 const apiUrl = "https://api.guildwars2.com";
 
-type IconProps = React.ComponentProps<typeof Icon>;
-
-const IconWrapper = (props: IconProps, ref: React.ForwardedRef<HTMLSpanElement>) => (
-    <span ref={ref}>
-        <Icon {...props}/>
-    </span>
-);
-
-const ForwardedIcon = forwardRef(IconWrapper);
-
-export interface SkillItemProps {
+export interface SkillIconProps {
     skill: number;
     tooltip?: boolean;
     isPlaceholder?: boolean;
@@ -33,10 +25,12 @@ export interface SkillItemProps {
 
 const iconStyles = css`font-size: 3em`;
 
-export const SkillItem = ({skill, tooltip = false, isPlaceholder = false}: SkillItemProps): JSX.Element => {
+export const SkillIcon = ({skill, tooltip = false, isPlaceholder = false}: SkillIconProps): JSX.Element => {
     const allSkills = useAllSkills();
     const skillData = useMemo(() => allSkills.find((entry) => entry.id === skill), [skill, allSkills]);
     const commonSkill = useMemo(() => commonSkills.find((entry) => entry.id === skill), [skill]);
+
+    const {className, ...iconProps} = commonSkill?.iconProps ?? {};
 
     return (
         <Stack
@@ -45,19 +39,12 @@ export const SkillItem = ({skill, tooltip = false, isPlaceholder = false}: Skill
             sx={{opacity: isPlaceholder ? 0.3 : 1}}
         >
             {commonSkill ? (
-                <Tooltip
-                    disabled={!tooltip}
-                    content={
-                        <div>
-                            <DetailsHeader>{commonSkill.name}</DetailsHeader>
-                        </div>
-                    }
-                >
-                    <ForwardedIcon
-                        className={iconStyles}
-                        {...commonSkill.iconProps}
-                    />
-                </Tooltip>
+                <IconWithTooltip
+                    className={clsx(iconStyles, className)}
+                    tooltip={<DetailsHeader>{commonSkill.name}</DetailsHeader>}
+                    disableTooltip={!tooltip}
+                    {...iconProps}
+                />
             ) : (
                 <Skill
                     id={skill}
@@ -151,7 +138,7 @@ export const DraggableSkill = ({parentId, dragId, index, skill, onDuplicate}: Dr
                 {...attributes}
                 {...listeners}
             >
-                <SkillItem
+                <SkillIcon
                     skill={skill}
                     tooltip={dragging.dragId === null}
                     isPlaceholder={dragId === dragging.dragId}
