@@ -26,17 +26,20 @@ export const ContextMenu = ({children, items = []}: ContextMenuProps): JSX.Eleme
                 anchorReference="anchorPosition"
                 anchorPosition={contextMenu}
             >
-                {items.map(({onClick, ...props}, i) => (
-                    <MenuItem
-                        key={i}
-                        component="a"
-                        onClick={onClick ? (event) => {
-                            setContextMenu(null);
-                            onClick(event);
-                        } : () => setContextMenu(null)}
-                        {...props}
-                    />
-                ))}
+                {items
+                    .filter((props) => props)
+                    .map(({onClick, ...props}, i) => (
+                        <MenuItem
+                            key={i}
+                            component="a"
+                            onClick={onClick ? (event) => {
+                                setContextMenu(null);
+                                onClick(event);
+                            } : () => setContextMenu(null)}
+                            {...props}
+                        />
+                    ))
+                }
             </Menu>
         </span>
     );

@@ -5,7 +5,7 @@ import {useDroppable} from "@dnd-kit/core";
 import {rectSortingStrategy, SortableContext} from "@dnd-kit/sortable";
 import {useDispatch} from "react-redux";
 import {IconButton} from "../general";
-import {DraggableSkill} from "./skill";
+import {DraggableSkill} from "../skill";
 import {OverData} from ".";
 import {DragId} from "../../store/drag";
 import {useRow, deleteRow, moveRow, updateRowName, insertRowSkill} from "../../store/timeline";

@@ -3,7 +3,6 @@ import {DragId} from "../../store/drag";
 export * from "./planner";
 export * from "./prof-select";
 export * from "./trash";
-export * from "./skill";
 export * from "./skillbar";
 export * from "./timeline";
 export * from "./row";

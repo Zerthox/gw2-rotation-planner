@@ -2,7 +2,7 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {useSelector} from "react-redux";
 import {StoreState} from ".";
 import {createDragId, DragId, DragType} from "./drag";
-import {Profession, SkillSection} from "../data";
+import {Profession, SkillSection, commonSkills} from "../data";
 
 export interface SkillState {
     dragId: DragId;
@@ -26,10 +26,16 @@ export const buildSlice = createSlice({
     reducers: {
         changeProfession(state, {payload: {profession, sections}}: PayloadAction<ProfessionChangePayload>) {
             state.profession = profession;
-            state.sections = sections;
-            state.skillStates = sections
-                .filter((section) => section.profession === profession)
-                .map((section) => section.skills.map((skill) => createSkillState(skill.id)));
+            state.sections = [{
+                name: "Common",
+                profession: null,
+                type: null,
+                skills: commonSkills
+            }, ...sections];
+
+            state.skillStates = state.sections.map((section) => (
+                section.skills.map((skill) => createSkillState(skill.id))
+            ));
         },
         takeSkillItem(state, {payload}: PayloadAction<DragId>) {
             for (const section of state.skillStates) {

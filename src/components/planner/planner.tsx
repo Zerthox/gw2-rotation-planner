@@ -6,7 +6,7 @@ import {Trash} from "./trash";
 import {ProfessionSelect} from "./prof-select";
 import {Skillbar} from "./skillbar";
 import {Timeline} from "./timeline";
-import {SkillItem} from "./skill";
+import {SkillItem} from "../skill";
 import {OverData, SkillData} from ".";
 import {DragId, DragType, createDragId, isa, useDragging, setDragging} from "../../store/drag";
 import {deleteRowSkill, insertRowSkill, moveRowSkill} from "../../store/timeline";

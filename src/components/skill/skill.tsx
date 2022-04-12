@@ -1,0 +1,162 @@
+import React, {forwardRef, useMemo} from "react";
+import {encode} from "gw2e-chat-codes";
+import {Stack, ListItemIcon, ListItemText} from "@mui/material";
+import {ContentCopy, OpenInNew, DataObject, PlusOne} from "@mui/icons-material";
+import {Icon, Tooltip, DetailsHeader, Skill} from "@discretize/gw2-ui-new";
+import {ContextMenu} from "../general";
+import {Keybind} from "./keybind";
+import {useSortable} from "@dnd-kit/sortable";
+import {css} from "@emotion/css";
+import {SkillData} from "../planner";
+import {DragId, useDragging} from "../../store/drag";
+import {useAllSkills} from "../../hooks/data";
+import {CommonSkill, commonSkills} from "../../data";
+
+const wikiUrl = "https://wiki.guildwars2.com";
+const apiUrl = "https://api.guildwars2.com";
+
+type IconProps = React.ComponentProps<typeof Icon>;
+
+const IconWrapper = (props: IconProps, ref: React.ForwardedRef<HTMLSpanElement>) => (
+    <span ref={ref}>
+        <Icon {...props}/>
+    </span>
+);
+
+const ForwardedIcon = forwardRef(IconWrapper);
+
+export interface SkillItemProps {
+    skill: number;
+    tooltip?: boolean;
+    isPlaceholder?: boolean;
+}
+
+const iconStyles = css`font-size: 3em`;
+
+export const SkillItem = ({skill, tooltip = false, isPlaceholder = false}: SkillItemProps): JSX.Element => {
+    const allSkills = useAllSkills();
+    const skillData = useMemo(() => allSkills.find((entry) => entry.id === skill), [skill, allSkills]);
+    const commonSkill = useMemo(() => commonSkills.find((entry) => entry.id === skill), [skill]);
+
+    return (
+        <Stack
+            direction="column"
+            alignItems="center"
+            sx={{opacity: isPlaceholder ? 0.3 : 1}}
+        >
+            {commonSkill ? (
+                <Tooltip
+                    disabled={!tooltip}
+                    content={
+                        <div>
+                            <DetailsHeader>{commonSkill.name}</DetailsHeader>
+                        </div>
+                    }
+                >
+                    <ForwardedIcon
+                        className={iconStyles}
+                        {...commonSkill.iconProps}
+                    />
+                </Tooltip>
+            ) : (
+                <Skill
+                    id={skill}
+                    disableLink
+                    disableText
+                    disableTooltip={!tooltip}
+                    iconProps={{
+                        className: iconStyles
+                    }}
+                />
+            )}
+            <Keybind slot={skillData?.slot}/>
+        </Stack>
+    );
+};
+
+export interface DraggableSkillProps {
+    dragId: DragId;
+    parentId: DragId;
+    index: number;
+    skill: number;
+    onDuplicate?: () => void;
+}
+
+export const DraggableSkill = ({parentId, dragId, index, skill, onDuplicate}: DraggableSkillProps): JSX.Element => {
+    const {attributes, listeners, setNodeRef} = useSortable({
+        id: dragId,
+        data: {
+            parentId,
+            index,
+            skill
+        } as SkillData
+    });
+    const dragging = useDragging();
+
+    const isCommon = skill in CommonSkill;
+    const searchValue = useMemo(() => (
+        isCommon
+            ? commonSkills.find((entry) => entry.id === skill).wikiSearch
+            : encode("skill", skill)
+    ), [skill, isCommon]);
+
+    return (
+        <ContextMenu items={[
+            searchValue ? {
+                // TODO: mimic chat code link used by the game
+                href: `${wikiUrl}?title=Special:Search&search=${encodeURIComponent(searchValue)}&go=Go`,
+                target: "_blank",
+                rel: "noopener noreferrer",
+                children: (
+                    <>
+                        <ListItemIcon><OpenInNew/></ListItemIcon>
+                        <ListItemText>Open Wiki</ListItemText>
+                    </>
+                )
+            } : null,
+            ...!isCommon ? [
+                {
+                    href: `${apiUrl}/v2/skills?ids=${skill}&lang=en`,
+                    target: "_blank",
+                    rel: "noopener noreferrer",
+                    children: (
+                        <>
+                            <ListItemIcon><DataObject/></ListItemIcon>
+                            <ListItemText>Open API</ListItemText>
+                        </>
+                    )
+                },
+                {
+                    onClick: () => navigator.clipboard.writeText(skill.toString()),
+                    children: (
+                        <>
+                            <ListItemIcon><ContentCopy/></ListItemIcon>
+                            <ListItemText>Copy Skill ID</ListItemText>
+                        </>
+                    )
+                }
+            ] : [],
+            onDuplicate ? {
+                onClick: () => onDuplicate(),
+                children: (
+                    <>
+                        <ListItemIcon><PlusOne/></ListItemIcon>
+                        <ListItemText>Duplicate</ListItemText>
+                    </>
+                )
+            } : null
+        ]}>
+            <span
+                ref={setNodeRef}
+                {...attributes}
+                {...listeners}
+            >
+                <SkillItem
+                    skill={skill}
+                    tooltip={dragging.dragId === null}
+                    isPlaceholder={dragId === dragging.dragId}
+                />
+            </span>
+        </ContextMenu>
+    );
+};
