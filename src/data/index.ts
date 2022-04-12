@@ -1,6 +1,7 @@
 import {ProfessionKind as Profession, SkillSlot} from "../../api";
 
 export {ProfessionKind as Profession, SkillSlot, SkillType, WeaponType} from "../../api";
+export * from "./common";
 
 export const isWeaponSlot = (slot: SkillSlot): boolean => slot.startsWith("Weapon");
 
