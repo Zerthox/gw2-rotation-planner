@@ -1,7 +1,7 @@
 import React, {useMemo} from "react";
 import {encode} from "gw2e-chat-codes";
 import {Box, Stack, ListItemIcon, ListItemText} from "@mui/material";
-import {OpenInNew, DataObject} from "@mui/icons-material";
+import {ContentCopy, OpenInNew, DataObject, PlusOne} from "@mui/icons-material";
 import {Skill} from "@discretize/gw2-ui-new";
 import {ContextMenu} from "../general";
 import {useSortable} from "@dnd-kit/sortable";
@@ -96,9 +96,10 @@ export interface DraggableSkillProps {
     parentId: DragId;
     index: number;
     skill: number;
+    onDuplicate?: () => void;
 }
 
-export const DraggableSkill = ({parentId, dragId, index, skill}: DraggableSkillProps): JSX.Element => {
+export const DraggableSkill = ({parentId, dragId, index, skill, onDuplicate}: DraggableSkillProps): JSX.Element => {
     const {attributes, listeners, setNodeRef} = useSortable({
         id: dragId,
         data: {
@@ -111,27 +112,20 @@ export const DraggableSkill = ({parentId, dragId, index, skill}: DraggableSkillP
 
     const chatCode = useMemo(() => encode("skill", skill), [skill]);
 
-    // TODO: mimic chat code link used by the game
-    const wikiLink = useMemo(() => (
-        chatCode
-            ? `${wikiUrl}?title=Special:Search&search=${encodeURIComponent(chatCode)}&go=Go`
-            : null
-    ), [chatCode]);
-    const apiLink = useMemo(() => `${apiUrl}/v2/skills?ids=${skill}&lang=en`, [skill]);
-
     return (
         <ContextMenu items={[
             {
                 onClick: () => navigator.clipboard.writeText(skill.toString()),
                 children: (
                     <>
-                        <ListItemIcon><DataObject/></ListItemIcon>
+                        <ListItemIcon><ContentCopy/></ListItemIcon>
                         <ListItemText>Copy Skill ID</ListItemText>
                     </>
                 )
             },
             {
-                href: wikiLink,
+                // TODO: mimic chat code link used by the game
+                href: chatCode ? `${wikiUrl}?title=Special:Search&search=${encodeURIComponent(chatCode)}&go=Go` : null,
                 target: "_blank",
                 rel: "noopener noreferrer",
                 children: (
@@ -142,16 +136,27 @@ export const DraggableSkill = ({parentId, dragId, index, skill}: DraggableSkillP
                 )
             },
             {
-                href: apiLink,
+                href: `${apiUrl}/v2/skills?ids=${skill}&lang=en`,
                 target: "_blank",
                 rel: "noopener noreferrer",
                 children: (
                     <>
-                        <ListItemIcon><OpenInNew/></ListItemIcon>
+                        <ListItemIcon><DataObject/></ListItemIcon>
                         <ListItemText>Open API</ListItemText>
                     </>
                 )
-            }
+            },
+            ...onDuplicate ? [
+                {
+                    onClick: () => onDuplicate(),
+                    children: (
+                        <>
+                            <ListItemIcon><PlusOne/></ListItemIcon>
+                            <ListItemText>Duplicate</ListItemText>
+                        </>
+                    )
+                }
+            ] : []
         ]}>
             <span
                 ref={setNodeRef}

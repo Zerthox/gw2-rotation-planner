@@ -8,7 +8,8 @@ import {IconButton} from "../general";
 import {DraggableSkill} from "./skill";
 import {OverData} from ".";
 import {DragId} from "../../store/drag";
-import {useRow, deleteRow, moveRow, updateRowName} from "../../store/timeline";
+import {useRow, deleteRow, moveRow, updateRowName, insertRowSkill} from "../../store/timeline";
+import {createSkillState} from "../../store/build";
 
 export interface RowProps {
     dragId: DragId;
@@ -48,7 +49,18 @@ export const Row = ({dragId, index}: RowProps): JSX.Element => {
                                     gap: 0.5
                                 }}>
                                     {row.skills.map(({dragId, skillId}, i) => (
-                                        <DraggableSkill key={dragId} dragId={dragId} parentId={row.dragId} index={i} skill={skillId}/>
+                                        <DraggableSkill
+                                            key={dragId}
+                                            dragId={dragId}
+                                            parentId={row.dragId}
+                                            index={i}
+                                            skill={skillId}
+                                            onDuplicate={() => dispatch(insertRowSkill({
+                                                rowId: row.dragId,
+                                                index: i + 1,
+                                                skill: createSkillState(skillId)
+                                            }))}
+                                        />
                                     ))}
                                 </Box>
                             ) : (
