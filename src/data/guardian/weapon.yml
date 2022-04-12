@@ -22,13 +22,6 @@ Hammer:
   - 9124 # Banish
   - 9195 # Ring of Warding
 
-Spear:
-  - 9189 # Spear of Light
-  - 9190 # Zealot's Flurry
-  - 9191 # Brilliance
-  - 9192 # Symbol of Spears
-  - 9193 # Wrathful Grasp
-
 Mace:
   - 9109 # True Strike
   - 9110 # Pure Strike
@@ -84,6 +77,13 @@ Axe:
   - 45402 # Blazing Edge
 
 # underwater
+Spear:
+  - 9189 # Spear of Light
+  - 9190 # Zealot's Flurry
+  - 9191 # Brilliance
+  - 9192 # Symbol of Spears
+  - 9193 # Wrathful Grasp
+
 Trident:
   - 9205 # Light Ball
   - 50399 # Detonate Light
