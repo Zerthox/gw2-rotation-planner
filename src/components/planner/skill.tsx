@@ -1,6 +1,9 @@
 import React, {useMemo} from "react";
-import {Box, Stack} from "@mui/material";
+import {encode} from "gw2e-chat-codes";
+import {Box, Stack, ListItemIcon, ListItemText} from "@mui/material";
+import {OpenInNew, DataObject} from "@mui/icons-material";
 import {Skill} from "@discretize/gw2-ui-new";
+import {ContextMenu} from "../general";
 import {useSortable} from "@dnd-kit/sortable";
 import {css} from "@emotion/css";
 import {SkillData} from ".";
@@ -29,6 +32,9 @@ const keybinds = {
     [SkillSlot.Utility]: "7-9",
     [SkillSlot.Elite]: "0"
 };
+
+const wikiUrl = "https://wiki.guildwars2.com";
+const apiUrl = "https://api.guildwars2.com";
 
 interface KeybindProps {
     children: React.ReactNode;
@@ -103,13 +109,61 @@ export const DraggableSkill = ({parentId, dragId, index, skill}: DraggableSkillP
     });
     const dragging = useDragging();
 
+    const chatCode = useMemo(() => encode("skill", skill), [skill]);
+
+    // TODO: mimic chat code link used by the game
+    const wikiLink = useMemo(() => (
+        chatCode
+            ? `${wikiUrl}?title=Special:Search&search=${encodeURIComponent(chatCode)}&go=Go`
+            : null
+    ), [chatCode]);
+    const apiLink = useMemo(() => `${apiUrl}/v2/skills?ids=${skill}&lang=en`, [skill]);
+
     return (
-        <span
-            ref={setNodeRef}
-            {...attributes}
-            {...listeners}
-        >
-            <SkillItem skill={skill} tooltip={!dragging.dragId} isPlaceholder={dragId === dragging.dragId}/>
-        </span>
+        <ContextMenu items={[
+            {
+                onClick: () => navigator.clipboard.writeText(skill.toString()),
+                children: (
+                    <>
+                        <ListItemIcon><DataObject/></ListItemIcon>
+                        <ListItemText>Copy Skill ID</ListItemText>
+                    </>
+                )
+            },
+            {
+                href: wikiLink,
+                target: "_blank",
+                rel: "noopener noreferrer",
+                children: (
+                    <>
+                        <ListItemIcon><OpenInNew/></ListItemIcon>
+                        <ListItemText>Open Wiki</ListItemText>
+                    </>
+                )
+            },
+            {
+                href: apiLink,
+                target: "_blank",
+                rel: "noopener noreferrer",
+                children: (
+                    <>
+                        <ListItemIcon><OpenInNew/></ListItemIcon>
+                        <ListItemText>Open API</ListItemText>
+                    </>
+                )
+            }
+        ]}>
+            <span
+                ref={setNodeRef}
+                {...attributes}
+                {...listeners}
+            >
+                <SkillItem
+                    skill={skill}
+                    tooltip={dragging.dragId === null}
+                    isPlaceholder={dragId === dragging.dragId}
+                />
+            </span>
+        </ContextMenu>
     );
 };
