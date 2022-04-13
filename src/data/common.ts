@@ -4,9 +4,9 @@ import {Icon} from "@discretize/gw2-ui-new";
 import {SkillData} from ".";
 
 export enum CommonSkill {
-    WeaponSwap = 0,
-    Dodge = 1,
-    DropBundle = 2
+    WeaponSwap = 1,
+    Dodge = 2,
+    DropBundle = 3
 }
 
 export interface CommonSkillData extends SkillData {

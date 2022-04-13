@@ -1,6 +1,6 @@
 import React, {useMemo} from "react";
 import clsx from "clsx";
-import {encode} from "gw2e-chat-codes";
+import {encode as encodeChatcode} from "gw2e-chat-codes";
 import {css} from "@emotion/css";
 import {Stack, ListItemIcon, ListItemText} from "@mui/material";
 import {ContentCopy, OpenInNew, DataObject, PlusOne} from "@mui/icons-material";
@@ -84,7 +84,7 @@ export const DraggableSkill = ({parentId, dragId, index, skill, onDuplicate}: Dr
     const searchValue = useMemo(() => (
         isCommon
             ? commonSkills.find((entry) => entry.id === skill).wikiSearch
-            : encode("skill", skill)
+            : encodeChatcode("skill", skill)
     ), [skill, isCommon]);
 
     return (
