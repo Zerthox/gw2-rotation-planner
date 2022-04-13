@@ -14,9 +14,10 @@ import "./global.css";
 export interface LayoutProps {
     title?: string;
     children: React.ReactNode;
+    header?: React.ReactNode;
 }
 
-export const Layout = ({title, children}: LayoutProps): JSX.Element => {
+export const Layout = ({title, children, header}: LayoutProps): JSX.Element => {
     const siteMeta = useSiteMeta();
     const pageTitle = title ?? siteMeta.title;
 
@@ -28,7 +29,7 @@ export const Layout = ({title, children}: LayoutProps): JSX.Element => {
                 author={siteMeta.author}
             />
             <PersistGate persistor={Persistor} loading={<Loading/>}>
-                <Content title={pageTitle}>{children}</Content>
+                <Content title={pageTitle} header={header}>{children}</Content>
             </PersistGate>
         </ReduxProvider>
     );

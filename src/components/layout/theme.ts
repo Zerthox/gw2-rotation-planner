@@ -1,12 +1,12 @@
 import {createTheme} from "@mui/material";
-import {blueGrey, cyan} from "@mui/material/colors";
+import {cyan, blueGrey} from "@mui/material/colors";
 
 const palette = {
     primary: {
         main: cyan[800]
     },
     secondary: {
-        main: blueGrey[700]
+        main: blueGrey[100]
     }
 };
 

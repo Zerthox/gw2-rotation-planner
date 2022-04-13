@@ -8,15 +8,18 @@ import {useDarkMode} from "../../store/theme";
 export interface ContentProps {
     title?: string;
     children: React.ReactNode;
+    header?: React.ReactNode;
 }
 
-export const Content = ({title, children}: ContentProps): JSX.Element => {
+export const Content = ({title, children, header}: ContentProps): JSX.Element => {
     const darkMode = useDarkMode();
 
     return (
         <Providers theme={darkMode ? DarkTheme : LightTheme}>
             <Stack direction="column" height="100vh">
-                <Header title={title}/>
+                <Header title={title}>
+                    {header}
+                </Header>
                 <Box flex="1" minHeight={0}>
                     {children}
                 </Box>

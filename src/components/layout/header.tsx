@@ -8,9 +8,10 @@ import {useSiteMeta} from "../../hooks/site";
 
 export interface HeaderProps {
     title?: string;
+    children?: React.ReactNode;
 }
 
-export const Header = ({title}: HeaderProps): JSX.Element => {
+export const Header = ({title, children}: HeaderProps): JSX.Element => {
     const dispatch = useDispatch();
     const darkMode = useDarkMode();
     const siteMeta = useSiteMeta();
@@ -23,17 +24,17 @@ export const Header = ({title}: HeaderProps): JSX.Element => {
                 spacing={2}
                 padding={2}
             >
-                <Box flexGrow={1}>
-                    {title ? (
-                        <Typography variant="h4">{title}</Typography>
-                    ) : null}
-                </Box>
-                <Stack
-                    direction="row"
-                    alignItems="center"
-                    spacing={2}
-                >
-                    <Tooltip placement="bottom" disableInteractive title="Toggle Theme">
+                {title ? (
+                    <Typography variant="h4">{title}</Typography>
+                ) : null}
+                {children}
+                <Box flexGrow={1}/>
+                <Stack direction="row" alignItems="center" spacing={2}>
+                    <Tooltip
+                        placement="bottom"
+                        disableInteractive
+                        title="Toggle Theme"
+                    >
                         <FormControlLabel
                             checked={darkMode}
                             label={
