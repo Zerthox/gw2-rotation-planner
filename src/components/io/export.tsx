@@ -3,6 +3,7 @@ import {css} from "@emotion/css";
 import {Box, Stack, Dialog, DialogTitle, DialogContent, DialogActions, Typography, Button, IconButton, TextField} from "@mui/material";
 import {ImportExport, Close} from "@mui/icons-material";
 import {useRows} from "../../store/timeline";
+import {validate, RowData} from "./validate";
 
 export interface ExportModalProps {
     open: boolean;
@@ -10,22 +11,42 @@ export interface ExportModalProps {
 }
 
 export const ExportModal = ({open, onClose}: ExportModalProps): JSX.Element => {
-    const rows = useRows();
+    const storeRows = useRows();
+    const initialRows = useMemo<RowData[]>(() => (
+        storeRows.map(({name, skills}) => ({name, skills: skills.map((skill) => skill.skillId)}))
+    ), [storeRows]);
 
     // custom json formatting
-    const plannerJson = useMemo(() => {
-        const json = rows.map(({name, skills}) => {
+    const initialJson = useMemo(() => {
+        const json = initialRows.map(({name, skills}) => {
             let result = "";
             result += "\n  {";
-            result += `\n    "name": ${name},`;
-            result += `\n    "skills": [${skills.map((skill) => skill.skillId).join(", ")}]`;
+            result += `\n    "name": ${JSON.stringify(name)},`;
+            result += `\n    "skills": [${skills.join(", ")}]`;
             result += "\n  }";
             return result;
         }).join(",");
         return `[${json}\n]`;
-    }, [rows]);
+    }, [initialRows]);
 
-    const [json, setJson] = useState(plannerJson);
+    const [rows, setRows] = useState(initialRows);
+    const [json, setJson] = useState(initialJson);
+
+    // TODO: validation logic as hook?
+    const updateJson = (json: string) => {
+        setJson(json);
+        try {
+            const data = JSON.parse(json);
+            if (validate(data)) {
+                setRows(data);
+            } else {
+                setRows(null);
+            }
+        } catch {
+            setRows(null);
+        }
+    };
+    const isError = rows === null;
 
     return (
         <Dialog
@@ -47,7 +68,9 @@ export const ExportModal = ({open, onClose}: ExportModalProps): JSX.Element => {
             <DialogContent dividers>
                 <TextField
                     value={json}
-                    onChange={({target}) => setJson(target.value)}
+                    error={isError}
+                    helperText={isError ? "Invalid JSON" : " "}
+                    onChange={({target}) => updateJson(target.value)}
                     multiline
                     fullWidth
                     rows={24}
@@ -58,11 +81,16 @@ export const ExportModal = ({open, onClose}: ExportModalProps): JSX.Element => {
             </DialogContent>
             <DialogActions>
                 <Button color="error" onClick={() => onClose()}>Cancel</Button>
-                <Button color="secondary" onClick={() => setJson(plannerJson)}>Reset</Button>
-                <Button color="success" variant="contained" onClick={() => {
-                    // TODO: save changes
-                    onClose();
-                }}><b></b>Save</Button>
+                <Button color="secondary" onClick={() => updateJson(initialJson)}>Reset</Button>
+                <Button
+                    color="success"
+                    variant="contained"
+                    disabled={isError}
+                    onClick={() => {
+                        // TODO: save changes
+                        onClose();
+                    }}
+                >Save</Button>
             </DialogActions>
         </Dialog>
     );
