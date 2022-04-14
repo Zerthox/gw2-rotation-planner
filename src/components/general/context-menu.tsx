@@ -17,6 +17,7 @@ export const ContextMenu = ({children, items = []}: ContextMenuProps): JSX.Eleme
         );
     }, [contextMenu, setContextMenu]);
 
+    // TODO: empty items displays none
     return (
         <span onContextMenu={onContextMenu}>
             {children}

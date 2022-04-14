@@ -94,3 +94,5 @@ export const {overrideRows, appendRow, deleteRow, moveRow, updateRowName, insert
 export const useRows = (): RowState[] => useSelector((state: StoreState) => state.timelineReducer.rows);
 
 export const useRow = (id: DragId): RowState => useSelector((state: StoreState) => state.timelineReducer.rows.find((row) => row.dragId === id));
+
+export const useRowCount = (): number => useSelector((state: StoreState) => state.timelineReducer.rows.length);

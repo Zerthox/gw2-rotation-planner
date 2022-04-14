@@ -8,7 +8,7 @@ import {IconButton} from "../general";
 import {DraggableSkill} from "../skill";
 import {OverData} from ".";
 import {DragId} from "../../store/drag";
-import {useRow, deleteRow, moveRow, updateRowName, insertRowSkill} from "../../store/timeline";
+import {useRow, useRowCount, deleteRow, moveRow, updateRowName, insertRowSkill} from "../../store/timeline";
 import {createSkillState} from "../../store/build";
 
 export interface RowProps {
@@ -19,6 +19,8 @@ export interface RowProps {
 export const Row = ({dragId, index}: RowProps): JSX.Element => {
     const dispatch = useDispatch();
     const row = useRow(dragId);
+    const rowCount = useRowCount();
+
     const items = row.skills.map(({dragId}) => dragId);
     const {setNodeRef} = useDroppable({
         id: dragId,
@@ -74,12 +76,14 @@ export const Row = ({dragId, index}: RowProps): JSX.Element => {
                 <Stack direction="column" alignItems="center">
                     <IconButton
                         title="Move Up"
+                        disabled={index === 0}
                         onClick={() => dispatch(moveRow({from: index, to: index - 1}))}
                     >
                         <ArrowUpward/>
                     </IconButton>
                     <IconButton
                         title="Move Down"
+                        disabled={index === rowCount - 1}
                         onClick={() => dispatch(moveRow({from: index, to: index + 1}))}
                     >
                         <ArrowDownward/>
