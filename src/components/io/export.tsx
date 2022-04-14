@@ -83,7 +83,7 @@ export const ExportModal = ({open, onClose}: ExportModalProps): JSX.Element => {
                     inputProps={{
                         style: {
                             whiteSpace: "nowrap",
-                            fontFamily: "monospace"
+                            fontFamily: "Source Code Pro, monospace"
                         }
                     }}
                 />
