@@ -89,6 +89,16 @@ export const DraggableSkill = ({parentId, dragId, index, skill, onDuplicate}: Dr
 
     return (
         <ContextMenu items={[
+            // TODO: add delete as well
+            onDuplicate ? {
+                onClick: () => onDuplicate(),
+                children: (
+                    <>
+                        <ListItemIcon><PlusOne/></ListItemIcon>
+                        <ListItemText>Duplicate</ListItemText>
+                    </>
+                )
+            } : null,
             searchValue ? {
                 // TODO: mimic chat code link used by the game
                 href: `${wikiUrl}?title=Special:Search&search=${encodeURIComponent(searchValue)}&go=Go`,
@@ -122,16 +132,7 @@ export const DraggableSkill = ({parentId, dragId, index, skill, onDuplicate}: Dr
                         </>
                     )
                 }
-            ] : [],
-            onDuplicate ? {
-                onClick: () => onDuplicate(),
-                children: (
-                    <>
-                        <ListItemIcon><PlusOne/></ListItemIcon>
-                        <ListItemText>Duplicate</ListItemText>
-                    </>
-                )
-            } : null
+            ] : []
         ]}>
             <span
                 ref={setNodeRef}
