@@ -1,27 +1,26 @@
 import {createTheme} from "@mui/material";
 import {cyan, blueGrey} from "@mui/material/colors";
 
-// TODO: make button label bold
-
-const palette = {
-    primary: {
-        main: cyan[800]
-    },
-    secondary: {
-        main: blueGrey[100]
+export const DarkTheme = createTheme({
+    palette: {
+        mode: "dark",
+        primary: {
+            main: cyan[800]
+        },
+        secondary: {
+            main: blueGrey[100]
+        }
     }
-};
+});
 
 export const LightTheme = createTheme({
     palette: {
         mode: "light",
-        ...palette
-    }
-});
-
-export const DarkTheme = createTheme({
-    palette: {
-        mode: "dark",
-        ...palette
+        primary: {
+            main: cyan[800]
+        },
+        secondary: {
+            main: blueGrey[800]
+        }
     }
 });
