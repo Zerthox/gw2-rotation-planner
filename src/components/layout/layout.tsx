@@ -7,13 +7,9 @@ import {Content} from "./content";
 import {Store, Persistor} from "../../store";
 import {useSiteMeta} from "../../hooks/site";
 
-import "@fontsource/roboto/300.css";
-import "@fontsource/roboto/400.css";
-import "@fontsource/roboto/500.css";
-import "@fontsource/roboto/700.css";
-import "@fontsource/source-code-pro";
 import "@discretize/gw2-ui-new/dist/index.css";
 import "@discretize/gw2-ui-new/dist/default_style.css";
+import "../../assets/fonts";
 import "./global.css";
 
 export interface LayoutProps {
