@@ -1,9 +1,23 @@
 import React, {useState, useMemo} from "react";
-import {css} from "@emotion/css";
 import {Box, Stack, Dialog, DialogTitle, DialogContent, DialogActions, Typography, Button, IconButton, TextField} from "@mui/material";
-import {ImportExport, Close} from "@mui/icons-material";
-import {useRows} from "../../store/timeline";
-import {validate, RowData} from "./validate";
+import {ImportExport, Close, Save} from "@mui/icons-material";
+import {useDispatch} from "react-redux";
+import {createSkillState} from "../../store/build";
+import {useRows, overrideRows} from "../../store/timeline";
+import {validate, RowSchema} from "./validate";
+
+// custom json formatting
+const toJson = (rows: RowSchema[]): string => {
+    const json = rows.map(({name, skills}) => {
+        let result = "";
+        result += "\n  {";
+        result += `\n    "name": ${JSON.stringify(name)},`;
+        result += `\n    "skills": [${skills.join(", ")}]`;
+        result += "\n  }";
+        return result;
+    }).join(",");
+    return `[${json}\n]`;
+};
 
 export interface ExportModalProps {
     open: boolean;
@@ -11,39 +25,28 @@ export interface ExportModalProps {
 }
 
 export const ExportModal = ({open, onClose}: ExportModalProps): JSX.Element => {
+    const dispatch = useDispatch();
     const storeRows = useRows();
-    const initialRows = useMemo<RowData[]>(() => (
-        storeRows.map(({name, skills}) => ({name, skills: skills.map((skill) => skill.skillId)}))
-    ), [storeRows]);
 
-    // custom json formatting
-    const initialJson = useMemo(() => {
-        const json = initialRows.map(({name, skills}) => {
-            let result = "";
-            result += "\n  {";
-            result += `\n    "name": ${JSON.stringify(name)},`;
-            result += `\n    "skills": [${skills.join(", ")}]`;
-            result += "\n  }";
-            return result;
-        }).join(",");
-        return `[${json}\n]`;
-    }, [initialRows]);
+    const initialRows = useMemo<RowSchema[]>(() => storeRows.map(({name, skills}) => ({
+        name,
+        skills: skills.map((skill) => skill.skillId)
+    })), [storeRows]);
+    const initialJson = useMemo(() => toJson(initialRows), [initialRows]);
 
-    const [rows, setRows] = useState(initialRows);
-    const [json, setJson] = useState(initialJson);
+    const [{json, rows}, setContent] = useState(() => ({json: initialJson, rows: initialRows}));
 
     // TODO: validation logic as hook?
     const updateJson = (json: string) => {
-        setJson(json);
         try {
             const data = JSON.parse(json);
             if (validate(data)) {
-                setRows(data);
+                setContent({json, rows: data});
             } else {
-                setRows(null);
+                setContent({json, rows: null});
             }
         } catch {
-            setRows(null);
+            setContent({json, rows: null});
         }
     };
     const isError = rows === null;
@@ -54,6 +57,9 @@ export const ExportModal = ({open, onClose}: ExportModalProps): JSX.Element => {
             onClose={onClose}
             maxWidth="md"
             fullWidth
+            TransitionProps={{
+                onEnter: () => setContent({json: initialJson, rows: initialRows})
+            }}
         >
             <DialogTitle>
                 <Stack direction="row" alignItems="center" spacing={1}>
@@ -75,19 +81,30 @@ export const ExportModal = ({open, onClose}: ExportModalProps): JSX.Element => {
                     fullWidth
                     rows={24}
                     inputProps={{
-                        className: css`white-space: nowrap;`
+                        style: {
+                            whiteSpace: "nowrap",
+                            fontFamily: "monospace"
+                        }
                     }}
                 />
             </DialogContent>
             <DialogActions>
-                <Button color="error" onClick={() => onClose()}>Cancel</Button>
-                <Button color="secondary" onClick={() => updateJson(initialJson)}>Reset</Button>
+                <Button color="error" onClick={() => {
+                    onClose();
+                    updateJson(toJson(initialRows));
+                }}>Cancel</Button>
+                <Button color="secondary" onClick={() => updateJson(toJson(initialRows))}>Reset</Button>
                 <Button
                     color="success"
                     variant="contained"
+                    startIcon={<Save/>}
                     disabled={isError}
                     onClick={() => {
-                        // TODO: save changes
+                        const newRows = rows.map(({name, skills}) => ({
+                            name,
+                            skills: skills.map((id) => createSkillState(id))
+                        }));
+                        dispatch(overrideRows(newRows));
                         onClose();
                     }}
                 >Save</Button>

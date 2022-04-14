@@ -2,7 +2,7 @@ import Ajv from "ajv/dist/jtd";
 
 export const ajv = new Ajv();
 
-export interface RowData {
+export interface RowSchema {
     name: string;
     skills: number[];
 }
@@ -18,4 +18,4 @@ export const rowSchema = {
     }
 };
 
-export const validate = ajv.compile<RowData[]>(rowSchema);
+export const validate = ajv.compile<RowSchema[]>(rowSchema);

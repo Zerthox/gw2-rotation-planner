@@ -35,6 +35,10 @@ export const timelineSlice = createSlice({
         ]
     },
     reducers: {
+        overrideRows(state, {payload}: PayloadAction<Row[]>) {
+            state.rows = payload.map((row) => createRow(row));
+        },
+
         appendRow(state, {payload}: PayloadAction<Row>) {
             const row = createRow(payload);
             state.rows.push(row);
@@ -85,7 +89,7 @@ export const timelineSlice = createSlice({
 
 export const timelineReducer = timelineSlice.reducer;
 
-export const {appendRow, deleteRow, moveRow, updateRowName, insertRowSkill, deleteRowSkill, moveRowSkill} = timelineSlice.actions;
+export const {overrideRows, appendRow, deleteRow, moveRow, updateRowName, insertRowSkill, deleteRowSkill, moveRowSkill} = timelineSlice.actions;
 
 export const useRows = (): RowState[] => useSelector((state: StoreState) => state.timelineReducer.rows);
 
