@@ -1,5 +1,5 @@
-import React from "react";
-import {Tooltip, IconButton as MuiIconButton, TooltipProps, IconButtonProps as MuiIconButtonProps} from "@mui/material";
+import React, {useState} from "react";
+import {Tooltip, Button, ButtonProps, IconButton as MuiIconButton, TooltipProps, IconButtonProps as MuiIconButtonProps} from "@mui/material";
 
 export interface IconButtonProps extends MuiIconButtonProps {
     title: string;
@@ -18,3 +18,24 @@ export const IconButton = ({title, tooltip = true, tooltipProps, ...props}: Icon
         <MuiIconButton aria-label={title} {...props}/>
     </Tooltip>
 ) : <MuiIconButton aria-label={title} {...props}/>;
+
+export interface CooldownButtonProps extends ButtonProps {
+    cooldown: number;
+    cooldownProps: ButtonProps;
+}
+
+export const CooldownButton = ({cooldown, cooldownProps, onClick, ...props}: CooldownButtonProps): JSX.Element => {
+    const [triggered, setTriggered] = useState(false);
+
+    return (
+        <Button
+            {...props}
+            {...triggered ? cooldownProps : {}}
+            onClick={(event) => {
+                onClick(event);
+                setTriggered(true);
+                setTimeout(() => setTriggered(false), cooldown);
+            }}
+        />
+    );
+};

@@ -1,7 +1,8 @@
 import React, {useState, useMemo} from "react";
 import {Box, Stack, Dialog, DialogTitle, DialogContent, DialogActions, Typography, Button, IconButton, TextField} from "@mui/material";
-import {ImportExport, Close, Save} from "@mui/icons-material";
+import {ImportExport, Close, Save, ContentCopy} from "@mui/icons-material";
 import {useDispatch} from "react-redux";
+import {CooldownButton} from "../general";
 import {createSkillState} from "../../store/build";
 import {useRows, overrideRows} from "../../store/timeline";
 import {validate, RowSchema} from "./validate";
@@ -88,7 +89,17 @@ export const ExportModal = ({open, onClose}: ExportModalProps): JSX.Element => {
                     }}
                 />
             </DialogContent>
-            <DialogActions>
+            <DialogActions sx={{paddingX: 1.5}}>
+                <CooldownButton
+                    color="secondary"
+                    startIcon={<ContentCopy/>}
+                    onClick={() => navigator.clipboard.writeText(json)}
+                    sx={{marginRight: "auto"}}
+                    cooldown={3000}
+                    cooldownProps={{
+                        children: "Copied!"
+                    }}
+                >Copy</CooldownButton>
                 <Button color="error" onClick={() => {
                     onClose();
                     updateJson(toJson(initialRows));
