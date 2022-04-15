@@ -14,10 +14,10 @@ export async function fetchApi<T>({version = "v2", endpoint, lang = "en", params
     const url = `${API_URL}/${version}/${endpoint}?lang=${lang}&${paramString}`;
 
     const response = await fetch(url);
-    const json = await response.json();
-    if (Object.keys(json).length === 1 && json.text) {
+    const json = await response.json() as T | {text: string};
+    if ("text" in json && Object.keys(json).length === 1) {
         throw new Error(json.text);
     } else {
-        return json;
+        return json as T;
     }
 }
