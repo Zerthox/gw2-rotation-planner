@@ -11,10 +11,7 @@ export interface SkillState {
 
 export const createSkillState = (skill: number): SkillState => ({dragId: createDragId(DragType.Skill), skillId: skill});
 
-export interface ProfessionChangePayload {
-    profession: Profession;
-    sections: SkillSection[];
-}
+const filterSections = (sections: SkillSection[], prof: Profession) => sections.filter((section) => !section.profession || section.profession === prof);
 
 export const buildSlice = createSlice({
     name: "build",
@@ -29,8 +26,7 @@ export const buildSlice = createSlice({
             buildSlice.caseReducers.refreshSkillStates(state);
         },
         refreshSkillStates(state) {
-            state.skillStates = state.sections
-                .filter((section) => section.profession === state.profession)
+            state.skillStates = filterSections(state.sections, state.profession)
                 .map((section) => section.skills.map((skill) => createSkillState(skill.id)));
         },
         changeProfession(state, {payload}: PayloadAction<Profession>) {
@@ -56,8 +52,6 @@ export const {initializeSections, changeProfession, takeSkillItem} = buildSlice.
 
 export const useCurrentProfession = (): Profession => useSelector(({buildReducer}: StoreState) => buildReducer.profession);
 
-export const useSkillSections = (): SkillSection[] => useSelector(({buildReducer}: StoreState) => (
-    buildReducer.sections.filter((section) => section.profession === buildReducer.profession)
-));
+export const useSkillSections = (): SkillSection[] => useSelector(({buildReducer}: StoreState) => filterSections(buildReducer.sections, buildReducer.profession));
 
 export const useSkillStates = (): SkillState[][] => useSelector(({buildReducer}: StoreState) => buildReducer.skillStates);
