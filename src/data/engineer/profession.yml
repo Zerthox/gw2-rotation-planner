@@ -6,6 +6,8 @@ Scrapper:
 Holosmith:
   - 42938 # Engage Photon Forge
   - 41123 # Deactivate Photon Forge
+  - 45219 # Deactivate Photon Forge (hot)
+  - 44386 # Holoforge Overheated
 
 Mechanist:
   - 63050 # Crash Down
