@@ -1,10 +1,9 @@
-import React, {useCallback, useEffect} from "react";
-import {Box, Stack, Select, SxProps, MenuItem, Typography} from "@mui/material";
+import React, {useCallback} from "react";
+import {Box, Stack, Select, SelectChangeEvent, SxProps, MenuItem, Typography} from "@mui/material";
 import {useDispatch} from "react-redux";
 import {useCurrentProfession, changeProfession} from "../../store/build";
 import {Profession} from "../../data";
 import {professionIcons, professionIconSize} from "../../assets/prof-icons";
-import {useAllSkillSections} from "../../hooks/data";
 
 export interface ProfessionSelectProps {
     sx?: SxProps;
@@ -12,26 +11,14 @@ export interface ProfessionSelectProps {
 
 export const ProfessionSelect = ({sx}: ProfessionSelectProps): JSX.Element => {
     const dispatch = useDispatch();
-    const sections = useAllSkillSections();
     const prof = useCurrentProfession();
 
-    const onChange = useCallback((profession: Profession) => {
-        const profSections = sections.filter((section) => section.profession === profession);
-        dispatch(changeProfession({profession, sections: profSections}));
-    }, [dispatch, sections]);
-
-    useEffect(() => {
-        if (!prof) {
-            onChange(Profession.Elementalist);
-        }
-    }, [prof, onChange]);
+    const onChange = useCallback(({target}: SelectChangeEvent<string>) => {
+        dispatch(changeProfession(target.value as Profession));
+    }, [dispatch]);
 
     return (
-        <Select
-            value={prof ?? ""}
-            onChange={({target}) => onChange(target.value as Profession)}
-            sx={sx}
-        >
+        <Select value={prof ?? ""} onChange={onChange} sx={sx}>
             {Object.entries(professionIcons).map(([name, icon]) => (
                 <MenuItem key={name} value={name}>
                     <Stack direction="row" alignItems="center" spacing={0.5}>

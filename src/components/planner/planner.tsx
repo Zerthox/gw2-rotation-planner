@@ -1,4 +1,4 @@
-import React, {useRef, useCallback} from "react";
+import React, {useRef, useCallback, useEffect} from "react";
 import {Stack, Card} from "@mui/material";
 import {Active, DndContext, DragOverEvent, DragOverlay, DragStartEvent} from "@dnd-kit/core";
 import {useDispatch, batch} from "react-redux";
@@ -10,7 +10,8 @@ import {SkillIcon} from "../skill";
 import {OverData, SkillData} from ".";
 import {DragId, DragType, createDragId, isa, useDragging, setDragging} from "../../store/drag";
 import {deleteRowSkill, insertRowSkill, moveRowSkill} from "../../store/timeline";
-import {useSkillStates, takeSkillItem} from "../../store/build";
+import {useSkillStates, initializeSections, takeSkillItem} from "../../store/build";
+import {useAllSkillSections} from "../../hooks/data";
 
 const SKILLBAR_ID = createDragId(DragType.Skillbar);
 
@@ -18,11 +19,16 @@ const TRASH_ID = createDragId(DragType.Trash);
 
 export const Planner = (): JSX.Element => {
     const dispatch = useDispatch();
+    const sectionData = useAllSkillSections();
     const skills = useSkillStates();
     const dragging = useDragging();
 
     const parent = useRef<DragId>(null);
     const fromSkillbar = useRef(false);
+
+    useEffect(() => {
+        dispatch(initializeSections(sectionData));
+    }, [dispatch, sectionData]);
 
     const cancelDrag = useCallback((active: Active) => {
         if (fromSkillbar.current && isa(DragType.Row, parent.current)) {

@@ -91,8 +91,8 @@ export const timelineReducer = timelineSlice.reducer;
 
 export const {overrideRows, appendRow, deleteRow, moveRow, updateRowName, insertRowSkill, deleteRowSkill, moveRowSkill} = timelineSlice.actions;
 
-export const useRows = (): RowState[] => useSelector((state: StoreState) => state.timelineReducer.rows);
+export const useRows = (): RowState[] => useSelector(({timelineReducer}: StoreState) => timelineReducer.rows);
 
-export const useRow = (id: DragId): RowState => useSelector((state: StoreState) => state.timelineReducer.rows.find((row) => row.dragId === id));
+export const useRow = (id: DragId): RowState => useSelector(({timelineReducer}: StoreState) => timelineReducer.rows.find((row) => row.dragId === id));
 
-export const useRowCount = (): number => useSelector((state: StoreState) => state.timelineReducer.rows.length);
+export const useRowCount = (): number => useSelector(({timelineReducer}: StoreState) => timelineReducer.rows.length);

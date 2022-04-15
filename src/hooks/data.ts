@@ -1,7 +1,7 @@
 import {useMemo} from "react";
 import {sortBy} from "lodash";
 import {useStaticQuery, graphql} from "gatsby";
-import {Profession, SkillSection, SkillData, SkillSectionType} from "../data";
+import {SkillSection, SkillData, SkillSectionType, commonSkills} from "../data";
 
 interface QueryData {
     allSkillData: {
@@ -35,12 +35,15 @@ const sectionOrder = [
 
 export const useAllSkillSections = (): SkillSection[] => {
     const data = useData().allSkillData.nodes;
-    return useMemo(() => sortBy(data, (section) => sectionOrder.indexOf(section.type)), [data]);
-};
-
-export const useSkillSectionsForProfession = (prof: Profession): SkillSection[] => {
-    const sections = useAllSkillSections();
-    return useMemo(() => sections.filter((entry) => entry.profession === prof), [sections, prof]);
+    return useMemo(() => [
+        {
+            name: "Common",
+            profession: null,
+            type: null,
+            skills: commonSkills
+        },
+        ...sortBy(data, (section) => sectionOrder.indexOf(section.type))
+    ], [data]);
 };
 
 export const useAllSkills = (): SkillData[] => {

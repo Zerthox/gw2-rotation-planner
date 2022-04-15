@@ -18,4 +18,4 @@ export const themeReducer = themeSlice.reducer;
 
 export const {setDarkMode} = themeSlice.actions;
 
-export const useDarkMode = (): boolean => useSelector((state: StoreState) => state.themeReducer.dark);
+export const useDarkMode = (): boolean => useSelector(({themeReducer}: StoreState) => themeReducer.dark);

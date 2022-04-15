@@ -40,4 +40,4 @@ export const dragReducer = dragSlice.reducer;
 
 export const {setDragging} = dragSlice.actions;
 
-export const useDragging = (): Dragging => useSelector((state: StoreState) => state.dragReducer.dragging);
+export const useDragging = (): Dragging => useSelector(({dragReducer}: StoreState) => dragReducer.dragging);

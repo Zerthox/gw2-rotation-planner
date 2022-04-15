@@ -2,7 +2,7 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {useSelector} from "react-redux";
 import {StoreState} from ".";
 import {createDragId, DragId, DragType} from "./drag";
-import {Profession, SkillSection, commonSkills} from "../data";
+import {Profession, SkillSection} from "../data";
 
 export interface SkillState {
     dragId: DragId;
@@ -19,23 +19,23 @@ export interface ProfessionChangePayload {
 export const buildSlice = createSlice({
     name: "build",
     initialState: {
-        profession: null as Profession,
+        profession: Profession.Guardian,
         sections: [] as SkillSection[],
         skillStates: [] as SkillState[][]
     },
     reducers: {
-        changeProfession(state, {payload: {profession, sections}}: PayloadAction<ProfessionChangePayload>) {
-            state.profession = profession;
-            state.sections = [{
-                name: "Common",
-                profession: null,
-                type: null,
-                skills: commonSkills
-            }, ...sections];
-
-            state.skillStates = state.sections.map((section) => (
-                section.skills.map((skill) => createSkillState(skill.id))
-            ));
+        initializeSections(state, {payload}: PayloadAction<SkillSection[]>) {
+            state.sections = payload;
+            buildSlice.caseReducers.refreshSkillStates(state);
+        },
+        refreshSkillStates(state) {
+            state.skillStates = state.sections
+                .filter((section) => section.profession === state.profession)
+                .map((section) => section.skills.map((skill) => createSkillState(skill.id)));
+        },
+        changeProfession(state, {payload}: PayloadAction<Profession>) {
+            state.profession = payload;
+            buildSlice.caseReducers.refreshSkillStates(state);
         },
         takeSkillItem(state, {payload}: PayloadAction<DragId>) {
             for (const section of state.skillStates) {
@@ -52,10 +52,12 @@ export const buildSlice = createSlice({
 
 export const buildReducer = buildSlice.reducer;
 
-export const {changeProfession, takeSkillItem} = buildSlice.actions;
+export const {initializeSections, changeProfession, takeSkillItem} = buildSlice.actions;
 
-export const useCurrentProfession = (): Profession => useSelector((state: StoreState) => state.buildReducer.profession);
+export const useCurrentProfession = (): Profession => useSelector(({buildReducer}: StoreState) => buildReducer.profession);
 
-export const useSkillSections = (): SkillSection[] => useSelector((state: StoreState) => state.buildReducer.sections);
+export const useSkillSections = (): SkillSection[] => useSelector(({buildReducer}: StoreState) => (
+    buildReducer.sections.filter((section) => section.profession === buildReducer.profession)
+));
 
-export const useSkillStates = (): SkillState[][] => useSelector((state: StoreState) => state.buildReducer.skillStates);
+export const useSkillStates = (): SkillState[][] => useSelector(({buildReducer}: StoreState) => buildReducer.skillStates);
