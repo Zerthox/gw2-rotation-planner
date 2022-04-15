@@ -1,7 +1,6 @@
 # kits
 Med Kit:
   - 50444 # Infusion Bomb
-  - 58104 # Infusion Bomb
   - 49082 # Vital Burst
   - 49045 # Cleansing Field
   - 29547 # Bandage Blast
@@ -10,16 +9,11 @@ Med Kit:
   - 6109 # Stow Med Kit
 
 Grenade Kit:
-  - 5806 # Poison Grenade
-  - 6167 # Poison Grenade
-  - 5809 # Freeze Grenade
-  - 6168 # Freeze Grenade
-  - 5808 # Flash Grenade
-  - 6169 # Flash Grenade
-  - 5807 # Shrapnel Grenade
-  - 6170 # Shrapnel Grenade
   - 5882 # Grenade
-  - 6171 # Grenade
+  - 5807 # Shrapnel Grenade
+  - 5808 # Flash Grenade
+  - 5809 # Freeze Grenade
+  - 5806 # Poison Grenade
   - 6110 # Stow Grenade Kit
 
 Bomb Kit:
