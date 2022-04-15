@@ -17,9 +17,10 @@ export const ContextMenu = ({children, items = []}: ContextMenuProps): JSX.Eleme
         );
     }, [contextMenu, setContextMenu]);
 
-    // TODO: empty items displays none
+    const filteredItems = items.filter((props) => props);
+
     return (
-        <span onContextMenu={onContextMenu}>
+        <span onContextMenu={filteredItems.length > 0 ? onContextMenu : (event) => event.preventDefault()}>
             {children}
             <Menu
                 open={contextMenu !== null}
@@ -27,8 +28,7 @@ export const ContextMenu = ({children, items = []}: ContextMenuProps): JSX.Eleme
                 anchorReference="anchorPosition"
                 anchorPosition={contextMenu}
             >
-                {items
-                    .filter((props) => props)
+                {filteredItems
                     .map(({onClick, ...props}, i) => (
                         <MenuItem
                             key={i}
