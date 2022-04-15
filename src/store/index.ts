@@ -9,7 +9,7 @@ import {timelineReducer} from "./timeline";
 const reducer = {
     themeReducer: persistReducer({key: "theme", storage}, themeReducer),
     dragReducer,
-    buildReducer,
+    buildReducer: persistReducer({key: "build", whitelist: ["profession"], storage}, buildReducer),
     timelineReducer
 };
 
