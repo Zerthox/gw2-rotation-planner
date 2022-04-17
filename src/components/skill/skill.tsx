@@ -12,7 +12,7 @@ import {Keybind} from "./keybind";
 import {SkillData} from "../planner";
 import {DragId, useDragging} from "../../store/drag";
 import {useAllSkills} from "../../hooks/data";
-import {CommonSkill, commonSkills} from "../../data";
+import {CommonSkill, polyfillSkills} from "../../data/polyfill";
 
 const wikiUrl = "https://wiki.guildwars2.com";
 const apiUrl = "https://api.guildwars2.com";
@@ -28,9 +28,9 @@ const iconStyles = css`font-size: 3em`;
 export const SkillIcon = ({skill, tooltip = false, isPlaceholder = false}: SkillIconProps): JSX.Element => {
     const allSkills = useAllSkills();
     const skillData = useMemo(() => allSkills.find((entry) => entry.id === skill), [skill, allSkills]);
-    const commonSkill = useMemo(() => commonSkills.find((entry) => entry.id === skill), [skill]);
+    const polyfillSkill = useMemo(() => polyfillSkills.find((entry) => entry.id === skill), [skill]);
 
-    const {className, ...iconProps} = commonSkill?.iconProps ?? {};
+    const {className, ...iconProps} = polyfillSkill?.iconProps ?? {};
 
     return (
         <Stack
@@ -38,10 +38,17 @@ export const SkillIcon = ({skill, tooltip = false, isPlaceholder = false}: Skill
             alignItems="center"
             sx={{opacity: isPlaceholder ? 0.3 : 1}}
         >
-            {commonSkill ? (
+            {polyfillSkill ? (
                 <IconWithTooltip
                     className={clsx(iconStyles, className)}
-                    tooltip={<DetailsHeader>{commonSkill.name}</DetailsHeader>}
+                    tooltip={
+                        <>
+                            <DetailsHeader>{polyfillSkill.name}</DetailsHeader>
+                            {polyfillSkill.tooltip ?? (
+                                <span>This skill is unavailable in the public GW2 API.</span>
+                            )}
+                        </>
+                    }
                     disableTooltip={!tooltip}
                     {...iconProps}
                 />
@@ -84,10 +91,8 @@ export const DraggableSkill = ({parentId, dragId, index, skill, onDuplicate, onD
 
     const isCommon = skill in CommonSkill;
     const searchValue = useMemo(() => (
-        isCommon
-            ? commonSkills.find((entry) => entry.id === skill).wikiSearch
-            : encodeChatcode("skill", skill)
-    ), [skill, isCommon]);
+        polyfillSkills.find((entry) => entry.id === skill)?.wikiSearch ?? encodeChatcode("skill", skill)
+    ), [skill]);
 
     return (
         <ContextMenu items={[

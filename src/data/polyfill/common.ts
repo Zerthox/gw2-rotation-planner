@@ -1,7 +1,5 @@
-import React from "react";
 import {css} from "@emotion/css";
-import {Icon} from "@discretize/gw2-ui-new";
-import {SkillData} from ".";
+import {PolyfillSkill} from ".";
 
 export enum CommonSkill {
     WeaponSwap = 1,
@@ -9,12 +7,7 @@ export enum CommonSkill {
     DropBundle = 3
 }
 
-export interface CommonSkillData extends SkillData {
-    iconProps: React.ComponentProps<typeof Icon>;
-    wikiSearch: string;
-}
-
-export const commonSkills: CommonSkillData[] = [
+export const commonSkills: PolyfillSkill[] = [
     {
         id: CommonSkill.WeaponSwap,
         name: "Weapon Swap",
@@ -23,7 +16,8 @@ export const commonSkills: CommonSkillData[] = [
             name: "WeaponSwap",
             className: css`background-size: initial !important;`
         },
-        wikiSearch: "Weapon Swap"
+        wikiSearch: "Weapon Swap",
+        tooltip: "Switch between your weapons sets."
     },
     {
         id: CommonSkill.Dodge,
@@ -33,7 +27,8 @@ export const commonSkills: CommonSkillData[] = [
             src: "https://wiki.guildwars2.com/images/b/b2/Dodge.png",
             className: css`background-size: initial !important;`
         },
-        wikiSearch: "Dodge"
+        wikiSearch: "Dodge",
+        tooltip: "Evade attacks by quickly moving out of the way. While dodging, you're temporarily invulnerable."
     },
     {
         id: CommonSkill.DropBundle,
@@ -43,6 +38,7 @@ export const commonSkills: CommonSkillData[] = [
             src: "https://render.guildwars2.com/file/7342BF326738A4C5132F42CE0915D3A2184E52FB/60975.png",
             className: css`background-size: initial !important;`
         },
-        wikiSearch: null
+        wikiSearch: null,
+        tooltip: "Drop your currently equipped bundle."
     }
 ];

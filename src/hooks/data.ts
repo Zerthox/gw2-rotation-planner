@@ -1,7 +1,8 @@
 import {useMemo} from "react";
 import {sortBy} from "lodash";
 import {useStaticQuery, graphql} from "gatsby";
-import {SkillSection, SkillData, SkillSectionType, commonSkills} from "../data";
+import {SkillSection, SkillData, SkillSectionType} from "../data";
+import {commonSkills} from "../data/polyfill";
 
 interface QueryData {
     allSkillData: {
