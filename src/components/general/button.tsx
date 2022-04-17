@@ -24,6 +24,7 @@ export interface CooldownButtonProps extends ButtonProps {
     cooldownProps: ButtonProps;
 }
 
+// FIXME: multiple clicks resets early
 export const CooldownButton = ({cooldown, cooldownProps, onClick, ...props}: CooldownButtonProps): JSX.Element => {
     const [triggered, setTriggered] = useState(false);
 

@@ -8,7 +8,7 @@ import {IconButton} from "../general";
 import {DraggableSkill} from "../skill";
 import {OverData} from ".";
 import {DragId} from "../../store/drag";
-import {useRow, useRowCount, deleteRow, moveRow, updateRowName, insertRowSkill} from "../../store/timeline";
+import {useRow, useRowCount, deleteRow, moveRow, updateRowName, insertRowSkill, deleteRowSkill} from "../../store/timeline";
 import {createSkillState} from "../../store/build";
 
 export interface RowProps {
@@ -61,6 +61,10 @@ export const Row = ({dragId, index}: RowProps): JSX.Element => {
                                                 rowId: row.dragId,
                                                 index: i + 1,
                                                 skill: createSkillState(skillId)
+                                            }))}
+                                            onDelete={() => dispatch(deleteRowSkill({
+                                                rowId: row.dragId,
+                                                skillId: dragId
                                             }))}
                                         />
                                     ))}

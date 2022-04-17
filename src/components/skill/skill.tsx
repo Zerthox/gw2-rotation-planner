@@ -3,7 +3,7 @@ import clsx from "clsx";
 import {encode as encodeChatcode} from "gw2e-chat-codes";
 import {css} from "@emotion/css";
 import {Stack, ListItemIcon, ListItemText} from "@mui/material";
-import {ContentCopy, OpenInNew, DataObject, PlusOne} from "@mui/icons-material";
+import {OpenInNew, DataObject, Fingerprint, PlusOne, Delete} from "@mui/icons-material";
 import {DetailsHeader, Skill} from "@discretize/gw2-ui-new";
 import {useSortable} from "@dnd-kit/sortable";
 import {ContextMenu} from "../general";
@@ -67,9 +67,10 @@ export interface DraggableSkillProps {
     index: number;
     skill: number;
     onDuplicate?: () => void;
+    onDelete?: () => void;
 }
 
-export const DraggableSkill = ({parentId, dragId, index, skill, onDuplicate}: DraggableSkillProps): JSX.Element => {
+export const DraggableSkill = ({parentId, dragId, index, skill, onDuplicate, onDelete}: DraggableSkillProps): JSX.Element => {
     const {attributes, listeners, setNodeRef} = useSortable({
         id: dragId,
         data: {
@@ -89,7 +90,6 @@ export const DraggableSkill = ({parentId, dragId, index, skill, onDuplicate}: Dr
 
     return (
         <ContextMenu items={[
-            // TODO: add delete as well
             onDuplicate ? {
                 onClick: () => onDuplicate(),
                 children: (
@@ -127,12 +127,25 @@ export const DraggableSkill = ({parentId, dragId, index, skill, onDuplicate}: Dr
                     onClick: () => navigator.clipboard.writeText(skill.toString()),
                     children: (
                         <>
-                            <ListItemIcon><ContentCopy/></ListItemIcon>
+                            <ListItemIcon><Fingerprint/></ListItemIcon>
                             <ListItemText>Copy Skill ID</ListItemText>
                         </>
                     )
                 }
-            ] : []
+            ] : [],
+            onDelete ? {
+                onClick: () => onDelete(),
+                children: (
+                    <>
+                        <ListItemIcon sx={{color: "error.main"}}>
+                            <Delete/>
+                        </ListItemIcon>
+                        <ListItemText sx={{color: "error.main"}}>
+                            Delete
+                        </ListItemText>
+                    </>
+                )
+            } : null
         ]}>
             <span
                 ref={setNodeRef}
