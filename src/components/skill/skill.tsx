@@ -3,7 +3,7 @@ import clsx from "clsx";
 import {encode as encodeChatcode} from "gw2e-chat-codes";
 import {css} from "@emotion/css";
 import {Stack, ListItemIcon, ListItemText} from "@mui/material";
-import {OpenInNew, DataObject, Fingerprint, PlusOne, Delete} from "@mui/icons-material";
+import {OpenInNew, DataObject, DataArray, Fingerprint, PlusOne, Delete} from "@mui/icons-material";
 import {DetailsHeader, Skill} from "@discretize/gw2-ui-new";
 import {useSortable} from "@dnd-kit/sortable";
 import {ContextMenu} from "../general";
@@ -70,6 +70,7 @@ export interface DraggableSkillProps {
     onDelete?: () => void;
 }
 
+// TODO: utility for copy to clipboard with "snackbar" notification?
 export const DraggableSkill = ({parentId, dragId, index, skill, onDuplicate, onDelete}: DraggableSkillProps): JSX.Element => {
     const {attributes, listeners, setNodeRef} = useSortable({
         id: dragId,
@@ -131,7 +132,16 @@ export const DraggableSkill = ({parentId, dragId, index, skill, onDuplicate, onD
                             <ListItemText>Copy Skill ID</ListItemText>
                         </>
                     )
-                }
+                },
+                typeof searchValue === "string" ? {
+                    onClick: () => navigator.clipboard.writeText(searchValue),
+                    children: (
+                        <>
+                            <ListItemIcon><DataArray/></ListItemIcon>
+                            <ListItemText>Copy Chatcode</ListItemText>
+                        </>
+                    )
+                } : null
             ] : [],
             onDelete ? {
                 onClick: () => onDelete(),
