@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useRef} from "react";
 import {Tooltip, Button, ButtonProps, IconButton as MuiIconButton, TooltipProps, IconButtonProps as MuiIconButtonProps} from "@mui/material";
 
 export interface IconButtonProps extends MuiIconButtonProps {
@@ -24,9 +24,9 @@ export interface CooldownButtonProps extends ButtonProps {
     cooldownProps: ButtonProps;
 }
 
-// FIXME: multiple clicks resets early
 export const CooldownButton = ({cooldown, cooldownProps, onClick, ...props}: CooldownButtonProps): JSX.Element => {
     const [triggered, setTriggered] = useState(false);
+    const timeout = useRef<number>(null);
 
     return (
         <Button
@@ -34,8 +34,14 @@ export const CooldownButton = ({cooldown, cooldownProps, onClick, ...props}: Coo
             {...triggered ? cooldownProps : {}}
             onClick={(event) => {
                 onClick(event);
+                if (timeout.current) {
+                    window.clearTimeout(timeout.current);
+                }
                 setTriggered(true);
-                setTimeout(() => setTriggered(false), cooldown);
+                timeout.current = window.setTimeout(() => {
+                    setTriggered(false);
+                    timeout.current = null;
+                }, cooldown);
             }}
         />
     );
