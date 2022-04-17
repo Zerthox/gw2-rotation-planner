@@ -27,6 +27,7 @@ export const ContextMenu = ({children, items = []}: ContextMenuProps): JSX.Eleme
                 onClose={() => setContextMenu(null)}
                 anchorReference="anchorPosition"
                 anchorPosition={contextMenu}
+                transitionDuration={100}
             >
                 {filteredItems
                     .map(({onClick, ...props}, i) => (
