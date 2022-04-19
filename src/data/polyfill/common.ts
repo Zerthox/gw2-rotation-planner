@@ -17,7 +17,7 @@ export const commonSkills: PolyfillSkill[] = [
             className: css`background-size: initial !important;`
         },
         wikiSearch: "Weapon Swap",
-        tooltip: "Switch between your weapons sets."
+        tooltip: "Switch between your weapon sets."
     },
     {
         id: CommonSkill.Dodge,
