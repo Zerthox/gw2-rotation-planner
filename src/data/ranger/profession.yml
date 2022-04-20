@@ -1,4 +1,66 @@
-# FIXME: regular pet skills are not exposed by the api
+Pet:
+  - 12664 # Rending Maul (Arctodus)
+  - 12685 # Enfeebling Roar (Black Bear)
+  - 12666 # Shake It off (Brown Bear)
+  - 12687 # Poison Cloud (Murellow)
+  - 12667 # Icy Roar (Polar Bear)
+
+  - 12722 # Lacerating Slash (Eagle, Hawk)
+  - 12721 # Chilling Slash (Owl)
+  - 12723 # Blinding Slash (Raven, White Raven)
+
+  - 12716 # Chilling Howl (Alpine Wolf)
+  - 12717 # Regenerate (Fern Hound)
+  - 12718 # Howl of the pack (Hyena)
+  - 12715 # Intimidating Howl (Krytan Drakehound)
+  - 12714 # Terrifying Howl (Wolf)
+
+  - 12675 # Poisonous Cloud (Carrion Devourer)
+  - 12679 # Rending Barbs (Lashtail Devourer)
+  - 12674 # Poison Barbs (Whiptail Devourer)
+
+  - 12696 # Frost breath (Ice Drake)
+  - 12701 # Insect Swarm (Marsh Drake)
+  - 16426 # Sonic Shriek (Reef Drake)
+  - 12698 # Lightning Breath (River Drake)
+  - 12670 # Fire Breath (Salamander Drake)
+
+  - 12681 # Stalk (Jaguar)
+  - 12658 # Mighty Roar (Jungle Stalker)
+  - 12680 # Rending Pounce (Lynx)
+  - 12693 # Icy Pounce (Snow Leopard)
+
+  - 12709 # Dazing Screech (Black Moa)
+  - 12713 # Protecting Screech (Blue Moa)
+  - 12708 # Dazing Screech (Pink Moa)
+  - 12712 # Furious Screech (Red Moa)
+  - 12711 # Icy Screech (White Moa)
+
+  - 12732 # Forage (Boar)
+  - 12756 # Forage (Pig)
+  - 12755 # Forage (Siamoth)
+  - 12754 # Forage (Warthog)
+
+  - 12729 # Paralyzing Venom (Black Widow Spider, Jungle Spider)
+  - 12730 # Weakening Venom (Cave Spider)
+  - 12731 # Deadly Venom (Forest Spider)
+
+  - 31451 # Furious Pounce (Tiger)
+  - 31639 # Lightning Assault (Electric Wyvern)
+  - 31459 # Consuming Flame (Fire Wyvern)
+  - 31367 # Spike Barrage (Bristleback)
+  - 31568 # Smoke Cloud (Smokescale)
+
+  - 42963 # Savannah Strike (Cheetah)
+  - 42180 # Blinding Roar (Sand Lion)
+  - 41156 # Fang Grapple (Fanged Iboga)
+  - 44980 # Jacaranda's Embrace (Jacaranda)
+  - 43636 # Head Toss (Rock Gazelle)
+
+  - 65109 # Guardian's Roar (White Tiger)
+  - 63716 # Gale Breath (Phoenix)
+  - 65418 # Hunker Down (Siege Turtle)
+  - 66622 # Bloodthirsty Charge (Wallow)
 
 Druid:
   - 31869 # Celestial Avatar
