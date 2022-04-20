@@ -8,7 +8,7 @@ export interface IconButtonProps extends MuiIconButtonProps {
     tooltipProps?: TooltipProps;
 }
 
-export const IconButton = ({title, tooltip = true, tooltipProps, ...props}: IconButtonProps): JSX.Element => tooltip ? (
+export const IconButton = ({title, tooltip = true, tooltipProps, ...props}: IconButtonProps): JSX.Element => tooltip && !props.disabled ? (
     <Tooltip
         placement="top"
         disableInteractive
