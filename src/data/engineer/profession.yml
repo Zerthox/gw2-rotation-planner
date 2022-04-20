@@ -14,6 +14,7 @@ Mechanist:
   - 63089 # Recall Mech
 
   # mech skills
+  # FIXME: api has no slot information, need to set manually
   - 63334 # Roiling Smash
   - 63365 # Explosive Knuckle
   - 63188 # Spark Revolver
