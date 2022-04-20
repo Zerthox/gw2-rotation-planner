@@ -2,23 +2,32 @@ import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {useSelector} from "react-redux";
 import {StoreState} from ".";
 import {createDragId, DragId, DragType} from "./drag";
-import {SkillState} from "./build";
+import {createSkillState, SkillState} from "./build";
 
 export interface Row {
-    name?: string;
-    skills: SkillState[];
+    name: string;
+    skills: number[];
 }
 
-export interface RowState extends Row {
+export interface RowState {
+    name?: string;
+    skills: SkillState[];
     dragId: DragId;
 }
+
+export type RowWithoutId = Omit<RowState, "dragId">;
 
 export interface Location {
     row: DragId;
     index: number;
 }
 
-export const createRow = (row: Row): RowState => ({...row, dragId: createDragId(DragType.Row)});
+export const createRow = (row: RowWithoutId): RowState => ({...row, dragId: createDragId(DragType.Row)});
+
+export const addRowSkillStates = ({name, skills}: Row): RowWithoutId => ({
+    name,
+    skills: skills.map((skill) => createSkillState(skill))
+});
 
 export const findRow = (rows: RowState[], id: DragId): RowState => rows.find((row) => row.dragId === id);
 
@@ -36,11 +45,11 @@ export const timelineSlice = createSlice({
     },
     reducers: {
         overrideRows(state, {payload}: PayloadAction<Row[]>) {
-            state.rows = payload.map((row) => createRow(row));
+            state.rows = payload.map((row) => createRow(addRowSkillStates(row)));
         },
 
         appendRow(state, {payload}: PayloadAction<Row>) {
-            const row = createRow(payload);
+            const row = createRow(addRowSkillStates(payload));
             state.rows.push(row);
         },
 

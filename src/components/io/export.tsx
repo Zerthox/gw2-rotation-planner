@@ -3,12 +3,11 @@ import {Box, Stack, Dialog, DialogTitle, DialogContent, DialogActions, Typograph
 import {ImportExport, Close, Save, ContentCopy} from "@mui/icons-material";
 import {useDispatch} from "react-redux";
 import {CooldownButton} from "../general";
-import {createSkillState} from "../../store/build";
-import {useRows, overrideRows} from "../../store/timeline";
-import {validate, RowSchema} from "./validate";
+import {useRows, overrideRows, Row} from "../../store/timeline";
+import {validate} from "./validate";
 
 // custom json formatting
-const toJson = (rows: RowSchema[]): string => {
+const toJson = (rows: Row[]): string => {
     const json = rows.map(({name, skills}) => {
         let result = "";
         result += "\n  {";
@@ -29,7 +28,7 @@ export const ExportModal = ({open, onClose}: ExportModalProps): JSX.Element => {
     const dispatch = useDispatch();
     const storeRows = useRows();
 
-    const initialRows = useMemo<RowSchema[]>(() => storeRows.map(({name, skills}) => ({
+    const initialRows = useMemo<Row[]>(() => storeRows.map(({name, skills}) => ({
         name,
         skills: skills.map((skill) => skill.skillId)
     })), [storeRows]);
@@ -111,11 +110,7 @@ export const ExportModal = ({open, onClose}: ExportModalProps): JSX.Element => {
                     startIcon={<Save/>}
                     disabled={isError}
                     onClick={() => {
-                        const newRows = rows.map(({name, skills}) => ({
-                            name,
-                            skills: skills.map((id) => createSkillState(id))
-                        }));
-                        dispatch(overrideRows(newRows));
+                        dispatch(overrideRows(rows));
                         onClose();
                     }}
                 >Save</Button>

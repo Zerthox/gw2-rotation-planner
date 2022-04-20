@@ -1,11 +1,7 @@
 import Ajv from "ajv/dist/jtd";
+import {Row} from "../../store/timeline";
 
 export const ajv = new Ajv();
-
-export interface RowSchema {
-    name: string;
-    skills: number[];
-}
 
 export const rowSchema = {
     elements: {
@@ -18,4 +14,4 @@ export const rowSchema = {
     }
 };
 
-export const validate = ajv.compile<RowSchema[]>(rowSchema);
+export const validate = ajv.compile<Row[]>(rowSchema);
