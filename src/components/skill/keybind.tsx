@@ -10,6 +10,7 @@ const keybinds = {
     [SkillSlot.Profession5]: "F5",
     [SkillSlot.Profession6]: "F6",
     [SkillSlot.Profession7]: "F7",
+    [SkillSlot.Pet]: "F2",
     [SkillSlot.Weapon1]: "1",
     [SkillSlot.Weapon2]: "2",
     [SkillSlot.Weapon3]: "3",
