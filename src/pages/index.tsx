@@ -1,6 +1,7 @@
 import React from "react";
 import {PageProps} from "gatsby";
 import {Chip} from "@mui/material";
+import {Warning} from "@mui/icons-material";
 import {Layout} from "../components/layout";
 import {Planner} from "../components/planner";
 import {IOButtons} from "../components/io";
@@ -11,7 +12,11 @@ const Index = ({location}: PageProps): JSX.Element => {
     return (
         <Layout header={
             <>
-                <Chip color="warning" label="BETA"/>
+                <Chip
+                    color="warning"
+                    label="Work in progress"
+                    icon={<Warning/>}
+                />
                 <IOButtons/>
             </>
         }>
