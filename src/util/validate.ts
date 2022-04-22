@@ -1,5 +1,5 @@
 import Ajv from "ajv/dist/jtd";
-import {Row} from "../../store/timeline";
+import {Row} from "../store/timeline";
 
 export const ajv = new Ajv();
 
