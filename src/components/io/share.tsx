@@ -12,12 +12,12 @@ export interface ShareModalProps {
 }
 
 export const ShareModal = ({open, onClose}: ShareModalProps): JSX.Element => {
-    const location = useLocation();
+    const {origin, pathname} = useLocation();
     const rows = useStatelessRows();
 
     const url = useMemo(() => (
-        `${location.origin}${location.pathname}?share=${encodeShare(rows)}`
-    ), [location, rows]);
+        `${origin}${pathname}?share=${encodeShare(rows)}`
+    ), [origin, pathname, rows]);
 
     return (
         <Dialog
