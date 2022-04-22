@@ -102,6 +102,11 @@ export const {overrideRows, appendRow, deleteRow, moveRow, updateRowName, insert
 
 export const useRows = (): RowState[] => useSelector(({timelineReducer}: StoreState) => timelineReducer.rows);
 
+export const useStatelessRows = (): Row[] => useSelector(({timelineReducer}: StoreState) => timelineReducer.rows.map(({name, skills}) => ({
+    name,
+    skills: skills.map(({skillId}) => skillId)
+})));
+
 export const useRow = (id: DragId): RowState => useSelector(({timelineReducer}: StoreState) => timelineReducer.rows.find((row) => row.dragId === id));
 
 export const useRowCount = (): number => useSelector(({timelineReducer}: StoreState) => timelineReducer.rows.length);

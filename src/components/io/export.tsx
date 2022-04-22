@@ -3,8 +3,8 @@ import {Box, Stack, Dialog, DialogTitle, DialogContent, DialogActions, Typograph
 import {ImportExport, Close, Save, ContentCopy} from "@mui/icons-material";
 import {useDispatch} from "react-redux";
 import {CooldownButton} from "../general";
-import {useRows, overrideRows, Row} from "../../store/timeline";
-import {validate} from "./validate";
+import {useStatelessRows, overrideRows, Row} from "../../store/timeline";
+import {validate} from "../../util/validate";
 
 // custom json formatting
 const toJson = (rows: Row[]): string => {
@@ -26,12 +26,7 @@ export interface ExportModalProps {
 
 export const ExportModal = ({open, onClose}: ExportModalProps): JSX.Element => {
     const dispatch = useDispatch();
-    const storeRows = useRows();
-
-    const initialRows = useMemo<Row[]>(() => storeRows.map(({name, skills}) => ({
-        name,
-        skills: skills.map((skill) => skill.skillId)
-    })), [storeRows]);
+    const initialRows = useStatelessRows();
     const initialJson = useMemo(() => toJson(initialRows), [initialRows]);
 
     const [{json, rows}, setContent] = useState(() => ({json: initialJson, rows: initialRows}));
