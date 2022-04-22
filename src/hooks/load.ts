@@ -2,16 +2,18 @@ import {useEffect} from "react";
 import * as octokit from "@octokit/request";
 import {useDispatch} from "react-redux";
 import {overrideRows} from "../store/timeline";
-import {validate} from "../components/io";
 import {useAllSkillSections} from "./data";
 import {initializeSections} from "../store/build";
+import {validate} from "../util/validate";
+import {decodeShare} from "../util/encode";
 
 export interface LoadParams {
+    share?: string;
     gist?: string;
     file?: string;
 }
 
-export const useLoadTimeline = ({gist, file}: LoadParams): void => {
+export const useLoadTimeline = ({gist, file, share}: LoadParams): void => {
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -44,8 +46,11 @@ export const useLoadTimeline = ({gist, file}: LoadParams): void => {
                     console.error("Failed to fetch gist", gist, res);
                 }
             });
+        } else if (share) {
+            const rows = decodeShare(share);
+            dispatch(overrideRows(rows));
         }
-    }, [dispatch, gist, file]);
+    }, [dispatch, gist, file, share]);
 };
 
 export const useInitSections = (): void => {
