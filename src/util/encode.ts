@@ -1,28 +1,52 @@
+import {encodeBase64, decodeBase64} from "./base64";
 import {Row} from "../store/timeline";
 
-const toBase64 = (array: Uint32Array): string => (
-    window.btoa(String.fromCharCode.apply(null, new Uint8Array(array.buffer)))
-);
+const VERSION = "1";
 
-const fromBase64 = (base64: string): Uint32Array => {
-    const data = window.atob(base64);
-    const array = new Uint8Array(data.length);
+const u24ToBytes = (data: number[]): Uint8Array => {
+    const bytes = new Uint8Array(data.length * 3);
 
     for (let i = 0; i < data.length; i++) {
-        array[i] = data.charCodeAt(i);
+        bytes.set([
+            data[i] & 0x000ff,
+            (data[i] & 0x00ff00) >> 8,
+            (data[i] & 0xff0000) >> 16
+        ], i * 3);
     }
 
-    return new Uint32Array(array.buffer);
+    return bytes;
 };
 
-export const encodeShare = (rows: Row[]): string => rows.map((row) => {
+const u24FromBytes = (bytes: Uint8Array): number[] => {
+    if (bytes.length % 3 !== 0) {
+        throw new Error(`Illegal bytes length: ${bytes.length}`);
+    }
+
+    const result: number[] = [];
+    for (let i = 0; i < bytes.length; i += 3) {
+        result.push(
+            bytes[i]
+            + (bytes[i + 1] << 8)
+            + (bytes[i + 2] << 16)
+        );
+    }
+
+    return result;
+};
+
+export const encodeShare = (rows: Row[]): string => VERSION + rows.map((row) => {
     const name = encodeURIComponent(row.name);
-    const skills = toBase64(Uint32Array.from(row.skills));
+    const skills = encodeBase64(u24ToBytes(row.skills));
 
     return `${name};${skills}`;
 }).join(";");
 
 export const decodeShare = (data: string): Row[] => {
+    if (data[0] !== VERSION) {
+        throw new Error(`Unsupported version: ${data[0]}`);
+    }
+    data = data.slice(1);
+
     const result: Row[] = [];
 
     let offset = 0;
@@ -32,7 +56,7 @@ export const decodeShare = (data: string): Row[] => {
 
         const index = data.indexOf(";", nameEnd + 1);
         const skillsEnd = index > 0 ? index : data.length;
-        const skills = Array.from(fromBase64(data.slice(nameEnd + 1, skillsEnd)));
+        const skills = u24FromBytes(decodeBase64(data.slice(nameEnd + 1, skillsEnd)));
 
         result.push({name, skills});
         offset = skillsEnd + 1;
