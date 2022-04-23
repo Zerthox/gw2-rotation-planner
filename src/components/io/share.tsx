@@ -23,7 +23,7 @@ export const ShareModal = ({open, onClose}: ShareModalProps): JSX.Element => {
         <Dialog
             open={open}
             onClose={onClose}
-            maxWidth="xs"
+            maxWidth="sm"
             fullWidth
         >
             <DialogTitle>
