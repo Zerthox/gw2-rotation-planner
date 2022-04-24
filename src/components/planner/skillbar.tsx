@@ -4,6 +4,7 @@ import {ExpandMore} from "@mui/icons-material";
 import {DraggableSkill} from "../skill";
 import {DragId} from "../../store/drag";
 import {SkillState, useSkillSections, useSkillStates} from "../../store/build";
+import {useInitSections} from "../../hooks/load";
 
 export interface SkillSectionProps {
     name: string;
@@ -60,6 +61,8 @@ export interface SkillbarProps extends StackProps {
 export const Skillbar = ({dragId, ...props}: SkillbarProps): JSX.Element => {
     const sections = useSkillSections();
     const states = useSkillStates();
+
+    useInitSections();
 
     return (
         <Stack direction="column" sx={{overflowY: "auto"}} {...props}>

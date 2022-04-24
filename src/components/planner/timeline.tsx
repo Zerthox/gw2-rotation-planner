@@ -4,12 +4,17 @@ import {AddCircle} from "@mui/icons-material";
 import {useDispatch} from "react-redux";
 import {Row} from "./row";
 import {useRows, appendRow} from "../../store/timeline";
+import {LoadParams, useLoadTimeline} from "../../hooks/load";
 
-export type TimelineProps = BoxProps;
+export interface TimelineProps extends BoxProps {
+    load: LoadParams;
+}
 
-export const Timeline = (props: TimelineProps): JSX.Element => {
+export const Timeline = ({load, ...props}: TimelineProps): JSX.Element => {
     const dispatch = useDispatch();
     const rows = useRows();
+
+    useLoadTimeline(load);
 
     return (
         <Box maxHeight="100%" sx={{overflowY: "auto"}} {...props}>

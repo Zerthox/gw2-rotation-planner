@@ -11,7 +11,7 @@ import {OverData, SkillData} from ".";
 import {DragId, DragType, createDragId, isa, useDragging, setDragging} from "../../store/drag";
 import {deleteRowSkill, insertRowSkill, moveRowSkill} from "../../store/timeline";
 import {useSkillStates, takeSkillItem} from "../../store/build";
-import {useLoadTimeline, useInitSections, LoadParams} from "../../hooks/load";
+import {LoadParams} from "../../hooks/load";
 
 const SKILLBAR_ID = createDragId(DragType.Skillbar);
 
@@ -26,9 +26,6 @@ export const Planner = ({load}: PlannerProps): JSX.Element => {
 
     const skills = useSkillStates();
     const dragging = useDragging();
-
-    useInitSections();
-    useLoadTimeline(load);
 
     const parent = useRef<DragId>(null);
     const fromSkillbar = useRef(false);
@@ -150,7 +147,7 @@ export const Planner = ({load}: PlannerProps): JSX.Element => {
                         <Skillbar dragId={SKILLBAR_ID}/>
                     </Stack>
                 </Card>
-                <Timeline flex="1" maxHeight="100%"/>
+                <Timeline load={load} flex="1" maxHeight="100%"/>
             </Stack>
             <DragOverlay>
                 {typeof dragging.skill === "number" ? (
