@@ -1,8 +1,8 @@
 import * as octokit from "@octokit/request";
 import {Row} from "../store/timeline";
-import {validate} from "../util/validate";
+import {validOrError} from "./validate";
 
-export const loadFromGist = async (gist: string, file: string = null): Promise<Row[]> => {
+export const fetchFromGist = async (gist: string, file: string = null): Promise<Row[]> => {
     const res = await octokit.request("GET /gists/{gist_id}", {gist_id: gist});
     const {files} = res.data;
     const {content, truncated} = (
@@ -18,9 +18,15 @@ export const loadFromGist = async (gist: string, file: string = null): Promise<R
     }
 
     const data = JSON.parse(content);
-    if (validate(data)) {
-        return data;
+    return validOrError(data);
+};
+
+export const fetchFromURL = async (url: string): Promise<Row[]> => {
+    const res = await fetch(url);
+    if (res.status === 200) {
+        const data = await res.json();
+        return validOrError(data);
     } else {
-        throw new Error("Invalid row JSON");
+        throw new Error(`Unable to fetch "${url}": Server responded with ${res.status} ${res.statusText}`);
     }
 };

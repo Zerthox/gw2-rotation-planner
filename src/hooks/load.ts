@@ -4,22 +4,25 @@ import {overrideRows} from "../store/timeline";
 import {useAllSkillSections} from "./data";
 import {initializeSections} from "../store/build";
 import {decodeShare} from "../util/encode";
-import {loadFromGist} from "../util/github";
+import {fetchFromGist, fetchFromURL} from "../util/fetch";
 
 export interface LoadParams {
-    share?: string;
     gist?: string;
     file?: string;
+    url?: string;
+    share?: string;
 }
 
-export const useLoadTimeline = ({gist, file, share}: LoadParams): void => {
+export const useLoadTimeline = ({gist, file, url, share}: LoadParams): void => {
     const dispatch = useDispatch();
 
     useEffect(() => {
         // TODO: show loading & error in ui
         try {
             if (gist) {
-                loadFromGist(gist, file).then((rows) => dispatch(overrideRows(rows)));
+                fetchFromGist(gist, file).then((rows) => dispatch(overrideRows(rows)));
+            } else if (url) {
+                fetchFromURL(url).then((rows) => dispatch(overrideRows(rows)));
             } else if (share) {
                 const rows = decodeShare(share);
                 dispatch(overrideRows(rows));
@@ -27,7 +30,7 @@ export const useLoadTimeline = ({gist, file, share}: LoadParams): void => {
         } catch (err) {
             console.error(err);
         }
-    }, [dispatch, gist, file, share]);
+    }, [dispatch, gist, file, url, share]);
 };
 
 export const useInitSections = (): void => {

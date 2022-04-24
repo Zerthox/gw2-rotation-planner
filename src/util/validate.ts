@@ -15,3 +15,11 @@ export const rowSchema = {
 };
 
 export const validate = ajv.compile<Row[]>(rowSchema);
+
+export const validOrError = (data: unknown): Row[] => {
+    if (validate(data)) {
+        return data;
+    } else {
+        throw new Error("Invalid row JSON");
+    }
+};
