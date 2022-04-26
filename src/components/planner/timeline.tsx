@@ -27,10 +27,7 @@ export const Timeline = ({load, ...props}: TimelineProps): JSX.Element => {
                 <Button
                     variant="contained"
                     startIcon={<AddCircle/>}
-                    onClick={() => dispatch(insertRow({
-                        index: rows.length,
-                        row: {name: "", skills: []}
-                    }))}
+                    onClick={() => dispatch(insertRow({index: rows.length}))}
                 >Add Row</Button>
             </Stack>
         </Box>

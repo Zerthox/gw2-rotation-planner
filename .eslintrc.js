@@ -23,11 +23,12 @@ module.exports = {
         "plugin:@typescript-eslint/recommended"
     ],
     rules: {
-        "indent": "off",
-        "semi": "off",
+        indent: "off",
+        semi: "off",
         "comma-dangle": "off",
         "max-len": "off",
-        "quotes": ["error", "double"],
+        quotes: ["error", "double"],
+        "quote-props": ["error", "as-needed"],
         "no-multiple-empty-lines": ["error", {max: 1}],
         "operator-linebreak": ["error", "before"],
         "unused-vars": "off",

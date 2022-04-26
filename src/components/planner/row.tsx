@@ -1,6 +1,6 @@
-import React from "react";
+import React, {useMemo} from "react";
 import {Box, Stack, TextField, Card, Typography} from "@mui/material";
-import {ArrowUpward, ArrowDownward, Delete, PlusOne} from "@mui/icons-material";
+import {ArrowUpward, ArrowDownward, Delete, PlusOne, Clear} from "@mui/icons-material";
 import {useDroppable} from "@dnd-kit/core";
 import {rectSortingStrategy, SortableContext} from "@dnd-kit/sortable";
 import {useDispatch} from "react-redux";
@@ -8,19 +8,24 @@ import {IconButton, ContextMenu} from "../general";
 import {DraggableSkill} from "../skill";
 import {OverData} from ".";
 import {DragId} from "../../store/drag";
-import {useRow, useRowCount, deleteRow, moveRow, updateRowName, insertRowSkill, deleteRowSkill, insertRow} from "../../store/timeline";
+import {useRow, useRowCount, deleteRow, moveRow, updateRowName, insertRowSkill, deleteRowSkill, insertRow, clearRowSkills} from "../../store/timeline";
 import {createSkillState} from "../../store/build";
 
-export interface RowContextMenuProps {
-    isFirst?: boolean;
-    isLast?: boolean;
-    onDelete?: () => void;
-    onMove?: (up: boolean) => void;
-    onDuplicate?: () => void;
+export interface RowActions {
+    isFirst: boolean;
+    isLast: boolean;
+    isEmpty: boolean;
+    onDuplicate: () => void;
+    onClear: () => void;
+    onMove: (up: boolean) => void;
+    onDelete: () => void;
+}
+
+export interface RowContextMenuProps extends Partial<RowActions> {
     children: React.ReactNode;
 }
 
-export const RowContextMenu = ({children, isFirst, isLast, onDelete, onMove, onDuplicate}: RowContextMenuProps): JSX.Element => (
+export const RowContextMenu = ({children, isFirst, isLast, isEmpty, onDuplicate, onClear, onDelete, onMove}: RowContextMenuProps): JSX.Element => (
     <ContextMenu items={[
         onDuplicate ? {
             text: "Duplicate Row",
@@ -41,6 +46,12 @@ export const RowContextMenu = ({children, isFirst, isLast, onDelete, onMove, onD
                 action: () => onMove(false)
             }
         ] : [],
+        onClear ? {
+            text: "Clear Row",
+            icon: <Clear/>,
+            disabled: isEmpty,
+            action: () => onClear()
+        } : null,
         onDelete ? {
             text: "Delete Row",
             icon: <Delete/>,
@@ -48,6 +59,42 @@ export const RowContextMenu = ({children, isFirst, isLast, onDelete, onMove, onD
             action: () => onDelete()
         } : null
     ]}>{children}</ContextMenu>
+);
+
+export type RowButtonsProps = RowActions;
+
+export const RowButtons = ({isFirst, isLast, isEmpty, onClear, onMove, onDelete}: RowButtonsProps): JSX.Element => (
+    <Stack direction="row" alignItems="center" spacing={0.5}>
+        <IconButton
+            title="Clear Row"
+            disabled={isEmpty}
+            onClick={() => onClear()}
+        >
+            <Clear/>
+        </IconButton>
+        <Stack direction="column" alignItems="center">
+            <IconButton
+                title="Move Up"
+                disabled={isFirst}
+                onClick={() => onMove(true)}
+            >
+                <ArrowUpward/>
+            </IconButton>
+            <IconButton
+                title="Move Down"
+                disabled={isLast}
+                onClick={() => onMove(false)}
+            >
+                <ArrowDownward/>
+            </IconButton>
+        </Stack>
+        <IconButton
+            title="Delete Row"
+            onClick={() => onDelete()}
+        >
+            <Delete/>
+        </IconButton>
+    </Stack>
 );
 
 export interface RowProps {
@@ -66,20 +113,21 @@ export const Row = ({dragId, index}: RowProps): JSX.Element => {
         data: {parentId: dragId, index: items.length} as OverData
     });
 
-    const isFirst = index === 0;
-    const isLast = index === rowCount -1;
+    const actions = useMemo<RowActions>(() => ({
+        isFirst: index === 0,
+        isLast: index === rowCount -1,
+        isEmpty: row.skills.length === 0,
+        onDuplicate: () => dispatch(insertRow({
+            index: index + 1,
+            row: {name: row.name, skills: row.skills.map((skill) => skill.skillId)}}
+        )),
+        onClear: () => dispatch(clearRowSkills({rowId: dragId})),
+        onMove: (up) => dispatch(moveRow({from: index, to: up ? index + 1 : index - 1})),
+        onDelete: () => dispatch(deleteRow({rowId: dragId}))
+    }), [dispatch, dragId, index, row.name, row.skills, rowCount]);
 
     return (
-        <RowContextMenu
-            isFirst={isFirst}
-            isLast={isLast}
-            onDuplicate={() => dispatch(insertRow({
-                index: index + 1,
-                row: {name: row.name, skills: row.skills.map((skill) => skill.skillId)}}
-            ))}
-            onMove={(up) => dispatch(moveRow({from: index, to: up ? index + 1 : index - 1}))}
-            onDelete={() => dispatch(deleteRow({rowId: dragId}))}
-        >
+        <RowContextMenu {...actions}>
             <Card>
                 <Stack direction="row" alignItems="center" spacing={1} paddingX={2} paddingY={1}>
                     <TextField
@@ -129,28 +177,7 @@ export const Row = ({dragId, index}: RowProps): JSX.Element => {
                             </SortableContext>
                         </span>
                     </Box>
-                    <Stack direction="column" alignItems="center">
-                        <IconButton
-                            title="Move Up"
-                            disabled={isFirst}
-                            onClick={() => dispatch(moveRow({from: index, to: index - 1}))}
-                        >
-                            <ArrowUpward/>
-                        </IconButton>
-                        <IconButton
-                            title="Move Down"
-                            disabled={isLast}
-                            onClick={() => dispatch(moveRow({from: index, to: index + 1}))}
-                        >
-                            <ArrowDownward/>
-                        </IconButton>
-                    </Stack>
-                    <IconButton
-                        title="Delete"
-                        onClick={() => dispatch(deleteRow({rowId: dragId}))}
-                    >
-                        <Delete/>
-                    </IconButton>
+                    <RowButtons {...actions}/>
                 </Stack>
             </Card>
         </RowContextMenu>

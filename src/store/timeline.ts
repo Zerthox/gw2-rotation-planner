@@ -48,14 +48,14 @@ export const timelineSlice = createSlice({
             state.rows = payload.map((row) => createRow(addRowSkillStates(row)));
         },
 
-        insertRow(state, {payload}: PayloadAction<{index: number; row: Row}>) {
+        insertRow(state, {payload}: PayloadAction<{index: number; row?: Row}>) {
             const {index, row} = payload;
-            const newRow = createRow(addRowSkillStates(row));
+            const newRow = createRow(addRowSkillStates(row ?? {name: "", skills: []}));
             state.rows.splice(index, 0, newRow);
         },
 
         deleteRow(state, {payload}: RowAction) {
-            const {rowId: rowId} = payload;
+            const {rowId} = payload;
             const index = findRowIndex(state.rows, rowId);
             state.rows.splice(index, 1);
         },
@@ -93,13 +93,19 @@ export const timelineSlice = createSlice({
             const index = source.skills.findIndex((skill) => skill.dragId === skillId);
             const [skill] = source.skills.splice(index, 1);
             dest.skills.splice(to.index, 0, skill);
+        },
+
+        clearRowSkills(state, {payload}: RowAction) {
+            const {rowId} = payload;
+            const row = findRow(state.rows, rowId);
+            row.skills = [];
         }
     }
 });
 
 export const timelineReducer = timelineSlice.reducer;
 
-export const {overrideRows, insertRow, deleteRow, moveRow, updateRowName, insertRowSkill, deleteRowSkill, moveRowSkill} = timelineSlice.actions;
+export const {overrideRows, insertRow, deleteRow, moveRow, updateRowName, insertRowSkill, deleteRowSkill, moveRowSkill, clearRowSkills} = timelineSlice.actions;
 
 export const useRows = (): RowState[] => useSelector(({timelineReducer}: StoreState) => timelineReducer.rows);
 
