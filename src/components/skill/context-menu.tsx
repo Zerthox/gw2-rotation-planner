@@ -18,7 +18,7 @@ export interface SkillContextMenuProps {
 export const SkillContextMenu = ({skill, isCommon, searchValue, children, onDuplicate, onDelete}: SkillContextMenuProps): JSX.Element => (
     <ContextMenu items={[
         onDuplicate ? {
-            text: "Duplicate",
+            text: "Duplicate Skill",
             icon: <PlusOne/>,
             action: () => onDuplicate()
         } : null,
@@ -55,7 +55,7 @@ export const SkillContextMenu = ({skill, isCommon, searchValue, children, onDupl
         ] : [],
         onDelete ? {
             action: () => onDelete(),
-            text: "Delete",
+            text: "Delete Skill",
             icon: <Delete/>,
             color: "error.main"
         } : null

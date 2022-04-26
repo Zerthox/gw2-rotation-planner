@@ -3,7 +3,7 @@ import {Box, BoxProps, Stack, Button} from "@mui/material";
 import {AddCircle} from "@mui/icons-material";
 import {useDispatch} from "react-redux";
 import {Row} from "./row";
-import {useRows, appendRow} from "../../store/timeline";
+import {useRows, insertRow} from "../../store/timeline";
 import {LoadParams, useLoadTimeline} from "../../hooks/load";
 
 export interface TimelineProps extends BoxProps {
@@ -27,7 +27,10 @@ export const Timeline = ({load, ...props}: TimelineProps): JSX.Element => {
                 <Button
                     variant="contained"
                     startIcon={<AddCircle/>}
-                    onClick={() => dispatch(appendRow({name: "", skills: []}))}
+                    onClick={() => dispatch(insertRow({
+                        index: rows.length,
+                        row: {name: "", skills: []}
+                    }))}
                 >Add Row</Button>
             </Stack>
         </Box>

@@ -1,5 +1,5 @@
 import React, {useCallback, useState} from "react";
-import {Menu, MenuItem, MenuItemProps, ListItemText, ListItemIcon} from "@mui/material";
+import {Menu, MenuItem, MenuItemProps, ListItemText, ListItemIcon, Typography} from "@mui/material";
 import {SystemCssProperties} from "@mui/system";
 
 export interface ContextMenuItem {
@@ -11,15 +11,17 @@ export interface ContextMenuItem {
 }
 
 export interface ContextMenuProps {
+    title?: React.ReactNode;
     children: React.ReactNode;
     items?: ContextMenuItem[];
 }
 
-export const ContextMenu = ({children, items = []}: ContextMenuProps): JSX.Element => {
+export const ContextMenu = ({title, children, items = []}: ContextMenuProps): JSX.Element => {
     const [contextMenu, setContextMenu] = useState<{top: number; left: number}>(null);
 
     const onContextMenu = useCallback((event: React.MouseEvent<HTMLSpanElement>) => {
         event.preventDefault();
+        event.stopPropagation();
         setContextMenu(contextMenu === null
             ? {top: event.clientY, left: event.clientX}
             : null
@@ -38,6 +40,14 @@ export const ContextMenu = ({children, items = []}: ContextMenuProps): JSX.Eleme
                 anchorPosition={contextMenu}
                 transitionDuration={100}
             >
+                {title ? (
+                    <MenuItem disabled sx={{
+                        paddingX: 2,
+                        paddingY: 0
+                    }}>
+                        <Typography variant="overline">{title}</Typography>
+                    </MenuItem>
+                ) : null}
                 {filteredItems
                     .map(({text, icon, color, action, itemProps = {}}, i) => (
                         <MenuItem
