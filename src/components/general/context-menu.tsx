@@ -1,9 +1,18 @@
 import React, {useCallback, useState} from "react";
-import {Menu, MenuItem, MenuItemProps} from "@mui/material";
+import {Menu, MenuItem, MenuItemProps, ListItemText, ListItemIcon} from "@mui/material";
+import {SystemCssProperties} from "@mui/system";
+
+export interface ContextMenuItem {
+    text: string;
+    icon?: React.ReactNode;
+    action?: () => void;
+    color?: SystemCssProperties["color"];
+    itemProps?: MenuItemProps<"a">;
+}
 
 export interface ContextMenuProps {
     children: React.ReactNode;
-    items?: MenuItemProps<"a">[];
+    items?: ContextMenuItem[];
 }
 
 export const ContextMenu = ({children, items = []}: ContextMenuProps): JSX.Element => {
@@ -30,16 +39,23 @@ export const ContextMenu = ({children, items = []}: ContextMenuProps): JSX.Eleme
                 transitionDuration={100}
             >
                 {filteredItems
-                    .map(({onClick, ...props}, i) => (
+                    .map(({text, icon, color, action, itemProps = {}}, i) => (
                         <MenuItem
                             key={i}
                             component="a"
-                            onClick={onClick ? (event) => {
+                            {...itemProps}
+                            onClick={action ? () => {
                                 setContextMenu(null);
-                                onClick(event);
+                                action();
                             } : () => setContextMenu(null)}
-                            {...props}
-                        />
+                        >
+                            {itemProps.children ?? (
+                                <>
+                                    {icon ? <ListItemIcon sx={{color}}>{icon}</ListItemIcon> : null}
+                                    <ListItemText sx={{color}}>{text}</ListItemText>
+                                </>
+                            )}
+                        </MenuItem>
                     ))
                 }
             </Menu>

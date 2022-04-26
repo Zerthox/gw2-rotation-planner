@@ -5,6 +5,7 @@ import {Share, Close, ContentCopy} from "@mui/icons-material";
 import {CooldownButton} from "../general";
 import {useStatelessRows} from "../../store/timeline";
 import {encodeShare} from "../../util/encode";
+import {copyToClipboard} from "../../util/clipboard";
 
 export interface ShareModalProps {
     open: boolean;
@@ -51,7 +52,7 @@ export const ShareModal = ({open, onClose}: ShareModalProps): JSX.Element => {
                     <CooldownButton
                         color="secondary"
                         startIcon={<ContentCopy/>}
-                        onClick={() => navigator.clipboard.writeText(url)}
+                        onClick={() => copyToClipboard(url)}
                         cooldown={3000}
                         cooldownProps={{
                             children: "Copied!"

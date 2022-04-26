@@ -5,6 +5,7 @@ import {useDispatch} from "react-redux";
 import {CooldownButton} from "../general";
 import {useStatelessRows, overrideRows, Row} from "../../store/timeline";
 import {validate} from "../../util/validate";
+import {copyToClipboard} from "../../util/clipboard";
 
 // custom json formatting
 const toJson = (rows: Row[]): string => {
@@ -87,7 +88,7 @@ export const ExportModal = ({open, onClose}: ExportModalProps): JSX.Element => {
                 <CooldownButton
                     color="secondary"
                     startIcon={<ContentCopy/>}
-                    onClick={() => navigator.clipboard.writeText(json)}
+                    onClick={() => copyToClipboard(json)}
                     sx={{marginRight: "auto"}}
                     cooldown={3000}
                     cooldownProps={{
