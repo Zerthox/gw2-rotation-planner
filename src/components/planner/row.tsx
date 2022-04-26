@@ -12,18 +12,35 @@ import {useRow, useRowCount, deleteRow, moveRow, updateRowName, insertRowSkill, 
 import {createSkillState} from "../../store/build";
 
 export interface RowContextMenuProps {
+    isFirst?: boolean;
+    isLast?: boolean;
     onDelete?: () => void;
+    onMove?: (up: boolean) => void;
     onDuplicate?: () => void;
     children: React.ReactNode;
 }
 
-export const RowContextMenu = ({children, onDelete, onDuplicate}: RowContextMenuProps): JSX.Element => (
+export const RowContextMenu = ({children, isFirst, isLast, onDelete, onMove, onDuplicate}: RowContextMenuProps): JSX.Element => (
     <ContextMenu items={[
         onDuplicate ? {
             text: "Duplicate Row",
             icon: <PlusOne/>,
             action: () => onDuplicate()
         } : null,
+        ...onMove ? [
+            {
+                text: "Move Up",
+                icon: <ArrowUpward/>,
+                disabled: isFirst,
+                action: () => onMove(true)
+            },
+            {
+                text: "Move Down",
+                icon: <ArrowDownward/>,
+                disabled: isLast,
+                action: () => onMove(false)
+            }
+        ] : [],
         onDelete ? {
             text: "Delete Row",
             icon: <Delete/>,
@@ -49,12 +66,18 @@ export const Row = ({dragId, index}: RowProps): JSX.Element => {
         data: {parentId: dragId, index: items.length} as OverData
     });
 
+    const isFirst = index === 0;
+    const isLast = index === rowCount -1;
+
     return (
         <RowContextMenu
+            isFirst={isFirst}
+            isLast={isLast}
             onDuplicate={() => dispatch(insertRow({
                 index: index + 1,
                 row: {name: row.name, skills: row.skills.map((skill) => skill.skillId)}}
             ))}
+            onMove={(up) => dispatch(moveRow({from: index, to: up ? index + 1 : index - 1}))}
             onDelete={() => dispatch(deleteRow({rowId: dragId}))}
         >
             <Card>
@@ -109,14 +132,14 @@ export const Row = ({dragId, index}: RowProps): JSX.Element => {
                     <Stack direction="column" alignItems="center">
                         <IconButton
                             title="Move Up"
-                            disabled={index === 0}
+                            disabled={isFirst}
                             onClick={() => dispatch(moveRow({from: index, to: index - 1}))}
                         >
                             <ArrowUpward/>
                         </IconButton>
                         <IconButton
                             title="Move Down"
-                            disabled={index === rowCount - 1}
+                            disabled={isLast}
                             onClick={() => dispatch(moveRow({from: index, to: index + 1}))}
                         >
                             <ArrowDownward/>

@@ -5,8 +5,9 @@ import {SystemCssProperties} from "@mui/system";
 export interface ContextMenuItem {
     text: string;
     icon?: React.ReactNode;
-    action?: () => void;
+    disabled?: boolean;
     color?: SystemCssProperties["color"];
+    action?: () => void;
     itemProps?: MenuItemProps<"a">;
 }
 
@@ -49,11 +50,12 @@ export const ContextMenu = ({title, children, items = []}: ContextMenuProps): JS
                     </MenuItem>
                 ) : null}
                 {filteredItems
-                    .map(({text, icon, color, action, itemProps = {}}, i) => (
+                    .map(({text, icon, disabled, color, action, itemProps = {}}, i) => (
                         <MenuItem
+                            {...itemProps}
                             key={i}
                             component="a"
-                            {...itemProps}
+                            disabled={disabled}
                             onClick={action ? () => {
                                 setContextMenu(null);
                                 action();
