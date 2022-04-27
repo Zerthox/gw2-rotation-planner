@@ -5,11 +5,11 @@ export enum CommonSkill {
     WeaponSwap = 1,
     Dodge = 2,
     DropBundle = 3,
-    SAK = 39157,
+    SAK = 39157, // hypernova launch id
     Mistlock = 4,
     WhiteMantlePortal = 5,
-    PortalEntrance = 35155,
-    PortalExit = 20851
+    PortalEntrance = 35155, // wmpd entrance id
+    PortalExit = 20851 // wmpd exit id
 }
 
 const initialSize = css`background-size: initial !important;`;
@@ -45,7 +45,7 @@ export const commonSkills: PolyfillSkill[] = [
             src: "https://render.guildwars2.com/file/7342BF326738A4C5132F42CE0915D3A2184E52FB/60975.png",
             className: initialSize
         },
-        wikiSearch: null,
+        wikiSearch: "Bundle",
         tooltip: "Drop your currently equipped bundle."
     },
     {
