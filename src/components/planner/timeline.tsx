@@ -28,7 +28,7 @@ export const Timeline = ({load, ...props}: TimelineProps): JSX.Element => {
                     variant="contained"
                     startIcon={<AddCircle/>}
                     onClick={() => dispatch(insertRow({index: rows.length}))}
-                >Add Row</Button>
+                >Add Section</Button>
             </Stack>
         </Box>
     );

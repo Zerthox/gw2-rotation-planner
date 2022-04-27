@@ -28,7 +28,7 @@ export interface RowContextMenuProps extends Partial<RowActions> {
 export const RowContextMenu = ({children, isFirst, isLast, isEmpty, onDuplicate, onClear, onDelete, onMove}: RowContextMenuProps): JSX.Element => (
     <ContextMenu items={[
         onDuplicate ? {
-            text: "Duplicate Row",
+            text: "Duplicate Section",
             icon: <PlusOne/>,
             action: () => onDuplicate()
         } : null,
@@ -47,13 +47,13 @@ export const RowContextMenu = ({children, isFirst, isLast, isEmpty, onDuplicate,
             }
         ] : [],
         onClear ? {
-            text: "Clear Row",
+            text: "Clear Section",
             icon: <Clear/>,
             disabled: isEmpty,
             action: () => onClear()
         } : null,
         onDelete ? {
-            text: "Delete Row",
+            text: "Delete Section",
             icon: <Delete/>,
             color: "error.main",
             action: () => onDelete()
@@ -66,7 +66,7 @@ export type RowButtonsProps = RowActions;
 export const RowButtons = ({isFirst, isLast, isEmpty, onClear, onMove, onDelete}: RowButtonsProps): JSX.Element => (
     <Stack direction="row" alignItems="center" spacing={0.5}>
         <IconButton
-            title="Clear Row"
+            title="Clear Section"
             disabled={isEmpty}
             onClick={() => onClear()}
         >
@@ -89,7 +89,7 @@ export const RowButtons = ({isFirst, isLast, isEmpty, onClear, onMove, onDelete}
             </IconButton>
         </Stack>
         <IconButton
-            title="Delete Row"
+            title="Delete Section"
             onClick={() => onDelete()}
         >
             <Delete/>
