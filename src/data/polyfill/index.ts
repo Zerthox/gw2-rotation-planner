@@ -22,3 +22,5 @@ export const polyfillSkills: PolyfillSkill[] = [
     ...tomeOfCourage,
     ...shadowShroud
 ];
+
+export const getPolyfillSkill = (id: number): PolyfillSkill => polyfillSkills.find((skill) => skill.id === id);

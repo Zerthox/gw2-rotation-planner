@@ -2,7 +2,7 @@ import {useMemo} from "react";
 import {sortBy} from "lodash";
 import {useStaticQuery, graphql} from "gatsby";
 import {SkillSection, SkillData, SkillSectionType} from "../data";
-import {commonSkills} from "../data/polyfill";
+import {getPolyfillSkill, commonSkills, PolyfillSkill} from "../data/polyfill";
 
 interface QueryData {
     allSkillData: {
@@ -54,3 +54,10 @@ export const useAllSkills = (): SkillData[] => {
         return acc;
     }, []), [sections]);
 };
+
+export const useSkill = (id: number): SkillData => {
+    const all = useAllSkills();
+    return all.find((skill) => skill.id === id);
+};
+
+export const usePolyfillSkill = (id: number): PolyfillSkill => useMemo(() => getPolyfillSkill(id), [id]);

@@ -10,8 +10,8 @@ import {IconWithTooltip} from "./icon";
 import {Keybind} from "./keybind";
 import {SkillData} from "../planner";
 import {DragId, useDragging} from "../../store/drag";
-import {useAllSkills} from "../../hooks/data";
-import {CommonSkill, polyfillSkills} from "../../data/polyfill";
+import {useSkill, usePolyfillSkill} from "../../hooks/data";
+import {CommonSkill, getPolyfillSkill} from "../../data/polyfill";
 
 export interface SkillIconProps {
     skill: number;
@@ -22,9 +22,8 @@ export interface SkillIconProps {
 const iconStyles = css`font-size: 3em`;
 
 export const SkillIcon = ({skill, tooltip = false, isPlaceholder = false}: SkillIconProps): JSX.Element => {
-    const allSkills = useAllSkills();
-    const skillData = useMemo(() => allSkills.find((entry) => entry.id === skill), [skill, allSkills]);
-    const polyfillSkill = useMemo(() => polyfillSkills.find((entry) => entry.id === skill), [skill]);
+    const skillData = useSkill(skill);
+    const polyfillSkill = usePolyfillSkill(skill);
 
     const {className, ...iconProps} = polyfillSkill?.iconProps ?? {};
 
@@ -85,7 +84,7 @@ export const DraggableSkill = ({parentId, dragId, index, skill, onDuplicate, onD
     const dragging = useDragging();
 
     const searchValue = useMemo(() => (
-        polyfillSkills.find((entry) => entry.id === skill)?.wikiSearch ?? encodeChatcode("skill", skill)
+        getPolyfillSkill(skill)?.wikiSearch ?? encodeChatcode("skill", skill)
     ), [skill]);
 
     return (
