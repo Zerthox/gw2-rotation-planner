@@ -3,7 +3,7 @@ Heal:
   - 5802 # Med Kit
   - 21659 # A.E.D.
   - 5857 # Healing Turret
-  - 5980 # Cleansing Burst
+  - 5961 # Detonate Healing Turret
 
   # specs
   - 30357 # Medic Gyro
@@ -12,14 +12,15 @@ Heal:
 
 Utility:
   - 5818 # Rifle Turret
+  - 5957 # Detonate Rifle Turret
   - 5836 # Flame Turret
-  - 5900 # Smoke Screen
+  - 5985 # Detonate Flame Turret
   - 5837 # Net Turret
-  - 5893 # Electrified Net
+  - 5984 # Detonate Net Turret
   - 5838 # Thumper Turret
   - 5960 # Detonate Thumper Turret
   - 5912 # Rocket Turret
-  - 5913 # Explosive Rockets
+  - 6134 # Detonate Rocket Turret
   - 5821 # Elixir B
   - 5862 # Elixir U
   - 5861 # Elixir S
@@ -33,10 +34,8 @@ Utility:
   - 6161 # Throw Mine
   - 6162 # Detonate
   - 5865 # Utility Goggles
-  - 29591 # Utility Goggles
   - 5910 # Rocket Boots
   - 5811 # Personal Battering Ram
-  - 29991 # Personal Battering Ram
   - 5825 # Slick Shoes
 
   # specs
@@ -56,6 +55,7 @@ Utility:
 
 Elite:
   - 5868 # Supply Crate
+  - 29518 # Detonate Supply Crate Turrets
   - 5832 # Elixir X
   - 30800 # Elite Mortar Kit
 
