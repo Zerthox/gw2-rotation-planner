@@ -1,14 +1,13 @@
 import React, {useState, useRef} from "react";
-import {Tooltip, Button, ButtonProps, IconButton as MuiIconButton, TooltipProps, IconButtonProps as MuiIconButtonProps} from "@mui/material";
+import {Tooltip, Button, ButtonProps, IconButton as MuiIconButton, IconButtonProps as MuiIconButtonProps, TooltipProps} from "@mui/material";
 
-export interface IconButtonProps extends MuiIconButtonProps {
+export type IconButtonProps<D extends React.ElementType> = MuiIconButtonProps<D> & {
     title: string;
-    href?: string;
     tooltip?: boolean;
     tooltipProps?: TooltipProps;
-}
+};
 
-export const IconButton = ({title, tooltip = true, tooltipProps, ...props}: IconButtonProps): JSX.Element => tooltip && !props.disabled ? (
+export const IconButton = <D extends React.ElementType>({title, tooltip = true, tooltipProps, ...props}: IconButtonProps<D>): JSX.Element => tooltip && !props.disabled ? (
     <Tooltip
         placement="top"
         disableInteractive

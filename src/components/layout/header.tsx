@@ -29,7 +29,12 @@ export const Header = ({title, children}: HeaderProps): JSX.Element => {
                 {children}
                 <Box flexGrow={1}/>
                 <Stack direction="row" alignItems="center" spacing={2}>
-                    <IconButton title="View Source" href={siteMeta.source}>
+                    <IconButton
+                        title="View Source"
+                        href={siteMeta.source}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
                         <GitHub/>
                     </IconButton>
                     <IconButton title="Open Settings" onClick={() => setOpen(true)}>
