@@ -3,16 +3,17 @@ import {Stack, StackProps, Button} from "@mui/material";
 import {ImportExport, Share} from "@mui/icons-material";
 import {ExportModal} from "./export";
 import {ShareModal} from "./share";
-import {useDarkMode} from "../../store/theme";
+import {useTheme} from "../../store/settings";
+import {isDark} from "../../themes";
 
 export type IOButtonsProps = StackProps;
 
 export const IOButtons = (props: IOButtonsProps): JSX.Element => {
-    const darkMode = useDarkMode();
+    const theme = useTheme();
     const [exportShown, setExportShown] = useState(false);
     const [shareShown, setShareShown] = useState(false);
 
-    const buttonColor = darkMode ? "primary" : "inherit";
+    const buttonColor = isDark(theme) ? "primary" : "inherit";
 
     return (
         <Stack

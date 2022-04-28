@@ -1,9 +1,8 @@
-import React from "react";
-import {useDispatch} from "react-redux";
-import {AppBar, Box, Stack, Switch, FormControlLabel, Typography, Tooltip} from "@mui/material";
-import {DarkMode, GitHub} from "@mui/icons-material";
+import React, {useState} from "react";
+import {AppBar, Box, Stack, Typography} from "@mui/material";
+import {GitHub, Settings} from "@mui/icons-material";
 import {IconButton} from "../general";
-import {setDarkMode, useDarkMode} from "../../store/theme";
+import {SettingsDrawer} from "./settings";
 import {useSiteMeta} from "../../hooks/site";
 
 export interface HeaderProps {
@@ -12,9 +11,9 @@ export interface HeaderProps {
 }
 
 export const Header = ({title, children}: HeaderProps): JSX.Element => {
-    const dispatch = useDispatch();
-    const darkMode = useDarkMode();
     const siteMeta = useSiteMeta();
+
+    const [open, setOpen] = useState(false);
 
     return (
         <AppBar position="static">
@@ -30,29 +29,18 @@ export const Header = ({title, children}: HeaderProps): JSX.Element => {
                 {children}
                 <Box flexGrow={1}/>
                 <Stack direction="row" alignItems="center" spacing={2}>
-                    <Tooltip
-                        placement="bottom"
-                        disableInteractive
-                        title="Toggle Theme"
-                    >
-                        <FormControlLabel
-                            checked={darkMode}
-                            label={
-                                <Box display="flex" alignItems="center" justifyContent="center">
-                                    <DarkMode/>
-                                </Box>
-                            }
-                            labelPlacement="start"
-                            control={
-                                <Switch onChange={({target}) => dispatch(setDarkMode(target.checked))}/>
-                            }
-                        />
-                    </Tooltip>
                     <IconButton title="View Source" href={siteMeta.source}>
                         <GitHub/>
                     </IconButton>
+                    <IconButton title="Open Settings" onClick={() => setOpen(true)}>
+                        <Settings/>
+                    </IconButton>
                 </Stack>
             </Stack>
+            <SettingsDrawer
+                open={open}
+                onClose={() => setOpen(false)}
+            />
         </AppBar>
     );
 };

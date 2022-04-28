@@ -1,0 +1,57 @@
+import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import {useSelector} from "react-redux";
+import {StoreState} from ".";
+import {SkillSlot} from "../data";
+import {Theme} from "../themes";
+
+export type Keybinds<T> = Record<SkillSlot, T>;
+
+export const defaultKeybinds: Keybinds<string> = {
+    [SkillSlot.Profession1]: "F1",
+    [SkillSlot.Profession2]: "F2",
+    [SkillSlot.Profession3]: "F3",
+    [SkillSlot.Profession4]: "F4",
+    [SkillSlot.Profession5]: "F5",
+    [SkillSlot.Profession6]: "F6",
+    [SkillSlot.Profession7]: "F7",
+    [SkillSlot.Pet]: "F2",
+    [SkillSlot.Toolbelt]: "F1-5",
+    [SkillSlot.Weapon1]: "1",
+    [SkillSlot.Weapon2]: "2",
+    [SkillSlot.Weapon3]: "3",
+    [SkillSlot.Weapon4]: "4",
+    [SkillSlot.Weapon5]: "5",
+    [SkillSlot.Downed1]: "1",
+    [SkillSlot.Downed2]: "2",
+    [SkillSlot.Downed3]: "3",
+    [SkillSlot.Downed4]: "4",
+    [SkillSlot.Heal]: "6",
+    [SkillSlot.Utility]: "7-9",
+    [SkillSlot.Elite]: "0"
+};
+
+export const settingsSlice = createSlice({
+    name: "settings",
+    initialState: {
+        theme: Theme.Dark,
+        keybinds: defaultKeybinds
+    },
+    reducers: {
+        setTheme(state, {payload}: PayloadAction<Theme>) {
+            state.theme = payload;
+        },
+        setKeybinds(state, {payload}: PayloadAction<Partial<Keybinds<string>>>) {
+            state.keybinds = {...state.keybinds, ...payload};
+        }
+    }
+});
+
+export const settingsReducer = settingsSlice.reducer;
+
+export const {setTheme, setKeybinds} = settingsSlice.actions;
+
+export const useTheme = (): Theme => useSelector(({settingsReducer}: StoreState) => settingsReducer.theme);
+
+export const useKeybinds = (): Keybinds<string> => useSelector(({settingsReducer}: StoreState) => settingsReducer.keybinds);
+
+export const useKeybind = (slot: SkillSlot): string => useKeybinds()[slot] ?? "...";

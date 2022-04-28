@@ -1,7 +1,12 @@
 import {createTheme} from "@mui/material";
 import {cyan, blueGrey} from "@mui/material/colors";
 
-export const DarkTheme = createTheme({
+export enum Theme {
+    Dark = "dark",
+    Light = "light"
+}
+
+export const darkTheme = createTheme({
     palette: {
         mode: "dark",
         primary: {
@@ -13,7 +18,7 @@ export const DarkTheme = createTheme({
     }
 });
 
-export const LightTheme = createTheme({
+export const lightTheme = createTheme({
     palette: {
         mode: "light",
         primary: {
@@ -24,3 +29,13 @@ export const LightTheme = createTheme({
         }
     }
 });
+
+export const themes = {
+    [Theme.Dark]: darkTheme,
+    [Theme.Light]: lightTheme
+};
+
+export const isDark = (theme: Theme): boolean => ({
+    [Theme.Dark]: true,
+    [Theme.Light]: false
+})[theme];

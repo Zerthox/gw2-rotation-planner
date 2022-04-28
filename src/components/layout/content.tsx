@@ -2,8 +2,8 @@ import React from "react";
 import {Box, Stack} from "@mui/material";
 import {Providers} from "./providers";
 import {Header} from "./header";
-import {DarkTheme, LightTheme} from "./theme";
-import {useDarkMode} from "../../store/theme";
+import {themes} from "../../themes";
+import {useTheme} from "../../store/settings";
 
 export interface ContentProps {
     title?: string;
@@ -12,10 +12,10 @@ export interface ContentProps {
 }
 
 export const Content = ({title, children, header}: ContentProps): JSX.Element => {
-    const darkMode = useDarkMode();
+    const theme = useTheme();
 
     return (
-        <Providers theme={darkMode ? DarkTheme : LightTheme}>
+        <Providers theme={themes[theme]}>
             <Stack direction="column" height="100vh">
                 <Header title={title}>
                     {header}
