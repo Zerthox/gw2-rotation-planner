@@ -71,6 +71,8 @@ export const onCreateNode: GatsbyNode<FileNode>["onCreateNode"] = async ({node, 
                     ...(await fetchSkills(fetch)).map(({id, name, slot}) => ({id, name, slot}))
                 ];
 
+                // TODO: split toolbelt skill slot into heal, utility & elite here?
+
                 const data = {
                     name,
                     profession,

@@ -90,7 +90,8 @@ export enum SkillSlot {
     Downed2 = "Downed_2",
     Downed3 = "Downed_3",
     Downed4 = "Downed_4",
-    Pet = "Pet"
+    Pet = "Pet",
+    Toolbelt = "Toolbelt"
 }
 
 export enum Attunement {
