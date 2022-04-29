@@ -1,5 +1,5 @@
 Toolbelt:
-  - 6119 # Detonate Elixir H (Elixir H)
+  - 5978 # Toss Elixir H (Elixir H)
   - 29772 # Bandage Self (Med Kit)
   - 21661 # Static Shock (A.E.D.)
   - 6176 # Regenerating Mist (Healing Turret)
@@ -11,11 +11,11 @@ Toolbelt:
   - 6179 # Net Attack (Net Turret)
   - 6180 # Rumble (Thumper Turret)
   - 6177 # Rocket (Rocket Turret)
-  - 6082 # Detonate Elixir B (Elixir B)
-  - 6088 # Detonate Elixir U (Elixir U)
-  - 6084 # Detonate Elixir S (Elixir S)
-  - 6078 # Detonate Elixir C (Elixir C)
-  - 6086 # Detonate Elixir R (Elixir R)
+  - 5967 # Toss Elixir B (Elixir B)
+  - 5970 # Toss Elixir U (Elixir U)
+  - 5972 # Toss Elixir S (Elixir S)
+  - 5969 # Toss Elixir C (Elixir C)
+  - 5867 # Toss Elixir R (Elixir R)
   - 6172 # Grenade Barrage (Grenade Kit)
   - 5813 # Big Ol' Bomb (Bomb Kit)
   - 5977 # Incendiary Ammo (Flamethrower)
@@ -36,7 +36,7 @@ Toolbelt:
   - 43176 # Flash Spark (Spectrum Shield)
 
   - 29716 # Med Pack Drop (Supply Crate)
-  - 29722 # Detonate Elixir X (Elixir X)
+  - 30725 # Toss Elixir X (Elixir X)
   - 30599 # Orbital Strike (Elite Mortar Kit)
 
 Scrapper:
