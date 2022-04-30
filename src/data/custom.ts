@@ -145,7 +145,7 @@ const customSkills: CustomSkill[] = [
                 text: "Duration",
                 type: "Time",
                 icon: "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
-                duration: 60
+                duration: 10
             }
         ]
     }
