@@ -8,20 +8,20 @@ export interface CustomSkill extends Omit<Skill, "chat_link"> {
     iconProps?: React.ComponentProps<typeof Icon>;
 }
 
+export const getCustomSkill = (id: number): CustomSkill => customSkills.find((skill) => skill.id === id);
+
+export const getAllCustomSkills = (): CustomSkill[] => customSkills;
+
 export enum CommonSkill {
     WeaponSwap = 1,
     Dodge = 2,
     DropBundle = 3,
     SAK = 39157, // hypernova launch id
-    Mistlock = 4,
+    Mistlock = 33652, // rigorous certainty id
     WhiteMantlePortal = 5,
     PortalEntrance = 35155, // wmpd entrance id
     PortalExit = 20851 // wmpd exit id
 }
-
-export const getCustomSkill = (id: number): CustomSkill => customSkills.find((skill) => skill.id === id);
-
-export const getAllCustomSkills = (): CustomSkill[] => customSkills;
 
 const initialSize = css`background-size: initial !important;`;
 
@@ -36,7 +36,15 @@ const customSkills: CustomSkill[] = [
             className: initialSize
         },
         wiki: "Weapon Swap",
-        slot: null
+        slot: null,
+        facts: [
+            {
+                text: "Recharge",
+                type: "Recharge",
+                icon: "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+                value: 10
+            }
+        ]
     },
     {
         id: CommonSkill.Dodge,
@@ -81,7 +89,18 @@ const customSkills: CustomSkill[] = [
             className: initialSize
         },
         wiki: "Mistlock Singularity",
-        slot: null
+        slot: null,
+        facts: [
+            {
+                text: "Apply Buff/Condition",
+                type: "Buff",
+                icon: "https://wiki.guildwars2.com/images/6/60/Desert_Carapace.png",
+                status: "Rigorous Certainty",
+                description: "+5 Agony Resistance. The next time you would be downed, instead heal 25% of your total health.",
+                duration: 0,
+                apply_count: 1
+            }
+        ]
     },
     {
         id: CommonSkill.WhiteMantlePortal,
@@ -98,7 +117,21 @@ const customSkills: CustomSkill[] = [
         professions: [],
         description: "Create an entry portal.",
         icon: "https://wiki.guildwars2.com/images/4/43/Watchwork_Portal_Device.png",
-        slot: null
+        slot: null,
+        facts: [
+            {
+                text: "Recharge",
+                type: "Recharge",
+                icon: "https://render.guildwars2.com/file/D767B963D120F077C3B163A05DC05A7317D7DB70/156651.png",
+                value: 1800
+            },
+            {
+                text: "Duration",
+                type: "Time",
+                icon: "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+                duration: 60
+            }
+        ]
     },
     {
         id: CommonSkill.PortalExit,
@@ -106,6 +139,14 @@ const customSkills: CustomSkill[] = [
         professions: [],
         description: "Create an exit portal.",
         icon: "https://wiki.guildwars2.com/images/4/43/Watchwork_Portal_Device.png",
-        slot: null
+        slot: null,
+        facts: [
+            {
+                text: "Duration",
+                type: "Time",
+                icon: "https://render.guildwars2.com/file/7B2193ACCF77E56C13E608191B082D68AA0FAA71/156659.png",
+                duration: 60
+            }
+        ]
     }
 ];
