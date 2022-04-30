@@ -1,7 +1,11 @@
-import {Skill} from "../../api";
+import React from "react";
+import {css} from "@emotion/css";
+import {Icon} from "@discretize/gw2-ui-new";
+import {Skill} from ".";
 
 export interface CustomSkill extends Omit<Skill, "chat_link"> {
     wiki?: string;
+    iconProps?: React.ComponentProps<typeof Icon>;
 }
 
 export enum CommonSkill {
@@ -19,7 +23,7 @@ export const getCustomSkill = (id: number): CustomSkill => customSkills.find((sk
 
 export const getAllCustomSkills = (): CustomSkill[] => customSkills;
 
-// FIXME: some custom icons need a way to adjust the background size
+const initialSize = css`background-size: initial !important;`;
 
 const customSkills: CustomSkill[] = [
     {
@@ -28,6 +32,9 @@ const customSkills: CustomSkill[] = [
         professions: [],
         description: "Switch between your weapon sets.",
         icon: "https://wiki.guildwars2.com/images/c/ce/Weapon_Swap_Button.png",
+        iconProps: {
+            className: initialSize
+        },
         wiki: "Weapon Swap",
         slot: null
     },
@@ -37,6 +44,9 @@ const customSkills: CustomSkill[] = [
         professions: [],
         description: "Evade attacks by quickly moving out of the way. While dodging, you're temporarily invulnerable.",
         icon: "https://wiki.guildwars2.com/images/archive/b/b2/20150601155307%21Dodge.png",
+        iconProps: {
+            className: initialSize
+        },
         wiki: "Dodge",
         slot: null
     },
@@ -46,6 +56,9 @@ const customSkills: CustomSkill[] = [
         professions: [],
         description: "Drop your currently equipped bundle.",
         icon: "https://render.guildwars2.com/file/7342BF326738A4C5132F42CE0915D3A2184E52FB/60975.png",
+        iconProps: {
+            className: initialSize
+        },
         wiki: "Bundle",
         slot: null
     },
@@ -64,6 +77,9 @@ const customSkills: CustomSkill[] = [
         professions: [],
         description: "Gain the Rigorous Certainty effect, recharge all skills on cooldown, and repair all equipped armor.",
         icon: "https://wiki.guildwars2.com/images/0/06/Mistlock_Singularity.png",
+        iconProps: {
+            className: initialSize
+        },
         wiki: "Mistlock Singularity",
         slot: null
     },
