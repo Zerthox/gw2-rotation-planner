@@ -28,7 +28,6 @@ const groups = [
         [SkillSlot.Profession5]: "Profession Skill 5",
         [SkillSlot.Profession6]: "Profession Skill 6",
         [SkillSlot.Profession7]: "Profession Skill 7",
-        [SkillSlot.Pet]: "Pet Skill",
         [SkillSlot.Toolbelt]: "Toolbelt Skill"
     },
     {

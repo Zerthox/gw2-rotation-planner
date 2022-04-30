@@ -6,7 +6,7 @@ import {Theme} from "../themes";
 
 export type Keybinds<T> = Record<SkillSlot, T>;
 
-export const defaultKeybinds: Keybinds<string> = {
+export const defaultKeybinds = {
     [SkillSlot.Profession1]: "F1",
     [SkillSlot.Profession2]: "F2",
     [SkillSlot.Profession3]: "F3",
@@ -14,17 +14,12 @@ export const defaultKeybinds: Keybinds<string> = {
     [SkillSlot.Profession5]: "F5",
     [SkillSlot.Profession6]: "F6",
     [SkillSlot.Profession7]: "F7",
-    [SkillSlot.Pet]: "F2",
     [SkillSlot.Toolbelt]: "F1-5",
     [SkillSlot.Weapon1]: "1",
     [SkillSlot.Weapon2]: "2",
     [SkillSlot.Weapon3]: "3",
     [SkillSlot.Weapon4]: "4",
     [SkillSlot.Weapon5]: "5",
-    [SkillSlot.Downed1]: "1",
-    [SkillSlot.Downed2]: "2",
-    [SkillSlot.Downed3]: "3",
-    [SkillSlot.Downed4]: "4",
     [SkillSlot.Heal]: "6",
     [SkillSlot.Utility]: "7-9",
     [SkillSlot.Elite]: "0"
@@ -52,6 +47,16 @@ export const {setTheme, setKeybinds} = settingsSlice.actions;
 
 export const useTheme = (): Theme => useSelector(({settingsReducer}: StoreState) => settingsReducer.theme);
 
-export const useKeybinds = (): Keybinds<string> => useSelector(({settingsReducer}: StoreState) => settingsReducer.keybinds);
+export const useKeybinds = (): Keybinds<string> => useSelector(({settingsReducer}: StoreState) => {
+    const {keybinds} = settingsReducer;
+    return {
+        ...keybinds,
+        [SkillSlot.Pet]: keybinds[SkillSlot.Profession2],
+        [SkillSlot.Downed1]: keybinds[SkillSlot.Weapon1],
+        [SkillSlot.Downed2]: keybinds[SkillSlot.Weapon2],
+        [SkillSlot.Downed3]: keybinds[SkillSlot.Weapon3],
+        [SkillSlot.Downed4]: keybinds[SkillSlot.Weapon4]
+    };
+});
 
 export const useKeybind = (slot: SkillSlot): string => useKeybinds()[slot] ?? "...";
