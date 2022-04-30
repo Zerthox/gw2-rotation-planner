@@ -27,7 +27,7 @@ export const buildSlice = createSlice({
         },
         refreshSkillStates(state) {
             state.skillStates = filterSections(state.sections, state.profession)
-                .map((section) => section.skills.map((skill) => createSkillState(skill.id)));
+                .map((section) => section.skills.map((skill) => createSkillState(skill)));
         },
         changeProfession(state, {payload}: PayloadAction<Profession>) {
             state.profession = payload;

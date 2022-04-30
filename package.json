@@ -22,7 +22,7 @@
     "url": "https://github.com/zerthox/gw2-rotation-planner/issues"
   },
   "dependencies": {
-    "@discretize/gw2-ui-new": "^0.0.16",
+    "@discretize/gw2-ui-new": "^0.0.17",
     "@dnd-kit/core": "^5.0.3",
     "@dnd-kit/sortable": "^6.0.1",
     "@emotion/css": "^11.7.1",

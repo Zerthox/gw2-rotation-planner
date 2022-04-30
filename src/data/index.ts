@@ -6,17 +6,11 @@ export const isWeaponSlot = (slot: SkillSlot): boolean => slot.startsWith("Weapo
 
 export const isProfessionSlot = (slot: SkillSlot): boolean => slot.startsWith("Profession");
 
-export interface SkillData {
-    id: number;
-    name: string;
-    slot: SkillSlot;
-}
-
 export interface SkillSection {
     name: string;
     profession: Profession;
     type: SkillSectionType;
-    skills: SkillData[];
+    skills: number[];
 }
 
 export enum SkillSectionType {

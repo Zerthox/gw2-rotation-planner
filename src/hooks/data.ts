@@ -1,8 +1,8 @@
 import {useMemo} from "react";
 import {sortBy} from "lodash";
 import {useStaticQuery, graphql} from "gatsby";
-import {SkillSection, SkillData, SkillSectionType} from "../data";
-import {getPolyfillSkill, commonSkills, PolyfillSkill} from "../data/polyfill";
+import {SkillSection, SkillSectionType} from "../data";
+import {getAllCustomSkills} from "../data/custom";
 
 interface QueryData {
     allSkillData: {
@@ -17,11 +17,7 @@ const useData = () => useStaticQuery<QueryData>(graphql`
                 name
                 profession
                 type
-                skills {
-                    id
-                    name
-                    slot
-                }
+                skills
             }
         }
     }
@@ -41,23 +37,16 @@ export const useAllSkillSections = (): SkillSection[] => {
             name: "Common",
             profession: null,
             type: null,
-            skills: commonSkills
+            skills: getAllCustomSkills().map((skill) => skill.id)
         },
         ...sortBy(data, (section) => sectionOrder.indexOf(section.type))
     ], [data]);
 };
 
-export const useAllSkills = (): SkillData[] => {
+export const useAllSkills = (): number[] => {
     const sections = useAllSkillSections();
     return useMemo(() => sections.reduce((acc, section) => {
         acc.push(...section.skills);
         return acc;
     }, []), [sections]);
 };
-
-export const useSkill = (id: number): SkillData => {
-    const all = useAllSkills();
-    return all.find((skill) => skill.id === id);
-};
-
-export const usePolyfillSkill = (id: number): PolyfillSkill => useMemo(() => getPolyfillSkill(id), [id]);

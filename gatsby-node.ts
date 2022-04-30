@@ -1,9 +1,6 @@
 import {GatsbyNode, Node} from "gatsby";
-import {upperFirst, partition, sortBy} from "lodash";
+import {upperFirst} from "lodash";
 import jsYaml from "js-yaml";
-import {fetchSkills, SkillSlot} from "./api";
-import {SkillData} from "./src/data";
-import {polyfillSkills} from "./src/data/polyfill";
 
 interface FileNode extends Node {
     sourceInstanceName: string;
@@ -39,24 +36,6 @@ interface FileNode extends Node {
 
 type FileContent = Record<string, number[]>;
 
-const slotOrder = [
-    SkillSlot.Profession1,
-    SkillSlot.Profession2,
-    SkillSlot.Profession3,
-    SkillSlot.Profession4,
-    SkillSlot.Profession5,
-    SkillSlot.Profession6,
-    SkillSlot.Profession7,
-    SkillSlot.Weapon1,
-    SkillSlot.Weapon2,
-    SkillSlot.Weapon3,
-    SkillSlot.Weapon4,
-    SkillSlot.Weapon5,
-    SkillSlot.Heal,
-    SkillSlot.Utility,
-    SkillSlot.Elite
-];
-
 export const onCreateNode: GatsbyNode<FileNode>["onCreateNode"] = async ({node, actions, loadNodeContent, createNodeId, createContentDigest}) => {
     if (node.internal.mediaType === "text/yaml") {
         try {
@@ -64,21 +43,14 @@ export const onCreateNode: GatsbyNode<FileNode>["onCreateNode"] = async ({node, 
             const profession = upperFirst(node.relativeDirectory);
             const type = node.name;
 
-            for (const [name, skillIds] of Object.entries(content)) {
-                const [polyfill, fetch] = partition(skillIds, (id) => polyfillSkills.find((skill) => skill.id === id));
-                const skillData: SkillData[] = [
-                    ...polyfill.map((id) => polyfillSkills.find((skill) => skill.id === id)),
-                    ...(await fetchSkills(fetch)).map(({id, name, slot}) => ({id, name, slot}))
-                ];
-
-                // TODO: split toolbelt skill slot into heal, utility & elite here?
-
+            for (const [name, skills] of Object.entries(content)) {
                 const data = {
                     name,
                     profession,
                     type,
-                    skills: sortBy(skillData, (skill) => slotOrder.indexOf(skill.slot))
+                    skills
                 };
+
                 const dataNode = {
                     ...data,
                     id: createNodeId(`SkillData-${node.id}-${name}`),
