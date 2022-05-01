@@ -1,5 +1,6 @@
-import React, {useState, useRef} from "react";
+import React from "react";
 import {Tooltip, Button, ButtonProps, IconButton as MuiIconButton, IconButtonProps as MuiIconButtonProps, TooltipProps} from "@mui/material";
+import {useCooldown} from "../../hooks/general";
 
 export type IconButtonProps<D extends React.ElementType> = MuiIconButtonProps<D> & {
     title: string;
@@ -24,23 +25,15 @@ export interface CooldownButtonProps extends ButtonProps {
 }
 
 export const CooldownButton = ({cooldown, cooldownProps, onClick, ...props}: CooldownButtonProps): JSX.Element => {
-    const [triggered, setTriggered] = useState(false);
-    const timeout = useRef<number>(null);
+    const [active, trigger] = useCooldown(cooldown);
 
     return (
         <Button
             {...props}
-            {...triggered ? cooldownProps : {}}
+            {...active ? cooldownProps : {}}
             onClick={(event) => {
                 onClick(event);
-                if (timeout.current) {
-                    window.clearTimeout(timeout.current);
-                }
-                setTriggered(true);
-                timeout.current = window.setTimeout(() => {
-                    setTriggered(false);
-                    timeout.current = null;
-                }, cooldown);
+                trigger();
             }}
         />
     );
