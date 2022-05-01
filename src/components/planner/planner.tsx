@@ -10,7 +10,8 @@ import {SkillIcon} from "../skill";
 import {OverData, SkillData} from ".";
 import {DragId, DragType, createDragId, isa, useDragging, setDragging} from "../../store/drag";
 import {deleteRowSkill, insertRowSkill, moveRowSkill} from "../../store/timeline";
-import {useSkillStates, takeSkillItem} from "../../store/build";
+import {useSkillStates, takeSkillItem, createSkillState} from "../../store/build";
+import {useKeyPressed} from "../../hooks/general";
 import {LoadParams} from "../../hooks/load";
 
 const SKILLBAR_ID = createDragId(DragType.Skillbar);
@@ -29,23 +30,36 @@ export const Planner = ({load}: PlannerProps): JSX.Element => {
 
     const parent = useRef<DragId>(null);
     const fromSkillbar = useRef(false);
+    const duplicated = useRef(false);
+    const pressed = useKeyPressed(["Shift", "Control"]);
 
     const cancelDrag = useCallback((active: Active) => {
-        if (fromSkillbar.current && isa(DragType.Row, parent.current)) {
+        if (isa(DragType.Row, parent.current) && (fromSkillbar.current || duplicated.current)) {
             dispatch(deleteRowSkill({
                 rowId: parent.current,
                 skillId: active.id
             }));
         }
-    }, [dispatch, fromSkillbar]);
+    }, [dispatch]);
 
     const onDragStart = useCallback(({active}: DragStartEvent) => {
         const activeData = (active.data.current ?? {}) as SkillData;
 
         parent.current = null;
         fromSkillbar.current = isa(DragType.Skillbar, activeData.parentId);
+
+        // handle row skill duplication
+        duplicated.current = !fromSkillbar.current && pressed;
+        if (duplicated.current) {
+            dispatch(insertRowSkill({
+                rowId: activeData.parentId,
+                index: activeData.index,
+                skill: createSkillState(activeData.skill)
+            }));
+        }
+
         dispatch(setDragging({dragId: active.id, skill: activeData.skill}));
-    }, [dispatch]);
+    }, [dispatch, pressed]);
 
     const onDragOver = useCallback(({active, over}: DragOverEvent) => {
         if (over) {
