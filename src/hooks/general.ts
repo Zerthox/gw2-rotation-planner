@@ -1,9 +1,15 @@
 import {useState, useRef, useCallback, useEffect, useMemo} from "react";
 
-export const useEventListener = <K extends keyof GlobalEventHandlersEventMap>(
+export type PickEvent<K extends string> = K extends keyof GlobalEventHandlersEventMap ? GlobalEventHandlersEventMap[K] : (
+    K extends keyof WindowEventHandlersEventMap ? WindowEventHandlersEventMap[K] : (
+        K extends keyof DocumentAndElementEventHandlersEventMap ? DocumentAndElementEventHandlersEventMap[K] : Event
+    )
+);
+
+export const useEventListener = <K extends string>(
     event: K,
-    handler: (event: GlobalEventHandlersEventMap[K]) => unknown,
-    target: GlobalEventHandlers = window
+    handler: (event: PickEvent<K>) => unknown,
+    target: GlobalEventHandlers | WindowEventHandlers | DocumentAndElementEventHandlers = window
 ): void => {
     const saved = useRef<typeof handler>();
 
@@ -12,10 +18,10 @@ export const useEventListener = <K extends keyof GlobalEventHandlersEventMap>(
     }, [handler]);
 
     useEffect(() => {
-        const listener = (event: GlobalEventHandlersEventMap[K]) => saved.current(event);
+        const listener = (event: PickEvent<K>) => saved.current(event);
         target.addEventListener(event, listener);
         return () => target.removeEventListener(event, listener);
-    });
+    }, [event, target]);
 };
 
 export const useKeyPressed = (key: string | Array<string>, target: GlobalEventHandlers = window): boolean => {
