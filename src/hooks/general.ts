@@ -1,15 +1,23 @@
 import {useState, useRef, useCallback, useEffect, useMemo} from "react";
 
+export type PickEventType<T extends AnyEventTarget> = T extends GlobalEventHandlers ? keyof GlobalEventHandlersEventMap : (
+    T extends WindowEventHandlers ? keyof WindowEventHandlersEventMap : (
+        T extends DocumentAndElementEventHandlers ? keyof DocumentAndElementEventHandlersEventMap : string
+    )
+);
+
 export type PickEvent<K extends string> = K extends keyof GlobalEventHandlersEventMap ? GlobalEventHandlersEventMap[K] : (
     K extends keyof WindowEventHandlersEventMap ? WindowEventHandlersEventMap[K] : (
         K extends keyof DocumentAndElementEventHandlersEventMap ? DocumentAndElementEventHandlersEventMap[K] : Event
     )
 );
 
-export const useEventListener = <K extends string>(
+export type AnyEventTarget = GlobalEventHandlers | WindowEventHandlers | DocumentAndElementEventHandlers | EventTarget;
+
+export const useEventListener = <T extends AnyEventTarget, K extends PickEventType<T>>(
+    target: T,
     event: K,
     handler: (event: PickEvent<K>) => unknown,
-    target: GlobalEventHandlers | WindowEventHandlers | DocumentAndElementEventHandlers = window
 ): void => {
     const saved = useRef<typeof handler>();
 
@@ -28,16 +36,16 @@ export const useKeyPressed = (key: string | Array<string>, target: GlobalEventHa
     const [pressed, setPressed] = useState(false);
     const keys = useMemo(() => new Set(typeof key === "string" ? [key] : key), [key]);
 
-    useEventListener("keydown", (event) => {
+    useEventListener(target, "keydown", (event) => {
         if (keys.has(event.key)) {
             setPressed(true);
         }
-    }, target);
-    useEventListener("keyup", (event) => {
+    });
+    useEventListener(target, "keyup", (event) => {
         if (keys.has((event.key))) {
             setPressed(false);
         }
-    }, target);
+    });
 
     return pressed;
 };
