@@ -59,4 +59,4 @@ export const useKeybinds = (): Keybinds<string> => useSelector(({settingsReducer
     };
 });
 
-export const useKeybind = (slot: SkillSlot): string => useKeybinds()[slot] ?? "...";
+export const useKeybind = (slot: SkillSlot): string => useKeybinds()[slot];
