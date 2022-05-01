@@ -2,10 +2,10 @@ import {DragId} from "../../store/drag";
 
 export * from "./planner";
 export * from "./prof-select";
-export * from "./trash";
+export * from "./row";
 export * from "./skillbar";
 export * from "./timeline";
-export * from "./row";
+export * from "./trash";
 
 export interface SkillData {
     parentId: DragId;
