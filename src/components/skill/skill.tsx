@@ -1,15 +1,14 @@
-import React, {useMemo} from "react";
+import React from "react";
 import clsx from "clsx";
 import {css} from "@emotion/css";
 import {Stack} from "@mui/material";
 import {Skill, CustomComponent, useSkill} from "@discretize/gw2-ui-new";
 import {useSortable} from "@dnd-kit/sortable";
-import {encode as encodeChatcode} from "gw2e-chat-codes";
 import {SkillContextMenu} from "./context-menu";
 import {Keybind} from "./keybind";
 import {SkillData} from "../planner";
 import {DragId, useDragging} from "../../store/drag";
-import {CommonSkill, getCustomSkill} from "../../data/custom";
+import {CommonSkill, getCustomSkill, getSearchValue} from "../../data/custom";
 import {SkillSlot} from "../../data";
 
 // TODO: remove this when custom component prop types are fixed
@@ -87,15 +86,13 @@ export const DraggableSkill = ({parentId, dragId, index, skill, onDuplicate, onD
     });
     const dragging = useDragging();
 
-    const searchValue = useMemo(() => (
-        getCustomSkill(skill)?.wiki ?? encodeChatcode("skill", skill)
-    ), [skill]);
+    const searchValue = getSearchValue(skill);
 
     return (
         <SkillContextMenu
             skill={skill}
             isCommon={skill in CommonSkill}
-            searchValue={searchValue || null}
+            searchValue={searchValue}
             onDuplicate={onDuplicate}
             onDelete={onDelete}
         >

@@ -1,6 +1,7 @@
 import React from "react";
 import {css} from "@emotion/css";
 import {Icon} from "@discretize/gw2-ui-new";
+import {encode as encodeChatcode} from "gw2e-chat-codes";
 import {Skill} from ".";
 
 export interface CustomSkill extends Omit<Skill, "chat_link"> {
@@ -8,9 +9,11 @@ export interface CustomSkill extends Omit<Skill, "chat_link"> {
     iconProps?: React.ComponentProps<typeof Icon>;
 }
 
-export const getCustomSkill = (id: number): CustomSkill => customSkills.find((skill) => skill.id === id);
-
 export const getAllCustomSkills = (): CustomSkill[] => customSkills;
+
+export const getCustomSkill = (id: number): CustomSkill => getAllCustomSkills().find((skill) => skill.id === id);
+
+export const getSearchValue = (id: number): string => getCustomSkill(id)?.wiki ?? (encodeChatcode("skill", id) || null);
 
 export enum CommonSkill {
     WeaponSwap = 1,
