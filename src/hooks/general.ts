@@ -1,4 +1,4 @@
-import {useState, useRef, useCallback, useEffect} from "react";
+import {useState, useRef, useCallback, useEffect, useMemo} from "react";
 
 export const useEventListener = <K extends keyof GlobalEventHandlersEventMap>(
     event: K,
@@ -18,16 +18,17 @@ export const useEventListener = <K extends keyof GlobalEventHandlersEventMap>(
     });
 };
 
-export const useKeyPress = (key: string, target: GlobalEventHandlers = window): boolean => {
+export const useKeyPressed = (key: string | Array<string>, target: GlobalEventHandlers = window): boolean => {
     const [pressed, setPressed] = useState(false);
+    const keys = useMemo(() => new Set(typeof key === "string" ? [key] : key), [key]);
 
     useEventListener("keydown", (event) => {
-        if (event.key === key) {
+        if (keys.has(event.key)) {
             setPressed(true);
         }
     }, target);
     useEventListener("keyup", (event) => {
-        if (event.key === key) {
+        if (keys.has((event.key))) {
             setPressed(false);
         }
     }, target);
