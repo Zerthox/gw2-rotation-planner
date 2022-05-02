@@ -7,12 +7,11 @@ import {useStatelessRows} from "../../store/timeline";
 import {encodeShare} from "../../util/encode";
 import {copyToClipboard} from "../../util/clipboard";
 
-export interface ShareModalProps {
-    open: boolean;
+export interface ShareModalContentProps {
     onClose: () => void;
 }
 
-export const ShareModal = ({open, onClose}: ShareModalProps): JSX.Element => {
+export const ShareModalContent = ({onClose}: ShareModalContentProps): JSX.Element => {
     const {origin, pathname} = useLocation();
     const rows = useStatelessRows();
 
@@ -21,12 +20,7 @@ export const ShareModal = ({open, onClose}: ShareModalProps): JSX.Element => {
     ), [origin, pathname, rows]);
 
     return (
-        <Dialog
-            open={open}
-            onClose={onClose}
-            maxWidth="sm"
-            fullWidth
-        >
+        <>
             <DialogTitle>
                 <Stack direction="row" alignItems="center" spacing={1}>
                     <Share/>
@@ -60,6 +54,23 @@ export const ShareModal = ({open, onClose}: ShareModalProps): JSX.Element => {
                     >Copy</CooldownButton>
                 </Stack>
             </DialogContent>
-        </Dialog>
+        </>
     );
 };
+
+export interface ShareModalProps {
+    open: boolean;
+    onClose: () => void;
+}
+
+export const ShareModal = ({open, onClose}: ShareModalProps): JSX.Element => (
+    <Dialog
+        open={open}
+        onClose={onClose}
+        maxWidth="sm"
+        fullWidth
+        keepMounted={false}
+    >
+        <ShareModalContent onClose={onClose}/>
+    </Dialog>
+);

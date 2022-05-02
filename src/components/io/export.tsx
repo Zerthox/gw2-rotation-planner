@@ -20,12 +20,11 @@ const toJson = (rows: Row[]): string => {
     return `[${json}\n]`;
 };
 
-export interface ExportModalProps {
-    open: boolean;
+export interface ExportModalContentProps {
     onClose: () => void;
 }
 
-export const ExportModal = ({open, onClose}: ExportModalProps): JSX.Element => {
+export const ExportModalContent = ({onClose}: ExportModalContentProps): JSX.Element => {
     const dispatch = useDispatch();
     const initialRows = useStatelessRows();
     const initialJson = useMemo(() => toJson(initialRows), [initialRows]);
@@ -48,15 +47,7 @@ export const ExportModal = ({open, onClose}: ExportModalProps): JSX.Element => {
     const isError = rows === null;
 
     return (
-        <Dialog
-            open={open}
-            onClose={onClose}
-            maxWidth="md"
-            fullWidth
-            TransitionProps={{
-                onEnter: () => setContent({json: initialJson, rows: initialRows})
-            }}
-        >
+        <>
             <DialogTitle>
                 <Stack direction="row" alignItems="center" spacing={1}>
                     <ImportExport/>
@@ -111,6 +102,23 @@ export const ExportModal = ({open, onClose}: ExportModalProps): JSX.Element => {
                     }}
                 >Save</Button>
             </DialogActions>
-        </Dialog>
+        </>
     );
 };
+
+export interface ExportModalProps {
+    open: boolean;
+    onClose: () => void;
+}
+
+export const ExportModal = ({open, onClose}: ExportModalProps): JSX.Element => (
+    <Dialog
+        open={open}
+        onClose={onClose}
+        maxWidth="md"
+        fullWidth
+        keepMounted={false}
+    >
+        <ExportModalContent onClose={onClose}/>
+    </Dialog>
+);
