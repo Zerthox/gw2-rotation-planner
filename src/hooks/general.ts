@@ -55,7 +55,7 @@ export const useCooldown = (cooldown: number): [boolean, () => void] => {
     const timeout = useRef<number>(null);
 
     const trigger = useCallback(() => {
-        if (timeout.current) {
+        if (typeof timeout.current === "number") {
             window.clearTimeout(timeout.current);
         }
         setActive(true);
@@ -63,7 +63,7 @@ export const useCooldown = (cooldown: number): [boolean, () => void] => {
             setActive(false);
             timeout.current = null;
         }, cooldown);
-    }, [cooldown, setActive, timeout]);
+    }, [cooldown, setActive]);
 
     return [active, trigger];
 };
