@@ -3,9 +3,11 @@ import {Menu, MenuItem, MenuItemProps, ListItemText, ListItemIcon, Typography} f
 import {SystemCssProperties} from "@mui/system";
 
 export interface ContextMenuItem {
+    key?: React.Key;
     text: string;
     icon?: React.ReactNode;
     disabled?: boolean;
+    close?: boolean;
     color?: SystemCssProperties["color"];
     action?: () => void;
     itemProps?: MenuItemProps<"a">;
@@ -50,16 +52,20 @@ export const ContextMenu = ({title, children, items = []}: ContextMenuProps): JS
                     </MenuItem>
                 ) : null}
                 {filteredItems
-                    .map(({text, icon, disabled, color, action, itemProps = {}}, i) => (
+                    .map(({key, text, icon, disabled, close = true, color, action, itemProps = {}}, i) => (
                         <MenuItem
                             {...itemProps}
-                            key={i}
+                            key={key ?? i}
                             component="a"
                             disabled={disabled}
-                            onClick={action ? () => {
-                                setContextMenu(null);
-                                action();
-                            } : () => setContextMenu(null)}
+                            onClick={() => {
+                                if (action) {
+                                    action();
+                                }
+                                if (close) {
+                                    setContextMenu(null);
+                                }
+                            }}
                         >
                             {itemProps.children ?? (
                                 <>

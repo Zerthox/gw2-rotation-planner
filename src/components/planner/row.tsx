@@ -31,35 +31,41 @@ export interface RowContextMenuProps extends RowActions {
 export const RowContextMenu = ({children, isFirst, isLast, isEmpty, onDuplicate, onMove, onCopy, onClear, onDelete}: RowContextMenuProps): JSX.Element => (
     <ContextMenu items={[
         {
+            key: "duplicate",
             text: "Duplicate Section",
             icon: <PlusOne/>,
             action: () => onDuplicate()
         },
         {
+            key: "up",
             text: "Move Up",
             icon: <ArrowUpward/>,
             disabled: isFirst,
             action: () => onMove(true)
         },
         {
+            key: "down",
             text: "Move Down",
             icon: <ArrowDownward/>,
             disabled: isLast,
             action: () => onMove(false)
         },
         {
+            key: "copy",
             text: "Copy Chat Message",
             icon: <Message/>,
             disabled: isEmpty,
             action: () => onCopy()
         },
         {
+            key: "clear",
             text: "Clear Section",
             icon: <Clear/>,
             disabled: isEmpty,
             action: () => onClear()
         },
         {
+            key: "delete",
             text: "Delete Section",
             icon: <Delete/>,
             color: "error.main",

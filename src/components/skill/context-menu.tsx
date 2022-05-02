@@ -18,11 +18,13 @@ export interface SkillContextMenuProps {
 export const SkillContextMenu = ({skill, isCommon, searchValue, children, onDuplicate, onDelete}: SkillContextMenuProps): JSX.Element => (
     <ContextMenu items={[
         onDuplicate ? {
+            key: "duplicate",
             text: "Duplicate Skill",
             icon: <PlusOne/>,
             action: () => onDuplicate()
         } : null,
         searchValue ? {
+            key: "wiki",
             text: "Open Wiki",
             icon: <OpenInNew/>,
             itemProps: {
@@ -34,6 +36,7 @@ export const SkillContextMenu = ({skill, isCommon, searchValue, children, onDupl
         } : null,
         ...!isCommon ? [
             {
+                key: "api",
                 text: "Open API",
                 icon: <DataObject/>,
                 itemProps: {
@@ -43,17 +46,20 @@ export const SkillContextMenu = ({skill, isCommon, searchValue, children, onDupl
                 }
             },
             {
+                key: "id",
                 text: "Copy Skill ID",
                 icon: <Fingerprint/>,
                 action: () => copyToClipboard(skill.toString())
             },
             typeof searchValue === "string" ? {
+                key: "chatcode",
                 text: "Copy Chatcode",
                 icon: <DataArray/>,
                 action: () => copyToClipboard(searchValue)
             } : null
         ] : [],
         onDelete ? {
+            key: "delete",
             action: () => onDelete(),
             text: "Delete Skill",
             icon: <Delete/>,
