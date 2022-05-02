@@ -44,8 +44,7 @@ const groups = [
     }
 ];
 
-export interface SettingsDrawerProps {
-    open: boolean;
+export interface SettingsContentProps {
     onClose: () => void;
 }
 
@@ -53,73 +52,87 @@ const iconProps: SxProps = {
     marginRight: 1
 };
 
-export const SettingsDrawer = ({open, onClose}: SettingsDrawerProps): JSX.Element => {
+export const SettingsContent = ({onClose}: SettingsContentProps): JSX.Element => {
     const dispatch = useDispatch();
     const theme = useTheme();
     const keybinds = useKeybinds();
 
     return (
-        <Drawer anchor="right" open={open} onClose={() => onClose()}>
-            <Stack direction="column">
-                <Stack direction="row" alignItems="center" spacing={1} padding={2}>
-                    <Typography variant="h5">User Settings</Typography>
-                    <Box flexGrow={1}/>
-                    <IconButton onClick={() => onClose()}>
-                        <Close/>
-                    </IconButton>
-                </Stack>
-                <Divider/>
-                <Box padding={2}>
-                    <Group title="Theme" marginBottom={3}>
-                        <ToggleButtonGroup
-                            exclusive
-                            value={theme}
-                            onChange={(_, value) => dispatch(setTheme(value))}
-                        >
-                            <ToggleButton value={Theme.Dark}>
-                                <DarkMode sx={iconProps}/>
-                                Dark
-                            </ToggleButton>
-                            <ToggleButton value={Theme.Light}>
-                                <LightMode sx={iconProps}/>
-                                Light
-                            </ToggleButton>
-                        </ToggleButtonGroup>
-                    </Group>
-                    <Group title="Keybinds">
-                        {groups.map((group, i) => (
-                            <Box
-                                key={i}
-                                display="grid"
-                                gridTemplateColumns="repeat(3, 1fr)"
-                                gap={1}
-                                marginY={2}
-                            >
-                                {Object.entries(group).map(([slot, label]) => (
-                                    <TextField
-                                        key={slot}
-                                        variant="standard"
-                                        label={label}
-                                        placeholder="Key name"
-                                        value={keybinds[slot]}
-                                        onChange={({target}) => dispatch(setKeybinds({[slot]: target.value}))}
-                                        sx={{
-                                            margin: 0.5,
-                                            flexGrow: 1
-                                        }}
-                                    />
-                                ))}
-                            </Box>
-                        ))}
-                        <Button
-                            variant="outlined"
-                            onClick={() => dispatch(setKeybinds(defaultKeybinds))}
-                        >Reset Keybinds</Button>
-                    </Group>
-                    <Box>
-                    </Box>
-                </Box>
+        <Stack direction="column">
+            <Stack direction="row" alignItems="center" spacing={1} padding={2}>
+                <Typography variant="h5">User Settings</Typography>
+                <Box flexGrow={1}/>
+                <IconButton onClick={() => onClose()}>
+                    <Close/>
+                </IconButton>
             </Stack>
-        </Drawer>
+            <Divider/>
+            <Box padding={2}>
+                <Group title="Theme" marginBottom={3}>
+                    <ToggleButtonGroup
+                        exclusive
+                        value={theme}
+                        onChange={(_, value) => dispatch(setTheme(value))}
+                    >
+                        <ToggleButton value={Theme.Dark}>
+                            <DarkMode sx={iconProps}/>
+                            Dark
+                        </ToggleButton>
+                        <ToggleButton value={Theme.Light}>
+                            <LightMode sx={iconProps}/>
+                            Light
+                        </ToggleButton>
+                    </ToggleButtonGroup>
+                </Group>
+                <Group title="Keybinds">
+                    {groups.map((group, i) => (
+                        <Box
+                            key={i}
+                            display="grid"
+                            gridTemplateColumns="repeat(3, 1fr)"
+                            gap={1}
+                            marginY={2}
+                        >
+                            {Object.entries(group).map(([slot, label]) => (
+                                <TextField
+                                    key={slot}
+                                    variant="standard"
+                                    label={label}
+                                    placeholder="Key name"
+                                    value={keybinds[slot]}
+                                    onChange={({target}) => dispatch(setKeybinds({[slot]: target.value}))}
+                                    sx={{
+                                        margin: 0.5,
+                                        flexGrow: 1
+                                    }}
+                                />
+                            ))}
+                        </Box>
+                    ))}
+                    <Button
+                        variant="outlined"
+                        onClick={() => dispatch(setKeybinds(defaultKeybinds))}
+                    >Reset Keybinds</Button>
+                </Group>
+                <Box>
+                </Box>
+            </Box>
+        </Stack>
     );
 };
+
+export interface SettingsDrawerProps {
+    open: boolean;
+    onClose: () => void;
+}
+
+export const SettingsDrawer = ({open, onClose}: SettingsDrawerProps): JSX.Element => (
+    <Drawer
+        anchor="right"
+        open={open}
+        onClose={() => onClose()}
+        keepMounted={false}
+    >
+        <SettingsContent onClose={onClose}/>
+    </Drawer>
+);
