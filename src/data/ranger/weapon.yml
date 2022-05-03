@@ -1,7 +1,6 @@
-# TODO: unleashed ambush skills
-
 Axe:
   - 12466 # Ricochet
+  - 63129 # Sundering Volley
   - 12480 # Splitblade
   - 12490 # Winter's Bite
   - 12638 # Path of Scars
@@ -21,6 +20,7 @@ Greatsword:
   - 12474 # Slash
   - 12487 # Slice
   - 12488 # Enduring Swing
+  - 63350 # Savage Slash
   - 12525 # Maul
   - 46629 # Maul
   - 12521 # Swoop
@@ -30,6 +30,7 @@ Greatsword:
 
 Longbow:
   - 12510 # Long Range Shot
+  - 63225 # Multishot
   - 12509 # Rapid Fire
   - 12573 # Hunter's Shot
   - 12511 # Point-Blank Shot
@@ -37,14 +38,15 @@ Longbow:
 
 Shortbow:
   - 12470 # Crossfire
+  - 63326 # Toxic Shot
   - 12468 # Poison Volley
   - 12517 # Quick Shot
   - 12507 # Crippling Shot
   - 12508 # Concussion Shot
 
-
 Sword:
   - 12471 # Slash
+  - 63336 # Deft Strike
   - 12472 # Crippling Thrust
   - 12473 # Precision Swipe
   - 12482 # Monarch's Leap
@@ -70,16 +72,22 @@ Hammer:
   - 63118 # Hammer Strike
   - 63222 # Hammer Slam
   - 63337 # Heavy Smash
+  - 63438 # Relentless Whirl
   - 63366 # Wild Swing
+  - 63335 # Unleashed Wild Swing
   - 63075 # Overbearing Smash
+  - 63197 # Unleashed Overbearing Smash
   - 63073 # Savage Shock Wave
+  - 63131 # Unleashed Savage Shock Wave
   - 63330 # Thump
+  - 63208 # Unleashed Thump
 
 # underwater
 Spear:
   - 12553 # Stab
   - 12555 # Jab
   - 12556 # Toxic Strike
+  - 63065 # Vicious Pike
   - 12559 # Swirling Strike
   - 12557 # Surging Maw
   - 12561 # Counterstrike
@@ -88,6 +96,7 @@ Spear:
 
 Harpoon Gun:
   - 12526 # Splinter Shot
+  - 63301 # Jagged Fan
   - 12529 # Coral Shot
   - 12528 # Feeding Frenzy
   - 12527 # Mercy Shot
