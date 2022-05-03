@@ -1,4 +1,5 @@
-import React, {useRef, useCallback} from "react";
+import React, {useRef, useCallback, useState} from "react";
+import {css} from "@emotion/css";
 import {Stack, Card} from "@mui/material";
 import {Active, DndContext, DragOverEvent, DragOverlay, DragStartEvent} from "@dnd-kit/core";
 import {useDispatch, batch} from "react-redux";
@@ -7,10 +8,9 @@ import {ProfessionSelect} from "./prof-select";
 import {Skillbar} from "./skillbar";
 import {Timeline} from "./timeline";
 import {SkillIcon} from "../skill";
-import {OverData, SkillData} from ".";
-import {DragId, DragType, createDragId, isa, useDragging, setDragging} from "../../store/drag";
+import {DragId, DragType, createDragId, isa, OverData, SkillData} from "../../util/drag";
 import {deleteRowSkill, insertRowSkill, insertRowWithStates, moveRowSkill} from "../../store/timeline";
-import {useSkillStates, takeSkillItem, createSkillState} from "../../store/build";
+import {takeSkillItem, createSkillState} from "../../store/build";
 import {useKeyPressed} from "../../hooks/general";
 import {LoadParams} from "../../hooks/load";
 
@@ -27,9 +27,7 @@ export interface PlannerProps {
 export const Planner = ({load}: PlannerProps): JSX.Element => {
     const dispatch = useDispatch();
 
-    const skills = useSkillStates();
-    const dragging = useDragging();
-
+    const [dragging, setDragging] = useState<number>(null);
     const parent = useRef<DragId>(null);
     const fromSkillbar = useRef(false);
     const duplicated = useRef(false);
@@ -44,7 +42,7 @@ export const Planner = ({load}: PlannerProps): JSX.Element => {
         }
     }, [dispatch]);
 
-    const onDragStart = useCallback(({active}: DragStartEvent) => {
+    const onDragStart = useCallback(({active}: DragStartEvent) => batch(() => {
         const activeData = (active.data.current ?? {}) as SkillData;
 
         parent.current = null;
@@ -60,10 +58,10 @@ export const Planner = ({load}: PlannerProps): JSX.Element => {
             }));
         }
 
-        dispatch(setDragging({dragId: active.id, skill: activeData.skill}));
-    }, [dispatch, pressed]);
+        setDragging(activeData.skill);
+    }), [dispatch, pressed]);
 
-    const onDragOver = useCallback(({active, over}: DragOverEvent) => {
+    const onDragOver = useCallback(({active, over}: DragOverEvent) => batch(() => {
         if (over) {
             const activeData = (active.data.current ?? {}) as SkillData;
             const overData = (over.data.current ?? {}) as OverData;
@@ -72,19 +70,19 @@ export const Planner = ({load}: PlannerProps): JSX.Element => {
                 if (parent.current !== overData.parentId) {
                     if (!parent.current && fromSkillbar.current) {
                         // moved from skillbar to row
-                        const skill = skills.flat().find((skill) => skill.dragId === active.id);
 
-                        batch(() => {
-                            // refresh skillbar items
-                            dispatch(takeSkillItem(active.id));
+                        // refresh skillbar items
+                        dispatch(takeSkillItem(active.id));
 
-                            // insert old skill into row
-                            dispatch(insertRowSkill({
-                                rowId: overData.parentId,
-                                index: overData.index,
-                                skill
-                            }));
-                        });
+                        // insert old skill into row
+                        dispatch(insertRowSkill({
+                            rowId: overData.parentId,
+                            index: overData.index,
+                            skill: {
+                                dragId: active.id,
+                                skillId: activeData.skill
+                            }
+                        }));
                     } else if (isa(DragType.Row, parent.current)) {
                         // moved between rows
                         dispatch(moveRowSkill({
@@ -105,10 +103,10 @@ export const Planner = ({load}: PlannerProps): JSX.Element => {
                 }
             }
         }
-    }, [dispatch, skills]);
+    }), [dispatch]);
 
-    const onDragEnd = useCallback(({active, over}) => {
-        dispatch(setDragging(null));
+    const onDragEnd = useCallback(({active, over}) => batch(() => {
+        setDragging(null);
 
         if (over) {
             const activeData = (active.data.current ?? {}) as SkillData;
@@ -155,14 +153,12 @@ export const Planner = ({load}: PlannerProps): JSX.Element => {
 
         // fallback to cancelling
         cancelDrag(active);
-    }, [dispatch, cancelDrag]);
+    }), [dispatch, cancelDrag]);
 
-    const onDragCancel = useCallback(({active}) => {
-        batch(() => {
-            dispatch(setDragging(null));
-            cancelDrag(active);
-        });
-    }, [dispatch, cancelDrag]);
+    const onDragCancel = useCallback(({active}) => batch(() => {
+        setDragging(null);
+        cancelDrag(active);
+    }), [cancelDrag]);
 
     return (
         <DndContext
@@ -193,8 +189,8 @@ export const Planner = ({load}: PlannerProps): JSX.Element => {
                 <Timeline load={load} addDragId={ADD_ID} flex="1" maxHeight="100%"/>
             </Stack>
             <DragOverlay>
-                {typeof dragging.skill === "number" ? (
-                    <SkillIcon skill={dragging.skill}/>
+                {typeof dragging === "number" ? (
+                    <SkillIcon skill={dragging} className={css`cursor: grabbing;`}/>
                 ) : null}
             </DragOverlay>
         </DndContext>

@@ -6,8 +6,7 @@ import {useDispatch} from "react-redux";
 import {Row} from "./row";
 import {useRows, insertRow} from "../../store/timeline";
 import {LoadParams, useLoadTimeline} from "../../hooks/load";
-import {DragId} from "../../store/drag";
-import {OverData} from ".";
+import {DragId, OverData} from "../../util/drag";
 
 export interface AddButtonProps {
     dragId: DragId;

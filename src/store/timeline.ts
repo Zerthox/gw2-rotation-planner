@@ -1,8 +1,8 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {useSelector} from "react-redux";
 import {StoreState} from ".";
-import {createDragId, DragId, DragType} from "./drag";
 import {createSkillState, SkillState} from "./build";
+import {createDragId, DragId, DragType} from "../util/drag";
 
 export interface Row {
     name: string;

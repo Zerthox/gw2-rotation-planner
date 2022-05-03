@@ -1,8 +1,8 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {useSelector} from "react-redux";
 import {StoreState} from ".";
-import {createDragId, DragId, DragType} from "./drag";
 import {Profession, SkillSection} from "../data";
+import {createDragId, DragId, DragType} from "../util/drag";
 
 export interface SkillState {
     dragId: DragId;
