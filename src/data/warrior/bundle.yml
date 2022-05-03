@@ -2,10 +2,10 @@
 # FIXME: dragon trigger skills are not exposed by api
 
 Rampage:
-  - 14556 # Throw Boulder
+  - 14485 # Smash
   - 14486 # Bash
   - 14487 # Uppercut
-  - 14489 # Dash
-  - 14485 # Smash
   - 14488 # Kick
+  - 14489 # Dash
+  - 14556 # Throw Boulder
   - 14490 # Seismic Leap

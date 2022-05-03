@@ -1,11 +1,10 @@
 # kits
 Med Kit:
-  - 50444 # Infusion Bomb
-  - 49082 # Vital Burst
-  - 49045 # Cleansing Field
-  - 29547 # Bandage Blast
   - 30521 # Med Blaster
-  - 58090 # Med Blaster
+  - 29547 # Bandage Blast
+  - 49045 # Cleansing Field
+  - 49082 # Vital Burst
+  - 50444 # Infusion Bomb
   - 6109 # Stow Med Kit
 
 Grenade Kit:
@@ -17,69 +16,67 @@ Grenade Kit:
   - 6110 # Stow Grenade Kit
 
 Bomb Kit:
-  - 5939 # Glue Bomb
-  - 5824 # Smoke Bomb
-  - 5822 # Concussion Bomb
-  - 5823 # Fire Bomb
   - 5842 # Bomb
+  - 5823 # Fire Bomb
+  - 5822 # Concussion Bomb
+  - 5824 # Smoke Bomb
+  - 5939 # Glue Bomb
   - 6111 # Stow Bomb Kit
 
 Flamethrower:
-  - 6159 # Smoke Vent
-  - 5929 # Napalm
-  - 5930 # Air Blast
-  - 5931 # Flame Blast
   - 5928 # Flame Jet
+  - 5931 # Flame Blast
+  - 5930 # Air Blast
+  - 5929 # Napalm
+  - 6159 # Smoke Vent
+  - 6114 # Stow Flamethrower
 
 Elixir Gun:
-  - 5937 # Super Elixir
-  - 6102 # Super Elixir
-  - 5936 # Acid Bomb
-  - 5965 # Fumigate
-  - 5935 # Glob Shot
   - 5934 # Tranquilizer Dart
+  - 5935 # Glob Shot
+  - 5965 # Fumigate
+  - 5936 # Acid Bomb
+  - 5937 # Super Elixir
   - 6115 # Stow Elixir Gun
 
 Tool Kit:
-  - 5996 # Magnet
-  - 5998 # Gear Shield
-  - 5905 # Pry Bar
-  - 5995 # Box of Nails
-  - 6175 # Box of Piranhas
   - 5992 # Smack
   - 5993 # Whack
   - 5994 # Thwack
+  - 5995 # Box of Nails
+  - 5905 # Pry Bar
+  - 5998 # Gear Shield
+  - 5996 # Magnet
   - 6113 # Stow Tool Kit
 
 Elite Mortar Kit:
-  - 30032 # Elixir Shell
-  - 30121 # Flash Shell
-  - 30307 # Endothermic Shell
-  - 30885 # Poison Gas Shell
   - 30371 # Mortar Shot
+  - 30885 # Poison Gas Shell
+  - 30307 # Endothermic Shell
+  - 30121 # Flash Shell
+  - 30032 # Elixir Shell
 
 # elixir x transforms
 Rampage:
-  - 14490 # Seismic Leap
-  - 14556 # Throw Boulder
-  - 14489 # Dash
-  - 14488 # Kick
   - 14485 # Smash
   - 14486 # Bash
   - 14487 # Uppercut
+  - 14488 # Kick
+  - 14489 # Dash
+  - 14556 # Throw Boulder
+  - 14490 # Seismic Leap
 
 Tornado:
-  - 35304 # Dust Charge
-  - 35224 # Elemental Requiem
-  - 5754 # Debris Tornado
-  - 5753 # Dust Tornado
   - 5752 # Electrified Tornado
+  - 5753 # Dust Tornado
+  - 5754 # Debris Tornado
+  - 35224 # Elemental Requiem
+  - 35304 # Dust Charge
 
 Plague:
   - 10661 # Withering Plague
   - 10662 # Plague of Darkness
   - 10663 # Plague of Pestilence
-  - 10586 # Locked
 
 # photon forge
 Photon Forge:

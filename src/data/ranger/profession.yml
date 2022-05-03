@@ -67,9 +67,7 @@ Druid:
   - 31411 # Release Celestial Avatar
 
 Soulbeast:
-  - 42944 # Beastmode
-  - 43014 # Leave Beastmode
-
+  # TODO: sort by pet
   # merged pet
   - 44991 # Swoop
   - 42042 # Quickening Screech
@@ -121,11 +119,14 @@ Soulbeast:
   - 43375 # Prelude Lash
   - 40729 # Worldly Impact
 
-Untamed:
-  - 63147 # Unleash Ranger
-  - 63344 # Unleash Pet
+  - 42944 # Beastmode
+  - 43014 # Leave Beastmode
 
+Untamed:
   # unleashed pet
   - 63209 # Venomous Outburst
   - 63258 # Rending Vines
   - 63094 # Enveloping Haze
+
+  - 63147 # Unleash Ranger
+  - 63344 # Unleash Pet
