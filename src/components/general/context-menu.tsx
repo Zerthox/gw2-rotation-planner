@@ -13,13 +13,13 @@ export interface ContextMenuItem {
     itemProps?: MenuItemProps<"a">;
 }
 
-export interface ContextMenuProps {
+export interface ContextMenuProps extends Omit<React.ComponentProps<"span">, "title"> {
     title?: React.ReactNode;
     children: React.ReactNode;
     items?: ContextMenuItem[];
 }
 
-export const ContextMenu = ({title, children, items = []}: ContextMenuProps): JSX.Element => {
+export const ContextMenu = ({title, children, items = [], ...props}: ContextMenuProps): JSX.Element => {
     const [contextMenu, setContextMenu] = useState<{top: number; left: number}>(null);
 
     const onContextMenu = useCallback((event: React.MouseEvent<HTMLSpanElement>) => {
@@ -34,7 +34,7 @@ export const ContextMenu = ({title, children, items = []}: ContextMenuProps): JS
     const filteredItems = items.filter((props) => props);
 
     return (
-        <span onContextMenu={filteredItems.length > 0 ? onContextMenu : (event) => event.preventDefault()}>
+        <span {...props} onContextMenu={filteredItems.length > 0 ? onContextMenu : (event) => event.preventDefault()}>
             {children}
             <Menu
                 open={contextMenu !== null}
