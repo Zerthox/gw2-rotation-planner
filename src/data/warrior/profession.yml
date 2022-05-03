@@ -2,27 +2,17 @@
 
 Burst:
   - 14443 # Whirling Strike
-  - 14549 # Whirling Strike
-  - 14544 # Forceful Shot
   - 14469 # Forceful Shot
   - 14375 # Arcing Slice
-  - 14545 # Arcing Slice
   - 14367 # Flurry
-  - 14428 # Flurry
   - 14353 # Eviscerate
-  - 14422 # Eviscerate
   - 14414 # Skull Crack
-  - 14425 # Skull Crack
   - 14506 # Combustive Shot
-  - 14520 # Combustive Shot
   - 14396 # Kill Shot
-  - 14473 # Kill Shot
   - 14387 # Earthshaker
-  - 14512 # Earthshaker
 
 Berserker:
   - 30435 # Berserk
-  - 30185 # Berserk
   - 29644 # Gun Flame
   - 29679 # Skull Grinder
   - 30989 # Burning Shackles
@@ -41,7 +31,6 @@ Spellbreaker:
   - 40601 # Earthshaker
   - 42803 # Combustive Shot
   - 41110 # Skull Crack
-  - 42041 # Kill Shot
   - 14474 # Kill Shot
   - 42494 # Flurry
   - 41746 # Whirling Strike

@@ -1,13 +1,13 @@
 Shatter:
-  - 10192 # Distortion
-  - 10287 # Diversion
-  - 10190 # Cry of Frustration
   - 10191 # Mind Wrack
-  - 49068 # Mind Wrack
+  # - 49068 # Mind Wrack (Ammo)
+  - 10190 # Cry of Frustration
+  - 10287 # Diversion
+  - 10192 # Distortion
 
 Chronomancer:
   - 56930 # Split Second
-  - 56925 # Split Second
+  # - 56925 # Split Second (Ammo)
   - 56928 # Rewinder
   - 56873 # Time Sink
   - 29830 # Continuum Split
@@ -15,7 +15,7 @@ Chronomancer:
 
 Virtuoso:
   - 62617 # Bladesong Harmony
-  - 62586 # Bladesong Harmony
+  # - 62586 # Bladesong Harmony (Ammo)
   - 62616 # Bladesong Sorrow
   - 62602 # Bladesong Dissonance
   - 62597 # Bladeturn Requiem
