@@ -9,7 +9,7 @@ import {Timeline} from "./timeline";
 import {SkillIcon} from "../skill";
 import {OverData, SkillData} from ".";
 import {DragId, DragType, createDragId, isa, useDragging, setDragging} from "../../store/drag";
-import {deleteRowSkill, insertRowSkill, moveRowSkill} from "../../store/timeline";
+import {deleteRowSkill, insertRowSkill, insertRowWithStates, moveRowSkill} from "../../store/timeline";
 import {useSkillStates, takeSkillItem, createSkillState} from "../../store/build";
 import {useKeyPressed} from "../../hooks/general";
 import {LoadParams} from "../../hooks/load";
@@ -17,6 +17,8 @@ import {LoadParams} from "../../hooks/load";
 const SKILLBAR_ID = createDragId(DragType.Skillbar);
 
 const TRASH_ID = createDragId(DragType.Trash);
+
+const ADD_ID = createDragId(DragType.Add);
 
 export interface PlannerProps {
     load?: LoadParams;
@@ -72,15 +74,17 @@ export const Planner = ({load}: PlannerProps): JSX.Element => {
                         // moved from skillbar to row
                         const skill = skills.flat().find((skill) => skill.dragId === active.id);
 
-                        // refresh skillbar items
-                        dispatch(takeSkillItem(active.id));
+                        batch(() => {
+                            // refresh skillbar items
+                            dispatch(takeSkillItem(active.id));
 
-                        // insert old skill into row
-                        dispatch(insertRowSkill({
-                            rowId: overData.parentId,
-                            index: overData.index,
-                            skill
-                        }));
+                            // insert old skill into row
+                            dispatch(insertRowSkill({
+                                rowId: overData.parentId,
+                                index: overData.index,
+                                skill
+                            }));
+                        });
                     } else if (isa(DragType.Row, parent.current)) {
                         // moved between rows
                         dispatch(moveRowSkill({
@@ -107,17 +111,42 @@ export const Planner = ({load}: PlannerProps): JSX.Element => {
         dispatch(setDragging(null));
 
         if (over) {
+            const activeData = (active.data.current ?? {}) as SkillData;
             const overData = (over.data.current ?? {}) as OverData;
 
             if (isa(DragType.Trash, over.id)) {
-                // moved to trash, delete row entry if necessary
+                // moved to trash
                 if (isa(DragType.Row, parent.current)) {
+                    // delete row entry
                     dispatch(deleteRowSkill({
                         rowId: parent.current,
                         skillId: active.id
                     }));
                     return;
                 }
+            } else if (isa(DragType.Add, over.id)) {
+                // dropped over add button
+                batch(() => {
+                    if (isa(DragType.Row, parent.current)) {
+                        // remove skill from row
+                        dispatch(deleteRowSkill({
+                            rowId: parent.current,
+                            skillId: active.id
+                        }));
+                    } else {
+                        // remove skill from skillbar
+                        dispatch(takeSkillItem(active.id));
+                    }
+
+                    // insert new row with skill
+                    dispatch(insertRowWithStates({row: {
+                        skills: [{
+                            dragId: active.id,
+                            skillId: activeData.skill
+                        }]
+                    }}));
+                });
+                return;
             } else if (isa(DragType.Row, overData.parentId)) {
                 // moved to row, everything is done already
                 return;
@@ -161,7 +190,7 @@ export const Planner = ({load}: PlannerProps): JSX.Element => {
                         <Skillbar dragId={SKILLBAR_ID}/>
                     </Stack>
                 </Card>
-                <Timeline load={load} flex="1" maxHeight="100%"/>
+                <Timeline load={load} addDragId={ADD_ID} flex="1" maxHeight="100%"/>
             </Stack>
             <DragOverlay>
                 {typeof dragging.skill === "number" ? (
