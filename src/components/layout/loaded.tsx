@@ -5,19 +5,21 @@ import {Header} from "./header";
 import {themes} from "../../themes";
 import {useTheme} from "../../store/settings";
 
-export interface ContentProps {
+export interface LoadedProps {
     title?: string;
     children: React.ReactNode;
     header?: React.ReactNode;
+    settings?: boolean;
+    help?: React.ReactNode;
 }
 
-export const Content = ({title, children, header}: ContentProps): JSX.Element => {
+export const Loaded = ({title, children, header, settings, help}: LoadedProps): JSX.Element => {
     const theme = useTheme();
 
     return (
         <Providers theme={themes[theme]}>
             <Stack direction="column" height="100vh">
-                <Header title={title}>
+                <Header title={title} settings={settings} help={help}>
                     {header}
                 </Header>
                 <Box flex="1" minHeight={0}>

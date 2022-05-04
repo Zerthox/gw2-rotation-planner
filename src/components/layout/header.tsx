@@ -1,19 +1,19 @@
-import React, {useState} from "react";
+import React from "react";
 import {AppBar, Box, Stack, Typography} from "@mui/material";
-import {GitHub, Settings} from "@mui/icons-material";
-import {IconButton} from "../general";
-import {SettingsDrawer} from "./settings";
+import {GitHub, Help, Settings} from "@mui/icons-material";
+import {IconButton, DrawerWithButton} from "../general";
+import {SettingsContent} from "./settings";
 import {useSiteMeta} from "../../hooks/site";
 
 export interface HeaderProps {
     title?: string;
     children?: React.ReactNode;
+    settings?: boolean;
+    help?: React.ReactNode;
 }
 
-export const Header = ({title, children}: HeaderProps): JSX.Element => {
+export const Header = ({title, children, settings = true, help}: HeaderProps): JSX.Element => {
     const siteMeta = useSiteMeta();
-
-    const [open, setOpen] = useState(false);
 
     return (
         <AppBar position="static">
@@ -29,6 +29,15 @@ export const Header = ({title, children}: HeaderProps): JSX.Element => {
                 {children}
                 <Box flexGrow={1}/>
                 <Stack direction="row" alignItems="center" spacing={2}>
+                    {help ? (
+                        <DrawerWithButton title="Help" anchor="right" button={
+                            <IconButton title="Open Help">
+                                <Help/>
+                            </IconButton>
+                        }>
+                            {help}
+                        </DrawerWithButton>
+                    ) : null}
                     <IconButton
                         title="View Source"
                         href={siteMeta.source}
@@ -37,15 +46,17 @@ export const Header = ({title, children}: HeaderProps): JSX.Element => {
                     >
                         <GitHub/>
                     </IconButton>
-                    <IconButton title="Open Settings" onClick={() => setOpen(true)}>
-                        <Settings/>
-                    </IconButton>
+                    {settings ? (
+                        <DrawerWithButton title="User Settings" anchor="right" button={
+                            <IconButton title="Open Settings">
+                                <Settings/>
+                            </IconButton>
+                        }>
+                            <SettingsContent/>
+                        </DrawerWithButton>
+                    ) : null}
                 </Stack>
             </Stack>
-            <SettingsDrawer
-                open={open}
-                onClose={() => setOpen(false)}
-            />
         </AppBar>
     );
 };

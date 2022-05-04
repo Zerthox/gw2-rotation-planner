@@ -1,4 +1,4 @@
-export * from "./content";
+export * from "./loaded";
 export * from "./header";
 export * from "./layout";
 export * from "./loading";

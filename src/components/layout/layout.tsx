@@ -3,7 +3,7 @@ import {Provider as ReduxProvider} from "react-redux";
 import {PersistGate} from "redux-persist/integration/react";
 import {SEO} from "./seo";
 import {Loading} from "./loading";
-import {Content} from "./content";
+import {Loaded} from "./loaded";
 import {Store, Persistor} from "../../store";
 import {useSiteMeta} from "../../hooks/site";
 
@@ -16,9 +16,11 @@ export interface LayoutProps {
     title?: string;
     children: React.ReactNode;
     header?: React.ReactNode;
+    settings?: boolean;
+    help?: React.ReactNode;
 }
 
-export const Layout = ({title, children, header}: LayoutProps): JSX.Element => {
+export const Layout = ({title, children, header, settings, help}: LayoutProps): JSX.Element => {
     const siteMeta = useSiteMeta();
     const pageTitle = title ?? siteMeta.title;
 
@@ -30,7 +32,7 @@ export const Layout = ({title, children, header}: LayoutProps): JSX.Element => {
                 author={siteMeta.author}
             />
             <PersistGate persistor={Persistor} loading={<Loading/>}>
-                <Content title={pageTitle} header={header}>{children}</Content>
+                <Loaded title={pageTitle} header={header} settings={settings} help={help}>{children}</Loaded>
             </PersistGate>
         </ReduxProvider>
     );
