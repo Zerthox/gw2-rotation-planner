@@ -1,7 +1,7 @@
 import React from "react";
 import {AppBar, Box, Stack, Typography} from "@mui/material";
 import {GitHub, Help, Settings} from "@mui/icons-material";
-import {IconButton, DrawerWithButton} from "../general";
+import {IconButton, DrawerWithButton, AnchorWithRef} from "../general";
 import {SettingsContent} from "./settings";
 import {useSiteMeta} from "../../hooks/site";
 
@@ -39,10 +39,10 @@ export const Header = ({title, children, settings = true, help}: HeaderProps): J
                         </DrawerWithButton>
                     ) : null}
                     <IconButton
+                        component={AnchorWithRef}
                         title="View Source"
-                        href={siteMeta.source}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        to={siteMeta.source}
+                        newTab
                     >
                         <GitHub/>
                     </IconButton>

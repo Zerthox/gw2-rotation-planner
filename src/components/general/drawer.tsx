@@ -26,7 +26,13 @@ export const Drawer = ({open, onClose, title, children, PaperProps, ...props}: D
         }}
     >
         <Stack direction="column">
-            <Stack direction="row" alignItems="center" spacing={1} padding={2}>
+            <Stack
+                direction="row"
+                alignItems="center"
+                spacing={1}
+                paddingY={2}
+                paddingX={3}
+            >
                 <Typography variant="h5">{title}</Typography>
                 <Box flexGrow={1}/>
                 <IconButton onClick={() => onClose({}, "escapeKeyDown")}>
@@ -34,7 +40,7 @@ export const Drawer = ({open, onClose, title, children, PaperProps, ...props}: D
                 </IconButton>
             </Stack>
             <Divider/>
-            <Box padding={2}>
+            <Box padding={3}>
                 {children}
             </Box>
         </Stack>
