@@ -1,4 +1,4 @@
-# FIXME: raid stolen skills are not exposed by api
+# FIXME: raid stolen skills are not exposed by api, add to @discretize/gw2-ui-new
 
 Thief:
   - 13014 # Steal
