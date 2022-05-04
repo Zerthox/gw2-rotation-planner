@@ -58,7 +58,7 @@ export const HelpContent = (): JSX.Element => {
             <Typography variant="body1" marginY={1}>
                 Loading Gists requires the Gist ID, which can be found in the URL of a Gist.
                 You can specify an optional filename in order to load a specific file in a Gist consisting of multiple JSON files.
-                The filename is given without the <Monospace>.json</Monospace> file extension,
+                The filename is given without the <Monospace>.json</Monospace> file extension.
                 When no filename is specified, the first JSON file found will be loaded.
                 <Monospace block>{path}?gist=abcdefg</Monospace>
                 <Monospace block>{path}?gist=abcdefg&amp;file=myfile</Monospace>
