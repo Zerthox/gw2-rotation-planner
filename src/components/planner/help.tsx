@@ -39,7 +39,7 @@ export const HelpContent = (): JSX.Element => {
                 All skills will be listed below organized within categories.
                 Drag a skill from there to a rotation section or over the <ButtonLabel>Add Section</ButtonLabel> button.
                 You can find additional useful functionality in context menus, which can be brought up by right clicking a skill or rotation section.
-                Holding <Monospace block>Shift</Monospace> or <Monospace>Control</Monospace> while grabbing a skill to drag it somewhere duplicates it automatically.
+                Holding <Monospace>Shift</Monospace> or <Monospace>Control</Monospace> while grabbing a skill to drag it somewhere duplicates it automatically.
             </Typography>
             <Typography variant="h6" marginTop={2}>Sharing rotations</Typography>
             <Typography variant="body1" marginY={1}>
