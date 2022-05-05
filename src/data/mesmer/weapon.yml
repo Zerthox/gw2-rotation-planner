@@ -18,6 +18,8 @@ Pistol:
 Scepter:
   - 10289 # Ether Bolt
   - 10290 # Ether Blast
+  - 10291 # Ether Clone
+  - 42304 # Ether Barrage
   - 10276 # Illusionary Counter
   - 10314 # Counterspell
   - 10168 # Confusing Images
@@ -31,14 +33,15 @@ Staff:
   - 10169 # Chaos Storm
 
 Sword:
-  - 10334 # Blurred Frenzy
-  - 62568 # Blade Leap
-  - 62675 # Returning Edge
-  - 10173 # Illusionary Leap
-  - 10337 # Swap
   - 10170 # Mind Slash
   - 10171 # Mind Gash
   - 10172 # Mind Spike
+  - 45230 # Mirage Thrust
+  - 10334 # Blurred Frenzy
+  - 10173 # Illusionary Leap
+  - 10337 # Swap
+  - 62568 # Blade Leap
+  - 62675 # Returning Edge
   - 10280 # Illusionary Riposte
   - 10358 # Counter Blade
   - 10174 # Phantasmal Swordsman
@@ -56,6 +59,7 @@ Axe:
   - 44791 # Lacerating Chop
   - 44840 # Ethereal Chop
   - 41164 # Mirror Strikes
+  - 44321 # Imaginary Axes
   - 45243 # Lingering Thoughts
   - 43761 # Axes of Symmetry
 
@@ -68,8 +72,10 @@ Dagger:
 Spear:
   - 10315 # Stab
   - 10316 # Jab
+  - 44864 # Ambush Assault
   - 10317 # Evasive Strike
   - 10318 # Feigned Surge
+  # - 10322 # Feign
   - 10251 # Phantasmal Mariner
   - 10325 # Slipstream
   - 10255 # Vortex
