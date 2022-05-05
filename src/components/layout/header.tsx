@@ -7,12 +7,13 @@ import {useSiteMeta} from "../../hooks/site";
 
 export interface HeaderProps {
     title?: string;
+    titleDisplay?: React.ReactNode;
     children?: React.ReactNode;
     settings?: boolean;
     help?: React.ReactNode;
 }
 
-export const Header = ({title, children, settings = true, help}: HeaderProps): JSX.Element => {
+export const Header = ({title, titleDisplay, children, settings = true, help}: HeaderProps): JSX.Element => {
     const siteMeta = useSiteMeta();
 
     return (
@@ -23,9 +24,9 @@ export const Header = ({title, children, settings = true, help}: HeaderProps): J
                 spacing={2}
                 padding={2}
             >
-                {title ? (
-                    <Typography variant="h4">{title}</Typography>
-                ) : null}
+                <Typography variant="h4">
+                    {titleDisplay ?? title}
+                </Typography>
                 {children}
                 <Box flexGrow={1}/>
                 <Stack direction="row" alignItems="center" spacing={2}>
