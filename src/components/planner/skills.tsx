@@ -13,7 +13,6 @@ export interface SkillSectionProps {
     sx?: SxProps;
 }
 
-// TODO: display auto attack in first column?
 export const SkillSection = ({name, parentId, skills, sx}: SkillSectionProps): JSX.Element => {
     const [visible, setVisible] = useState(false);
 
@@ -37,12 +36,13 @@ export const SkillSection = ({name, parentId, skills, sx}: SkillSectionProps): J
                 <Box sx={{
                     display: "grid",
                     gridTemplateColumns: "repeat(5, 3em)",
+                    gridAutoFlow: "row dense",
                     gap: 0.5
                 }}>
-                    {visible ? skills.map(({dragId: id, skillId}, i) => (
+                    {visible ? skills.map(({dragId, skillId}, i) => (
                         <DraggableSkill
-                            key={id}
-                            dragId={id}
+                            key={dragId}
+                            dragId={dragId}
                             parentId={parentId}
                             index={i}
                             skill={skillId}
@@ -58,7 +58,7 @@ export interface SkillbarProps extends StackProps {
     dragId: DragId;
 }
 
-export const Skillbar = ({dragId, ...props}: SkillbarProps): JSX.Element => {
+export const SkillCatalog = ({dragId, ...props}: SkillbarProps): JSX.Element => {
     const sections = useSkillSections();
     const states = useSkillStates();
 

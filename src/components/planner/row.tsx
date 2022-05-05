@@ -4,7 +4,7 @@ import {ArrowUpward, ArrowDownward, Delete, PlusOne, Clear, Message} from "@mui/
 import {useDroppable} from "@dnd-kit/core";
 import {rectSortingStrategy, SortableContext} from "@dnd-kit/sortable";
 import {useDispatch} from "react-redux";
-import {IconButton, ContextMenu} from "../general";
+import {IconButton, ContextMenu, ContextMenuProps} from "../general";
 import {DraggableSkill} from "../skill";
 import {DragId, OverData} from "../../util/drag";
 import {useRow, useRowCount, deleteRow, moveRow, updateRowName, insertRowSkill, deleteRowSkill, insertRow, clearRowSkills} from "../../store/timeline";
@@ -23,12 +23,10 @@ export interface RowActions {
     onDelete: () => void;
 }
 
-export interface RowContextMenuProps extends RowActions {
-    children: React.ReactNode;
-}
+export type RowContextMenuProps = RowActions & ContextMenuProps;
 
-export const RowContextMenu = ({children, isFirst, isLast, isEmpty, onDuplicate, onMove, onCopy, onClear, onDelete}: RowContextMenuProps): JSX.Element => (
-    <ContextMenu items={[
+export const RowContextMenu = ({isFirst, isLast, isEmpty, onDuplicate, onMove, onCopy, onClear, onDelete, ...props}: RowContextMenuProps): JSX.Element => (
+    <ContextMenu {...props} items={[
         {
             key: "duplicate",
             text: "Duplicate Section",
@@ -70,7 +68,7 @@ export const RowContextMenu = ({children, isFirst, isLast, isEmpty, onDuplicate,
             color: "error.main",
             action: () => onDelete()
         }
-    ]}>{children}</ContextMenu>
+    ]}/>
 );
 
 export type RowButtonsProps = Omit<RowActions, "onDuplicate" | "onCopy">;

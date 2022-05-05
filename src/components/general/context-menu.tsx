@@ -1,5 +1,5 @@
 import React, {useCallback, useState} from "react";
-import {Menu, MenuItem, MenuItemProps, ListItemText, ListItemIcon, Typography} from "@mui/material";
+import {Box, BoxProps, Menu, MenuItem, MenuItemProps, ListItemText, ListItemIcon, Typography} from "@mui/material";
 import {SystemCssProperties} from "@mui/system";
 
 export interface ContextMenuItem {
@@ -13,7 +13,7 @@ export interface ContextMenuItem {
     itemProps?: MenuItemProps<"a">;
 }
 
-export interface ContextMenuProps extends Omit<React.ComponentProps<"span">, "title"> {
+export interface ContextMenuProps extends Omit<BoxProps<"span">, "title"> {
     title?: React.ReactNode;
     children: React.ReactNode;
     items?: ContextMenuItem[];
@@ -34,7 +34,11 @@ export const ContextMenu = ({title, children, items = [], ...props}: ContextMenu
     const filteredItems = items.filter((props) => props);
 
     return (
-        <span {...props} onContextMenu={filteredItems.length > 0 ? onContextMenu : (event) => event.preventDefault()}>
+        <Box
+            component="span"
+            {...props}
+            onContextMenu={filteredItems.length > 0 ? onContextMenu : (event) => event.preventDefault()}
+        >
             {children}
             <Menu
                 open={contextMenu !== null}
@@ -77,6 +81,6 @@ export const ContextMenu = ({title, children, items = [], ...props}: ContextMenu
                     ))
                 }
             </Menu>
-        </span>
+        </Box>
     );
 };

@@ -5,7 +5,7 @@ import {Active, DndContext, DragOverEvent, DragOverlay, DragStartEvent} from "@d
 import {useDispatch, batch} from "react-redux";
 import {Trash} from "./trash";
 import {ProfessionSelect} from "./prof-select";
-import {Skillbar} from "./skillbar";
+import {SkillCatalog} from "./skills";
 import {Timeline} from "./timeline";
 import {SkillIcon} from "../skill";
 import {DragId, DragType, createDragId, isa, OverData, SkillData} from "../../util/drag";
@@ -14,7 +14,7 @@ import {takeSkillItem, createSkillState} from "../../store/build";
 import {useKeyPressed} from "../../hooks/general";
 import {LoadParams} from "../../hooks/load";
 
-const SKILLBAR_ID = createDragId(DragType.Skillbar);
+const CATALOG_ID = createDragId(DragType.Skillbar);
 
 const TRASH_ID = createDragId(DragType.Trash);
 
@@ -183,7 +183,7 @@ export const Planner = ({load}: PlannerProps): JSX.Element => {
                     >
                         <ProfessionSelect sx={{flex: "none"}}/>
                         <Trash dragId={TRASH_ID} sx={{flex: "none"}}/>
-                        <Skillbar dragId={SKILLBAR_ID}/>
+                        <SkillCatalog dragId={CATALOG_ID}/>
                     </Stack>
                 </Card>
                 <Timeline load={load} addDragId={ADD_ID} flex="1" maxHeight="100%"/>

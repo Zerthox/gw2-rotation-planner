@@ -1,7 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import {css} from "@emotion/css";
-import {Stack} from "@mui/material";
+import {Stack, SxProps} from "@mui/material";
 import {Skill, CustomComponent, useSkill} from "@discretize/gw2-ui-new";
 import {useSortable} from "@dnd-kit/sortable";
 import {SkillContextMenu} from "./context-menu";
@@ -89,11 +89,12 @@ export interface DraggableSkillProps {
     skill: number;
     onDuplicate?: () => void;
     onDelete?: () => void;
+    sx?: SxProps;
 }
 
 const placeholderStyles = css`opacity: .3`;
 
-export const DraggableSkill = ({parentId, dragId, index, skill, onDuplicate, onDelete}: DraggableSkillProps): JSX.Element => {
+export const DraggableSkill = ({parentId, dragId, index, skill, onDuplicate, onDelete, sx}: DraggableSkillProps): JSX.Element => {
     const {attributes, listeners, setNodeRef, isDragging} = useSortable({
         id: dragId,
         data: {
@@ -112,6 +113,7 @@ export const DraggableSkill = ({parentId, dragId, index, skill, onDuplicate, onD
             searchValue={searchValue}
             onDuplicate={onDuplicate}
             onDelete={onDelete}
+            sx={sx}
         >
             <span
                 ref={setNodeRef}
