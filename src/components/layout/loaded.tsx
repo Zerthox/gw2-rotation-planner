@@ -14,7 +14,7 @@ export const Loaded = ({children, header, ...props}: LoadedProps): JSX.Element =
 
     return (
         <Providers theme={themes[theme]}>
-            <Stack direction="column" height="100vh">
+            <Stack direction="column" height="100vh" minWidth={800}>
                 <Header {...props}>
                     {header}
                 </Header>

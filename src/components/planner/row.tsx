@@ -1,5 +1,5 @@
 import React, {useMemo} from "react";
-import {Box, Stack, TextField, Card, Typography} from "@mui/material";
+import {Box, Stack, TextField, Card, CardProps, Typography} from "@mui/material";
 import {ArrowUpward, ArrowDownward, Delete, PlusOne, Clear, Message} from "@mui/icons-material";
 import {useDroppable} from "@dnd-kit/core";
 import {rectSortingStrategy, SortableContext} from "@dnd-kit/sortable";
@@ -109,12 +109,12 @@ export const RowButtons = ({isFirst, isLast, isEmpty, onMove, onClear, onDelete}
     </Stack>
 );
 
-export interface RowProps {
+export interface RowProps extends CardProps {
     dragId: DragId;
     index: number;
 }
 
-export const Row = ({dragId, index}: RowProps): JSX.Element => {
+export const Row = ({dragId, index, ...props}: RowProps): JSX.Element => {
     const dispatch = useDispatch();
     const row = useRow(dragId);
     const rowCount = useRowCount();
@@ -147,7 +147,7 @@ export const Row = ({dragId, index}: RowProps): JSX.Element => {
 
     return (
         <RowContextMenu {...actions}>
-            <Card>
+            <Card {...props}>
                 <Stack direction="row" alignItems="center" spacing={1} paddingX={2} paddingY={1}>
                     <TextField
                         placeholder={`Section #${index + 1}`}
