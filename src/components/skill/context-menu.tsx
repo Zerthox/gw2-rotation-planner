@@ -1,22 +1,21 @@
 import React from "react";
 import {OpenInNew, DataObject, DataArray, Fingerprint, PlusOne, Delete} from "@mui/icons-material";
-import {ContextMenu} from "../general";
+import {ContextMenu, ContextMenuProps} from "../general";
 import {copyToClipboard} from "../../util/clipboard";
 
 const wikiUrl = "https://wiki.guildwars2.com";
 const apiUrl = "https://api.guildwars2.com";
 
-export interface SkillContextMenuProps {
+export interface SkillContextMenuProps extends ContextMenuProps {
     skill: number;
     isCommon: boolean;
     searchValue?: string;
     onDuplicate?: () => void;
     onDelete?: () => void;
-    children: React.ReactNode;
 }
 
-export const SkillContextMenu = ({skill, isCommon, searchValue, children, onDuplicate, onDelete}: SkillContextMenuProps): JSX.Element => (
-    <ContextMenu items={[
+export const SkillContextMenu = ({skill, isCommon, searchValue, onDuplicate, onDelete, ...props}: SkillContextMenuProps): JSX.Element => (
+    <ContextMenu {...props} items={[
         onDuplicate ? {
             key: "duplicate",
             text: "Duplicate Skill",
@@ -65,7 +64,5 @@ export const SkillContextMenu = ({skill, isCommon, searchValue, children, onDupl
             icon: <Delete/>,
             color: "error.main"
         } : null
-    ]}>
-        {children}
-    </ContextMenu>
+    ]}/>
 );
