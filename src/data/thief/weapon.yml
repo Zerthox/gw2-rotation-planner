@@ -3,9 +3,9 @@ Dagger:
   - 13087 # Wild Strike
   - 13108 # Lotus Strike
   - 13097 # Heartseeker
-  - 13006 # Death Blossom
-  - 13040 # Shadow Shot
-  - 13110 # Twisting Fangs
+  - 13006 # Death Blossom (Dagger offhand)
+  - 13040 # Shadow Shot (Pistol offhand)
+  - 13110 # Twisting Fangs (No offhand)
   - 13019 # Dancing Dagger
   - 16432 # Cloak and Dagger
 
@@ -13,10 +13,10 @@ Pistol:
   - 13084 # Vital Shot
   - 13115 # Sneak Attack
   - 13008 # Bola Shot
-  - 13011 # Unload
-  - 13010 # Shadow Strike
-  - 13111 # Repeater
-  - 59526 # Repeater
+  - 13011 # Unload (Pistol offhand)
+  - 13010 # Shadow Strike (Dagger offhand)
+  - 59526 # Repeater (Dagger offhand)
+  - 13111 # Repeater (No offhand)
   - 13012 # Head Shot
   - 13113 # Black Powder
 
@@ -34,10 +34,11 @@ Sword:
   - 13088 # Slash
   - 13116 # Crippling Strike
   - 13015 # Infiltrator's Strike
-  - 13016 # Flanking Strike
-  - 13007 # Larcenous Strike
-  - 13031 # Pistol Whip
-  - 13112 # Stab
+  - 13128 # Infiltrator's Return
+  - 13016 # Flanking Strike (Dagger offhand)
+  - 13007 # Larcenous Strike (Dagger offhand)
+  - 13031 # Pistol Whip (Pistol offhand)
+  - 13112 # Stab (No offhand)
 
 Staff:
   - 30614 # Staff Strike
@@ -63,10 +64,10 @@ Scepter:
   - 63066 # Shadow Bolt
   - 63314 # Shadowsquall
   - 63351 # Shadow Sap
-  - 63254 # Twilight Combo
-  - 63267 # Measured Shot
-  - 63128 # Endless Night
-  - 63154 # Triple Threat
+  - 63254 # Twilight Combo (Dagger offhand)
+  - 63267 # Measured Shot (Pistol offhand)
+  - 63128 # Endless Night (Pistol offhand)
+  - 63154 # Triple Threat (No offhand)
 
 # underwater
 Spear:
