@@ -7,10 +7,10 @@ export interface AnchorProps extends Omit<React.ComponentProps<"a">, "href" | "r
     newTab?: boolean;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const Anchor = ({to, newTab = false, ...props}: AnchorProps, ref: React.Ref<any>): JSX.Element => (
+const Anchor = ({to, newTab = false, ...props}: AnchorProps, ref: React.Ref<HTMLAnchorElement>): JSX.Element => (
     /^[/.#]/.test(to) ? (
-        <GatsbyLink ref={ref} to={to} {...props}/>
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        <GatsbyLink ref={ref as any} to={to} {...props}/>
     ) : (
         <a
             ref={ref}
