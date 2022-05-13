@@ -41,7 +41,7 @@ const slotColumn = {
     [SkillSlot.Weapon5]: 5
 };
 
-const SkillIcon = ({skill, tooltip = false, orderSelf = false, ...props}: SkillIconProps, ref?: React.Ref<HTMLElement>): JSX.Element => {
+const SkillIcon = ({skill, tooltip = false, orderSelf = false, ...props}: SkillIconProps, ref: React.Ref<HTMLElement>): JSX.Element => {
     const {data} = useSkill(skill);
     const custom = getCustomSkill(skill);
     const slot = data?.slot ?? custom?.slot;

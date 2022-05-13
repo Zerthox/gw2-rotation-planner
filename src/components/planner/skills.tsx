@@ -3,7 +3,7 @@ import {Box, Stack, SxProps, Accordion, AccordionSummary, AccordionDetails, Stac
 import {ExpandMore} from "@mui/icons-material";
 import {DraggableSkill} from "../skill";
 import {DragId} from "../../util/drag";
-import {SkillState, useSkillSections, useSkillStates} from "../../store/build";
+import {SkillState, useSkillSections, useSkillStates, useSkillsView, View} from "../../store/build";
 import {useInitSections} from "../../hooks/load";
 import {SkillSectionType} from "../../data";
 
@@ -16,9 +16,10 @@ export interface SkillSectionProps {
 }
 
 export const SkillSection = ({name, type, parentId, skills, sx}: SkillSectionProps): JSX.Element => {
+    const view = useSkillsView();
     const [visible, setVisible] = useState(false);
 
-    const isOrdered = type === SkillSectionType.Weapon || type === SkillSectionType.Bundle;
+    const isOrdered = view === View.CatalogOrdered && (type === SkillSectionType.Weapon || type === SkillSectionType.Bundle);
 
     return (
         <Accordion

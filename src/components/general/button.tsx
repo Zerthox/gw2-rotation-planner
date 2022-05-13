@@ -1,11 +1,11 @@
-import React from "react";
-import {Tooltip, Button, ButtonProps, IconButton as MuiIconButton, IconButtonProps as MuiIconButtonProps, TooltipProps} from "@mui/material";
+import React, {forwardRef} from "react";
+import {Tooltip, Button, ButtonProps, IconButton as MuiIconButton, IconButtonProps as MuiIconButtonProps, ToggleButton, ToggleButtonProps, TooltipProps} from "@mui/material";
 import {useCooldown} from "../../hooks/general";
 
 export type IconButtonProps<D extends React.ElementType> = MuiIconButtonProps<D> & {
     title: string;
     tooltip?: boolean;
-    tooltipProps?: TooltipProps;
+    tooltipProps?: Omit<TooltipProps, "children">;
 };
 
 export const IconButton = <D extends React.ElementType>({title, tooltip = true, tooltipProps, ...props}: IconButtonProps<D>): JSX.Element => tooltip && !props.disabled ? (
@@ -38,3 +38,16 @@ export const CooldownButton = ({cooldown, cooldownProps, onClick, ...props}: Coo
         />
     );
 };
+
+export interface TooltipToggleButtonProps extends ToggleButtonProps {
+    tooltipProps: Omit<TooltipProps, "children">;
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const TooltipToggleButton = ({tooltipProps, ...props}: TooltipToggleButtonProps, ref: React.Ref<any>): JSX.Element => (
+    <Tooltip {...tooltipProps}>
+        <ToggleButton ref={ref} {...props}/>
+    </Tooltip>
+);
+
+export const TooltipToggleButtonWithRef = forwardRef(TooltipToggleButton);

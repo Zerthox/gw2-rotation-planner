@@ -7,7 +7,7 @@ import {timelineReducer} from "./timeline";
 
 const reducer = {
     settingsReducer: persistReducer({key: "settings", storage}, settingsReducer),
-    buildReducer: persistReducer({key: "build", whitelist: ["profession"], storage}, buildReducer),
+    buildReducer: persistReducer({key: "build", whitelist: ["profession", "view"], storage}, buildReducer),
     timelineReducer
 };
 

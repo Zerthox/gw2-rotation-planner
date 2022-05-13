@@ -11,12 +11,18 @@ export interface SkillState {
 
 export const createSkillState = (skill: number): SkillState => ({dragId: createDragId(DragType.Skill), skillId: skill});
 
+export enum View {
+    CatalogList = "catalog-list",
+    CatalogOrdered = "catalog-ordered"
+}
+
 const filterSections = (sections: SkillSection[], prof: Profession) => sections.filter((section) => !section.profession || section.profession === prof);
 
 export const buildSlice = createSlice({
     name: "build",
     initialState: {
         profession: Profession.Guardian,
+        view: View.CatalogList,
         sections: [] as SkillSection[],
         skillStates: [] as SkillState[][]
     },
@@ -33,6 +39,9 @@ export const buildSlice = createSlice({
             state.profession = payload;
             buildSlice.caseReducers.refreshSkillStates(state);
         },
+        changeView(state, {payload}: PayloadAction<View>) {
+            state.view = payload;
+        },
         takeSkillItem(state, {payload}: PayloadAction<DragId>) {
             for (const section of state.skillStates) {
                 const index = section.findIndex((skill) => skill.dragId === payload);
@@ -48,9 +57,11 @@ export const buildSlice = createSlice({
 
 export const buildReducer = buildSlice.reducer;
 
-export const {initializeSections, changeProfession, takeSkillItem} = buildSlice.actions;
+export const {initializeSections, refreshSkillStates, changeProfession, changeView, takeSkillItem} = buildSlice.actions;
 
 export const useCurrentProfession = (): Profession => useSelector(({buildReducer}: StoreState) => buildReducer.profession);
+
+export const useSkillsView = (): View => useSelector(({buildReducer}: StoreState) => buildReducer.view);
 
 export const useSkillSections = (): SkillSection[] => useSelector(({buildReducer}: StoreState) => filterSections(buildReducer.sections, buildReducer.profession));
 

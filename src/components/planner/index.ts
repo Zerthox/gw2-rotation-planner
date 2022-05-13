@@ -5,3 +5,4 @@ export * from "./row";
 export * from "./skills";
 export * from "./timeline";
 export * from "./trash";
+export * from "./view-select";
