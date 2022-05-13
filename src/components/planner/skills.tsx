@@ -5,16 +5,20 @@ import {DraggableSkill} from "../skill";
 import {DragId} from "../../util/drag";
 import {SkillState, useSkillSections, useSkillStates} from "../../store/build";
 import {useInitSections} from "../../hooks/load";
+import {SkillSectionType} from "../../data";
 
 export interface SkillSectionProps {
     name: string;
+    type: SkillSectionType;
     parentId: DragId;
     skills: SkillState[];
     sx?: SxProps;
 }
 
-export const SkillSection = ({name, parentId, skills, sx}: SkillSectionProps): JSX.Element => {
+export const SkillSection = ({name, type, parentId, skills, sx}: SkillSectionProps): JSX.Element => {
     const [visible, setVisible] = useState(false);
+
+    const isOrdered = type === SkillSectionType.Weapon || type === SkillSectionType.Bundle;
 
     return (
         <Accordion
@@ -46,6 +50,7 @@ export const SkillSection = ({name, parentId, skills, sx}: SkillSectionProps): J
                             parentId={parentId}
                             index={i}
                             skill={skillId}
+                            orderSelf={isOrdered}
                         />
                     )) : null}
                 </Box>
@@ -66,10 +71,11 @@ export const SkillCatalog = ({dragId, ...props}: SkillbarProps): JSX.Element => 
 
     return (
         <Stack direction="column" sx={{overflowY: "auto"}} {...props}>
-            {sections.map(({name, skills}, i) => skills.length > 0 ? (
+            {sections.map(({name, type, skills}, i) => skills.length > 0 ? (
                 <SkillSection
                     key={name}
                     name={name}
+                    type={type}
                     parentId={dragId}
                     skills={states[i]}
                     sx={{flex: "none"}}

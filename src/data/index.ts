@@ -49,6 +49,8 @@ export enum SkillSlot {
 
 export const isWeaponSlot = (slot: SkillSlot): boolean => slot.startsWith("Weapon");
 
+export const isDownedSlot = (slot: SkillSlot): boolean => slot.startsWith("Downed");
+
 export const isProfessionSlot = (slot: SkillSlot): boolean => slot.startsWith("Profession");
 
 export interface SkillSection {

@@ -4,9 +4,11 @@ import {Icon} from "@discretize/gw2-ui-new";
 import {encode as encodeChatcode} from "gw2e-chat-codes";
 import {Skill} from ".";
 
+export type IconProps = React.ComponentProps<typeof Icon>;
+
 export interface CustomSkill extends Omit<Skill, "chat_link"> {
     wiki?: string;
-    iconProps?: React.ComponentProps<typeof Icon>;
+    iconProps?: IconProps;
 }
 
 export const getAllCustomSkills = (): CustomSkill[] => customSkills;

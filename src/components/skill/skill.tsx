@@ -9,27 +9,48 @@ import {Keybind} from "./keybind";
 import {DragId, SkillData} from "../../util/drag";
 import {CommonSkill, getCustomSkill, getSearchValue} from "../../data/custom";
 import {SkillSlot} from "../../data";
+import {IconProps} from "../../data/custom";
 
 const dragCursor = css`cursor: grab;`;
 
 const iconStyles = css`font-size: 3em;`;
 
 // TODO: remove this when custom component prop types are fixed
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const Custom = CustomComponent as React.ComponentType<any>;
+interface CustomComponentProps extends React.ComponentProps<typeof CustomComponent> {
+    iconProps: IconProps;
+}
+
+const Custom = CustomComponent as React.ComponentType<CustomComponentProps>;
 
 export interface SkillIconProps extends StackProps {
     skill: number;
     tooltip?: boolean;
+    orderSelf?: boolean;
 }
 
-const SkillIcon = ({skill, tooltip = false, ...props}: SkillIconProps, ref?: React.Ref<HTMLElement>): JSX.Element => {
+// TODO: row with ele attunements
+const slotColumn = {
+    [SkillSlot.Weapon1]: 1,
+    [SkillSlot.Downed1]: 1,
+    [SkillSlot.Weapon2]: 2,
+    [SkillSlot.Downed2]: 2,
+    [SkillSlot.Weapon3]: 3,
+    [SkillSlot.Downed3]: 3,
+    [SkillSlot.Weapon4]: 4,
+    [SkillSlot.Downed4]: 4,
+    [SkillSlot.Weapon5]: 5
+};
+
+const SkillIcon = ({skill, tooltip = false, orderSelf = false, ...props}: SkillIconProps, ref?: React.Ref<HTMLElement>): JSX.Element => {
     const {data} = useSkill(skill);
     const custom = getCustomSkill(skill);
     const slot = data?.slot ?? custom?.slot;
 
     return (
-        <Stack ref={ref} direction="column" alignItems="center" {...props}>
+        <Stack ref={ref} direction="column" alignItems="center" {...props} sx={{
+            gridColumn: orderSelf ? slotColumn[slot] : null,
+            ...props.sx
+        }}>
             {custom ? (
                 <Custom
                     type="Skill"
@@ -65,6 +86,7 @@ export interface DraggableSkillProps {
     parentId: DragId;
     index: number;
     skill: number;
+    orderSelf?: boolean;
     onDuplicate?: () => void;
     onDelete?: () => void;
     sx?: SxProps;
@@ -72,7 +94,7 @@ export interface DraggableSkillProps {
 
 const placeholderStyles = css`opacity: .3`;
 
-export const DraggableSkill = ({parentId, dragId, index, skill, onDuplicate, onDelete, sx}: DraggableSkillProps): JSX.Element => {
+export const DraggableSkill = ({parentId, dragId, index, skill, orderSelf, onDuplicate, onDelete, sx}: DraggableSkillProps): JSX.Element => {
     const {attributes, listeners, setNodeRef, isDragging} = useSortable({
         id: dragId,
         data: {
@@ -98,6 +120,7 @@ export const DraggableSkill = ({parentId, dragId, index, skill, onDuplicate, onD
                 {...listeners}
                 skill={skill}
                 tooltip={!isDragging}
+                orderSelf={orderSelf}
                 className={clsx(dragCursor, {[placeholderStyles]: isDragging})}
                 sx={sx}
             />
