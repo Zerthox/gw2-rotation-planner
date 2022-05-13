@@ -1,0 +1,27 @@
+name: Check
+
+on:
+  push:
+    paths:
+      - "**/*.ts"
+      - "**/*.tsx"
+      - package.json
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "**/*.ts"
+      - "**/*.tsx"
+      - package.json
+
+jobs:
+  check:
+    name: Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 16
+      - run: npm ci
+      - run: npm run check
