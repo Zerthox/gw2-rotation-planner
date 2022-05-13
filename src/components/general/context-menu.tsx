@@ -1,5 +1,5 @@
-import React, {useCallback, useState} from "react";
-import {Box, BoxProps, Menu, MenuItem, MenuItemProps, ListItemText, ListItemIcon, Typography} from "@mui/material";
+import React, {useCallback, useState, cloneElement, useMemo} from "react";
+import {Menu, MenuItem, MenuItemProps, ListItemText, ListItemIcon, Typography} from "@mui/material";
 import {SystemCssProperties} from "@mui/system";
 
 export interface ContextMenuItem {
@@ -13,33 +13,33 @@ export interface ContextMenuItem {
     itemProps?: MenuItemProps<"a">;
 }
 
-export interface ContextMenuProps extends Omit<BoxProps<"span">, "title"> {
+export interface ContextMenuProps {
     title?: React.ReactNode;
-    children: React.ReactNode;
+    children: React.ReactElement<{onContextMenu: (event: React.MouseEvent<unknown>) => void}>;
     items?: ContextMenuItem[];
 }
 
-export const ContextMenu = ({title, children, items = [], ...props}: ContextMenuProps): JSX.Element => {
+export const ContextMenu = ({title, children, items = []}: ContextMenuProps): JSX.Element => {
     const [contextMenu, setContextMenu] = useState<{top: number; left: number}>(null);
-
-    const onContextMenu = useCallback((event: React.MouseEvent<HTMLSpanElement>) => {
-        event.preventDefault();
-        event.stopPropagation();
-        setContextMenu(contextMenu === null
-            ? {top: event.clientY, left: event.clientX}
-            : null
-        );
-    }, [contextMenu, setContextMenu]);
 
     const filteredItems = items.filter((props) => props);
 
+    const onContextMenu = useCallback((event: React.MouseEvent) => {
+        event.preventDefault();
+        if (filteredItems.length > 0) {
+            event.stopPropagation();
+            setContextMenu(contextMenu === null
+                ? {top: event.clientY, left: event.clientX}
+                : null
+            );
+        }
+    }, [contextMenu, setContextMenu, filteredItems.length]);
+
+    const cloned = useMemo(() => cloneElement(children, {onContextMenu}), [children, onContextMenu]);
+
     return (
-        <Box
-            component="span"
-            {...props}
-            onContextMenu={filteredItems.length > 0 ? onContextMenu : (event) => event.preventDefault()}
-        >
-            {children}
+        <>
+            {cloned}
             <Menu
                 open={contextMenu !== null}
                 onClose={() => setContextMenu(null)}
@@ -81,6 +81,6 @@ export const ContextMenu = ({title, children, items = [], ...props}: ContextMenu
                     ))
                 }
             </Menu>
-        </Box>
+        </>
     );
 };

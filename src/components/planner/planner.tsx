@@ -7,7 +7,7 @@ import {Trash} from "./trash";
 import {ProfessionSelect} from "./prof-select";
 import {SkillCatalog} from "./skills";
 import {Timeline} from "./timeline";
-import {SkillIcon} from "../skill";
+import {SkillIconWithRef} from "../skill";
 import {DragId, DragType, createDragId, isa, OverData, SkillData} from "../../util/drag";
 import {deleteRowSkill, insertRowSkill, insertRowWithStates, moveRowSkill} from "../../store/timeline";
 import {takeSkillItem, createSkillState} from "../../store/build";
@@ -190,7 +190,7 @@ export const Planner = ({load}: PlannerProps): JSX.Element => {
             </Stack>
             <DragOverlay>
                 {typeof dragging === "number" ? (
-                    <SkillIcon skill={dragging} className={css`cursor: grabbing;`}/>
+                    <SkillIconWithRef skill={dragging} className={css`cursor: grabbing;`}/>
                 ) : null}
             </DragOverlay>
         </DndContext>

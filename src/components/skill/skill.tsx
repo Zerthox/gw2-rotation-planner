@@ -1,7 +1,7 @@
-import React from "react";
+import React, {forwardRef} from "react";
 import clsx from "clsx";
 import {css} from "@emotion/css";
-import {Stack, SxProps} from "@mui/material";
+import {Stack, StackProps, SxProps} from "@mui/material";
 import {Skill, CustomComponent, useSkill} from "@discretize/gw2-ui-new";
 import {useSortable} from "@dnd-kit/sortable";
 import {SkillContextMenu} from "./context-menu";
@@ -14,73 +14,51 @@ const dragCursor = css`cursor: grab;`;
 
 const iconStyles = css`font-size: 3em;`;
 
-export interface SkillWithKeybindProps {
-    skill: number;
-    tooltip?: boolean;
-}
-
-export const SkillWithKeybind = ({skill, tooltip = false}: SkillWithKeybindProps): JSX.Element => {
-    const {data} = useSkill(skill);
-
-    return (
-        <>
-            <Skill
-                id={skill}
-                disableLink
-                disableText
-                disableTooltip={!tooltip}
-                iconProps={{
-                    className: iconStyles
-                }}
-            />
-            <Keybind slot={data ? data.slot as SkillSlot : null}/>
-        </>
-    );
-};
-
 // TODO: remove this when custom component prop types are fixed
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Custom = CustomComponent as React.ComponentType<any>;
 
-export interface SkillIconProps {
+export interface SkillIconProps extends StackProps {
     skill: number;
     tooltip?: boolean;
-    className?: string;
 }
 
-export const SkillIcon = ({skill, tooltip = false, className}: SkillIconProps): JSX.Element => {
+const SkillIcon = ({skill, tooltip = false, ...props}: SkillIconProps, ref?: React.Ref<HTMLElement>): JSX.Element => {
+    const {data} = useSkill(skill);
     const custom = getCustomSkill(skill);
+    const slot = data?.slot ?? custom?.slot;
 
     return (
-        <Stack
-            direction="column"
-            alignItems="center"
-            className={className}
-        >
+        <Stack ref={ref} direction="column" alignItems="center" {...props}>
             {custom ? (
-                <>
-                    <Custom
-                        type="Skill"
-                        data={custom}
-                        disableLink
-                        disableText
-                        disableTooltip={!tooltip}
-                        iconProps={{
-                            ...custom.iconProps,
-                            className: clsx(iconStyles, custom.iconProps?.className)
-                        }}
-                    />
-                    <Keybind slot={custom.slot as SkillSlot}/>
-                </>
+                <Custom
+                    type="Skill"
+                    data={custom}
+                    disableLink
+                    disableText
+                    disableTooltip={!tooltip}
+                    iconProps={{
+                        ...custom.iconProps,
+                        className: clsx(iconStyles, custom.iconProps?.className)
+                    }}
+                />
             ) : (
-                <SkillWithKeybind
-                    skill={skill}
-                    tooltip={tooltip}
+                <Skill
+                    id={skill}
+                    disableLink
+                    disableText
+                    disableTooltip={!tooltip}
+                    iconProps={{
+                        className: iconStyles
+                    }}
                 />
             )}
+            <Keybind slot={slot as SkillSlot}/>
         </Stack>
     );
 };
+
+export const SkillIconWithRef = forwardRef(SkillIcon);
 
 export interface DraggableSkillProps {
     dragId: DragId;
@@ -113,20 +91,16 @@ export const DraggableSkill = ({parentId, dragId, index, skill, onDuplicate, onD
             searchValue={searchValue}
             onDuplicate={onDuplicate}
             onDelete={onDelete}
-            sx={sx}
         >
-            <span
+            <SkillIconWithRef
                 ref={setNodeRef}
                 {...attributes}
                 {...listeners}
-                className={dragCursor}
-            >
-                <SkillIcon
-                    skill={skill}
-                    tooltip={!isDragging}
-                    className={isDragging ? placeholderStyles : null}
-                />
-            </span>
+                skill={skill}
+                tooltip={!isDragging}
+                className={clsx(dragCursor, {[placeholderStyles]: isDragging})}
+                sx={sx}
+            />
         </SkillContextMenu>
     );
 };

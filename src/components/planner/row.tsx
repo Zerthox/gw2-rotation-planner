@@ -154,45 +154,43 @@ export const Row = ({dragId, index, ...props}: RowProps): JSX.Element => {
                         onChange={({target}) => dispatch(updateRowName({rowId: dragId, name: target.value}))}
                         sx={{flex: "none"}}
                     />
-                    <Box flexGrow={1}>
-                        <span ref={setNodeRef}>
-                            <SortableContext
-                                items={items}
-                                strategy={rectSortingStrategy}
-                            >
-                                {row.skills.length > 0 ? (
-                                    <Box sx={{
-                                        display: "grid",
-                                        gridTemplateColumns: "repeat(auto-fill, 3em)",
-                                        gridTemplateRows: "repeat(auto-fill, 3em)",
-                                        gap: 0.5
-                                    }}>
-                                        {row.skills.map(({dragId, skillId}, i) => (
-                                            <DraggableSkill
-                                                key={dragId}
-                                                dragId={dragId}
-                                                parentId={row.dragId}
-                                                index={i}
-                                                skill={skillId}
-                                                onDuplicate={() => dispatch(insertRowSkill({
-                                                    rowId: row.dragId,
-                                                    index: i + 1,
-                                                    skill: createSkillState(skillId)
-                                                }))}
-                                                onDelete={() => dispatch(deleteRowSkill({
-                                                    rowId: row.dragId,
-                                                    skillId: dragId
-                                                }))}
-                                            />
-                                        ))}
-                                    </Box>
-                                ) : (
-                                    <Typography sx={{opacity: 0.5}}>
-                                        Drop skills here
-                                    </Typography>
-                                )}
-                            </SortableContext>
-                        </span>
+                    <Box flexGrow={1} ref={setNodeRef}>
+                        <SortableContext
+                            items={items}
+                            strategy={rectSortingStrategy}
+                        >
+                            {row.skills.length > 0 ? (
+                                <Box sx={{
+                                    display: "grid",
+                                    gridTemplateColumns: "repeat(auto-fill, 3em)",
+                                    gridTemplateRows: "repeat(auto-fill, 3em)",
+                                    gap: 0.5
+                                }}>
+                                    {row.skills.map(({dragId, skillId}, i) => (
+                                        <DraggableSkill
+                                            key={dragId}
+                                            dragId={dragId}
+                                            parentId={row.dragId}
+                                            index={i}
+                                            skill={skillId}
+                                            onDuplicate={() => dispatch(insertRowSkill({
+                                                rowId: row.dragId,
+                                                index: i + 1,
+                                                skill: createSkillState(skillId)
+                                            }))}
+                                            onDelete={() => dispatch(deleteRowSkill({
+                                                rowId: row.dragId,
+                                                skillId: dragId
+                                            }))}
+                                        />
+                                    ))}
+                                </Box>
+                            ) : (
+                                <Typography sx={{opacity: 0.5}}>
+                                    Drop skills here
+                                </Typography>
+                            )}
+                        </SortableContext>
                     </Box>
                     <RowButtons {...actions}/>
                 </Stack>
