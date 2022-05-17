@@ -32,7 +32,7 @@ export const useEventListener = <T extends AnyEventTarget, K extends PickEventTy
     }, [event, target]);
 };
 
-export const useKeyPressed = (key: string | Array<string>, target: GlobalEventHandlers = window): boolean => {
+export const useKeyState = (key: string | string[], target: GlobalEventHandlers = window): boolean => {
     const [pressed, setPressed] = useState(false);
     const keys = useMemo(() => new Set(typeof key === "string" ? [key] : key), [key]);
 

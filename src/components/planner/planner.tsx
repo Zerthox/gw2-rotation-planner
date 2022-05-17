@@ -12,7 +12,7 @@ import {SkillIconWithRef} from "../skill";
 import {DragId, DragType, createDragId, isa, OverData, SkillData} from "../../util/drag";
 import {deleteRowSkill, insertRowSkill, insertRowWithStates, moveRowSkill} from "../../store/timeline";
 import {takeSkillItem, createSkillState} from "../../store/build";
-import {useKeyPressed} from "../../hooks/general";
+import {useKeyState} from "../../hooks/general";
 import {LoadParams} from "../../hooks/load";
 
 const CATALOG_ID = createDragId(DragType.Skillbar);
@@ -56,7 +56,7 @@ export const Planner = ({load}: PlannerProps): JSX.Element => {
     const parent = useRef<DragId>(null);
     const fromSkillbar = useRef(false);
     const duplicated = useRef(false);
-    const pressed = useKeyPressed(["Shift", "Control"]);
+    const pressed = useKeyState(["Shift", "Control"]);
 
     const cancelDrag = useCallback((active: Active) => {
         if (isa(DragType.Row, parent.current) && (fromSkillbar.current || duplicated.current)) {
