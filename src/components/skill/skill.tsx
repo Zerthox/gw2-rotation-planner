@@ -9,18 +9,10 @@ import {Keybind} from "./keybind";
 import {DragId, SkillData} from "../../util/drag";
 import {CommonSkill, getCustomSkill, getSearchValue} from "../../data/custom";
 import {SkillSlot} from "../../data";
-import {IconProps} from "../../data/custom";
 
 const dragCursor = css`cursor: grab;`;
 
 const iconStyles = css`font-size: 3em;`;
-
-// TODO: remove this when custom component prop types are fixed
-interface CustomComponentProps extends React.ComponentProps<typeof CustomComponent> {
-    iconProps: IconProps;
-}
-
-const Custom = CustomComponent as React.ComponentType<CustomComponentProps>;
 
 export interface SkillIconProps extends StackProps {
     skill: number;
@@ -52,7 +44,7 @@ const SkillIcon = ({skill, tooltip = false, orderSelf = false, ...props}: SkillI
             ...props.sx
         }}>
             {custom ? (
-                <Custom
+                <CustomComponent
                     type="Skill"
                     data={custom}
                     disableLink
