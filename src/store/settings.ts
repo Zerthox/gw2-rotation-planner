@@ -45,10 +45,10 @@ export const settingsReducer = settingsSlice.reducer;
 
 export const {setTheme, setKeybinds} = settingsSlice.actions;
 
-export const getTheme = ({settingsReducer}: StoreState): Theme => settingsReducer.theme;
-export const useTheme = (): Theme => useSelector(getTheme);
+export const selectTheme = ({settingsReducer}: StoreState): Theme => settingsReducer.theme;
+export const useTheme = (): Theme => useSelector(selectTheme);
 
-export const getKeybinds = ({settingsReducer}: StoreState): Keybinds<string> => {
+export const selectKeybinds = ({settingsReducer}: StoreState): Keybinds<string> => {
     const {keybinds} = settingsReducer;
     return {
         ...keybinds,
@@ -59,6 +59,6 @@ export const getKeybinds = ({settingsReducer}: StoreState): Keybinds<string> => 
         [SkillSlot.Downed4]: keybinds[SkillSlot.Weapon4]
     };
 };
-export const useKeybinds = (): Keybinds<string> => useSelector(getKeybinds);
+export const useKeybinds = (): Keybinds<string> => useSelector(selectKeybinds);
 
 export const useKeybind = (slot: SkillSlot): string => useKeybinds()[slot];

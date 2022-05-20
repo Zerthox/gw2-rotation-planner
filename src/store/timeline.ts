@@ -119,19 +119,19 @@ export const timelineReducer = timelineSlice.reducer;
 
 export const {overrideRows, insertRow, insertRowWithStates, deleteRow, moveRow, updateRowName, insertRowSkill, deleteRowSkill, moveRowSkill, clearRowSkills} = timelineSlice.actions;
 
-export const getRows = ({timelineReducer}: StoreState): RowState[] => timelineReducer.rows;
-export const useRows = (): RowState[] => useSelector(getRows);
+export const selectRows = ({timelineReducer}: StoreState): RowState[] => timelineReducer.rows;
+export const useRows = (): RowState[] => useSelector(selectRows);
 
-export const getStatelessRows = ({timelineReducer}: StoreState): Row[] => timelineReducer.rows.map(({name, skills}) => ({
+export const selectStatelessRows = ({timelineReducer}: StoreState): Row[] => timelineReducer.rows.map(({name, skills}) => ({
     name,
     skills: skills.map(({skillId}) => skillId)
 }));
-export const useStatelessRows = (): Row[] => useSelector(getStatelessRows);
+export const useStatelessRows = (): Row[] => useSelector(selectStatelessRows);
 
 export const useRow = (id: DragId): RowState => useSelector(useCallback(
     ({timelineReducer}: StoreState) => timelineReducer.rows.find((row) => row.dragId === id),
     [id]
 ));
 
-export const getRowCount = ({timelineReducer}: StoreState): number => timelineReducer.rows.length;
-export const useRowCount = (): number => useSelector(getRowCount);
+export const selectRowCount = ({timelineReducer}: StoreState): number => timelineReducer.rows.length;
+export const useRowCount = (): number => useSelector(selectRowCount);
