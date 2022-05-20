@@ -86,6 +86,7 @@ Spear:
 Trident:
   - 9205 # Light Ball
   - 50399 # Detonate Light
+  - 50392 # Judgement of Light
   - 9207 # Purify
   - 9234 # Purifying Blast
   - 9208 # Symbol of Light
