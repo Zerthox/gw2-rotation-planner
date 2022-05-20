@@ -1,3 +1,4 @@
+import {useCallback} from "react";
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {useSelector} from "react-redux";
 import {StoreState} from ".";
@@ -118,13 +119,19 @@ export const timelineReducer = timelineSlice.reducer;
 
 export const {overrideRows, insertRow, insertRowWithStates, deleteRow, moveRow, updateRowName, insertRowSkill, deleteRowSkill, moveRowSkill, clearRowSkills} = timelineSlice.actions;
 
-export const useRows = (): RowState[] => useSelector(({timelineReducer}: StoreState) => timelineReducer.rows);
+export const getRows = ({timelineReducer}: StoreState): RowState[] => timelineReducer.rows;
+export const useRows = (): RowState[] => useSelector(getRows);
 
-export const useStatelessRows = (): Row[] => useSelector(({timelineReducer}: StoreState) => timelineReducer.rows.map(({name, skills}) => ({
+export const getStatelessRows = ({timelineReducer}: StoreState): Row[] => timelineReducer.rows.map(({name, skills}) => ({
     name,
     skills: skills.map(({skillId}) => skillId)
-})));
+}));
+export const useStatelessRows = (): Row[] => useSelector(getStatelessRows);
 
-export const useRow = (id: DragId): RowState => useSelector(({timelineReducer}: StoreState) => timelineReducer.rows.find((row) => row.dragId === id));
+export const useRow = (id: DragId): RowState => useSelector(useCallback(
+    ({timelineReducer}: StoreState) => timelineReducer.rows.find((row) => row.dragId === id),
+    [id]
+));
 
-export const useRowCount = (): number => useSelector(({timelineReducer}: StoreState) => timelineReducer.rows.length);
+export const getRowCount = ({timelineReducer}: StoreState): number => timelineReducer.rows.length;
+export const useRowCount = (): number => useSelector(getRowCount);

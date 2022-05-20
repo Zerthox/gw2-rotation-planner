@@ -59,10 +59,14 @@ export const buildReducer = buildSlice.reducer;
 
 export const {initializeSections, refreshSkillStates, changeProfession, changeView, takeSkillItem} = buildSlice.actions;
 
-export const useCurrentProfession = (): Profession => useSelector(({buildReducer}: StoreState) => buildReducer.profession);
+export const getCurrentProfession = ({buildReducer}: StoreState): Profession => buildReducer.profession;
+export const useCurrentProfession = (): Profession => useSelector(getCurrentProfession);
 
-export const useSkillsView = (): View => useSelector(({buildReducer}: StoreState) => buildReducer.view);
+export const getSkillsView = ({buildReducer}: StoreState): View => buildReducer.view;
+export const useSkillsView = (): View => useSelector(getSkillsView);
 
-export const useSkillSections = (): SkillSection[] => useSelector(({buildReducer}: StoreState) => filterSections(buildReducer.sections, buildReducer.profession));
+export const getSkillSections = ({buildReducer}: StoreState): SkillSection[] => filterSections(buildReducer.sections, buildReducer.profession);
+export const useSkillSections = (): SkillSection[] => useSelector(getSkillSections);
 
-export const useSkillStates = (): SkillState[][] => useSelector(({buildReducer}: StoreState) => buildReducer.skillStates);
+export const getSkillStates = ({buildReducer}: StoreState): SkillState[][] => buildReducer.skillStates;
+export const useSkillStates = (): SkillState[][] => useSelector(getSkillStates);
