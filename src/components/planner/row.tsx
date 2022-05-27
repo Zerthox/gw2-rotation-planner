@@ -133,7 +133,7 @@ export const Row = ({dragId, index, ...props}: RowProps): JSX.Element => {
         )),
         onMove: (up) => dispatch(moveRow({
             from: index,
-            to: up ? index + 1 : index - 1
+            to: up ? index - 1 : index + 1
         })),
         onCopy: () => copyToClipboard(
             (row.name ? row.name + ": " : "")
