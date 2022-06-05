@@ -1,8 +1,8 @@
 import React from "react";
-import {Box, BoxProps, Typography, TextField, ToggleButtonGroup, ToggleButton, SxProps, Button} from "@mui/material";
+import {Box, BoxProps, Typography, FormControlLabel, TextField, ToggleButtonGroup, ToggleButton, SxProps, Button, Switch, FormHelperText, FormGroup} from "@mui/material";
 import {DarkMode, LightMode} from "@mui/icons-material";
 import {useDispatch} from "react-redux";
-import {setTheme, setKeybinds, useTheme, useKeybinds, defaultKeybinds} from "../../store/settings";
+import {setTheme, setKeybinds, useTheme, useKeybinds, defaultKeybinds, useDevMode, setDevMode} from "../../store/settings";
 import {SkillSlot} from "../../data";
 import {Theme} from "../../themes";
 
@@ -52,6 +52,7 @@ export const SettingsContent = (): JSX.Element => {
     const dispatch = useDispatch();
     const theme = useTheme();
     const keybinds = useKeybinds();
+    const isDev = useDevMode();
 
     return (
         <>
@@ -71,7 +72,7 @@ export const SettingsContent = (): JSX.Element => {
                     </ToggleButton>
                 </ToggleButtonGroup>
             </SettingsGroup>
-            <SettingsGroup title="Keybinds">
+            <SettingsGroup title="Keybinds" marginBottom={3}>
                 {groups.map((group, i) => (
                     <Box
                         key={i}
@@ -100,6 +101,24 @@ export const SettingsContent = (): JSX.Element => {
                     variant="outlined"
                     onClick={() => dispatch(setKeybinds(defaultKeybinds))}
                 >Reset Keybinds</Button>
+            </SettingsGroup>
+            <SettingsGroup title="Advanced">
+                <FormGroup>
+                    <FormControlLabel
+                        control={
+                            <Switch
+                                checked={isDev}
+                                onChange={(_, checked) => dispatch(setDevMode(checked))}
+                            />
+                        }
+                        label={
+                            <>
+                                Developer mode
+                                <FormHelperText>Enable additional options in context menus</FormHelperText>
+                            </>
+                        }
+                    />
+                </FormGroup>
             </SettingsGroup>
         </>
     );
