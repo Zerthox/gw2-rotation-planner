@@ -28,7 +28,7 @@ export enum CommonSkill {
     PortalExit = 20851 // wmpd exit id
 }
 
-const initialSize = css`background-size: initial !important;`;
+const initialSize = css`background-size: initial !important`;
 
 const customSkills: CustomSkill[] = [
     {

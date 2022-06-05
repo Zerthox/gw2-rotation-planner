@@ -11,9 +11,9 @@ import {DragId, SkillData} from "../../util/drag";
 import {CommonSkill, getCustomSkill, getSearchValue} from "../../data/custom";
 import {SkillSlot} from "../../data";
 
-const dragCursor = css`cursor: grab;`;
+const dragCursor = css`cursor: grab`;
 
-const iconStyles = css`font-size: 3em;`;
+const iconStyles = css`font-size: 3em`;
 
 export interface SkillIconProps extends StackProps {
     skill: number;
