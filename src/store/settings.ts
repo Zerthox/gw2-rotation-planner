@@ -29,12 +29,16 @@ export const settingsSlice = createSlice({
     name: "settings",
     initialState: {
         theme: Theme.Dark,
-        dev: false,
-        keybinds: defaultKeybinds
+        showKeys: true,
+        keybinds: defaultKeybinds,
+        dev: false
     },
     reducers: {
         setTheme(state, {payload}: PayloadAction<Theme>) {
             state.theme = payload;
+        },
+        setShowKeys(state, {payload}: PayloadAction<boolean>) {
+            state.showKeys = payload;
         },
         setKeybinds(state, {payload}: PayloadAction<Partial<Keybinds<string>>>) {
             state.keybinds = {...state.keybinds, ...payload};
@@ -47,10 +51,13 @@ export const settingsSlice = createSlice({
 
 export const settingsReducer = settingsSlice.reducer;
 
-export const {setTheme, setKeybinds, setDevMode} = settingsSlice.actions;
+export const {setTheme, setShowKeys, setKeybinds, setDevMode} = settingsSlice.actions;
 
 export const selectTheme = ({settingsReducer}: StoreState): Theme => settingsReducer.theme;
 export const useTheme = (): Theme => useSelector(selectTheme);
+
+export const selectShowKeys = ({settingsReducer}: StoreState): boolean => settingsReducer.showKeys;
+export const useShowKeys = (): boolean => useSelector(selectShowKeys);
 
 export const selectKeybinds = ({settingsReducer}: StoreState): Keybinds<string> => {
     const {keybinds} = settingsReducer;

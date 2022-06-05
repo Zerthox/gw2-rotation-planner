@@ -6,6 +6,7 @@ import {Skill, CustomComponent, useSkill} from "@discretize/gw2-ui-new";
 import {useSortable} from "@dnd-kit/sortable";
 import {SkillContextMenu} from "./context-menu";
 import {Keybind} from "./keybind";
+import {useShowKeys} from "../../store/settings";
 import {DragId, SkillData} from "../../util/drag";
 import {CommonSkill, getCustomSkill, getSearchValue} from "../../data/custom";
 import {SkillSlot} from "../../data";
@@ -35,6 +36,7 @@ const slotColumn = {
 
 const SkillIcon = ({skill, tooltip = false, orderSelf = false, ...props}: SkillIconProps, ref: React.Ref<HTMLElement>): JSX.Element => {
     const {data} = useSkill(skill);
+    const showKeys = useShowKeys();
     const custom = getCustomSkill(skill);
     const slot = data?.slot ?? custom?.slot;
 
@@ -66,7 +68,7 @@ const SkillIcon = ({skill, tooltip = false, orderSelf = false, ...props}: SkillI
                     }}
                 />
             )}
-            <Keybind slot={slot as SkillSlot}/>
+            {showKeys ? <Keybind slot={slot as SkillSlot}/> : null}
         </Stack>
     );
 };

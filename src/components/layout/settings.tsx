@@ -2,7 +2,7 @@ import React from "react";
 import {Box, BoxProps, Typography, FormControlLabel, TextField, ToggleButtonGroup, ToggleButton, SxProps, Button, Switch, FormHelperText, FormGroup} from "@mui/material";
 import {DarkMode, LightMode} from "@mui/icons-material";
 import {useDispatch} from "react-redux";
-import {setTheme, setKeybinds, useTheme, useKeybinds, defaultKeybinds, useDevMode, setDevMode} from "../../store/settings";
+import {setTheme, setKeybinds, useTheme, useKeybinds, defaultKeybinds, useDevMode, setDevMode, useShowKeys, setShowKeys} from "../../store/settings";
 import {SkillSlot} from "../../data";
 import {Theme} from "../../themes";
 
@@ -51,6 +51,7 @@ const iconProps: SxProps = {
 export const SettingsContent = (): JSX.Element => {
     const dispatch = useDispatch();
     const theme = useTheme();
+    const showKeys = useShowKeys();
     const keybinds = useKeybinds();
     const isDev = useDevMode();
 
@@ -73,6 +74,14 @@ export const SettingsContent = (): JSX.Element => {
                 </ToggleButtonGroup>
             </SettingsGroup>
             <SettingsGroup title="Keybinds" marginBottom={3}>
+                <FormGroup>
+                    <FormControlLabel
+                        label="Show skill keys"
+                        control={<Switch/>}
+                        checked={showKeys}
+                        onChange={(_, checked) => dispatch(setShowKeys(checked))}
+                    />
+                </FormGroup>
                 {groups.map((group, i) => (
                     <Box
                         key={i}
@@ -85,6 +94,7 @@ export const SettingsContent = (): JSX.Element => {
                             <TextField
                                 key={slot}
                                 variant="standard"
+                                disabled={!showKeys}
                                 label={label}
                                 placeholder="Key name"
                                 value={keybinds[slot]}
@@ -99,24 +109,22 @@ export const SettingsContent = (): JSX.Element => {
                 ))}
                 <Button
                     variant="outlined"
+                    disabled={!showKeys}
                     onClick={() => dispatch(setKeybinds(defaultKeybinds))}
                 >Reset Keybinds</Button>
             </SettingsGroup>
             <SettingsGroup title="Advanced">
                 <FormGroup>
                     <FormControlLabel
-                        control={
-                            <Switch
-                                checked={isDev}
-                                onChange={(_, checked) => dispatch(setDevMode(checked))}
-                            />
-                        }
                         label={
                             <>
                                 Developer mode
                                 <FormHelperText>Enable additional options in context menus</FormHelperText>
                             </>
                         }
+                        control={<Switch/>}
+                        checked={isDev}
+                        onChange={(_, checked) => dispatch(setDevMode(checked))}
                     />
                 </FormGroup>
             </SettingsGroup>
