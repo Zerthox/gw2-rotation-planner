@@ -16,6 +16,7 @@ export const Keybind = ({slot}: KeybindProps): JSX.Element => {
             alignItems: "center",
             justifyContent: "stretch",
             marginTop: "-1em",
+            marginBottom: "-0.5em",
             height: "2em",
             padding: [1, 1],
             background: "rgba(0, 0, 0, .7)",
