@@ -6,7 +6,8 @@ Heal:
   - 21775 # Aqua Surge
 
   # specs
-  - 31407 # Glyph of Rejuvenation
+  - 31819 # Glyph of Rejuvenation (normal)
+  - 31867 # Glyph of Rejuvenation (celestial)
   - 44948 # Bear Stance
   - 63319 # Perilous Gift
 
@@ -37,10 +38,14 @@ Utility:
   - 34309 # "Search and Rescue!"
 
   #specs
-  - 31322 # Glyph of Alignment
-  - 31746 # Glyph of Equality
-  - 31582 # Glyph of Unity
-  - 30238 # Glyph of the Tides
+  - 31607 # Glyph of Alignment (normal)
+  - 31348 # Glyph of Alignment (celestial)
+  - 31888 # Glyph of Unity (normal)
+  - 31740 # Glyph of Unity (celestial)
+  - 31658 # Glyph of Equality (normal)
+  - 31401 # Glyph of Equality (celestial)
+  - 30448 # Glyph of the Tides (normal)
+  - 29558 # Glyph of the Tides (celestial)
   - 45789 # Dolyak Stance
   - 45142 # Griffon Stance
   - 45970 # Moa Stance
@@ -57,6 +62,7 @@ Elite:
   - 12596 # Nature's Renewal
 
   # specs
-  - 31677 # Glyph of the Stars
+  - 55046 # Glyph of the Stars (normal)
+  - 55024 # Glyph of the Stars (celestial)
   - 45717 # One Wolf Pack
   - 63163 # Forest's Fortification
