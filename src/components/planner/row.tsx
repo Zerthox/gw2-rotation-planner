@@ -9,7 +9,7 @@ import {DraggableSkill} from "../skill";
 import {DragId, OverData} from "../../util/drag";
 import {useRow, useRowCount, deleteRow, moveRow, updateRowName, insertRowSkill, deleteRowSkill, insertRow, clearRowSkills} from "../../store/timeline";
 import {createSkillState} from "../../store/build";
-import {getSearchValue} from "../../data/custom";
+import {getSearchValue} from "../../data/common";
 import {copyToClipboard} from "../../util/clipboard";
 
 export interface RowActions {

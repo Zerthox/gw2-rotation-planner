@@ -6,18 +6,18 @@ import {Skill} from ".";
 
 export type IconProps = React.ComponentProps<typeof Icon>;
 
-export interface CustomSkill extends Omit<Skill, "chat_link"> {
+export interface CommonSkill extends Omit<Skill, "chat_link"> {
     wiki?: string;
     iconProps?: IconProps;
 }
 
-export const getAllCustomSkills = (): CustomSkill[] => customSkills;
+export const getAllCommonSkills = (): CommonSkill[] => commonSkills;
 
-export const getCustomSkill = (id: number): CustomSkill => getAllCustomSkills().find((skill) => skill.id === id);
+export const getCommonSkill = (id: number): CommonSkill => getAllCommonSkills().find((skill) => skill.id === id);
 
-export const getSearchValue = (id: number): string => getCustomSkill(id)?.wiki ?? (encodeChatcode("skill", id) || null);
+export const getSearchValue = (id: number): string => getCommonSkill(id)?.wiki ?? (encodeChatcode("skill", id) || null);
 
-export enum CommonSkill {
+export enum CommonSkillId {
     WeaponSwap = 1,
     Dodge = 2,
     DropBundle = 3,
@@ -30,9 +30,9 @@ export enum CommonSkill {
 
 const initialSize = css`background-size: initial !important`;
 
-const customSkills: CustomSkill[] = [
+const commonSkills: CommonSkill[] = [
     {
-        id: CommonSkill.WeaponSwap,
+        id: CommonSkillId.WeaponSwap,
         name: "Weapon Swap",
         professions: [],
         description: "Switch between your weapon sets.",
@@ -52,7 +52,7 @@ const customSkills: CustomSkill[] = [
         ]
     },
     {
-        id: CommonSkill.Dodge,
+        id: CommonSkillId.Dodge,
         name: "Dodge",
         professions: [],
         description: "Evade attacks by quickly moving out of the way. While dodging, you're temporarily invulnerable.",
@@ -64,7 +64,7 @@ const customSkills: CustomSkill[] = [
         slot: null
     },
     {
-        id: CommonSkill.DropBundle,
+        id: CommonSkillId.DropBundle,
         name: "Drop Bundle",
         professions: [],
         description: "Drop your currently equipped bundle.",
@@ -76,7 +76,7 @@ const customSkills: CustomSkill[] = [
         slot: null
     },
     {
-        id: CommonSkill.SAK,
+        id: CommonSkillId.SAK,
         name: "Special Action Skill",
         professions: [],
         description: "Perform a fight-specific special action.",
@@ -85,7 +85,7 @@ const customSkills: CustomSkill[] = [
         slot: null
     },
     {
-        id: CommonSkill.Mistlock,
+        id: CommonSkillId.Mistlock,
         name: "Mistlock Singularity",
         professions: [],
         description: "Gain the Rigorous Certainty effect, recharge all skills on cooldown, and repair all equipped armor.",
@@ -108,7 +108,7 @@ const customSkills: CustomSkill[] = [
         ]
     },
     {
-        id: CommonSkill.WhiteMantlePortal,
+        id: CommonSkillId.WhiteMantlePortal,
         name: "White Mantle Portal Device",
         professions: [],
         description: "Receive a bundle item that can create a portal between two locations.",
@@ -117,7 +117,7 @@ const customSkills: CustomSkill[] = [
         slot: null
     },
     {
-        id: CommonSkill.PortalEntrance,
+        id: CommonSkillId.PortalEntrance,
         name: "Portal Entrance",
         professions: [],
         description: "Create an entry portal.",
@@ -139,7 +139,7 @@ const customSkills: CustomSkill[] = [
         ]
     },
     {
-        id: CommonSkill.PortalExit,
+        id: CommonSkillId.PortalExit,
         name: "Portal Exit",
         professions: [],
         description: "Create an exit portal.",

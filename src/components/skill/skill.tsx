@@ -8,7 +8,7 @@ import {SkillContextMenu} from "./context-menu";
 import {Keybind} from "./keybind";
 import {useShowKeys} from "../../store/settings";
 import {DragId, SkillData} from "../../util/drag";
-import {CommonSkill, getCustomSkill, getSearchValue} from "../../data/custom";
+import {CommonSkillId, getCommonSkill, getSearchValue} from "../../data/common";
 import {SkillSlot} from "../../data";
 
 const dragCursor = css`cursor: grab`;
@@ -37,24 +37,24 @@ const slotColumn = {
 const SkillIcon = ({skill, tooltip = false, orderSelf = false, ...props}: SkillIconProps, ref: React.Ref<HTMLElement>): JSX.Element => {
     const {data} = useSkill(skill);
     const showKeys = useShowKeys();
-    const custom = getCustomSkill(skill);
-    const slot = data?.slot ?? custom?.slot;
+    const common = getCommonSkill(skill);
+    const slot = data?.slot ?? common?.slot;
 
     return (
         <Stack ref={ref} direction="column" alignItems="center" {...props} sx={{
             gridColumn: orderSelf ? slotColumn[slot] : null,
             ...props.sx
         }}>
-            {custom ? (
+            {common ? (
                 <CustomComponent
                     type="Skill"
-                    data={custom}
+                    data={common}
                     disableLink
                     disableText
                     disableTooltip={!tooltip}
                     iconProps={{
-                        ...custom.iconProps,
-                        className: clsx(iconStyles, custom.iconProps?.className)
+                        ...common.iconProps,
+                        className: clsx(iconStyles, common.iconProps?.className)
                     }}
                 />
             ) : (
@@ -103,7 +103,7 @@ export const DraggableSkill = ({parentId, dragId, index, skill, orderSelf, onDup
     return (
         <SkillContextMenu
             skill={skill}
-            isCommon={skill in CommonSkill}
+            isCommon={skill in CommonSkillId}
             searchValue={searchValue}
             onDuplicate={onDuplicate}
             onDelete={onDelete}
