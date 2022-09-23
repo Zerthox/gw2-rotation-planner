@@ -18,6 +18,7 @@ export const useLoadTimeline = ({gist, file, url, share}: LoadParams): void => {
 
     useEffect(() => {
         // TODO: show loading & error in ui
+        // TODO: add param for dps.report log
         try {
             if (gist) {
                 fetchFromGist(gist, file).then((rows) => dispatch(overrideRows(rows)));
