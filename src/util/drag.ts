@@ -1,6 +1,7 @@
 import {nanoid} from "nanoid/non-secure";
+import {UniqueIdentifier} from "@dnd-kit/core";
 
-export type DragId = string;
+export type DragId = UniqueIdentifier;
 
 export enum DragType {
     Row = "row",
@@ -12,7 +13,7 @@ export enum DragType {
 
 export const createDragId = (type: DragType): DragId => `${type}-${nanoid()}`;
 
-export const isa = (type: DragType, id: DragId): boolean => id?.startsWith(type);
+export const isa = (type: DragType, id: DragId): boolean => id?.toString().startsWith(type);
 
 export interface SkillData {
     parentId: DragId;
