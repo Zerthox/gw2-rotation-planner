@@ -127,6 +127,11 @@ export const SettingsContent = (): JSX.Element => {
                         onChange={(_, checked) => dispatch(setDevMode(checked))}
                     />
                 </FormGroup>
+                <Button
+                    variant="outlined"
+                    disabled={!window.gtag}
+                    onClick={() => window.gaOptout()}
+                >Deactivate Google Tracking</Button>
             </SettingsGroup>
         </>
     );

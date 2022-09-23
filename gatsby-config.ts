@@ -35,6 +35,18 @@ const config: GatsbyConfig = {
                 emitWarning: true,
                 failOnError: false
             }
+        },
+        {
+            resolve: "gatsby-plugin-google-gtag",
+            options: {
+                trackingIds: ["G-L65RG8ZXVJ"],
+                gtagConfig: {
+                    anonymize_ip: true
+                },
+                pluginConfig: {
+                    respectDNT: true
+                }
+            }
         }
     ]
 };
