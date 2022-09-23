@@ -19,8 +19,9 @@ export const getSearchValue = (id: number): string => getCommonSkill(id)?.wiki ?
 
 export enum CommonSkillId {
     WeaponSwap = 1,
-    Dodge = 2,
     DropBundle = 3,
+    Dodge = 23275, // arcdps custom id
+    Resurrect = 1066, // arcdps custom id
     SAK = 39157, // hypernova launch id
     Mistlock = 33652, // rigorous certainty id
     WhiteMantlePortal = 5,
@@ -30,18 +31,18 @@ export enum CommonSkillId {
 
 const initialSize = css`background-size: initial !important`;
 
+const containSize = css`background-size: contain !important`;
+
 const commonSkills: CommonSkill[] = [
     {
         id: CommonSkillId.WeaponSwap,
         name: "Weapon Swap",
-        professions: [],
         description: "Switch between your weapon sets.",
         icon: "https://wiki.guildwars2.com/images/c/ce/Weapon_Swap_Button.png",
         iconProps: {
             className: initialSize
         },
         wiki: "Weapon Swap",
-        slot: null,
         facts: [
             {
                 text: "Recharge",
@@ -52,49 +53,51 @@ const commonSkills: CommonSkill[] = [
         ]
     },
     {
-        id: CommonSkillId.Dodge,
-        name: "Dodge",
-        professions: [],
-        description: "Evade attacks by quickly moving out of the way. While dodging, you're temporarily invulnerable.",
-        icon: "https://wiki.guildwars2.com/images/archive/b/b2/20150601155307%21Dodge.png",
-        iconProps: {
-            className: initialSize
-        },
-        wiki: "Dodge",
-        slot: null
-    },
-    {
         id: CommonSkillId.DropBundle,
         name: "Drop Bundle",
-        professions: [],
         description: "Drop your currently equipped bundle.",
         icon: "https://render.guildwars2.com/file/7342BF326738A4C5132F42CE0915D3A2184E52FB/60975.png",
         iconProps: {
             className: initialSize
         },
-        wiki: "Bundle",
-        slot: null
+        wiki: "Bundle"
+    },
+    {
+        id: CommonSkillId.Dodge,
+        name: "Dodge",
+        description: "Evade attacks by quickly moving out of the way. While dodging, you are temporarily invulnerable.",
+        icon: "https://wiki.guildwars2.com/images/archive/b/b2/20150601155307%21Dodge.png",
+        iconProps: {
+            className: initialSize
+        },
+        wiki: "Dodge"
+    },
+    {
+        id: CommonSkillId.Resurrect,
+        name: "Resurrect",
+        description: "Resurrect your target from the downed or defeated state.",
+        icon: "https://wiki.guildwars2.com/images/3/3d/Downed_ally.png",
+        iconProps: {
+            className: containSize
+        },
+        wiki: "Revival"
     },
     {
         id: CommonSkillId.SAK,
         name: "Special Action Skill",
-        professions: [],
         description: "Perform a fight-specific special action.",
         icon: "https://wiki.guildwars2.com/images/5/56/Celestial_Dash.png",
-        wiki: "Special Action Skill",
-        slot: null
+        wiki: "Special Action Skill"
     },
     {
         id: CommonSkillId.Mistlock,
         name: "Mistlock Singularity",
-        professions: [],
         description: "Gain the Rigorous Certainty effect, recharge all skills on cooldown, and repair all equipped armor.",
         icon: "https://wiki.guildwars2.com/images/0/06/Mistlock_Singularity.png",
         iconProps: {
             className: initialSize
         },
         wiki: "Mistlock Singularity",
-        slot: null,
         facts: [
             {
                 text: "Apply Buff/Condition",
@@ -110,19 +113,15 @@ const commonSkills: CommonSkill[] = [
     {
         id: CommonSkillId.WhiteMantlePortal,
         name: "White Mantle Portal Device",
-        professions: [],
         description: "Receive a bundle item that can create a portal between two locations.",
         icon: "https://wiki.guildwars2.com/images/5/56/White_Mantle_Portal_Device.png",
-        wiki: "White Mantle Portal Device",
-        slot: null
+        wiki: "White Mantle Portal Device"
     },
     {
         id: CommonSkillId.PortalEntrance,
         name: "Portal Entrance",
-        professions: [],
         description: "Create an entry portal.",
         icon: "https://wiki.guildwars2.com/images/4/43/Watchwork_Portal_Device.png",
-        slot: null,
         facts: [
             {
                 text: "Recharge",
@@ -141,10 +140,8 @@ const commonSkills: CommonSkill[] = [
     {
         id: CommonSkillId.PortalExit,
         name: "Portal Exit",
-        professions: [],
         description: "Create an exit portal.",
         icon: "https://wiki.guildwars2.com/images/4/43/Watchwork_Portal_Device.png",
-        slot: null,
         facts: [
             {
                 text: "Duration",
