@@ -20,6 +20,6 @@ export const validOrError = (data: unknown): Row[] => {
     if (validate(data)) {
         return data;
     } else {
-        throw new Error("Invalid row JSON");
+        throw Error("Invalid row JSON");
     }
 };

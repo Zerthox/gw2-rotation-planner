@@ -18,6 +18,11 @@ export interface Log {
 export interface Player {
     name: string;
     account: string;
+    profession: string;
+    group: number;
+    hasCommanderTag: boolean;
+    guildID: string;
+    isFake: boolean;
     rotation: {
         id: number;
         skills: RotationCast[];
@@ -45,7 +50,7 @@ export const fetchLog = async (url: string): Promise<Log> => {
     if (res.status === 200) {
         return await res.json();
     } else {
-        throw new Error(`Unable to fetch log "${url}": Server responded with ${res.status} ${res.statusText}`);
+        throw Error(`Unable to fetch log "${url}": Server responded with ${res.status} ${res.statusText}`);
     }
 };
 
@@ -85,7 +90,6 @@ const findTimeIndex = (casts: Cast[], time: number): number => sortedIndexBy(cas
 export const getRotation = (log: Log, player: string, importPhases: boolean): Row[] => {
     const casts = getCasts(log, player);
     const phases = getFilteredPhases(log);
-    console.log(phases, log);
 
     if (!importPhases || phases.length === 0) {
         return [{

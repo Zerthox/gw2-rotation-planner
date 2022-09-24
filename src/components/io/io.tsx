@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {Stack, StackProps, Button} from "@mui/material";
 import {ImportExport, Share} from "@mui/icons-material";
-import {ExportModal} from "./export";
+import {ExportModal} from "./import-export";
 import {ShareModal} from "./share";
 import {useTheme} from "../../store/settings";
 import {isDark} from "../../themes";

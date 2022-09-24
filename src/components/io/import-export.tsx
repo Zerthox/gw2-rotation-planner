@@ -9,19 +9,15 @@ import {
     Typography,
     Button,
     IconButton,
-    TextField,
-    FormGroup,
-    FormControlLabel,
-    Switch,
-    Tooltip
+    TextField
 } from "@mui/material";
 import {ImportExport, Close, Save, ContentCopy} from "@mui/icons-material";
 import {useDispatch} from "react-redux";
 import {CooldownButton, Link} from "../general";
+import {LogImport} from "./log-import";
 import {useStatelessRows, overrideRows, Row} from "../../store/timeline";
 import {validate} from "../../util/validate";
 import {copyToClipboard} from "../../util/clipboard";
-import {fetchLog, getRotation} from "../../util/log";
 
 // custom json formatting
 const toJson = (rows: Row[]): string => {
@@ -37,7 +33,7 @@ const toJson = (rows: Row[]): string => {
 };
 
 export interface ExportModalContentProps {
-    onClose: () => void;
+    onClose(): void;
 }
 
 export const ExportModalContent = ({onClose}: ExportModalContentProps): JSX.Element => {
@@ -46,9 +42,6 @@ export const ExportModalContent = ({onClose}: ExportModalContentProps): JSX.Elem
     const initialJson = useMemo(() => toJson(initialRows), [initialRows]);
 
     const [{json, rows}, setContent] = useState(() => ({json: initialJson, rows: initialRows}));
-    const [url, setUrl] = useState("");
-    const [phases, setPhases] = useState(true);
-    const [fetching, setFetching] = useState(false);
 
     // TODO: validation logic as hook?
     const updateJson = (json: string) => {
@@ -78,40 +71,11 @@ export const ExportModalContent = ({onClose}: ExportModalContentProps): JSX.Elem
                 </Stack>
             </DialogTitle>
             <DialogContent dividers>
-                <Typography variant="body1">
+                <Typography variant="body1" marginBottom={1}>
                     Import a rotation from a log uploaded to <Link newTab to="https://dps.report">dps.report</Link> or edit it in the JSON format below.
                 </Typography>
                 <Stack direction="column" spacing={1}>
-                    <Stack direction="row" alignItems="center">
-                        <TextField
-                            variant="standard"
-                            value={url}
-                            placeholder="https://dps.report/abcd-12345678-123456_boss"
-                            onChange={({target}) => setUrl(target.value)}
-                            sx={{flexGrow: 1}}
-                        />
-                        <Tooltip title="Use phases from log as sections">
-                            <FormGroup>
-                                <FormControlLabel
-                                    label="Phases"
-                                    control={<Switch/>}
-                                    checked={phases}
-                                    onChange={(_, checked) => setPhases(checked)}
-                                />
-                            </FormGroup>
-                        </Tooltip>
-                        <Button
-                            variant="contained"
-                            disabled={fetching}
-                            onClick={async () => {
-                                setFetching(true);
-                                const log = await fetchLog(url);
-                                // TODO: allow to select player
-                                updateJson(toJson(getRotation(log, log.recordedBy, phases)));
-                                setFetching(false);
-                            }}
-                        >Import log</Button>
-                    </Stack>
+                    <LogImport onChange={(rows) => updateJson(toJson(rows))}/>
                     <TextField
                         value={json}
                         error={isError}

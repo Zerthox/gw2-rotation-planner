@@ -12,6 +12,36 @@ export enum Profession {
     Revenant = "Revenant"
 }
 
+export enum EliteSpecialization {
+    Dragonhunter = "Dragonhunter",
+    Firebrand = "Firebrand",
+    Willbender = "Willbender",
+    Berserker = "Berserker",
+    Spellbreaker = "Spellbreaker",
+    Bladesworn = "Bladesworn",
+    Scrapper = "Scrapper",
+    Holosmith = "Holosmith",
+    Mechanist = "Mechanist",
+    Druid = "Druid",
+    Soulbeast = "Soulbeast",
+    Untamed = "Untamed",
+    Daredevil = "Daredevil",
+    Deadeye = "Deadeye",
+    Specter = "Specter",
+    Tempest = "Tempest",
+    Weaver = "Weaver",
+    Catalyst = "Catalyst",
+    Chronomancer = "Chronomancer",
+    Mirage = "Mirage",
+    Virtuoso = "Virtuoso",
+    Reaper = "Reaper",
+    Scourge = "Scourge",
+    Harbinger = "Harbinger",
+    Herald = "Herald",
+    Renegade = "Renegade",
+    Vindicator = "Vindicator"
+}
+
 export type Skill = ReturnType<typeof useSkill>["data"];
 
 export enum SkillType {

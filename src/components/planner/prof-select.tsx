@@ -1,9 +1,10 @@
 import React, {useCallback} from "react";
-import {Box, Stack, Select, SelectChangeEvent, SxProps, MenuItem, Typography} from "@mui/material";
+import {Select, SelectChangeEvent, SxProps, MenuItem} from "@mui/material";
 import {useDispatch} from "react-redux";
 import {useCurrentProfession, changeProfession} from "../../store/build";
+import {IconText} from "../general/icon-text";
 import {Profession} from "../../data";
-import {professionIcons, professionIconSize} from "../../assets/prof-icons";
+import {iconSize, professionIcons} from "../../assets/icons";
 
 export interface ProfessionSelectProps {
     sx?: SxProps;
@@ -21,17 +22,7 @@ export const ProfessionSelect = ({sx}: ProfessionSelectProps): JSX.Element => {
         <Select value={prof ?? ""} onChange={onChange} sx={sx}>
             {Object.entries(professionIcons).map(([name, icon]) => (
                 <MenuItem key={name} value={name}>
-                    <Stack direction="row" alignItems="center" spacing={0.5}>
-                        <Box
-                            component="img"
-                            src={icon}
-                            height={professionIconSize}
-                            width={professionIconSize}
-                        />
-                        <Typography>
-                            {name}
-                        </Typography>
-                    </Stack>
+                    <IconText icon={icon} size={iconSize}>{name}</IconText>
                 </MenuItem>
             ))}
         </Select>

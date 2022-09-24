@@ -11,10 +11,10 @@ export const fetchFromGist = async (gist: string, file: string = null): Promise<
     ) ?? {};
 
     if (!content) {
-        throw new Error("Could not find file in gist");
+        throw Error("Could not find file in gist");
     }
     if (truncated) {
-        throw new Error("Truncated files in gist are not supported yet");
+        throw Error("Truncated files in gist are not supported yet");
     }
 
     const data = JSON.parse(content);
@@ -27,6 +27,6 @@ export const fetchFromURL = async (url: string): Promise<Row[]> => {
         const data = await res.json();
         return validOrError(data);
     } else {
-        throw new Error(`Unable to fetch "${url}": Server responded with ${res.status} ${res.statusText}`);
+        throw Error(`Unable to fetch "${url}": Server responded with ${res.status} ${res.statusText}`);
     }
 };

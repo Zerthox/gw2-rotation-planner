@@ -19,7 +19,7 @@ const u24ToBytes = (data: number[]): Uint8Array => {
 
 const u24FromBytes = (bytes: Uint8Array): number[] => {
     if (bytes.length % 3 !== 0) {
-        throw new Error(`Illegal bytes length: ${bytes.length}`);
+        throw Error(`Illegal bytes length: ${bytes.length}`);
     }
 
     const result: number[] = [];
@@ -43,7 +43,7 @@ export const encodeShare = (rows: Row[]): string => VERSION + rows.map((row) => 
 
 export const decodeShare = (data: string): Row[] => {
     if (data[0] !== VERSION) {
-        throw new Error(`Unsupported version: ${data[0]}`);
+        throw Error(`Unsupported version: ${data[0]}`);
     }
     data = data.slice(1);
 
