@@ -1,5 +1,5 @@
 import {sortedIndexBy} from "lodash";
-import {CommonSkillId} from "../data/common";
+import {CommonSkillId, SpecialActionSkill} from "../data/common";
 import {Row} from "../store/timeline";
 
 export interface Log {
@@ -59,7 +59,6 @@ export interface Cast {
     time: number;
 }
 
-// TODO: map other known special action keys
 const SKILL_MAPPING = {
     [-2]: CommonSkillId.WeaponSwap
 };
@@ -71,7 +70,7 @@ export const getCasts = (log: Log, playerName: string): Cast[] => {
     for (const {id, skills} of player.rotation) {
         for (const {timeGained, castTime} of skills) {
             if (timeGained >= 0) {
-                const cast = {skill: SKILL_MAPPING[id] ?? id, time: castTime};
+                const cast = {skill: SKILL_MAPPING[id] ?? (id in SpecialActionSkill ? CommonSkillId.SpecialAction : id), time: castTime};
                 const index = sortedIndexBy(result, cast, (entry) => entry.time);
                 result.splice(index, 0, cast);
             }

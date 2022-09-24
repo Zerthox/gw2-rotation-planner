@@ -17,12 +17,22 @@ export const getCommonSkill = (id: number): CommonSkill => getAllCommonSkills().
 
 export const getSearchValue = (id: number): string => getCommonSkill(id)?.wiki ?? (encodeChatcode("skill", id) || null);
 
+// TODO: add other relevant special action skills
+export enum SpecialActionSkill {
+    SapperBomb = 31488,
+    CelestialDash = 37924,
+    ConjuredSlash = 52325,
+    ConjuredShield = 52780,
+    NovaLaunch = 39843,
+    HypernovaLaunch = 39157
+}
+
 export enum CommonSkillId {
     WeaponSwap = 1,
     DropBundle = 3,
     Dodge = 23275, // arcdps custom id
     Resurrect = 1066, // arcdps custom id
-    SAK = 39157, // hypernova launch id
+    SpecialAction = SpecialActionSkill.HypernovaLaunch,
     Mistlock = 33652, // rigorous certainty id
     WhiteMantlePortal = 5,
     PortalEntrance = 35155, // wmpd entrance id
@@ -83,7 +93,7 @@ const commonSkills: CommonSkill[] = [
         wiki: "Revival"
     },
     {
-        id: CommonSkillId.SAK,
+        id: CommonSkillId.SpecialAction,
         name: "Special Action Skill",
         description: "Perform a fight-specific special action.",
         icon: "https://wiki.guildwars2.com/images/5/56/Celestial_Dash.png",
