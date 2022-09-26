@@ -6,6 +6,12 @@ import {Theme} from "../themes";
 
 export type Keybinds<T> = Record<SkillSlot, T>;
 
+export enum KeyDisplay {
+    None = "none",
+    Bound = "bound",
+    All = "all"
+}
+
 export const defaultKeybinds = {
     [SkillSlot.Profession1]: "F1",
     [SkillSlot.Profession2]: "F2",
@@ -29,7 +35,7 @@ export const settingsSlice = createSlice({
     name: "settings",
     initialState: {
         theme: Theme.Dark,
-        showKeys: true,
+        showKeys: KeyDisplay.All,
         keybinds: defaultKeybinds,
         dev: false
     },
@@ -37,7 +43,7 @@ export const settingsSlice = createSlice({
         setTheme(state, {payload}: PayloadAction<Theme>) {
             state.theme = payload;
         },
-        setShowKeys(state, {payload}: PayloadAction<boolean>) {
+        setShowKeys(state, {payload}: PayloadAction<KeyDisplay>) {
             state.showKeys = payload;
         },
         setKeybinds(state, {payload}: PayloadAction<Partial<Keybinds<string>>>) {
@@ -56,8 +62,8 @@ export const {setTheme, setShowKeys, setKeybinds, setDevMode} = settingsSlice.ac
 export const selectTheme = ({settingsReducer}: StoreState): Theme => settingsReducer.theme;
 export const useTheme = (): Theme => useSelector(selectTheme);
 
-export const selectShowKeys = ({settingsReducer}: StoreState): boolean => settingsReducer.showKeys;
-export const useShowKeys = (): boolean => useSelector(selectShowKeys);
+export const selectShowKeys = ({settingsReducer}: StoreState): KeyDisplay => settingsReducer.showKeys;
+export const useShowKeys = (): KeyDisplay => useSelector(selectShowKeys);
 
 export const selectKeybinds = ({settingsReducer}: StoreState): Keybinds<string> => {
     const {keybinds} = settingsReducer;

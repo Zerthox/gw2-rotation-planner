@@ -1,8 +1,26 @@
 import React from "react";
-import {Box, BoxProps, Typography, FormControlLabel, TextField, ToggleButtonGroup, ToggleButton, SxProps, Button, Switch, FormHelperText, FormGroup} from "@mui/material";
+import {
+    Box,
+    BoxProps,
+    Stack,
+    Typography,
+    TextField,
+    ToggleButtonGroup,
+    ToggleButton,
+    Button,
+    Switch,
+    FormHelperText,
+    FormGroup,
+    FormControl,
+    FormLabel,
+    FormControlLabel,
+    RadioGroup,
+    Radio,
+    SxProps
+} from "@mui/material";
 import {DarkMode, LightMode} from "@mui/icons-material";
 import {useDispatch} from "react-redux";
-import {setTheme, setKeybinds, useTheme, useKeybinds, defaultKeybinds, useDevMode, setDevMode, useShowKeys, setShowKeys} from "../../store/settings";
+import {setTheme, setKeybinds, useTheme, useKeybinds, defaultKeybinds, useDevMode, setDevMode, useShowKeys, setShowKeys, KeyDisplay} from "../../store/settings";
 import {SkillSlot} from "../../data";
 import {Theme} from "../../themes";
 
@@ -13,9 +31,14 @@ export interface SettingsGroupProps extends BoxProps {
 export const SettingsGroup = ({title, children, ...props}: SettingsGroupProps): JSX.Element => (
     <Box {...props}>
         <Typography variant="subtitle1">{title}</Typography>
-        <Box marginY={1}>
+        <Stack
+            direction="column"
+            alignItems="start"
+            spacing={1}
+            marginY={1}
+        >
             {children}
-        </Box>
+        </Stack>
     </Box>
 );
 
@@ -74,14 +97,18 @@ export const SettingsContent = (): JSX.Element => {
                 </ToggleButtonGroup>
             </SettingsGroup>
             <SettingsGroup title="Keybinds" marginBottom={3}>
-                <FormGroup>
-                    <FormControlLabel
-                        label="Show skill keys"
-                        control={<Switch/>}
-                        checked={showKeys}
-                        onChange={(_, checked) => dispatch(setShowKeys(checked))}
-                    />
-                </FormGroup>
+                <FormControl>
+                    <FormLabel>Keybind display</FormLabel>
+                    <RadioGroup
+                        row
+                        value={showKeys}
+                        onChange={({target}) => dispatch(setShowKeys(target.value as KeyDisplay))}
+                    >
+                        <FormControlLabel control={<Radio/>} value={KeyDisplay.All} label="All"/>
+                        <FormControlLabel control={<Radio/>} value={KeyDisplay.Bound} label="Bound"/>
+                        <FormControlLabel control={<Radio/>} value={KeyDisplay.None} label="None"/>
+                    </RadioGroup>
+                </FormControl>
                 {groups.map((group, i) => (
                     <Box
                         key={i}

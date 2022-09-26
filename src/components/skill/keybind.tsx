@@ -1,7 +1,7 @@
 import React from "react";
 import {Box} from "@mui/material";
 import {SkillSlot} from "../../data";
-import {useKeybind} from "../../store/settings";
+import {KeyDisplay, useKeybind, useShowKeys} from "../../store/settings";
 
 export interface KeybindProps {
     slot?: SkillSlot;
@@ -9,8 +9,11 @@ export interface KeybindProps {
 
 export const Keybind = ({slot}: KeybindProps): JSX.Element => {
     const keybind = useKeybind(slot);
+    const showKeys = useShowKeys();
 
-    return (
+    const show = showKeys === KeyDisplay.All || showKeys === KeyDisplay.Bound && keybind;
+
+    return show ? (
         <Box sx={{
             position: "absolute",
             bottom: "-0.5em",
@@ -27,5 +30,5 @@ export const Keybind = ({slot}: KeybindProps): JSX.Element => {
             pointerEvents: "none",
             zIndex: 1
         }}>{keybind ?? "..."}</Box>
-    );
+    ) : null;
 };
