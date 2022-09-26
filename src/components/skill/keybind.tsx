@@ -12,17 +12,17 @@ export const Keybind = ({slot}: KeybindProps): JSX.Element => {
 
     return (
         <Box sx={{
+            position: "absolute",
+            bottom: "-0.5em",
+            height: "1.75em",
             display: "flex",
             alignItems: "center",
             justifyContent: "stretch",
-            marginTop: "-1em",
-            marginBottom: "-0.5em",
-            height: "2em",
-            padding: [1, 1],
+            padding: "0.75em",
             background: "rgba(0, 0, 0, .7)",
             borderRadius: "50%",
             color: "#fff",
-            fontSize: "0.7em",
+            fontSize: "0.23em",
             fontWeight: "bold",
             pointerEvents: "none",
             zIndex: 1

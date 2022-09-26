@@ -6,14 +6,9 @@ import {Skill, CustomComponent, useSkill} from "@discretize/gw2-ui-new";
 import {useSortable} from "@dnd-kit/sortable";
 import {SkillContextMenu} from "./context-menu";
 import {Keybind} from "./keybind";
-import {useShowKeys} from "../../store/settings";
 import {DragId, SkillData} from "../../util/drag";
 import {CommonSkillId, getCommonSkill, getSearchValue} from "../../data/common";
 import {SkillSlot} from "../../data";
-
-const dragCursor = css`cursor: grab`;
-
-const iconStyles = css`font-size: 3em`;
 
 export interface SkillIconProps extends StackProps {
     skill: number;
@@ -34,16 +29,18 @@ const slotColumn = {
     [SkillSlot.Weapon5]: 5
 };
 
-const SkillIcon = ({skill, tooltip = false, orderSelf = false, ...props}: SkillIconProps, ref: React.Ref<HTMLElement>): JSX.Element => {
+const SkillIcon = ({skill, tooltip = false, orderSelf = false, sx, ...props}: SkillIconProps, ref: React.Ref<HTMLElement>): JSX.Element => {
     const {data} = useSkill(skill);
-    const showKeys = useShowKeys();
     const common = getCommonSkill(skill);
     const slot = data?.slot ?? common?.slot;
 
     return (
         <Stack ref={ref} direction="column" alignItems="center" {...props} sx={{
+            position: "relative",
             gridColumn: orderSelf ? slotColumn[slot] : null,
-            ...props.sx
+            fontSize: "3em",
+            height: "1em",
+            ...sx
         }}>
             {common ? (
                 <CustomComponent
@@ -52,10 +49,7 @@ const SkillIcon = ({skill, tooltip = false, orderSelf = false, ...props}: SkillI
                     disableLink
                     disableText
                     disableTooltip={!tooltip}
-                    iconProps={{
-                        ...common.iconProps,
-                        className: clsx(iconStyles, common.iconProps?.className)
-                    }}
+                    iconProps={common.iconProps}
                 />
             ) : (
                 <Skill
@@ -63,12 +57,9 @@ const SkillIcon = ({skill, tooltip = false, orderSelf = false, ...props}: SkillI
                     disableLink
                     disableText
                     disableTooltip={!tooltip}
-                    iconProps={{
-                        className: iconStyles
-                    }}
                 />
             )}
-            {showKeys ? <Keybind slot={slot as SkillSlot}/> : null}
+            <Keybind slot={slot as SkillSlot}/>
         </Stack>
     );
 };
@@ -85,6 +76,8 @@ export interface DraggableSkillProps {
     onDelete?: () => void;
     sx?: SxProps;
 }
+
+const dragCursor = css`cursor: grab`;
 
 const placeholderStyles = css`opacity: .3`;
 
