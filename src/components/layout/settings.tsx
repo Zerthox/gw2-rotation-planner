@@ -20,7 +20,7 @@ import {
 } from "@mui/material";
 import {DarkMode, LightMode} from "@mui/icons-material";
 import {useDispatch} from "react-redux";
-import {setTheme, setKeybinds, useTheme, useKeybinds, defaultKeybinds, useDevMode, setDevMode, useShowKeys, setShowKeys, KeyDisplay} from "../../store/settings";
+import {setTheme, setKeybinds, useTheme, useKeybinds, defaultKeybinds, useDevMode, setDevMode, useKeyDisplay, setKeyDisplay, KeyDisplay} from "../../store/settings";
 import {SkillSlot} from "../../data";
 import {Theme} from "../../themes";
 
@@ -74,7 +74,7 @@ const iconProps: SxProps = {
 export const SettingsContent = (): JSX.Element => {
     const dispatch = useDispatch();
     const theme = useTheme();
-    const showKeys = useShowKeys();
+    const keyDisplay = useKeyDisplay();
     const keybinds = useKeybinds();
     const isDev = useDevMode();
 
@@ -101,8 +101,8 @@ export const SettingsContent = (): JSX.Element => {
                     <FormLabel>Keybind display</FormLabel>
                     <RadioGroup
                         row
-                        value={showKeys}
-                        onChange={({target}) => dispatch(setShowKeys(target.value as KeyDisplay))}
+                        value={keyDisplay}
+                        onChange={({target}) => dispatch(setKeyDisplay(target.value as KeyDisplay))}
                     >
                         <FormControlLabel control={<Radio/>} value={KeyDisplay.All} label="All"/>
                         <FormControlLabel control={<Radio/>} value={KeyDisplay.Bound} label="Bound"/>
@@ -121,7 +121,7 @@ export const SettingsContent = (): JSX.Element => {
                             <TextField
                                 key={slot}
                                 variant="standard"
-                                disabled={!showKeys}
+                                disabled={!keyDisplay}
                                 label={label}
                                 placeholder="Key name"
                                 value={keybinds[slot]}
@@ -136,7 +136,7 @@ export const SettingsContent = (): JSX.Element => {
                 ))}
                 <Button
                     variant="outlined"
-                    disabled={!showKeys}
+                    disabled={!keyDisplay}
                     onClick={() => dispatch(setKeybinds(defaultKeybinds))}
                 >Reset Keybinds</Button>
             </SettingsGroup>

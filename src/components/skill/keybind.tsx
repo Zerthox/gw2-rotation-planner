@@ -1,7 +1,7 @@
 import React from "react";
 import {Box} from "@mui/material";
 import {SkillSlot} from "../../data";
-import {KeyDisplay, useKeybind, useShowKeys} from "../../store/settings";
+import {KeyDisplay, useKeybind, useKeyDisplay} from "../../store/settings";
 
 export interface KeybindProps {
     slot?: SkillSlot;
@@ -9,9 +9,9 @@ export interface KeybindProps {
 
 export const Keybind = ({slot}: KeybindProps): JSX.Element => {
     const keybind = useKeybind(slot);
-    const showKeys = useShowKeys();
+    const keyDisplay = useKeyDisplay();
 
-    const show = showKeys === KeyDisplay.All || showKeys === KeyDisplay.Bound && keybind;
+    const show = keyDisplay === KeyDisplay.All || keyDisplay === KeyDisplay.Bound && keybind;
 
     return show ? (
         <Box sx={{
