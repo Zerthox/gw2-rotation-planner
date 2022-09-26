@@ -24,6 +24,7 @@ export const Keybind = ({slot}: KeybindProps): JSX.Element => {
             color: "#fff",
             fontSize: "0.7em",
             fontWeight: "bold",
+            pointerEvents: "none",
             zIndex: 1
         }}>{keybind ?? "..."}</Box>
     );
