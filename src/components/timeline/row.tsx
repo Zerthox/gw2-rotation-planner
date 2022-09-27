@@ -1,14 +1,13 @@
 import React, {useMemo} from "react";
 import {Box, Stack, TextField, Card, CardProps, Typography} from "@mui/material";
-import {ArrowUpward, ArrowDownward, Delete, PlusOne, Clear, Message} from "@mui/icons-material";
 import {useDroppable} from "@dnd-kit/core";
 import {rectSortingStrategy, SortableContext} from "@dnd-kit/sortable";
 import {useDispatch} from "react-redux";
-import {IconButton, ContextMenu, ContextMenuProps} from "../general";
 import {DraggableSkill} from "../skill";
+import {RowButtons} from "./row-buttons";
+import {RowContextMenu} from "./row-menu";
 import {OverData} from "../../util/drag";
-import {deleteRow, moveRow, updateRowName, insertRowSkill, deleteRowSkill, insertRow, clearRowSkills, RowState} from "../../store/timeline";
-import {createSkillState} from "../../store/build";
+import {deleteRow, moveRow, updateRowName, insertRow, clearRowSkills, RowState} from "../../store/timeline";
 import {getSearchValue} from "../../data/common";
 import {copyToClipboard} from "../../util/clipboard";
 
@@ -23,105 +22,16 @@ export interface RowActions {
     onDelete: () => void;
 }
 
-export type RowContextMenuProps = RowActions & ContextMenuProps;
-
-export const RowContextMenu = ({isFirst, isLast, isEmpty, onDuplicate, onMove, onCopy, onClear, onDelete, ...props}: RowContextMenuProps): JSX.Element => (
-    <ContextMenu {...props} items={[
-        {
-            key: "duplicate",
-            text: "Duplicate Section",
-            icon: <PlusOne/>,
-            action: () => onDuplicate()
-        },
-        {
-            key: "up",
-            text: "Move Up",
-            icon: <ArrowUpward/>,
-            disabled: isFirst,
-            action: () => onMove(true)
-        },
-        {
-            key: "down",
-            text: "Move Down",
-            icon: <ArrowDownward/>,
-            disabled: isLast,
-            action: () => onMove(false)
-        },
-        {
-            key: "copy",
-            text: "Copy Chat Message",
-            icon: <Message/>,
-            disabled: isEmpty,
-            action: () => onCopy()
-        },
-        {
-            key: "clear",
-            text: "Clear Section",
-            icon: <Clear/>,
-            disabled: isEmpty,
-            action: () => onClear()
-        },
-        {
-            key: "delete",
-            text: "Delete Section",
-            icon: <Delete/>,
-            color: "error.main",
-            action: () => onDelete()
-        }
-    ]}/>
-);
-
-export type RowButtonsProps = Omit<RowActions, "onDuplicate" | "onCopy">;
-
-export const RowButtons = ({isFirst, isLast, isEmpty, onMove, onClear, onDelete}: RowButtonsProps): JSX.Element => (
-    <Stack direction="row" alignItems="center" spacing={0.5}>
-        <IconButton
-            title="Clear Section"
-            disabled={isEmpty}
-            onClick={() => onClear()}
-        >
-            <Clear/>
-        </IconButton>
-        <Stack direction="column" alignItems="center">
-            <IconButton
-                title="Move Up"
-                disabled={isFirst}
-                onClick={() => onMove(true)}
-            >
-                <ArrowUpward/>
-            </IconButton>
-            <IconButton
-                title="Move Down"
-                disabled={isLast}
-                onClick={() => onMove(false)}
-            >
-                <ArrowDownward/>
-            </IconButton>
-        </Stack>
-        <IconButton
-            title="Delete Section"
-            onClick={() => onDelete()}
-        >
-            <Delete/>
-        </IconButton>
-    </Stack>
-);
-
 export interface RowProps extends CardProps {
     row: RowState;
     index: number;
     isLast: boolean;
 }
 
-export const Row = ({row, index, isLast, ...props}: RowProps): JSX.Element => {
+const RowContent = ({row, index, isLast, ...props}: RowProps, ref: React.Ref<HTMLDivElement>): JSX.Element => {
     const dispatch = useDispatch();
 
     const items = row.skills.map(({dragId}) => dragId);
-    const {setNodeRef} = useDroppable({
-        id: row.dragId,
-        data: {parentId: row.dragId, index: items.length} as OverData
-    });
-
     const actions = useMemo<RowActions>(() => ({
         isFirst: index === 0,
         isLast,
@@ -153,7 +63,7 @@ export const Row = ({row, index, isLast, ...props}: RowProps): JSX.Element => {
                         onChange={({target}) => dispatch(updateRowName({rowId: row.dragId, name: target.value}))}
                         sx={{flex: "none"}}
                     />
-                    <Box flexGrow={1} ref={setNodeRef}>
+                    <Box flexGrow={1} ref={ref}>
                         <SortableContext
                             items={items}
                             strategy={rectSortingStrategy}
@@ -172,15 +82,8 @@ export const Row = ({row, index, isLast, ...props}: RowProps): JSX.Element => {
                                             parentId={row.dragId}
                                             index={i}
                                             skill={skillId}
-                                            onDuplicate={() => dispatch(insertRowSkill({
-                                                rowId: row.dragId,
-                                                index: i + 1,
-                                                skill: createSkillState(skillId)
-                                            }))}
-                                            onDelete={() => dispatch(deleteRowSkill({
-                                                rowId: row.dragId,
-                                                skillId: dragId
-                                            }))}
+                                            canDuplicate
+                                            canDelete
                                         />
                                     ))}
                                 </Box>
@@ -196,4 +99,15 @@ export const Row = ({row, index, isLast, ...props}: RowProps): JSX.Element => {
             </Card>
         </RowContextMenu>
     );
+};
+
+const WrappedRowContent = React.memo(React.forwardRef(RowContent));
+
+export const Row = ({row, ...props}: RowProps): JSX.Element => {
+    const {setNodeRef} = useDroppable({
+        id: row.dragId,
+        data: {parentId: row.dragId, index: row.skills.length} as OverData
+    });
+
+    return <WrappedRowContent row={row} ref={setNodeRef} {...props}/>;
 };

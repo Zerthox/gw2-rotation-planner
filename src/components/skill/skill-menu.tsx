@@ -1,20 +1,28 @@
 import React from "react";
 import {OpenInNew, DataObject, DataArray, Fingerprint, PlusOne, Delete} from "@mui/icons-material";
+import {useDispatch} from "react-redux";
 import {ContextMenu, ContextMenuProps} from "../general";
 import {useDevMode} from "../../store/settings";
 import {copyToClipboard} from "../../util/clipboard";
 import {getSearchValue, CommonSkillId} from "../../data/common";
+import {deleteRowSkill, insertRowSkill} from "../../store/timeline";
+import {createSkillState} from "../../store/build";
+import {DragId} from "../../util/drag";
 
 const wikiUrl = "https://wiki.guildwars2.com";
 const apiUrl = "https://api.guildwars2.com";
 
 export interface SkillContextMenuProps extends ContextMenuProps {
     skill: number;
-    onDuplicate?: () => void;
-    onDelete?: () => void;
+    index: number;
+    dragId: DragId;
+    parentId: DragId;
+    canDuplicate?: boolean;
+    canDelete?: boolean;
 }
 
-export const SkillContextMenu = ({skill, onDuplicate, onDelete, ...props}: SkillContextMenuProps): JSX.Element => {
+export const SkillContextMenu = ({skill, index, dragId, parentId, canDuplicate, canDelete, ...props}: SkillContextMenuProps): JSX.Element => {
+    const dispatch = useDispatch();
     const isDev = useDevMode();
 
     const isCommon = skill in CommonSkillId;
@@ -22,11 +30,15 @@ export const SkillContextMenu = ({skill, onDuplicate, onDelete, ...props}: Skill
 
     return (
         <ContextMenu {...props} items={[
-            onDuplicate ? {
+            canDuplicate ? {
                 key: "duplicate",
                 text: "Duplicate Skill",
                 icon: <PlusOne/>,
-                action: () => onDuplicate()
+                action: () => dispatch(insertRowSkill({
+                    rowId: parentId,
+                    index: index + 1,
+                    skill: createSkillState(skill)
+                }))
             } : null,
             searchValue ? {
                 key: "wiki",
@@ -65,9 +77,12 @@ export const SkillContextMenu = ({skill, onDuplicate, onDelete, ...props}: Skill
                     action: () => copyToClipboard(searchValue)
                 } : null
             ] : [],
-            onDelete ? {
+            canDelete ? {
                 key: "delete",
-                action: () => onDelete(),
+                action: () => dispatch(deleteRowSkill({
+                    rowId: parentId,
+                    skillId: dragId
+                })),
                 text: "Delete Skill",
                 icon: <Delete/>,
                 color: "error.main"

@@ -4,7 +4,8 @@ import {css} from "@emotion/css";
 import {Stack, StackProps, SxProps} from "@mui/material";
 import {Skill, CustomComponent, useSkill} from "@discretize/gw2-ui-new";
 import {useSortable} from "@dnd-kit/sortable";
-import {SkillContextMenu, SkillContextMenuProps} from "./context-menu";
+import {shallowEqual} from "react-redux";
+import {SkillContextMenu, SkillContextMenuProps} from "./skill-menu";
 import {Keybind} from "./keybind";
 import {DragId, SkillData} from "../../util/drag";
 import {getCommonSkill} from "../../data/common";
@@ -71,24 +72,25 @@ interface SkillContentProps {
     contextMenuProps: Omit<SkillContextMenuProps, "children">;
 }
 
-const SkillContent = ({iconProps, contextMenuProps}: SkillContentProps): JSX.Element => {
-    return (
-        <SkillContextMenu {...contextMenuProps}>
-            <SkillIconWithRef {...iconProps}/>
-        </SkillContextMenu>
-    );
-};
+const SkillContent = ({iconProps, contextMenuProps}: SkillContentProps): JSX.Element => (
+    <SkillContextMenu {...contextMenuProps}>
+        <SkillIconWithRef {...iconProps}/>
+    </SkillContextMenu>
+);
 
-const SkillContentMemo = React.memo(SkillContent);
+const SkillContentMemo = React.memo(
+    SkillContent,
+    (prev, next) => shallowEqual(prev.iconProps, next.iconProps) && shallowEqual(prev.contextMenuProps, next.contextMenuProps)
+);
 
 export interface DraggableSkillProps {
+    skill: number;
+    index: number;
     dragId: DragId;
     parentId: DragId;
-    index: number;
-    skill: number;
     orderSelf?: boolean;
-    onDuplicate?: () => void;
-    onDelete?: () => void;
+    canDuplicate?: boolean;
+    canDelete?: boolean;
     sx?: SxProps;
 }
 
@@ -96,7 +98,7 @@ const dragCursor = css`cursor: grab`;
 
 const placeholderStyles = css`opacity: .3`;
 
-export const DraggableSkill = ({parentId, dragId, index, skill, orderSelf, onDuplicate, onDelete, sx}: DraggableSkillProps): JSX.Element => {
+export const DraggableSkill = ({skill, index, parentId, dragId, orderSelf, canDuplicate, canDelete, sx}: DraggableSkillProps): JSX.Element => {
     const {attributes, listeners, setNodeRef, isDragging} = useSortable({
         id: dragId,
         data: {
@@ -119,8 +121,11 @@ export const DraggableSkill = ({parentId, dragId, index, skill, orderSelf, onDup
         }}
         contextMenuProps={{
             skill,
-            onDuplicate,
-            onDelete
+            index,
+            dragId,
+            parentId,
+            canDuplicate,
+            canDelete
         }}
     />;
 };

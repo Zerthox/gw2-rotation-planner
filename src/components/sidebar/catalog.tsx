@@ -15,7 +15,7 @@ export interface SkillSectionProps {
     sx?: SxProps;
 }
 
-export const SkillSection = ({name, type, parentId, skills, sx}: SkillSectionProps): JSX.Element => {
+const SkillSection = ({name, type, parentId, skills, sx}: SkillSectionProps): JSX.Element => {
     const view = useSkillsView();
     const [visible, setVisible] = useState(false);
 
@@ -60,6 +60,8 @@ export const SkillSection = ({name, type, parentId, skills, sx}: SkillSectionPro
     );
 };
 
+export const SkillSectionMemo = React.memo(SkillSection);
+
 export interface SkillbarProps extends StackProps {
     dragId: DragId;
 }
@@ -73,7 +75,7 @@ export const SkillCatalog = ({dragId, ...props}: SkillbarProps): JSX.Element => 
     return (
         <Stack direction="column" sx={{overflowY: "auto"}} {...props}>
             {sections.map(({name, type, skills}, i) => skills.length > 0 ? (
-                <SkillSection
+                <SkillSectionMemo
                     key={name}
                     name={name}
                     type={type}
