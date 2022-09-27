@@ -1,13 +1,13 @@
-import React, {forwardRef} from "react";
+import React from "react";
 import clsx from "clsx";
 import {css} from "@emotion/css";
 import {Stack, StackProps, SxProps} from "@mui/material";
 import {Skill, CustomComponent, useSkill} from "@discretize/gw2-ui-new";
 import {useSortable} from "@dnd-kit/sortable";
-import {SkillContextMenu} from "./context-menu";
+import {SkillContextMenu, SkillContextMenuProps} from "./context-menu";
 import {Keybind} from "./keybind";
 import {DragId, SkillData} from "../../util/drag";
-import {CommonSkillId, getCommonSkill, getSearchValue} from "../../data/common";
+import {getCommonSkill} from "../../data/common";
 import {SkillSlot} from "../../data";
 
 export interface SkillIconProps extends StackProps {
@@ -64,7 +64,22 @@ const SkillIcon = ({skill, tooltip = false, orderSelf = false, sx, ...props}: Sk
     );
 };
 
-export const SkillIconWithRef = forwardRef(SkillIcon);
+export const SkillIconWithRef = React.forwardRef(SkillIcon);
+
+interface SkillContentProps {
+    iconProps: SkillIconProps & React.RefAttributes<HTMLElement>;
+    contextMenuProps: Omit<SkillContextMenuProps, "children">;
+}
+
+const SkillContent = ({iconProps, contextMenuProps}: SkillContentProps): JSX.Element => {
+    return (
+        <SkillContextMenu {...contextMenuProps}>
+            <SkillIconWithRef {...iconProps}/>
+        </SkillContextMenu>
+    );
+};
+
+const SkillContentMemo = React.memo(SkillContent);
 
 export interface DraggableSkillProps {
     dragId: DragId;
@@ -91,26 +106,21 @@ export const DraggableSkill = ({parentId, dragId, index, skill, orderSelf, onDup
         } as SkillData
     });
 
-    const searchValue = getSearchValue(skill);
-
-    return (
-        <SkillContextMenu
-            skill={skill}
-            isCommon={skill in CommonSkillId}
-            searchValue={searchValue}
-            onDuplicate={onDuplicate}
-            onDelete={onDelete}
-        >
-            <SkillIconWithRef
-                ref={setNodeRef}
-                {...attributes}
-                {...listeners}
-                skill={skill}
-                tooltip={!isDragging}
-                orderSelf={orderSelf}
-                className={clsx(dragCursor, {[placeholderStyles]: isDragging})}
-                sx={sx}
-            />
-        </SkillContextMenu>
-    );
+    return <SkillContentMemo
+        iconProps={{
+            ref: setNodeRef,
+            ...attributes,
+            ...listeners,
+            skill,
+            tooltip: !isDragging,
+            orderSelf,
+            className: clsx(dragCursor, {[placeholderStyles]: isDragging}),
+            sx
+        }}
+        contextMenuProps={{
+            skill,
+            onDuplicate,
+            onDelete
+        }}
+    />;
 };

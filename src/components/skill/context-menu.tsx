@@ -3,20 +3,22 @@ import {OpenInNew, DataObject, DataArray, Fingerprint, PlusOne, Delete} from "@m
 import {ContextMenu, ContextMenuProps} from "../general";
 import {useDevMode} from "../../store/settings";
 import {copyToClipboard} from "../../util/clipboard";
+import {getSearchValue, CommonSkillId} from "../../data/common";
 
 const wikiUrl = "https://wiki.guildwars2.com";
 const apiUrl = "https://api.guildwars2.com";
 
 export interface SkillContextMenuProps extends ContextMenuProps {
     skill: number;
-    isCommon: boolean;
-    searchValue?: string;
     onDuplicate?: () => void;
     onDelete?: () => void;
 }
 
-export const SkillContextMenu = ({skill, isCommon, searchValue, onDuplicate, onDelete, ...props}: SkillContextMenuProps): JSX.Element => {
+export const SkillContextMenu = ({skill, onDuplicate, onDelete, ...props}: SkillContextMenuProps): JSX.Element => {
     const isDev = useDevMode();
+
+    const isCommon = skill in CommonSkillId;
+    const searchValue = getSearchValue(skill);
 
     return (
         <ContextMenu {...props} items={[

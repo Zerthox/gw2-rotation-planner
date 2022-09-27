@@ -1,4 +1,4 @@
-import React, {useCallback, useState, cloneElement, useMemo} from "react";
+import React, {useState, useMemo, cloneElement} from "react";
 import {Menu, MenuItem, MenuItemProps, ListItemText, ListItemIcon, Typography} from "@mui/material";
 import {SystemCssProperties} from "@mui/system";
 
@@ -23,19 +23,18 @@ export const ContextMenu = ({title, children, items = []}: ContextMenuProps): JS
     const [contextMenu, setContextMenu] = useState<{top: number; left: number}>(null);
 
     const filteredItems = items.filter((props) => props);
-
-    const onContextMenu = useCallback((event: React.MouseEvent) => {
-        event.preventDefault();
-        if (filteredItems.length > 0) {
-            event.stopPropagation();
-            setContextMenu(contextMenu === null
-                ? {top: event.clientY, left: event.clientX}
-                : null
-            );
+    const cloned = useMemo(() => cloneElement(children, {
+        onContextMenu: (event: React.MouseEvent) => {
+            event.preventDefault();
+            if (filteredItems.length > 0) {
+                event.stopPropagation();
+                setContextMenu(contextMenu === null
+                    ? {top: event.clientY, left: event.clientX}
+                    : null
+                );
+            }
         }
-    }, [contextMenu, setContextMenu, filteredItems.length]);
-
-    const cloned = useMemo(() => cloneElement(children, {onContextMenu}), [children, onContextMenu]);
+    }), [children, contextMenu, setContextMenu, filteredItems.length]);
 
     return (
         <>

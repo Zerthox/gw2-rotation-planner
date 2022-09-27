@@ -1,4 +1,4 @@
-import React, {useCallback} from "react";
+import React from "react";
 import {Select, SelectChangeEvent, SxProps, MenuItem} from "@mui/material";
 import {useDispatch} from "react-redux";
 import {useCurrentProfession, changeProfession} from "../../store/build";
@@ -14,12 +14,14 @@ export const ProfessionSelect = ({sx}: ProfessionSelectProps): JSX.Element => {
     const dispatch = useDispatch();
     const prof = useCurrentProfession();
 
-    const onChange = useCallback(({target}: SelectChangeEvent<string>) => {
-        dispatch(changeProfession(target.value as Profession));
-    }, [dispatch]);
-
     return (
-        <Select value={prof ?? ""} onChange={onChange} sx={sx}>
+        <Select
+            value={prof ?? ""}
+            onChange={({target}: SelectChangeEvent<string>) => {
+                dispatch(changeProfession(target.value as Profession));
+            }}
+            sx={sx}
+        >
             {Object.entries(professionIcons).map(([name, icon]) => (
                 <MenuItem key={name} value={name}>
                     <IconText icon={icon} size={iconSize}>{name}</IconText>

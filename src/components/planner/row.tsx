@@ -6,8 +6,8 @@ import {rectSortingStrategy, SortableContext} from "@dnd-kit/sortable";
 import {useDispatch} from "react-redux";
 import {IconButton, ContextMenu, ContextMenuProps} from "../general";
 import {DraggableSkill} from "../skill";
-import {DragId, OverData} from "../../util/drag";
-import {useRow, useRowCount, deleteRow, moveRow, updateRowName, insertRowSkill, deleteRowSkill, insertRow, clearRowSkills} from "../../store/timeline";
+import {OverData} from "../../util/drag";
+import {deleteRow, moveRow, updateRowName, insertRowSkill, deleteRowSkill, insertRow, clearRowSkills, RowState} from "../../store/timeline";
 import {createSkillState} from "../../store/build";
 import {getSearchValue} from "../../data/common";
 import {copyToClipboard} from "../../util/clipboard";
@@ -108,24 +108,23 @@ export const RowButtons = ({isFirst, isLast, isEmpty, onMove, onClear, onDelete}
 );
 
 export interface RowProps extends CardProps {
-    dragId: DragId;
+    row: RowState;
     index: number;
+    isLast: boolean;
 }
 
-export const Row = ({dragId, index, ...props}: RowProps): JSX.Element => {
+export const Row = ({row, index, isLast, ...props}: RowProps): JSX.Element => {
     const dispatch = useDispatch();
-    const row = useRow(dragId);
-    const rowCount = useRowCount();
 
     const items = row.skills.map(({dragId}) => dragId);
     const {setNodeRef} = useDroppable({
-        id: dragId,
-        data: {parentId: dragId, index: items.length} as OverData
+        id: row.dragId,
+        data: {parentId: row.dragId, index: items.length} as OverData
     });
 
     const actions = useMemo<RowActions>(() => ({
         isFirst: index === 0,
-        isLast: index === rowCount -1,
+        isLast,
         isEmpty: row.skills.length === 0,
         onDuplicate: () => dispatch(insertRow({
             index: index + 1,
@@ -139,9 +138,9 @@ export const Row = ({dragId, index, ...props}: RowProps): JSX.Element => {
             (row.name ? row.name + ": " : "")
             + row.skills.map(({skillId}) => getSearchValue(skillId)).join(" ")
         ),
-        onClear: () => dispatch(clearRowSkills({rowId: dragId})),
-        onDelete: () => dispatch(deleteRow({rowId: dragId}))
-    }), [dispatch, dragId, index, row.name, row.skills, rowCount]);
+        onClear: () => dispatch(clearRowSkills({rowId: row.dragId})),
+        onDelete: () => dispatch(deleteRow({rowId: row.dragId}))
+    }), [dispatch, index, row.dragId, row.name, row.skills, isLast]);
 
     return (
         <RowContextMenu {...actions}>
@@ -151,7 +150,7 @@ export const Row = ({dragId, index, ...props}: RowProps): JSX.Element => {
                         placeholder={`Section #${index + 1}`}
                         variant="standard"
                         value={row.name}
-                        onChange={({target}) => dispatch(updateRowName({rowId: dragId, name: target.value}))}
+                        onChange={({target}) => dispatch(updateRowName({rowId: row.dragId, name: target.value}))}
                         sx={{flex: "none"}}
                     />
                     <Box flexGrow={1} ref={setNodeRef}>

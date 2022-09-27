@@ -52,8 +52,8 @@ export const Timeline = ({load, addDragId, ...props}: TimelineProps): JSX.Elemen
         <Box maxHeight="100%" sx={{overflowY: "auto"}} {...props}>
             <Stack direction="column" alignItems="stretch" spacing={1} padding={1.5} minWidth={600}>
                 <Stack direction="column" spacing={1}>
-                    {rows.map(({dragId: id}, i) => (
-                        <Row key={id} dragId={id} index={i}/>
+                    {rows.map((row, i) => (
+                        <Row key={row.dragId} row={row} index={i} isLast={i === rows.length - 1}/>
                     ))}
                 </Stack>
                 <AddButton dragId={addDragId}/>

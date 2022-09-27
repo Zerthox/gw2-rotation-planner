@@ -1,4 +1,4 @@
-import React, {useMemo} from "react";
+import React from "react";
 import {useLocation} from "@reach/router";
 import {Box, Stack, Dialog, DialogTitle, DialogContent, Typography, TextField, IconButton} from "@mui/material";
 import {Share, Close, ContentCopy} from "@mui/icons-material";
@@ -15,9 +15,7 @@ export const ShareModalContent = ({onClose}: ShareModalContentProps): JSX.Elemen
     const {origin, pathname} = useLocation();
     const rows = useStatelessRows();
 
-    const url = useMemo(() => (
-        `${origin}${pathname}?share=${encodeShare(rows)}`
-    ), [origin, pathname, rows]);
+    const url = `${origin}${pathname}?share=${encodeShare(rows)}`;
 
     return (
         <>
