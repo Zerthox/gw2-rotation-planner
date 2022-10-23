@@ -41,7 +41,8 @@ const config: GatsbyConfig = {
             options: {
                 trackingIds: ["G-L65RG8ZXVJ"],
                 gtagConfig: {
-                    anonymize_ip: true
+                    anonymize_ip: true,
+                    cookie_expires: 0
                 },
                 pluginConfig: {
                     respectDNT: true
