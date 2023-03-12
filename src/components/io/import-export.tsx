@@ -72,7 +72,7 @@ export const ExportModalContent = ({onClose}: ExportModalContentProps): JSX.Elem
             </DialogTitle>
             <DialogContent dividers>
                 <Typography variant="body1" marginBottom={1}>
-                    Import a rotation from a log uploaded to <Link newTab to="https://dps.report">dps.report</Link> or edit it in the JSON format below.
+                    Import a rotation from a log uploaded to <Link newTab to="https://dps.report">dps.report</Link> or <Link newTab to="https://gw2wingman.nevermindcreations.de">Wingman</Link>, or edit it in the JSON format below.
                 </Typography>
                 <Stack direction="column" spacing={1}>
                     <LogImport onChange={(rows) => updateJson(toJson(rows))}/>
