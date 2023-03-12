@@ -2,6 +2,7 @@ Heal:
   - 10176 # Ether Feast
   - 10177 # Mirror
   - 10213 # Mantra of Recovery
+  - 10214 # Power Return
   - 21750 # Signet of the Ether
 
   # specs
@@ -15,9 +16,13 @@ Utility:
   - 10234 # Signet of Midnight
   - 10247 # Signet of Illusions
   - 10211 # Mantra of Pain
+  - 10212 # Power Spike
   - 10204 # Mantra of Distraction
+  - 10206 # Power Lock
   - 10207 # Mantra of Resolve
+  - 10209 # Power Cleanse
   - 10237 # Mantra of Concentration
+  - 10238 # Power Break
   - 10200 # Blink
   - 10185 # Arcane Thievery
   - 10244 # Illusion of Life

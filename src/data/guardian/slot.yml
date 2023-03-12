@@ -7,6 +7,8 @@ Heal:
   # specs
   - 30025 # Purification
   - 41714 # Mantra of Solace
+  - 41475 # Restoring Reprieve
+  - 42960 # Rejuvenating Respite
   - 62622 # Reversal of Fortune
 
 Utility:
@@ -37,9 +39,17 @@ Utility:
   - 30364 # Procession of Blades
   - 30871 # Light's Judgment
   - 40915 # Mantra of Potence
+  - 42983 # Potent Haste
+  - 41988 # Overwhelming Celerity
   - 46148 # Mantra of Flame
+  - 45082 # Flame Rush
+  - 42924 # Flame Surge
   - 44080 # Mantra of Truth
+  - 42360 # Echo of Truth
+  - 44008 # Voice of Truth
   - 45460 # Mantra of Lore
+  - 42864 # Opening Passage
+  - 44248 # Clarified Conclusion
   - 62608 # Flash Combo
   - 62669 # Repose
   - 62521 # Roiling Light
@@ -55,4 +65,6 @@ Elite:
   # specs
   - 30273 # Dragon's Maw
   - 43357 # Mantra of Liberation
+  - 40114 # Portent of Freedom
+  - 41328 # Unhindered Delivery
   - 62561 # Heaven's Palm
