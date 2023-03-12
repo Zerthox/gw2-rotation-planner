@@ -36,7 +36,7 @@ const SkillIcon = ({skill, tooltip = false, orderSelf = false, sx, ...props}: Sk
     const slot = data?.slot ?? common?.slot;
 
     return (
-        <Stack ref={ref} direction="column" alignItems="center" {...props} sx={{
+        <Stack ref={ref as React.Ref<HTMLDivElement>} direction="column" alignItems="center" {...props} sx={{
             position: "relative",
             gridColumn: orderSelf ? slotColumn[slot] : null,
             fontSize: "3em",
