@@ -12,6 +12,7 @@ export enum KeyDisplay {
     All = "all"
 }
 
+// TODO: weapon swap, dodge, interact, stow keybinds
 export const defaultKeybinds = {
     [SkillSlot.Profession1]: "F1",
     [SkillSlot.Profession2]: "F2",

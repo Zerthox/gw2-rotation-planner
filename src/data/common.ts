@@ -30,11 +30,12 @@ export enum SpecialActionSkill {
 export enum CommonSkillId {
     WeaponSwap = 1,
     DropBundle = 3,
+    Stow = 23285, // weapon stow cast id
     Dodge = 23275, // arcdps custom id
     Resurrect = 1066, // arcdps custom id
     SpecialAction = SpecialActionSkill.HypernovaLaunch,
     Mistlock = 33652, // rigorous certainty id
-    WhiteMantlePortal = 5,
+    WhiteMantlePortal = 20852, // buff applied by wmpd entrance
     PortalEntrance = 35155, // wmpd entrance id
     PortalExit = 20851 // wmpd exit id
 }
@@ -71,6 +72,15 @@ const commonSkills: CommonSkill[] = [
             className: initialSize
         },
         wiki: "Bundle"
+    },
+    {
+        id: CommonSkillId.Stow,
+        name: "Weapon Stow",
+        description: "Stow away your weapon and cancel the current action.",
+        icon: "https://wiki.guildwars2.com/images/f/f2/Stow_Pet.png",
+        iconProps: {
+            className: initialSize
+        }
     },
     {
         id: CommonSkillId.Dodge,
