@@ -22,6 +22,7 @@ export enum SpecialActionSkill {
     SapperBomb = 31488,
     CelestialDash = 37924,
     ConjuredSlash = 52325,
+    ConjuredProtection = 13980, // id in logs
     ConjuredShield = 52780,
     NovaLaunch = 39843,
     HypernovaLaunch = 39157
