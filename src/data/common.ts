@@ -9,11 +9,14 @@ export type IconProps = React.ComponentProps<typeof Icon>;
 export interface CommonSkill extends Omit<Skill, "chat_link"> {
     wiki?: string;
     iconProps?: IconProps;
+    realId?: boolean;
 }
 
 export const getAllCommonSkills = (): CommonSkill[] => commonSkills;
 
 export const getCommonSkill = (id: number): CommonSkill => getAllCommonSkills().find((skill) => skill.id === id);
+
+export const isRealSkill = (id: number): boolean => !(id in CommonSkillId) || getCommonSkill(id).realId;
 
 export const getSearchValue = (id: number): string => getCommonSkill(id)?.wiki ?? (encodeChatcode("skill", id) || null);
 
@@ -76,6 +79,7 @@ const commonSkills: CommonSkill[] = [
     },
     {
         id: CommonSkillId.Stow,
+        realId: true,
         name: "Weapon Stow",
         description: "Stow away your weapon and cancel the current action.",
         icon: "https://wiki.guildwars2.com/images/f/f2/Stow_Pet.png",
@@ -140,6 +144,7 @@ const commonSkills: CommonSkill[] = [
     },
     {
         id: CommonSkillId.PortalEntrance,
+        realId: true,
         name: "Portal Entrance",
         description: "Create an entry portal.",
         icon: "https://wiki.guildwars2.com/images/4/43/Watchwork_Portal_Device.png",
@@ -160,6 +165,7 @@ const commonSkills: CommonSkill[] = [
     },
     {
         id: CommonSkillId.PortalExit,
+        realId: true,
         name: "Portal Exit",
         description: "Create an exit portal.",
         icon: "https://wiki.guildwars2.com/images/4/43/Watchwork_Portal_Device.png",

@@ -4,7 +4,7 @@ import {useDispatch} from "react-redux";
 import {ContextMenu, ContextMenuProps} from "../general";
 import {useDevMode} from "../../store/settings";
 import {copyToClipboard} from "../../util/clipboard";
-import {getSearchValue, CommonSkillId} from "../../data/common";
+import {CommonSkillId, getSearchValue, isRealSkill} from "../../data/common";
 import {deleteRowSkill, insertRowSkill} from "../../store/timeline";
 import {createSkillState} from "../../store/build";
 import {DragId} from "../../util/drag";
@@ -26,6 +26,7 @@ export const SkillContextMenu = ({skill, index, dragId, parentId, canDuplicate, 
     const isDev = useDevMode();
 
     const isCommon = skill in CommonSkillId;
+    const isReal = isRealSkill(skill);
     const searchValue = getSearchValue(skill);
 
     return (
@@ -51,32 +52,30 @@ export const SkillContextMenu = ({skill, index, dragId, parentId, canDuplicate, 
                     rel: "noopener noreferrer"
                 }
             } : null,
-            ...!isCommon ? [
-                ...isDev ? [
-                    {
-                        key: "api",
-                        text: "Open API",
-                        icon: <DataObject/>,
-                        itemProps: {
-                            href: `${apiUrl}/v2/skills?ids=${skill}&lang=en`,
-                            target: "_blank",
-                            rel: "noopener noreferrer"
-                        }
-                    },
-                    {
-                        key: "id",
-                        text: "Copy Skill ID",
-                        icon: <Fingerprint/>,
-                        action: () => copyToClipboard(skill.toString())
+            ...isDev ? [
+                !isCommon ? {
+                    key: "api",
+                    text: "Open API",
+                    icon: <DataObject/>,
+                    itemProps: {
+                        href: `${apiUrl}/v2/skills?ids=${skill}&lang=en`,
+                        target: "_blank",
+                        rel: "noopener noreferrer"
                     }
-                ]: [],
-                typeof searchValue === "string" ? {
-                    key: "chatcode",
-                    text: "Copy Chatcode",
-                    icon: <DataArray/>,
-                    action: () => copyToClipboard(searchValue)
+                } : null,
+                isReal ? {
+                    key: "id",
+                    text: "Copy Skill ID",
+                    icon: <Fingerprint/>,
+                    action: () => copyToClipboard(skill.toString())
                 } : null
-            ] : [],
+            ]: [],
+            isReal && typeof searchValue === "string" ? {
+                key: "chatcode",
+                text: "Copy Chatcode",
+                icon: <DataArray/>,
+                action: () => copyToClipboard(searchValue)
+            } : null,
             canDelete ? {
                 key: "delete",
                 action: () => dispatch(deleteRowSkill({
