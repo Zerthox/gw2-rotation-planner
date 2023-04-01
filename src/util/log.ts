@@ -99,7 +99,9 @@ export interface Cast {
 }
 
 const SKILL_MAPPING = {
-    [-2]: CommonSkillId.WeaponSwap
+    [-2]: CommonSkillId.WeaponSwap,
+    42955: 40255 // smokescale smoke assault
+    // TODO: add custom skill for single hit?
 };
 
 const insertCast = (casts: Cast[], {skill, time}: Cast) => {
