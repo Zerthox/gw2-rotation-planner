@@ -16,7 +16,6 @@ const config: GatsbyConfig = {
                 path: path.resolve("./src/data")
             }
         },
-        "gatsby-plugin-react-helmet",
         "gatsby-plugin-offline",
         {
             resolve: "gatsby-plugin-typescript",

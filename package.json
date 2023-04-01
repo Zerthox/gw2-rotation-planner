@@ -45,7 +45,6 @@
     "gatsby": "^5.2.0",
     "gatsby-plugin-google-gtag": "^5.2.0",
     "gatsby-plugin-offline": "^6.2.0",
-    "gatsby-plugin-react-helmet": "^6.2.0",
     "gatsby-plugin-typescript": "^5.2.0",
     "gatsby-plugin-typescript-checker": "^1.1.1",
     "gatsby-source-filesystem": "^5.2.0",
@@ -56,7 +55,6 @@
     "nanoid": "^4.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
     "react-redux": "^8.0.1",
     "redux-persist": "^6.0.0",
     "typescript": "^4.6.3"

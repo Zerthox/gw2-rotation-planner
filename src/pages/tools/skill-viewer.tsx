@@ -2,7 +2,7 @@ import React, {useMemo, useState} from "react";
 import {Container, Stack, Card, TextField, Typography} from "@mui/material";
 import {css} from "@emotion/css";
 import {CustomComponent} from "@discretize/gw2-ui-new";
-import {Layout} from "../../components/layout";
+import {Layout, SEO} from "../../components/layout";
 
 const initialJson = `{
   "name": "Custom Skill",
@@ -20,6 +20,8 @@ const initialJson = `{
   ]
 }`;
 
+const title = "Skill Viewer";
+
 const SkillViewer = (): JSX.Element => {
     const [json, setJson] = useState(initialJson);
     const data = useMemo(() => {
@@ -33,7 +35,7 @@ const SkillViewer = (): JSX.Element => {
     const isValid = data && data.name && data.icon && data.professions;
 
     return (
-        <Layout title="Skill Viewer">
+        <Layout title={title}>
             <Container sx={{marginY: 2}}>
                 <Card sx={{padding: 2}}>
                     <Stack direction="column">
@@ -72,3 +74,5 @@ const SkillViewer = (): JSX.Element => {
 };
 
 export default SkillViewer;
+
+export const Head = (): JSX.Element => <SEO title={title}/>;

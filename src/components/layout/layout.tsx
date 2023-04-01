@@ -1,7 +1,6 @@
 import React from "react";
 import {Provider as ReduxProvider} from "react-redux";
 import {PersistGate} from "redux-persist/integration/react";
-import {SEO} from "./seo";
 import {Loading} from "./loading";
 import {Loaded, LoadedProps} from "./loaded";
 import {Store, Persistor} from "../../store";
@@ -16,17 +15,12 @@ export type LayoutProps = LoadedProps;
 
 export const Layout = ({title, ...props}: LayoutProps): JSX.Element => {
     const siteMeta = useSiteMeta();
-    const pageTitle = title ?? siteMeta.title;
+    title ??= siteMeta.title;
 
     return (
         <ReduxProvider store={Store}>
-            <SEO
-                title={pageTitle}
-                description={siteMeta.description}
-                author={siteMeta.author}
-            />
             <PersistGate persistor={Persistor} loading={<Loading/>}>
-                <Loaded title={pageTitle} {...props}/>
+                <Loaded title={title} {...props}/>
             </PersistGate>
         </ReduxProvider>
     );
