@@ -1,4 +1,4 @@
-import {nanoid} from "nanoid/non-secure";
+import {nanoid} from "nanoid";
 import {UniqueIdentifier} from "@dnd-kit/core";
 
 export type DragId = UniqueIdentifier;
