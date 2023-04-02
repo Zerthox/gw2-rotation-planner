@@ -100,17 +100,7 @@ export const Dnd = ({children}: DndProps): JSX.Element => {
             const activeData = (active.data.current ?? {}) as SkillData;
             const overData = (over.data.current ?? {}) as OverData;
 
-            if (isa(DragType.Trash, over.id)) {
-                // moved to trash
-                if (isa(DragType.Row, parent.current)) {
-                    // delete row entry
-                    dispatch(deleteRowSkill({
-                        rowId: parent.current,
-                        skillId: active.id
-                    }));
-                    return;
-                }
-            } else if (isa(DragType.Add, over.id)) {
+            if (isa(DragType.Add, over.id)) {
                 // dropped over add button
                 batch(() => {
                     if (isa(DragType.Row, parent.current)) {

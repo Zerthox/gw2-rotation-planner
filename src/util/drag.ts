@@ -7,7 +7,6 @@ export enum DragType {
     Row = "row",
     Skill = "skill",
     Skillbar = "skillbar",
-    Trash = "trash",
     Add = "add"
 }
 
