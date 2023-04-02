@@ -1,7 +1,7 @@
 import React, {useRef, useCallback, useState} from "react";
 import {css} from "@emotion/css";
 import {Active, DndContext, DragOverEvent, DragOverlay, DragStartEvent} from "@dnd-kit/core";
-import {useDispatch, batch} from "react-redux";
+import {useDispatch} from "react-redux";
 import {SkillIconWithRef} from "../skill";
 import {DragId, DragType, isa, OverData, SkillData} from "../../util/drag";
 import {deleteRowSkill, insertRowSkill, insertRowWithStates, moveRowSkill} from "../../store/timeline";
@@ -30,7 +30,7 @@ export const Dnd = ({children}: DndProps): JSX.Element => {
         }
     }, [dispatch]);
 
-    const onDragStart = useCallback(({active}: DragStartEvent) => batch(() => {
+    const onDragStart = useCallback(({active}: DragStartEvent) => {
         const activeData = (active.data.current ?? {}) as SkillData;
 
         parent.current = null;
@@ -47,9 +47,10 @@ export const Dnd = ({children}: DndProps): JSX.Element => {
         }
 
         setDragging(activeData.skill);
-    }), [dispatch, pressed]);
+    }, [dispatch, pressed]);
 
-    const onDragOver = useCallback(({active, over}: DragOverEvent) => batch(() => {
+    const onDragOver = useCallback(({active, over}: DragOverEvent) => {
+        // TODO: save placeholder position and only move skill on drag end?
         if (over) {
             const activeData = (active.data.current ?? {}) as SkillData;
             const overData = (over.data.current ?? {}) as OverData;
@@ -91,9 +92,9 @@ export const Dnd = ({children}: DndProps): JSX.Element => {
                 }
             }
         }
-    }), [dispatch]);
+    }, [dispatch]);
 
-    const onDragEnd = useCallback(({active, over}) => batch(() => {
+    const onDragEnd = useCallback(({active, over}) => {
         setDragging(null);
 
         if (over) {
@@ -102,26 +103,24 @@ export const Dnd = ({children}: DndProps): JSX.Element => {
 
             if (isa(DragType.Add, over.id)) {
                 // dropped over add button
-                batch(() => {
-                    if (isa(DragType.Row, parent.current)) {
-                        // remove skill from row
-                        dispatch(deleteRowSkill({
-                            rowId: parent.current,
-                            skillId: active.id
-                        }));
-                    } else {
-                        // remove skill from skillbar
-                        dispatch(takeSkillItem(active.id));
-                    }
+                if (isa(DragType.Row, parent.current)) {
+                    // remove skill from row
+                    dispatch(deleteRowSkill({
+                        rowId: parent.current,
+                        skillId: active.id
+                    }));
+                } else {
+                    // remove skill from skillbar
+                    dispatch(takeSkillItem(active.id));
+                }
 
-                    // insert new row with skill
-                    dispatch(insertRowWithStates({row: {
-                        skills: [{
-                            dragId: active.id,
-                            skillId: activeData.skill
-                        }]
-                    }}));
-                });
+                // insert new row with skill
+                dispatch(insertRowWithStates({row: {
+                    skills: [{
+                        dragId: active.id,
+                        skillId: activeData.skill
+                    }]
+                }}));
                 return;
             } else if (isa(DragType.Row, overData.parentId)) {
                 // moved to row, everything is done already
@@ -131,12 +130,12 @@ export const Dnd = ({children}: DndProps): JSX.Element => {
 
         // fall back to cancelling
         cancelDrag(active);
-    }), [dispatch, cancelDrag]);
+    }, [dispatch, cancelDrag]);
 
-    const onDragCancel = useCallback(({active}) => batch(() => {
+    const onDragCancel = useCallback(({active}) => {
         setDragging(null);
         cancelDrag(active);
-    }), [cancelDrag]);
+    }, [cancelDrag]);
 
     return (
         <DndContext
