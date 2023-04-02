@@ -3,7 +3,7 @@ import {UniqueIdentifier} from "@dnd-kit/core";
 
 export type DragId = UniqueIdentifier;
 
-export enum DragType {
+export const enum DragType {
     Row = "row",
     Skill = "skill",
     Skillbar = "skillbar",

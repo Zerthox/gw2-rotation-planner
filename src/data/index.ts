@@ -1,6 +1,6 @@
 import {useSkill} from "@discretize/gw2-ui-new";
 
-export enum Profession {
+export const enum Profession {
     Guardian = "Guardian",
     Warrior = "Warrior",
     Engineer = "Engineer",
@@ -12,7 +12,7 @@ export enum Profession {
     Revenant = "Revenant"
 }
 
-export enum EliteSpecialization {
+export const enum EliteSpecialization {
     Dragonhunter = "Dragonhunter",
     Firebrand = "Firebrand",
     Willbender = "Willbender",
@@ -44,7 +44,7 @@ export enum EliteSpecialization {
 
 export type Skill = ReturnType<typeof useSkill>["data"];
 
-export enum SkillType {
+export const enum SkillType {
     Weapon = "Weapon",
     Profession = "Profession",
     Heal = "Heal",
@@ -53,7 +53,7 @@ export enum SkillType {
     Bundle = "Bundle"
 }
 
-export enum SkillSlot {
+export const enum SkillSlot {
     Weapon1 = "Weapon_1",
     Weapon2 = "Weapon_2",
     Weapon3 = "Weapon_3",
@@ -90,7 +90,7 @@ export interface SkillSection {
     skills: number[];
 }
 
-export enum SkillSectionType {
+export const enum SkillSectionType {
     Profession = "profession",
     Weapon = "weapon",
     Slot = "slot",

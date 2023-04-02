@@ -1,7 +1,7 @@
 import {createTheme} from "@mui/material";
 import {cyan, blueGrey} from "@mui/material/colors";
 
-export enum Theme {
+export const enum Theme {
     Dark = "dark",
     Light = "light"
 }

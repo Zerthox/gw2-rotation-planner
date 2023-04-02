@@ -6,7 +6,7 @@ import {Theme} from "../themes";
 
 export type Keybinds<T> = Record<SkillSlot, T>;
 
-export enum KeyDisplay {
+export const enum KeyDisplay {
     None = "none",
     Bound = "bound",
     All = "all"

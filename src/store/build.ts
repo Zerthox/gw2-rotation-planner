@@ -11,7 +11,7 @@ export interface SkillState {
 
 export const createSkillState = (skill: number): SkillState => ({dragId: createDragId(DragType.Skill), skillId: skill});
 
-export enum View {
+export const enum View {
     CatalogList = "catalog-list",
     CatalogOrdered = "catalog-ordered"
 }
