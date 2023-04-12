@@ -34,7 +34,7 @@ export const useKeyState = (key: string | string[], target: EventTarget & Global
         }
     });
     useEventListener(target, "keyup", (event) => {
-        if (keys.has((event.key))) {
+        if (keys.has(event.key)) {
             setPressed(false);
         }
     });
