@@ -1,24 +1,16 @@
 import {useState, useRef, useCallback, useEffect, useMemo} from "react";
 
-export type PickEventType<T extends AnyEventTarget> = T extends GlobalEventHandlers ? keyof GlobalEventHandlersEventMap : (
-    T extends WindowEventHandlers ? keyof WindowEventHandlersEventMap : (
-        T extends DocumentAndElementEventHandlers ? keyof DocumentAndElementEventHandlersEventMap : string
-    )
-);
+export type PickEventMap<T extends EventTarget> = T extends GlobalEventHandlers ? GlobalEventHandlersEventMap : Record<string, Event>;
 
-export type PickEvent<K extends string> = K extends keyof GlobalEventHandlersEventMap ? GlobalEventHandlersEventMap[K] : (
-    K extends keyof WindowEventHandlersEventMap ? WindowEventHandlersEventMap[K] : (
-        K extends keyof DocumentAndElementEventHandlersEventMap ? DocumentAndElementEventHandlersEventMap[K] : Event
-    )
-);
+export type PickEventTypes<T extends EventTarget> = Extract<keyof PickEventMap<T>, string>;
 
-export type AnyEventTarget = GlobalEventHandlers | WindowEventHandlers | DocumentAndElementEventHandlers | EventTarget;
+export type PickEvent<T extends EventTarget, K extends PickEventTypes<T>> = PickEventMap<T>[K];
 
-export const useEventListener = <T extends AnyEventTarget, K extends PickEventType<T>>(
+export function useEventListener<T extends EventTarget, K extends PickEventTypes<T>>(
     target: T,
     event: K,
-    handler: (event: PickEvent<K>) => unknown,
-): void => {
+    handler: (event: PickEvent<T, K>) => unknown
+): void {
     const saved = useRef<typeof handler>();
 
     useEffect(() => {
@@ -26,13 +18,13 @@ export const useEventListener = <T extends AnyEventTarget, K extends PickEventTy
     }, [handler]);
 
     useEffect(() => {
-        const listener = (event: PickEvent<K>) => saved.current(event);
+        const listener = (event: PickEvent<T, K>) => saved.current(event);
         target.addEventListener(event, listener);
         return () => target.removeEventListener(event, listener);
     }, [event, target]);
-};
+}
 
-export const useKeyState = (key: string | string[], target: GlobalEventHandlers = window): boolean => {
+export const useKeyState = (key: string | string[], target: EventTarget & GlobalEventHandlers = window): boolean => {
     const [pressed, setPressed] = useState(false);
     const keys = useMemo(() => new Set(typeof key === "string" ? [key] : key), [key]);
 
