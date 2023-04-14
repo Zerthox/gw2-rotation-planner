@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useReducer, useState} from "react";
 import {Stack, Button, TextField, FormGroup, FormControlLabel, Checkbox, Tooltip, Typography, Select, MenuItem, FormControl, InputLabel} from "@mui/material";
 import {Cancel} from "@mui/icons-material";
 import {IconButton, IconText} from "../general";
@@ -10,13 +10,26 @@ export interface LogImportProps {
     onChange(rows: Row[]): void;
 }
 
+interface LogImportState {
+    log: Log;
+    player: string;
+    phases: boolean;
+}
+
 export const LogImport = ({onChange}: LogImportProps): JSX.Element => {
     const [url, setUrl] = useState("");
-    const [phases, setPhases] = useState(true);
     const [fetching, setFetching] = useState(false);
 
-    const [log, setLog] = useState<Log>(null);
-    const [player, setPlayer] = useState<string>("");
+    const [{log, player, phases}, setState] = useReducer(
+        (prev: LogImportState, action: Partial<LogImportState>) => ({...prev, ...action}),
+        {log: null, player: "", phases: true}
+    );
+
+    useEffect(() => {
+        if (log) {
+            onChange(getRotation(log, player, phases));
+        }
+    }, [log, player, phases, onChange]);
 
     return (
         <Stack direction="row" alignItems="center" spacing={1}>
@@ -36,8 +49,7 @@ export const LogImport = ({onChange}: LogImportProps): JSX.Element => {
                             setFetching(true);
                             try {
                                 const log = await fetchLog(url);
-                                setLog(log);
-                                setPlayer(log.recordedBy);
+                                setState({log: log, player: log.recordedBy});
                             } finally {
                                 setFetching(false);
                             }
@@ -54,7 +66,7 @@ export const LogImport = ({onChange}: LogImportProps): JSX.Element => {
                             label="Player"
                             value={player}
                             defaultValue={log.recordedBy}
-                            onChange={({target}) => setPlayer(target.value)}
+                            onChange={({target}) => setState({player: target.value})}
                         >
                             {log.players.map(({name, profession}) => (
                                 <MenuItem key={name} value={name}>
@@ -73,18 +85,13 @@ export const LogImport = ({onChange}: LogImportProps): JSX.Element => {
                                 control={<Checkbox/>}
                                 checked={phases}
                                 disabled={!log}
-                                onChange={(_, checked) => setPhases(checked)}
+                                onChange={(_, checked) => setState({phases: checked})}
                             />
                         </FormGroup>
                     </Tooltip>
-                    <Button
-                        variant="contained"
-                        disabled={!log}
-                        onClick={() => onChange(getRotation(log, player, phases))}
-                    >Load rotation</Button>
-                    <IconButton title="Cancel" onClick={() => {
-                        setLog(null);
-                    }}><Cancel/></IconButton>
+                    <IconButton title="Cancel" onClick={() => setState({log: null})}>
+                        <Cancel/>
+                    </IconButton>
                 </>
             )}
         </Stack>
