@@ -20,6 +20,13 @@ export const isRealSkill = (id: number): boolean => !(id in CommonSkillId) || ge
 
 export const getSearchValue = (id: number): string => getCommonSkill(id)?.wiki ?? (encodeChatcode("skill", id) || null);
 
+export enum AttunementSkill {
+    Fire = 5492,
+    Water = 5493,
+    Air = 5494,
+    Earth = 5495
+}
+
 // TODO: add other relevant special action skills
 export enum SpecialActionSkill {
     SapperBomb = 31488,

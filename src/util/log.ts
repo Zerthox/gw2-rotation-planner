@@ -1,5 +1,5 @@
 import {sortedIndexBy} from "lodash";
-import {CommonSkillId, SpecialActionSkill} from "../data/common";
+import {CommonSkillId, SpecialActionSkill, AttunementSkill} from "../data/common";
 import {Row} from "../store/timeline";
 
 export interface Log {
@@ -98,20 +98,45 @@ export interface Cast {
     time: number;
 }
 
+// ei uses some negative custom ids for specific sills
 const SKILL_MAPPING = {
     [-2]: CommonSkillId.WeaponSwap,
+    [-5]: AttunementSkill.Fire, // weaver dual attunements
+    [-6]: AttunementSkill.Fire,
+    [-7]: AttunementSkill.Fire,
+    [-8]: AttunementSkill.Water,
+    [-9]: AttunementSkill.Water,
+    [-10]: AttunementSkill.Water,
+    [-11]: AttunementSkill.Air,
+    [-12]: AttunementSkill.Air,
+    [-13]: AttunementSkill.Air,
+    [-14]: AttunementSkill.Earth,
+    [-15]: AttunementSkill.Earth,
+    [-16]: AttunementSkill.Earth,
+    [41166]: AttunementSkill.Water, // weaver double attunements
+    [42264]: AttunementSkill.Air,
+    [43470]: AttunementSkill.Fire,
+    [44857]: AttunementSkill.Earth,
+    [-17]: CommonSkillId.Dodge, // mirage cloak dodge
     42955: 40255 // smokescale smoke assault
     // TODO: add custom skill for single hit?
 };
 
 const insertCast = (casts: Cast[], {skill, time}: Cast) => {
-    const cast = {skill: SKILL_MAPPING[skill] ?? (skill in SpecialActionSkill ? CommonSkillId.SpecialAction : skill), time};
-    const index = sortedIndexBy(casts, cast, (entry) => entry.time);
+    const cast = {
+        skill: SKILL_MAPPING[skill] ?? (skill in SpecialActionSkill ? CommonSkillId.SpecialAction : skill),
+        time
+    };
 
-    // filter out duplicates from overlapping phases
-    const other = casts[index];
-    if (other?.time !== time || other.skill !== skill) {
-        casts.splice(index, 0, cast);
+    // negative ids are invalid
+    if (cast.skill >= 0) {
+        const index = sortedIndexBy(casts, cast, (entry) => entry.time);
+
+        // filter out duplicates from overlapping phases
+        const other = casts[index];
+        if (other?.time !== time || other.skill !== skill) {
+            casts.splice(index, 0, cast);
+        }
     }
 };
 
