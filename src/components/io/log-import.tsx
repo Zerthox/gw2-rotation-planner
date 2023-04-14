@@ -1,5 +1,5 @@
 import React, {useEffect, useReducer, useState} from "react";
-import {Stack, Button, TextField, FormGroup, FormControlLabel, Checkbox, Tooltip, Typography, Select, MenuItem, FormControl, InputLabel} from "@mui/material";
+import {Stack, Button, TextField, FormGroup, FormControlLabel, Checkbox, Tooltip, Typography, Select, MenuItem, FormControl, InputLabel, CircularProgress} from "@mui/material";
 import {Cancel} from "@mui/icons-material";
 import {IconButton, IconText} from "../general";
 import {Row} from "../../store/timeline";
@@ -47,6 +47,7 @@ export const LogImport = ({onChange}: LogImportProps): JSX.Element => {
                     <Button
                         variant="contained"
                         disabled={fetching}
+                        startIcon={fetching ? <CircularProgress color="inherit" size="1em"/> : null}
                         onClick={async () => {
                             setFetching(true);
                             try {
@@ -56,7 +57,7 @@ export const LogImport = ({onChange}: LogImportProps): JSX.Element => {
                                 setFetching(false);
                             }
                         }}
-                    >Import log</Button>
+                    >{fetching ? "Loading" : "Import log"}</Button>
                 </>
             ) : (
                 <>
