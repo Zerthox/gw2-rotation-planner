@@ -13,7 +13,7 @@ import {
 } from "@mui/material";
 import {ImportExport, Close, Save, ContentCopy} from "@mui/icons-material";
 import {useDispatch} from "react-redux";
-import {CooldownButton, Link} from "../general";
+import {Confirm, CooldownButton, Link} from "../general";
 import {LogImport} from "./log-import";
 import {useStatelessRows, overrideRows, Row} from "../../store/timeline";
 import {validate} from "../../util/validate";
@@ -33,10 +33,11 @@ const toJson = (rows: Row[]): string => {
 };
 
 export interface ExportModalContentProps {
-    onClose(): void;
+    onClose(confirmed: boolean): void;
+    onChange?(modified: boolean): void;
 }
 
-export const ExportModalContent = ({onClose}: ExportModalContentProps): JSX.Element => {
+export const ExportModalContent = ({onClose, onChange}: ExportModalContentProps): JSX.Element => {
     const dispatch = useDispatch();
     const initialRows = useStatelessRows();
     const initialJson = useMemo(() => toJson(initialRows), [initialRows]);
@@ -54,6 +55,8 @@ export const ExportModalContent = ({onClose}: ExportModalContentProps): JSX.Elem
             }
         } catch {
             setContent({json, rows: null});
+        } finally {
+            onChange?.(true);
         }
     };
     const isError = rows === null;
@@ -65,7 +68,7 @@ export const ExportModalContent = ({onClose}: ExportModalContentProps): JSX.Elem
                     <ImportExport/>
                     <Typography variant="h5">Import / Export</Typography>
                     <Box flexGrow={1}/>
-                    <IconButton onClick={() => onClose()}>
+                    <IconButton onClick={() => onClose(false)}>
                         <Close/>
                     </IconButton>
                 </Stack>
@@ -105,10 +108,13 @@ export const ExportModalContent = ({onClose}: ExportModalContentProps): JSX.Elem
                     }}
                 >Copy</CooldownButton>
                 <Button color="error" onClick={() => {
-                    onClose();
+                    onClose(true);
                     updateJson(toJson(initialRows));
                 }}>Cancel</Button>
-                <Button color="secondary" onClick={() => updateJson(toJson(initialRows))}>Reset</Button>
+                <Button color="secondary" onClick={() => {
+                    updateJson(toJson(initialRows));
+                    onChange(false);
+                }}>Reset</Button>
                 <Button
                     color="success"
                     variant="contained"
@@ -116,7 +122,7 @@ export const ExportModalContent = ({onClose}: ExportModalContentProps): JSX.Elem
                     disabled={isError}
                     onClick={() => {
                         dispatch(overrideRows(rows));
-                        onClose();
+                        onClose(true);
                     }}
                 >Save</Button>
             </DialogActions>
@@ -129,14 +135,45 @@ export interface ExportModalProps {
     onClose: () => void;
 }
 
-export const ExportModal = ({open, onClose}: ExportModalProps): JSX.Element => (
-    <Dialog
-        open={open}
-        onClose={onClose}
-        maxWidth="md"
-        fullWidth
-        keepMounted={false}
-    >
-        <ExportModalContent onClose={onClose}/>
-    </Dialog>
-);
+export const ExportModal = ({open, onClose}: ExportModalProps): JSX.Element => {
+    const [modified, setModified] = useState(false);
+    const [warn, setWarn] = useState(false);
+
+    return (
+        <>
+            <Dialog
+                open={open}
+                onClose={() => {
+                    if (modified) {
+                        setWarn(true);
+                    } else {
+                        onClose();
+                    }
+                }}
+                maxWidth="md"
+                fullWidth
+                keepMounted={false}
+            >
+                <ExportModalContent
+                    onClose={(confirmed) => {
+                        if (!confirmed && modified) {
+                            setWarn(true);
+                        } else {
+                            onClose();
+                        }
+                    }}
+                    onChange={setModified}
+                />
+            </Dialog>
+            <Confirm
+                title="Unsaved rotation changes"
+                open={warn}
+                onConfirm={() => {
+                    setWarn(false);
+                    onClose();
+                }}
+                onCancel={() => setWarn(false)}
+            >Do you wish to discard your changes?</Confirm>
+        </>
+    );
+};
