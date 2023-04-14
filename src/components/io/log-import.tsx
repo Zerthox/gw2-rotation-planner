@@ -3,6 +3,7 @@ import {Stack, Button, TextField, FormGroup, FormControlLabel, Checkbox, Tooltip
 import {Cancel} from "@mui/icons-material";
 import {IconButton, IconText} from "../general";
 import {Row} from "../../store/timeline";
+import {useUpdatingRef} from "../../hooks/general";
 import {anyTangoIcon, iconSize, specializationIcons} from "../../assets/icons";
 import {fetchLog, getRotation, Log} from "../../util/log";
 
@@ -17,6 +18,7 @@ interface LogImportState {
 }
 
 export const LogImport = ({onChange}: LogImportProps): JSX.Element => {
+    const changeRef = useUpdatingRef(onChange);
     const [url, setUrl] = useState("");
     const [fetching, setFetching] = useState(false);
 
@@ -27,9 +29,9 @@ export const LogImport = ({onChange}: LogImportProps): JSX.Element => {
 
     useEffect(() => {
         if (log) {
-            onChange(getRotation(log, player, phases));
+            changeRef.current(getRotation(log, player, phases));
         }
-    }, [log, player, phases, onChange]);
+    }, [log, player, phases, changeRef]);
 
     return (
         <Stack direction="row" alignItems="center" spacing={1}>
