@@ -52,7 +52,12 @@ export const decodeShare = (data: string): Row[] => {
     let offset = 0;
     while (offset < data.length) {
         const nameEnd = data.indexOf(";", offset);
-        const name = decodeURIComponent(data.slice(offset, nameEnd));
+        let name = data.slice(offset, nameEnd);
+        try {
+            name = decodeURIComponent(name);
+        } catch {
+            // error likely means already decoded
+        }
 
         const index = data.indexOf(";", nameEnd + 1);
         const skillsEnd = index > 0 ? index : data.length;
