@@ -163,7 +163,7 @@ const commonSkills: CommonSkill[] = [
         name: "Portal Entrance",
         description: "Create an entry portal.",
         icon: "https://wiki.guildwars2.com/images/4/43/Watchwork_Portal_Device.png",
-        slot: SkillSlot.Weapon1,
+        slot: SkillSlot.Weapon1NoAuto,
         facts: [
             {
                 text: "Recharge",
@@ -185,7 +185,7 @@ const commonSkills: CommonSkill[] = [
         name: "Portal Exit",
         description: "Create an exit portal.",
         icon: "https://wiki.guildwars2.com/images/4/43/Watchwork_Portal_Device.png",
-        slot: SkillSlot.Weapon1,
+        slot: SkillSlot.Weapon1NoAuto,
         facts: [
             {
                 text: "Duration",

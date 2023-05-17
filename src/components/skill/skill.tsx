@@ -1,15 +1,16 @@
 import React from "react";
 import clsx from "clsx";
 import {css} from "@emotion/css";
-import {Stack, StackProps, SxProps} from "@mui/material";
+import {Box, Stack, StackProps, SxProps} from "@mui/material";
 import {Skill, CustomComponent, useSkill} from "@discretize/gw2-ui-new";
 import {useSortable} from "@dnd-kit/sortable";
 import {shallowEqual} from "react-redux";
 import {SkillContextMenu, SkillContextMenuProps} from "./skill-menu";
 import {Keybind} from "./keybind";
+import {useAutoSize} from "../../store/settings";
 import {DragId, SkillData} from "../../util/drag";
 import {getCommonSkill} from "../../data/common";
-import {SkillSlot} from "../../data";
+import {SkillSlot, isAuto} from "../../data";
 
 export interface SkillIconProps extends StackProps {
     skill: number;
@@ -31,35 +32,45 @@ const slotColumn = {
 };
 
 const SkillIcon = ({skill, tooltip = false, orderSelf = false, sx, ...props}: SkillIconProps, ref: React.Ref<HTMLElement>): JSX.Element => {
+    const autoSize = useAutoSize();
     const {data} = useSkill(skill);
     const common = getCommonSkill(skill);
-    const slot = data?.slot ?? common?.slot;
+    const slot = data?.slot as SkillSlot ?? common?.slot;
 
     return (
-        <Stack ref={ref as React.Ref<HTMLDivElement>} direction="column" alignItems="center" {...props} sx={{
-            position: "relative",
-            gridColumn: orderSelf ? slotColumn[slot] : null,
-            fontSize: "3em",
-            height: "1em",
-            ...sx
-        }}>
-            {common ? (
-                <CustomComponent
-                    type="Skill"
-                    data={common}
-                    disableLink
-                    disableText
-                    disableTooltip={!tooltip}
-                    iconProps={common.iconProps}
-                />
-            ) : (
-                <Skill
-                    id={skill}
-                    disableLink
-                    disableText
-                    disableTooltip={!tooltip}
-                />
-            )}
+        <Stack
+            ref={ref as React.Ref<HTMLDivElement>}
+            direction="column"
+            alignItems="center"
+            justifyContent="center"
+            {...props}
+            sx={{
+                position: "relative",
+                gridColumn: orderSelf ? slotColumn[slot] : null,
+                height: "1em",
+                fontSize: "3em",
+                ...sx
+            }}
+        >
+            <Box height="1em" fontSize={isAuto(slot) ? `${autoSize / 100}em` : null}>
+                {common ? (
+                    <CustomComponent
+                        type="Skill"
+                        data={common}
+                        disableLink
+                        disableText
+                        disableTooltip={!tooltip}
+                        iconProps={common.iconProps}
+                    />
+                ) : (
+                    <Skill
+                        id={skill}
+                        disableLink
+                        disableText
+                        disableTooltip={!tooltip}
+                    />
+                )}
+            </Box>
             <Keybind slot={slot as SkillSlot}/>
         </Stack>
     );

@@ -5,6 +5,7 @@ import {
     Stack,
     Typography,
     TextField,
+    InputAdornment,
     ToggleButtonGroup,
     ToggleButton,
     Button,
@@ -12,7 +13,6 @@ import {
     FormHelperText,
     FormGroup,
     FormControl,
-    FormLabel,
     FormControlLabel,
     RadioGroup,
     Radio,
@@ -20,7 +20,21 @@ import {
 } from "@mui/material";
 import {DarkMode, LightMode} from "@mui/icons-material";
 import {useDispatch} from "react-redux";
-import {setTheme, setKeybinds, useTheme, useKeybinds, defaultKeybinds, useDevMode, setDevMode, useKeyDisplay, setKeyDisplay, KeyDisplay} from "../../store/settings";
+import {
+    useTheme,
+    setTheme,
+    useKeybinds,
+    setKeybinds,
+    defaultKeybinds,
+    useAutoSize,
+    setAutoSize,
+    useDevMode,
+    setDevMode,
+    useKeyDisplay,
+    setKeyDisplay,
+    KeyDisplay,
+    defaultAutoSize
+} from "../../store/settings";
 import {SkillSlot} from "../../data";
 import {Theme} from "../../themes";
 
@@ -81,6 +95,7 @@ const iconProps: SxProps = {
 export const SettingsContent = (): JSX.Element => {
     const dispatch = useDispatch();
     const theme = useTheme();
+    const autoSize = useAutoSize();
     const keyDisplay = useKeyDisplay();
     const keybinds = useKeybinds();
     const isDev = useDevMode();
@@ -103,9 +118,23 @@ export const SettingsContent = (): JSX.Element => {
                     </ToggleButton>
                 </ToggleButtonGroup>
             </SettingsGroup>
+            <SettingsGroup title="Display" marginBottom={3}>
+                <TextField
+                    variant="standard"
+                    type="number"
+                    label="Auto Attack Size"
+                    value={autoSize}
+                    onChange={({target}) => dispatch(setAutoSize(Number.parseInt(target.value)))}
+                    placeholder={defaultAutoSize.toString()}
+                    InputProps={{
+                        endAdornment: <InputAdornment position="end">%</InputAdornment>,
+                        inputProps: {min: 0, max: 100}
+                    }}
+                    sx={{width: 150}}
+                />
+            </SettingsGroup>
             <SettingsGroup title="Keybinds" marginBottom={3}>
                 <FormControl>
-                    <FormLabel>Keybind display</FormLabel>
                     <RadioGroup
                         row
                         value={keyDisplay}
@@ -130,7 +159,7 @@ export const SettingsContent = (): JSX.Element => {
                                 variant="standard"
                                 disabled={!keyDisplay}
                                 label={label}
-                                placeholder="Key name"
+                                placeholder={defaultKeybinds[slot]}
                                 value={keybinds[slot]}
                                 onChange={({target}) => dispatch(setKeybinds({[slot]: target.value}))}
                                 sx={{

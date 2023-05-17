@@ -55,6 +55,7 @@ export const enum SkillType {
 
 export const enum SkillSlot {
     Weapon1 = "Weapon_1",
+    Weapon1NoAuto = "Weapon_1_NoAuto",
     Weapon2 = "Weapon_2",
     Weapon3 = "Weapon_3",
     Weapon4 = "Weapon_4",
@@ -82,11 +83,13 @@ export const enum SkillSlot {
     SpecialAction = "SAK"
 }
 
-export const isWeaponSlot = (slot: SkillSlot): boolean => slot.startsWith("Weapon_");
+export const isAuto = (slot: SkillSlot): boolean => slot === "Weapon_1" || slot === "Downed_1";
 
-export const isDownedSlot = (slot: SkillSlot): boolean => slot.startsWith("Downed_");
+export const isWeaponSlot = (slot: SkillSlot): boolean => slot?.startsWith("Weapon_");
 
-export const isProfessionSlot = (slot: SkillSlot): boolean => slot.startsWith("Profession_");
+export const isDownedSlot = (slot: SkillSlot): boolean => slot?.startsWith("Downed_");
+
+export const isProfessionSlot = (slot: SkillSlot): boolean => slot?.startsWith("Profession_");
 
 export interface SkillSection {
     name: string;
