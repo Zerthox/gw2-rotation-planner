@@ -2,13 +2,14 @@ import React from "react";
 import {css} from "@emotion/css";
 import {Icon} from "@discretize/gw2-ui-new";
 import {encode as encodeChatcode} from "gw2e-chat-codes";
-import {Skill} from ".";
+import {Skill, SkillSlot} from ".";
 
 export type IconProps = React.ComponentProps<typeof Icon>;
 
-export interface CommonSkill extends Omit<Skill, "chat_link"> {
-    wiki?: string;
+export interface CommonSkill extends Omit<Skill, "slot" | "chat_link"> {
+    slot?: SkillSlot;
     iconProps?: IconProps;
+    wiki?: string;
     realId?: boolean;
 }
 
@@ -64,6 +65,7 @@ const commonSkills: CommonSkill[] = [
         iconProps: {
             className: initialSize
         },
+        slot: SkillSlot.WeaponSwap,
         wiki: "Weapon Swap",
         facts: [
             {
@@ -82,6 +84,7 @@ const commonSkills: CommonSkill[] = [
         iconProps: {
             className: initialSize
         },
+        slot: SkillSlot.WeaponSwap,
         wiki: "Bundle"
     },
     {
@@ -92,7 +95,8 @@ const commonSkills: CommonSkill[] = [
         icon: "https://wiki.guildwars2.com/images/f/f2/Stow_Pet.png",
         iconProps: {
             className: initialSize
-        }
+        },
+        slot: SkillSlot.Stow
     },
     {
         id: CommonSkillId.Dodge,
@@ -102,6 +106,7 @@ const commonSkills: CommonSkill[] = [
         iconProps: {
             className: initialSize
         },
+        slot: SkillSlot.Dodge,
         wiki: "Dodge"
     },
     {
@@ -112,6 +117,7 @@ const commonSkills: CommonSkill[] = [
         iconProps: {
             className: containSize
         },
+        slot: SkillSlot.Interact,
         wiki: "Revival"
     },
     {
@@ -119,6 +125,7 @@ const commonSkills: CommonSkill[] = [
         name: "Special Action Skill",
         description: "Perform a fight-specific special action.",
         icon: "https://wiki.guildwars2.com/images/5/56/Celestial_Dash.png",
+        slot: SkillSlot.SpecialAction,
         wiki: "Special Action Skill"
     },
     {
@@ -129,6 +136,7 @@ const commonSkills: CommonSkill[] = [
         iconProps: {
             className: initialSize
         },
+        slot: SkillSlot.Interact,
         wiki: "Mistlock Singularity",
         facts: [
             {
@@ -155,6 +163,7 @@ const commonSkills: CommonSkill[] = [
         name: "Portal Entrance",
         description: "Create an entry portal.",
         icon: "https://wiki.guildwars2.com/images/4/43/Watchwork_Portal_Device.png",
+        slot: SkillSlot.Weapon1,
         facts: [
             {
                 text: "Recharge",
@@ -176,6 +185,7 @@ const commonSkills: CommonSkill[] = [
         name: "Portal Exit",
         description: "Create an exit portal.",
         icon: "https://wiki.guildwars2.com/images/4/43/Watchwork_Portal_Device.png",
+        slot: SkillSlot.Weapon1,
         facts: [
             {
                 text: "Duration",
