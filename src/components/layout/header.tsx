@@ -2,7 +2,7 @@ import React from "react";
 import {AppBar, Box, Stack, Typography} from "@mui/material";
 import {GitHub, Help, Settings} from "@mui/icons-material";
 import {IconButton, DrawerWithButton, AnchorWithRef} from "../general";
-import {SettingsContent} from "./settings";
+import {SettingsContent} from "../settings";
 import {useSiteMeta} from "../../hooks/site";
 
 export interface HeaderProps {

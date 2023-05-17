@@ -29,7 +29,12 @@ export const defaultKeybinds = {
     [SkillSlot.Weapon5]: "5",
     [SkillSlot.Heal]: "6",
     [SkillSlot.Utility]: "7-9",
-    [SkillSlot.Elite]: "0"
+    [SkillSlot.Elite]: "0",
+    [SkillSlot.WeaponSwap]: "`",
+    [SkillSlot.Dodge]: "V",
+    [SkillSlot.Interact]: "F",
+    [SkillSlot.Stow]: "",
+    [SkillSlot.SpecialAction]: "N"
 };
 
 export const settingsSlice = createSlice({

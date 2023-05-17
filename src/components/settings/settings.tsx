@@ -64,6 +64,13 @@ const groups = [
         [SkillSlot.Heal]: "Heal Skill",
         [SkillSlot.Utility]: "Utility Skill",
         [SkillSlot.Elite]: "Elite Skill"
+    },
+    {
+        [SkillSlot.WeaponSwap]: "Weapon Swap",
+        [SkillSlot.Dodge]: "Dodge",
+        [SkillSlot.Interact]: "Interact",
+        [SkillSlot.Stow]: "Weapon Stow",
+        [SkillSlot.SpecialAction]: "Special Action"
     }
 ];
 
