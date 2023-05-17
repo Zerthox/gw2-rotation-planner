@@ -29,6 +29,6 @@ export const Keybind = ({slot}: KeybindProps): JSX.Element => {
             fontWeight: "bold",
             pointerEvents: "none",
             zIndex: 1
-        }}>{keybind ?? "..."}</Box>
+        }}>{keybind || "..."}</Box>
     ) : null;
 };
