@@ -22,7 +22,7 @@ export const buildSlice = createSlice({
     name: "build",
     initialState: {
         profession: Profession.Guardian,
-        view: View.CatalogList,
+        view: View.CatalogOrdered,
         sections: [] as SkillSection[],
         skillStates: [] as SkillState[][]
     },

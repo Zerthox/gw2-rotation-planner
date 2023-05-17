@@ -41,7 +41,7 @@ export const settingsSlice = createSlice({
     name: "settings",
     initialState: {
         theme: Theme.Dark,
-        keyDisplay: KeyDisplay.All,
+        keyDisplay: KeyDisplay.Bound,
         keybinds: defaultKeybinds,
         dev: false
     },
