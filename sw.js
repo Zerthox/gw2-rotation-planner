@@ -27,17 +27,17 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-ff1bfe808a45214a7005.js"
+    "url": "webpack-runtime-737dbe85ba9e34a8ec59.js"
   },
   {
     "url": "framework-fa7b5088bb0f529dba14.js"
   },
   {
-    "url": "app-3959e5b9b4b0e7f3be2c.js"
+    "url": "app-422b7d7c0162cd2a2904.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "dc9e19ad921ee66b1cb6230394c0bc3e"
+    "revision": "7f9f752309c300cb95c17f1dc4696507"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
@@ -147,7 +147,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/gw2-rotation-planner/app-3959e5b9b4b0e7f3be2c.js`))) {
+  if (!resources || !(await caches.match(`/gw2-rotation-planner/app-422b7d7c0162cd2a2904.js`))) {
     return await fetch(event.request)
   }
 
