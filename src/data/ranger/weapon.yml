@@ -49,9 +49,8 @@ Sword:
   - 12472 # Crippling Thrust
   - 12473 # Precision Swipe
   - 63336 # Deft Strike
-  - 12482 # Monarch's Leap
+  - 69203 # Pounce
   - 12622 # Serpent's Strike
-  - 12481 # Hornet Sting
 
 Torch:
   - 12635 # Throw Torch
