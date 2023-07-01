@@ -3,7 +3,6 @@ Heal:
   - 12483 # Troll Unguent
   - 12489 # Healing Spring
   - 21773 # Water Spirit
-  - 21775 # Aqua Surge
 
   # specs
   - 31819 # Glyph of Rejuvenation (normal)
@@ -25,13 +24,9 @@ Utility:
   - 12501 # Muddy Terrain
   - 12550 # Quickening Zephyr
   - 12498 # Sun Spirit
-  - 12592 # Solar Flare
   - 12495 # Stone Spirit
-  - 12595 # Quicksand
   - 12497 # Frost Spirit
-  - 12593 # Cold Snap
   - 12493 # Storm Spirit
-  - 12594 # Call Lightning
   - 12633 # "Sic 'Em!"
   - 12631 # "Protect Me!"
   - 12632 # "Guard!"
@@ -59,7 +54,6 @@ Elite:
   - 12516 # "Strength of the Pack!"
   - 12580 # Entangle
   - 12569 # Spirit of Nature
-  - 12596 # Nature's Renewal
 
   # specs
   - 55046 # Glyph of the Stars (normal)
