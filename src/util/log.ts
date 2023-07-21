@@ -189,6 +189,7 @@ export const getRotation = (log: Log, player: string, importPhases: boolean): Ro
         }];
     } else {
         return phases.map((phase) => {
+            // TODO: include casts ending in phase
             const start = findTimeIndex(casts, phase.start);
             const end = findTimeIndex(casts, phase.end);
             return {
