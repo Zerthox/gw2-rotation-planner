@@ -21,6 +21,8 @@ const nextDuration = (base: number, duration: number): number => {
     return next <= 100 ? roundDurationStat(next) : null;
 };
 
+const formatMs = (ms: number) => `${new Intl.NumberFormat("fr").format(ms)}ms`;
+
 const ConditionCalculator = (): JSX.Element => {
     const [duration, setDuration] = useState(0);
     const durationValid = duration >= 0 && duration <= 100;
@@ -35,7 +37,7 @@ const ConditionCalculator = (): JSX.Element => {
             <TextField
                 type="number"
                 label="Duration"
-                value={duration.toFixed(2)}
+                value={duration}
                 error={!durationValid}
                 onChange={({target}) => setDuration(Number.parseFloat(target.value))}
                 InputProps={{
@@ -59,7 +61,7 @@ const ConditionCalculator = (): JSX.Element => {
             {valid ? (
                 <>
                     <Stack direction="column" spacing={0.5}>
-                        <Typography>Effective duration: {effectiveDuration(base, duration)}ms</Typography>
+                        <Typography>Effective duration: {formatMs(effectiveDuration(base, duration))}</Typography>
                         <Typography>Minimized Condition Duration: {minimizeDuration(base, duration).toFixed(2)}%</Typography>
                         <Typography>Next higher Condition Duration: {nextDuration(base, duration)?.toFixed(2) ?? "-"}%</Typography>
                     </Stack>
