@@ -62,6 +62,8 @@ Pet:
   - 65418 # Hunker Down (Siege Turtle)
   - 66622 # Bloodthirsty Charge (Wallow)
 
+  - 71002 # Dimension Breach (Aether Hunter)
+
 Druid:
   - 31869 # Celestial Avatar
   - 31411 # Release Celestial Avatar
@@ -111,6 +113,8 @@ Soulbeast:
   - 64882 # Undead Plague
   - 64699 # Jade Cannon
   - 66258 # Snap
+  - 71282 # Lunge
+  - 70889 # Ley-Line Vortex
 
   # pet archetype
   - 44626 # Spiritual Reprieve
