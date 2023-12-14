@@ -113,13 +113,16 @@ const SKILL_MAPPING = {
     [-14]: AttunementSkill.Earth,
     [-15]: AttunementSkill.Earth,
     [-16]: AttunementSkill.Earth,
-    [41166]: AttunementSkill.Water, // weaver double attunements
-    [42264]: AttunementSkill.Air,
-    [43470]: AttunementSkill.Fire,
-    [44857]: AttunementSkill.Earth,
+    41166: AttunementSkill.Water, // weaver double attunements
+    42264: AttunementSkill.Air,
+    43470: AttunementSkill.Fire,
+    44857: AttunementSkill.Earth,
     [-17]: CommonSkillId.Dodge, // mirage cloak dodge
-    42955: 40255 // smokescale smoke assault
-    // TODO: add custom skill for single hit?
+    42955: 40255, // smokescale smoke assault, TODO: add custom skill for single hit?
+    62730: CommonSkillId.Dodge, // vindicator death drop
+    62732: CommonSkillId.Dodge, // vindicator imperial impact
+    62879: CommonSkillId.Dodge, // vindicator saints shield
+    62890: CommonSkillId.Dodge // vindicator tenacious ruin
 };
 
 const insertCast = (casts: Cast[], {skill, time}: Cast) => {
