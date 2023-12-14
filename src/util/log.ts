@@ -123,6 +123,7 @@ export const fetchLog = async (link: string): Promise<Log> => {
 export interface Cast {
     skill: number;
     time: number;
+    duration: number;
 }
 
 // ei uses some negative custom ids for specific sills
@@ -152,10 +153,11 @@ const SKILL_MAPPING = {
     62890: CommonSkillId.Dodge // vindicator tenacious ruin
 };
 
-const insertCast = (casts: Cast[], {skill, time}: Cast) => {
+const insertCast = (casts: Cast[], {skill, time, duration}: Cast) => {
     const cast = {
         skill: SKILL_MAPPING[skill] ?? (skill in SpecialActionSkill ? CommonSkillId.SpecialAction : skill),
-        time
+        time,
+        duration
     };
 
     // negative ids are invalid
@@ -179,9 +181,9 @@ export const getCasts = (log: Log, playerName: string): Cast[] => {
         for (const {id, skills} of player.rotation) {
             const skill = log.skillMap[`s${id}`];
             if (!skill.isGearProc && !skill.isTraitProc) {
-                for (const {timeGained, castTime} of skills) {
-                    if (timeGained >= 0) {
-                        insertCast(result, {skill: id, time: castTime});
+                for (const {timeGained, castTime, duration} of skills) {
+                    if (typeof timeGained !== "number" || timeGained >= 0) {
+                        insertCast(result, {skill: id, time: castTime, duration});
                     }
                 }
             }
@@ -191,10 +193,10 @@ export const getCasts = (log: Log, playerName: string): Cast[] => {
             const phase = log.phases[i];
             if (keepPhase(phase)) {
                 const casts = player.details.rotation[i];
-                for (const [time, id, _, status] of casts) {
+                for (const [time, id, duration, status] of casts) {
                     const skill = log.skillMap[`s${id}`] as unknown as SkillInternal;
                     if (!skill.gearProc && !skill.traitProc && status != AnimationStatus.Interrupted) {
-                        insertCast(result, {skill: id, time: phase.start + time});
+                        insertCast(result, {skill: id, time: phase.start + time, duration});
                     }
                 }
             }
@@ -210,7 +212,7 @@ const PHASE_BLACKLIST = ["First Number"];
 
 export const keepPhase = (phase: Phase): boolean => !phase.breakbarPhase && !phase.subPhases && !PHASE_BLACKLIST.includes(phase.name);
 
-const findTimeIndex = (casts: Cast[], time: number): number => sortedIndexBy(casts, {time} as Cast, (cast) => cast.time);
+const findTimeIndex = (casts: Cast[], time: number, end: boolean): number => sortedIndexBy(casts, {time, duration: 0} as Cast, (cast) => cast.time + (end ? cast.duration : 0));
 
 export const getRotation = (log: Log, player: string, importPhases: boolean): Row[] => {
     const casts = getCasts(log, player);
@@ -222,10 +224,15 @@ export const getRotation = (log: Log, player: string, importPhases: boolean): Ro
             skills: casts.map((cast) => cast.skill)
         }];
     } else {
-        return phases.map((phase) => {
-            // TODO: include casts ending in phase
-            const start = findTimeIndex(casts, phase.start);
-            const end = findTimeIndex(casts, phase.end);
+        let prevEnd = 0;
+        return phases.map((phase, i) => {
+            const isFirst = i === 0;
+            const firstCast = findTimeIndex(casts, phase.start, true);
+            const start = isFirst ? firstCast : Math.max(prevEnd, firstCast);
+
+            const end = findTimeIndex(casts, phase.end, false);
+            prevEnd = end;
+
             return {
                 name: phase.name,
                 skills: casts.slice(start, end).map((cast) => cast.skill)
