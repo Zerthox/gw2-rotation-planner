@@ -11,8 +11,35 @@ export interface Log {
     isCM?: boolean;
     wvw: boolean;
     recordedBy: string;
+    skillMap: Record<string, Skill>;
     players: Player[];
     phases: Phase[];
+}
+
+export interface Skill {
+    name: string;
+    icon: string;
+    autoAttack: boolean;
+    isGearProc: boolean;
+    isInstantCast: boolean;
+    isNotAccurate: boolean;
+    isSwap: boolean;
+    isTraitProc: boolean;
+    canCrit: boolean;
+    conversionBasedHealing: boolean;
+    hybridHealing: boolean;
+}
+
+export interface SkillInternal {
+    name: string;
+    icon: string;
+    aa: boolean;
+    gearProc: boolean;
+    isInstantCast: boolean;
+    notAccurate: boolean;
+    isSwap: boolean;
+    traitProc: boolean;
+    healingMode: number;
 }
 
 export interface Player {
@@ -147,12 +174,15 @@ export const getCasts = (log: Log, playerName: string): Cast[] => {
     const player = log.players.find((player) => player.name === playerName);
     const result = [] as Cast[];
 
-    // we need to handle dps.report & wingman json differently
+    // handle both json format and internal html format
     if (player.rotation) {
         for (const {id, skills} of player.rotation) {
-            for (const {timeGained, castTime} of skills) {
-                if (timeGained >= 0) {
-                    insertCast(result, {skill: id, time: castTime});
+            const skill = log.skillMap[`s${id}`];
+            if (!skill.isGearProc && !skill.isTraitProc) {
+                for (const {timeGained, castTime} of skills) {
+                    if (timeGained >= 0) {
+                        insertCast(result, {skill: id, time: castTime});
+                    }
                 }
             }
         }
@@ -162,7 +192,8 @@ export const getCasts = (log: Log, playerName: string): Cast[] => {
             if (keepPhase(phase)) {
                 const casts = player.details.rotation[i];
                 for (const [time, id, _, status] of casts) {
-                    if (status != AnimationStatus.Interrupted) {
+                    const skill = log.skillMap[`s${id}`] as unknown as SkillInternal;
+                    if (!skill.gearProc && !skill.traitProc && status != AnimationStatus.Interrupted) {
                         insertCast(result, {skill: id, time: phase.start + time});
                     }
                 }
