@@ -14,17 +14,17 @@ const effectiveDuration = (base: number, duration: number): number => toTicks(ba
 
 const ceilDurationStat = (duration: number): number => Math.ceil(duration * 100) / 100;
 
-const nextDurationStep = (base: number, effectiveDuration: number): number => ceilDurationStat((effectiveDuration / base - 1) * 100);
+const nextDurationStep = (base: number, effectiveDuration: number): number => (effectiveDuration / base - 1) * 100;
 
 const minimizeDuration = (base: number, duration: number): number => {
     const prevDuration = effectiveDuration(base, duration) - TICK;
     const minimized = nextDurationStep(base, prevDuration);
-    return Math.max(0, minimized);
+    return Math.max(0, ceilDurationStat(minimized));
 };
 
 const nextHigherDuration = (base: number, duration: number): number => {
     const next = nextDurationStep(base, effectiveDuration(base, duration));
-    return next <= 100 ? next : null;
+    return next <= 100 ? ceilDurationStat(next) : null;
 };
 
 const formatMs = (ms: number) => `${new Intl.NumberFormat("fr").format(ms)}ms`;
