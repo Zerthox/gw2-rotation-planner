@@ -12,13 +12,19 @@ const toTicks = (time: number): number => Math.ceil(time / TICK) * TICK;
 
 const effectiveDuration = (base: number, duration: number): number => toTicks(base * (1 + duration / 100));
 
-const roundDurationStat = (duration: number): number => Math.round(duration * 100) / 100;
+const ceilDurationStat = (duration: number): number => Math.ceil(duration * 100) / 100;
 
-const minimizeDuration = (base: number, duration: number): number => roundDurationStat(Math.max(0, (effectiveDuration(base, duration) - TICK + 1) / base - 1) * 100);
+const nextDurationStep = (base: number, effectiveDuration: number): number => ceilDurationStat((effectiveDuration / base - 1) * 100);
 
-const nextDuration = (base: number, duration: number): number => {
-    const next = ((effectiveDuration(base, duration) + 1) / base - 1) * 100;
-    return next <= 100 ? roundDurationStat(next) : null;
+const minimizeDuration = (base: number, duration: number): number => {
+    const prevDuration = effectiveDuration(base, duration) - TICK;
+    const minimized = nextDurationStep(base, prevDuration);
+    return Math.max(0, minimized);
+};
+
+const nextHigherDuration = (base: number, duration: number): number => {
+    const next = nextDurationStep(base, effectiveDuration(base, duration));
+    return next <= 100 ? next : null;
 };
 
 const formatMs = (ms: number) => `${new Intl.NumberFormat("fr").format(ms)}ms`;
@@ -63,7 +69,7 @@ const ConditionCalculator = (): JSX.Element => {
                     <Stack direction="column" spacing={0.5}>
                         <Typography>Effective duration: {formatMs(effectiveDuration(base, duration))}</Typography>
                         <Typography>Minimized Condition Duration: {minimizeDuration(base, duration).toFixed(2)}%</Typography>
-                        <Typography>Next higher Condition Duration: {nextDuration(base, duration)?.toFixed(2) ?? "-"}%</Typography>
+                        <Typography>Next higher Condition Duration: {nextHigherDuration(base, duration)?.toFixed(2) ?? "-"}%</Typography>
                     </Stack>
                 </>
             ) : (
