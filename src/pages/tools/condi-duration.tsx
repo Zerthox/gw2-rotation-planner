@@ -3,29 +3,9 @@ import {Container, Stack, Card, TextField, FormHelperText, InputAdornment, Typog
 import {Add, Remove} from "@mui/icons-material";
 import {Layout, SEO} from "../../components/layout";
 import {IconButton} from "../../components/general";
+import {effectiveDuration, minimizeDuration, nextHigherDuration} from "../../util/condi-duration";
 
 const title = "Condi Duration Calculator";
-
-const TICK = 40;
-
-const toTicks = (time: number): number => Math.ceil(time / TICK) * TICK;
-
-const effectiveDuration = (base: number, duration: number): number => toTicks(base * (1 + duration / 100));
-
-const ceilDurationStat = (duration: number): number => Math.ceil(duration * 100) / 100;
-
-const nextDurationStep = (base: number, effectiveDuration: number): number => (effectiveDuration / base - 1) * 100;
-
-const minimizeDuration = (base: number, duration: number): number => {
-    const prevDuration = effectiveDuration(base, duration) - TICK;
-    const minimized = nextDurationStep(base, prevDuration);
-    return Math.max(0, ceilDurationStat(minimized));
-};
-
-const nextHigherDuration = (base: number, duration: number): number => {
-    const next = nextDurationStep(base, effectiveDuration(base, duration));
-    return next <= 100 ? ceilDurationStat(next) : null;
-};
 
 const formatMs = (ms: number) => `${new Intl.NumberFormat("fr").format(ms)}ms`;
 
