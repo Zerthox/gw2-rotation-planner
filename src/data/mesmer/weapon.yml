@@ -65,8 +65,19 @@ Axe:
 
 Dagger:
   - 62510 # Flying Cutter
+  - 69389 # Phantom Razor
   - 62560 # Bladecall
   - 62607 # Unstable Bladestorm
+
+Rifle:
+  - 71892 # Friendly Fire
+  - 71800 # Effervescence
+  - 71897 # Journey
+  - 72005 # Inspiring Imagery
+  - 72076 # Abstraction
+  - 72007 # Phantasmal Sharpshooter
+  - 72008 # Singularity Shot
+  - 71792 # Dimensional Aperture
 
 # underwater
 Spear:

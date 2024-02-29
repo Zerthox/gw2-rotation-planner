@@ -11,6 +11,7 @@ Dagger:
   - 40301 # Leading Swipe
   - 41800 # Serpent Stab
   - 44278 # Deadly Delivery
+  - 69223 # Neurotoxin Burst
   - 43536 # Double Arc
   - 46123 # Instinctive Engage
   - 12478 # Stalker's Strike
@@ -62,6 +63,7 @@ Warhorn:
 
 Staff:
   - 31710 # Solar Beam
+  - 69175 # Solar Brilliance
   - 31889 # Astral Wisp
   - 31535 # Ancestral Grace
   - 31700 # Vine Surge
@@ -80,6 +82,16 @@ Hammer:
   - 63131 # Unleashed Savage Shock Wave
   - 63330 # Thump
   - 63208 # Unleashed Thump
+
+Mace:
+  - 72088 # Germinate
+  - 72044 # Burgeon
+  - 71885 # Cultivate
+  - 72079 # Rampant Growth
+  - 71999 # Flourish
+  - 71963 # Oaken Cudgel
+  - 71903 # Thistleguard
+  - 71841 # Wild Strikes
 
 # underwater
 Spear:

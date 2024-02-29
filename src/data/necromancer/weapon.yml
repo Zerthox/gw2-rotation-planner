@@ -53,6 +53,19 @@ Pistol:
   - 62513 # Weeping Shots
   - 62511 # Vile Blast
 
+Sword:
+   - 71986 # Enervation Blade
+   - 71850 # Enervation Echo
+   - 72051 # Deathly Enervation
+   - 71883 # Ravenous Wave
+   - 71914 # Satiate
+   - 71799 # Path of Gluttony
+   - 71871 # Gorge
+   - 71813 # Hungering Maelstrom
+   - 72068 # Gormandize
+   - 71998 # Devouring Visage
+   - 71926 # Consume
+
 # underwater
 Spear:
   - 10692 # Cruel Strike
