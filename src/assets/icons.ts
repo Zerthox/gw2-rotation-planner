@@ -1,5 +1,7 @@
 import {Profession, EliteSpecialization} from "../data";
 
+export const gw2Logo = "https://wiki.guildwars2.com/images/4/44/Secrets_of_the_Obscure_logo.png";
+
 export const iconSize = 20;
 
 export const professionIcons: Record<Profession, string> = {

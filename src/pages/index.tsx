@@ -6,6 +6,7 @@ import {Layout, SEO} from "../components/layout";
 import {Planner} from "../components/planner";
 import {IOButtons} from "../components/io";
 import {HelpContent} from "../components/planner";
+import {gw2Logo} from "../assets/icons";
 
 const iconSize = "1.5em";
 
@@ -18,12 +19,11 @@ const Index = ({location}: PageProps): JSX.Element => {
                 <Stack direction="row" alignItems="center" spacing={1}>
                     <Box
                         component="img"
-                        src="https://wiki.guildwars2.com/images/thumb/c/cc/EoD_Texture_Trans.png/240px-EoD_Texture_Trans.png"
+                        src={gw2Logo}
                         alt="GW2"
                         sx={{
                             height: iconSize,
                             width: iconSize,
-                            marginY: -2,
                             background: "currentcolor",
                             borderRadius: "50%"
                         }}
