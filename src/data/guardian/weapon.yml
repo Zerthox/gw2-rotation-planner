@@ -77,6 +77,13 @@ Axe:
 
 # underwater
 Spear:
+  - 73055 # Daybreaking Slash
+  - 72940 # Helio Rush
+  - 72978 # Gleaming Disc
+  - 73094 # Solar Storm
+  - 73132 # Symbol of Luminance
+
+Aquatic Spear:
   - 9189 # Spear of Light
   - 9190 # Zealot's Flurry
   - 9191 # Brilliance

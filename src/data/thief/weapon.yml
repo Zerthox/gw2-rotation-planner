@@ -76,8 +76,21 @@ Scepter:
   - 63128 # Endless Night (Pistol offhand)
   - 63154 # Triple Threat (No offhand)
 
-# underwater
 Spear:
+  - 73145 # Barbed Spear
+  - 73005 # Ashen Assault
+  - 72924 # Malicious Ashen Assault
+  - 73041 # Mantis Sting
+  - 72896 # Entangling Asp
+  - 73076 # Falling Spider
+  - 72986 # Unsuspecting Strike
+  - 73063 # Vampiric Slash
+  - 72904 # Shattering Assault
+  - 72927 # Distracting Throw
+  - 72991 # Shadow Veil
+
+# underwater
+Aquatic Spear:
   - 13119 # Stab
   - 13120 # Jab
   - 13121 # Poison Tip Strike

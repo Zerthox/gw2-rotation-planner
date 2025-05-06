@@ -41,6 +41,16 @@ Mace:
   - 63169 # Energizing Slam
   - 63234 # Rocket Fist Prototype
 
+Spear:
+ - 72944 # Puncturing Jab
+ - 73109 # Rending Strike
+ - 73001 # Amplifying Slice
+ - 73122 # Conduit Surge
+ - 73002 # Lightning Rod
+ - 73143 # Electric Artillery
+ - 72977 # Roiling Skies
+ - 72974 # Devastator
+
 # underwater
 Harpoon Gun:
   - 6148 # Homing Torpedo

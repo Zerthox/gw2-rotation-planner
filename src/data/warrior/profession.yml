@@ -8,6 +8,7 @@ Burst:
   - 14506 # Combustive Shot
   - 14396 # Kill Shot
   - 14387 # Earthshaker
+  - 73024 # Harrier's Toss
 
 Berserker:
   - 30435 # Berserk
@@ -20,6 +21,7 @@ Berserker:
   - 30682 # Flaming Flurry
   - 30851 # Decapitate
   - 30879 # Rupturing Smash
+  - 73103 # Wild Throw
 
 Spellbreaker:
   - 44165 # Full Counter
@@ -33,6 +35,7 @@ Spellbreaker:
   - 42494 # Flurry
   - 41746 # Whirling Strike
   - 41330 # Forceful Shot
+  - 73014 # Harrier's Toss
 
 Bladesworn:
   - 62745 # Unsheathe Gunsaber

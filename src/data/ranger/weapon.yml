@@ -93,8 +93,23 @@ Mace:
   - 71903 # Thistleguard
   - 71841 # Wild Strikes
 
-# underwater
 Spear:
+  - 72920 # Bee's Sting
+  - 72922 # Drake's Swipe
+  - 73112 # Wyvern's Lash
+  - 73087 # Cheetah's Strike
+  - 72932 # Ravager's Abandon
+  - 73110 # Mongoose's Frenzy
+  - 73030 # Wolf's Onslaught
+  - 72928 # Falcon's Stoop
+  - 72913 # Owl's Flight
+  - 73020 # Warclaw's Engage
+  - 73150 # Predator's Ambush
+  - 73008 # Panther's Prowl
+  - 72993 # Spider's Web
+
+# underwater
+Aquatic Spear:
   - 12553 # Stab
   - 12555 # Jab
   - 12556 # Toxic Strike

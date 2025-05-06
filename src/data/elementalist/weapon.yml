@@ -7,17 +7,17 @@ Dagger:
   - 5537 # Cone of Cold
   - 5646 # Convergence
   - 5525 # Ring of Earth
-  - 40963 # Grinding Stones
-  - 46018 # Mud Slide
-  - 46140 # Katabatic Wind
-  - 42379 # Ashen Blast
-  - 44652 # Plasma Burst
-  - 42330 # Steam Surge
   - 5644 # Burning Speed
   - 5487 # Frozen Burst
   - 5527 # Shocking Aura
   - 51662 # Transmute Lightning
   - 5559 # Earthen Rush
+  - 42330 # Steam Surge
+  - 44652 # Plasma Burst
+  - 42379 # Ashen Blast
+  - 46140 # Katabatic Wind
+  - 46018 # Mud Slide
+  - 40963 # Grinding Stones
   - 5520 # Frost Aura
   - 51646 # Transmute Frost
   - 5691 # Ring of Fire
@@ -49,16 +49,16 @@ Scepter:
   - 5561 # Lightning Strike
   - 5695 # Rock Barrier
   - 5780 # Hurl
-  - 40794 # Earthen Synergy
-  - 46014 # Stone Tide
-  - 45742 # Glacial Drift
-  - 42954 # Fracturing Strike
-  - 43576 # Plasma Beam
-  - 42181 # Fiery Frost
   - 5675 # Phoenix
   - 5510 # Water Trident
   - 5694 # Blinding Flash
   - 5696 # Dust Devil
+  - 42181 # Fiery Frost
+  - 43576 # Plasma Beam
+  - 42954 # Fracturing Strike
+  - 45742 # Glacial Drift
+  - 46014 # Stone Tide
+  - 40794 # Earthen Synergy
 
 Staff:
   - 5491 # Fireball
@@ -69,17 +69,17 @@ Staff:
   - 5550 # Ice Spike
   - 5552 # Lightning Surge
   - 5528 # Eruption
-  - 42321 # Pile Driver
-  - 44550 # Lahar
-  - 41184 # Monsoon
-  - 43762 # Pyroclastic Blast
-  - 41125 # Plasma Blast
-  - 40332 # Pressure Blast
   - 5679 # Flame Burst
   - 5681 # Geyser
   - 5553 # Gust
   - 5685 # Magnetic Aura
   - 51684 # Transmute Earth
+  - 40332 # Pressure Blast
+  - 41125 # Plasma Blast
+  - 43762 # Pyroclastic Blast
+  - 41184 # Monsoon
+  - 44550 # Lahar
+  - 42321 # Pile Driver
   - 5680 # Burning Retreat
   - 5515 # Frozen Ground
   - 5682 # Windborne Speed
@@ -116,16 +116,16 @@ Sword:
   - 44405 # Riptide
   - 44998 # Polaric Leap
   - 40709 # Earthen Vortex
+  - 44451 # Cauterizing Strike
+  - 41167 # Aqua Siphon
+  - 43803 # Quantum Strike
+  - 40139 # Rust Frenzy
   - 42271 # Twin Strike
   - 43074 # Pyro Vortex
   - 46447 # Lava Skin
   - 42867 # Shearing Edge
   - 40170 # Natural Frenzy
   - 46295 # Gale Strike
-  - 44451 # Cauterizing Strike
-  - 41167 # Aqua Siphon
-  - 43803 # Quantum Strike
-  - 40139 # Rust Frenzy
 
 Hammer:
   - 62925 # Singeing Strike
@@ -142,6 +142,12 @@ Hammer:
   - 62834 # Icy Coil
   - 62887 # Crescent Wind
   - 62975 # Rocky Loop
+  - 69184 # Dual Orbits: Fire and Water
+  - 69341 # Dual Orbits: Fire and Air
+  - 69164 # Dual Orbits: Fire and Earth
+  - 69211 # Dual Orbits: Water and Air
+  - 69413 # Dual Orbits: Water and Earth
+  - 69246 # Dual Orbits: Air and Earth
   - 62876 # Grand Finale
   - 62807 # Triple Sear
   - 62948 # Crashing Font
@@ -151,6 +157,42 @@ Hammer:
   - 62843 # Cleansing Typhoon
   - 62716 # Shock Blast
   - 62778 # Ground Pound
+
+Spear:
+  - 73088 # Flame Spear
+  - 72966 # Restorative Spear
+  - 73124 # Lightning Javelin
+  - 72910 # Stone Strike
+  - 73080 # Blazing Barrage
+  - 73061 # Ice Beam
+  - 73091 # Fulgor
+  - 72905 # Earthen Spear
+  - 73137 # Seethe
+  - 72967 # Ripple
+  - 73037 # Energize
+  - 73019 # Harden
+  - 72916 # Frostfire Ward
+  - 73104 # Galvanize
+  - 72914 # Fiery Impact
+  - 73052 # Elutriate
+  - 73062 # Soothing Burst
+  - 72906 # Shale Storm
+  - 72988 # Meteor
+  - 73148 # Undertow
+  - 72998 # Twister
+  - 73010 # Fissure
+  - 73054 # Etching: Volcano
+  - 72995 # Lesser Volcano
+  - 73044 # Volcano
+  - 72982 # Etching: Jökulhlaup
+  - 73105 # Lesser Jökulhlaup
+  - 73140 # Jökulhlaup
+  - 72915 # Etching: Derecho
+  - 73060 # Lesser Derecho
+  - 73092 # Derecho
+  - 72900 # Etching: Haboob
+  - 72935 # Lesser Haboob
+  - 73017 # Haboob
 
 # underwater
 Trident:
@@ -162,17 +204,17 @@ Trident:
   - 5605 # Ice Globe
   - 5655 # Electrocute
   - 5658 # Rock Spray
+  - 5566 # Steam
+  - 5606 # Ice Wall
+  - 5652 # Air Pocket
+  - 5653 # Vacuum
+  - 5662 # Magnetic Current
   - 40378 # Hydrothermal Vent
   - 41712 # Plasmic Strike
   - 46185 # Molten Burst
   - 46360 # Absolute Zero
   - 41001 # Elemental Compression
   - 39981 # Sodden Swath
-  - 5566 # Steam
-  - 5606 # Ice Wall
-  - 5652 # Air Pocket
-  - 5653 # Vacuum
-  - 5662 # Magnetic Current
   - 5599 # Lava Chains
   - 5748 # Undercurrent
   - 5648 # Air Bubble

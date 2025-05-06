@@ -56,6 +56,14 @@ Sword:
   - 27074 # Deathstrike
 
 Spear:
+  - 72931 # Abyssal Fire
+  - 73015 # Abyssal Strike
+  - 72972 # Abyssal Force
+  - 72938 # Abyssal Blitz
+  - 72954 # Abyssal Blot
+  - 73059 # Abyssal Raze
+
+Aquatic Spear:
   - 28714 # Spear of Anguish
   - 28915 # Rapid Assault
   - 28827 # Venomous Sphere

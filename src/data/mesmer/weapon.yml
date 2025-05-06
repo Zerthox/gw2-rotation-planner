@@ -79,14 +79,23 @@ Rifle:
   - 72008 # Singularity Shot
   - 71792 # Dimensional Aperture
 
-# underwater
 Spear:
+  - 73154 # Psycut
+  - 73066 # Psystrike
+  - 73095 # Mind Pierce
+  - 73067 # Fractured Glass
+  - 73093 # Mind the Gap
+  - 73152 # Imaginary Inversion
+  - 72946 # Phantasmal Lancer
+  - 72957 # Mental Collapse
+
+# underwater
+Aquatic Spear:
   - 10315 # Stab
   - 10316 # Jab
   - 44864 # Ambush Assault
   - 10317 # Evasive Strike
   - 10318 # Feigned Surge
-  # - 10322 # Feign
   - 10251 # Phantasmal Mariner
   - 10325 # Slipstream
   - 10255 # Vortex

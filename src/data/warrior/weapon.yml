@@ -34,14 +34,6 @@ Hammer:
   - 14359 # Staggering Blow
   - 14511 # Backbreaker
 
-Spear:
-  - 14437 # Stab
-  - 14438 # Jab
-  - 14439 # Impale
-  - 14440 # Mariner's Frenzy
-  - 14448 # Barbed Pull
-  - 14441 # Parry
-  - 14480 # Tsunami Slash
 
 Longbow:
   - 14431 # Dual Shot
@@ -75,13 +67,6 @@ Shield:
   - 14361 # Shield Bash
   - 14362 # Shield Stance
 
-Harpoon Gun:
-  - 14552 # Mariner's Shot
-  - 14466 # Puncture Shot
-  - 14481 # Split Shot
-  - 14467 # Knot Shot
-  - 14465 # Repeating Shot
-
 Sword:
   - 14364 # Sever Artery
   - 14365 # Gash
@@ -100,3 +85,27 @@ Torch:
 Warhorn:
   - 14393 # Charge
   - 14394 # Call of Valor
+
+Spear:
+  - 72958 # Mighty Throw
+  - 72897 # Maiming Spear
+  - 72959 # Disrupting Throw
+  - 72992 # Spearmarshal's Support
+  - 73009 # Spear Swipe
+
+# underwater
+Aquatic Spear:
+  - 14437 # Stab
+  - 14438 # Jab
+  - 14439 # Impale
+  - 14440 # Mariner's Frenzy
+  - 14448 # Barbed Pull
+  - 14441 # Parry
+  - 14480 # Tsunami Slash
+
+Harpoon Gun:
+  - 14552 # Mariner's Shot
+  - 14466 # Puncture Shot
+  - 14481 # Split Shot
+  - 14467 # Knot Shot
+  - 14465 # Repeating Shot
