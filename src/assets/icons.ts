@@ -1,6 +1,6 @@
 import {Profession, EliteSpecialization} from "../data";
 
-export const gw2Logo = "https://wiki.guildwars2.com/images/4/44/Secrets_of_the_Obscure_logo.png";
+export const gw2Logo = "https://wiki.guildwars2.com/images/6/60/Janthir_Wilds_logo.png";
 
 export const iconSize = 20;
 

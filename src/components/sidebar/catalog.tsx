@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {Box, Stack, SxProps, Accordion, AccordionSummary, AccordionDetails, StackProps} from "@mui/material";
+import {Box, Stack, SxProps, Accordion, AccordionSummary, AccordionDetails, StackProps, Typography} from "@mui/material";
 import {ExpandMore} from "@mui/icons-material";
 import {DraggableSkill} from "../skill";
 import {DragId} from "../../util/drag";
@@ -25,9 +25,11 @@ const SkillSection = ({name, type, parentId, skills, sx}: SkillSectionProps): JS
         <Accordion
             disableGutters
             elevation={0}
-            TransitionProps={{
-                onEnter: () => setVisible(true),
-                onExited: () => setVisible(false)
+            slotProps={{
+                transition: {
+                    onEnter: () => setVisible(true),
+                    onExited: () => setVisible(false)
+                }
             }}
             sx={sx}
         >
@@ -35,7 +37,7 @@ const SkillSection = ({name, type, parentId, skills, sx}: SkillSectionProps): JS
                 expandIcon={<ExpandMore/>}
                 aria-controls={`${name} Skills Panel`}
             >
-                {name} Skills
+                <Typography component="span">{name} Skills</Typography>
             </AccordionSummary>
             <AccordionDetails>
                 <Box sx={{

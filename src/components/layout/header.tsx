@@ -1,19 +1,22 @@
 import React from "react";
 import {AppBar, Box, Stack, Typography} from "@mui/material";
-import {GitHub, Help, Settings} from "@mui/icons-material";
+import {Construction, GitHub, Help, Settings} from "@mui/icons-material";
 import {IconButton, DrawerWithButton, AnchorWithRef} from "../general";
+import {ToolsMenu} from "../tools";
 import {SettingsContent} from "../settings";
 import {useSiteMeta} from "../../hooks/site";
+import {gw2Logo} from "../../assets/icons";
 
 export interface HeaderProps {
     title?: string;
-    titleDisplay?: React.ReactNode;
     children?: React.ReactNode;
     settings?: boolean;
     help?: React.ReactNode;
 }
 
-export const Header = ({title, titleDisplay, children, settings = true, help}: HeaderProps): JSX.Element => {
+const iconSize = "1.5em";
+
+export const Header = ({title, children, settings = true, help}: HeaderProps): JSX.Element => {
     const siteMeta = useSiteMeta();
 
     return (
@@ -25,7 +28,20 @@ export const Header = ({title, titleDisplay, children, settings = true, help}: H
                 padding={2}
             >
                 <Typography variant="h4">
-                    {titleDisplay ?? title}
+                    <Stack direction="row" alignItems="center" spacing={1}>
+                        <Box
+                            component="img"
+                            src={gw2Logo}
+                            alt="GW2"
+                            sx={{
+                                height: iconSize,
+                                width: iconSize,
+                                background: "currentcolor",
+                                borderRadius: "50%"
+                            }}
+                        />
+                        <span>{title}</span>
+                    </Stack>
                 </Typography>
                 {children}
                 <Box flexGrow={1}/>
@@ -39,6 +55,13 @@ export const Header = ({title, titleDisplay, children, settings = true, help}: H
                             {help}
                         </DrawerWithButton>
                     ) : null}
+                    <DrawerWithButton title="Tools" anchor="right" button={
+                        <IconButton title="Tools">
+                            <Construction/>
+                        </IconButton>
+                    }>
+                        <ToolsMenu/>
+                    </DrawerWithButton>
                     <IconButton
                         component={AnchorWithRef}
                         title="View Source"
