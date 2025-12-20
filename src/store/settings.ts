@@ -1,4 +1,4 @@
-import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import {createSelector, createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {useSelector} from "react-redux";
 import {StoreState} from ".";
 import {SkillSlot} from "../data";
@@ -80,18 +80,20 @@ export const useAutoSize = (): number => useSelector(selectAutoSize);
 export const selectKeyDisplay = ({settingsReducer}: StoreState): KeyDisplay => settingsReducer.keyDisplay;
 export const useKeyDisplay = (): KeyDisplay => useSelector(selectKeyDisplay);
 
-export const selectKeybinds = ({settingsReducer}: StoreState): Keybinds<string> => {
-    const {keybinds} = settingsReducer;
-    return {
-        ...keybinds,
-        [SkillSlot.Weapon1NoAuto]: keybinds[SkillSlot.Weapon1],
-        [SkillSlot.Pet]: keybinds[SkillSlot.Profession2],
-        [SkillSlot.Downed1]: keybinds[SkillSlot.Weapon1],
-        [SkillSlot.Downed2]: keybinds[SkillSlot.Weapon2],
-        [SkillSlot.Downed3]: keybinds[SkillSlot.Weapon3],
-        [SkillSlot.Downed4]: keybinds[SkillSlot.Weapon4]
-    };
-};
+export const selectKeybinds = createSelector(
+    [({settingsReducer}: StoreState) => settingsReducer.keybinds],
+    (keybinds: Keybinds<string>): Keybinds<string> => {
+        return {
+            ...keybinds,
+            [SkillSlot.Weapon1NoAuto]: keybinds[SkillSlot.Weapon1],
+            [SkillSlot.Pet]: keybinds[SkillSlot.Profession2],
+            [SkillSlot.Downed1]: keybinds[SkillSlot.Weapon1],
+            [SkillSlot.Downed2]: keybinds[SkillSlot.Weapon2],
+            [SkillSlot.Downed3]: keybinds[SkillSlot.Weapon3],
+            [SkillSlot.Downed4]: keybinds[SkillSlot.Weapon4]
+        };
+    }
+);
 export const useKeybinds = (): Keybinds<string> => useSelector(selectKeybinds);
 export const useKeybind = (slot: SkillSlot): string => useKeybinds()[slot];
 

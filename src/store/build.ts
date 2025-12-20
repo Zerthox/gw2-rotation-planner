@@ -1,4 +1,4 @@
-import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import {createSelector, createSlice, PayloadAction} from "@reduxjs/toolkit";
 import {useSelector} from "react-redux";
 import {StoreState} from ".";
 import {Profession, SkillSection} from "../data";
@@ -65,7 +65,11 @@ export const useCurrentProfession = (): Profession => useSelector(selectCurrentP
 export const selectSkillsView = ({buildReducer}: StoreState): View => buildReducer.view;
 export const useSkillsView = (): View => useSelector(selectSkillsView);
 
-export const selectSkillSections = ({buildReducer}: StoreState): SkillSection[] => filterSections(buildReducer.sections, buildReducer.profession);
+export const selectAllSections = ({buildReducer}: StoreState): SkillSection[] => buildReducer.sections;
+export const selectSkillSections = createSelector(
+    [selectAllSections, selectCurrentProfession],
+    (sections, profession): SkillSection[] => filterSections(sections, profession)
+);
 export const useSkillSections = (): SkillSection[] => useSelector(selectSkillSections);
 
 export const selectSkillStates = ({buildReducer}: StoreState): SkillState[][] => buildReducer.skillStates;
