@@ -32,7 +32,7 @@
     "@fontsource/source-code-pro": "^5.0.3",
     "@mui/icons-material": "^7.1.0",
     "@mui/material": "^7.1.0",
-    "@octokit/request": "^9.2.3",
+    "@octokit/request": "^10.0.7",
     "@reduxjs/toolkit": "^2.0.1",
     "@types/gtag.js": "^0.0.20",
     "@types/js-yaml": "^4.0.5",
