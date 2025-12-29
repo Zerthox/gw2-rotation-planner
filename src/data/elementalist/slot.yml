@@ -11,6 +11,10 @@ Heal:
   - 29535 # "Wash the Pain Away!"
   - 44239 # Aquatic Stance
   - 62827 # Soothing Water
+  - 79323 # Rejuvenate (Fire)
+  - 76634 # Rejuvenate (Water)
+  - 79315 # Rejuvenate (Air)
+  - 79314 # Rejuvenate (Earth)
 
 Utility:
   - 5638 # Arcane Wave
@@ -60,6 +64,10 @@ Utility:
   - 62698 # Shattering Ice
   - 62982 # Invigorating Air
   - 62826 # Fortified Earth
+  - 77282 # Fox's Fury
+  - 76563 # Otter's Compassion
+  - 77038 # Hare's Agility
+  - 77320 # Toad's Fortitude
 
 Elite:
   - 25488 # Glyph of Elementals (Fire)
@@ -77,3 +85,4 @@ Elite:
   - 29968 # "Rebound!"
   - 43638 # Weave Self
   - 62725 # Elemental Celerity
+  - 76841 # Elemental Procession

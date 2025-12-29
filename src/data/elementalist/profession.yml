@@ -15,3 +15,13 @@ Catalyst:
   - 62940 # Deploy Jade Sphere (Air)
   - 62723 # Deploy Jade Sphere (Water)
   - 62837 # Deploy Jade Sphere (Earth)
+
+Evoker:
+  - 76643 # Ignite
+  - 76585 # Conflagration
+  - 77225 # Splash
+  - 76811 # Buoyant Deluge
+  - 77370 # Zap
+  - 77089 # Lightning Blitz
+  - 77226 # Calcify
+  - 76707 # Seismic Impact

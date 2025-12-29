@@ -9,6 +9,7 @@ Heal:
   - 30357 # Medic Gyro
   - 40507 # Coolant Blast
   - 63049 # Rectifier Signet
+  - 76738 # Mitotic State
 
 Utility:
   - 5818 # Rifle Turret
@@ -52,6 +53,10 @@ Utility:
   - 63111 # Shift Signet
   - 63253 # Force Signet
   - 63113 # Superconducting Signet
+  - 77069 # Solid State
+  - 76908 # Liquid State
+  - 77018 # Gaseous State
+  - 77209 # Plasmatic State
 
 Elite:
   - 5868 # Supply Crate
@@ -64,3 +69,4 @@ Elite:
   - 42009 # Prime Light Beam
   - 63095 # Overclock Signet
   - 63374 # Jade Buster Cannon
+  - 76993 # Flux State

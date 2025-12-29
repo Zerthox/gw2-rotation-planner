@@ -9,6 +9,7 @@ Heal:
   - 30305 # Well of Eternity
   - 40200 # False Oasis
   - 62522 # Twin Blade Restoration
+  - 76695 # Tale of the Second Scion
 
 Utility:
   - 10236 # Signet of Inspiration
@@ -51,6 +52,10 @@ Utility:
   - 45425 # Rain of Swords
   - 43343 # Blade Renewal
   - 35637 # Sword of Decimation
+  - 76850 # Tale of the Soulkeeper
+  - 76611 # Tale of the Honorable Rogue
+  - 77178 # Tale of the Valiant Marshal
+  - 77066 # Tale of the Tortured Mastermind
 
 Elite:
   - 29519 # Signet of Humility
@@ -61,3 +66,4 @@ Elite:
   - 30359 # Gravity Well
   - 45449 # Jaunt
   - 24755 # Thousand Cuts
+  - 76971 # Tale of the August Queen

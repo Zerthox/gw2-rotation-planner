@@ -9,6 +9,7 @@ Heal:
   - 31867 # Glyph of Rejuvenation (celestial)
   - 44948 # Bear Stance
   - 63319 # Perilous Gift
+  - 77271 # Soothing Breeze
 
 Utility:
   - 12476 # Spike Trap
@@ -49,6 +50,10 @@ Utility:
   - 63256 # Mutate Conditions
   - 63195 # Unnatural Traversal
   - 63130 # Nature's Binding
+  - 77264 # Piercing Gales
+  - 77211 # Wind Shear
+  - 76619 # Whirlwind
+  - 76757 # Mistral
 
 Elite:
   - 12516 # "Strength of the Pack!"
@@ -60,3 +65,4 @@ Elite:
   - 55024 # Glyph of the Stars (celestial)
   - 45717 # One Wolf Pack
   - 63163 # Forest's Fortification
+  - 76979 # Perfect Storm

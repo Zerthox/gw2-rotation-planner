@@ -8,6 +8,7 @@ Heal:
   - 30189 # Blood Reckoning
   - 41100 # Natural Healing
   - 62978 # Combat Stimulant
+  - 76755 # "We Shall Return!""
 
 Utility:
   - 14502 # Kick
@@ -44,6 +45,10 @@ Utility:
   - 62967 # Flow Stabilizer
   - 62804 # Electric Fence
   - 62960 # Dragonspike Mine
+  - 77040 # "Find Their Weakness!"
+  - 76769 # "Never Surrender!"
+  - 76934 # "Brace Yourselves!"
+  - 77114 # "On Your Knees!"
 
 Elite:
   - 14419 # Battle Standard
@@ -54,3 +59,4 @@ Elite:
   - 30343 # Head Butt
   - 45333 # Winds of Disenchantment
   - 62901 # Tactical Reload
+  - 76562 # "We Will Never Yield!"

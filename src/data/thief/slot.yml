@@ -8,6 +8,7 @@ Heal:
   - 30400 # Channeled Vigor
   - 45088 # Malicious Restoration
   - 63292 # Well of Gloom
+  - 76886 # Antivenom Draught
 
 Utility:
   - 13037 # Spider Venom
@@ -50,6 +51,10 @@ Utility:
   - 63294 # Well of Tears
   - 63230 # Well of Silence
   - 63276 # Well of Sorrow
+  - 76725 # Stone Summit Cannon
+  - 76808 # Inquest Portal Device
+  - 76879 # Emergency Jade Shield
+  - 77230 # Canach-Coin Toss
 
 Elite:
   - 13082 # Thieves Guild
@@ -62,3 +67,4 @@ Elite:
   - 29639 # Finishing Blow
   - 45508 # Shadow Meld
   - 63275 # Shadowfall
+  - 77255 # Skritt Shuffle

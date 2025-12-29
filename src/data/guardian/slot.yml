@@ -10,6 +10,7 @@ Heal:
   - 41475 # Restoring Reprieve
   - 42960 # Rejuvenating Respite
   - 62622 # Reversal of Fortune
+  - 76621 # Resolute Stance
 
 Utility:
   - 9125 # Hammer of Wisdom
@@ -56,6 +57,10 @@ Utility:
   - 62676 # Quick Retribution
   - 62565 # Whirling Light
   - 62549 # Heel Crack
+  - 77321 # Stalwart Stance
+  - 77300 # Valorous Stance
+  - 76813 # Effulgent Stance
+  - 77078 # Piercing Stance
 
 Elite:
   - 29965 # "Feel My Wrath!"
@@ -68,3 +73,4 @@ Elite:
   - 40114 # Portent of Freedom
   - 41328 # Unhindered Delivery
   - 62561 # Heaven's Palm
+  - 77198 # Daring Advance

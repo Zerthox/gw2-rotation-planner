@@ -5,6 +5,7 @@ Toolbelt:
   - 6176 # Regenerating Mist (Healing Turret)
   - 29505 # Reconstruction Field (Medic Gyro)
   - 43845 # Cauterize (Coolant Blast)
+  - 6613 # Symbiotic Shielding (Mitotic State)
 
   - 6178 # Surprise Shot (Rifle Turret)
   - 6181 # Throw Napalm (Flame Turret)
@@ -63,3 +64,13 @@ Mechanist:
 
   - 63050 # Crash Down
   - 63089 # Recall Mech
+
+Amalgam:
+  - 76959 # Defensive Protocol: Protect
+  - 76798 # Defensive Protocol: Cleanse
+  - 77163 # Defensive Protocol: Thorns
+  - 76815 # Offensive Protocol: Pierce
+  - 76806 # Offensive Protocol: Obliterate
+  - 77103 # Offensive Protocol: Shred
+  - 76927 # Offensive Protocol: Demolish
+  - 76642 # Evolve

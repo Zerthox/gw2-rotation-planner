@@ -9,6 +9,7 @@ Heal:
   - 29414 # "You Are All Weaklings!"
   - 43148 # Sand Flare
   - 62667 # Elixir of Promise
+  - 77259 # Resilient Weapon
 
 Utility:
   - 10546 # Well of Suffering
@@ -49,6 +50,10 @@ Utility:
   - 62646 # Elixir of Ignorance
   - 62514 # Elixir of Bliss
   - 62662 # Elixir of Anguish
+  - 76975 # Splinter Weapon
+  - 76739 # Nightmare Weapon
+  - 77022 # Weapon of Remedy
+  - 76752 # Weapon of Warding
 
 Elite:
   - 10549 # Plaguelands
@@ -60,3 +65,4 @@ Elite:
   - 30105 # "Chilled to the Bone!"
   - 42355 # Ghastly Breach
   - 62655 # Elixir of Ambition
+  - 76941 # Xinrae's Weapon
