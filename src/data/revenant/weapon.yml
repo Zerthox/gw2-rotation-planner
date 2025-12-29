@@ -1,80 +1,80 @@
 Axe:
-  - 28029 # Frigid Blitz
-  - 28409 # Temporal Rift
+    - 28029 # Frigid Blitz
+    - 28409 # Temporal Rift
 
 Greatsword:
-  - 62913 # Mist Swing
-  - 62688 # Mist Slash
-  - 62752 # Arcing Mists
-  - 62692 # Mist Unleashed
-  - 62895 # Phantom's Onslaught
-  - 62921 # Imperial Guard
-  - 62828 # True Strike
-  - 62929 # Eternity's Requiem
+    - 62913 # Mist Swing
+    - 62688 # Mist Slash
+    - 62752 # Arcing Mists
+    - 62692 # Mist Unleashed
+    - 62895 # Phantom's Onslaught
+    - 62921 # Imperial Guard
+    - 62828 # True Strike
+    - 62929 # Eternity's Requiem
 
 Hammer:
-  - 28549 # Hammer Bolt
-  - 28253 # Coalescence of Ruin
-  - 27976 # Phase Smash
-  - 27665 # Field of the Mists
-  - 28110 # Drop the Hammer
+    - 28549 # Hammer Bolt
+    - 28253 # Coalescence of Ruin
+    - 27976 # Phase Smash
+    - 27665 # Field of the Mists
+    - 28110 # Drop the Hammer
 
 Mace:
-  - 27066 # Misery Swipe
-  - 26730 # Anguish Swipe
-  - 26666 # Manifest Toxin
-  - 28357 # Searing Fissure
-  - 27964 # Echoing Eruption
+    - 27066 # Misery Swipe
+    - 26730 # Anguish Swipe
+    - 26666 # Manifest Toxin
+    - 28357 # Searing Fissure
+    - 27964 # Echoing Eruption
 
 Staff:
-  - 29180 # Rapid Swipe
-  - 29331 # Forceful Bash
-  - 29002 # Rejuvenating Assault
-  - 29145 # Mender's Rebuke
-  - 29288 # Warding Rift
-  - 29321 # Renewing Wave
-  - 28978 # Surge of the Mists
+    - 29180 # Rapid Swipe
+    - 29331 # Forceful Bash
+    - 29002 # Rejuvenating Assault
+    - 29145 # Mender's Rebuke
+    - 29288 # Warding Rift
+    - 29321 # Renewing Wave
+    - 28978 # Surge of the Mists
 
 Shield:
-  - 29386 # Envoy of Exuberance
-  - 28262 # Crystal Hibernation
+    - 29386 # Envoy of Exuberance
+    - 28262 # Crystal Hibernation
 
 Shortbow:
-  - 40497 # Shattershot
-  - 40175 # Bloodbane Path
-  - 41829 # Sevenshot
-  - 43993 # Spiritcrush
-  - 41820 # Scorchrazor
+    - 40497 # Shattershot
+    - 40175 # Bloodbane Path
+    - 41829 # Sevenshot
+    - 43993 # Spiritcrush
+    - 41820 # Scorchrazor
 
 Sword:
-  - 29057 # Preparation Thrust
-  - 29256 # Brutal Blade
-  - 28964 # Rift Slash
-  - 29233 # Chilling Isolation
-  - 26699 # Unrelenting Assault
-  - 28472 # Shackling Wave
-  - 27074 # Deathstrike
+    - 29057 # Preparation Thrust
+    - 29256 # Brutal Blade
+    - 28964 # Rift Slash
+    - 29233 # Chilling Isolation
+    - 26699 # Unrelenting Assault
+    - 28472 # Shackling Wave
+    - 27074 # Deathstrike
 
 Spear:
-  - 72931 # Abyssal Fire
-  - 73015 # Abyssal Strike
-  - 72972 # Abyssal Force
-  - 72938 # Abyssal Blitz
-  - 72954 # Abyssal Blot
-  - 73059 # Abyssal Raze
+    - 72931 # Abyssal Fire
+    - 73015 # Abyssal Strike
+    - 72972 # Abyssal Force
+    - 72938 # Abyssal Blitz
+    - 72954 # Abyssal Blot
+    - 73059 # Abyssal Raze
 
 Aquatic Spear:
-  - 28714 # Spear of Anguish
-  - 28915 # Rapid Assault
-  - 28827 # Venomous Sphere
-  - 28797 # Frigid Discharge
-  - 28692 # Igniting Brand
-  - 28815 # Devour Brand
-  - 28930 # Rift Containment
+    - 28714 # Spear of Anguish
+    - 28915 # Rapid Assault
+    - 28827 # Venomous Sphere
+    - 28797 # Frigid Discharge
+    - 28692 # Igniting Brand
+    - 28815 # Devour Brand
+    - 28930 # Rift Containment
 
 Trident:
-  - 50395 # Mistsfire
-  - 50456 # Portal Fire
-  - 50390 # Rift of Pain
-  - 50410 # Reckoning Blast
-  - 50483 # Torrential Mists
+    - 50395 # Mistsfire
+    - 50456 # Portal Fire
+    - 50390 # Rift of Pain
+    - 50410 # Reckoning Blast
+    - 50483 # Torrential Mists

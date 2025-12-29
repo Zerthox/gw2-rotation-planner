@@ -1,23 +1,23 @@
 name: Tests
 
 on:
-  push:
-    paths:
-      - tests/**
-      - package.json
-  pull_request:
-    paths:
-      - tests/**
-      - package.json
+    push:
+        paths:
+            - tests/**
+            - package.json
+    pull_request:
+        paths:
+            - tests/**
+            - package.json
 
 jobs:
-  tests:
-    name: Tests
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - run: npm ci
-      - run: npm run test
+    tests:
+        name: Tests
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: 18
+            - run: npm ci
+            - run: npm run test

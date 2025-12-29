@@ -1,13 +1,28 @@
-import React, {useState, useCallback, useMemo, cloneElement} from "react";
-import {Box, Stack, Drawer as MuiDrawer, DrawerProps as MuiDrawerProps, Typography, IconButton, Divider} from "@mui/material";
-import {Close} from "@mui/icons-material";
+import React, { useState, useCallback, useMemo, cloneElement } from "react";
+import {
+    Box,
+    Stack,
+    Drawer as MuiDrawer,
+    DrawerProps as MuiDrawerProps,
+    Typography,
+    IconButton,
+    Divider,
+} from "@mui/material";
+import { Close } from "@mui/icons-material";
 
 export interface DrawerProps extends Omit<MuiDrawerProps, "title"> {
     title: React.ReactNode;
     children: React.ReactNode;
 }
 
-export const Drawer = ({open, onClose, title, children, PaperProps, ...props}: DrawerProps): JSX.Element => (
+export const Drawer = ({
+    open,
+    onClose,
+    title,
+    children,
+    PaperProps,
+    ...props
+}: DrawerProps): JSX.Element => (
     <MuiDrawer
         {...props}
         open={open}
@@ -19,54 +34,56 @@ export const Drawer = ({open, onClose, title, children, PaperProps, ...props}: D
                     sm: 400,
                     md: 500,
                     lg: 600,
-                    xl: 750
+                    xl: 750,
                 },
-                ...PaperProps?.sx
-            }
+                ...PaperProps?.sx,
+            },
         }}
     >
         <Stack direction="column">
-            <Stack
-                direction="row"
-                alignItems="center"
-                spacing={1}
-                paddingY={2}
-                paddingX={3}
-            >
+            <Stack direction="row" alignItems="center" spacing={1} paddingY={2} paddingX={3}>
                 <Typography variant="h5">{title}</Typography>
-                <Box flexGrow={1}/>
+                <Box flexGrow={1} />
                 <IconButton onClick={() => onClose({}, "escapeKeyDown")}>
-                    <Close/>
+                    <Close />
                 </IconButton>
             </Stack>
-            <Divider/>
-            <Box padding={3}>
-                {children}
-            </Box>
+            <Divider />
+            <Box padding={3}>{children}</Box>
         </Stack>
     </MuiDrawer>
 );
 
 export interface DrawerWithButtonProps extends Omit<DrawerProps, "open" | "onClose"> {
-    button: React.ReactElement<{onClick: React.MouseEventHandler<unknown>}>;
+    button: React.ReactElement<{ onClick: React.MouseEventHandler<unknown> }>;
     startOpen?: boolean;
 }
 
-export const DrawerWithButton = ({button, startOpen = false, ...props}: DrawerWithButtonProps): JSX.Element => {
+export const DrawerWithButton = ({
+    button,
+    startOpen = false,
+    ...props
+}: DrawerWithButtonProps): JSX.Element => {
     const [open, setOpen] = useState(startOpen);
     const onClose = useCallback(() => setOpen(false), []);
 
-    const cloned = useMemo(() => cloneElement(button, {
-        onClick: button.props.onClick ? (event: React.MouseEvent<unknown>) => {
-            button.props.onClick(event);
-            setOpen(true);
-        } : () => setOpen(true)
-    }), [button]);
+    const cloned = useMemo(
+        () =>
+            cloneElement(button, {
+                onClick: button.props.onClick
+                    ? (event: React.MouseEvent<unknown>) => {
+                          button.props.onClick(event);
+                          setOpen(true);
+                      }
+                    : () => setOpen(true),
+            }),
+        [button],
+    );
 
     return (
         <>
             {cloned}
-            <Drawer open={open} onClose={onClose} {...props}/>
+            <Drawer open={open} onClose={onClose} {...props} />
         </>
     );
 };

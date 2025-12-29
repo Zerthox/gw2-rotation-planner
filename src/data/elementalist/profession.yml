@@ -1,27 +1,27 @@
 Attunement:
-  - 5492 # Fire Attunement
-  - 5493 # Water Attunement
-  - 5494 # Air Attunement
-  - 5495 # Earth Attunement
+    - 5492 # Fire Attunement
+    - 5493 # Water Attunement
+    - 5494 # Air Attunement
+    - 5495 # Earth Attunement
 
 Tempest:
-  - 29706 # Overload Fire
-  - 29415 # Overload Water
-  - 29719 # Overload Air
-  - 29618 # Overload Earth
+    - 29706 # Overload Fire
+    - 29415 # Overload Water
+    - 29719 # Overload Air
+    - 29618 # Overload Earth
 
 Catalyst:
-  - 62813 # Deploy Jade Sphere (Fire)
-  - 62940 # Deploy Jade Sphere (Air)
-  - 62723 # Deploy Jade Sphere (Water)
-  - 62837 # Deploy Jade Sphere (Earth)
+    - 62813 # Deploy Jade Sphere (Fire)
+    - 62940 # Deploy Jade Sphere (Air)
+    - 62723 # Deploy Jade Sphere (Water)
+    - 62837 # Deploy Jade Sphere (Earth)
 
 Evoker:
-  - 76643 # Ignite
-  - 76585 # Conflagration
-  - 77225 # Splash
-  - 76811 # Buoyant Deluge
-  - 77370 # Zap
-  - 77089 # Lightning Blitz
-  - 77226 # Calcify
-  - 76707 # Seismic Impact
+    - 76643 # Ignite
+    - 76585 # Conflagration
+    - 77225 # Splash
+    - 76811 # Buoyant Deluge
+    - 77370 # Zap
+    - 77089 # Lightning Blitz
+    - 77226 # Calcify
+    - 76707 # Seismic Impact

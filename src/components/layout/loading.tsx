@@ -1,7 +1,7 @@
 import React from "react";
-import {Stack, CircularProgress, Typography} from "@mui/material";
-import {Providers} from "./providers";
-import {darkTheme} from "../../themes";
+import { Stack, CircularProgress, Typography } from "@mui/material";
+import { Providers } from "./providers";
+import { darkTheme } from "../../themes";
 
 export const Loading = (): JSX.Element => (
     <Providers theme={darkTheme}>
@@ -12,7 +12,7 @@ export const Loading = (): JSX.Element => (
             spacing={2}
             minHeight="100vh"
         >
-            <CircularProgress/>
+            <CircularProgress />
             <Typography variant="h5">Loading...</Typography>
         </Stack>
     </Providers>

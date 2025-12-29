@@ -1,49 +1,49 @@
 # FIXME: raid stolen skills are not exposed by api, add to @discretize/gw2-ui-new
 
 Thief:
-  - 13014 # Steal
+    - 13014 # Steal
 
-  # stolen
-  - 1131 # Mace Head Crack (Guardian)
-  - 31438 # Essence Sap (Revenant)
-  - 1162 # Whirling Axe (Warrior)
-  - 1110 # Throw Gunk (Engineer)
-  - 1139 # Healing Seed (Ranger)
-  - 1148 # Blinding Tuft (Thief)
-  - 1129 # Ice Shard Stab (Elementalist)
-  - 1123 # Consume Plasma (Mesmer)
-  - 1141 # Skull Fear (Necromancer)
+    # stolen
+    - 1131 # Mace Head Crack (Guardian)
+    - 31438 # Essence Sap (Revenant)
+    - 1162 # Whirling Axe (Warrior)
+    - 1110 # Throw Gunk (Engineer)
+    - 1139 # Healing Seed (Ranger)
+    - 1148 # Blinding Tuft (Thief)
+    - 1129 # Ice Shard Stab (Elementalist)
+    - 1123 # Consume Plasma (Mesmer)
+    - 1141 # Skull Fear (Necromancer)
 
-  - 1118 # Throw Chain
-  - 1167 # Whirling Strike
-  - 1115 # Branch Leap
-  - 1125 # Eat Egg
+    - 1118 # Throw Chain
+    - 1167 # Whirling Strike
+    - 1115 # Branch Leap
+    - 1125 # Eat Egg
 
 Deadeye:
-  - 43390 # Deadeye's Mark
-  - 43768 # Steal Defenses (Guardian)
-  - 40133 # Steal Resistance (Revenant)
-  - 40904 # Steal Strength (Warrior)
-  - 43373 # Steal Durability (Engineer)
-  - 44526 # Steal Mobility (Ranger)
-  - 40888 # Steal Precision (Thief)
-  - 39960 # Steal Warmth (Elementalist)
-  - 42863 # Steal Time (Mesmer)
-  - 40903 # Steal Health (Necromancer)
+    - 43390 # Deadeye's Mark
+    - 43768 # Steal Defenses (Guardian)
+    - 40133 # Steal Resistance (Revenant)
+    - 40904 # Steal Strength (Warrior)
+    - 43373 # Steal Durability (Engineer)
+    - 44526 # Steal Mobility (Ranger)
+    - 40888 # Steal Precision (Thief)
+    - 39960 # Steal Warmth (Elementalist)
+    - 42863 # Steal Time (Mesmer)
+    - 40903 # Steal Health (Necromancer)
 
 Specter:
-  - 63067 # Siphon
-  - 63155 # Enter Shadow Shroud
-  - 63251 # Exit Shadow Shroud
+    - 63067 # Siphon
+    - 63155 # Enter Shadow Shroud
+    - 63251 # Exit Shadow Shroud
 
 Antiquary:
-  - 77397 # Skritt Swipe
-  - 76582 # Metal Legion Guitar
-  - 76633 # Forged Surfer Dash
-  - 77192 # Summon Kryptis Turret
-  - 77277 # Mistburn Mortar
-  - 76702 # Exalted Hammer
-  - 76816 # Chak Shield
-  - 76674 # Holo-Dancer Decoy
-  - 76895 # Zephyrite Sun Crystal
-  - 76909 # Unstable Skritt Bomb
+    - 77397 # Skritt Swipe
+    - 76582 # Metal Legion Guitar
+    - 76633 # Forged Surfer Dash
+    - 77192 # Summon Kryptis Turret
+    - 77277 # Mistburn Mortar
+    - 76702 # Exalted Hammer
+    - 76816 # Chak Shield
+    - 76674 # Holo-Dancer Decoy
+    - 76895 # Zephyrite Sun Crystal
+    - 76909 # Unstable Skritt Bomb

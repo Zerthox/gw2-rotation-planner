@@ -1,38 +1,28 @@
 import path from "path";
-import {GatsbyConfig} from "gatsby";
+import { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
     siteMetadata: {
         title: "GW2 Rotation Planner",
         description: "Plan out rotations for Guild Wars 2",
         author: "Zerthox",
-        source: "https://github.com/zerthox/gw2-rotation-planner"
+        source: "https://github.com/zerthox/gw2-rotation-planner",
     },
     pathPrefix: "/gw2-rotation-planner",
     plugins: [
         {
             resolve: "gatsby-source-filesystem",
             options: {
-                path: path.resolve("./src/data")
-            }
+                path: path.resolve("./src/data"),
+            },
         },
         "gatsby-plugin-offline",
         {
             resolve: "gatsby-plugin-typescript",
             options: {
                 isTSX: true,
-                allExtensions: true
-            }
-        },
-        {
-            resolve: "gatsby-plugin-eslint",
-            options: {
-                stages: ["develop"],
-                extensions: ["js", "jsx", "ts", "tsx"],
-                exclude: ["node_modules", ".cache", "public"],
-                emitWarning: true,
-                failOnError: false
-            }
+                allExtensions: true,
+            },
         },
         {
             resolve: "gatsby-plugin-google-gtag",
@@ -40,14 +30,14 @@ const config: GatsbyConfig = {
                 trackingIds: ["G-L65RG8ZXVJ"],
                 gtagConfig: {
                     anonymize_ip: true,
-                    cookie_expires: 0
+                    cookie_expires: 0,
                 },
                 pluginConfig: {
-                    respectDNT: true
-                }
-            }
-        }
-    ]
+                    respectDNT: true,
+                },
+            },
+        },
+    ],
 };
 
 export default config;

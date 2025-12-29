@@ -1,5 +1,5 @@
-import {GatsbyNode, Node} from "gatsby";
-import {upperFirst} from "lodash";
+import { GatsbyNode, Node } from "gatsby";
+import { upperFirst } from "lodash";
 import jsYaml from "js-yaml";
 
 interface FileNode extends Node {
@@ -36,7 +36,13 @@ interface FileNode extends Node {
 
 type FileContent = Record<string, number[]>;
 
-export const onCreateNode: GatsbyNode<FileNode>["onCreateNode"] = async ({node, actions, loadNodeContent, createNodeId, createContentDigest}) => {
+export const onCreateNode: GatsbyNode<FileNode>["onCreateNode"] = async ({
+    node,
+    actions,
+    loadNodeContent,
+    createNodeId,
+    createContentDigest,
+}) => {
     if (node.internal.mediaType === "text/yaml") {
         try {
             const content = jsYaml.load(await loadNodeContent(node)) as FileContent;
@@ -48,7 +54,7 @@ export const onCreateNode: GatsbyNode<FileNode>["onCreateNode"] = async ({node, 
                     name,
                     profession,
                     type,
-                    skills
+                    skills,
                 };
 
                 const dataNode = {
@@ -58,12 +64,12 @@ export const onCreateNode: GatsbyNode<FileNode>["onCreateNode"] = async ({node, 
                     parent: node.id,
                     internal: {
                         contentDigest: createContentDigest(data),
-                        type: "SkillData"
-                    }
+                        type: "SkillData",
+                    },
                 };
 
                 await actions.createNode(dataNode);
-                actions.createParentChildLink({parent: node, child: dataNode});
+                actions.createParentChildLink({ parent: node, child: dataNode });
             }
         } catch (err) {
             console.error(`"${node.absolutePath}":`, err);

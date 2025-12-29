@@ -1,60 +1,60 @@
 Pistol:
-  - 5827 # Fragmentation Shot
-  - 5828 # Poison Dart Volley
-  - 5829 # Static Shot
-  - 5831 # Blowtorch
-  - 5830 # Glue Shot
+    - 5827 # Fragmentation Shot
+    - 5828 # Poison Dart Volley
+    - 5829 # Static Shot
+    - 5831 # Blowtorch
+    - 5830 # Glue Shot
 
 Rifle:
-  - 6003 # Hip Shot
-  - 6004 # Net Shot
-  - 6153 # Blunderbuss
-  - 6154 # Overcharged Shot
-  - 6005 # Jump Shot
+    - 6003 # Hip Shot
+    - 6004 # Net Shot
+    - 6153 # Blunderbuss
+    - 6154 # Overcharged Shot
+    - 6005 # Jump Shot
 
 Shield:
-  - 6053 # Magnetic Shield
-  - 6126 # Magnetic Inversion
-  - 6054 # Static Shield
-  - 6057 # Throw Shield
+    - 6053 # Magnetic Shield
+    - 6126 # Magnetic Inversion
+    - 6054 # Static Shield
+    - 6057 # Throw Shield
 
 Hammer:
-  - 30501 # Positive Strike
-  - 29785 # Negative Bash
-  - 30489 # Equalizing Blow
-  - 30088 # Electro-whirl
-  - 30665 # Rocket Charge
-  - 29840 # Shock Shield
-  - 30713 # Thunderclap
+    - 30501 # Positive Strike
+    - 29785 # Negative Bash
+    - 30489 # Equalizing Blow
+    - 30088 # Electro-whirl
+    - 30665 # Rocket Charge
+    - 29840 # Shock Shield
+    - 30713 # Thunderclap
 
 Sword:
-  - 43476 # Sun Edge
-  - 45581 # Sun Ripper
-  - 45979 # Gleam Saber
-  - 44110 # Refraction Cutter
-  - 40160 # Radiant Arc
+    - 43476 # Sun Edge
+    - 45581 # Sun Ripper
+    - 45979 # Gleam Saber
+    - 44110 # Refraction Cutter
+    - 40160 # Radiant Arc
 
 Mace:
-  - 63186 # Mace Strike
-  - 63077 # Mace Smash
-  - 63174 # Barrier Blast
-  - 63169 # Energizing Slam
-  - 63234 # Rocket Fist Prototype
+    - 63186 # Mace Strike
+    - 63077 # Mace Smash
+    - 63174 # Barrier Blast
+    - 63169 # Energizing Slam
+    - 63234 # Rocket Fist Prototype
 
 Spear:
- - 72944 # Puncturing Jab
- - 73109 # Rending Strike
- - 73001 # Amplifying Slice
- - 73122 # Conduit Surge
- - 73002 # Lightning Rod
- - 73143 # Electric Artillery
- - 72977 # Roiling Skies
- - 72974 # Devastator
+    - 72944 # Puncturing Jab
+    - 73109 # Rending Strike
+    - 73001 # Amplifying Slice
+    - 73122 # Conduit Surge
+    - 73002 # Lightning Rod
+    - 73143 # Electric Artillery
+    - 72977 # Roiling Skies
+    - 72974 # Devastator
 
 # underwater
 Harpoon Gun:
-  - 6148 # Homing Torpedo
-  - 6147 # Scatter Mines
-  - 50380 # Capture Line
-  - 6149 # Timed Charge
-  - 6145 # Net Wall
+    - 6148 # Homing Torpedo
+    - 6147 # Scatter Mines
+    - 50380 # Capture Line
+    - 6149 # Timed Charge
+    - 6145 # Net Wall

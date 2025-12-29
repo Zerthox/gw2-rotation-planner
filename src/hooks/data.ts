@@ -1,8 +1,8 @@
-import {useMemo} from "react";
-import {sortBy} from "lodash";
-import {useStaticQuery, graphql} from "gatsby";
-import {SkillSection, SkillSectionType} from "../data";
-import {getAllCommonSkills} from "../data/common";
+import { useMemo } from "react";
+import { sortBy } from "lodash";
+import { useStaticQuery, graphql } from "gatsby";
+import { SkillSection, SkillSectionType } from "../data";
+import { getAllCommonSkills } from "../data/common";
 
 interface QueryData {
     allSkillData: {
@@ -10,43 +10,51 @@ interface QueryData {
     };
 }
 
-const useData = () => useStaticQuery<QueryData>(graphql`
-    query SkillData {
-        allSkillData {
-            nodes {
-                name
-                profession
-                type
-                skills
+const useData = () =>
+    useStaticQuery<QueryData>(graphql`
+        query SkillData {
+            allSkillData {
+                nodes {
+                    name
+                    profession
+                    type
+                    skills
+                }
             }
         }
-    }
-`);
+    `);
 
 const sectionOrder = [
     SkillSectionType.Profession,
     SkillSectionType.Weapon,
     SkillSectionType.Bundle,
-    SkillSectionType.Slot
+    SkillSectionType.Slot,
 ];
 
 export const useAllSkillSections = (): SkillSection[] => {
     const data = useData().allSkillData.nodes;
-    return useMemo(() => [
-        {
-            name: "Common",
-            profession: null,
-            type: null,
-            skills: getAllCommonSkills().map((skill) => skill.id)
-        },
-        ...sortBy(data, (section) => sectionOrder.indexOf(section.type))
-    ], [data]);
+    return useMemo(
+        () => [
+            {
+                name: "Common",
+                profession: null,
+                type: null,
+                skills: getAllCommonSkills().map((skill) => skill.id),
+            },
+            ...sortBy(data, (section) => sectionOrder.indexOf(section.type)),
+        ],
+        [data],
+    );
 };
 
 export const useAllSkills = (): number[] => {
     const sections = useAllSkillSections();
-    return useMemo(() => sections.reduce((acc, section) => {
-        acc.push(...section.skills);
-        return acc;
-    }, []), [sections]);
+    return useMemo(
+        () =>
+            sections.reduce((acc, section) => {
+                acc.push(...section.skills);
+                return acc;
+            }, []),
+        [sections],
+    );
 };

@@ -1,6 +1,6 @@
 import React from "react";
-import {ThemeProvider, CssBaseline, Theme} from "@mui/material";
-import {APILanguageProvider} from "@discretize/gw2-ui-new";
+import { ThemeProvider, CssBaseline, Theme } from "@mui/material";
+import { APILanguageProvider } from "@discretize/gw2-ui-new";
 
 export type APILanguage = React.ComponentProps<typeof APILanguageProvider>["value"];
 
@@ -10,10 +10,10 @@ export interface ProvidersProps {
     children: React.ReactNode;
 }
 
-export const Providers = ({lang = "en", theme, children}: ProvidersProps): JSX.Element => (
+export const Providers = ({ lang = "en", theme, children }: ProvidersProps): JSX.Element => (
     <APILanguageProvider value={lang}>
         <ThemeProvider theme={theme}>
-            <CssBaseline/>
+            <CssBaseline />
             {children}
         </ThemeProvider>
     </APILanguageProvider>

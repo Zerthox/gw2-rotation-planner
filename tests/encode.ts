@@ -1,21 +1,21 @@
-import {describe, it} from "mocha";
-import {strict as assert} from "assert";
-import {encodeShare, decodeShare} from "../src/util/encode";
+import { describe, it } from "mocha";
+import { strict as assert } from "assert";
+import { encodeShare, decodeShare } from "../src/util/encode";
 
 describe("Share link encoding", () => {
     const rows = [
         {
             name: "Foo",
-            skills: [12633, 12497, 12469, 1]
+            skills: [12633, 12497, 12469, 1],
         },
         {
             name: "Bar",
-            skills: [12492, 12638, 40729, 12639]
+            skills: [12492, 12638, 40729, 12639],
         },
         {
             name: "Baz",
-            skills: [1, 41524, 12466, 2, 3, 12511, 2**24 - 1]
-        }
+            skills: [1, 41524, 12466, 2, 3, 12511, 2 ** 24 - 1],
+        },
     ];
 
     describe("encode", () => {
@@ -36,11 +36,17 @@ describe("Share link encoding", () => {
         });
 
         it("returns correct row names", () => {
-            assert.deepEqual(decodeShare(encoded).map((row) => row.name), rows.map((row) => row.name));
+            assert.deepEqual(
+                decodeShare(encoded).map((row) => row.name),
+                rows.map((row) => row.name),
+            );
         });
 
         it("returns correct skill ids", () => {
-            assert.deepEqual(decodeShare(encoded).map((row) => row.skills), rows.map((row) => row.skills));
+            assert.deepEqual(
+                decodeShare(encoded).map((row) => row.skills),
+                rows.map((row) => row.skills),
+            );
         });
     });
 });

@@ -1,72 +1,72 @@
 Heal:
-  - 5834 # Elixir H
-  - 5802 # Med Kit
-  - 21659 # A.E.D.
-  - 5857 # Healing Turret
-  - 5961 # Detonate Healing Turret
+    - 5834 # Elixir H
+    - 5802 # Med Kit
+    - 21659 # A.E.D.
+    - 5857 # Healing Turret
+    - 5961 # Detonate Healing Turret
 
-  # specs
-  - 30357 # Medic Gyro
-  - 40507 # Coolant Blast
-  - 63049 # Rectifier Signet
-  - 76738 # Mitotic State
+    # specs
+    - 30357 # Medic Gyro
+    - 40507 # Coolant Blast
+    - 63049 # Rectifier Signet
+    - 76738 # Mitotic State
 
 Utility:
-  - 5818 # Rifle Turret
-  - 5957 # Detonate Rifle Turret
-  - 5836 # Flame Turret
-  - 5985 # Detonate Flame Turret
-  - 5837 # Net Turret
-  - 5984 # Detonate Net Turret
-  - 5838 # Thumper Turret
-  - 5960 # Detonate Thumper Turret
-  - 5912 # Rocket Turret
-  - 6134 # Detonate Rocket Turret
-  - 5821 # Elixir B
-  - 5862 # Elixir U
-  - 5861 # Elixir S
-  - 5860 # Elixir C
-  - 5968 # Elixir R
-  - 5805 # Grenade Kit
-  - 5812 # Bomb Kit
-  - 5927 # Flamethrower
-  - 5933 # Elixir Gun
-  - 5904 # Tool Kit
-  - 6161 # Throw Mine
-  - 6162 # Detonate
-  - 5865 # Utility Goggles
-  - 5910 # Rocket Boots
-  - 5811 # Personal Battering Ram
-  - 5825 # Slick Shoes
+    - 5818 # Rifle Turret
+    - 5957 # Detonate Rifle Turret
+    - 5836 # Flame Turret
+    - 5985 # Detonate Flame Turret
+    - 5837 # Net Turret
+    - 5984 # Detonate Net Turret
+    - 5838 # Thumper Turret
+    - 5960 # Detonate Thumper Turret
+    - 5912 # Rocket Turret
+    - 6134 # Detonate Rocket Turret
+    - 5821 # Elixir B
+    - 5862 # Elixir U
+    - 5861 # Elixir S
+    - 5860 # Elixir C
+    - 5968 # Elixir R
+    - 5805 # Grenade Kit
+    - 5812 # Bomb Kit
+    - 5927 # Flamethrower
+    - 5933 # Elixir Gun
+    - 5904 # Tool Kit
+    - 6161 # Throw Mine
+    - 6162 # Detonate
+    - 5865 # Utility Goggles
+    - 5910 # Rocket Boots
+    - 5811 # Personal Battering Ram
+    - 5825 # Slick Shoes
 
-  # specs
-  - 30101 # Bulwark Gyro
-  - 29739 # Purge Gyro
-  - 31248 # Blast Gyro
-  - 29921 # Shredder Gyro
-  - 43739 # Photon Wall
-  - 40533 # Launch Wall
-  - 42842 # Laser Disk
-  - 44646 # Hard Light Arena
-  - 41218 # Spectrum Shield
-  - 63262 # Barrier Signet
-  - 63111 # Shift Signet
-  - 63253 # Force Signet
-  - 63113 # Superconducting Signet
-  - 77069 # Solid State
-  - 76908 # Liquid State
-  - 77018 # Gaseous State
-  - 77209 # Plasmatic State
+    # specs
+    - 30101 # Bulwark Gyro
+    - 29739 # Purge Gyro
+    - 31248 # Blast Gyro
+    - 29921 # Shredder Gyro
+    - 43739 # Photon Wall
+    - 40533 # Launch Wall
+    - 42842 # Laser Disk
+    - 44646 # Hard Light Arena
+    - 41218 # Spectrum Shield
+    - 63262 # Barrier Signet
+    - 63111 # Shift Signet
+    - 63253 # Force Signet
+    - 63113 # Superconducting Signet
+    - 77069 # Solid State
+    - 76908 # Liquid State
+    - 77018 # Gaseous State
+    - 77209 # Plasmatic State
 
 Elite:
-  - 5868 # Supply Crate
-  - 29518 # Detonate Supply Crate Turrets
-  - 5832 # Elixir X
-  - 30800 # Elite Mortar Kit
+    - 5868 # Supply Crate
+    - 29518 # Detonate Supply Crate Turrets
+    - 5832 # Elixir X
+    - 30800 # Elite Mortar Kit
 
-  # specs
-  - 30815 # Sneak Gyro
-  - 42009 # Prime Light Beam
-  - 63095 # Overclock Signet
-  - 63374 # Jade Buster Cannon
-  - 76993 # Flux State
+    # specs
+    - 30815 # Sneak Gyro
+    - 42009 # Prime Light Beam
+    - 63095 # Overclock Signet
+    - 63374 # Jade Buster Cannon
+    - 76993 # Flux State

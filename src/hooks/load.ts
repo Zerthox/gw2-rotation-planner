@@ -1,10 +1,10 @@
-import {useEffect} from "react";
-import {useDispatch} from "react-redux";
-import {overrideRows} from "../store/timeline";
-import {useAllSkillSections} from "./data";
-import {initializeSections} from "../store/build";
-import {decodeShare} from "../util/encode";
-import {fetchFromGist, fetchFromURL} from "../util/fetch";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { overrideRows } from "../store/timeline";
+import { useAllSkillSections } from "./data";
+import { initializeSections } from "../store/build";
+import { decodeShare } from "../util/encode";
+import { fetchFromGist, fetchFromURL } from "../util/fetch";
 
 export interface LoadParams {
     gist?: string;
@@ -13,7 +13,7 @@ export interface LoadParams {
     share?: string;
 }
 
-export const useLoadTimeline = ({gist, file, url, share}: LoadParams): void => {
+export const useLoadTimeline = ({ gist, file, url, share }: LoadParams): void => {
     const dispatch = useDispatch();
 
     useEffect(() => {

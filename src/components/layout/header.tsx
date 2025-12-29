@@ -1,11 +1,11 @@
 import React from "react";
-import {AppBar, Box, Stack, Typography} from "@mui/material";
-import {Construction, GitHub, Help, Settings} from "@mui/icons-material";
-import {IconButton, DrawerWithButton, AnchorWithRef} from "../general";
-import {ToolsMenu} from "../tools";
-import {SettingsContent} from "../settings";
-import {useSiteMeta} from "../../hooks/site";
-import {gw2Logo} from "../../assets/icons";
+import { AppBar, Box, Stack, Typography } from "@mui/material";
+import { Construction, GitHub, Help, Settings } from "@mui/icons-material";
+import { IconButton, DrawerWithButton, AnchorWithRef } from "../general";
+import { ToolsMenu } from "../tools";
+import { SettingsContent } from "../settings";
+import { useSiteMeta } from "../../hooks/site";
+import { gw2Logo } from "../../assets/icons";
 
 export interface HeaderProps {
     title?: string;
@@ -16,17 +16,12 @@ export interface HeaderProps {
 
 const iconSize = "1.5em";
 
-export const Header = ({title, children, settings = true, help}: HeaderProps): JSX.Element => {
+export const Header = ({ title, children, settings = true, help }: HeaderProps): JSX.Element => {
     const siteMeta = useSiteMeta();
 
     return (
         <AppBar position="static">
-            <Stack
-                direction="row"
-                alignItems="center"
-                spacing={2}
-                padding={2}
-            >
+            <Stack direction="row" alignItems="center" spacing={2} padding={2}>
                 <Typography variant="h4">
                     <Stack direction="row" alignItems="center" spacing={1}>
                         <Box
@@ -37,30 +32,38 @@ export const Header = ({title, children, settings = true, help}: HeaderProps): J
                                 height: iconSize,
                                 width: iconSize,
                                 background: "currentcolor",
-                                borderRadius: "50%"
+                                borderRadius: "50%",
                             }}
                         />
                         <span>{title}</span>
                     </Stack>
                 </Typography>
                 {children}
-                <Box flexGrow={1}/>
+                <Box flexGrow={1} />
                 <Stack direction="row" alignItems="center" spacing={2}>
                     {help ? (
-                        <DrawerWithButton title="Help" anchor="right" button={
-                            <IconButton title="Open Help">
-                                <Help/>
-                            </IconButton>
-                        }>
+                        <DrawerWithButton
+                            title="Help"
+                            anchor="right"
+                            button={
+                                <IconButton title="Open Help">
+                                    <Help />
+                                </IconButton>
+                            }
+                        >
                             {help}
                         </DrawerWithButton>
                     ) : null}
-                    <DrawerWithButton title="Tools" anchor="right" button={
-                        <IconButton title="Tools">
-                            <Construction/>
-                        </IconButton>
-                    }>
-                        <ToolsMenu/>
+                    <DrawerWithButton
+                        title="Tools"
+                        anchor="right"
+                        button={
+                            <IconButton title="Tools">
+                                <Construction />
+                            </IconButton>
+                        }
+                    >
+                        <ToolsMenu />
                     </DrawerWithButton>
                     <IconButton
                         component={AnchorWithRef}
@@ -68,15 +71,19 @@ export const Header = ({title, children, settings = true, help}: HeaderProps): J
                         to={siteMeta.source}
                         newTab
                     >
-                        <GitHub/>
+                        <GitHub />
                     </IconButton>
                     {settings ? (
-                        <DrawerWithButton title="User Settings" anchor="right" button={
-                            <IconButton title="Open Settings">
-                                <Settings/>
-                            </IconButton>
-                        }>
-                            <SettingsContent/>
+                        <DrawerWithButton
+                            title="User Settings"
+                            anchor="right"
+                            button={
+                                <IconButton title="Open Settings">
+                                    <Settings />
+                                </IconButton>
+                            }
+                        >
+                            <SettingsContent />
                         </DrawerWithButton>
                     ) : null}
                 </Stack>

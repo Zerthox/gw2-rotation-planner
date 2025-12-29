@@ -1,114 +1,114 @@
 Dagger:
-  - 13004 # Double Strike
-  - 13087 # Wild Strike
-  - 13108 # Lotus Strike
-  - 13005 # Backstab
-  - 50481 # Malicious Backstab
-  - 13097 # Heartseeker
-  - 13006 # Death Blossom (Dagger offhand)
-  - 13040 # Shadow Shot (Pistol offhand)
-  - 13110 # Twisting Fangs (No offhand)
-  - 13019 # Dancing Dagger
-  - 16432 # Cloak and Dagger
+    - 13004 # Double Strike
+    - 13087 # Wild Strike
+    - 13108 # Lotus Strike
+    - 13005 # Backstab
+    - 50481 # Malicious Backstab
+    - 13097 # Heartseeker
+    - 13006 # Death Blossom (Dagger offhand)
+    - 13040 # Shadow Shot (Pistol offhand)
+    - 13110 # Twisting Fangs (No offhand)
+    - 13019 # Dancing Dagger
+    - 16432 # Cloak and Dagger
 
 Pistol:
-  - 13084 # Vital Shot
-  - 13115 # Sneak Attack
-  - 50466 # Malicious Sneak Attack
-  - 13008 # Bola Shot
-  - 13011 # Unload (Pistol offhand)
-  - 13010 # Shadow Strike (Dagger offhand)
-  - 59526 # Repeater (Dagger offhand)
-  - 13111 # Repeater (No offhand)
-  - 13012 # Head Shot
-  - 13113 # Black Powder
+    - 13084 # Vital Shot
+    - 13115 # Sneak Attack
+    - 50466 # Malicious Sneak Attack
+    - 13008 # Bola Shot
+    - 13011 # Unload (Pistol offhand)
+    - 13010 # Shadow Strike (Dagger offhand)
+    - 59526 # Repeater (Dagger offhand)
+    - 13111 # Repeater (No offhand)
+    - 13012 # Head Shot
+    - 13113 # Black Powder
 
 Shortbow:
-  - 13022 # Trick Shot
-  - 13129 # Surprise Shot
-  - 50451 # Malicious Surprise Shot
-  - 13041 # Cluster Bomb
-  - 13043 # Detonate Cluster
-  - 13083 # Disabling Shot
-  - 13024 # Choking Gas
-  - 13025 # Infiltrator's Arrow
+    - 13022 # Trick Shot
+    - 13129 # Surprise Shot
+    - 50451 # Malicious Surprise Shot
+    - 13041 # Cluster Bomb
+    - 13043 # Detonate Cluster
+    - 13083 # Disabling Shot
+    - 13024 # Choking Gas
+    - 13025 # Infiltrator's Arrow
 
 Sword:
-  - 13009 # Slice
-  - 13088 # Slash
-  - 13116 # Crippling Strike
-  - 13114 # Tactical Strike
-  - 50484 # Malicious Tactical Strike
-  - 13015 # Infiltrator's Strike
-  - 13128 # Infiltrator's Return
-  - 13016 # Flanking Strike (Dagger offhand)
-  - 13007 # Larcenous Strike (Dagger offhand)
-  - 13031 # Pistol Whip (Pistol offhand)
-  - 13112 # Stab (No offhand)
+    - 13009 # Slice
+    - 13088 # Slash
+    - 13116 # Crippling Strike
+    - 13114 # Tactical Strike
+    - 50484 # Malicious Tactical Strike
+    - 13015 # Infiltrator's Strike
+    - 13128 # Infiltrator's Return
+    - 13016 # Flanking Strike (Dagger offhand)
+    - 13007 # Larcenous Strike (Dagger offhand)
+    - 13031 # Pistol Whip (Pistol offhand)
+    - 13112 # Stab (No offhand)
 
 Staff:
-  - 30614 # Staff Strike
-  - 30135 # Staff Bash
-  - 30434 # Punishing Strikes
-  - 30210 # Hook Strike
-  - 29911 # Weakening Charge
-  - 30520 # Debilitating Arc
-  - 30775 # Dust Strike
-  - 30597 # Vault
+    - 30614 # Staff Strike
+    - 30135 # Staff Bash
+    - 30434 # Punishing Strikes
+    - 30210 # Hook Strike
+    - 29911 # Weakening Charge
+    - 30520 # Debilitating Arc
+    - 30775 # Dust Strike
+    - 30597 # Vault
 
 Rifle:
-  - 41422 # Brutal Aim
-  - 44087 # Malicious Death's Judgment
-  - 41494 # Skirmisher's Shot
-  - 44591 # Spotter's Shot
-  - 43916 # Double Tap
-  - 44695 # Three Round Burst
-  - 41937 # Death's Retreat
-  - 40436 # Sniper's Cover
-  - 40600 # Kneel
+    - 41422 # Brutal Aim
+    - 44087 # Malicious Death's Judgment
+    - 41494 # Skirmisher's Shot
+    - 44591 # Spotter's Shot
+    - 43916 # Double Tap
+    - 44695 # Three Round Burst
+    - 41937 # Death's Retreat
+    - 40436 # Sniper's Cover
+    - 40600 # Kneel
 
 Scepter:
-  - 63066 # Shadow Bolt
-  - 63314 # Shadowsquall
-  - 63351 # Shadow Sap
-  - 63254 # Twilight Combo (Dagger offhand)
-  - 63267 # Measured Shot (Pistol offhand)
-  - 63128 # Endless Night (Pistol offhand)
-  - 63154 # Triple Threat (No offhand)
+    - 63066 # Shadow Bolt
+    - 63314 # Shadowsquall
+    - 63351 # Shadow Sap
+    - 63254 # Twilight Combo (Dagger offhand)
+    - 63267 # Measured Shot (Pistol offhand)
+    - 63128 # Endless Night (Pistol offhand)
+    - 63154 # Triple Threat (No offhand)
 
 Spear:
-  - 73145 # Barbed Spear
-  - 73005 # Ashen Assault
-  - 72924 # Malicious Ashen Assault
-  - 73041 # Mantis Sting
-  - 72896 # Entangling Asp
-  - 73076 # Falling Spider
-  - 72986 # Unsuspecting Strike
-  - 73063 # Vampiric Slash
-  - 72904 # Shattering Assault
-  - 72927 # Distracting Throw
-  - 72991 # Shadow Veil
+    - 73145 # Barbed Spear
+    - 73005 # Ashen Assault
+    - 72924 # Malicious Ashen Assault
+    - 73041 # Mantis Sting
+    - 72896 # Entangling Asp
+    - 73076 # Falling Spider
+    - 72986 # Unsuspecting Strike
+    - 73063 # Vampiric Slash
+    - 72904 # Shattering Assault
+    - 72927 # Distracting Throw
+    - 72991 # Shadow Veil
 
 # underwater
 Aquatic Spear:
-  - 13119 # Stab
-  - 13120 # Jab
-  - 13121 # Poison Tip Strike
-  - 13125 # Deadly Strike
-  - 50417 # Malicious Deadly Strike
-  - 13069 # Flanking Dive
-  - 13122 # Nine-Tailed Strike
-  - 13130 # Break Stance
-  - 13070 # Tow Line
-  - 50379 # Hooked Spear
-  - 13068 # Shadow Assault
+    - 13119 # Stab
+    - 13120 # Jab
+    - 13121 # Poison Tip Strike
+    - 13125 # Deadly Strike
+    - 50417 # Malicious Deadly Strike
+    - 13069 # Flanking Dive
+    - 13122 # Nine-Tailed Strike
+    - 13130 # Break Stance
+    - 13070 # Tow Line
+    - 50379 # Hooked Spear
+    - 13068 # Shadow Assault
 
 Harpoon Gun:
-  - 13072 # Piercing Shot
-  - 13126 # The Ripper
-  - 50449 # Malicious Ripper
-  - 13073 # Deluge
-  - 13074 # Escape
-  - 13075 # Crippling Shot
-  - 13076 # Ink Shot
-  - 13078 # Smoke Trail
+    - 13072 # Piercing Shot
+    - 13126 # The Ripper
+    - 50449 # Malicious Ripper
+    - 13073 # Deluge
+    - 13074 # Escape
+    - 13075 # Crippling Shot
+    - 13076 # Ink Shot
+    - 13078 # Smoke Trail

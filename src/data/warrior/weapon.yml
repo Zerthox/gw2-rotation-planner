@@ -1,111 +1,110 @@
 Axe:
-  - 14369 # Chop
-  - 14370 # Double Chop
-  - 14371 # Triple Chop
-  - 14421 # Cyclone Axe
-  - 14398 # Throw Axe
-  - 14418 # Dual Strike
-  - 14399 # Whirling Axe
+    - 14369 # Chop
+    - 14370 # Double Chop
+    - 14371 # Triple Chop
+    - 14421 # Cyclone Axe
+    - 14398 # Throw Axe
+    - 14418 # Dual Strike
+    - 14399 # Whirling Axe
 
 Dagger:
-  - 42745 # Precise Cut
-  - 40560 # Focused Slash
-  - 40275 # Keen Strike
-  - 46233 # Aura Slicer
-  - 44937 # Disrupting Stab
-  - 44004 # Wastrel's Ruin
-  - 45160 # Bladestorm
+    - 42745 # Precise Cut
+    - 40560 # Focused Slash
+    - 40275 # Keen Strike
+    - 46233 # Aura Slicer
+    - 44937 # Disrupting Stab
+    - 44004 # Wastrel's Ruin
+    - 45160 # Bladestorm
 
 Greatsword:
-  - 14356 # Greatsword Swing
-  - 14373 # Greatsword Slice
-  - 14374 # Brutal Strike
-  - 14554 # Hundred Blades
-  - 14447 # Whirlwind Attack
-  - 14510 # Bladetrail
-  - 14446 # Rush
+    - 14356 # Greatsword Swing
+    - 14373 # Greatsword Slice
+    - 14374 # Brutal Strike
+    - 14554 # Hundred Blades
+    - 14447 # Whirlwind Attack
+    - 14510 # Bladetrail
+    - 14446 # Rush
 
 Hammer:
-  - 14358 # Hammer Swing
-  - 14384 # Hammer Bash
-  - 14385 # Hammer Smash
-  - 14386 # Fierce Blow
-  - 14482 # Hammer Shock
-  - 14359 # Staggering Blow
-  - 14511 # Backbreaker
-
+    - 14358 # Hammer Swing
+    - 14384 # Hammer Bash
+    - 14385 # Hammer Smash
+    - 14386 # Fierce Blow
+    - 14482 # Hammer Shock
+    - 14359 # Staggering Blow
+    - 14511 # Backbreaker
 
 Longbow:
-  - 14431 # Dual Shot
-  - 14519 # Fan of Fire
-  - 14381 # Arcing Arrow
-  - 14505 # Smoldering Arrow
-  - 14504 # Pin Down
+    - 14431 # Dual Shot
+    - 14519 # Fan of Fire
+    - 14381 # Arcing Arrow
+    - 14505 # Smoldering Arrow
+    - 14504 # Pin Down
 
 Mace:
-  - 14376 # Mace Smash
-  - 14377 # Mace Bash
-  - 14378 # Pulverize
-  - 14507 # Counterblow
-  - 14548 # Adrenaline Rush
-  - 14503 # Pommel Bash
-  - 14518 # Crushing Blow
-  - 14415 # Tremor
+    - 14376 # Mace Smash
+    - 14377 # Mace Bash
+    - 14378 # Pulverize
+    - 14507 # Counterblow
+    - 14548 # Adrenaline Rush
+    - 14503 # Pommel Bash
+    - 14518 # Crushing Blow
+    - 14415 # Tremor
 
 Pistol:
-  - 62697 # Gunstinger
-  - 62800 # Dragon's Roar
+    - 62697 # Gunstinger
+    - 62800 # Dragon's Roar
 
 Rifle:
-  - 14432 # Fierce Shot
-  - 14416 # Volley
-  - 14472 # Explosive Shell
-  - 14395 # Brutal Shot
-  - 14360 # Rifle Butt
+    - 14432 # Fierce Shot
+    - 14416 # Volley
+    - 14472 # Explosive Shell
+    - 14395 # Brutal Shot
+    - 14360 # Rifle Butt
 
 Shield:
-  - 14361 # Shield Bash
-  - 14362 # Shield Stance
+    - 14361 # Shield Bash
+    - 14362 # Shield Stance
 
 Sword:
-  - 14364 # Sever Artery
-  - 14365 # Gash
-  - 14363 # Hamstring
-  - 14366 # Savage Leap
-  - 14497 # Final Thrust
-  - 14498 # Impale
-  - 14501 # Rip
-  - 14400 # Riposte
-  - 14557 # Adrenaline Rush
+    - 14364 # Sever Artery
+    - 14365 # Gash
+    - 14363 # Hamstring
+    - 14366 # Savage Leap
+    - 14497 # Final Thrust
+    - 14498 # Impale
+    - 14501 # Rip
+    - 14400 # Riposte
+    - 14557 # Adrenaline Rush
 
 Torch:
-  - 29845 # Blaze Breaker
-  - 29940 # Flames of War
+    - 29845 # Blaze Breaker
+    - 29940 # Flames of War
 
 Warhorn:
-  - 14393 # Charge
-  - 14394 # Call of Valor
+    - 14393 # Charge
+    - 14394 # Call of Valor
 
 Spear:
-  - 72958 # Mighty Throw
-  - 72897 # Maiming Spear
-  - 72959 # Disrupting Throw
-  - 72992 # Spearmarshal's Support
-  - 73009 # Spear Swipe
+    - 72958 # Mighty Throw
+    - 72897 # Maiming Spear
+    - 72959 # Disrupting Throw
+    - 72992 # Spearmarshal's Support
+    - 73009 # Spear Swipe
 
 # underwater
 Aquatic Spear:
-  - 14437 # Stab
-  - 14438 # Jab
-  - 14439 # Impale
-  - 14440 # Mariner's Frenzy
-  - 14448 # Barbed Pull
-  - 14441 # Parry
-  - 14480 # Tsunami Slash
+    - 14437 # Stab
+    - 14438 # Jab
+    - 14439 # Impale
+    - 14440 # Mariner's Frenzy
+    - 14448 # Barbed Pull
+    - 14441 # Parry
+    - 14480 # Tsunami Slash
 
 Harpoon Gun:
-  - 14552 # Mariner's Shot
-  - 14466 # Puncture Shot
-  - 14481 # Split Shot
-  - 14467 # Knot Shot
-  - 14465 # Repeating Shot
+    - 14552 # Mariner's Shot
+    - 14466 # Puncture Shot
+    - 14481 # Split Shot
+    - 14467 # Knot Shot
+    - 14465 # Repeating Shot

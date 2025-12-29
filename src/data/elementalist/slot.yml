@@ -1,88 +1,88 @@
 Heal:
-  - 34743 # Glyph of Elemental Harmony (Fire)
-  - 34651 # Glyph of Elemental Harmony (Water)
-  - 34724 # Glyph of Elemental Harmony (Air)
-  - 34609 # Glyph of Elemental Harmony (Earth)
-  - 5507 # Ether Renewal
-  - 5503 # Signet of Restoration
-  - 21656 # Arcane Brilliance
+    - 34743 # Glyph of Elemental Harmony (Fire)
+    - 34651 # Glyph of Elemental Harmony (Water)
+    - 34724 # Glyph of Elemental Harmony (Air)
+    - 34609 # Glyph of Elemental Harmony (Earth)
+    - 5507 # Ether Renewal
+    - 5503 # Signet of Restoration
+    - 21656 # Arcane Brilliance
 
-  # specs
-  - 29535 # "Wash the Pain Away!"
-  - 44239 # Aquatic Stance
-  - 62827 # Soothing Water
-  - 79323 # Rejuvenate (Fire)
-  - 76634 # Rejuvenate (Water)
-  - 79315 # Rejuvenate (Air)
-  - 79314 # Rejuvenate (Earth)
+    # specs
+    - 29535 # "Wash the Pain Away!"
+    - 44239 # Aquatic Stance
+    - 62827 # Soothing Water
+    - 79323 # Rejuvenate (Fire)
+    - 76634 # Rejuvenate (Water)
+    - 79315 # Rejuvenate (Air)
+    - 79314 # Rejuvenate (Earth)
 
 Utility:
-  - 5638 # Arcane Wave
-  - 5641 # Arcane Shield
-  - 5635 # Arcane Power
-  - 5539 # Arcane Blast
-  - 34736 # Glyph of Elemental Power (Fire)
-  - 34772 # Glyph of Elemental Power (Water)
-  - 34637 # Glyph of Elemental Power (Air)
-  - 34714 # Glyph of Elemental Power (Earth)
-  - 5736 # Firestorm
-  - 5735 # Ice Storm
-  - 5737 # Lightning Storm
-  - 5738 # Sandstorm
-  - 25486 # Glyph of Lesser Elementals (Fire)
-  - 25487 # Glyph of Lesser Elementals (Water)
-  - 25495 # Glyph of Lesser Elementals (Air)
-  - 25497 # Glyph of Lesser Elementals (Earth)
-  - 5762 # Renewal of Fire
-  - 5763 # Renewal of Water
-  - 5760 # Renewal of Air
-  - 5761 # Renewal of Earth
-  - 5542 # Signet of Fire
-  - 5570 # Signet of Water
-  - 5572 # Signet of Air
-  - 5571 # Signet of Earth
-  - 5535 # Cleansing Fire
-  - 5554 # Mist Form
-  - 5536 # Lightning Flash
-  - 5639 # Armor of Earth
-  - 5540 # Conjure Flame Axe
-  - 5567 # Conjure Frost Bow
-  - 5624 # Conjure Lightning Hammer
-  - 5546 # Conjure Earth Shield
+    - 5638 # Arcane Wave
+    - 5641 # Arcane Shield
+    - 5635 # Arcane Power
+    - 5539 # Arcane Blast
+    - 34736 # Glyph of Elemental Power (Fire)
+    - 34772 # Glyph of Elemental Power (Water)
+    - 34637 # Glyph of Elemental Power (Air)
+    - 34714 # Glyph of Elemental Power (Earth)
+    - 5736 # Firestorm
+    - 5735 # Ice Storm
+    - 5737 # Lightning Storm
+    - 5738 # Sandstorm
+    - 25486 # Glyph of Lesser Elementals (Fire)
+    - 25487 # Glyph of Lesser Elementals (Water)
+    - 25495 # Glyph of Lesser Elementals (Air)
+    - 25497 # Glyph of Lesser Elementals (Earth)
+    - 5762 # Renewal of Fire
+    - 5763 # Renewal of Water
+    - 5760 # Renewal of Air
+    - 5761 # Renewal of Earth
+    - 5542 # Signet of Fire
+    - 5570 # Signet of Water
+    - 5572 # Signet of Air
+    - 5571 # Signet of Earth
+    - 5535 # Cleansing Fire
+    - 5554 # Mist Form
+    - 5536 # Lightning Flash
+    - 5639 # Armor of Earth
+    - 5540 # Conjure Flame Axe
+    - 5567 # Conjure Frost Bow
+    - 5624 # Conjure Lightning Hammer
+    - 5546 # Conjure Earth Shield
 
-  # specs
-  - 30662 # "Feel the Burn!"
-  - 29948 # "Flash-Freeze!"
-  - 30047 # "Eye of the Storm!"
-  - 30432 # "Aftershock!"
-  - 44637 # Tailored Victory
-  - 44926 # Stone Resonance
-  - 44612 # Unravel
-  - 45746 # Twist of Fate
-  - 40183 # Primordial Stance
-  - 62965 # Relentless Fire
-  - 62698 # Shattering Ice
-  - 62982 # Invigorating Air
-  - 62826 # Fortified Earth
-  - 77282 # Fox's Fury
-  - 76563 # Otter's Compassion
-  - 77038 # Hare's Agility
-  - 77320 # Toad's Fortitude
+    # specs
+    - 30662 # "Feel the Burn!"
+    - 29948 # "Flash-Freeze!"
+    - 30047 # "Eye of the Storm!"
+    - 30432 # "Aftershock!"
+    - 44637 # Tailored Victory
+    - 44926 # Stone Resonance
+    - 44612 # Unravel
+    - 45746 # Twist of Fate
+    - 40183 # Primordial Stance
+    - 62965 # Relentless Fire
+    - 62698 # Shattering Ice
+    - 62982 # Invigorating Air
+    - 62826 # Fortified Earth
+    - 77282 # Fox's Fury
+    - 76563 # Otter's Compassion
+    - 77038 # Hare's Agility
+    - 77320 # Toad's Fortitude
 
 Elite:
-  - 25488 # Glyph of Elementals (Fire)
-  - 25499 # Flame Barrage
-  - 25491 # Glyph of Elementals (Water)
-  - 25492 # Crashing Waves
-  - 25490 # Glyph of Elementals (Air)
-  - 25480 # Shocking Bolt
-  - 25489 # Glyph of Elementals (Earth)
-  - 25498 # Stomp
-  - 5516 # Conjure Fiery Greatsword
-  - 5534 # Tornado
+    - 25488 # Glyph of Elementals (Fire)
+    - 25499 # Flame Barrage
+    - 25491 # Glyph of Elementals (Water)
+    - 25492 # Crashing Waves
+    - 25490 # Glyph of Elementals (Air)
+    - 25480 # Shocking Bolt
+    - 25489 # Glyph of Elementals (Earth)
+    - 25498 # Stomp
+    - 5516 # Conjure Fiery Greatsword
+    - 5534 # Tornado
 
-  # specs
-  - 29968 # "Rebound!"
-  - 43638 # Weave Self
-  - 62725 # Elemental Celerity
-  - 76841 # Elemental Procession
+    # specs
+    - 29968 # "Rebound!"
+    - 43638 # Weave Self
+    - 62725 # Elemental Celerity
+    - 76841 # Elemental Procession

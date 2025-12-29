@@ -1,15 +1,15 @@
-import {createSelector, createSlice, PayloadAction} from "@reduxjs/toolkit";
-import {useSelector} from "react-redux";
-import {StoreState} from ".";
-import {SkillSlot} from "../data";
-import {Theme} from "../themes";
+import { createSelector, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { useSelector } from "react-redux";
+import { StoreState } from ".";
+import { SkillSlot } from "../data";
+import { Theme } from "../themes";
 
 export type Keybinds<T> = Record<SkillSlot, T>;
 
 export const enum KeyDisplay {
     None = "none",
     Bound = "bound",
-    All = "all"
+    All = "all",
 }
 
 export const defaultAutoSize = 75;
@@ -36,7 +36,7 @@ export const defaultKeybinds = {
     [SkillSlot.Dodge]: "V",
     [SkillSlot.Interact]: "F",
     [SkillSlot.Stow]: "",
-    [SkillSlot.SpecialAction]: "N"
+    [SkillSlot.SpecialAction]: "N",
 };
 
 export const settingsSlice = createSlice({
@@ -46,42 +46,45 @@ export const settingsSlice = createSlice({
         autoAttackSize: defaultAutoSize,
         keyDisplay: KeyDisplay.Bound,
         keybinds: defaultKeybinds,
-        dev: false
+        dev: false,
     },
     reducers: {
-        setTheme(state, {payload}: PayloadAction<Theme>) {
+        setTheme(state, { payload }: PayloadAction<Theme>) {
             state.theme = payload;
         },
-        setAutoSize(state, {payload}: PayloadAction<number>) {
+        setAutoSize(state, { payload }: PayloadAction<number>) {
             state.autoAttackSize = payload;
         },
-        setKeyDisplay(state, {payload}: PayloadAction<KeyDisplay>) {
+        setKeyDisplay(state, { payload }: PayloadAction<KeyDisplay>) {
             state.keyDisplay = payload;
         },
-        setKeybinds(state, {payload}: PayloadAction<Partial<Keybinds<string>>>) {
-            state.keybinds = {...state.keybinds, ...payload};
+        setKeybinds(state, { payload }: PayloadAction<Partial<Keybinds<string>>>) {
+            state.keybinds = { ...state.keybinds, ...payload };
         },
-        setDevMode(state, {payload}: PayloadAction<boolean>) {
+        setDevMode(state, { payload }: PayloadAction<boolean>) {
             state.dev = payload;
-        }
-    }
+        },
+    },
 });
 
 export const settingsReducer = settingsSlice.reducer;
 
-export const {setTheme, setAutoSize, setKeyDisplay, setKeybinds, setDevMode} = settingsSlice.actions;
+export const { setTheme, setAutoSize, setKeyDisplay, setKeybinds, setDevMode } =
+    settingsSlice.actions;
 
-export const selectTheme = ({settingsReducer}: StoreState): Theme => settingsReducer.theme;
+export const selectTheme = ({ settingsReducer }: StoreState): Theme => settingsReducer.theme;
 export const useTheme = (): Theme => useSelector(selectTheme);
 
-export const selectAutoSize = ({settingsReducer}: StoreState): number => settingsReducer.autoAttackSize;
+export const selectAutoSize = ({ settingsReducer }: StoreState): number =>
+    settingsReducer.autoAttackSize;
 export const useAutoSize = (): number => useSelector(selectAutoSize);
 
-export const selectKeyDisplay = ({settingsReducer}: StoreState): KeyDisplay => settingsReducer.keyDisplay;
+export const selectKeyDisplay = ({ settingsReducer }: StoreState): KeyDisplay =>
+    settingsReducer.keyDisplay;
 export const useKeyDisplay = (): KeyDisplay => useSelector(selectKeyDisplay);
 
 export const selectKeybinds = createSelector(
-    [({settingsReducer}: StoreState) => settingsReducer.keybinds],
+    [({ settingsReducer }: StoreState) => settingsReducer.keybinds],
     (keybinds: Keybinds<string>): Keybinds<string> => {
         return {
             ...keybinds,
@@ -90,12 +93,12 @@ export const selectKeybinds = createSelector(
             [SkillSlot.Downed1]: keybinds[SkillSlot.Weapon1],
             [SkillSlot.Downed2]: keybinds[SkillSlot.Weapon2],
             [SkillSlot.Downed3]: keybinds[SkillSlot.Weapon3],
-            [SkillSlot.Downed4]: keybinds[SkillSlot.Weapon4]
+            [SkillSlot.Downed4]: keybinds[SkillSlot.Weapon4],
         };
-    }
+    },
 );
 export const useKeybinds = (): Keybinds<string> => useSelector(selectKeybinds);
 export const useKeybind = (slot: SkillSlot): string => useKeybinds()[slot];
 
-export const selectDevMode = ({settingsReducer}: StoreState): boolean => settingsReducer.dev;
+export const selectDevMode = ({ settingsReducer }: StoreState): boolean => settingsReducer.dev;
 export const useDevMode = (): boolean => useSelector(selectDevMode);

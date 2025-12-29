@@ -1,68 +1,68 @@
 Heal:
-  - 31914 # "We Heal As One!"
-  - 12483 # Troll Unguent
-  - 12489 # Healing Spring
-  - 21773 # Water Spirit
+    - 31914 # "We Heal As One!"
+    - 12483 # Troll Unguent
+    - 12489 # Healing Spring
+    - 21773 # Water Spirit
 
-  # specs
-  - 31819 # Glyph of Rejuvenation (normal)
-  - 31867 # Glyph of Rejuvenation (celestial)
-  - 44948 # Bear Stance
-  - 63319 # Perilous Gift
-  - 77271 # Soothing Breeze
+    # specs
+    - 31819 # Glyph of Rejuvenation (normal)
+    - 31867 # Glyph of Rejuvenation (celestial)
+    - 44948 # Bear Stance
+    - 63319 # Perilous Gift
+    - 77271 # Soothing Breeze
 
 Utility:
-  - 12476 # Spike Trap
-  - 12499 # Flame Trap
-  - 12496 # Viper's Nest
-  - 12492 # Frost Trap
-  - 12502 # Signet of Renewal
-  - 12542 # Signet of the Hunt
-  - 12500 # Signet of Stone
-  - 12491 # Signet of the Wild
-  - 12537 # Sharpening Stone
-  - 12494 # Lightning Reflexes
-  - 12501 # Muddy Terrain
-  - 12550 # Quickening Zephyr
-  - 12498 # Sun Spirit
-  - 12495 # Stone Spirit
-  - 12497 # Frost Spirit
-  - 12493 # Storm Spirit
-  - 12633 # "Sic 'Em!"
-  - 12631 # "Protect Me!"
-  - 12632 # "Guard!"
-  - 34309 # "Search and Rescue!"
+    - 12476 # Spike Trap
+    - 12499 # Flame Trap
+    - 12496 # Viper's Nest
+    - 12492 # Frost Trap
+    - 12502 # Signet of Renewal
+    - 12542 # Signet of the Hunt
+    - 12500 # Signet of Stone
+    - 12491 # Signet of the Wild
+    - 12537 # Sharpening Stone
+    - 12494 # Lightning Reflexes
+    - 12501 # Muddy Terrain
+    - 12550 # Quickening Zephyr
+    - 12498 # Sun Spirit
+    - 12495 # Stone Spirit
+    - 12497 # Frost Spirit
+    - 12493 # Storm Spirit
+    - 12633 # "Sic 'Em!"
+    - 12631 # "Protect Me!"
+    - 12632 # "Guard!"
+    - 34309 # "Search and Rescue!"
 
-  #specs
-  - 31607 # Glyph of Alignment (normal)
-  - 31348 # Glyph of Alignment (celestial)
-  - 31888 # Glyph of Unity (normal)
-  - 31740 # Glyph of Unity (celestial)
-  - 31658 # Glyph of Equality (normal)
-  - 31401 # Glyph of Equality (celestial)
-  - 30448 # Glyph of the Tides (normal)
-  - 29558 # Glyph of the Tides (celestial)
-  - 45789 # Dolyak Stance
-  - 45142 # Griffon Stance
-  - 45970 # Moa Stance
-  - 40498 # Vulture Stance
-  - 63157 # Exploding Spores
-  - 63256 # Mutate Conditions
-  - 63195 # Unnatural Traversal
-  - 63130 # Nature's Binding
-  - 77264 # Piercing Gales
-  - 77211 # Wind Shear
-  - 76619 # Whirlwind
-  - 76757 # Mistral
+    #specs
+    - 31607 # Glyph of Alignment (normal)
+    - 31348 # Glyph of Alignment (celestial)
+    - 31888 # Glyph of Unity (normal)
+    - 31740 # Glyph of Unity (celestial)
+    - 31658 # Glyph of Equality (normal)
+    - 31401 # Glyph of Equality (celestial)
+    - 30448 # Glyph of the Tides (normal)
+    - 29558 # Glyph of the Tides (celestial)
+    - 45789 # Dolyak Stance
+    - 45142 # Griffon Stance
+    - 45970 # Moa Stance
+    - 40498 # Vulture Stance
+    - 63157 # Exploding Spores
+    - 63256 # Mutate Conditions
+    - 63195 # Unnatural Traversal
+    - 63130 # Nature's Binding
+    - 77264 # Piercing Gales
+    - 77211 # Wind Shear
+    - 76619 # Whirlwind
+    - 76757 # Mistral
 
 Elite:
-  - 12516 # "Strength of the Pack!"
-  - 12580 # Entangle
-  - 12569 # Spirit of Nature
+    - 12516 # "Strength of the Pack!"
+    - 12580 # Entangle
+    - 12569 # Spirit of Nature
 
-  # specs
-  - 55046 # Glyph of the Stars (normal)
-  - 55024 # Glyph of the Stars (celestial)
-  - 45717 # One Wolf Pack
-  - 63163 # Forest's Fortification
-  - 76979 # Perfect Storm
+    # specs
+    - 55046 # Glyph of the Stars (normal)
+    - 55024 # Glyph of the Stars (celestial)
+    - 45717 # One Wolf Pack
+    - 63163 # Forest's Fortification
+    - 76979 # Perfect Storm

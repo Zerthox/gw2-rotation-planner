@@ -1,77 +1,77 @@
 Legendary Dwarf:
-  - 28419 # Legendary Dwarf Stance
-  - 27372 # Soothing Stone
-  - 28516 # Inspiring Reinforcement
-  - 26679 # Forced Engagement
-  - 26557 # Vengeful Hammers
-  - 26956 # Release Hammers
-  - 27975 # Rite of the Great Dwarf
+    - 28419 # Legendary Dwarf Stance
+    - 27372 # Soothing Stone
+    - 28516 # Inspiring Reinforcement
+    - 26679 # Forced Engagement
+    - 26557 # Vengeful Hammers
+    - 26956 # Release Hammers
+    - 27975 # Rite of the Great Dwarf
 
 Legendary Demon:
-  - 28494 # Legendary Demon Stance
-  - 28219 # Empowering Misery
-  - 27322 # Pain Absorption
-  - 27505 # Banish Enchantment
-  - 27917 # Call to Anguish
-  - 28287 # Embrace the Darkness
-  - 26693 # Resist the Darkness
+    - 28494 # Legendary Demon Stance
+    - 28219 # Empowering Misery
+    - 27322 # Pain Absorption
+    - 27505 # Banish Enchantment
+    - 27917 # Call to Anguish
+    - 28287 # Embrace the Darkness
+    - 26693 # Resist the Darkness
 
 Legendary Centaur:
-  - 28195 # Legendary Centaur Stance
-  - 29148 # Project Tranquility
-  - 28427 # Ventari's Will
-  - 26821 # Protective Solace
-  - 27628 # Diminish Solace
-  - 27025 # Natural Harmony
-  - 27715 # Purifying Essence
-  - 27356 # Energy Expulsion
+    - 28195 # Legendary Centaur Stance
+    - 29148 # Project Tranquility
+    - 28427 # Ventari's Will
+    - 26821 # Protective Solace
+    - 27628 # Diminish Solace
+    - 27025 # Natural Harmony
+    - 27715 # Purifying Essence
+    - 27356 # Energy Expulsion
 
 Legendary Assassin:
-  - 28134 # Legendary Assassin Stance
-  - 26937 # Enchanted Daggers
-  - 29209 # Riposting Shadows
-  - 28231 # Phase Traversal
-  - 27107 # Impossible Odds
-  - 28382 # Relinquish Power
-  - 28406 # Jade Winds
+    - 28134 # Legendary Assassin Stance
+    - 26937 # Enchanted Daggers
+    - 29209 # Riposting Shadows
+    - 28231 # Phase Traversal
+    - 27107 # Impossible Odds
+    - 28382 # Relinquish Power
+    - 28406 # Jade Winds
 
 Legendary Dragon:
-  - 28085 # Legendary Dragon Stance
-  - 27220 # Facet of Light
-  - 27228 # Infuse Light
-  - 28379 # Facet of Darkness
-  - 27080 # Gaze of Darkness
-  - 27014 # Facet of Elements
-  - 26644 # Facet of Strength
-  - 28113 # Burst of Strength
-  - 27760 # Facet of Chaos
-  - 28075 # Chaotic Release
+    - 28085 # Legendary Dragon Stance
+    - 27220 # Facet of Light
+    - 27228 # Infuse Light
+    - 28379 # Facet of Darkness
+    - 27080 # Gaze of Darkness
+    - 27014 # Facet of Elements
+    - 26644 # Facet of Strength
+    - 28113 # Burst of Strength
+    - 27760 # Facet of Chaos
+    - 28075 # Chaotic Release
 
 Legendary Renegade:
-  - 41858 # Legendary Renegade Stance
-  - 45686 # Breakrazor's Bastion
-  - 42949 # Razorclaw's Rage
-  - 40485 # Icerazor's Ire
-  - 41220 # Darkrazor's Daring
-  - 45773 # Soulcleave's Summit
+    - 41858 # Legendary Renegade Stance
+    - 45686 # Breakrazor's Bastion
+    - 42949 # Razorclaw's Rage
+    - 40485 # Icerazor's Ire
+    - 41220 # Darkrazor's Daring
+    - 45773 # Soulcleave's Summit
 
 Legendary Alliance:
-  - 62891 # Legendary Alliance Stance
-  - 62719 # Selfish Spirit
-  - 62680 # Selfless Spirit
-  - 62832 # Nomad's Advance
-  - 62702 # Battle Dance
-  - 62962 # Scavenger Burst
-  - 62941 # Tree Song
-  - 62878 # Reaver's Rage
-  - 62796 # Awakening
-  - 62942 # Spear of Archemorus
-  - 62687 # Urn of Saint Viktor
+    - 62891 # Legendary Alliance Stance
+    - 62719 # Selfish Spirit
+    - 62680 # Selfless Spirit
+    - 62832 # Nomad's Advance
+    - 62702 # Battle Dance
+    - 62962 # Scavenger Burst
+    - 62941 # Tree Song
+    - 62878 # Reaver's Rage
+    - 62796 # Awakening
+    - 62942 # Spear of Archemorus
+    - 62687 # Urn of Saint Viktor
 
 Legendary Entity:
-  - 76610 # Legendary Entity Stance
-  - 77043 # Shielding Hands
-  - 76805 # Beguiling Haze
-  - 77291 # Gladiator's Defense
-  - 77243 # Hex-Eater Vortex
-  - 77001 # Twin Moon Sweep
+    - 76610 # Legendary Entity Stance
+    - 77043 # Shielding Hands
+    - 76805 # Beguiling Haze
+    - 77291 # Gladiator's Defense
+    - 77243 # Hex-Eater Vortex
+    - 77001 # Twin Moon Sweep

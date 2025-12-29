@@ -1,140 +1,140 @@
 Pet:
-  - 12664 # Rending Maul (Arctodus)
-  - 12685 # Enfeebling Roar (Black Bear)
-  - 12666 # Shake It off (Brown Bear)
-  - 12687 # Poison Cloud (Murellow)
-  - 12667 # Icy Roar (Polar Bear)
+    - 12664 # Rending Maul (Arctodus)
+    - 12685 # Enfeebling Roar (Black Bear)
+    - 12666 # Shake It off (Brown Bear)
+    - 12687 # Poison Cloud (Murellow)
+    - 12667 # Icy Roar (Polar Bear)
 
-  - 12722 # Lacerating Slash (Eagle, Hawk)
-  - 12721 # Chilling Slash (Owl)
-  - 12723 # Blinding Slash (Raven, White Raven)
+    - 12722 # Lacerating Slash (Eagle, Hawk)
+    - 12721 # Chilling Slash (Owl)
+    - 12723 # Blinding Slash (Raven, White Raven)
 
-  - 12716 # Chilling Howl (Alpine Wolf)
-  - 12717 # Regenerate (Fern Hound)
-  - 12718 # Howl of the pack (Hyena)
-  - 12715 # Intimidating Howl (Krytan Drakehound)
-  - 12714 # Terrifying Howl (Wolf)
+    - 12716 # Chilling Howl (Alpine Wolf)
+    - 12717 # Regenerate (Fern Hound)
+    - 12718 # Howl of the pack (Hyena)
+    - 12715 # Intimidating Howl (Krytan Drakehound)
+    - 12714 # Terrifying Howl (Wolf)
 
-  - 12675 # Poisonous Cloud (Carrion Devourer)
-  - 12679 # Rending Barbs (Lashtail Devourer)
-  - 12674 # Poison Barbs (Whiptail Devourer)
+    - 12675 # Poisonous Cloud (Carrion Devourer)
+    - 12679 # Rending Barbs (Lashtail Devourer)
+    - 12674 # Poison Barbs (Whiptail Devourer)
 
-  - 12696 # Frost breath (Ice Drake)
-  - 12701 # Insect Swarm (Marsh Drake)
-  - 16426 # Sonic Shriek (Reef Drake)
-  - 12698 # Lightning Breath (River Drake)
-  - 12670 # Fire Breath (Salamander Drake)
+    - 12696 # Frost breath (Ice Drake)
+    - 12701 # Insect Swarm (Marsh Drake)
+    - 16426 # Sonic Shriek (Reef Drake)
+    - 12698 # Lightning Breath (River Drake)
+    - 12670 # Fire Breath (Salamander Drake)
 
-  - 12681 # Stalk (Jaguar)
-  - 12658 # Mighty Roar (Jungle Stalker)
-  - 12680 # Rending Pounce (Lynx)
-  - 12693 # Icy Pounce (Snow Leopard)
+    - 12681 # Stalk (Jaguar)
+    - 12658 # Mighty Roar (Jungle Stalker)
+    - 12680 # Rending Pounce (Lynx)
+    - 12693 # Icy Pounce (Snow Leopard)
 
-  - 12709 # Dazing Screech (Black Moa)
-  - 12713 # Protecting Screech (Blue Moa)
-  - 12708 # Dazing Screech (Pink Moa)
-  - 12712 # Furious Screech (Red Moa)
-  - 12711 # Icy Screech (White Moa)
+    - 12709 # Dazing Screech (Black Moa)
+    - 12713 # Protecting Screech (Blue Moa)
+    - 12708 # Dazing Screech (Pink Moa)
+    - 12712 # Furious Screech (Red Moa)
+    - 12711 # Icy Screech (White Moa)
 
-  - 12732 # Forage (Boar)
-  - 12756 # Forage (Pig)
-  - 12755 # Forage (Siamoth)
-  - 12754 # Forage (Warthog)
+    - 12732 # Forage (Boar)
+    - 12756 # Forage (Pig)
+    - 12755 # Forage (Siamoth)
+    - 12754 # Forage (Warthog)
 
-  - 12729 # Paralyzing Venom (Black Widow Spider, Jungle Spider)
-  - 12730 # Weakening Venom (Cave Spider)
-  - 12731 # Deadly Venom (Forest Spider)
+    - 12729 # Paralyzing Venom (Black Widow Spider, Jungle Spider)
+    - 12730 # Weakening Venom (Cave Spider)
+    - 12731 # Deadly Venom (Forest Spider)
 
-  - 31451 # Furious Pounce (Tiger)
-  - 31639 # Lightning Assault (Electric Wyvern)
-  - 31459 # Consuming Flame (Fire Wyvern)
-  - 31367 # Spike Barrage (Bristleback)
-  - 31568 # Smoke Cloud (Smokescale)
+    - 31451 # Furious Pounce (Tiger)
+    - 31639 # Lightning Assault (Electric Wyvern)
+    - 31459 # Consuming Flame (Fire Wyvern)
+    - 31367 # Spike Barrage (Bristleback)
+    - 31568 # Smoke Cloud (Smokescale)
 
-  - 42963 # Savannah Strike (Cheetah)
-  - 42180 # Blinding Roar (Sand Lion)
-  - 41156 # Fang Grapple (Fanged Iboga)
-  - 44980 # Jacaranda's Embrace (Jacaranda)
-  - 43636 # Head Toss (Rock Gazelle)
+    - 42963 # Savannah Strike (Cheetah)
+    - 42180 # Blinding Roar (Sand Lion)
+    - 41156 # Fang Grapple (Fanged Iboga)
+    - 44980 # Jacaranda's Embrace (Jacaranda)
+    - 43636 # Head Toss (Rock Gazelle)
 
-  - 65109 # Guardian's Roar (White Tiger)
-  - 63716 # Gale Breath (Phoenix)
-  - 65418 # Hunker Down (Siege Turtle)
-  - 66622 # Bloodthirsty Charge (Wallow)
+    - 65109 # Guardian's Roar (White Tiger)
+    - 63716 # Gale Breath (Phoenix)
+    - 65418 # Hunker Down (Siege Turtle)
+    - 66622 # Bloodthirsty Charge (Wallow)
 
-  - 71002 # Dimension Breach (Aether Hunter)
+    - 71002 # Dimension Breach (Aether Hunter)
 
 Druid:
-  - 31869 # Celestial Avatar
-  - 31411 # Release Celestial Avatar
+    - 31869 # Celestial Avatar
+    - 31411 # Release Celestial Avatar
 
 Soulbeast:
-  # TODO: sort by pet
-  # merged pet
-  - 44991 # Swoop
-  - 42042 # Quickening Screech
-  - 43136 # Bite
-  - 43060 # Defy Pain
-  - 43726 # Crippling Leap
-  - 42894 # Brutal Charge
-  - 43068 # Tail Lash
-  - 41461 # Devourer Retreat
-  - 41537 # Chomp
-  - 41575 # Tail Swipe
-  - 41524 # Kick
-  - 45743 # Charge
-  - 40625 # Bite
-  - 44514 # Maul
-  - 44384 # Crippling Anguish
-  - 40111 # Narcotic Spores
-  - 44617 # Harmonic Cry
-  - 43548 # Frenzied Attack
-  - 41406 # Maul
-  - 46432 # Brutal Charge
-  - 43788 # Call Lightning
-  - 43701 # Photosynthesize
-  - 44097 # Entangling Web
-  - 43671 # Poison Gas
-  - 42717 # Protection
-  - 44885 # Chomp
-  - 43186 # Healing Cloud
-  - 41837 # Dark Water
-  - 42797 # Charging Bite
-  - 44360 # Fear
-  - 41206 # Rain of Spikes
-  - 45479 # Sharpen Spines
-  - 42907 # Takedown
-  - 40255 # Smoke Assault
-  - 46386 # Tail Lash
-  - 41908 # Wing Buffet
-  - 67382 # Phase Pounce
-  - 64038 # Wicked Bite
-  - 66780 # Vampiric Bite
-  - 64882 # Undead Plague
-  - 64699 # Jade Cannon
-  - 66258 # Snap
-  - 71282 # Lunge
-  - 70889 # Ley-Line Vortex
+    # TODO: sort by pet
+    # merged pet
+    - 44991 # Swoop
+    - 42042 # Quickening Screech
+    - 43136 # Bite
+    - 43060 # Defy Pain
+    - 43726 # Crippling Leap
+    - 42894 # Brutal Charge
+    - 43068 # Tail Lash
+    - 41461 # Devourer Retreat
+    - 41537 # Chomp
+    - 41575 # Tail Swipe
+    - 41524 # Kick
+    - 45743 # Charge
+    - 40625 # Bite
+    - 44514 # Maul
+    - 44384 # Crippling Anguish
+    - 40111 # Narcotic Spores
+    - 44617 # Harmonic Cry
+    - 43548 # Frenzied Attack
+    - 41406 # Maul
+    - 46432 # Brutal Charge
+    - 43788 # Call Lightning
+    - 43701 # Photosynthesize
+    - 44097 # Entangling Web
+    - 43671 # Poison Gas
+    - 42717 # Protection
+    - 44885 # Chomp
+    - 43186 # Healing Cloud
+    - 41837 # Dark Water
+    - 42797 # Charging Bite
+    - 44360 # Fear
+    - 41206 # Rain of Spikes
+    - 45479 # Sharpen Spines
+    - 42907 # Takedown
+    - 40255 # Smoke Assault
+    - 46386 # Tail Lash
+    - 41908 # Wing Buffet
+    - 67382 # Phase Pounce
+    - 64038 # Wicked Bite
+    - 66780 # Vampiric Bite
+    - 64882 # Undead Plague
+    - 64699 # Jade Cannon
+    - 66258 # Snap
+    - 71282 # Lunge
+    - 70889 # Ley-Line Vortex
 
-  # pet archetype
-  - 44626 # Spiritual Reprieve
-  - 45797 # Unflinching Fortitude
-  - 40588 # Primal Cry
-  - 43375 # Prelude Lash
-  - 40729 # Worldly Impact
+    # pet archetype
+    - 44626 # Spiritual Reprieve
+    - 45797 # Unflinching Fortitude
+    - 40588 # Primal Cry
+    - 43375 # Prelude Lash
+    - 40729 # Worldly Impact
 
-  - 42944 # Beastmode
-  - 43014 # Leave Beastmode
+    - 42944 # Beastmode
+    - 43014 # Leave Beastmode
 
 Untamed:
-  # unleashed pet
-  - 63209 # Venomous Outburst
-  - 63258 # Rending Vines
-  - 63094 # Enveloping Haze
+    # unleashed pet
+    - 63209 # Venomous Outburst
+    - 63258 # Rending Vines
+    - 63094 # Enveloping Haze
 
-  - 63147 # Unleash Ranger
-  - 63344 # Unleash Pet
+    - 63147 # Unleash Ranger
+    - 63344 # Unleash Pet
 
 Galeshot:
-  - 76787 # Summon Cyclone Bow
-  - 77213 # Dismiss Cyclone Bow
+    - 76787 # Summon Cyclone Bow
+    - 77213 # Dismiss Cyclone Bow

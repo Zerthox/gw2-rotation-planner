@@ -1,5 +1,5 @@
-import {nanoid} from "nanoid";
-import {UniqueIdentifier} from "@dnd-kit/core";
+import { nanoid } from "nanoid";
+import { UniqueIdentifier } from "@dnd-kit/core";
 
 export type DragId = UniqueIdentifier;
 
@@ -7,7 +7,7 @@ export const enum DragType {
     Row = "row",
     Skill = "skill",
     Skillbar = "skillbar",
-    Add = "add"
+    Add = "add",
 }
 
 export const createDragId = (type: DragType): DragId => `${type}-${nanoid()}`;

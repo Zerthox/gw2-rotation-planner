@@ -1,129 +1,129 @@
 Axe:
-  - 12466 # Ricochet
-  - 63129 # Sundering Volley
-  - 12480 # Splitblade
-  - 12490 # Winter's Bite
-  - 12638 # Path of Scars
-  - 12639 # Whirling Defense
+    - 12466 # Ricochet
+    - 63129 # Sundering Volley
+    - 12480 # Splitblade
+    - 12490 # Winter's Bite
+    - 12638 # Path of Scars
+    - 12639 # Whirling Defense
 
 Dagger:
-  - 45426 # Groundwork Gouge
-  - 40301 # Leading Swipe
-  - 41800 # Serpent Stab
-  - 44278 # Deadly Delivery
-  - 69223 # Neurotoxin Burst
-  - 43536 # Double Arc
-  - 46123 # Instinctive Engage
-  - 12478 # Stalker's Strike
-  - 12477 # Crippling Talon
+    - 45426 # Groundwork Gouge
+    - 40301 # Leading Swipe
+    - 41800 # Serpent Stab
+    - 44278 # Deadly Delivery
+    - 69223 # Neurotoxin Burst
+    - 43536 # Double Arc
+    - 46123 # Instinctive Engage
+    - 12478 # Stalker's Strike
+    - 12477 # Crippling Talon
 
 Greatsword:
-  - 12474 # Slash
-  - 12487 # Slice
-  - 12488 # Enduring Swing
-  - 63350 # Savage Slash
-  - 12525 # Maul
-  - 46629 # Maul
-  - 12521 # Swoop
-  - 12522 # Counterattack
-  - 12523 # Counterattack Kick
-  - 12475 # Hilt Bash
+    - 12474 # Slash
+    - 12487 # Slice
+    - 12488 # Enduring Swing
+    - 63350 # Savage Slash
+    - 12525 # Maul
+    - 46629 # Maul
+    - 12521 # Swoop
+    - 12522 # Counterattack
+    - 12523 # Counterattack Kick
+    - 12475 # Hilt Bash
 
 Longbow:
-  - 12510 # Long Range Shot
-  - 63225 # Multishot
-  - 12509 # Rapid Fire
-  - 12573 # Hunter's Shot
-  - 12511 # Point-Blank Shot
-  - 12469 # Barrage
+    - 12510 # Long Range Shot
+    - 63225 # Multishot
+    - 12509 # Rapid Fire
+    - 12573 # Hunter's Shot
+    - 12511 # Point-Blank Shot
+    - 12469 # Barrage
 
 Shortbow:
-  - 12470 # Crossfire
-  - 63326 # Toxic Shot
-  - 12468 # Poison Volley
-  - 12517 # Quick Shot
-  - 12507 # Crippling Shot
-  - 12508 # Concussion Shot
+    - 12470 # Crossfire
+    - 63326 # Toxic Shot
+    - 12468 # Poison Volley
+    - 12517 # Quick Shot
+    - 12507 # Crippling Shot
+    - 12508 # Concussion Shot
 
 Sword:
-  - 12471 # Slash
-  - 12472 # Crippling Thrust
-  - 12473 # Precision Swipe
-  - 63336 # Deft Strike
-  - 69203 # Pounce
-  - 12482 # Serpent's Strike
+    - 12471 # Slash
+    - 12472 # Crippling Thrust
+    - 12473 # Precision Swipe
+    - 63336 # Deft Strike
+    - 69203 # Pounce
+    - 12482 # Serpent's Strike
 
 Torch:
-  - 12635 # Throw Torch
-  - 12504 # Bonfire
+    - 12635 # Throw Torch
+    - 12504 # Bonfire
 
 Warhorn:
-  - 12620 # Hunter's Call
-  - 12621 # Call of the Wild
+    - 12620 # Hunter's Call
+    - 12621 # Call of the Wild
 
 Staff:
-  - 31710 # Solar Beam
-  - 69175 # Solar Brilliance
-  - 31889 # Astral Wisp
-  - 31535 # Ancestral Grace
-  - 31700 # Vine Surge
-  - 31496 # Sublime Conversion
+    - 31710 # Solar Beam
+    - 69175 # Solar Brilliance
+    - 31889 # Astral Wisp
+    - 31535 # Ancestral Grace
+    - 31700 # Vine Surge
+    - 31496 # Sublime Conversion
 
 Hammer:
-  - 63118 # Hammer Strike
-  - 63222 # Hammer Slam
-  - 63337 # Heavy Smash
-  - 63438 # Relentless Whirl
-  - 63366 # Wild Swing
-  - 63335 # Unleashed Wild Swing
-  - 63075 # Overbearing Smash
-  - 63197 # Unleashed Overbearing Smash
-  - 63073 # Savage Shock Wave
-  - 63131 # Unleashed Savage Shock Wave
-  - 63330 # Thump
-  - 63208 # Unleashed Thump
+    - 63118 # Hammer Strike
+    - 63222 # Hammer Slam
+    - 63337 # Heavy Smash
+    - 63438 # Relentless Whirl
+    - 63366 # Wild Swing
+    - 63335 # Unleashed Wild Swing
+    - 63075 # Overbearing Smash
+    - 63197 # Unleashed Overbearing Smash
+    - 63073 # Savage Shock Wave
+    - 63131 # Unleashed Savage Shock Wave
+    - 63330 # Thump
+    - 63208 # Unleashed Thump
 
 Mace:
-  - 72088 # Germinate
-  - 72044 # Burgeon
-  - 71885 # Cultivate
-  - 72079 # Rampant Growth
-  - 71999 # Flourish
-  - 71963 # Oaken Cudgel
-  - 71903 # Thistleguard
-  - 71841 # Wild Strikes
+    - 72088 # Germinate
+    - 72044 # Burgeon
+    - 71885 # Cultivate
+    - 72079 # Rampant Growth
+    - 71999 # Flourish
+    - 71963 # Oaken Cudgel
+    - 71903 # Thistleguard
+    - 71841 # Wild Strikes
 
 Spear:
-  - 72920 # Bee's Sting
-  - 72922 # Drake's Swipe
-  - 73112 # Wyvern's Lash
-  - 73087 # Cheetah's Strike
-  - 72932 # Ravager's Abandon
-  - 73110 # Mongoose's Frenzy
-  - 73030 # Wolf's Onslaught
-  - 72928 # Falcon's Stoop
-  - 72913 # Owl's Flight
-  - 73020 # Warclaw's Engage
-  - 73150 # Predator's Ambush
-  - 73008 # Panther's Prowl
-  - 72993 # Spider's Web
+    - 72920 # Bee's Sting
+    - 72922 # Drake's Swipe
+    - 73112 # Wyvern's Lash
+    - 73087 # Cheetah's Strike
+    - 72932 # Ravager's Abandon
+    - 73110 # Mongoose's Frenzy
+    - 73030 # Wolf's Onslaught
+    - 72928 # Falcon's Stoop
+    - 72913 # Owl's Flight
+    - 73020 # Warclaw's Engage
+    - 73150 # Predator's Ambush
+    - 73008 # Panther's Prowl
+    - 72993 # Spider's Web
 
 # underwater
 Aquatic Spear:
-  - 12553 # Stab
-  - 12555 # Jab
-  - 12556 # Toxic Strike
-  - 63065 # Vicious Pike
-  - 12559 # Swirling Strike
-  - 12557 # Surging Maw
-  - 12561 # Counterstrike
-  - 12630 # Counter Throw
-  - 12552 # Man O' War
+    - 12553 # Stab
+    - 12555 # Jab
+    - 12556 # Toxic Strike
+    - 63065 # Vicious Pike
+    - 12559 # Swirling Strike
+    - 12557 # Surging Maw
+    - 12561 # Counterstrike
+    - 12630 # Counter Throw
+    - 12552 # Man O' War
 
 Harpoon Gun:
-  - 12526 # Splinter Shot
-  - 63301 # Jagged Fan
-  - 12529 # Coral Shot
-  - 12528 # Feeding Frenzy
-  - 12527 # Mercy Shot
-  - 12530 # Ink Blast
+    - 12526 # Splinter Shot
+    - 63301 # Jagged Fan
+    - 12529 # Coral Shot
+    - 12528 # Feeding Frenzy
+    - 12527 # Mercy Shot
+    - 12530 # Ink Blast

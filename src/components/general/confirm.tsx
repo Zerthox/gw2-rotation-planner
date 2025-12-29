@@ -1,5 +1,5 @@
 import React from "react";
-import {Button, Dialog, DialogTitle, DialogContent, DialogActions} from "@mui/material";
+import { Button, Dialog, DialogTitle, DialogContent, DialogActions } from "@mui/material";
 
 export interface ConfirmProps {
     open: boolean;
@@ -11,13 +11,25 @@ export interface ConfirmProps {
     onConfirm?(): void;
 }
 
-export const Confirm = ({open, title, children, cancelText, confirmText, onCancel, onConfirm}: ConfirmProps): JSX.Element => (
+export const Confirm = ({
+    open,
+    title,
+    children,
+    cancelText,
+    confirmText,
+    onCancel,
+    onConfirm,
+}: ConfirmProps): JSX.Element => (
     <Dialog open={open} onClose={onCancel}>
         <DialogTitle>{title}</DialogTitle>
         <DialogContent>{children}</DialogContent>
         <DialogActions>
-            <Button color="error" onClick={onCancel}>{cancelText ?? "Cancel"}</Button>
-            <Button color="primary" variant="contained" onClick={onConfirm}>{confirmText ?? "Confirm"}</Button>
+            <Button color="error" onClick={onCancel}>
+                {cancelText ?? "Cancel"}
+            </Button>
+            <Button color="primary" variant="contained" onClick={onConfirm}>
+                {confirmText ?? "Confirm"}
+            </Button>
         </DialogActions>
     </Dialog>
 );

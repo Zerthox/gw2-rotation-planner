@@ -1,6 +1,6 @@
-import {sortedIndexBy} from "lodash";
-import {CommonSkillId, SpecialActionSkill, AttunementSkill} from "../data/common";
-import {Row} from "../store/timeline";
+import { sortedIndexBy } from "lodash";
+import { CommonSkillId, SpecialActionSkill, AttunementSkill } from "../data/common";
+import { Row } from "../store/timeline";
 
 export interface Log {
     arcVersion: string;
@@ -83,7 +83,7 @@ export const enum AnimationStatus {
     Reduced,
     Interrupted,
     Full,
-    Instant
+    Instant,
 }
 
 export interface Phase {
@@ -100,7 +100,10 @@ export const fetchLog = async (link: string): Promise<Log> => {
     let jsonUrl: string;
     if (url.hostname === "dps.report") {
         jsonUrl = `https://dps.report/getJson?permalink=${link}`;
-    } else if (url.hostname === "gw2wingman.nevermindcreations.de" && url.pathname.startsWith("/log/")) {
+    } else if (
+        url.hostname === "gw2wingman.nevermindcreations.de"
+        && url.pathname.startsWith("/log/")
+    ) {
         const log = url.pathname.split("/")[2];
         jsonUrl = `https://gw2wingman.nevermindcreations.de/api/getJson/${log}`;
     } else {
@@ -113,10 +116,14 @@ export const fetchLog = async (link: string): Promise<Log> => {
         if (!json.error) {
             return json;
         } else {
-            throw Error(`Unable to retrieve log "${link}": Server responded with error "${json.error}"`);
+            throw Error(
+                `Unable to retrieve log "${link}": Server responded with error "${json.error}"`,
+            );
         }
     } else {
-        throw Error(`Unable to fetch log "${link}": Server responded with ${res.status} ${res.statusText}`);
+        throw Error(
+            `Unable to fetch log "${link}": Server responded with ${res.status} ${res.statusText}`,
+        );
     }
 };
 
@@ -150,14 +157,16 @@ const SKILL_MAPPING = {
     62730: CommonSkillId.Dodge, // vindicator death drop
     62732: CommonSkillId.Dodge, // vindicator imperial impact
     62879: CommonSkillId.Dodge, // vindicator saints shield
-    62890: CommonSkillId.Dodge // vindicator tenacious ruin
+    62890: CommonSkillId.Dodge, // vindicator tenacious ruin
 };
 
-const insertCast = (casts: Cast[], {skill, time, duration}: Cast) => {
+const insertCast = (casts: Cast[], { skill, time, duration }: Cast) => {
     const cast = {
-        skill: SKILL_MAPPING[skill] ?? (skill in SpecialActionSkill ? CommonSkillId.SpecialAction : skill),
+        skill:
+            SKILL_MAPPING[skill]
+            ?? (skill in SpecialActionSkill ? CommonSkillId.SpecialAction : skill),
         time,
-        duration
+        duration,
     };
 
     // negative ids are invalid
@@ -178,12 +187,12 @@ export const getCasts = (log: Log, playerName: string): Cast[] => {
 
     // handle both json format and internal html format
     if (player.rotation) {
-        for (const {id, skills} of player.rotation) {
+        for (const { id, skills } of player.rotation) {
             const skill = log.skillMap[`s${id}`];
             if (!skill.isGearProc && !skill.isTraitProc) {
-                for (const {timeGained, castTime, duration} of skills) {
+                for (const { timeGained, castTime, duration } of skills) {
                     if (typeof timeGained !== "number" || timeGained >= 0) {
-                        insertCast(result, {skill: id, time: castTime, duration});
+                        insertCast(result, { skill: id, time: castTime, duration });
                     }
                 }
             }
@@ -195,8 +204,12 @@ export const getCasts = (log: Log, playerName: string): Cast[] => {
                 const casts = player.details.rotation[i];
                 for (const [time, id, duration, status] of casts) {
                     const skill = log.skillMap[`s${id}`] as unknown as SkillInternal;
-                    if (!skill.gearProc && !skill.traitProc && status != AnimationStatus.Interrupted) {
-                        insertCast(result, {skill: id, time: phase.start + time, duration});
+                    if (
+                        !skill.gearProc
+                        && !skill.traitProc
+                        && status != AnimationStatus.Interrupted
+                    ) {
+                        insertCast(result, { skill: id, time: phase.start + time, duration });
                     }
                 }
             }
@@ -210,19 +223,27 @@ export const getCasts = (log: Log, playerName: string): Cast[] => {
 
 const PHASE_BLACKLIST = ["First Number"];
 
-export const keepPhase = (phase: Phase): boolean => !phase.breakbarPhase && !phase.subPhases && !PHASE_BLACKLIST.includes(phase.name);
+export const keepPhase = (phase: Phase): boolean =>
+    !phase.breakbarPhase && !phase.subPhases && !PHASE_BLACKLIST.includes(phase.name);
 
-const findTimeIndex = (casts: Cast[], time: number, end: boolean): number => sortedIndexBy(casts, {time, duration: 0} as Cast, (cast) => cast.time + (end ? cast.duration : 0));
+const findTimeIndex = (casts: Cast[], time: number, end: boolean): number =>
+    sortedIndexBy(
+        casts,
+        { time, duration: 0 } as Cast,
+        (cast) => cast.time + (end ? cast.duration : 0),
+    );
 
 export const getRotation = (log: Log, player: string, importPhases: boolean): Row[] => {
     const casts = getCasts(log, player);
     const phases = log.phases.filter(keepPhase);
 
     if (!importPhases || phases.length === 0) {
-        return [{
-            name: "",
-            skills: casts.map((cast) => cast.skill)
-        }];
+        return [
+            {
+                name: "",
+                skills: casts.map((cast) => cast.skill),
+            },
+        ];
     } else {
         let prevEnd = 0;
         return phases.map((phase, i) => {
@@ -235,7 +256,7 @@ export const getRotation = (log: Log, player: string, importPhases: boolean): Ro
 
             return {
                 name: phase.name,
-                skills: casts.slice(start, end).map((cast) => cast.skill)
+                skills: casts.slice(start, end).map((cast) => cast.skill),
             };
         });
     }

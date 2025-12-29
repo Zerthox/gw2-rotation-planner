@@ -1,29 +1,29 @@
 name: Check
 
 on:
-  push:
-    paths:
-      - "**/*.ts"
-      - "**/*.tsx"
-      - package.json
-      - tsconfig.json
-  pull_request:
-    branches:
-      - main
-    paths:
-      - "**/*.ts"
-      - "**/*.tsx"
-      - package.json
-      - tsconfig.json
+    push:
+        paths:
+            - "**/*.ts"
+            - "**/*.tsx"
+            - package.json
+            - tsconfig.json
+    pull_request:
+        branches:
+            - main
+        paths:
+            - "**/*.ts"
+            - "**/*.tsx"
+            - package.json
+            - tsconfig.json
 
 jobs:
-  check:
-    name: Check
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 18
-      - run: npm ci
-      - run: npm run check
+    check:
+        name: Check
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                  node-version: 18
+            - run: npm ci
+            - run: npm run check

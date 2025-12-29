@@ -1,76 +1,76 @@
 Heal:
-  - 9102 # Shelter
-  - 9158 # Signet of Resolve
-  - 9083 # "Receive the Light!"
-  - 21664 # Litany of Wrath
+    - 9102 # Shelter
+    - 9158 # Signet of Resolve
+    - 9083 # "Receive the Light!"
+    - 21664 # Litany of Wrath
 
-  # specs
-  - 30025 # Purification
-  - 41714 # Mantra of Solace
-  - 41475 # Restoring Reprieve
-  - 42960 # Rejuvenating Respite
-  - 62622 # Reversal of Fortune
-  - 76621 # Resolute Stance
+    # specs
+    - 30025 # Purification
+    - 41714 # Mantra of Solace
+    - 41475 # Restoring Reprieve
+    - 42960 # Rejuvenating Respite
+    - 62622 # Reversal of Fortune
+    - 76621 # Resolute Stance
 
 Utility:
-  - 9125 # Hammer of Wisdom
-  - 9168 # Sword of Justice
-  - 9175 # Bow of Truth
-  - 9182 # Shield of the Avenger
-  - 9093 # Bane Signet
-  - 9150 # Signet of Judgment
-  - 9151 # Signet of Wrath
-  - 9163 # Signet of Mercy
-  - 9084 # "Advance!"
-  - 9085 # "Save Yourselves!"
-  - 9153 # "Stand Your Ground!"
-  - 9152 # "Hold the Line!"
-  - 9251 # Wall of Reflection
-  - 9187 # Purging Flames
-  - 9253 # Hallowed Ground
-  - 9128 # Sanctuary
-  - 9245 # Smite Condition
-  - 9248 # Contemplation of Purity
-  - 9247 # Judge's Intervention
-  - 9246 # Merciful Intervention
+    - 9125 # Hammer of Wisdom
+    - 9168 # Sword of Justice
+    - 9175 # Bow of Truth
+    - 9182 # Shield of the Avenger
+    - 9093 # Bane Signet
+    - 9150 # Signet of Judgment
+    - 9151 # Signet of Wrath
+    - 9163 # Signet of Mercy
+    - 9084 # "Advance!"
+    - 9085 # "Save Yourselves!"
+    - 9153 # "Stand Your Ground!"
+    - 9152 # "Hold the Line!"
+    - 9251 # Wall of Reflection
+    - 9187 # Purging Flames
+    - 9253 # Hallowed Ground
+    - 9128 # Sanctuary
+    - 9245 # Smite Condition
+    - 9248 # Contemplation of Purity
+    - 9247 # Judge's Intervention
+    - 9246 # Merciful Intervention
 
-  # specs
-  - 29786 # Test of Faith
-  - 30553 # Fragments of Faith
-  - 30364 # Procession of Blades
-  - 30871 # Light's Judgment
-  - 40915 # Mantra of Potence
-  - 42983 # Potent Haste
-  - 41988 # Overwhelming Celerity
-  - 46148 # Mantra of Flame
-  - 45082 # Flame Rush
-  - 42924 # Flame Surge
-  - 44080 # Mantra of Truth
-  - 42360 # Echo of Truth
-  - 44008 # Voice of Truth
-  - 45460 # Mantra of Lore
-  - 42864 # Opening Passage
-  - 44248 # Clarified Conclusion
-  - 62608 # Flash Combo
-  - 62669 # Repose
-  - 62521 # Roiling Light
-  - 62676 # Quick Retribution
-  - 62565 # Whirling Light
-  - 62549 # Heel Crack
-  - 77321 # Stalwart Stance
-  - 77300 # Valorous Stance
-  - 76813 # Effulgent Stance
-  - 77078 # Piercing Stance
+    # specs
+    - 29786 # Test of Faith
+    - 30553 # Fragments of Faith
+    - 30364 # Procession of Blades
+    - 30871 # Light's Judgment
+    - 40915 # Mantra of Potence
+    - 42983 # Potent Haste
+    - 41988 # Overwhelming Celerity
+    - 46148 # Mantra of Flame
+    - 45082 # Flame Rush
+    - 42924 # Flame Surge
+    - 44080 # Mantra of Truth
+    - 42360 # Echo of Truth
+    - 44008 # Voice of Truth
+    - 45460 # Mantra of Lore
+    - 42864 # Opening Passage
+    - 44248 # Clarified Conclusion
+    - 62608 # Flash Combo
+    - 62669 # Repose
+    - 62521 # Roiling Light
+    - 62676 # Quick Retribution
+    - 62565 # Whirling Light
+    - 62549 # Heel Crack
+    - 77321 # Stalwart Stance
+    - 77300 # Valorous Stance
+    - 76813 # Effulgent Stance
+    - 77078 # Piercing Stance
 
 Elite:
-  - 29965 # "Feel My Wrath!"
-  - 9154 # Renewed Focus
-  - 30461 # Signet of Courage
+    - 29965 # "Feel My Wrath!"
+    - 9154 # Renewed Focus
+    - 30461 # Signet of Courage
 
-  # specs
-  - 30273 # Dragon's Maw
-  - 43357 # Mantra of Liberation
-  - 40114 # Portent of Freedom
-  - 41328 # Unhindered Delivery
-  - 62561 # Heaven's Palm
-  - 77198 # Daring Advance
+    # specs
+    - 30273 # Dragon's Maw
+    - 43357 # Mantra of Liberation
+    - 40114 # Portent of Freedom
+    - 41328 # Unhindered Delivery
+    - 62561 # Heaven's Palm
+    - 77198 # Daring Advance

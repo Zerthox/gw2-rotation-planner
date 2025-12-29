@@ -1,6 +1,13 @@
-import React, {useState, useMemo, cloneElement} from "react";
-import {Menu, MenuItem, MenuItemProps, ListItemText, ListItemIcon, Typography} from "@mui/material";
-import {SystemCssProperties} from "@mui/system";
+import React, { useState, useMemo, cloneElement } from "react";
+import {
+    Menu,
+    MenuItem,
+    MenuItemProps,
+    ListItemText,
+    ListItemIcon,
+    Typography,
+} from "@mui/material";
+import { SystemCssProperties } from "@mui/system";
 
 export interface ContextMenuItem {
     key?: React.Key;
@@ -15,26 +22,31 @@ export interface ContextMenuItem {
 
 export interface ContextMenuProps {
     title?: React.ReactNode;
-    children: React.ReactElement<{onContextMenu: (event: React.MouseEvent<unknown>) => void}>;
+    children: React.ReactElement<{ onContextMenu: (event: React.MouseEvent<unknown>) => void }>;
     items?: ContextMenuItem[];
 }
 
-export const ContextMenu = ({title, children, items = []}: ContextMenuProps): JSX.Element => {
-    const [contextMenu, setContextMenu] = useState<{top: number; left: number}>(null);
+export const ContextMenu = ({ title, children, items = [] }: ContextMenuProps): JSX.Element => {
+    const [contextMenu, setContextMenu] = useState<{ top: number; left: number }>(null);
 
     const filteredItems = items.filter((props) => props);
-    const cloned = useMemo(() => cloneElement(children, {
-        onContextMenu: (event: React.MouseEvent) => {
-            event.preventDefault();
-            if (filteredItems.length > 0) {
-                event.stopPropagation();
-                setContextMenu(contextMenu === null
-                    ? {top: event.clientY, left: event.clientX}
-                    : null
-                );
-            }
-        }
-    }), [children, contextMenu, setContextMenu, filteredItems.length]);
+    const cloned = useMemo(
+        () =>
+            cloneElement(children, {
+                onContextMenu: (event: React.MouseEvent) => {
+                    event.preventDefault();
+                    if (filteredItems.length > 0) {
+                        event.stopPropagation();
+                        setContextMenu(
+                            contextMenu === null
+                                ? { top: event.clientY, left: event.clientX }
+                                : null,
+                        );
+                    }
+                },
+            }),
+        [children, contextMenu, setContextMenu, filteredItems.length],
+    );
 
     return (
         <>
@@ -47,15 +59,21 @@ export const ContextMenu = ({title, children, items = []}: ContextMenuProps): JS
                 transitionDuration={100}
             >
                 {title ? (
-                    <MenuItem disabled sx={{
-                        paddingX: 2,
-                        paddingY: 0
-                    }}>
+                    <MenuItem
+                        disabled
+                        sx={{
+                            paddingX: 2,
+                            paddingY: 0,
+                        }}
+                    >
                         <Typography variant="overline">{title}</Typography>
                     </MenuItem>
                 ) : null}
-                {filteredItems
-                    .map(({key, text, icon, disabled, close = true, color, action, itemProps = {}}, i) => (
+                {filteredItems.map(
+                    (
+                        { key, text, icon, disabled, close = true, color, action, itemProps = {} },
+                        i,
+                    ) => (
                         <MenuItem
                             {...itemProps}
                             key={key ?? i}
@@ -72,13 +90,15 @@ export const ContextMenu = ({title, children, items = []}: ContextMenuProps): JS
                         >
                             {itemProps.children ?? (
                                 <>
-                                    {icon ? <ListItemIcon sx={{color}}>{icon}</ListItemIcon> : null}
-                                    <ListItemText sx={{color}}>{text}</ListItemText>
+                                    {icon ? (
+                                        <ListItemIcon sx={{ color }}>{icon}</ListItemIcon>
+                                    ) : null}
+                                    <ListItemText sx={{ color }}>{text}</ListItemText>
                                 </>
                             )}
                         </MenuItem>
-                    ))
-                }
+                    ),
+                )}
             </Menu>
         </>
     );

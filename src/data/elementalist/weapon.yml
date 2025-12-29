@@ -1,225 +1,225 @@
 Dagger:
-  - 15718 # Dragon's Claw
-  - 15716 # Vapor Blade
-  - 5489 # Lightning Whip
-  - 15717 # Impale
-  - 5496 # Drake's Breath
-  - 5537 # Cone of Cold
-  - 5646 # Convergence
-  - 5525 # Ring of Earth
-  - 5644 # Burning Speed
-  - 5487 # Frozen Burst
-  - 5527 # Shocking Aura
-  - 51662 # Transmute Lightning
-  - 5559 # Earthen Rush
-  - 42330 # Steam Surge
-  - 44652 # Plasma Burst
-  - 42379 # Ashen Blast
-  - 46140 # Katabatic Wind
-  - 46018 # Mud Slide
-  - 40963 # Grinding Stones
-  - 5520 # Frost Aura
-  - 51646 # Transmute Frost
-  - 5691 # Ring of Fire
-  - 5529 # Ride the Lightning
-  - 5690 # Earthquake
-  - 5557 # Fire Grab
-  - 5558 # Cleansing Wave
-  - 5687 # Updraft
-  - 5522 # Churning Earth
+    - 15718 # Dragon's Claw
+    - 15716 # Vapor Blade
+    - 5489 # Lightning Whip
+    - 15717 # Impale
+    - 5496 # Drake's Breath
+    - 5537 # Cone of Cold
+    - 5646 # Convergence
+    - 5525 # Ring of Earth
+    - 5644 # Burning Speed
+    - 5487 # Frozen Burst
+    - 5527 # Shocking Aura
+    - 51662 # Transmute Lightning
+    - 5559 # Earthen Rush
+    - 42330 # Steam Surge
+    - 44652 # Plasma Burst
+    - 42379 # Ashen Blast
+    - 46140 # Katabatic Wind
+    - 46018 # Mud Slide
+    - 40963 # Grinding Stones
+    - 5520 # Frost Aura
+    - 51646 # Transmute Frost
+    - 5691 # Ring of Fire
+    - 5529 # Ride the Lightning
+    - 5690 # Earthquake
+    - 5557 # Fire Grab
+    - 5558 # Cleansing Wave
+    - 5687 # Updraft
+    - 5522 # Churning Earth
 
 Focus:
-  - 5497 # Flamewall
-  - 5556 # Freezing Gust
-  - 5530 # Swirling Winds
-  - 5555 # Magnetic Wave
-  - 5678 # Fire Shield
-  - 51711 # Transmute Fire
-  - 5490 # Comet
-  - 5562 # Gale
-  - 5521 # Obsidian Flesh
+    - 5497 # Flamewall
+    - 5556 # Freezing Gust
+    - 5530 # Swirling Winds
+    - 5555 # Magnetic Wave
+    - 5678 # Fire Shield
+    - 51711 # Transmute Fire
+    - 5490 # Comet
+    - 5562 # Gale
+    - 5521 # Obsidian Flesh
 
 Scepter:
-  - 5508 # Flamestrike
-  - 5693 # Ice Shards
-  - 5526 # Arc Lightning
-  - 5500 # Stone Shards
-  - 5692 # Dragon's Tooth
-  - 5538 # Shatterstone
-  - 5561 # Lightning Strike
-  - 5695 # Rock Barrier
-  - 5780 # Hurl
-  - 5675 # Phoenix
-  - 5510 # Water Trident
-  - 5694 # Blinding Flash
-  - 5696 # Dust Devil
-  - 42181 # Fiery Frost
-  - 43576 # Plasma Beam
-  - 42954 # Fracturing Strike
-  - 45742 # Glacial Drift
-  - 46014 # Stone Tide
-  - 40794 # Earthen Synergy
+    - 5508 # Flamestrike
+    - 5693 # Ice Shards
+    - 5526 # Arc Lightning
+    - 5500 # Stone Shards
+    - 5692 # Dragon's Tooth
+    - 5538 # Shatterstone
+    - 5561 # Lightning Strike
+    - 5695 # Rock Barrier
+    - 5780 # Hurl
+    - 5675 # Phoenix
+    - 5510 # Water Trident
+    - 5694 # Blinding Flash
+    - 5696 # Dust Devil
+    - 42181 # Fiery Frost
+    - 43576 # Plasma Beam
+    - 42954 # Fracturing Strike
+    - 45742 # Glacial Drift
+    - 46014 # Stone Tide
+    - 40794 # Earthen Synergy
 
 Staff:
-  - 5491 # Fireball
-  - 5549 # Water Blast
-  - 5518 # Chain Lightning
-  - 5519 # Stoning
-  - 5548 # Lava Font
-  - 5550 # Ice Spike
-  - 5552 # Lightning Surge
-  - 5528 # Eruption
-  - 5679 # Flame Burst
-  - 5681 # Geyser
-  - 5553 # Gust
-  - 5685 # Magnetic Aura
-  - 51684 # Transmute Earth
-  - 40332 # Pressure Blast
-  - 41125 # Plasma Blast
-  - 43762 # Pyroclastic Blast
-  - 41184 # Monsoon
-  - 44550 # Lahar
-  - 42321 # Pile Driver
-  - 5680 # Burning Retreat
-  - 5515 # Frozen Ground
-  - 5682 # Windborne Speed
-  - 5683 # Unsteady Ground
-  - 5501 # Meteor Shower
-  - 5551 # Healing Rain
-  - 5671 # Static Field
-  - 5686 # Shock Wave
+    - 5491 # Fireball
+    - 5549 # Water Blast
+    - 5518 # Chain Lightning
+    - 5519 # Stoning
+    - 5548 # Lava Font
+    - 5550 # Ice Spike
+    - 5552 # Lightning Surge
+    - 5528 # Eruption
+    - 5679 # Flame Burst
+    - 5681 # Geyser
+    - 5553 # Gust
+    - 5685 # Magnetic Aura
+    - 51684 # Transmute Earth
+    - 40332 # Pressure Blast
+    - 41125 # Plasma Blast
+    - 43762 # Pyroclastic Blast
+    - 41184 # Monsoon
+    - 44550 # Lahar
+    - 42321 # Pile Driver
+    - 5680 # Burning Retreat
+    - 5515 # Frozen Ground
+    - 5682 # Windborne Speed
+    - 5683 # Unsteady Ground
+    - 5501 # Meteor Shower
+    - 5551 # Healing Rain
+    - 5671 # Static Field
+    - 5686 # Shock Wave
 
 Warhorn:
-  - 29548 # Heat Sync
-  - 30864 # Tidal Surge
-  - 30008 # Cyclone
-  - 29453 # Sand Squall
-  - 29533 # Wildfire
-  - 30446 # Water Globe
-  - 30795 # Lightning Orb
-  - 30336 # Dust Storm
+    - 29548 # Heat Sync
+    - 30864 # Tidal Surge
+    - 30008 # Cyclone
+    - 29453 # Sand Squall
+    - 29533 # Wildfire
+    - 30446 # Water Globe
+    - 30795 # Lightning Orb
+    - 30336 # Dust Storm
 
 Sword:
-  - 39964 # Fire Strike
-  - 40326 # Fire Swipe
-  - 43657 # Searing Slash
-  - 41052 # Seiche
-  - 45983 # Clapotis
-  - 43199 # Breaking Wave
-  - 44681 # Charged Strike
-  - 45259 # Polaric Slash
-  - 45216 # Call Lightning
-  - 43616 # Crystal Slash
-  - 43080 # Crystalline Strike
-  - 46024 # Crystalline Sunder
-  - 45313 # Flame Uprising
-  - 44405 # Riptide
-  - 44998 # Polaric Leap
-  - 40709 # Earthen Vortex
-  - 44451 # Cauterizing Strike
-  - 41167 # Aqua Siphon
-  - 43803 # Quantum Strike
-  - 40139 # Rust Frenzy
-  - 42271 # Twin Strike
-  - 43074 # Pyro Vortex
-  - 46447 # Lava Skin
-  - 42867 # Shearing Edge
-  - 40170 # Natural Frenzy
-  - 46295 # Gale Strike
+    - 39964 # Fire Strike
+    - 40326 # Fire Swipe
+    - 43657 # Searing Slash
+    - 41052 # Seiche
+    - 45983 # Clapotis
+    - 43199 # Breaking Wave
+    - 44681 # Charged Strike
+    - 45259 # Polaric Slash
+    - 45216 # Call Lightning
+    - 43616 # Crystal Slash
+    - 43080 # Crystalline Strike
+    - 46024 # Crystalline Sunder
+    - 45313 # Flame Uprising
+    - 44405 # Riptide
+    - 44998 # Polaric Leap
+    - 40709 # Earthen Vortex
+    - 44451 # Cauterizing Strike
+    - 41167 # Aqua Siphon
+    - 43803 # Quantum Strike
+    - 40139 # Rust Frenzy
+    - 42271 # Twin Strike
+    - 43074 # Pyro Vortex
+    - 46447 # Lava Skin
+    - 42867 # Shearing Edge
+    - 40170 # Natural Frenzy
+    - 46295 # Gale Strike
 
 Hammer:
-  - 62925 # Singeing Strike
-  - 62865 # Stream Strike
-  - 62694 # Water Rush
-  - 62862 # Chilling Crack
-  - 62747 # Wind Slam
-  - 62683 # Stonestrike
-  - 62884 # Surging Flames
-  - 62958 # Rain of Blows
-  - 62812 # Hurricane of Pain
-  - 62976 # Whirling Stones
-  - 62758 # Flame Wheel
-  - 62834 # Icy Coil
-  - 62887 # Crescent Wind
-  - 62975 # Rocky Loop
-  - 69184 # Dual Orbits: Fire and Water
-  - 69341 # Dual Orbits: Fire and Air
-  - 69164 # Dual Orbits: Fire and Earth
-  - 69211 # Dual Orbits: Water and Air
-  - 69413 # Dual Orbits: Water and Earth
-  - 69246 # Dual Orbits: Air and Earth
-  - 62876 # Grand Finale
-  - 62807 # Triple Sear
-  - 62948 # Crashing Font
-  - 62947 # Wind Storm
-  - 62992 # Immutable Stone
-  - 62910 # Molten End
-  - 62843 # Cleansing Typhoon
-  - 62716 # Shock Blast
-  - 62778 # Ground Pound
+    - 62925 # Singeing Strike
+    - 62865 # Stream Strike
+    - 62694 # Water Rush
+    - 62862 # Chilling Crack
+    - 62747 # Wind Slam
+    - 62683 # Stonestrike
+    - 62884 # Surging Flames
+    - 62958 # Rain of Blows
+    - 62812 # Hurricane of Pain
+    - 62976 # Whirling Stones
+    - 62758 # Flame Wheel
+    - 62834 # Icy Coil
+    - 62887 # Crescent Wind
+    - 62975 # Rocky Loop
+    - 69184 # Dual Orbits: Fire and Water
+    - 69341 # Dual Orbits: Fire and Air
+    - 69164 # Dual Orbits: Fire and Earth
+    - 69211 # Dual Orbits: Water and Air
+    - 69413 # Dual Orbits: Water and Earth
+    - 69246 # Dual Orbits: Air and Earth
+    - 62876 # Grand Finale
+    - 62807 # Triple Sear
+    - 62948 # Crashing Font
+    - 62947 # Wind Storm
+    - 62992 # Immutable Stone
+    - 62910 # Molten End
+    - 62843 # Cleansing Typhoon
+    - 62716 # Shock Blast
+    - 62778 # Ground Pound
 
 Spear:
-  - 73088 # Flame Spear
-  - 72966 # Restorative Spear
-  - 73124 # Lightning Javelin
-  - 72910 # Stone Strike
-  - 73080 # Blazing Barrage
-  - 73061 # Ice Beam
-  - 73091 # Fulgor
-  - 72905 # Earthen Spear
-  - 73137 # Seethe
-  - 72967 # Ripple
-  - 73037 # Energize
-  - 73019 # Harden
-  - 72916 # Frostfire Ward
-  - 73104 # Galvanize
-  - 72914 # Fiery Impact
-  - 73052 # Elutriate
-  - 73062 # Soothing Burst
-  - 72906 # Shale Storm
-  - 72988 # Meteor
-  - 73148 # Undertow
-  - 72998 # Twister
-  - 73010 # Fissure
-  - 73054 # Etching: Volcano
-  - 72995 # Lesser Volcano
-  - 73044 # Volcano
-  - 72982 # Etching: Jökulhlaup
-  - 73105 # Lesser Jökulhlaup
-  - 73140 # Jökulhlaup
-  - 72915 # Etching: Derecho
-  - 73060 # Lesser Derecho
-  - 73092 # Derecho
-  - 72900 # Etching: Haboob
-  - 72935 # Lesser Haboob
-  - 73017 # Haboob
+    - 73088 # Flame Spear
+    - 72966 # Restorative Spear
+    - 73124 # Lightning Javelin
+    - 72910 # Stone Strike
+    - 73080 # Blazing Barrage
+    - 73061 # Ice Beam
+    - 73091 # Fulgor
+    - 72905 # Earthen Spear
+    - 73137 # Seethe
+    - 72967 # Ripple
+    - 73037 # Energize
+    - 73019 # Harden
+    - 72916 # Frostfire Ward
+    - 73104 # Galvanize
+    - 72914 # Fiery Impact
+    - 73052 # Elutriate
+    - 73062 # Soothing Burst
+    - 72906 # Shale Storm
+    - 72988 # Meteor
+    - 73148 # Undertow
+    - 72998 # Twister
+    - 73010 # Fissure
+    - 73054 # Etching: Volcano
+    - 72995 # Lesser Volcano
+    - 73044 # Volcano
+    - 72982 # Etching: Jökulhlaup
+    - 73105 # Lesser Jökulhlaup
+    - 73140 # Jökulhlaup
+    - 72915 # Etching: Derecho
+    - 73060 # Lesser Derecho
+    - 73092 # Derecho
+    - 72900 # Etching: Haboob
+    - 72935 # Lesser Haboob
+    - 73017 # Haboob
 
 # underwater
 Trident:
-  - 5598 # Magma Orb
-  - 5604 # Water Missile
-  - 5656 # Forked Lightning
-  - 5657 # Rock Blade
-  - 5597 # Boil
-  - 5605 # Ice Globe
-  - 5655 # Electrocute
-  - 5658 # Rock Spray
-  - 5566 # Steam
-  - 5606 # Ice Wall
-  - 5652 # Air Pocket
-  - 5653 # Vacuum
-  - 5662 # Magnetic Current
-  - 40378 # Hydrothermal Vent
-  - 41712 # Plasmic Strike
-  - 46185 # Molten Burst
-  - 46360 # Absolute Zero
-  - 41001 # Elemental Compression
-  - 39981 # Sodden Swath
-  - 5599 # Lava Chains
-  - 5748 # Undercurrent
-  - 5648 # Air Bubble
-  - 5659 # Rock Anchor
-  - 5600 # Heat Wave
-  - 5607 # Tidal Wave
-  - 5650 # Lightning Cage
-  - 5661 # Murky Water
+    - 5598 # Magma Orb
+    - 5604 # Water Missile
+    - 5656 # Forked Lightning
+    - 5657 # Rock Blade
+    - 5597 # Boil
+    - 5605 # Ice Globe
+    - 5655 # Electrocute
+    - 5658 # Rock Spray
+    - 5566 # Steam
+    - 5606 # Ice Wall
+    - 5652 # Air Pocket
+    - 5653 # Vacuum
+    - 5662 # Magnetic Current
+    - 40378 # Hydrothermal Vent
+    - 41712 # Plasmic Strike
+    - 46185 # Molten Burst
+    - 46360 # Absolute Zero
+    - 41001 # Elemental Compression
+    - 39981 # Sodden Swath
+    - 5599 # Lava Chains
+    - 5748 # Undercurrent
+    - 5648 # Air Bubble
+    - 5659 # Rock Anchor
+    - 5600 # Heat Wave
+    - 5607 # Tidal Wave
+    - 5650 # Lightning Cage
+    - 5661 # Murky Water

@@ -1,4 +1,4 @@
-import {useSkill} from "@discretize/gw2-ui-new";
+import { useSkill } from "@discretize/gw2-ui-new";
 
 export const enum Profession {
     Guardian = "Guardian",
@@ -9,7 +9,7 @@ export const enum Profession {
     Elementalist = "Elementalist",
     Mesmer = "Mesmer",
     Necromancer = "Necromancer",
-    Revenant = "Revenant"
+    Revenant = "Revenant",
 }
 
 export const enum EliteSpecialization {
@@ -48,7 +48,7 @@ export const enum EliteSpecialization {
     Herald = "Herald",
     Renegade = "Renegade",
     Vindicator = "Vindicator",
-    Conduit = "Conduit"
+    Conduit = "Conduit",
 }
 
 export type Skill = ReturnType<typeof useSkill>["data"];
@@ -59,7 +59,7 @@ export const enum SkillType {
     Heal = "Heal",
     Utility = "Utility",
     Elite = "Elite",
-    Bundle = "Bundle"
+    Bundle = "Bundle",
 }
 
 export const enum SkillSlot {
@@ -89,7 +89,7 @@ export const enum SkillSlot {
     Dodge = "Dodge",
     Interact = "Interact",
     Stow = "Stow",
-    SpecialAction = "SAK"
+    SpecialAction = "SAK",
 }
 
 export const isAuto = (slot: SkillSlot): boolean => slot === "Weapon_1" || slot === "Downed_1";
@@ -111,5 +111,5 @@ export const enum SkillSectionType {
     Profession = "profession",
     Weapon = "weapon",
     Slot = "slot",
-    Bundle = "bundle"
+    Bundle = "bundle",
 }

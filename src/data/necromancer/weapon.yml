@@ -1,94 +1,94 @@
 Axe:
-  - 10561 # Rending Claws
-  - 10528 # Ghastly Claws
-  - 10701 # Unholy Feast
+    - 10561 # Rending Claws
+    - 10528 # Ghastly Claws
+    - 10701 # Unholy Feast
 
 Dagger:
-  - 10702 # Necrotic Slash
-  - 10703 # Necrotic Stab
-  - 10704 # Necrotic Bite
-  - 10563 # Life Siphon
-  - 10529 # Dark Pact
-  - 10705 # Deathly Swarm
-  - 10706 # Enfeebling Blood
+    - 10702 # Necrotic Slash
+    - 10703 # Necrotic Stab
+    - 10704 # Necrotic Bite
+    - 10563 # Life Siphon
+    - 10529 # Dark Pact
+    - 10705 # Deathly Swarm
+    - 10706 # Enfeebling Blood
 
 Focus:
-  - 55050 # Soul Grasp
-  - 10555 # Spinal Shivers
+    - 55050 # Soul Grasp
+    - 10555 # Spinal Shivers
 
 Scepter:
-  - 10698 # Blood Curse
-  - 10699 # Rending Curse
-  - 10552 # Putrid Curse
-  - 10532 # Grasping Dead
-  - 10709 # Feast of Corruption
-  - 51647 # Devouring Darkness
+    - 10698 # Blood Curse
+    - 10699 # Rending Curse
+    - 10552 # Putrid Curse
+    - 10532 # Grasping Dead
+    - 10709 # Feast of Corruption
+    - 51647 # Devouring Darkness
 
 Staff:
-  - 10596 # Necrotic Grasp
-  - 19117 # Mark of Blood
-  - 10605 # Chillblains
-  - 19116 # Putrid Mark
-  - 19115 # Reaper's Mark
+    - 10596 # Necrotic Grasp
+    - 19117 # Mark of Blood
+    - 10605 # Chillblains
+    - 19116 # Putrid Mark
+    - 19115 # Reaper's Mark
 
 Warhorn:
-  - 10556 # Wail of Doom
-  - 10557 # Locust Swarm
+    - 10556 # Wail of Doom
+    - 10557 # Locust Swarm
 
 Greatsword:
-  - 29705 # Dusk Strike
-  - 30799 # Fading Twilight
-  - 29867 # Chilling Scythe
-  - 30163 # Gravedigger
-  - 30860 # Death Spiral
-  - 29855 # Nightfall
-  - 29740 # Grasping Darkness
+    - 29705 # Dusk Strike
+    - 30799 # Fading Twilight
+    - 29867 # Chilling Scythe
+    - 30163 # Gravedigger
+    - 30860 # Death Spiral
+    - 29855 # Nightfall
+    - 29740 # Grasping Darkness
 
 Torch:
-  - 45846 # Harrowing Wave
-  - 44296 # Oppressive Collapse
+    - 45846 # Harrowing Wave
+    - 44296 # Oppressive Collapse
 
 Pistol:
-  - 62517 # Vicious Shot
-  - 62513 # Weeping Shots
-  - 62511 # Vile Blast
+    - 62517 # Vicious Shot
+    - 62513 # Weeping Shots
+    - 62511 # Vile Blast
 
 Sword:
-  - 71986 # Enervation Blade
-  - 71850 # Enervation Echo
-  - 72051 # Deathly Enervation
-  - 71883 # Ravenous Wave
-  - 71914 # Satiate
-  - 71799 # Path of Gluttony
-  - 71871 # Gorge
-  - 71813 # Hungering Maelstrom
-  - 72068 # Gormandize
-  - 71998 # Devouring Visage
-  - 71926 # Consume
+    - 71986 # Enervation Blade
+    - 71850 # Enervation Echo
+    - 72051 # Deathly Enervation
+    - 71883 # Ravenous Wave
+    - 71914 # Satiate
+    - 71799 # Path of Gluttony
+    - 71871 # Gorge
+    - 71813 # Hungering Maelstrom
+    - 72068 # Gormandize
+    - 71998 # Devouring Visage
+    - 71926 # Consume
 
 Spear:
-  - 73012 # Dark Slash
-  - 73040 # Deadly Slice
-  - 73047 # Sinister Stab
-  - 73068 # Perforate
-  - 73013 # Addle
-  - 73107 # Isolate
-  - 73116 # Distress
-  - 73007 # Extirpate
+    - 73012 # Dark Slash
+    - 73040 # Deadly Slice
+    - 73047 # Sinister Stab
+    - 73068 # Perforate
+    - 73013 # Addle
+    - 73107 # Isolate
+    - 73116 # Distress
+    - 73007 # Extirpate
 
 # underwater
 Aquatic Spear:
-  - 10692 # Cruel Strike
-  - 10693 # Wicked Strike
-  - 10617 # Reaper's Scythe
-  - 10694 # Wicked Spiral
-  - 10619 # Deadly Feast
-  - 10695 # Deadly Catch
-  - 10616 # Dark Spear
+    - 10692 # Cruel Strike
+    - 10693 # Wicked Strike
+    - 10617 # Reaper's Scythe
+    - 10694 # Wicked Spiral
+    - 10619 # Deadly Feast
+    - 10695 # Deadly Catch
+    - 10616 # Dark Spear
 
 Trident:
-  - 10623 # Crimson Tide
-  - 10624 # Feast
-  - 10625 # Foul Current
-  - 10628 # Sinking Tomb
-  - 10629 # Frozen Abyss
+    - 10623 # Crimson Tide
+    - 10624 # Feast
+    - 10625 # Foul Current
+    - 10628 # Sinking Tomb
+    - 10629 # Frozen Abyss

@@ -1,4 +1,4 @@
-import {fromUint8Array, toUint8Array} from "js-base64";
+import { fromUint8Array, toUint8Array } from "js-base64";
 
 export const encodeBase64 = (bytes: Uint8Array): string => fromUint8Array(bytes, true);
 

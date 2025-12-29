@@ -1,28 +1,28 @@
 Virtue:
-  - 9115 # Virtue of Justice
-  - 9118 # Virtue of Courage
-  - 9120 # Virtue of Resolve
+    - 9115 # Virtue of Justice
+    - 9118 # Virtue of Courage
+    - 9120 # Virtue of Resolve
 
 Dragonhunter:
-  - 29887 # Spear of Justice
-  - 33134 # Hunter's Verdict
-  - 30225 # Wings of Resolve
-  - 30029 # Shield of Courage
+    - 29887 # Spear of Justice
+    - 33134 # Hunter's Verdict
+    - 30225 # Wings of Resolve
+    - 30029 # Shield of Courage
 
 Firebrand:
-  - 44364 # Tome of Justice
-  - 41780 # Tome of Resolve
-  - 42259 # Tome of Courage
-  - 41380 # Stow Tome
+    - 44364 # Tome of Justice
+    - 41780 # Tome of Resolve
+    - 42259 # Tome of Courage
+    - 41380 # Stow Tome
 
 Willbender:
-  - 62668 # Rushing Justice
-  - 62603 # Flowing Resolve
-  - 62648 # Crashing Courage
+    - 62668 # Rushing Justice
+    - 62603 # Flowing Resolve
+    - 62648 # Crashing Courage
 
 Luminary:
-  - 78837 # Radiant Justice
-  - 78604 # Radiant Resolve
-  - 78358 # Radiant Courage
-  - 77073 # Enter Radiant Forge
-  - 76616 # Exit Radiant Forge
+    - 78837 # Radiant Justice
+    - 78604 # Radiant Resolve
+    - 78358 # Radiant Courage
+    - 77073 # Enter Radiant Forge
+    - 76616 # Exit Radiant Forge

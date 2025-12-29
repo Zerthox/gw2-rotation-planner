@@ -1,48 +1,48 @@
 Burst:
-  - 14443 # Whirling Strike
-  - 14469 # Forceful Shot
-  - 14375 # Arcing Slice
-  - 14367 # Flurry
-  - 14353 # Eviscerate
-  - 14414 # Skull Crack
-  - 14506 # Combustive Shot
-  - 14396 # Kill Shot
-  - 14387 # Earthshaker
-  - 73024 # Harrier's Toss
+    - 14443 # Whirling Strike
+    - 14469 # Forceful Shot
+    - 14375 # Arcing Slice
+    - 14367 # Flurry
+    - 14353 # Eviscerate
+    - 14414 # Skull Crack
+    - 14506 # Combustive Shot
+    - 14396 # Kill Shot
+    - 14387 # Earthshaker
+    - 73024 # Harrier's Toss
 
 Berserker:
-  - 30435 # Berserk
-  - 29644 # Gun Flame
-  - 29679 # Skull Grinder
-  - 30989 # Burning Shackles
-  - 29852 # Arc Divider
-  - 29923 # Scorched Earth
-  - 31048 # Wild Whirl
-  - 30682 # Flaming Flurry
-  - 30851 # Decapitate
-  - 30879 # Rupturing Smash
-  - 73103 # Wild Throw
+    - 30435 # Berserk
+    - 29644 # Gun Flame
+    - 29679 # Skull Grinder
+    - 30989 # Burning Shackles
+    - 29852 # Arc Divider
+    - 29923 # Scorched Earth
+    - 31048 # Wild Whirl
+    - 30682 # Flaming Flurry
+    - 30851 # Decapitate
+    - 30879 # Rupturing Smash
+    - 73103 # Wild Throw
 
 Spellbreaker:
-  - 44165 # Full Counter
-  - 45252 # Breaching Strike
-  - 43566 # Eviscerate
-  - 42707 # Arcing Slice
-  - 40601 # Earthshaker
-  - 42803 # Combustive Shot
-  - 41110 # Skull Crack
-  - 14474 # Kill Shot
-  - 42494 # Flurry
-  - 41746 # Whirling Strike
-  - 41330 # Forceful Shot
-  - 73014 # Harrier's Toss
+    - 44165 # Full Counter
+    - 45252 # Breaching Strike
+    - 43566 # Eviscerate
+    - 42707 # Arcing Slice
+    - 40601 # Earthshaker
+    - 42803 # Combustive Shot
+    - 41110 # Skull Crack
+    - 14474 # Kill Shot
+    - 42494 # Flurry
+    - 41746 # Whirling Strike
+    - 41330 # Forceful Shot
+    - 73014 # Harrier's Toss
 
 Bladesworn:
-  - 62745 # Unsheathe Gunsaber
-  - 62861 # Sheathe Gunsaber
-  - 62803 # Dragon Trigger
+    - 62745 # Unsheathe Gunsaber
+    - 62861 # Sheathe Gunsaber
+    - 62803 # Dragon Trigger
 
 Paragon:
-  - 77342 # Chant of Action
-  - 76782 # Chant of Recuperation
-  - 77155 # Chant of Freedom
+    - 77342 # Chant of Action
+    - 76782 # Chant of Recuperation
+    - 77155 # Chant of Freedom

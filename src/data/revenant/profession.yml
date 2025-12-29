@@ -1,27 +1,27 @@
 Revenant:
-  - 55029 # Ancient Echo
+    - 55029 # Ancient Echo
 
 Renegade:
-  - 44076 # Heroic Command
-  - 42836 # Citadel Bombardment
-  - 45537 # Orders from Above
+    - 44076 # Heroic Command
+    - 42836 # Citadel Bombardment
+    - 45537 # Orders from Above
 
 Herald:
-  - 29371 # Facet of Nature
-  - 51675 # True Nature (Dwarf)
-  - 51714 # True Nature (Demon)
-  - 51713 # True Nature (Centaur)
-  - 51696 # True Nature (Dragon)
-  - 51667 # True Nature (Assassin)
+    - 29371 # Facet of Nature
+    - 51675 # True Nature (Dwarf)
+    - 51714 # True Nature (Demon)
+    - 51713 # True Nature (Centaur)
+    - 51696 # True Nature (Dragon)
+    - 51667 # True Nature (Assassin)
 
 Vindicator:
-  - 62757 # Energy Meld
-  - 62729 # Alliance Tactics
+    - 62757 # Energy Meld
+    - 62729 # Alliance Tactics
 
 Conduit:
-  - 77896 # Release Potential: Warrior
-  - 78615 # Release Potential: Mesmer
-  - 78501 # Release Potential: Monk
-  - 78845 # Release Potential: Assassin
-  - 78661 # Release Potential: Dervish
-  - 77371 # Cosmic Wisdom
+    - 77896 # Release Potential: Warrior
+    - 78615 # Release Potential: Mesmer
+    - 78501 # Release Potential: Monk
+    - 78845 # Release Potential: Assassin
+    - 78661 # Release Potential: Dervish
+    - 77371 # Cosmic Wisdom

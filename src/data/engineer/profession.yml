@@ -1,76 +1,76 @@
 Toolbelt:
-  - 5978 # Toss Elixir H (Elixir H)
-  - 29772 # Bandage Self (Med Kit)
-  - 21661 # Static Shock (A.E.D.)
-  - 6176 # Regenerating Mist (Healing Turret)
-  - 29505 # Reconstruction Field (Medic Gyro)
-  - 43845 # Cauterize (Coolant Blast)
-  - 6613 # Symbiotic Shielding (Mitotic State)
+    - 5978 # Toss Elixir H (Elixir H)
+    - 29772 # Bandage Self (Med Kit)
+    - 21661 # Static Shock (A.E.D.)
+    - 6176 # Regenerating Mist (Healing Turret)
+    - 29505 # Reconstruction Field (Medic Gyro)
+    - 43845 # Cauterize (Coolant Blast)
+    - 6613 # Symbiotic Shielding (Mitotic State)
 
-  - 6178 # Surprise Shot (Rifle Turret)
-  - 6181 # Throw Napalm (Flame Turret)
-  - 6179 # Net Attack (Net Turret)
-  - 6180 # Rumble (Thumper Turret)
-  - 6177 # Rocket (Rocket Turret)
-  - 5967 # Toss Elixir B (Elixir B)
-  - 5970 # Toss Elixir U (Elixir U)
-  - 5972 # Toss Elixir S (Elixir S)
-  - 5969 # Toss Elixir C (Elixir C)
-  - 5867 # Toss Elixir R (Elixir R)
-  - 6172 # Grenade Barrage (Grenade Kit)
-  - 5813 # Big Ol' Bomb (Bomb Kit)
-  - 5977 # Incendiary Ammo (Flamethrower)
-  - 5966 # Healing Mist (Elixir Gun)
-  - 5999 # Throw Wrench (Tool Kit)
-  - 6164 # Mine Field (Throw Mine)
-  - 6166 # Detonate Mine Field (Throw Mine)
-  - 30262 # Detection Pulse (Utility Goggles)
-  - 5983 # Rocket Kick (Rocket Boots)
-  - 5982 # Launch Personal Battering Ram (Personal Battering Ram)
-  - 5973 # Superspeed (Slick Shoes)
-  - 30027 # Defense Field (Bulwark Gyro)
-  - 30279 # Chemical Field (Purge Gyro)
-  - 29665 # Bypass Coating (Blast Gyro)
-  - 31167 # Spare Capacitor (Shredder Gyro)
-  - 45732 # Particle Accelerator (Photon Wall)
-  - 42163 # Blade Burst (Laser Disk)
-  - 41843 # Prismatic Singularity (Hard Light Arena)
-  - 43176 # Flash Spark (Spectrum Shield)
+    - 6178 # Surprise Shot (Rifle Turret)
+    - 6181 # Throw Napalm (Flame Turret)
+    - 6179 # Net Attack (Net Turret)
+    - 6180 # Rumble (Thumper Turret)
+    - 6177 # Rocket (Rocket Turret)
+    - 5967 # Toss Elixir B (Elixir B)
+    - 5970 # Toss Elixir U (Elixir U)
+    - 5972 # Toss Elixir S (Elixir S)
+    - 5969 # Toss Elixir C (Elixir C)
+    - 5867 # Toss Elixir R (Elixir R)
+    - 6172 # Grenade Barrage (Grenade Kit)
+    - 5813 # Big Ol' Bomb (Bomb Kit)
+    - 5977 # Incendiary Ammo (Flamethrower)
+    - 5966 # Healing Mist (Elixir Gun)
+    - 5999 # Throw Wrench (Tool Kit)
+    - 6164 # Mine Field (Throw Mine)
+    - 6166 # Detonate Mine Field (Throw Mine)
+    - 30262 # Detection Pulse (Utility Goggles)
+    - 5983 # Rocket Kick (Rocket Boots)
+    - 5982 # Launch Personal Battering Ram (Personal Battering Ram)
+    - 5973 # Superspeed (Slick Shoes)
+    - 30027 # Defense Field (Bulwark Gyro)
+    - 30279 # Chemical Field (Purge Gyro)
+    - 29665 # Bypass Coating (Blast Gyro)
+    - 31167 # Spare Capacitor (Shredder Gyro)
+    - 45732 # Particle Accelerator (Photon Wall)
+    - 42163 # Blade Burst (Laser Disk)
+    - 41843 # Prismatic Singularity (Hard Light Arena)
+    - 43176 # Flash Spark (Spectrum Shield)
 
-  - 29716 # Med Pack Drop (Supply Crate)
-  - 30725 # Toss Elixir X (Elixir X)
-  - 30599 # Orbital Strike (Elite Mortar Kit)
+    - 29716 # Med Pack Drop (Supply Crate)
+    - 30725 # Toss Elixir X (Elixir X)
+    - 30599 # Orbital Strike (Elite Mortar Kit)
 
 Scrapper:
-  - 56920 # Function Gyro
+    - 56920 # Function Gyro
 
 Holosmith:
-  - 42938 # Engage Photon Forge
-  - 41123 # Deactivate Photon Forge
-  - 45219 # Deactivate Photon Forge (hot)
-  - 44386 # Holoforge Overheated
+    - 42938 # Engage Photon Forge
+    - 41123 # Deactivate Photon Forge
+    - 45219 # Deactivate Photon Forge (hot)
+    - 44386 # Holoforge Overheated
 
 Mechanist:
-  # FIXME: api has no slot information, need to set manually
-  - 63334 # Roiling Smash
-  - 63365 # Explosive Knuckle
-  - 63188 # Spark Revolver
-  - 63367 # Discharge Array
-  - 63293 # Crisis Zone
-  - 63345 # Core Reactor Shot
-  - 63121 # Jade Mortar
-  - 63141 # Barrier Burst
-  - 63236 # Sky Circus
+    # FIXME: api has no slot information, need to set manually
+    - 63334 # Roiling Smash
+    - 63365 # Explosive Knuckle
+    - 63188 # Spark Revolver
+    - 63367 # Discharge Array
+    - 63293 # Crisis Zone
+    - 63345 # Core Reactor Shot
+    - 63121 # Jade Mortar
+    - 63141 # Barrier Burst
+    - 63236 # Sky Circus
 
-  - 63050 # Crash Down
-  - 63089 # Recall Mech
+    - 63050 # Crash Down
+    - 63089 # Recall Mech
 
 Amalgam:
-  - 76959 # Defensive Protocol: Protect
-  - 76798 # Defensive Protocol: Cleanse
-  - 77163 # Defensive Protocol: Thorns
-  - 76815 # Offensive Protocol: Pierce
-  - 76806 # Offensive Protocol: Obliterate
-  - 77103 # Offensive Protocol: Shred
-  - 76927 # Offensive Protocol: Demolish
-  - 76642 # Evolve
+    - 76959 # Defensive Protocol: Protect
+    - 76798 # Defensive Protocol: Cleanse
+    - 77163 # Defensive Protocol: Thorns
+    - 76815 # Offensive Protocol: Pierce
+    - 76806 # Offensive Protocol: Obliterate
+    - 77103 # Offensive Protocol: Shred
+    - 76927 # Offensive Protocol: Demolish
+    - 76642 # Evolve

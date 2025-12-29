@@ -1,6 +1,6 @@
-import {describe, it} from "mocha";
-import {strict as assert} from "assert";
-import {getRotation, Log} from "../src/util/log";
+import { describe, it } from "mocha";
+import { strict as assert } from "assert";
+import { getRotation, Log } from "../src/util/log";
 
 describe("Log data extraction", () => {
     const log = {
@@ -10,24 +10,26 @@ describe("Log data extraction", () => {
             s3: {},
             s4: {},
             s5: {},
-            s6: {}
+            s6: {},
         } as Record<string, unknown>,
-        players: [{
-            name: "Player",
-            rotation: [
-                {id: 1, skills: [{castTime: -200, duration: 300}]},
-                {id: 2, skills: [{castTime: 100, duration: 300}]},
-                {id: 3, skills: [{castTime: 900, duration: 300}]},
-                {id: 4, skills: [{castTime: 1500, duration: 300}]},
-                {id: 5, skills: [{castTime: 2400, duration: 300}]},
-                {id: 6, skills: [{castTime: 2900, duration: 300}]}
-            ]
-        }],
+        players: [
+            {
+                name: "Player",
+                rotation: [
+                    { id: 1, skills: [{ castTime: -200, duration: 300 }] },
+                    { id: 2, skills: [{ castTime: 100, duration: 300 }] },
+                    { id: 3, skills: [{ castTime: 900, duration: 300 }] },
+                    { id: 4, skills: [{ castTime: 1500, duration: 300 }] },
+                    { id: 5, skills: [{ castTime: 2400, duration: 300 }] },
+                    { id: 6, skills: [{ castTime: 2900, duration: 300 }] },
+                ],
+            },
+        ],
         phases: [
-            {name: "Phase 1", start: 0, end: 1000},
-            {name: "Phase 2", start: 1000, end: 2000},
-            {name: "Phase 3", start: 2500, end: 3000}
-        ]
+            { name: "Phase 1", start: 0, end: 1000 },
+            { name: "Phase 2", start: 1000, end: 2000 },
+            { name: "Phase 3", start: 2500, end: 3000 },
+        ],
     } as Log;
 
     describe("getRotation", () => {
@@ -35,7 +37,7 @@ describe("Log data extraction", () => {
         const rotationPhases = getRotation(log, "Player", true);
 
         it("returns correct rotation", () => {
-            assert.deepEqual(rotation, [{name: "", skills: [1, 2, 3, 4, 5, 6]}]);
+            assert.deepEqual(rotation, [{ name: "", skills: [1, 2, 3, 4, 5, 6] }]);
         });
 
         it("handles precasted skills", () => {
@@ -60,9 +62,9 @@ describe("Log data extraction", () => {
 
         it("returns correct phases", () => {
             assert.deepEqual(rotationPhases, [
-                {name: "Phase 1", skills: [1, 2, 3]},
-                {name: "Phase 2", skills: [4]},
-                {name: "Phase 3", skills: [5, 6]}
+                { name: "Phase 1", skills: [1, 2, 3] },
+                { name: "Phase 2", skills: [4] },
+                { name: "Phase 3", skills: [5, 6] },
             ]);
         });
     });

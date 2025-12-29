@@ -1,68 +1,68 @@
 Heal:
-  - 10547 # Summon Blood Fiend
-  - 10577 # Taste of Death
-  - 10548 # Consume Conditions
-  - 10527 # Well of Blood
-  - 21762 # Signet of Vampirism
+    - 10547 # Summon Blood Fiend
+    - 10577 # Taste of Death
+    - 10548 # Consume Conditions
+    - 10527 # Well of Blood
+    - 21762 # Signet of Vampirism
 
-  # specs
-  - 29414 # "You Are All Weaklings!"
-  - 43148 # Sand Flare
-  - 62667 # Elixir of Promise
-  - 77259 # Resilient Weapon
+    # specs
+    - 29414 # "You Are All Weaklings!"
+    - 43148 # Sand Flare
+    - 62667 # Elixir of Promise
+    - 77259 # Resilient Weapon
 
 Utility:
-  - 10546 # Well of Suffering
-  - 10545 # Well of Corruption
-  - 10609 # Well of Power
-  - 10607 # Well of Darkness
-  - 10541 # Summon Bone Minions
-  - 10540 # Putrid Explosion
-  - 10533 # Summon Bone Fiend
-  - 10570 # Rigor Mortis
-  - 10589 # Summon Shadow Fiend
-  - 10590 # Haunt
-  - 10543 # Summon Flesh Wurm
-  - 10622 # Signet of Spite
-  - 10612 # Signet of the Locust
-  - 10562 # Plague Signet
-  - 10611 # Signet of Undeath
-  - 10583 # Spectral Armor
-  - 10620 # Spectral Grasp
-  - 10608 # Spectral Ring
-  - 10685 # Spectral Walk
-  - 10687 # Spectral Recall
-  - 10689 # Corrosive Poison Cloud
-  - 10606 # Epidemic
-  - 10602 # Corrupt Boon
-  - 10544 # Blood Is Power
+    - 10546 # Well of Suffering
+    - 10545 # Well of Corruption
+    - 10609 # Well of Power
+    - 10607 # Well of Darkness
+    - 10541 # Summon Bone Minions
+    - 10540 # Putrid Explosion
+    - 10533 # Summon Bone Fiend
+    - 10570 # Rigor Mortis
+    - 10589 # Summon Shadow Fiend
+    - 10590 # Haunt
+    - 10543 # Summon Flesh Wurm
+    - 10622 # Signet of Spite
+    - 10612 # Signet of the Locust
+    - 10562 # Plague Signet
+    - 10611 # Signet of Undeath
+    - 10583 # Spectral Armor
+    - 10620 # Spectral Grasp
+    - 10608 # Spectral Ring
+    - 10685 # Spectral Walk
+    - 10687 # Spectral Recall
+    - 10689 # Corrosive Poison Cloud
+    - 10606 # Epidemic
+    - 10602 # Corrupt Boon
+    - 10544 # Blood Is Power
 
-  # specs
-  - 30670 # "Suffer!"
-  - 29666 # "Nothing Can Save You!"
-  - 30772 # "Rise!"
-  - 30488 # "Your Soul Is Mine!"
-  - 40274 # Trail of Anguish
-  - 42935 # Desiccate
-  - 42917 # Sand Swell
-  - 41615 # Serpent Siphon
-  - 62530 # Elixir of Risk
-  - 62646 # Elixir of Ignorance
-  - 62514 # Elixir of Bliss
-  - 62662 # Elixir of Anguish
-  - 76975 # Splinter Weapon
-  - 76739 # Nightmare Weapon
-  - 77022 # Weapon of Remedy
-  - 76752 # Weapon of Warding
+    # specs
+    - 30670 # "Suffer!"
+    - 29666 # "Nothing Can Save You!"
+    - 30772 # "Rise!"
+    - 30488 # "Your Soul Is Mine!"
+    - 40274 # Trail of Anguish
+    - 42935 # Desiccate
+    - 42917 # Sand Swell
+    - 41615 # Serpent Siphon
+    - 62530 # Elixir of Risk
+    - 62646 # Elixir of Ignorance
+    - 62514 # Elixir of Bliss
+    - 62662 # Elixir of Anguish
+    - 76975 # Splinter Weapon
+    - 76739 # Nightmare Weapon
+    - 77022 # Weapon of Remedy
+    - 76752 # Weapon of Warding
 
 Elite:
-  - 10549 # Plaguelands
-  - 10646 # Summon Flesh Golem
-  - 10647 # Charge
-  - 10550 # Lich Form
+    - 10549 # Plaguelands
+    - 10646 # Summon Flesh Golem
+    - 10647 # Charge
+    - 10550 # Lich Form
 
-  # specs
-  - 30105 # "Chilled to the Bone!"
-  - 42355 # Ghastly Breach
-  - 62655 # Elixir of Ambition
-  - 76941 # Xinrae's Weapon
+    # specs
+    - 30105 # "Chilled to the Bone!"
+    - 42355 # Ghastly Breach
+    - 62655 # Elixir of Ambition
+    - 76941 # Xinrae's Weapon

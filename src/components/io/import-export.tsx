@@ -1,4 +1,4 @@
-import React, {useState, useMemo} from "react";
+import React, { useState, useMemo } from "react";
 import {
     Box,
     Stack,
@@ -9,26 +9,28 @@ import {
     Typography,
     Button,
     IconButton,
-    TextField
+    TextField,
 } from "@mui/material";
-import {ImportExport, Close, Save, ContentCopy} from "@mui/icons-material";
-import {useDispatch} from "react-redux";
-import {Confirm, CooldownButton, Link} from "../general";
-import {LogImport} from "./log-import";
-import {useStatelessRows, overrideRows, Row} from "../../store/timeline";
-import {validate} from "../../util/validate";
-import {copyToClipboard} from "../../util/clipboard";
+import { ImportExport, Close, Save, ContentCopy } from "@mui/icons-material";
+import { useDispatch } from "react-redux";
+import { Confirm, CooldownButton, Link } from "../general";
+import { LogImport } from "./log-import";
+import { useStatelessRows, overrideRows, Row } from "../../store/timeline";
+import { validate } from "../../util/validate";
+import { copyToClipboard } from "../../util/clipboard";
 
 // custom json formatting
 const toJson = (rows: Row[]): string => {
-    const json = rows.map(({name, skills}) => {
-        let result = "";
-        result += "\n  {";
-        result += `\n    "name": ${JSON.stringify(name)},`;
-        result += `\n    "skills": [${skills.join(", ")}]`;
-        result += "\n  }";
-        return result;
-    }).join(",");
+    const json = rows
+        .map(({ name, skills }) => {
+            let result = "";
+            result += "\n  {";
+            result += `\n    "name": ${JSON.stringify(name)},`;
+            result += `\n    "skills": [${skills.join(", ")}]`;
+            result += "\n  }";
+            return result;
+        })
+        .join(",");
     return `[${json}\n]`;
 };
 
@@ -37,24 +39,24 @@ export interface ExportModalContentProps {
     onChange?(modified: boolean): void;
 }
 
-export const ExportModalContent = ({onClose, onChange}: ExportModalContentProps): JSX.Element => {
+export const ExportModalContent = ({ onClose, onChange }: ExportModalContentProps): JSX.Element => {
     const dispatch = useDispatch();
     const initialRows = useStatelessRows();
     const initialJson = useMemo(() => toJson(initialRows), [initialRows]);
 
-    const [{json, rows}, setContent] = useState(() => ({json: initialJson, rows: initialRows}));
+    const [{ json, rows }, setContent] = useState(() => ({ json: initialJson, rows: initialRows }));
 
     // TODO: validation logic as hook?
     const updateJson = (json: string) => {
         try {
             const data = JSON.parse(json);
             if (validate(data)) {
-                setContent({json, rows: data});
+                setContent({ json, rows: data });
             } else {
-                setContent({json, rows: null});
+                setContent({ json, rows: null });
             }
         } catch {
-            setContent({json, rows: null});
+            setContent({ json, rows: null });
         } finally {
             onChange?.(true);
         }
@@ -65,66 +67,88 @@ export const ExportModalContent = ({onClose, onChange}: ExportModalContentProps)
         <>
             <DialogTitle>
                 <Stack direction="row" alignItems="center" spacing={1}>
-                    <ImportExport/>
+                    <ImportExport />
                     <Typography variant="h5">Import / Export</Typography>
-                    <Box flexGrow={1}/>
+                    <Box flexGrow={1} />
                     <IconButton onClick={() => onClose(false)}>
-                        <Close/>
+                        <Close />
                     </IconButton>
                 </Stack>
             </DialogTitle>
             <DialogContent dividers>
                 <Typography variant="body1" marginBottom={1}>
-                    Import a rotation from a log uploaded to <Link newTab to="https://dps.report">dps.report</Link> or <Link newTab to="https://gw2wingman.nevermindcreations.de">Wingman</Link>, or edit it in the JSON format below.
+                    Import a rotation from a log uploaded to{" "}
+                    <Link newTab to="https://dps.report">
+                        dps.report
+                    </Link>{" "}
+                    or{" "}
+                    <Link newTab to="https://gw2wingman.nevermindcreations.de">
+                        Wingman
+                    </Link>
+                    , or edit it in the JSON format below.
                 </Typography>
                 <Stack direction="column" spacing={1}>
-                    <LogImport onChange={(rows) => updateJson(toJson(rows))}/>
+                    <LogImport onChange={(rows) => updateJson(toJson(rows))} />
                     <TextField
                         value={json}
                         error={isError}
                         helperText={isError ? "Invalid JSON" : " "}
-                        onChange={({target}) => updateJson(target.value)}
+                        onChange={({ target }) => updateJson(target.value)}
                         multiline
                         fullWidth
                         rows={24}
                         inputProps={{
                             style: {
                                 whiteSpace: "nowrap",
-                                fontFamily: "Source Code Pro, monospace"
-                            }
+                                fontFamily: "Source Code Pro, monospace",
+                            },
                         }}
                     />
                 </Stack>
             </DialogContent>
-            <DialogActions sx={{paddingX: 1.5}}>
+            <DialogActions sx={{ paddingX: 1.5 }}>
                 <CooldownButton
                     color="secondary"
-                    startIcon={<ContentCopy/>}
+                    startIcon={<ContentCopy />}
                     onClick={() => copyToClipboard(json)}
-                    sx={{marginRight: "auto"}}
+                    sx={{ marginRight: "auto" }}
                     cooldown={3000}
                     cooldownProps={{
-                        children: "Copied!"
+                        children: "Copied!",
                     }}
-                >Copy</CooldownButton>
-                <Button color="error" onClick={() => {
-                    onClose(true);
-                    updateJson(toJson(initialRows));
-                }}>Cancel</Button>
-                <Button color="secondary" onClick={() => {
-                    updateJson(toJson(initialRows));
-                    onChange(false);
-                }}>Reset</Button>
+                >
+                    Copy
+                </CooldownButton>
+                <Button
+                    color="error"
+                    onClick={() => {
+                        onClose(true);
+                        updateJson(toJson(initialRows));
+                    }}
+                >
+                    Cancel
+                </Button>
+                <Button
+                    color="secondary"
+                    onClick={() => {
+                        updateJson(toJson(initialRows));
+                        onChange(false);
+                    }}
+                >
+                    Reset
+                </Button>
                 <Button
                     color="success"
                     variant="contained"
-                    startIcon={<Save/>}
+                    startIcon={<Save />}
                     disabled={isError}
                     onClick={() => {
                         dispatch(overrideRows(rows));
                         onClose(true);
                     }}
-                >Save</Button>
+                >
+                    Save
+                </Button>
             </DialogActions>
         </>
     );
@@ -135,7 +159,7 @@ export interface ExportModalProps {
     onClose: () => void;
 }
 
-export const ExportModal = ({open, onClose}: ExportModalProps): JSX.Element => {
+export const ExportModal = ({ open, onClose }: ExportModalProps): JSX.Element => {
     const [modified, setModified] = useState(false);
     const [warn, setWarn] = useState(false);
 
@@ -173,7 +197,9 @@ export const ExportModal = ({open, onClose}: ExportModalProps): JSX.Element => {
                     onClose();
                 }}
                 onCancel={() => setWarn(false)}
-            >Do you wish to discard your changes?</Confirm>
+            >
+                Do you wish to discard your changes?
+            </Confirm>
         </>
     );
 };

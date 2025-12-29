@@ -1,4 +1,4 @@
-import {useState, useRef, useCallback, useEffect, useMemo} from "react";
+import { useState, useRef, useCallback, useEffect, useMemo } from "react";
 
 /**
  * Turn the value into an automatically updating ref object.
@@ -20,17 +20,19 @@ export const useUpdatingRef = <T>(value: T): React.MutableRefObject<T> => {
     return ref;
 };
 
-export type PickEventMap<T extends EventTarget> = T extends GlobalEventHandlers ? GlobalEventHandlersEventMap : Record<string, Event>;
+export type PickEventMap<T extends EventTarget> = T extends GlobalEventHandlers
+    ? GlobalEventHandlersEventMap
+    : Record<string, Event>;
 
 export type PickEventTypes<T extends EventTarget> = Extract<keyof PickEventMap<T>, string>;
 
 export type PickEvent<T extends EventTarget, K extends PickEventTypes<T>> = PickEventMap<T>[K];
 
 /** Attach an event listener to the target. */
-export const useEventListener =<T extends EventTarget, K extends PickEventTypes<T>>(
+export const useEventListener = <T extends EventTarget, K extends PickEventTypes<T>>(
     target: T,
     event: K,
-    handler: (event: PickEvent<T, K>) => unknown
+    handler: (event: PickEvent<T, K>) => unknown,
 ): void => {
     const ref = useUpdatingRef(handler);
 
@@ -42,7 +44,10 @@ export const useEventListener =<T extends EventTarget, K extends PickEventTypes<
 };
 
 /** Use the current state of a single or set of keys. */
-export const useKeyState = (key: string | string[], target: EventTarget & GlobalEventHandlers = window): boolean => {
+export const useKeyState = (
+    key: string | string[],
+    target: EventTarget & GlobalEventHandlers = window,
+): boolean => {
     const [pressed, setPressed] = useState(false);
     const keys = useMemo(() => new Set(typeof key === "string" ? [key] : key), [key]);
 

@@ -1,16 +1,16 @@
 import React from "react";
 import clsx from "clsx";
-import {css} from "@emotion/css";
-import {Box, Stack, StackProps, SxProps} from "@mui/material";
-import {Skill, CustomComponent, useSkill} from "@discretize/gw2-ui-new";
-import {useSortable} from "@dnd-kit/sortable";
-import {shallowEqual} from "react-redux";
-import {SkillContextMenu, SkillContextMenuProps} from "./skill-menu";
-import {Keybind} from "./keybind";
-import {useAutoSize} from "../../store/settings";
-import {DragId, SkillData} from "../../util/drag";
-import {getCommonSkill} from "../../data/common";
-import {SkillSlot, isAuto} from "../../data";
+import { css } from "@emotion/css";
+import { Box, Stack, StackProps, SxProps } from "@mui/material";
+import { Skill, CustomComponent, useSkill } from "@discretize/gw2-ui-new";
+import { useSortable } from "@dnd-kit/sortable";
+import { shallowEqual } from "react-redux";
+import { SkillContextMenu, SkillContextMenuProps } from "./skill-menu";
+import { Keybind } from "./keybind";
+import { useAutoSize } from "../../store/settings";
+import { DragId, SkillData } from "../../util/drag";
+import { getCommonSkill } from "../../data/common";
+import { SkillSlot, isAuto } from "../../data";
 
 export interface SkillIconProps extends StackProps {
     skill: number;
@@ -28,14 +28,17 @@ const slotColumn = {
     [SkillSlot.Downed3]: 3,
     [SkillSlot.Weapon4]: 4,
     [SkillSlot.Downed4]: 4,
-    [SkillSlot.Weapon5]: 5
+    [SkillSlot.Weapon5]: 5,
 };
 
-const SkillIcon = ({skill, tooltip = false, orderSelf = false, sx, ...props}: SkillIconProps, ref: React.Ref<HTMLElement>): JSX.Element => {
+const SkillIcon = (
+    { skill, tooltip = false, orderSelf = false, sx, ...props }: SkillIconProps,
+    ref: React.Ref<HTMLElement>,
+): JSX.Element => {
     const autoSize = useAutoSize();
-    const {data} = useSkill(skill);
+    const { data } = useSkill(skill);
     const common = getCommonSkill(skill);
-    const slot = data?.slot as SkillSlot ?? common?.slot;
+    const slot = (data?.slot as SkillSlot) ?? common?.slot;
 
     return (
         <Stack
@@ -49,7 +52,7 @@ const SkillIcon = ({skill, tooltip = false, orderSelf = false, sx, ...props}: Sk
                 gridColumn: orderSelf ? slotColumn[slot] : null,
                 height: "1em",
                 fontSize: "3em",
-                ...sx
+                ...sx,
             }}
         >
             <Box height="1em" fontSize={isAuto(slot) ? `${autoSize / 100}em` : null}>
@@ -63,15 +66,10 @@ const SkillIcon = ({skill, tooltip = false, orderSelf = false, sx, ...props}: Sk
                         iconProps={common.iconProps}
                     />
                 ) : (
-                    <Skill
-                        id={skill}
-                        disableLink
-                        disableText
-                        disableTooltip={!tooltip}
-                    />
+                    <Skill id={skill} disableLink disableText disableTooltip={!tooltip} />
                 )}
             </Box>
-            <Keybind slot={slot as SkillSlot}/>
+            <Keybind slot={slot as SkillSlot} />
         </Stack>
     );
 };
@@ -83,15 +81,17 @@ interface SkillContentProps {
     contextMenuProps: Omit<SkillContextMenuProps, "children">;
 }
 
-const SkillContent = ({iconProps, contextMenuProps}: SkillContentProps): JSX.Element => (
+const SkillContent = ({ iconProps, contextMenuProps }: SkillContentProps): JSX.Element => (
     <SkillContextMenu {...contextMenuProps}>
-        <SkillIconWithRef {...iconProps}/>
+        <SkillIconWithRef {...iconProps} />
     </SkillContextMenu>
 );
 
 const SkillContentMemo = React.memo(
     SkillContent,
-    (prev, next) => shallowEqual(prev.iconProps, next.iconProps) && shallowEqual(prev.contextMenuProps, next.contextMenuProps)
+    (prev, next) =>
+        shallowEqual(prev.iconProps, next.iconProps)
+        && shallowEqual(prev.contextMenuProps, next.contextMenuProps),
 );
 
 export interface DraggableSkillProps {
@@ -105,38 +105,53 @@ export interface DraggableSkillProps {
     sx?: SxProps;
 }
 
-const dragCursor = css`cursor: grab`;
+const dragCursor = css`
+    cursor: grab;
+`;
 
-const placeholderStyles = css`opacity: .3`;
+const placeholderStyles = css`
+    opacity: 0.3;
+`;
 
-export const DraggableSkill = ({skill, index, parentId, dragId, orderSelf, canDuplicate, canDelete, sx}: DraggableSkillProps): JSX.Element => {
-    const {attributes, listeners, setNodeRef, isDragging} = useSortable({
+export const DraggableSkill = ({
+    skill,
+    index,
+    parentId,
+    dragId,
+    orderSelf,
+    canDuplicate,
+    canDelete,
+    sx,
+}: DraggableSkillProps): JSX.Element => {
+    const { attributes, listeners, setNodeRef, isDragging } = useSortable({
         id: dragId,
         data: {
             parentId,
             index,
-            skill
-        } as SkillData
+            skill,
+        } as SkillData,
     });
 
-    return <SkillContentMemo
-        iconProps={{
-            ref: setNodeRef,
-            ...attributes,
-            ...listeners,
-            skill,
-            tooltip: !isDragging,
-            orderSelf,
-            className: clsx(dragCursor, {[placeholderStyles]: isDragging}),
-            sx
-        }}
-        contextMenuProps={{
-            skill,
-            index,
-            dragId,
-            parentId,
-            canDuplicate,
-            canDelete
-        }}
-    />;
+    return (
+        <SkillContentMemo
+            iconProps={{
+                ref: setNodeRef,
+                ...attributes,
+                ...listeners,
+                skill,
+                tooltip: !isDragging,
+                orderSelf,
+                className: clsx(dragCursor, { [placeholderStyles]: isDragging }),
+                sx,
+            }}
+            contextMenuProps={{
+                skill,
+                index,
+                dragId,
+                parentId,
+                canDuplicate,
+                canDelete,
+            }}
+        />
+    );
 };

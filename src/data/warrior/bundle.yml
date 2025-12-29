@@ -1,24 +1,24 @@
 Rampage:
-  - 14485 # Smash
-  - 14486 # Bash
-  - 14487 # Uppercut
-  - 14488 # Kick
-  - 14489 # Dash
-  - 14556 # Throw Boulder
-  - 14490 # Seismic Leap
+    - 14485 # Smash
+    - 14486 # Bash
+    - 14487 # Uppercut
+    - 14488 # Kick
+    - 14489 # Dash
+    - 14556 # Throw Boulder
+    - 14490 # Seismic Leap
 
 Dragon Trigger:
-  - 62797 # Dragon Slash - Force
-  - 62980 # Dragon Slash - Boost
-  - 62951 # Dragon Slash - Reach
-  - 62893 # Triggerguard
-  - 62926 # Flicker Step
+    - 62797 # Dragon Slash - Force
+    - 62980 # Dragon Slash - Boost
+    - 62951 # Dragon Slash - Reach
+    - 62893 # Triggerguard
+    - 62926 # Flicker Step
 
 Gunsaber:
-  - 62966 # Swift Cut
-  - 62772 # Steel Divide
-  - 62918 # Explosive Thrust
-  - 62930 # Blooming Fire
-  - 62732 # Artillery Slash
-  - 62789 # Cyclone Trigger
-  - 62885 # Break Step
+    - 62966 # Swift Cut
+    - 62772 # Steel Divide
+    - 62918 # Explosive Thrust
+    - 62930 # Blooming Fire
+    - 62732 # Artillery Slash
+    - 62789 # Cyclone Trigger
+    - 62885 # Break Step

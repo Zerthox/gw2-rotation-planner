@@ -1,28 +1,28 @@
 Shatter:
-  - 10191 # Mind Wrack
-  # - 49068 # Mind Wrack (Ammo)
-  - 10190 # Cry of Frustration
-  - 10287 # Diversion
-  - 10192 # Distortion
+    - 10191 # Mind Wrack
+    # - 49068 # Mind Wrack (Ammo)
+    - 10190 # Cry of Frustration
+    - 10287 # Diversion
+    - 10192 # Distortion
 
 Chronomancer:
-  - 56930 # Split Second
-  # - 56925 # Split Second (Ammo)
-  - 56928 # Rewinder
-  - 56873 # Time Sink
-  - 29830 # Continuum Split
-  - 30747 # Continuum Shift
+    - 56930 # Split Second
+    # - 56925 # Split Second (Ammo)
+    - 56928 # Rewinder
+    - 56873 # Time Sink
+    - 29830 # Continuum Split
+    - 30747 # Continuum Shift
 
 Virtuoso:
-  - 62617 # Bladesong Harmony
-  # - 62586 # Bladesong Harmony (Ammo)
-  - 62616 # Bladesong Sorrow
-  - 62602 # Bladesong Dissonance
-  - 62597 # Bladeturn Requiem
+    - 62617 # Bladesong Harmony
+    # - 62586 # Bladesong Harmony (Ammo)
+    - 62616 # Bladesong Sorrow
+    - 62602 # Bladesong Dissonance
+    - 62597 # Bladeturn Requiem
 
 Troubadour:
-  - 76552 # Lively Lute
-  - 76746 # Flustering Flute
-  - 77079 # Deafening Drum
-  - 77077 # Harmonious Harp
-  - 76931 # Crescendo
+    - 76552 # Lively Lute
+    - 76746 # Flustering Flute
+    - 77079 # Deafening Drum
+    - 77077 # Harmonious Harp
+    - 76931 # Crescendo

@@ -1,8 +1,8 @@
 import React from "react";
-import {List, ListItem, ListItemButton, ListItemIcon, ListItemText} from "@mui/material";
-import {Preview, Schedule, QueryStats, Whatshot} from "@mui/icons-material";
-import {AnchorWithRef} from "../general";
-import {useDevMode} from "../../store/settings";
+import { List, ListItem, ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
+import { Preview, Schedule, QueryStats, Whatshot } from "@mui/icons-material";
+import { AnchorWithRef } from "../general";
+import { useDevMode } from "../../store/settings";
 
 interface ToolEntry {
     title: string;
@@ -17,24 +17,24 @@ const tools: ToolEntry[] = [
         title: "Rotation Planner",
         description: "Plan & share rotations",
         path: "/",
-        icon: Schedule
+        icon: Schedule,
     },
     {
         title: "Condition Duration Calculator",
         path: "/tools/condi-duration",
-        icon: Whatshot
+        icon: Whatshot,
     },
     {
         title: "Proc Calculator",
         path: "/tools/procs",
-        icon: QueryStats
+        icon: QueryStats,
     },
     {
         title: "Skill Viewer",
         path: "/tools/skill-viewer",
         icon: Preview,
-        dev: true
-    }
+        dev: true,
+    },
 ];
 
 export const ToolsMenu = (): JSX.Element => {
@@ -43,12 +43,14 @@ export const ToolsMenu = (): JSX.Element => {
     return (
         <List>
             {tools
-                .filter(({dev = false}) => !dev || isDev)
-                .map(({title, description, path, icon: Icon}, i) => (
+                .filter(({ dev = false }) => !dev || isDev)
+                .map(({ title, description, path, icon: Icon }, i) => (
                     <ListItem disablePadding key={i}>
                         <ListItemButton component={AnchorWithRef} to={path}>
-                            <ListItemIcon><Icon/></ListItemIcon>
-                            <ListItemText primary={title} secondary={description}/>
+                            <ListItemIcon>
+                                <Icon />
+                            </ListItemIcon>
+                            <ListItemText primary={title} secondary={description} />
                         </ListItemButton>
                     </ListItem>
                 ))}

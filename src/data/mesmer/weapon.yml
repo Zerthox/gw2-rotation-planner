@@ -1,109 +1,109 @@
 Focus:
-  - 10186 # Temporal Curtain
-  - 10363 # Into the Void
-  - 10282 # Phantasmal Warden
+    - 10186 # Temporal Curtain
+    - 10363 # Into the Void
+    - 10282 # Phantasmal Warden
 
 Greatsword:
-  - 10219 # Spatial Surge
-  - 44241 # Split Surge
-  - 10333 # Mirror Blade
-  - 10218 # Mind Stab
-  - 10221 # Phantasmal Berserker
-  - 10220 # Illusionary Wave
+    - 10219 # Spatial Surge
+    - 44241 # Split Surge
+    - 10333 # Mirror Blade
+    - 10218 # Mind Stab
+    - 10221 # Phantasmal Berserker
+    - 10220 # Illusionary Wave
 
 Pistol:
-  - 10175 # Phantasmal Duelist
-  - 10229 # Magic Bullet
+    - 10175 # Phantasmal Duelist
+    - 10229 # Magic Bullet
 
 Scepter:
-  - 10289 # Ether Bolt
-  - 10290 # Ether Blast
-  - 10291 # Ether Clone
-  - 42304 # Ether Barrage
-  - 10276 # Illusionary Counter
-  - 10314 # Counterspell
-  - 10168 # Confusing Images
+    - 10289 # Ether Bolt
+    - 10290 # Ether Blast
+    - 10291 # Ether Clone
+    - 42304 # Ether Barrage
+    - 10276 # Illusionary Counter
+    - 10314 # Counterspell
+    - 10168 # Confusing Images
 
 Staff:
-  - 10273 # Winds of Chaos
-  - 40184 # Chaos Vortex
-  - 10310 # Phase Retreat
-  - 10216 # Phantasmal Warlock
-  - 10331 # Chaos Armor
-  - 10169 # Chaos Storm
+    - 10273 # Winds of Chaos
+    - 40184 # Chaos Vortex
+    - 10310 # Phase Retreat
+    - 10216 # Phantasmal Warlock
+    - 10331 # Chaos Armor
+    - 10169 # Chaos Storm
 
 Sword:
-  - 10170 # Mind Slash
-  - 10171 # Mind Gash
-  - 10172 # Mind Spike
-  - 45230 # Mirage Thrust
-  - 10334 # Blurred Frenzy
-  - 10173 # Illusionary Leap
-  - 10337 # Swap
-  - 62568 # Blade Leap
-  - 62675 # Returning Edge
-  - 10280 # Illusionary Riposte
-  - 10358 # Counter Blade
-  - 10174 # Phantasmal Swordsman
+    - 10170 # Mind Slash
+    - 10171 # Mind Gash
+    - 10172 # Mind Spike
+    - 45230 # Mirage Thrust
+    - 10334 # Blurred Frenzy
+    - 10173 # Illusionary Leap
+    - 10337 # Swap
+    - 62568 # Blade Leap
+    - 62675 # Returning Edge
+    - 10280 # Illusionary Riposte
+    - 10358 # Counter Blade
+    - 10174 # Phantasmal Swordsman
 
 Torch:
-  - 10285 # The Prestige
-  - 10189 # Phantasmal Mage
+    - 10285 # The Prestige
+    - 10189 # Phantasmal Mage
 
 Shield:
-  - 30769 # Echo of Memory
-  - 29649 # Deja Vu
-  - 30643 # Tides of Time
+    - 30769 # Echo of Memory
+    - 29649 # Deja Vu
+    - 30643 # Tides of Time
 
 Axe:
-  - 44791 # Lacerating Chop
-  - 44840 # Ethereal Chop
-  - 41164 # Mirror Strikes
-  - 44321 # Imaginary Axes
-  - 45243 # Lingering Thoughts
-  - 43761 # Axes of Symmetry
+    - 44791 # Lacerating Chop
+    - 44840 # Ethereal Chop
+    - 41164 # Mirror Strikes
+    - 44321 # Imaginary Axes
+    - 45243 # Lingering Thoughts
+    - 43761 # Axes of Symmetry
 
 Dagger:
-  - 62510 # Flying Cutter
-  - 69389 # Phantom Razor
-  - 62560 # Bladecall
-  - 62607 # Unstable Bladestorm
+    - 62510 # Flying Cutter
+    - 69389 # Phantom Razor
+    - 62560 # Bladecall
+    - 62607 # Unstable Bladestorm
 
 Rifle:
-  - 71892 # Friendly Fire
-  - 71800 # Effervescence
-  - 71897 # Journey
-  - 72005 # Inspiring Imagery
-  - 72076 # Abstraction
-  - 72007 # Phantasmal Sharpshooter
-  - 72008 # Singularity Shot
-  - 71792 # Dimensional Aperture
+    - 71892 # Friendly Fire
+    - 71800 # Effervescence
+    - 71897 # Journey
+    - 72005 # Inspiring Imagery
+    - 72076 # Abstraction
+    - 72007 # Phantasmal Sharpshooter
+    - 72008 # Singularity Shot
+    - 71792 # Dimensional Aperture
 
 Spear:
-  - 73154 # Psycut
-  - 73066 # Psystrike
-  - 73095 # Mind Pierce
-  - 73067 # Fractured Glass
-  - 73093 # Mind the Gap
-  - 73152 # Imaginary Inversion
-  - 72946 # Phantasmal Lancer
-  - 72957 # Mental Collapse
+    - 73154 # Psycut
+    - 73066 # Psystrike
+    - 73095 # Mind Pierce
+    - 73067 # Fractured Glass
+    - 73093 # Mind the Gap
+    - 73152 # Imaginary Inversion
+    - 72946 # Phantasmal Lancer
+    - 72957 # Mental Collapse
 
 # underwater
 Aquatic Spear:
-  - 10315 # Stab
-  - 10316 # Jab
-  - 44864 # Ambush Assault
-  - 10317 # Evasive Strike
-  - 10318 # Feigned Surge
-  - 10251 # Phantasmal Mariner
-  - 10325 # Slipstream
-  - 10255 # Vortex
+    - 10315 # Stab
+    - 10316 # Jab
+    - 44864 # Ambush Assault
+    - 10317 # Evasive Strike
+    - 10318 # Feigned Surge
+    - 10251 # Phantasmal Mariner
+    - 10325 # Slipstream
+    - 10255 # Vortex
 
 Trident:
-  - 10258 # Siren's Call
-  - 39959 # Wave of Panic
-  - 10259 # Blinding Tide
-  - 10327 # Imminent Voyage
-  - 10328 # Phantasmal Whaler
-  - 10260 # Illusion of Drowning
+    - 10258 # Siren's Call
+    - 39959 # Wave of Panic
+    - 10259 # Blinding Tide
+    - 10327 # Imminent Voyage
+    - 10328 # Phantasmal Whaler
+    - 10260 # Illusion of Drowning

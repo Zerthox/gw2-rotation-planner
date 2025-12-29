@@ -1,47 +1,47 @@
 # conjures
 Flame Axe:
-  - 5541 # Lava Axe
-  - 5593 # Explosive Lava Axe
-  - 5717 # Burning Retreat
-  - 5718 # Ring of Fire
-  - 5719 # Flame Leap
+    - 5541 # Lava Axe
+    - 5593 # Explosive Lava Axe
+    - 5717 # Burning Retreat
+    - 5718 # Ring of Fire
+    - 5719 # Flame Leap
 
 Frost Bow:
-  - 5595 # Water Arrow
-  - 5720 # Frost Volley
-  - 5568 # Frost Fan
-  - 5723 # Frost Storm
-  - 5721 # Deep Freeze
+    - 5595 # Water Arrow
+    - 5720 # Frost Volley
+    - 5568 # Frost Fan
+    - 5723 # Frost Storm
+    - 5721 # Deep Freeze
 
 Lightning Hammer:
-  - 5726 # Lightning Swing
-  - 5727 # Static Swing
-  - 5728 # Thunderclap
-  - 5625 # Lightning Leap
-  - 5733 # Wind Blast
-  - 5725 # Invoke Lightning
-  - 5732 # Static Field
+    - 5726 # Lightning Swing
+    - 5727 # Static Swing
+    - 5728 # Thunderclap
+    - 5625 # Lightning Leap
+    - 5733 # Wind Blast
+    - 5725 # Invoke Lightning
+    - 5732 # Static Field
 
 Earth Shield:
-  - 5621 # Shield Smack
-  - 21646 # Shield Smash
-  - 5746 # Crippling Shield
-  - 21647 # Stone Sheath
-  - 5547 # Magnetic Surge
-  - 5747 # Magnetic Shield
-  - 5623 # Fortify
+    - 5621 # Shield Smack
+    - 21646 # Shield Smash
+    - 5746 # Crippling Shield
+    - 21647 # Stone Sheath
+    - 5547 # Magnetic Surge
+    - 5747 # Magnetic Shield
+    - 5623 # Fortify
 
 Fiery Greatsword:
-  - 5532 # Flame Wave
-  - 5533 # Fiery Eruption
-  - 5697 # Fiery Whirl
-  - 5517 # Fiery Rush
-  - 5531 # Firestorm
+    - 5532 # Flame Wave
+    - 5533 # Fiery Eruption
+    - 5697 # Fiery Whirl
+    - 5517 # Fiery Rush
+    - 5531 # Firestorm
 
 # tornado transform
 Tornado:
-  - 5752 # Electrified Tornado
-  - 5753 # Dust Tornado
-  - 5754 # Debris Tornado
-  - 35224 # Elemental Requiem
-  - 35304 # Dust Charge
+    - 5752 # Electrified Tornado
+    - 5753 # Dust Tornado
+    - 5754 # Debris Tornado
+    - 35224 # Elemental Requiem
+    - 35304 # Dust Charge
