@@ -17,12 +17,13 @@ import {
     RadioGroup,
     Radio,
     SxProps,
+    useColorScheme,
+    Select,
+    MenuItem,
 } from "@mui/material";
 import { DarkMode, LightMode } from "@mui/icons-material";
 import { useDispatch } from "react-redux";
 import {
-    useTheme,
-    setTheme,
     useKeybinds,
     setKeybinds,
     defaultKeybinds,
@@ -34,9 +35,12 @@ import {
     setKeyDisplay,
     KeyDisplay,
     defaultAutoSize,
+    useAccent,
+    setAccent,
 } from "../../store/settings";
 import { SkillSlot } from "../../data";
-import { Theme } from "../../themes";
+import { Accent, accentColors, accentNames, accentLogos } from "../../theme";
+import { IconText } from "../general";
 
 export interface SettingsGroupProps extends BoxProps {
     title: string;
@@ -89,7 +93,10 @@ const iconProps: SxProps = {
 
 export const SettingsContent = (): JSX.Element => {
     const dispatch = useDispatch();
-    const theme = useTheme();
+
+    const { mode, setMode } = useColorScheme();
+    const accent = useAccent();
+
     const autoSize = useAutoSize();
     const keyDisplay = useKeyDisplay();
     const keybinds = useKeybinds();
@@ -98,20 +105,43 @@ export const SettingsContent = (): JSX.Element => {
     return (
         <>
             <SettingsGroup title="Theme" marginBottom={3}>
-                <ToggleButtonGroup
-                    exclusive
-                    value={theme}
-                    onChange={(_, value) => dispatch(setTheme(value))}
-                >
-                    <ToggleButton value={Theme.Dark}>
-                        <DarkMode sx={iconProps} />
-                        Dark
-                    </ToggleButton>
-                    <ToggleButton value={Theme.Light}>
-                        <LightMode sx={iconProps} />
-                        Light
-                    </ToggleButton>
-                </ToggleButtonGroup>
+                <Stack direction="row" spacing={2}>
+                    <ToggleButtonGroup
+                        exclusive
+                        value={mode}
+                        onChange={(_, value) => setMode(value)}
+                    >
+                        <ToggleButton value="dark">
+                            <DarkMode sx={iconProps} />
+                            Dark
+                        </ToggleButton>
+                        <ToggleButton value="light">
+                            <LightMode sx={iconProps} />
+                            Light
+                        </ToggleButton>
+                    </ToggleButtonGroup>
+                    <Select
+                        value={accent}
+                        onChange={({ target }) => dispatch(setAccent(target.value as Accent))}
+                    >
+                        {Object.entries(accentNames).map(([accent, name]) => (
+                            <MenuItem key={accent} value={accent}>
+                                <IconText
+                                    icon={accentLogos[accent]}
+                                    size={32}
+                                    spacing={1}
+                                    iconProps={{
+                                        bgcolor: "white",
+                                        borderRadius: "50%",
+                                    }}
+                                    textProps={{ color: accentColors[accent] }}
+                                >
+                                    {name}
+                                </IconText>
+                            </MenuItem>
+                        ))}
+                    </Select>
+                </Stack>
             </SettingsGroup>
             <SettingsGroup title="Display" marginBottom={3}>
                 <TextField

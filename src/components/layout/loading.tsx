@@ -1,10 +1,9 @@
 import React from "react";
 import { Stack, CircularProgress, Typography } from "@mui/material";
 import { Providers } from "./providers";
-import { darkTheme } from "../../themes";
 
 export const Loading = (): JSX.Element => (
-    <Providers theme={darkTheme}>
+    <Providers>
         <Stack
             direction="row"
             alignItems="center"

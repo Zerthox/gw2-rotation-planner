@@ -1,19 +1,17 @@
 import React, { useState } from "react";
-import { Stack, StackProps, Button } from "@mui/material";
+import { Stack, StackProps, Button, useColorScheme } from "@mui/material";
 import { ImportExport, Share } from "@mui/icons-material";
 import { ExportModal } from "./import-export";
 import { ShareModal } from "./share";
-import { useTheme } from "../../store/settings";
-import { isDark } from "../../themes";
 
 export type IOButtonsProps = StackProps;
 
 export const IOButtons = (props: IOButtonsProps): JSX.Element => {
-    const theme = useTheme();
+    const { mode } = useColorScheme();
     const [exportShown, setExportShown] = useState(false);
     const [shareShown, setShareShown] = useState(false);
 
-    const buttonColor = isDark(theme) ? "primary" : "inherit";
+    const buttonColor = mode === "dark" ? "primary" : "inherit";
 
     return (
         <Stack direction="row" alignItems="center" spacing={1} {...props}>

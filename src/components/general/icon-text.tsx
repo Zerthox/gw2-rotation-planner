@@ -1,16 +1,25 @@
 import React from "react";
-import { Box, BoxProps, Stack, Typography } from "@mui/material";
+import { Box, BoxProps, Stack, Typography, TypographyProps } from "@mui/material";
 
 export interface IconTextProps {
     icon: string;
     size: BoxProps["height"];
     children: React.ReactNode;
+    spacing?: number;
     iconProps?: BoxProps;
+    textProps?: TypographyProps;
 }
 
-export const IconText = ({ icon, size, children }: IconTextProps): JSX.Element => (
-    <Stack direction="row" alignItems="center" spacing={0.5}>
-        <Box component="img" src={icon} height={size} width={size} />
-        <Typography>{children}</Typography>
+export const IconText = ({
+    icon,
+    size,
+    children,
+    spacing = 0.5,
+    iconProps,
+    textProps,
+}: IconTextProps): JSX.Element => (
+    <Stack direction="row" alignItems="center" spacing={spacing}>
+        <Box component="img" src={icon} height={size} width={size} {...iconProps} />
+        <Typography {...textProps}>{children}</Typography>
     </Stack>
 );

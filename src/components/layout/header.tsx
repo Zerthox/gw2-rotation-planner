@@ -5,7 +5,8 @@ import { IconButton, DrawerWithButton, AnchorWithRef } from "../general";
 import { ToolsMenu } from "../tools";
 import { SettingsContent } from "../settings";
 import { useSiteMeta } from "../../hooks/site";
-import { gw2Logo } from "../../assets/icons";
+import { useAccent } from "../../store/settings";
+import { accentLogos } from "../../theme";
 
 export interface HeaderProps {
     title?: string;
@@ -18,6 +19,7 @@ const iconSize = "1.5em";
 
 export const Header = ({ title, children, settings = true, help }: HeaderProps): JSX.Element => {
     const siteMeta = useSiteMeta();
+    const accent = useAccent();
 
     return (
         <AppBar position="static">
@@ -26,7 +28,7 @@ export const Header = ({ title, children, settings = true, help }: HeaderProps):
                     <Stack direction="row" alignItems="center" spacing={1}>
                         <Box
                             component="img"
-                            src={gw2Logo}
+                            src={accentLogos[accent]}
                             alt="GW2"
                             sx={{
                                 height: iconSize,

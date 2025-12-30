@@ -1,7 +1,5 @@
 import { Profession, EliteSpecialization } from "../data";
 
-export const gw2Logo = "https://wiki.guildwars2.com/images/c/cd/Visions_of_Eternity_logo.png";
-
 export const iconSize = 20;
 
 export const professionIcons: Record<Profession, string> = {

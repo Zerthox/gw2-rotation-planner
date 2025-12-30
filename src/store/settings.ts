@@ -2,7 +2,7 @@ import { createSelector, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { useSelector } from "react-redux";
 import { StoreState } from ".";
 import { SkillSlot } from "../data";
-import { Theme } from "../themes";
+import { Accent, defaultAccent } from "../theme";
 
 export type Keybinds<T> = Record<SkillSlot, T>;
 
@@ -42,15 +42,15 @@ export const defaultKeybinds = {
 export const settingsSlice = createSlice({
     name: "settings",
     initialState: {
-        theme: Theme.Dark,
+        accent: defaultAccent,
         autoAttackSize: defaultAutoSize,
         keyDisplay: KeyDisplay.Bound,
         keybinds: defaultKeybinds,
         dev: false,
     },
     reducers: {
-        setTheme(state, { payload }: PayloadAction<Theme>) {
-            state.theme = payload;
+        setAccent(state, { payload }: PayloadAction<Accent>) {
+            state.accent = payload;
         },
         setAutoSize(state, { payload }: PayloadAction<number>) {
             state.autoAttackSize = payload;
@@ -69,11 +69,11 @@ export const settingsSlice = createSlice({
 
 export const settingsReducer = settingsSlice.reducer;
 
-export const { setTheme, setAutoSize, setKeyDisplay, setKeybinds, setDevMode } =
+export const { setAccent, setAutoSize, setKeyDisplay, setKeybinds, setDevMode } =
     settingsSlice.actions;
 
-export const selectTheme = ({ settingsReducer }: StoreState): Theme => settingsReducer.theme;
-export const useTheme = (): Theme => useSelector(selectTheme);
+export const selectAccent = ({ settingsReducer }: StoreState): Accent => settingsReducer.accent;
+export const useAccent = (): Accent => useSelector(selectAccent);
 
 export const selectAutoSize = ({ settingsReducer }: StoreState): number =>
     settingsReducer.autoAttackSize;
