@@ -14,7 +14,7 @@
         "lint-fix": "eslint --fix",
         "format-check": "prettier --check .",
         "format-fix": "prettier --write .",
-        "test": "mocha -r ts-node/register tests/**/*.ts"
+        "test": "mocha"
     },
     "repository": {
         "type": "git",
@@ -24,7 +24,7 @@
         "url": "https://github.com/zerthox/gw2-rotation-planner/issues"
     },
     "engines": {
-        "node": ">=22.0.0"
+        "node": ">=24.0.0"
     },
     "dependencies": {
         "@discretize/gw2-ui-new": "^3.1.1",
@@ -41,7 +41,7 @@
         "@reduxjs/toolkit": "^2.0.1",
         "@types/gtag.js": "^0.0.20",
         "@types/js-yaml": "^4.0.5",
-        "@types/node": "^22.15.14",
+        "@types/node": "^24.10.4",
         "@types/react": "^18.0.25",
         "@types/react-dom": "^18.0.9",
         "@types/react-helmet": "^6.1.5",
