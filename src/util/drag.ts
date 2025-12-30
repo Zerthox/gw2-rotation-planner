@@ -10,17 +10,18 @@ export const enum DragType {
     Add = "add",
 }
 
-export const createDragId = (type: DragType): DragId => `${type}-${nanoid()}`;
+export const createDragId = (): DragId => nanoid();
 
-export const isa = (type: DragType, id: DragId): boolean => id?.toString().startsWith(type);
-
-export interface SkillData {
-    parentId: DragId;
-    index: number;
-    skill: number;
-}
-
-export interface OverData {
+export interface DragData {
+    type: DragType;
+    parentType?: DragType;
     parentId?: DragId;
     index?: number;
+}
+
+export interface SkillData extends DragData {
+    parentId: DragId;
+    parentType: DragType;
+    index: number;
+    skill: number;
 }

@@ -2,7 +2,7 @@ import { createSelector, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { useSelector } from "react-redux";
 import { StoreState } from ".";
 import { Profession, SkillSection } from "../data";
-import { createDragId, DragId, DragType } from "../util/drag";
+import { createDragId, DragId } from "../util/drag";
 
 export interface SkillState {
     dragId: DragId;
@@ -10,7 +10,7 @@ export interface SkillState {
 }
 
 export const createSkillState = (skill: number): SkillState => ({
-    dragId: createDragId(DragType.Skill),
+    dragId: createDragId(),
     skillId: skill,
 });
 
@@ -50,9 +50,9 @@ export const buildSlice = createSlice({
         takeSkillItem(state, { payload }: PayloadAction<DragId>) {
             for (const section of state.skillStates) {
                 const index = section.findIndex((skill) => skill.dragId === payload);
-                if (index > -1) {
+                if (index >= 0) {
                     const { skillId } = section[index];
-                    section.splice(index, 1, createSkillState(skillId));
+                    section[index] = createSkillState(skillId);
                     break;
                 }
             }

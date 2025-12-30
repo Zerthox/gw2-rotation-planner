@@ -16,6 +16,7 @@ export const darkTheme = createTheme({
             main: blueGrey[100],
         },
     },
+    cssVariables: true,
 });
 
 export const lightTheme = createTheme({
@@ -28,6 +29,7 @@ export const lightTheme = createTheme({
             main: blueGrey[800],
         },
     },
+    cssVariables: true,
 });
 
 export const themes = {

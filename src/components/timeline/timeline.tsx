@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useId } from "react";
 import { Box, BoxProps, Stack, Button } from "@mui/material";
 import { AddCircle } from "@mui/icons-material";
 import { useDroppable } from "@dnd-kit/core";
@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { Row } from "./row";
 import { useRows, insertRow } from "../../store/timeline";
 import { LoadParams, useLoadTimeline } from "../../hooks/load";
-import { DragId, OverData } from "../../util/drag";
+import { DragId, DragType, DragData } from "../../util/drag";
 
 export interface AddButtonProps {
     dragId: DragId;
@@ -14,10 +14,9 @@ export interface AddButtonProps {
 
 export const AddButton = ({ dragId }: AddButtonProps): JSX.Element => {
     const dispatch = useDispatch();
-    const { setNodeRef, isOver } = useDroppable({
-        id: dragId,
-        data: {} as OverData,
-    });
+
+    const data: DragData = { type: DragType.Add };
+    const { setNodeRef, isOver } = useDroppable({ id: dragId, data });
 
     return (
         <span ref={setNodeRef}>
@@ -44,11 +43,11 @@ export const AddButton = ({ dragId }: AddButtonProps): JSX.Element => {
 
 export interface TimelineProps extends BoxProps {
     load: LoadParams;
-    addDragId: DragId;
 }
 
-export const Timeline = ({ load, addDragId, ...props }: TimelineProps): JSX.Element => {
+export const Timeline = ({ load, ...props }: TimelineProps): JSX.Element => {
     const rows = useRows();
+    const addDragId = useId();
 
     useLoadTimeline(load);
 

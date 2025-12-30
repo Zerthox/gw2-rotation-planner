@@ -2,7 +2,7 @@ import { createSlice, createSelector, PayloadAction } from "@reduxjs/toolkit";
 import { useSelector } from "react-redux";
 import { StoreState } from ".";
 import { createSkillState, SkillState } from "./build";
-import { createDragId, DragId, DragType } from "../util/drag";
+import { createDragId, DragId } from "../util/drag";
 
 export interface Row {
     name: string;
@@ -24,7 +24,7 @@ export interface Location {
 
 export const createRow = (row: RowWithoutId): RowState => ({
     ...row,
-    dragId: createDragId(DragType.Row),
+    dragId: createDragId(),
 });
 
 export const addRowSkillStates = ({ name, skills }: Row): RowWithoutId => ({
@@ -106,9 +106,11 @@ export const timelineSlice = createSlice({
             const source = findRow(state.rows, rowId);
             const dest = findRow(state.rows, to.row);
 
-            const index = source.skills.findIndex((skill) => skill.dragId === skillId);
-            const [skill] = source.skills.splice(index, 1);
-            dest.skills.splice(to.index, 0, skill);
+            const sourceIndex = source.skills.findIndex((skill) => skill.dragId === skillId);
+            const [skill] = source.skills.splice(sourceIndex, 1);
+
+            const destIndex = source === dest && sourceIndex < to.index ? to.index - 1 : to.index;
+            dest.skills.splice(destIndex, 0, skill);
         },
 
         clearRowSkills(state, { payload }: RowAction) {

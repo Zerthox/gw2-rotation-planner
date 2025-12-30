@@ -3,14 +3,11 @@ import { Stack, Card } from "@mui/material";
 import { Dnd } from "./dnd";
 import { Sidebar } from "../sidebar";
 import { Timeline } from "../timeline";
-import { DragType, createDragId } from "../../util/drag";
 import { LoadParams } from "../../hooks/load";
 
 export interface PlannerProps {
     load?: LoadParams;
 }
-
-const ADD_ID = createDragId(DragType.Add);
 
 export const Planner = ({ load }: PlannerProps): JSX.Element => (
     <Dnd>
@@ -25,7 +22,7 @@ export const Planner = ({ load }: PlannerProps): JSX.Element => (
             >
                 <Sidebar />
             </Card>
-            <Timeline load={load} addDragId={ADD_ID} flex="1" maxHeight="100%" />
+            <Timeline load={load} flex="1" maxHeight="100%" />
         </Stack>
     </Dnd>
 );

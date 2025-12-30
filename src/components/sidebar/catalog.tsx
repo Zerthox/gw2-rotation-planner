@@ -11,7 +11,7 @@ import {
 } from "@mui/material";
 import { ExpandMore } from "@mui/icons-material";
 import { DraggableSkill } from "../skill";
-import { DragId } from "../../util/drag";
+import { DragId, DragType } from "../../util/drag";
 import {
     SkillState,
     useSkillSections,
@@ -68,6 +68,7 @@ const SkillSection = ({ name, type, parentId, skills, sx }: SkillSectionProps): 
                                   key={dragId}
                                   dragId={dragId}
                                   parentId={parentId}
+                                  parentType={DragType.Skillbar}
                                   index={i}
                                   skill={skillId}
                                   orderSelf={isOrdered}

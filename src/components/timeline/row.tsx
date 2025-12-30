@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { DraggableSkill } from "../skill";
 import { RowButtons } from "./row-buttons";
 import { RowContextMenu } from "./row-menu";
-import { OverData } from "../../util/drag";
+import { DragType, DragData } from "../../util/drag";
 import {
     deleteRow,
     moveRow,
@@ -35,13 +35,16 @@ export interface RowProps extends CardProps {
     isLast: boolean;
 }
 
+interface RowContentProps extends RowProps {
+    highlight: boolean;
+}
+
 const RowContent = (
-    { row, index, isLast, ...props }: RowProps,
+    { row, index, isLast, highlight, ...props }: RowContentProps,
     ref: React.Ref<HTMLDivElement>,
 ): JSX.Element => {
     const dispatch = useDispatch();
 
-    const items = row.skills.map(({ dragId }) => dragId);
     const actions = useMemo<RowActions>(
         () => ({
             isFirst: index === 0,
@@ -72,6 +75,8 @@ const RowContent = (
         [dispatch, index, row.dragId, row.name, row.skills, isLast],
     );
 
+    const sortableItems = row.skills.map(({ dragId }) => dragId);
+
     return (
         <RowContextMenu {...actions}>
             <Card {...props}>
@@ -85,8 +90,8 @@ const RowContent = (
                         }
                         sx={{ flex: "none" }}
                     />
-                    <Box flexGrow={1} ref={ref}>
-                        <SortableContext items={items} strategy={rectSortingStrategy}>
+                    <Box ref={ref} sx={{ flexGrow: 1 }}>
+                        <SortableContext items={sortableItems} strategy={rectSortingStrategy}>
                             {row.skills.length > 0 ? (
                                 <Box
                                     sx={{
@@ -101,15 +106,30 @@ const RowContent = (
                                             key={dragId}
                                             dragId={dragId}
                                             parentId={row.dragId}
+                                            parentType={DragType.Row}
                                             index={i}
                                             skill={skillId}
                                             canDuplicate
                                             canDelete
                                         />
                                     ))}
+                                    {highlight ? (
+                                        <Box
+                                            sx={{ borderLeft: 2, borderColor: "text.primary" }}
+                                        ></Box>
+                                    ) : null}
                                 </Box>
                             ) : (
-                                <Typography sx={{ opacity: 0.5 }}>Drop skills here</Typography>
+                                <Typography
+                                    sx={{
+                                        lineHeight: "3em",
+                                        borderLeft: 2,
+                                        borderColor: highlight ? "text.primary" : "transparent",
+                                        color: "text.disabled",
+                                    }}
+                                >
+                                    Drop skills here
+                                </Typography>
                             )}
                         </SortableContext>
                     </Box>
@@ -123,10 +143,8 @@ const RowContent = (
 const WrappedRowContent = React.memo(React.forwardRef(RowContent));
 
 export const Row = ({ row, ...props }: RowProps): JSX.Element => {
-    const { setNodeRef } = useDroppable({
-        id: row.dragId,
-        data: { parentId: row.dragId, index: row.skills.length } as OverData,
-    });
+    const data: DragData = { type: DragType.Row, parentId: row.dragId, index: row.skills.length };
+    const { setNodeRef, isOver } = useDroppable({ id: row.dragId, data });
 
-    return <WrappedRowContent row={row} ref={setNodeRef} {...props} />;
+    return <WrappedRowContent row={row} highlight={isOver} ref={setNodeRef} {...props} />;
 };
