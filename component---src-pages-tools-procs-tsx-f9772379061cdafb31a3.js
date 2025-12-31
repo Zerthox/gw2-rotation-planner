@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkgw2_rotation_planner=self.webpackChunkgw2_rotation_planner||[]).push([[576],{1735:function(t,e,n){n.r(e),n.d(e,{Head:function(){return o}});var a=n(6540),r=n(9437),c=n(9567);const l="Proc Calculator";e.default=()=>a.createElement(c.g,{title:l,path:"procs"});const o=()=>a.createElement(r.kW,{title:l})}}]);
+//# sourceMappingURL=component---src-pages-tools-procs-tsx-f9772379061cdafb31a3.js.map
