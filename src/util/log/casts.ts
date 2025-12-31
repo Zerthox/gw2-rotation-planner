@@ -9,7 +9,7 @@ export interface Cast {
     duration: number;
 }
 
-export const insertCast = (casts: Cast[], { skill, time, duration }: Cast) => {
+const insertCast = (casts: Cast[], { skill, time, duration }: Cast) => {
     const cast = {
         skill:
             SKILL_MAPPING[skill]

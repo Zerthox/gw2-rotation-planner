@@ -1,6 +1,6 @@
 import { describe, it } from "mocha";
 import { strict as assert } from "assert";
-import { getRotation, Log } from "../src/util/log";
+import { getRotation, Log, SplitMode } from "../src/util/log";
 
 describe("Log data extraction", () => {
     const log = {
@@ -33,8 +33,8 @@ describe("Log data extraction", () => {
     } as Log;
 
     describe("getRotation", () => {
-        const rotation = getRotation(log, "Player", false);
-        const rotationPhases = getRotation(log, "Player", true);
+        const rotation = getRotation(log, "Player", SplitMode.None);
+        const rotationPhases = getRotation(log, "Player", SplitMode.Phases);
 
         it("returns correct rotation", () => {
             assert.deepEqual(rotation, [{ name: "", skills: [1, 2, 3, 4, 5, 6] }]);
