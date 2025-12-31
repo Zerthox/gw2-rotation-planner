@@ -19,7 +19,7 @@ import { IconButton, IconText } from "../general";
 import { Row } from "../../store/timeline";
 import { useUpdatingRef } from "../../hooks/general";
 import { anyTangoIcon, iconSize, specializationIcons } from "../../assets/icons";
-import { fetchLog, getRotation, Log } from "../../util/log";
+import { fetchLog, getRotation, Log, SplitMode } from "../../util/log";
 
 export interface LogImportProps {
     onChange(rows: Row[]): void;
@@ -28,7 +28,7 @@ export interface LogImportProps {
 interface LogImportState {
     log: Log;
     player: string;
-    phases: boolean;
+    split: SplitMode;
 }
 
 export const LogImport = ({ onChange }: LogImportProps): JSX.Element => {
@@ -36,16 +36,17 @@ export const LogImport = ({ onChange }: LogImportProps): JSX.Element => {
     const [url, setUrl] = useState("");
     const [fetching, setFetching] = useState(false);
 
-    const [{ log, player, phases }, setState] = useReducer(
+    const [{ log, player, split }, setState] = useReducer(
         (prev: LogImportState, action: Partial<LogImportState>) => ({ ...prev, ...action }),
-        { log: null, player: "", phases: true },
+        { log: null, player: "", split: SplitMode.Phases },
     );
 
     useEffect(() => {
         if (log) {
-            changeRef.current(getRotation(log, player, phases));
+            console.log(log);
+            changeRef.current(getRotation(log, player, split));
         }
-    }, [log, player, phases, changeRef]);
+    }, [log, player, split, changeRef]);
 
     return (
         <Stack direction="row" alignItems="center" spacing={1}>
@@ -68,7 +69,11 @@ export const LogImport = ({ onChange }: LogImportProps): JSX.Element => {
                             setFetching(true);
                             try {
                                 const log = await fetchLog(url);
-                                setState({ log: log, player: log.recordedBy });
+                                const povPresent = log.players.some(
+                                    (player) => player.name === log.recordedBy,
+                                );
+                                const player = povPresent ? log.recordedBy : log.players[0].name;
+                                setState({ log: log, player });
                             } finally {
                                 setFetching(false);
                             }
@@ -101,17 +106,19 @@ export const LogImport = ({ onChange }: LogImportProps): JSX.Element => {
                             ))}
                         </Select>
                     </FormControl>
-                    <Tooltip title="Use phases from log as sections">
-                        <FormGroup>
-                            <FormControlLabel
-                                label="Phases"
-                                control={<Checkbox />}
-                                checked={phases}
-                                disabled={!log}
-                                onChange={(_, checked) => setState({ phases: checked })}
-                            />
-                        </FormGroup>
-                    </Tooltip>
+                    <FormControl>
+                        <InputLabel>Split</InputLabel>
+                        <Select
+                            label="Split"
+                            value={split}
+                            onChange={({ target }) => setState({ split: target.value })}
+                        >
+                            <MenuItem value={SplitMode.None}>None</MenuItem>
+                            <MenuItem value={SplitMode.Phases}>Log Phases</MenuItem>
+                            <MenuItem value={SplitMode.Swaps}>Weapon Swaps</MenuItem>
+                            <MenuItem value={SplitMode.Loops}>Smart Loop</MenuItem>
+                        </Select>
+                    </FormControl>
                     <IconButton title="Cancel" onClick={() => setState({ log: null })}>
                         <Cancel />
                     </IconButton>

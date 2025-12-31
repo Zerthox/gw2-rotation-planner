@@ -4,6 +4,11 @@ import { Icon } from "@discretize/gw2-ui-new";
 import { encode as encodeChatcode } from "gw2e-chat-codes";
 import { Skill, SkillSlot } from ".";
 
+export { AttunementSkill } from "./elementalist/attunement";
+export { KitSkill } from "./engineer/kit";
+export { ShroudSkill } from "./necromancer/shroud";
+export { LegendSkill } from "./revenant/legend";
+
 export type IconProps = React.ComponentProps<typeof Icon>;
 
 export interface CommonSkill extends Omit<Skill, "slot" | "chat_link"> {
@@ -23,13 +28,6 @@ export const isRealSkill = (id: number): boolean =>
 
 export const getSearchValue = (id: number): string =>
     getCommonSkill(id)?.wiki ?? (encodeChatcode("skill", id) || null);
-
-export enum AttunementSkill {
-    Fire = 5492,
-    Water = 5493,
-    Air = 5494,
-    Earth = 5495,
-}
 
 // TODO: add other relevant special action skills
 export enum SpecialActionSkill {
