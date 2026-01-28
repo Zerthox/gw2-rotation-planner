@@ -2,7 +2,7 @@ import { createSelector, createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { useSelector } from "react-redux";
 import { StoreState } from ".";
 import { SkillSlot } from "../data";
-import { Accent, defaultAccent } from "../theme";
+import { Accent } from "../theme";
 
 export type Keybinds<T> = Record<SkillSlot, T>;
 
@@ -42,7 +42,7 @@ export const defaultKeybinds = {
 export const settingsSlice = createSlice({
     name: "settings",
     initialState: {
-        accent: defaultAccent,
+        accent: Accent.Default,
         autoAttackSize: defaultAutoSize,
         keyDisplay: KeyDisplay.Bound,
         keybinds: defaultKeybinds,

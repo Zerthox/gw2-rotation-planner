@@ -1,7 +1,7 @@
 import React from "react";
 import { ThemeProvider, CssBaseline } from "@mui/material";
 import { APILanguageProvider } from "@discretize/gw2-ui-new";
-import { Accent, defaultAccent, getTheme } from "../../theme";
+import { Accent, getTheme } from "../../theme";
 
 export type APILanguage = React.ComponentProps<typeof APILanguageProvider>["value"];
 
@@ -13,7 +13,7 @@ export interface ProvidersProps {
 
 export const Providers = ({
     lang = "en",
-    theme: accent = defaultAccent,
+    theme: accent = Accent.Default,
     children,
 }: ProvidersProps): JSX.Element => {
     const theme = getTheme(accent);
