@@ -5,10 +5,11 @@ import {
     LegendSkill,
     KitSkill,
     ShroudSkill,
+    SpecialActionSkill,
 } from "../../data/common";
 
 // ei uses some negative custom ids for specific sills
-export const SKILL_MAPPING: Record<number, number> = {
+const SKILL_MAPPING: Record<number, number> = {
     [-2]: CommonSkillId.WeaponSwap,
     [-5]: AttunementSkill.Fire, // weaver dual attunements
     [-6]: AttunementSkill.Fire,
@@ -33,7 +34,13 @@ export const SKILL_MAPPING: Record<number, number> = {
     62879: CommonSkillId.Dodge, // vindicator saints shield
     62890: CommonSkillId.Dodge, // vindicator tenacious ruin
     73139: 73015, // abyssal strike alt
+    77047: 77141, // beguiling haze alt
+    76818: 0, // form of the dervish
+    77116: 0, // form of the dervish elite
 };
+
+export const mapSkill = (skill: number): number =>
+    SKILL_MAPPING[skill] ?? (skill in SpecialActionSkill ? CommonSkillId.SpecialAction : skill);
 
 export interface LoopInfo {
     weaponSwap: boolean;

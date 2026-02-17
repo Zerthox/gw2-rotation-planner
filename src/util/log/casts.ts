@@ -1,7 +1,6 @@
 import { sortedIndexBy } from "lodash";
-import { CommonSkillId, SpecialActionSkill } from "../../data/common";
 import { AnimationStatus, Log, Phase, Player, SkillInternal } from "./types";
-import { SKILL_MAPPING } from "./skills";
+import { mapSkill } from "./skills";
 
 export interface Cast {
     skill: number;
@@ -11,15 +10,13 @@ export interface Cast {
 
 const insertCast = (casts: Cast[], { skill, time, duration }: Cast) => {
     const cast = {
-        skill:
-            SKILL_MAPPING[skill]
-            ?? (skill in SpecialActionSkill ? CommonSkillId.SpecialAction : skill),
+        skill: mapSkill(skill),
         time,
         duration,
     };
 
-    // negative ids are invalid
-    if (cast.skill >= 0) {
+    // check for valid id
+    if (cast.skill > 0) {
         const index = sortedIndexBy(casts, cast, (entry) => entry.time);
 
         // filter out duplicates from overlapping phases
