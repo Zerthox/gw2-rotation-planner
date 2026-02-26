@@ -15,6 +15,7 @@ import { SkillSlot, isAuto } from "../../data";
 export interface SkillIconProps extends StackProps {
     skill: number;
     tooltip?: boolean;
+    highlight?: boolean;
     orderSelf?: boolean;
 }
 
@@ -32,7 +33,7 @@ const slotColumn = {
 };
 
 const SkillIcon = (
-    { skill, tooltip = false, orderSelf = false, sx, ...props }: SkillIconProps,
+    { skill, tooltip = false, highlight = false, orderSelf = false, sx, ...props }: SkillIconProps,
     ref: React.Ref<HTMLElement>,
 ): JSX.Element => {
     const autoSize = useAutoSize();
@@ -49,9 +50,13 @@ const SkillIcon = (
             {...props}
             sx={{
                 position: "relative",
-                gridColumn: orderSelf ? slotColumn[slot] : null,
                 height: "1em",
+                margin: -0.25,
+                padding: 0.25,
+                borderLeft: 2,
+                borderColor: highlight ? "text.main" : "transparent",
                 fontSize: "3em",
+                gridColumn: orderSelf ? slotColumn[slot] : null,
                 ...sx,
             }}
         >
@@ -134,34 +139,26 @@ export const DraggableSkill = ({
     const highlight = !isDragging && isOver && parentType === DragType.Row;
 
     return (
-        <Box
-            sx={{
-                margin: -0.25,
-                padding: 0.25,
-                borderLeft: 2,
-                borderColor: highlight ? "text.main" : "transparent",
+        <SkillContentMemo
+            iconProps={{
+                ref: setNodeRef,
+                ...attributes,
+                ...listeners,
+                skill,
+                tooltip: !isDragging,
+                highlight,
+                orderSelf,
+                className: clsx(dragCursor, { [placeholderStyles]: isDragging }),
+                sx,
             }}
-        >
-            <SkillContentMemo
-                iconProps={{
-                    ref: setNodeRef,
-                    ...attributes,
-                    ...listeners,
-                    skill,
-                    tooltip: !isDragging,
-                    orderSelf,
-                    className: clsx(dragCursor, { [placeholderStyles]: isDragging }),
-                    sx,
-                }}
-                contextMenuProps={{
-                    skill,
-                    index,
-                    dragId,
-                    parentId,
-                    canDuplicate,
-                    canDelete,
-                }}
-            />
-        </Box>
+            contextMenuProps={{
+                skill,
+                index,
+                dragId,
+                parentId,
+                canDuplicate,
+                canDelete,
+            }}
+        />
     );
 };
