@@ -67,7 +67,7 @@ export const HelpContent = (): JSX.Element => {
                 or an URL to a JSON file.
             </Typography>
             <Typography variant="h6" marginTop={2}>
-                Link formats <Typography variant="caption">(for tech-savy people)</Typography>
+                Link formats <Typography variant="caption">(for tech-savvy people)</Typography>
             </Typography>
             <Typography variant="body1" marginY={1}>
                 The share link format consists of section names encoded to be URI friendly and skill
